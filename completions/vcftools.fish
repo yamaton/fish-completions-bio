@@ -1,3 +1,5 @@
+# Generated with h2o 0.1.18
+
 complete -c vcftools -l vcf -d 'This option defines the VCF file to be processed.' -r
 complete -c vcftools -l gzvcf -d 'This option can be used in place of the --vcf option to read compressed (gzipped) VCF files directly.' -r
 complete -c vcftools -l bcf -d 'This option can be used in place of the --vcf option to read BCF2 files directly.' -r
@@ -17,16 +19,14 @@ complete -c vcftools -l keep-only-indels -l remove-indels -d 'Include or exclude
 complete -c vcftools -l remove-filtered-all -d 'Removes all sites with a FILTER flag other than PASS.'
 complete -c vcftools -l keep-filtered -l remove-filtered -d 'Includes or excludes all sites marked with a specific FILTER flag.' -x
 complete -c vcftools -l keep-INFO -l remove-INFO -d 'Includes or excludes all sites with a specific INFO flag.' -x
-complete -c vcftools -l maf -l max-maf -d 'Include only sites with a Minor Allele Frequency greater than or equal to the "--maf" value and less than or equal to the "--max-maf"' -x
-complete -c vcftools -l non-ref-af -l max-non-ref-af -d 'Include only sites with all Non-Reference (ALT) Allele Frequencies (af) within the range specified, and including the specified value.' -x
-complete -c vcftools -l non-ref-ac -l max-non-ref-ac -d 'Include only sites with all Non-Reference (ALT) Count (ac) within the range specified, and including the specified value.' -x
-complete -c vcftools -l non-ref-af-any -l max-non-ref-af-any -d 'Include only sites with all Non-Reference (ALT) Allele Frequencies (af) within the range specified; "any" require only one allele to meet the criteria.' -x
-complete -c vcftools -l non-ref-ac-any -l max-non-ref-ac-any -d 'Include only sites with all Non-Reference (ALT) Counts (ac) within the range specified; "any" require only one allele to meet the criteria.' -x
-complete -c vcftools -l mac -l max-mac -d 'Include  only  sites  with  Minor  Allele  Count greater than or equal to the "--mac" value and less than or equal to the "--max-mac"' -x
-complete -c vcftools -l min-alleles -l max-alleles -d 'Include  only sites with a number of alleles greater than or equal to the "--min-alleles" value and less than or equal to the "--max-' -x
-complete -c vcftools -l min-meanDP -l max-meanDP -d 'Includes only sites with mean depth values (over all included individuals) greater than or equal to the "--min-meanDP" value and less' -x
+complete -c vcftools -l maf -l max-maf -d 'Include only sites with a Minor Allele Frequency greater than or equal to the "--maf" value and less than or equal to the "--max-maf" value.' -x
+complete -c vcftools -l non-ref-af -l max-non-ref-af -l non-ref-ac -l max-non-ref-ac -d 'Include only sites with all Non-Reference (ALT) Allele Frequencies (af) or Counts (ac) within the range specified, and including the specified value.' -x
+complete -c vcftools -l non-ref-af-any -l max-non-ref-af-any -l non-ref-ac-any -l max-non-ref-ac-any -d 'Include only sites with all Non-Reference (ALT) Allele Frequencies (af) or Counts (ac) within the range specified, and including the specified value.' -x
+complete -c vcftools -l mac -l max-mac -d 'Include only sites with Minor Allele Count greater than or equal to the "--mac" value and less than or equal to the "--max-mac" value.' -x
+complete -c vcftools -l min-alleles -l max-alleles -d 'Include only sites with a number of alleles greater than or equal to the "--min-alleles" value and less than or equal to the "--max-alleles" value.' -x
+complete -c vcftools -l min-meanDP -l max-meanDP -d 'Includes only sites with mean depth values (over all included individuals) greater than or equal to the "--min-meanDP" value and less than or equal to the "--max-meanDP" value.' -x
 complete -c vcftools -l hwe -d 'Assesses sites for Hardy-Weinberg Equilibrium using an exact test, as defined by Wigginton, Cutler and Abecasis (2005).' -x
-complete -c vcftools -l max-missing -d 'Exclude sites on the basis of the proportion of missing data (defined to be between 0 and 1, where 0 allows sites that are completely' -x
+complete -c vcftools -l max-missing -d 'Exclude sites on the basis of the proportion of missing data (defined to be between 0 and 1, where 0 allows sites that are completely missing and 1 indicates no missing data allowed).' -x
 complete -c vcftools -l max-missing-count -d 'Exclude sites with more than this number of missing genotypes over all individuals.' -x
 complete -c vcftools -l phased -d 'Excludes all sites that contain unphased genotypes.'
 complete -c vcftools -l minQ -d 'Includes only sites with Quality value above this threshold.' -x
@@ -45,14 +45,14 @@ complete -c vcftools -l site-depth -d 'Generates a file containing the depth per
 complete -c vcftools -l site-mean-depth -d 'Generates a file containing the mean depth per site averaged across all individuals.'
 complete -c vcftools -l geno-depth -d 'Generates a (possibly very large) file containing the depth for each genotype in the VCF file.'
 complete -c vcftools -l hap-r2 -d 'Outputs a file reporting the r2, D, and D\' statistics using phased haplotypes.'
-complete -c vcftools -l geno-r2 -d 'Calculates the squared correlation coefficient between genotypes encoded as 0, 1 and 2 to represent the number of non-reference alle‐'
-complete -c vcftools -l geno-chisq -d 'If  your  data contains sites with more than two alleles, then this option can be used to test for genotype independence via the chi-'
+complete -c vcftools -l geno-r2 -d 'Calculates the squared correlation coefficient between genotypes encoded as 0, 1 and 2 to represent the number of non-reference alleles in each individual.'
+complete -c vcftools -l geno-chisq -d 'If your data contains sites with more than two alleles, then this option can be used to test for genotype independence via the chi-squared statistic.'
 complete -c vcftools -l hap-r2-positions -l geno-r2-positions -d 'Outputs a file reporting the r2 statistics of the sites contained in the provided file verses all other sites.' -r
-complete -c vcftools -l ld-window -d 'This  optional  parameter defines the maximum number of SNPs between the SNPs being tested for LD in the "--hap-r2", "--geno-r2", and' -x
-complete -c vcftools -l ld-window-bp -d 'This optional parameter defines the maximum number of physical bases between the SNPs being tested for LD in the "--hap-r2", "--geno-' -x
-complete -c vcftools -l ld-window-min -d 'This  optional  parameter defines the minimum number of SNPs between the SNPs being tested for LD in the "--hap-r2", "--geno-r2", and' -x
-complete -c vcftools -l ld-window-bp-min -d 'This optional parameter defines the minimum number of physical bases between the SNPs being tested for LD in the "--hap-r2", "--geno-' -x
-complete -c vcftools -l min-r2 -d 'This optional parameter sets a minimum value for r2, below which the LD statistic is not reported by the "--hap-r2", "--geno-r2", and' -x
+complete -c vcftools -l ld-window -d 'This optional parameter defines the maximum number of SNPs between the SNPs being tested for LD in the "--hap-r2", "--geno-r2", and "--geno-chisq" functions.' -x
+complete -c vcftools -l ld-window-bp -d 'This optional parameter defines the maximum number of physical bases between the SNPs being tested for LD in the "--hap-r2", "--geno-r2", and "--geno-chisq" functions.' -x
+complete -c vcftools -l ld-window-min -d 'This optional parameter defines the minimum number of SNPs between the SNPs being tested for LD in the "--hap-r2", "--geno-r2", and "--geno-chisq" functions.' -x
+complete -c vcftools -l ld-window-bp-min -d 'This optional parameter defines the minimum number of physical bases between the SNPs being tested for LD in the "--hap-r2", "--geno-r2", and "--geno-chisq" functions.' -x
+complete -c vcftools -l min-r2 -d 'This optional parameter sets a minimum value for r2, below which the LD statistic is not reported by the "--hap-r2", "--geno-r2", and "--geno-chisq" functions.' -x
 complete -c vcftools -l interchrom-hap-r2 -l interchrom-geno-r2 -d 'Outputs a file reporting the r2 statistics for sites on different chromosomes.'
 complete -c vcftools -l TsTv -d 'Calculates the Transition / Transversion ratio in bins of size defined by this option.' -x
 complete -c vcftools -l TsTv-summary -d 'Calculates a simple summary of all Transitions and Transversions.'
@@ -68,8 +68,8 @@ complete -c vcftools -l hardy -d 'Reports a p-value for each site from a Hardy-W
 complete -c vcftools -l TajimaD -d 'Outputs Tajima\'s D statistic in bins with size of the specified number.' -x
 complete -c vcftools -l indv-freq-burden -d 'This option calculates the number of variants within each individual of a specific frequency.'
 complete -c vcftools -l LROH -d 'This option will identify and output Long Runs of Homozygosity.'
-complete -c vcftools -l relatedness -d 'This option is used to calculate and output a relatedness statistic based  on  the  method  of  Yang  et  al,  Nature  Genetics  2010'
-complete -c vcftools -l relatedness2 -d 'This option is used to calculate and output a relatedness statistic based on the method of Manichaikul et  al.,  BIOINFORMATICS  2010'
+complete -c vcftools -l relatedness -d 'This option is used to calculate and output a relatedness statistic based on the method of Yang et al, Nature Genetics 2010 (doi:10.1038/ng.608).'
+complete -c vcftools -l relatedness2 -d 'This option is used to calculate and output a relatedness statistic based on the method of Manichaikul et al., BIOINFORMATICS 2010 (doi:10.1093/bioinformatics/btq559).'
 complete -c vcftools -l site-quality -d 'Generates a file containing the per-site SNP quality, as found in the QUAL column of the VCF file.'
 complete -c vcftools -l missing-indv -d 'Generates a file reporting the missingness on a per-individual basis.'
 complete -c vcftools -l missing-site -d 'Generates a file reporting the missingness on a per-site basis.'
@@ -82,7 +82,7 @@ complete -c vcftools -l hapcount -d 'This option will output the number of uniqu
 complete -c vcftools -l mendel -d 'This option is use to report mendel errors identified in trios.' -r
 complete -c vcftools -l extract-FORMAT-info -d 'Extract information from the genotype fields in the VCF file relating to a specfied FORMAT identifier.' -x
 complete -c vcftools -l get-INFO -d 'This option is used to extract information from the INFO field in the VCF file.' -x
-complete -c vcftools -l recode -l recode-bcf -d 'These  options  are	used to generate a new file in either VCF or BCF from the input VCF or BCF file after applying the filtering op‐'
+complete -c vcftools -l recode -l recode-bcf -d 'These options are used to generate a new file in either VCF or BCF from the input VCF or BCF file after applying the filtering options specified by the user.'
 complete -c vcftools -l recode-INFO -l recode-INFO-all -d 'These options can be used with the above recode options to define an INFO key name to keep in the output file.' -x
 complete -c vcftools -l contigs -d 'This option can be used in conjuction with the --recode-bcf when the input file does not have any contig declarations.' -x
 complete -c vcftools -l 012 -d 'This option outputs the genotypes as a large matrix.'
