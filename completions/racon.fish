@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c racon -n "not __fish_seen_subcommand_from containing" -s u -l include-unpolished -d 'output unpolished target sequences'
 complete -c racon -n "not __fish_seen_subcommand_from containing" -s f -l fragment-correction -d 'perform fragment correction instead of contig polishing (overlaps file should contain dual/self overlaps!)'
@@ -15,7 +15,7 @@ complete -c racon -n "not __fish_seen_subcommand_from containing" -s h -l help -
 
 
 
-complete -c racon -n __fish_use_subcommand -x -a containing -d 'sequences which will be corrected'
+complete -k -c racon -n __fish_use_subcommand -x -a containing -d 'sequences which will be corrected'
 
 
 

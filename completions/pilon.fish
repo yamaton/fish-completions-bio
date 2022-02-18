@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c pilon -l genome -d 'The input genome we are trying to improve, which must be the reference used for the bam alignments.' -x
 complete -c pilon -l frags -d 'A bam file consisting of fragment paired-end alignments, aligned to the --genome argument using bwa or bowtie2.' -x

@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c prokka -l help -d 'This help'
 complete -c prokka -l version -d 'Print version and exit'

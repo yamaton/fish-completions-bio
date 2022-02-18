@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c wtdbg2 -s i -d 'Long reads sequences file (REQUIRED; can be multiple), []' -x
 complete -c wtdbg2 -s o -d 'Prefix of output files (REQUIRED), []' -x

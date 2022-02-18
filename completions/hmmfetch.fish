@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmfetch -s h -d 'help; show brief info on version and usage'
 complete -c hmmfetch -s f -d 'second cmdline arg is a file of names to retrieve'

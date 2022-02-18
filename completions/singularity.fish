@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s c -l config -d 'specify a configuration file (for root or unprivileged installation only) (default "/usr/local/etc/singularity/singularity.conf")' -x
 complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s d -l debug -d 'print debugging information (highest verbosity)'
@@ -11,31 +11,31 @@ complete -c singularity -n "not __fish_seen_subcommand_from build cache capabili
 
 
 
-complete -c singularity -n __fish_use_subcommand -x -a build -d 'Build a Singularity image'
-complete -c singularity -n __fish_use_subcommand -x -a cache -d 'Manage the local cache'
-complete -c singularity -n __fish_use_subcommand -x -a capability -d 'Manage Linux capabilities for users and groups'
-complete -c singularity -n __fish_use_subcommand -x -a config -d 'Manage various singularity configuration (root user only)'
-complete -c singularity -n __fish_use_subcommand -x -a delete -d 'Deletes requested image from the library'
-complete -c singularity -n __fish_use_subcommand -x -a exec -d 'Run a command within a container'
-complete -c singularity -n __fish_use_subcommand -x -a help -d 'Help about any command'
-complete -c singularity -n __fish_use_subcommand -x -a inspect -d 'Show metadata for an image'
-complete -c singularity -n __fish_use_subcommand -x -a instance -d 'Manage containers running as services'
-complete -c singularity -n __fish_use_subcommand -x -a key -d 'Manage OpenPGP keys'
-complete -c singularity -n __fish_use_subcommand -x -a oci -d 'Manage OCI containers'
-complete -c singularity -n __fish_use_subcommand -x -a overlay -d 'Manage an EXT3 writable overlay image'
-complete -c singularity -n __fish_use_subcommand -x -a plugin -d 'Manage Singularity plugins'
-complete -c singularity -n __fish_use_subcommand -x -a pull -d 'Pull an image from a URI'
-complete -c singularity -n __fish_use_subcommand -x -a push -d 'Upload image to the provided URI'
-complete -c singularity -n __fish_use_subcommand -x -a remote -d 'Manage singularity remote endpoints, keyservers and OCI/Docker registry credentials'
-complete -c singularity -n __fish_use_subcommand -x -a run -d 'Run the user-defined default command within a container'
-complete -c singularity -n __fish_use_subcommand -x -a run-help -d 'Show the user-defined help for an image'
-complete -c singularity -n __fish_use_subcommand -x -a search -d 'Search a Container Library for images'
-complete -c singularity -n __fish_use_subcommand -x -a shell -d 'Run a shell within a container'
-complete -c singularity -n __fish_use_subcommand -x -a sif -d 'siftool is a program for Singularity Image Format (SIF) file manipulation'
-complete -c singularity -n __fish_use_subcommand -x -a sign -d 'Attach digital signature(s) to an image'
-complete -c singularity -n __fish_use_subcommand -x -a test -d 'Run the user-defined tests within a container'
-complete -c singularity -n __fish_use_subcommand -x -a verify -d 'Verify cryptographic signatures attached to an image'
-complete -c singularity -n __fish_use_subcommand -x -a version -d 'Show the version for Singularity'
+complete -k -c singularity -n __fish_use_subcommand -x -a version -d 'Show the version for Singularity'
+complete -k -c singularity -n __fish_use_subcommand -x -a verify -d 'Verify cryptographic signatures attached to an image'
+complete -k -c singularity -n __fish_use_subcommand -x -a test -d 'Run the user-defined tests within a container'
+complete -k -c singularity -n __fish_use_subcommand -x -a sign -d 'Attach digital signature(s) to an image'
+complete -k -c singularity -n __fish_use_subcommand -x -a sif -d 'siftool is a program for Singularity Image Format (SIF) file manipulation'
+complete -k -c singularity -n __fish_use_subcommand -x -a shell -d 'Run a shell within a container'
+complete -k -c singularity -n __fish_use_subcommand -x -a search -d 'Search a Container Library for images'
+complete -k -c singularity -n __fish_use_subcommand -x -a run-help -d 'Show the user-defined help for an image'
+complete -k -c singularity -n __fish_use_subcommand -x -a run -d 'Run the user-defined default command within a container'
+complete -k -c singularity -n __fish_use_subcommand -x -a remote -d 'Manage singularity remote endpoints, keyservers and OCI/Docker registry credentials'
+complete -k -c singularity -n __fish_use_subcommand -x -a push -d 'Upload image to the provided URI'
+complete -k -c singularity -n __fish_use_subcommand -x -a pull -d 'Pull an image from a URI'
+complete -k -c singularity -n __fish_use_subcommand -x -a plugin -d 'Manage Singularity plugins'
+complete -k -c singularity -n __fish_use_subcommand -x -a overlay -d 'Manage an EXT3 writable overlay image'
+complete -k -c singularity -n __fish_use_subcommand -x -a oci -d 'Manage OCI containers'
+complete -k -c singularity -n __fish_use_subcommand -x -a key -d 'Manage OpenPGP keys'
+complete -k -c singularity -n __fish_use_subcommand -x -a instance -d 'Manage containers running as services'
+complete -k -c singularity -n __fish_use_subcommand -x -a inspect -d 'Show metadata for an image'
+complete -k -c singularity -n __fish_use_subcommand -x -a help -d 'Help about any command'
+complete -k -c singularity -n __fish_use_subcommand -x -a exec -d 'Run a command within a container'
+complete -k -c singularity -n __fish_use_subcommand -x -a delete -d 'Deletes requested image from the library'
+complete -k -c singularity -n __fish_use_subcommand -x -a config -d 'Manage various singularity configuration (root user only)'
+complete -k -c singularity -n __fish_use_subcommand -x -a capability -d 'Manage Linux capabilities for users and groups'
+complete -k -c singularity -n __fish_use_subcommand -x -a cache -d 'Manage the local cache'
+complete -k -c singularity -n __fish_use_subcommand -x -a build -d 'Build a Singularity image'
 
 
 

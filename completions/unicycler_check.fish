@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c unicycler_check -s h -l help -d 'show this help message and exit'
 complete -c unicycler_check -l sam -d 'Input SAM file of alignments (if this file doesn\'t exist, the alignment will be performed with results saved to this file - you can use the aligner arguments with this script)' -x

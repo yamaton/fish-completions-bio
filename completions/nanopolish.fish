@@ -1,16 +1,16 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c nanopolish -n __fish_use_subcommand -x -a call-methylation -d 'Classify nucleotides as methylated or not.'
-complete -c nanopolish -n __fish_use_subcommand -x -a eventalign -d 'Align nanopore events to reference k-mers'
-complete -c nanopolish -n __fish_use_subcommand -x -a extract -d 'Extract reads in fasta format'
-complete -c nanopolish -n __fish_use_subcommand -x -a getmodel -d 'Write the pore models for the given read to stdout'
-complete -c nanopolish -n __fish_use_subcommand -x -a index -d 'Build an index mapping from basecalled reads to the signals measured by the sequencer'
-complete -c nanopolish -n __fish_use_subcommand -x -a methyltrain -d 'Train a methylation model'
-complete -c nanopolish -n __fish_use_subcommand -x -a phase-reads -d 'Output a BAM file where each record shows the combination of alleles from variants.vcf that each read supports.'
-complete -c nanopolish -n __fish_use_subcommand -x -a polya -d 'Estimate the length of the poly-A tail on direct RNA reads'
-complete -c nanopolish -n __fish_use_subcommand -x -a scorereads -d 'Score reads against an alignment, model'
-complete -c nanopolish -n __fish_use_subcommand -x -a variants -d 'Find SNPs using a signal-level HMM'
-complete -c nanopolish -n __fish_use_subcommand -x -a vcf2fasta -d 'Write a new genome sequence by introducing variants from the input files'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a vcf2fasta -d 'Write a new genome sequence by introducing variants from the input files'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a variants -d 'Find SNPs using a signal-level HMM'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a scorereads -d 'Score reads against an alignment, model'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a polya -d 'Estimate the length of the poly-A tail on direct RNA reads'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a phase-reads -d 'Output a BAM file where each record shows the combination of alleles from variants.vcf that each read supports.'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a methyltrain -d 'Train a methylation model'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a index -d 'Build an index mapping from basecalled reads to the signals measured by the sequencer'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a getmodel -d 'Write the pore models for the given read to stdout'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a extract -d 'Extract reads in fasta format'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a eventalign -d 'Align nanopore events to reference k-mers'
+complete -k -c nanopolish -n __fish_use_subcommand -x -a call-methylation -d 'Classify nucleotides as methylated or not.'
 
 
 

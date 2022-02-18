@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c fastp -s i -l in1 -d 'read1 input file name (string [=])' -r
 complete -c fastp -s o -l out1 -d 'read1 output file name (string [=])' -r

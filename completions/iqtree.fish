@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c iqtree -s h -l help -d 'Print (more) help usages'
 complete -c iqtree -s s -d 'PHYLIP/FASTA/NEXUS/CLUSTAL/MSF alignment file(s)' -r

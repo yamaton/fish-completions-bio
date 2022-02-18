@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c quast -s o -l output-dir -d 'Directory to store all result files [default: quast_results/results_<datetime>]' -r
 complete -c quast -s r -d 'Reference genome file' -r

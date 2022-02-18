@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hisat2-build -s c -d 'reference sequences given on cmd line (as <reference_in>)'
 complete -c hisat2-build -l large-index -d 'force generated index to be \'large\', even if ref has fewer than 4 billion nucleotides'
@@ -14,14 +14,14 @@ complete -c hisat2-build -s o -l offrate -d 'SA is sampled every 2^offRate BWT c
 complete -c hisat2-build -s t -l ftabchars -d '# of chars consumed in initial lookup (default: 10)' -x
 complete -c hisat2-build -l localoffrate -d 'SA (local) is sampled every 2^offRate BWT chars (default: 3)' -x
 complete -c hisat2-build -l localftabchars -d '# of chars consumed in initial lookup in a local index (default: 6)' -x
-complete -c hisat2-build -l snp -d 'SNP file name' -x
-complete -c hisat2-build -l haplotype -d 'haplotype file name' -x
-complete -c hisat2-build -l ss -d 'Splice site file name' -x
-complete -c hisat2-build -l exon -d 'Exon file name' -x
-complete -c hisat2-build -l repeat-ref -d 'Repeat reference file name' -x
-complete -c hisat2-build -l repeat-info -d 'Repeat information file name' -x
-complete -c hisat2-build -l repeat-snp -d 'Repeat snp file name' -x
-complete -c hisat2-build -l repeat-haplotype -d 'Repeat haplotype file name' -x
+complete -c hisat2-build -l snp -d 'SNP file name' -r
+complete -c hisat2-build -l haplotype -d 'haplotype file name' -r
+complete -c hisat2-build -l ss -d 'Splice site file name' -r
+complete -c hisat2-build -l exon -d 'Exon file name' -r
+complete -c hisat2-build -l repeat-ref -d 'Repeat reference file name' -r
+complete -c hisat2-build -l repeat-info -d 'Repeat information file name' -r
+complete -c hisat2-build -l repeat-snp -d 'Repeat snp file name' -r
+complete -c hisat2-build -l repeat-haplotype -d 'Repeat haplotype file name' -r
 complete -c hisat2-build -l seed -d 'seed for random number generator' -x
 complete -c hisat2-build -s q -l quiet -d 'disable verbose output (for debugging)'
 complete -c hisat2-build -s h -l help -d 'print detailed description of tool and its options'

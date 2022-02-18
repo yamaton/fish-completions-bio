@@ -1,8 +1,8 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c platanus_b -n __fish_use_subcommand -x -a assemble -d 'assemble'
-complete -c platanus_b -n __fish_use_subcommand -x -a combine -d 'combine'
-complete -c platanus_b -n __fish_use_subcommand -x -a iterate -d 'iterate'
+complete -k -c platanus_b -n __fish_use_subcommand -x -a iterate -d 'iterate'
+complete -k -c platanus_b -n __fish_use_subcommand -x -a combine -d 'combine'
+complete -k -c platanus_b -n __fish_use_subcommand -x -a assemble -d 'assemble'
 
 
 

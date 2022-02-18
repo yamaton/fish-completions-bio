@@ -1,3 +1,3 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c hmmstat -s h -d 'show brief help on version and usage'
+complete -c nhmmer -s h -d 'show brief help on version and usage'

@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c unicycler -s h -l help -d 'Show this help message and exit'
 complete -c unicycler -l help_all -d 'Show a help message with all program options'

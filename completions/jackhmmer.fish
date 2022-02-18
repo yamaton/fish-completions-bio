@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c jackhmmer -s h -d 'show brief   help on version and usage'
 complete -c jackhmmer -s N -d 'set maximu   m number of iterations to <n>  [5]  (n>0)' -x

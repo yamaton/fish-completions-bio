@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmsearch -s h -d 'show brief   help on version and usage'
 complete -c hmmsearch -l incE -d 'consider sequences <= this E-value threshold as significant' -x

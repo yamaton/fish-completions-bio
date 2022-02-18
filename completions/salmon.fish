@@ -1,9 +1,9 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c salmon -n __fish_use_subcommand -x -a alevin -d 'single cell analysis'
-complete -c salmon -n __fish_use_subcommand -x -a index -d 'create a salmon index'
-complete -c salmon -n __fish_use_subcommand -x -a quant -d 'quantify a sample'
-complete -c salmon -n __fish_use_subcommand -x -a quantmerge -d 'merge multiple quantifications into a single file'
+complete -k -c salmon -n __fish_use_subcommand -x -a quantmerge -d 'merge multiple quantifications into a single file'
+complete -k -c salmon -n __fish_use_subcommand -x -a quant -d 'quantify a sample'
+complete -k -c salmon -n __fish_use_subcommand -x -a index -d 'create a salmon index'
+complete -k -c salmon -n __fish_use_subcommand -x -a alevin -d 'single cell analysis'
 
 
 

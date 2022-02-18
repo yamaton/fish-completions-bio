@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c vcftools -l vcf -d 'This option defines the VCF file to be processed.' -r
 complete -c vcftools -l gzvcf -d 'This option can be used in place of the --vcf option to read compressed (gzipped) VCF files directly.' -r

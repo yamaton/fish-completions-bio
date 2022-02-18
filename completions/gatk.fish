@@ -1,271 +1,271 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c gatk -n __fish_use_subcommand -x -a CheckIlluminaDirectory -d 'Asserts the validity for specified Illumina basecalling data.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectIlluminaBasecallingMetrics -d 'Collects Illumina Basecalling metrics for a sequencing run.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectIlluminaLaneMetrics -d 'Collects Illumina lane metrics for the given BaseCalling analysis directory.'
-complete -c gatk -n __fish_use_subcommand -x -a ExtractIlluminaBarcodes -d 'Tool determines the barcode for each read in an Illumina lane.'
-complete -c gatk -n __fish_use_subcommand -x -a IlluminaBasecallsToFastq -d 'Generate FASTQ file(s) from Illumina basecall read data.'
-complete -c gatk -n __fish_use_subcommand -x -a IlluminaBasecallsToSam -d 'Transforms raw Illumina sequencing data into an unmapped SAM or BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a MarkIlluminaAdapters -d 'Reads a SAM or BAM file and rewrites it with new adapter-trimming tags.'
-complete -c gatk -n __fish_use_subcommand -x -a AnnotateIntervals -d 'Annotates intervals with GC content, mappability, and segmental-duplication content'
-complete -c gatk -n __fish_use_subcommand -x -a CallCopyRatioSegments -d 'Calls copy-ratio segments as amplified, deleted, or copy-number neutral'
-complete -c gatk -n __fish_use_subcommand -x -a CombineSegmentBreakpoints -d '(EXPERIMENTAL Tool) Combine the breakpoints of two segment files and annotate the resulting intervals with chosen columns from each file.'
-complete -c gatk -n __fish_use_subcommand -x -a CreateReadCountPanelOfNormals -d 'Creates a panel of normals for read-count denoising'
-complete -c gatk -n __fish_use_subcommand -x -a DenoiseReadCounts -d 'Denoises read counts to produce denoised copy ratios'
-complete -c gatk -n __fish_use_subcommand -x -a DetermineGermlineContigPloidy -d 'Determines the baseline contig ploidy for germline samples given counts data'
-complete -c gatk -n __fish_use_subcommand -x -a FilterIntervals -d 'Filters intervals based on annotations and/or count statistics'
-complete -c gatk -n __fish_use_subcommand -x -a GermlineCNVCaller -d 'Calls copy-number variants in germline samples given their counts and the output of DetermineGermlineContigPloidy'
-complete -c gatk -n __fish_use_subcommand -x -a MergeAnnotatedRegions -d '(EXPERIMENTAL Tool) Merge annotated genomic regions based entirely on touching/overlapping intervals.'
-complete -c gatk -n __fish_use_subcommand -x -a MergeAnnotatedRegionsByAnnotation -d '(EXPERIMENTAL Tool) Merge annotated genomic regions within specified distance if annotation value(s) are exactly the same.'
-complete -c gatk -n __fish_use_subcommand -x -a ModelSegments -d 'Models segmented copy ratios from denoised read counts and segmented minor-allele fractions from allelic counts'
-complete -c gatk -n __fish_use_subcommand -x -a PlotDenoisedCopyRatios -d 'Creates plots of denoised copy ratios'
-complete -c gatk -n __fish_use_subcommand -x -a PlotModeledSegments -d 'Creates plots of denoised and segmented copy-ratio and minor-allele-fraction estimates'
-complete -c gatk -n __fish_use_subcommand -x -a PostprocessGermlineCNVCalls -d 'Postprocesses the output of GermlineCNVCaller and generates VCFs and denoised copy ratios'
-complete -c gatk -n __fish_use_subcommand -x -a TagGermlineEvents -d '(EXPERIMENTAL Tool) Do a simplistic tagging of germline events in a tumor segment file.'
-complete -c gatk -n __fish_use_subcommand -x -a ASEReadCounter -d 'Generates table of filtered base counts at het sites for allele specific expression'
-complete -c gatk -n __fish_use_subcommand -x -a AnalyzeSaturationMutagenesis -d '(BETA Tool) (EXPERIMENTAL) Processes reads from a MITESeq or other saturation mutagenesis experiment.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectAllelicCounts -d 'Collects reference and alternate allele counts at specified sites'
-complete -c gatk -n __fish_use_subcommand -x -a CollectAllelicCountsSpark -d 'Collects reference and alternate allele counts at specified sites'
-complete -c gatk -n __fish_use_subcommand -x -a CollectF1R2Counts -d 'Collect F1R2 read counts for the Mutect2 orientation bias mixture model filter'
-complete -c gatk -n __fish_use_subcommand -x -a CollectReadCounts -d 'Collects read counts at specified intervals'
-complete -c gatk -n __fish_use_subcommand -x -a CountBases -d 'Count bases in a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a CountBasesSpark -d 'Counts bases in the input SAM/BAM'
-complete -c gatk -n __fish_use_subcommand -x -a CountReads -d 'Count reads in a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a CountReadsSpark -d 'Counts reads in the input SAM/BAM'
-complete -c gatk -n __fish_use_subcommand -x -a DepthOfCoverage -d '(BETA Tool) Generate coverage summary information for reads data'
-complete -c gatk -n __fish_use_subcommand -x -a GeneExpressionEvaluation -d '(BETA Tool) Evaluate gene expression from RNA-seq reads aligned to genome.'
-complete -c gatk -n __fish_use_subcommand -x -a GetPileupSummaries -d 'Tabulates pileup metrics for inferring contamination'
-complete -c gatk -n __fish_use_subcommand -x -a Pileup -d 'Prints read alignments in samtools pileup format'
-complete -c gatk -n __fish_use_subcommand -x -a PileupSpark -d '(BETA Tool) Prints read alignments in samtools pileup format'
-complete -c gatk -n __fish_use_subcommand -x -a AccumulateVariantCallingMetrics -d 'Combines multiple Variant Calling Metrics files into a single file'
-complete -c gatk -n __fish_use_subcommand -x -a AnalyzeCovariates -d 'Evaluate and compare base quality score recalibration (BQSR) tables'
-complete -c gatk -n __fish_use_subcommand -x -a BamIndexStats -d 'Generate index statistics from a BAM file'
-complete -c gatk -n __fish_use_subcommand -x -a CalcMetadataSpark -d '(BETA Tool) (Internal) Collects read metrics relevant to structural variant discovery'
-complete -c gatk -n __fish_use_subcommand -x -a CalculateContamination -d 'Calculate the fraction of reads coming from cross-sample contamination'
-complete -c gatk -n __fish_use_subcommand -x -a CalculateFingerprintMetrics -d 'Calculate statistics on fingerprints, checking their viability'
-complete -c gatk -n __fish_use_subcommand -x -a CalculateReadGroupChecksum -d 'Creates a hash code based on the read groups (RG).'
-complete -c gatk -n __fish_use_subcommand -x -a CheckDuplicateMarking -d 'Checks the consistency of duplicate markings.'
-complete -c gatk -n __fish_use_subcommand -x -a CheckFingerprint -d 'Computes a fingerprint from the supplied input (SAM/BAM/CRAM or VCF) file and compares it to the provided genotypes'
-complete -c gatk -n __fish_use_subcommand -x -a CheckPileup -d 'Compare GATK\'s internal pileup to a reference Samtools mpileup'
-complete -c gatk -n __fish_use_subcommand -x -a CheckTerminatorBlock -d 'Asserts the provided gzip file\'s (e.g., BAM) last block is well-formed; RC 100 otherwise'
-complete -c gatk -n __fish_use_subcommand -x -a ClusterCrosscheckMetrics -d 'Clusters the results of a CrosscheckFingerprints run by LOD score'
-complete -c gatk -n __fish_use_subcommand -x -a CollectAlignmentSummaryMetrics -d '<b>Produces a summary of alignment metrics from a SAM or BAM file.</b>'
-complete -c gatk -n __fish_use_subcommand -x -a CollectArraysVariantCallingMetrics -d 'Collects summary and per-sample from the provided arrays VCF file'
-complete -c gatk -n __fish_use_subcommand -x -a CollectBaseDistributionByCycle -d 'Chart the nucleotide distribution per cycle in a SAM or BAM file'
-complete -c gatk -n __fish_use_subcommand -x -a CollectBaseDistributionByCycleSpark -d '(BETA Tool) Collects base distribution per cycle in SAM/BAM/CRAM file(s).'
-complete -c gatk -n __fish_use_subcommand -x -a CollectGcBiasMetrics -d 'Collect metrics regarding GC bias.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectHiSeqXPfFailMetrics -d 'Classify PF-Failing reads in a HiSeqX Illumina Basecalling directory into various categories.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectHsMetrics -d 'Collects hybrid-selection (HS) metrics for a SAM or BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectIndependentReplicateMetrics -d '(EXPERIMENTAL Tool) Estimates the rate of independent replication rate of reads within a bam.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectInsertSizeMetrics -d 'Collect metrics about the insert size distribution of a paired-end library.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectInsertSizeMetricsSpark -d '(BETA Tool) Collects insert size distribution information on alignment data'
-complete -c gatk -n __fish_use_subcommand -x -a CollectJumpingLibraryMetrics -d 'Collect jumping library metrics.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectMultipleMetrics -d 'Collect multiple classes of metrics.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectMultipleMetricsSpark -d '(BETA Tool) Runs multiple metrics collection modules for a given alignment file'
-complete -c gatk -n __fish_use_subcommand -x -a CollectOxoGMetrics -d 'Collect metrics to assess oxidative artifacts.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectQualityYieldMetrics -d 'Collect metrics about reads that pass quality thresholds and Illumina-specific filters.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectQualityYieldMetricsSpark -d '(BETA Tool) Collects quality yield metrics from SAM/BAM/CRAM file(s).'
-complete -c gatk -n __fish_use_subcommand -x -a CollectRawWgsMetrics -d 'Collect whole genome sequencing-related metrics.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectRnaSeqMetrics -d 'Produces RNA alignment metrics for a SAM or BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectRrbsMetrics -d '<b>Collects metrics from reduced representation bisulfite sequencing (Rrbs) data.</b>'
-complete -c gatk -n __fish_use_subcommand -x -a CollectSamErrorMetrics -d 'Program to collect error metrics on bases stratified in various ways.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectSequencingArtifactMetrics -d 'Collect metrics to quantify single-base sequencing artifacts.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectTargetedPcrMetrics -d 'Calculate PCR-related metrics from targeted sequencing data.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectVariantCallingMetrics -d 'Collects per-sample and aggregate (spanning all samples) metrics from the provided VCF file'
-complete -c gatk -n __fish_use_subcommand -x -a CollectWgsMetrics -d 'Collect metrics about coverage and performance of whole genome sequencing (WGS) experiments.'
-complete -c gatk -n __fish_use_subcommand -x -a CollectWgsMetricsWithNonZeroCoverage -d '(EXPERIMENTAL Tool) Collect metrics about coverage and performance of whole genome sequencing (WGS) experiments.'
-complete -c gatk -n __fish_use_subcommand -x -a CompareBaseQualities -d 'Compares the base qualities of two SAM/BAM/CRAM files'
-complete -c gatk -n __fish_use_subcommand -x -a CompareDuplicatesSpark -d '(BETA Tool) Determine if two potentially identical BAMs have the same duplicate reads'
-complete -c gatk -n __fish_use_subcommand -x -a CompareMetrics -d 'Compare two metrics files.'
-complete -c gatk -n __fish_use_subcommand -x -a CompareSAMs -d 'Compare two input ".sam" or ".bam" files.'
-complete -c gatk -n __fish_use_subcommand -x -a ConvertSequencingArtifactToOxoG -d 'Extract OxoG metrics from generalized artifacts metrics.'
-complete -c gatk -n __fish_use_subcommand -x -a CrosscheckFingerprints -d 'Checks that all data in the input files appear to have come from the same individual'
-complete -c gatk -n __fish_use_subcommand -x -a CrosscheckReadGroupFingerprints -d 'DEPRECATED: USE CrosscheckFingerprints.'
-complete -c gatk -n __fish_use_subcommand -x -a EstimateLibraryComplexity -d 'Estimates the numbers of unique molecules in a sequencing library.'
-complete -c gatk -n __fish_use_subcommand -x -a ExtractFingerprint -d 'Computes a fingerprint from the input file.'
-complete -c gatk -n __fish_use_subcommand -x -a FlagStat -d 'Accumulate flag statistics given a BAM file'
-complete -c gatk -n __fish_use_subcommand -x -a FlagStatSpark -d 'Spark tool to accumulate flag statistics'
-complete -c gatk -n __fish_use_subcommand -x -a GatherPileupSummaries -d 'Combine output files from GetPileupSummary in the order defined by a sequence dictionary'
-complete -c gatk -n __fish_use_subcommand -x -a GetSampleName -d 'Emit a single sample name'
-complete -c gatk -n __fish_use_subcommand -x -a IdentifyContaminant -d 'Computes a fingerprint from the supplied SAM/BAM file, given a contamination estimate.'
-complete -c gatk -n __fish_use_subcommand -x -a LiftOverHaplotypeMap -d 'Lifts over a haplotype database from one reference to another'
-complete -c gatk -n __fish_use_subcommand -x -a MeanQualityByCycle -d 'Collect mean quality by cycle.'
-complete -c gatk -n __fish_use_subcommand -x -a MeanQualityByCycleSpark -d '(BETA Tool) MeanQualityByCycle on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a QualityScoreDistribution -d 'Chart the distribution of quality scores.'
-complete -c gatk -n __fish_use_subcommand -x -a QualityScoreDistributionSpark -d '(BETA Tool) QualityScoreDistribution on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a ValidateSamFile -d 'Validates a SAM or BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a ViewSam -d 'Prints a SAM or BAM file to the screen'
-complete -c gatk -n __fish_use_subcommand -x -a HtsgetReader -d '(EXPERIMENTAL Tool) Download a file using htsget'
-complete -c gatk -n __fish_use_subcommand -x -a BpmToNormalizationManifestCsv -d 'Program to convert an Illumina bpm file into a bpm.csv file.'
-complete -c gatk -n __fish_use_subcommand -x -a CombineGenotypingArrayVcfs -d 'Program to combine multiple genotyping array VCF files into one VCF.'
-complete -c gatk -n __fish_use_subcommand -x -a CompareGtcFiles -d 'Compares two GTC files.'
-complete -c gatk -n __fish_use_subcommand -x -a CreateVerifyIDIntensityContaminationMetricsFile -d 'Program to generate a picard metrics file from the output of the VerifyIDIntensity tool.'
-complete -c gatk -n __fish_use_subcommand -x -a GtcToVcf -d 'Program to convert an Illumina GTC file to a VCF'
-complete -c gatk -n __fish_use_subcommand -x -a MergePedIntoVcf -d 'Program to merge a single-sample ped file from zCall into a single-sample VCF.'
-complete -c gatk -n __fish_use_subcommand -x -a VcfToAdpc -d 'Program to convert an Arrays VCF to an ADPC file.'
-complete -c gatk -n __fish_use_subcommand -x -a BedToIntervalList -d 'Converts a BED file to a Picard Interval List.'
-complete -c gatk -n __fish_use_subcommand -x -a CompareIntervalLists -d 'Compare two interval lists for equality'
-complete -c gatk -n __fish_use_subcommand -x -a IntervalListToBed -d 'Converts an Picard IntervalList file to a BED file.'
-complete -c gatk -n __fish_use_subcommand -x -a IntervalListTools -d 'A tool for performing various IntervalList manipulations'
-complete -c gatk -n __fish_use_subcommand -x -a LiftOverIntervalList -d 'Lifts over an interval list from one reference build to another.'
-complete -c gatk -n __fish_use_subcommand -x -a PreprocessIntervals -d 'Prepares bins for coverage collection'
-complete -c gatk -n __fish_use_subcommand -x -a SplitIntervals -d 'Split intervals into sub-interval files.'
-complete -c gatk -n __fish_use_subcommand -x -a PathSeqBuildKmers -d 'Builds set of host reference k-mers'
-complete -c gatk -n __fish_use_subcommand -x -a PathSeqBuildReferenceTaxonomy -d 'Builds a taxonomy datafile of the microbe reference'
-complete -c gatk -n __fish_use_subcommand -x -a PathSeqBwaSpark -d 'Step 2: Aligns reads to the microbe reference'
-complete -c gatk -n __fish_use_subcommand -x -a PathSeqFilterSpark -d 'Step 1: Filters low quality, low complexity, duplicate, and host reads'
-complete -c gatk -n __fish_use_subcommand -x -a PathSeqPipelineSpark -d 'Combined tool that performs all steps: read filtering, microbe reference alignment, and abundance scoring'
-complete -c gatk -n __fish_use_subcommand -x -a PathSeqScoreSpark -d 'Step 3: Classifies pathogen-aligned reads and generates abundance scores'
-complete -c gatk -n __fish_use_subcommand -x -a MethylationTypeCaller -d '(EXPERIMENTAL Tool) Identify methylated bases from bisulfite sequenced, methylation-aware BAMs'
-complete -c gatk -n __fish_use_subcommand -x -a CreateHadoopBamSplittingIndex -d '(BETA Tool) Create a Hadoop BAM splitting index'
-complete -c gatk -n __fish_use_subcommand -x -a FifoBuffer -d 'Provides a large, FIFO buffer that can be used to buffer input and output streams between programs.'
-complete -c gatk -n __fish_use_subcommand -x -a GatherBQSRReports -d 'Gathers scattered BQSR recalibration reports into a single file'
-complete -c gatk -n __fish_use_subcommand -x -a GatherTranches -d '(BETA Tool) Gathers scattered VQSLOD tranches into a single file'
-complete -c gatk -n __fish_use_subcommand -x -a IndexFeatureFile -d 'Creates an index for a feature file, e.g. VCF or BED file.'
-complete -c gatk -n __fish_use_subcommand -x -a ParallelCopyGCSDirectoryIntoHDFSSpark -d '(BETA Tool) Parallel copy a file or directory from Google Cloud Storage into the HDFS file system used by Spark'
-complete -c gatk -n __fish_use_subcommand -x -a PrintBGZFBlockInformation -d '(EXPERIMENTAL Tool) Print information about the compressed blocks in a BGZF format file'
-complete -c gatk -n __fish_use_subcommand -x -a ReadAnonymizer -d '(EXPERIMENTAL Tool) Replace bases in reads with reference bases.'
-complete -c gatk -n __fish_use_subcommand -x -a AddCommentsToBam -d 'Adds comments to the header of a BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a AddOATag -d 'Record current alignment information to OA tag.'
-complete -c gatk -n __fish_use_subcommand -x -a AddOrReplaceReadGroups -d 'Assigns all the reads in a file to a single new read-group.'
-complete -c gatk -n __fish_use_subcommand -x -a AddOriginalAlignmentTags -d '(EXPERIMENTAL Tool) Adds Original Alignment tag and original mate contig tag'
-complete -c gatk -n __fish_use_subcommand -x -a ApplyBQSR -d 'Apply base quality score recalibration'
-complete -c gatk -n __fish_use_subcommand -x -a ApplyBQSRSpark -d '(BETA Tool) Apply base quality score recalibration on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a BQSRPipelineSpark -d '(BETA Tool) Both steps of BQSR (BaseRecalibrator and ApplyBQSR) on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a BamToBfq -d 'Converts a BAM file into a BFQ (binary fastq formatted) file'
-complete -c gatk -n __fish_use_subcommand -x -a BaseRecalibrator -d 'Generates recalibration table for Base Quality Score Recalibration (BQSR)'
-complete -c gatk -n __fish_use_subcommand -x -a BaseRecalibratorSpark -d '(BETA Tool) Generate recalibration table for Base Quality Score Recalibration (BQSR) on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a BuildBamIndex -d 'Generates a BAM index ".bai" file.'
-complete -c gatk -n __fish_use_subcommand -x -a BwaAndMarkDuplicatesPipelineSpark -d '(BETA Tool) Takes name-sorted file and runs BWA and MarkDuplicates.'
-complete -c gatk -n __fish_use_subcommand -x -a BwaSpark -d '(BETA Tool) Align reads to a given reference using BWA on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a CleanSam -d 'Cleans the provided SAM/BAM, soft-clipping beyond-end-of-reference alignments and setting MAPQ to 0 for unmapped reads'
-complete -c gatk -n __fish_use_subcommand -x -a ClipReads -d 'Clip reads in a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a CollectDuplicateMetrics -d 'Collect Duplicate metrics from marked file.'
-complete -c gatk -n __fish_use_subcommand -x -a ConvertHeaderlessHadoopBamShardToBam -d '(BETA Tool) Convert a headerless BAM shard into a readable BAM'
-complete -c gatk -n __fish_use_subcommand -x -a DownsampleByDuplicateSet -d '(BETA Tool) Discard a set fraction of duplicate sets from a UMI-grouped bam'
-complete -c gatk -n __fish_use_subcommand -x -a DownsampleSam -d 'Downsample a SAM or BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a ExtractOriginalAlignmentRecordsByNameSpark -d '(BETA Tool) Subsets reads by name'
-complete -c gatk -n __fish_use_subcommand -x -a FastqToSam -d 'Converts a FASTQ file to an unaligned BAM or SAM file'
-complete -c gatk -n __fish_use_subcommand -x -a FilterSamReads -d 'Subsets reads from a SAM or BAM file by applying one of several filters.'
-complete -c gatk -n __fish_use_subcommand -x -a FixMateInformation -d 'Verify mate-pair information between mates and fix if needed.'
-complete -c gatk -n __fish_use_subcommand -x -a FixMisencodedBaseQualityReads -d 'Fix Illumina base quality scores in a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a GatherBamFiles -d 'Concatenate efficiently BAM files that resulted from a scattered parallel analysis'
-complete -c gatk -n __fish_use_subcommand -x -a LeftAlignIndels -d 'Left-aligns indels from reads in a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a MarkDuplicates -d 'Identifies duplicate reads.'
-complete -c gatk -n __fish_use_subcommand -x -a MarkDuplicatesSpark -d 'MarkDuplicates on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a MarkDuplicatesWithMateCigar -d 'Identifies duplicate reads, accounting for mate CIGAR.'
-complete -c gatk -n __fish_use_subcommand -x -a MergeBamAlignment -d 'Merge alignment data from a SAM or BAM with data in an unmapped BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a MergeSamFiles -d 'Merges multiple SAM and/or BAM files into a single file.'
-complete -c gatk -n __fish_use_subcommand -x -a PositionBasedDownsampleSam -d 'Downsample a SAM or BAM file to retain a subset of the reads based on the reads location in each tile in the flowcell.'
-complete -c gatk -n __fish_use_subcommand -x -a PrintReads -d 'Print reads in the SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a PrintReadsHeader -d 'Print the header from a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a PrintReadsSpark -d 'PrintReads on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a ReorderSam -d 'Reorders reads in a SAM or BAM file to match ordering in a second reference file.'
-complete -c gatk -n __fish_use_subcommand -x -a ReplaceSamHeader -d 'Replaces the SAMFileHeader in a SAM or BAM file.'
-complete -c gatk -n __fish_use_subcommand -x -a RevertBaseQualityScores -d 'Revert Quality Scores in a SAM/BAM/CRAM file'
-complete -c gatk -n __fish_use_subcommand -x -a RevertOriginalBaseQualitiesAndAddMateCigar -d 'Reverts the original base qualities and adds the mate cigar tag to read-group BAMs'
-complete -c gatk -n __fish_use_subcommand -x -a RevertSam -d 'Reverts SAM or BAM files to a previous state.'
-complete -c gatk -n __fish_use_subcommand -x -a RevertSamSpark -d '(BETA Tool) Reverts SAM, BAM or CRAM files to a previous state.'
-complete -c gatk -n __fish_use_subcommand -x -a SamFormatConverter -d 'Convert a BAM file to a SAM file, or a SAM to a BAM'
-complete -c gatk -n __fish_use_subcommand -x -a SamToFastq -d 'Converts a SAM or BAM file to FASTQ.'
-complete -c gatk -n __fish_use_subcommand -x -a SamToFastqWithTags -d 'Converts a SAM or BAM file to FASTQ alongside FASTQs created from tags.'
-complete -c gatk -n __fish_use_subcommand -x -a SetNmAndUqTags -d 'DEPRECATED: Use SetNmMdAndUqTags instead.'
-complete -c gatk -n __fish_use_subcommand -x -a SetNmMdAndUqTags -d 'Fixes the NM, MD, and UQ tags in a SAM file'
-complete -c gatk -n __fish_use_subcommand -x -a SimpleMarkDuplicatesWithMateCigar -d '(EXPERIMENTAL Tool) Examines aligned records in the supplied SAM or BAM file to locate duplicate molecules.'
-complete -c gatk -n __fish_use_subcommand -x -a SortSam -d 'Sorts a SAM or BAM file'
-complete -c gatk -n __fish_use_subcommand -x -a SortSamSpark -d '(BETA Tool) SortSam on Spark (works on SAM/BAM/CRAM)'
-complete -c gatk -n __fish_use_subcommand -x -a SplitNCigarReads -d 'Split Reads with N in Cigar'
-complete -c gatk -n __fish_use_subcommand -x -a SplitReads -d 'Outputs reads from a SAM/BAM/CRAM by read group, sample and library name'
-complete -c gatk -n __fish_use_subcommand -x -a SplitSamByLibrary -d 'Splits a SAM or BAM file into individual files by library'
-complete -c gatk -n __fish_use_subcommand -x -a SplitSamByNumberOfReads -d 'Splits a SAM or BAM file to multiple BAMs.'
-complete -c gatk -n __fish_use_subcommand -x -a UmiAwareMarkDuplicatesWithMateCigar -d '(EXPERIMENTAL Tool) Identifies duplicate reads using information from read positions and UMIs.'
-complete -c gatk -n __fish_use_subcommand -x -a UnmarkDuplicates -d 'Clears the 0x400 duplicate SAM flag'
-complete -c gatk -n __fish_use_subcommand -x -a BaitDesigner -d 'Designs oligonucleotide baits for hybrid selection reactions.'
-complete -c gatk -n __fish_use_subcommand -x -a BwaMemIndexImageCreator -d 'Create a BWA-MEM index image file for use with GATK BWA tools'
-complete -c gatk -n __fish_use_subcommand -x -a ComposeSTRTableFile -d 'Determines the presence of STR in a reference sequence'
-complete -c gatk -n __fish_use_subcommand -x -a CountBasesInReference -d 'Count the numbers of each base in a reference file'
-complete -c gatk -n __fish_use_subcommand -x -a CreateSequenceDictionary -d 'Creates a sequence dictionary for a reference sequence.'
-complete -c gatk -n __fish_use_subcommand -x -a ExtractSequences -d 'Subsets intervals from a reference sequence to a new FASTA file.'
-complete -c gatk -n __fish_use_subcommand -x -a FastaAlternateReferenceMaker -d 'Create an alternative reference by combining a fasta with a vcf.'
-complete -c gatk -n __fish_use_subcommand -x -a FastaReferenceMaker -d 'Create snippets of a fasta file'
-complete -c gatk -n __fish_use_subcommand -x -a FindBadGenomicKmersSpark -d '(BETA Tool) Identifies sequences that occur at high frequency in a reference'
-complete -c gatk -n __fish_use_subcommand -x -a NonNFastaSize -d 'Counts the number of non-N bases in a fasta file.'
-complete -c gatk -n __fish_use_subcommand -x -a NormalizeFasta -d 'Normalizes lines of sequence in a FASTA file to be of the same length.'
-complete -c gatk -n __fish_use_subcommand -x -a ScatterIntervalsByNs -d 'Writes an interval list created by splitting a reference at Ns.'
-complete -c gatk -n __fish_use_subcommand -x -a CalibrateDragstrModel -d '(BETA Tool) estimates the parameters for the DRAGstr model'
-complete -c gatk -n __fish_use_subcommand -x -a CombineGVCFs -d 'Merges one or more HaplotypeCaller GVCF files into a single GVCF with appropriate annotations'
-complete -c gatk -n __fish_use_subcommand -x -a GenomicsDBImport -d 'Import VCFs to GenomicsDB'
-complete -c gatk -n __fish_use_subcommand -x -a GenotypeGVCFs -d 'Perform joint genotyping on one or more samples pre-called with HaplotypeCaller'
-complete -c gatk -n __fish_use_subcommand -x -a GnarlyGenotyper -d '(BETA Tool) Perform "quick and dirty" joint genotyping on one or more samples pre-called with HaplotypeCaller'
-complete -c gatk -n __fish_use_subcommand -x -a HaplotypeCaller -d 'Call germline SNPs and indels via local re-assembly of haplotypes'
-complete -c gatk -n __fish_use_subcommand -x -a HaplotypeCallerSpark -d '(BETA Tool) HaplotypeCaller on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a LearnReadOrientationModel -d 'Get the maximum likelihood estimates of artifact prior probabilities in the orientation bias mixture model filter'
-complete -c gatk -n __fish_use_subcommand -x -a MergeMutectStats -d 'Merge the stats output by scatters of a single Mutect2 job'
-complete -c gatk -n __fish_use_subcommand -x -a Mutect2 -d 'Call somatic SNVs and indels via local assembly of haplotypes'
-complete -c gatk -n __fish_use_subcommand -x -a ReadsPipelineSpark -d '(BETA Tool) Runs BWA (if specified), MarkDuplicates, BQSR, and HaplotypeCaller on unaligned or aligned reads to generate a VCF.'
-complete -c gatk -n __fish_use_subcommand -x -a CpxVariantReInterpreterSpark -d '(BETA Tool) (Internal) Tries to extract simple variants from a provided GATK-SV CPX.vcf'
-complete -c gatk -n __fish_use_subcommand -x -a DiscoverVariantsFromContigAlignmentsSAMSpark -d '(BETA Tool) (Internal) Examines aligned contigs from local assemblies and calls structural variants'
-complete -c gatk -n __fish_use_subcommand -x -a ExtractSVEvidenceSpark -d '(BETA Tool) (Internal) Extracts evidence of structural variations from reads'
-complete -c gatk -n __fish_use_subcommand -x -a FindBreakpointEvidenceSpark -d '(BETA Tool) (Internal) Produces local assemblies of genomic regions that may harbor structural variants'
-complete -c gatk -n __fish_use_subcommand -x -a JointGermlineCNVSegmentation -d '(BETA Tool) Combine segmented gCNV VCFs.'
-complete -c gatk -n __fish_use_subcommand -x -a PairedEndAndSplitReadEvidenceCollection -d '(BETA Tool) Gathers paired-end and split read evidence files for use in the GATK-SV pipeline.'
-complete -c gatk -n __fish_use_subcommand -x -a PrintSVEvidence -d '(EXPERIMENTAL Tool) Prints SV evidence records'
-complete -c gatk -n __fish_use_subcommand -x -a StructuralVariantDiscoverer -d '(BETA Tool) (Internal) Examines aligned contigs from local assemblies and calls structural variants or their breakpoints'
-complete -c gatk -n __fish_use_subcommand -x -a StructuralVariationDiscoveryPipelineSpark -d '(BETA Tool) Runs the structural variation discovery workflow on a single sample'
-complete -c gatk -n __fish_use_subcommand -x -a SvDiscoverFromLocalAssemblyContigAlignmentsSpark -d '(BETA Tool) (Internal) Examines aligned contigs from local assemblies and calls structural variants or their breakpoints'
-complete -c gatk -n __fish_use_subcommand -x -a AlleleFrequencyQC -d '(BETA Tool) General-purpose tool for variant evaluation (% in dbSNP, genotype concordance, Ti/Tv ratios, and a lot more)'
-complete -c gatk -n __fish_use_subcommand -x -a AnnotateVcfWithBamDepth -d '(Internal) Annotate a vcf with a bam\'s read depth at each variant locus'
-complete -c gatk -n __fish_use_subcommand -x -a AnnotateVcfWithExpectedAlleleFraction -d '(Internal) Annotate a vcf with expected allele fractions in pooled sequencing'
-complete -c gatk -n __fish_use_subcommand -x -a CalculateGenotypePosteriors -d 'Calculate genotype posterior probabilities given family and/or known population genotypes'
-complete -c gatk -n __fish_use_subcommand -x -a CalculateMixingFractions -d '(Internal) Calculate proportions of different samples in a pooled bam'
-complete -c gatk -n __fish_use_subcommand -x -a Concordance -d 'Evaluate concordance of an input VCF against a validated truth VCF'
-complete -c gatk -n __fish_use_subcommand -x -a CountFalsePositives -d '(BETA Tool) Count PASS variants'
-complete -c gatk -n __fish_use_subcommand -x -a CountVariants -d 'Counts variant records in a VCF file, regardless of filter status.'
-complete -c gatk -n __fish_use_subcommand -x -a CountVariantsSpark -d 'CountVariants on Spark'
-complete -c gatk -n __fish_use_subcommand -x -a EvaluateInfoFieldConcordance -d '(BETA Tool) Evaluate concordance of info fields in an input VCF against a validated truth VCF'
-complete -c gatk -n __fish_use_subcommand -x -a FilterFuncotations -d '(EXPERIMENTAL Tool) Filter variants based on clinically-significant Funcotations.'
-complete -c gatk -n __fish_use_subcommand -x -a FindMendelianViolations -d 'Finds mendelian violations of all types within a VCF'
-complete -c gatk -n __fish_use_subcommand -x -a FuncotateSegments -d '(BETA Tool) Functional annotation for segment files.  The output formats are not well-defined and subject to change.'
-complete -c gatk -n __fish_use_subcommand -x -a Funcotator -d 'Functional Annotator'
-complete -c gatk -n __fish_use_subcommand -x -a FuncotatorDataSourceDownloader -d 'Data source downloader for Funcotator.'
-complete -c gatk -n __fish_use_subcommand -x -a GenotypeConcordance -d 'Calculates the concordance between genotype data of one sample in each of two VCFs - truth (or reference) vs. calls.'
-complete -c gatk -n __fish_use_subcommand -x -a ReferenceBlockConcordance -d 'Evaluate GVCF reference block concordance of an input GVCF against a truth GVCF'
-complete -c gatk -n __fish_use_subcommand -x -a ValidateBasicSomaticShortMutations -d '(EXPERIMENTAL Tool) Check variants against tumor-normal bams representing the same samples, though not the ones from the actual calls.'
-complete -c gatk -n __fish_use_subcommand -x -a ValidateVariants -d 'Validate VCF'
-complete -c gatk -n __fish_use_subcommand -x -a VariantEval -d '(BETA Tool) General-purpose tool for variant evaluation (% in dbSNP, genotype concordance, Ti/Tv ratios, and a lot more)'
-complete -c gatk -n __fish_use_subcommand -x -a VariantsToTable -d 'Extract fields from a VCF file to a tab-delimited table'
-complete -c gatk -n __fish_use_subcommand -x -a ApplyVQSR -d 'Apply a score cutoff to filter variants based on a recalibration table'
-complete -c gatk -n __fish_use_subcommand -x -a CNNScoreVariants -d 'Apply a Convolutional Neural Net to filter annotated variants'
-complete -c gatk -n __fish_use_subcommand -x -a CNNVariantTrain -d '(EXPERIMENTAL Tool) Train a CNN model for filtering variants'
-complete -c gatk -n __fish_use_subcommand -x -a CNNVariantWriteTensors -d '(EXPERIMENTAL Tool) Write variant tensors for training a CNN to filter variants'
-complete -c gatk -n __fish_use_subcommand -x -a CreateSomaticPanelOfNormals -d '(BETA Tool) Make a panel of normals for use with Mutect2'
-complete -c gatk -n __fish_use_subcommand -x -a FilterAlignmentArtifacts -d '(EXPERIMENTAL Tool) Filter alignment artifacts from a vcf callset.'
-complete -c gatk -n __fish_use_subcommand -x -a FilterMutectCalls -d 'Filter somatic SNVs and indels called by Mutect2'
-complete -c gatk -n __fish_use_subcommand -x -a FilterVariantTranches -d 'Apply tranche filtering'
-complete -c gatk -n __fish_use_subcommand -x -a FilterVcf -d 'Hard filters a VCF.'
-complete -c gatk -n __fish_use_subcommand -x -a MTLowHeteroplasmyFilterTool -d 'If too many low het sites, filter all low het sites'
-complete -c gatk -n __fish_use_subcommand -x -a NuMTFilterTool -d 'Uses the median autosomal coverage and the allele depth to determine whether the allele might be a NuMT'
-complete -c gatk -n __fish_use_subcommand -x -a VariantFiltration -d 'Filter variant calls based on INFO and/or FORMAT annotations'
-complete -c gatk -n __fish_use_subcommand -x -a VariantRecalibrator -d 'Build a recalibration model to score variant quality for filtering purposes'
-complete -c gatk -n __fish_use_subcommand -x -a FixVcfHeader -d 'Replaces or fixes a VCF header.'
-complete -c gatk -n __fish_use_subcommand -x -a GatherVcfs -d 'Gathers multiple VCF files from a scatter operation into a single VCF file'
-complete -c gatk -n __fish_use_subcommand -x -a GatherVcfsCloud -d '(BETA Tool) Gathers multiple VCF files from a scatter operation into a single VCF file'
-complete -c gatk -n __fish_use_subcommand -x -a LeftAlignAndTrimVariants -d 'Left align and trim vairants'
-complete -c gatk -n __fish_use_subcommand -x -a LiftoverVcf -d 'Lifts over a VCF file from one reference build to another.'
-complete -c gatk -n __fish_use_subcommand -x -a MakeSitesOnlyVcf -d 'Creates a VCF that contains all the site-level information for all records in the input VCF but no genotype information.'
-complete -c gatk -n __fish_use_subcommand -x -a MakeVcfSampleNameMap -d 'Creates a TSV from sample name to VCF/GVCF path, with one line per input.'
-complete -c gatk -n __fish_use_subcommand -x -a MergeVcfs -d 'Combines multiple variant files into a single variant file'
-complete -c gatk -n __fish_use_subcommand -x -a PrintVariantsSpark -d 'Prints out variants from the input VCF.'
-complete -c gatk -n __fish_use_subcommand -x -a RemoveNearbyIndels -d '(Internal) Remove indels from the VCF file that are close to each other.'
-complete -c gatk -n __fish_use_subcommand -x -a RenameSampleInVcf -d 'Renames a sample within a VCF or BCF.'
-complete -c gatk -n __fish_use_subcommand -x -a SelectVariants -d 'Select a subset of variants from a VCF file'
-complete -c gatk -n __fish_use_subcommand -x -a SortVcf -d 'Sorts one or more VCF files.'
-complete -c gatk -n __fish_use_subcommand -x -a SplitVcfs -d 'Splits SNPs and INDELs into separate files.'
-complete -c gatk -n __fish_use_subcommand -x -a UpdateVCFSequenceDictionary -d 'Updates the sequence dictionary in a variant file.'
-complete -c gatk -n __fish_use_subcommand -x -a UpdateVcfSequenceDictionary -d 'Takes a VCF and a second file that contains a sequence dictionary and updates the VCF with the new sequence dictionary.'
-complete -c gatk -n __fish_use_subcommand -x -a VariantAnnotator -d 'Tool for adding annotations to VCF files'
-complete -c gatk -n __fish_use_subcommand -x -a VcfFormatConverter -d 'Converts VCF to BCF or BCF to VCF.'
-complete -c gatk -n __fish_use_subcommand -x -a VcfToIntervalList -d 'Converts a VCF or BCF file to a Picard Interval List'
+complete -k -c gatk -n __fish_use_subcommand -x -a VcfToIntervalList -d 'Converts a VCF or BCF file to a Picard Interval List'
+complete -k -c gatk -n __fish_use_subcommand -x -a VcfFormatConverter -d 'Converts VCF to BCF or BCF to VCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a VariantAnnotator -d 'Tool for adding annotations to VCF files'
+complete -k -c gatk -n __fish_use_subcommand -x -a UpdateVcfSequenceDictionary -d 'Takes a VCF and a second file that contains a sequence dictionary and updates the VCF with the new sequence dictionary.'
+complete -k -c gatk -n __fish_use_subcommand -x -a UpdateVCFSequenceDictionary -d 'Updates the sequence dictionary in a variant file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SplitVcfs -d 'Splits SNPs and INDELs into separate files.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SortVcf -d 'Sorts one or more VCF files.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SelectVariants -d 'Select a subset of variants from a VCF file'
+complete -k -c gatk -n __fish_use_subcommand -x -a RenameSampleInVcf -d 'Renames a sample within a VCF or BCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a RemoveNearbyIndels -d '(Internal) Remove indels from the VCF file that are close to each other.'
+complete -k -c gatk -n __fish_use_subcommand -x -a PrintVariantsSpark -d 'Prints out variants from the input VCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergeVcfs -d 'Combines multiple variant files into a single variant file'
+complete -k -c gatk -n __fish_use_subcommand -x -a MakeVcfSampleNameMap -d 'Creates a TSV from sample name to VCF/GVCF path, with one line per input.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MakeSitesOnlyVcf -d 'Creates a VCF that contains all the site-level information for all records in the input VCF but no genotype information.'
+complete -k -c gatk -n __fish_use_subcommand -x -a LiftoverVcf -d 'Lifts over a VCF file from one reference build to another.'
+complete -k -c gatk -n __fish_use_subcommand -x -a LeftAlignAndTrimVariants -d 'Left align and trim vairants'
+complete -k -c gatk -n __fish_use_subcommand -x -a GatherVcfsCloud -d '(BETA Tool) Gathers multiple VCF files from a scatter operation into a single VCF file'
+complete -k -c gatk -n __fish_use_subcommand -x -a GatherVcfs -d 'Gathers multiple VCF files from a scatter operation into a single VCF file'
+complete -k -c gatk -n __fish_use_subcommand -x -a FixVcfHeader -d 'Replaces or fixes a VCF header.'
+complete -k -c gatk -n __fish_use_subcommand -x -a VariantRecalibrator -d 'Build a recalibration model to score variant quality for filtering purposes'
+complete -k -c gatk -n __fish_use_subcommand -x -a VariantFiltration -d 'Filter variant calls based on INFO and/or FORMAT annotations'
+complete -k -c gatk -n __fish_use_subcommand -x -a NuMTFilterTool -d 'Uses the median autosomal coverage and the allele depth to determine whether the allele might be a NuMT'
+complete -k -c gatk -n __fish_use_subcommand -x -a MTLowHeteroplasmyFilterTool -d 'If too many low het sites, filter all low het sites'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterVcf -d 'Hard filters a VCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterVariantTranches -d 'Apply tranche filtering'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterMutectCalls -d 'Filter somatic SNVs and indels called by Mutect2'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterAlignmentArtifacts -d '(EXPERIMENTAL Tool) Filter alignment artifacts from a vcf callset.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CreateSomaticPanelOfNormals -d '(BETA Tool) Make a panel of normals for use with Mutect2'
+complete -k -c gatk -n __fish_use_subcommand -x -a CNNVariantWriteTensors -d '(EXPERIMENTAL Tool) Write variant tensors for training a CNN to filter variants'
+complete -k -c gatk -n __fish_use_subcommand -x -a CNNVariantTrain -d '(EXPERIMENTAL Tool) Train a CNN model for filtering variants'
+complete -k -c gatk -n __fish_use_subcommand -x -a CNNScoreVariants -d 'Apply a Convolutional Neural Net to filter annotated variants'
+complete -k -c gatk -n __fish_use_subcommand -x -a ApplyVQSR -d 'Apply a score cutoff to filter variants based on a recalibration table'
+complete -k -c gatk -n __fish_use_subcommand -x -a VariantsToTable -d 'Extract fields from a VCF file to a tab-delimited table'
+complete -k -c gatk -n __fish_use_subcommand -x -a VariantEval -d '(BETA Tool) General-purpose tool for variant evaluation (% in dbSNP, genotype concordance, Ti/Tv ratios, and a lot more)'
+complete -k -c gatk -n __fish_use_subcommand -x -a ValidateVariants -d 'Validate VCF'
+complete -k -c gatk -n __fish_use_subcommand -x -a ValidateBasicSomaticShortMutations -d '(EXPERIMENTAL Tool) Check variants against tumor-normal bams representing the same samples, though not the ones from the actual calls.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ReferenceBlockConcordance -d 'Evaluate GVCF reference block concordance of an input GVCF against a truth GVCF'
+complete -k -c gatk -n __fish_use_subcommand -x -a GenotypeConcordance -d 'Calculates the concordance between genotype data of one sample in each of two VCFs - truth (or reference) vs. calls.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FuncotatorDataSourceDownloader -d 'Data source downloader for Funcotator.'
+complete -k -c gatk -n __fish_use_subcommand -x -a Funcotator -d 'Functional Annotator'
+complete -k -c gatk -n __fish_use_subcommand -x -a FuncotateSegments -d '(BETA Tool) Functional annotation for segment files.  The output formats are not well-defined and subject to change.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FindMendelianViolations -d 'Finds mendelian violations of all types within a VCF'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterFuncotations -d '(EXPERIMENTAL Tool) Filter variants based on clinically-significant Funcotations.'
+complete -k -c gatk -n __fish_use_subcommand -x -a EvaluateInfoFieldConcordance -d '(BETA Tool) Evaluate concordance of info fields in an input VCF against a validated truth VCF'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountVariantsSpark -d 'CountVariants on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountVariants -d 'Counts variant records in a VCF file, regardless of filter status.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountFalsePositives -d '(BETA Tool) Count PASS variants'
+complete -k -c gatk -n __fish_use_subcommand -x -a Concordance -d 'Evaluate concordance of an input VCF against a validated truth VCF'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalculateMixingFractions -d '(Internal) Calculate proportions of different samples in a pooled bam'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalculateGenotypePosteriors -d 'Calculate genotype posterior probabilities given family and/or known population genotypes'
+complete -k -c gatk -n __fish_use_subcommand -x -a AnnotateVcfWithExpectedAlleleFraction -d '(Internal) Annotate a vcf with expected allele fractions in pooled sequencing'
+complete -k -c gatk -n __fish_use_subcommand -x -a AnnotateVcfWithBamDepth -d '(Internal) Annotate a vcf with a bam\'s read depth at each variant locus'
+complete -k -c gatk -n __fish_use_subcommand -x -a AlleleFrequencyQC -d '(BETA Tool) General-purpose tool for variant evaluation (% in dbSNP, genotype concordance, Ti/Tv ratios, and a lot more)'
+complete -k -c gatk -n __fish_use_subcommand -x -a SvDiscoverFromLocalAssemblyContigAlignmentsSpark -d '(BETA Tool) (Internal) Examines aligned contigs from local assemblies and calls structural variants or their breakpoints'
+complete -k -c gatk -n __fish_use_subcommand -x -a StructuralVariationDiscoveryPipelineSpark -d '(BETA Tool) Runs the structural variation discovery workflow on a single sample'
+complete -k -c gatk -n __fish_use_subcommand -x -a StructuralVariantDiscoverer -d '(BETA Tool) (Internal) Examines aligned contigs from local assemblies and calls structural variants or their breakpoints'
+complete -k -c gatk -n __fish_use_subcommand -x -a PrintSVEvidence -d '(EXPERIMENTAL Tool) Prints SV evidence records'
+complete -k -c gatk -n __fish_use_subcommand -x -a PairedEndAndSplitReadEvidenceCollection -d '(BETA Tool) Gathers paired-end and split read evidence files for use in the GATK-SV pipeline.'
+complete -k -c gatk -n __fish_use_subcommand -x -a JointGermlineCNVSegmentation -d '(BETA Tool) Combine segmented gCNV VCFs.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FindBreakpointEvidenceSpark -d '(BETA Tool) (Internal) Produces local assemblies of genomic regions that may harbor structural variants'
+complete -k -c gatk -n __fish_use_subcommand -x -a ExtractSVEvidenceSpark -d '(BETA Tool) (Internal) Extracts evidence of structural variations from reads'
+complete -k -c gatk -n __fish_use_subcommand -x -a DiscoverVariantsFromContigAlignmentsSAMSpark -d '(BETA Tool) (Internal) Examines aligned contigs from local assemblies and calls structural variants'
+complete -k -c gatk -n __fish_use_subcommand -x -a CpxVariantReInterpreterSpark -d '(BETA Tool) (Internal) Tries to extract simple variants from a provided GATK-SV CPX.vcf'
+complete -k -c gatk -n __fish_use_subcommand -x -a ReadsPipelineSpark -d '(BETA Tool) Runs BWA (if specified), MarkDuplicates, BQSR, and HaplotypeCaller on unaligned or aligned reads to generate a VCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a Mutect2 -d 'Call somatic SNVs and indels via local assembly of haplotypes'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergeMutectStats -d 'Merge the stats output by scatters of a single Mutect2 job'
+complete -k -c gatk -n __fish_use_subcommand -x -a LearnReadOrientationModel -d 'Get the maximum likelihood estimates of artifact prior probabilities in the orientation bias mixture model filter'
+complete -k -c gatk -n __fish_use_subcommand -x -a HaplotypeCallerSpark -d '(BETA Tool) HaplotypeCaller on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a HaplotypeCaller -d 'Call germline SNPs and indels via local re-assembly of haplotypes'
+complete -k -c gatk -n __fish_use_subcommand -x -a GnarlyGenotyper -d '(BETA Tool) Perform "quick and dirty" joint genotyping on one or more samples pre-called with HaplotypeCaller'
+complete -k -c gatk -n __fish_use_subcommand -x -a GenotypeGVCFs -d 'Perform joint genotyping on one or more samples pre-called with HaplotypeCaller'
+complete -k -c gatk -n __fish_use_subcommand -x -a GenomicsDBImport -d 'Import VCFs to GenomicsDB'
+complete -k -c gatk -n __fish_use_subcommand -x -a CombineGVCFs -d 'Merges one or more HaplotypeCaller GVCF files into a single GVCF with appropriate annotations'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalibrateDragstrModel -d '(BETA Tool) estimates the parameters for the DRAGstr model'
+complete -k -c gatk -n __fish_use_subcommand -x -a ScatterIntervalsByNs -d 'Writes an interval list created by splitting a reference at Ns.'
+complete -k -c gatk -n __fish_use_subcommand -x -a NormalizeFasta -d 'Normalizes lines of sequence in a FASTA file to be of the same length.'
+complete -k -c gatk -n __fish_use_subcommand -x -a NonNFastaSize -d 'Counts the number of non-N bases in a fasta file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FindBadGenomicKmersSpark -d '(BETA Tool) Identifies sequences that occur at high frequency in a reference'
+complete -k -c gatk -n __fish_use_subcommand -x -a FastaReferenceMaker -d 'Create snippets of a fasta file'
+complete -k -c gatk -n __fish_use_subcommand -x -a FastaAlternateReferenceMaker -d 'Create an alternative reference by combining a fasta with a vcf.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ExtractSequences -d 'Subsets intervals from a reference sequence to a new FASTA file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CreateSequenceDictionary -d 'Creates a sequence dictionary for a reference sequence.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountBasesInReference -d 'Count the numbers of each base in a reference file'
+complete -k -c gatk -n __fish_use_subcommand -x -a ComposeSTRTableFile -d 'Determines the presence of STR in a reference sequence'
+complete -k -c gatk -n __fish_use_subcommand -x -a BwaMemIndexImageCreator -d 'Create a BWA-MEM index image file for use with GATK BWA tools'
+complete -k -c gatk -n __fish_use_subcommand -x -a BaitDesigner -d 'Designs oligonucleotide baits for hybrid selection reactions.'
+complete -k -c gatk -n __fish_use_subcommand -x -a UnmarkDuplicates -d 'Clears the 0x400 duplicate SAM flag'
+complete -k -c gatk -n __fish_use_subcommand -x -a UmiAwareMarkDuplicatesWithMateCigar -d '(EXPERIMENTAL Tool) Identifies duplicate reads using information from read positions and UMIs.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SplitSamByNumberOfReads -d 'Splits a SAM or BAM file to multiple BAMs.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SplitSamByLibrary -d 'Splits a SAM or BAM file into individual files by library'
+complete -k -c gatk -n __fish_use_subcommand -x -a SplitReads -d 'Outputs reads from a SAM/BAM/CRAM by read group, sample and library name'
+complete -k -c gatk -n __fish_use_subcommand -x -a SplitNCigarReads -d 'Split Reads with N in Cigar'
+complete -k -c gatk -n __fish_use_subcommand -x -a SortSamSpark -d '(BETA Tool) SortSam on Spark (works on SAM/BAM/CRAM)'
+complete -k -c gatk -n __fish_use_subcommand -x -a SortSam -d 'Sorts a SAM or BAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a SimpleMarkDuplicatesWithMateCigar -d '(EXPERIMENTAL Tool) Examines aligned records in the supplied SAM or BAM file to locate duplicate molecules.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SetNmMdAndUqTags -d 'Fixes the NM, MD, and UQ tags in a SAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a SetNmAndUqTags -d 'DEPRECATED: Use SetNmMdAndUqTags instead.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SamToFastqWithTags -d 'Converts a SAM or BAM file to FASTQ alongside FASTQs created from tags.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SamToFastq -d 'Converts a SAM or BAM file to FASTQ.'
+complete -k -c gatk -n __fish_use_subcommand -x -a SamFormatConverter -d 'Convert a BAM file to a SAM file, or a SAM to a BAM'
+complete -k -c gatk -n __fish_use_subcommand -x -a RevertSamSpark -d '(BETA Tool) Reverts SAM, BAM or CRAM files to a previous state.'
+complete -k -c gatk -n __fish_use_subcommand -x -a RevertSam -d 'Reverts SAM or BAM files to a previous state.'
+complete -k -c gatk -n __fish_use_subcommand -x -a RevertOriginalBaseQualitiesAndAddMateCigar -d 'Reverts the original base qualities and adds the mate cigar tag to read-group BAMs'
+complete -k -c gatk -n __fish_use_subcommand -x -a RevertBaseQualityScores -d 'Revert Quality Scores in a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a ReplaceSamHeader -d 'Replaces the SAMFileHeader in a SAM or BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ReorderSam -d 'Reorders reads in a SAM or BAM file to match ordering in a second reference file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a PrintReadsSpark -d 'PrintReads on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a PrintReadsHeader -d 'Print the header from a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a PrintReads -d 'Print reads in the SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a PositionBasedDownsampleSam -d 'Downsample a SAM or BAM file to retain a subset of the reads based on the reads location in each tile in the flowcell.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergeSamFiles -d 'Merges multiple SAM and/or BAM files into a single file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergeBamAlignment -d 'Merge alignment data from a SAM or BAM with data in an unmapped BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MarkDuplicatesWithMateCigar -d 'Identifies duplicate reads, accounting for mate CIGAR.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MarkDuplicatesSpark -d 'MarkDuplicates on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a MarkDuplicates -d 'Identifies duplicate reads.'
+complete -k -c gatk -n __fish_use_subcommand -x -a LeftAlignIndels -d 'Left-aligns indels from reads in a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a GatherBamFiles -d 'Concatenate efficiently BAM files that resulted from a scattered parallel analysis'
+complete -k -c gatk -n __fish_use_subcommand -x -a FixMisencodedBaseQualityReads -d 'Fix Illumina base quality scores in a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a FixMateInformation -d 'Verify mate-pair information between mates and fix if needed.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterSamReads -d 'Subsets reads from a SAM or BAM file by applying one of several filters.'
+complete -k -c gatk -n __fish_use_subcommand -x -a FastqToSam -d 'Converts a FASTQ file to an unaligned BAM or SAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a ExtractOriginalAlignmentRecordsByNameSpark -d '(BETA Tool) Subsets reads by name'
+complete -k -c gatk -n __fish_use_subcommand -x -a DownsampleSam -d 'Downsample a SAM or BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a DownsampleByDuplicateSet -d '(BETA Tool) Discard a set fraction of duplicate sets from a UMI-grouped bam'
+complete -k -c gatk -n __fish_use_subcommand -x -a ConvertHeaderlessHadoopBamShardToBam -d '(BETA Tool) Convert a headerless BAM shard into a readable BAM'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectDuplicateMetrics -d 'Collect Duplicate metrics from marked file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ClipReads -d 'Clip reads in a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CleanSam -d 'Cleans the provided SAM/BAM, soft-clipping beyond-end-of-reference alignments and setting MAPQ to 0 for unmapped reads'
+complete -k -c gatk -n __fish_use_subcommand -x -a BwaSpark -d '(BETA Tool) Align reads to a given reference using BWA on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a BwaAndMarkDuplicatesPipelineSpark -d '(BETA Tool) Takes name-sorted file and runs BWA and MarkDuplicates.'
+complete -k -c gatk -n __fish_use_subcommand -x -a BuildBamIndex -d 'Generates a BAM index ".bai" file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a BaseRecalibratorSpark -d '(BETA Tool) Generate recalibration table for Base Quality Score Recalibration (BQSR) on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a BaseRecalibrator -d 'Generates recalibration table for Base Quality Score Recalibration (BQSR)'
+complete -k -c gatk -n __fish_use_subcommand -x -a BamToBfq -d 'Converts a BAM file into a BFQ (binary fastq formatted) file'
+complete -k -c gatk -n __fish_use_subcommand -x -a BQSRPipelineSpark -d '(BETA Tool) Both steps of BQSR (BaseRecalibrator and ApplyBQSR) on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a ApplyBQSRSpark -d '(BETA Tool) Apply base quality score recalibration on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a ApplyBQSR -d 'Apply base quality score recalibration'
+complete -k -c gatk -n __fish_use_subcommand -x -a AddOriginalAlignmentTags -d '(EXPERIMENTAL Tool) Adds Original Alignment tag and original mate contig tag'
+complete -k -c gatk -n __fish_use_subcommand -x -a AddOrReplaceReadGroups -d 'Assigns all the reads in a file to a single new read-group.'
+complete -k -c gatk -n __fish_use_subcommand -x -a AddOATag -d 'Record current alignment information to OA tag.'
+complete -k -c gatk -n __fish_use_subcommand -x -a AddCommentsToBam -d 'Adds comments to the header of a BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ReadAnonymizer -d '(EXPERIMENTAL Tool) Replace bases in reads with reference bases.'
+complete -k -c gatk -n __fish_use_subcommand -x -a PrintBGZFBlockInformation -d '(EXPERIMENTAL Tool) Print information about the compressed blocks in a BGZF format file'
+complete -k -c gatk -n __fish_use_subcommand -x -a ParallelCopyGCSDirectoryIntoHDFSSpark -d '(BETA Tool) Parallel copy a file or directory from Google Cloud Storage into the HDFS file system used by Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a IndexFeatureFile -d 'Creates an index for a feature file, e.g. VCF or BED file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a GatherTranches -d '(BETA Tool) Gathers scattered VQSLOD tranches into a single file'
+complete -k -c gatk -n __fish_use_subcommand -x -a GatherBQSRReports -d 'Gathers scattered BQSR recalibration reports into a single file'
+complete -k -c gatk -n __fish_use_subcommand -x -a FifoBuffer -d 'Provides a large, FIFO buffer that can be used to buffer input and output streams between programs.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CreateHadoopBamSplittingIndex -d '(BETA Tool) Create a Hadoop BAM splitting index'
+complete -k -c gatk -n __fish_use_subcommand -x -a MethylationTypeCaller -d '(EXPERIMENTAL Tool) Identify methylated bases from bisulfite sequenced, methylation-aware BAMs'
+complete -k -c gatk -n __fish_use_subcommand -x -a PathSeqScoreSpark -d 'Step 3: Classifies pathogen-aligned reads and generates abundance scores'
+complete -k -c gatk -n __fish_use_subcommand -x -a PathSeqPipelineSpark -d 'Combined tool that performs all steps: read filtering, microbe reference alignment, and abundance scoring'
+complete -k -c gatk -n __fish_use_subcommand -x -a PathSeqFilterSpark -d 'Step 1: Filters low quality, low complexity, duplicate, and host reads'
+complete -k -c gatk -n __fish_use_subcommand -x -a PathSeqBwaSpark -d 'Step 2: Aligns reads to the microbe reference'
+complete -k -c gatk -n __fish_use_subcommand -x -a PathSeqBuildReferenceTaxonomy -d 'Builds a taxonomy datafile of the microbe reference'
+complete -k -c gatk -n __fish_use_subcommand -x -a PathSeqBuildKmers -d 'Builds set of host reference k-mers'
+complete -k -c gatk -n __fish_use_subcommand -x -a SplitIntervals -d 'Split intervals into sub-interval files.'
+complete -k -c gatk -n __fish_use_subcommand -x -a PreprocessIntervals -d 'Prepares bins for coverage collection'
+complete -k -c gatk -n __fish_use_subcommand -x -a LiftOverIntervalList -d 'Lifts over an interval list from one reference build to another.'
+complete -k -c gatk -n __fish_use_subcommand -x -a IntervalListTools -d 'A tool for performing various IntervalList manipulations'
+complete -k -c gatk -n __fish_use_subcommand -x -a IntervalListToBed -d 'Converts an Picard IntervalList file to a BED file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CompareIntervalLists -d 'Compare two interval lists for equality'
+complete -k -c gatk -n __fish_use_subcommand -x -a BedToIntervalList -d 'Converts a BED file to a Picard Interval List.'
+complete -k -c gatk -n __fish_use_subcommand -x -a VcfToAdpc -d 'Program to convert an Arrays VCF to an ADPC file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergePedIntoVcf -d 'Program to merge a single-sample ped file from zCall into a single-sample VCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a GtcToVcf -d 'Program to convert an Illumina GTC file to a VCF'
+complete -k -c gatk -n __fish_use_subcommand -x -a CreateVerifyIDIntensityContaminationMetricsFile -d 'Program to generate a picard metrics file from the output of the VerifyIDIntensity tool.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CompareGtcFiles -d 'Compares two GTC files.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CombineGenotypingArrayVcfs -d 'Program to combine multiple genotyping array VCF files into one VCF.'
+complete -k -c gatk -n __fish_use_subcommand -x -a BpmToNormalizationManifestCsv -d 'Program to convert an Illumina bpm file into a bpm.csv file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a HtsgetReader -d '(EXPERIMENTAL Tool) Download a file using htsget'
+complete -k -c gatk -n __fish_use_subcommand -x -a ViewSam -d 'Prints a SAM or BAM file to the screen'
+complete -k -c gatk -n __fish_use_subcommand -x -a ValidateSamFile -d 'Validates a SAM or BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a QualityScoreDistributionSpark -d '(BETA Tool) QualityScoreDistribution on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a QualityScoreDistribution -d 'Chart the distribution of quality scores.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MeanQualityByCycleSpark -d '(BETA Tool) MeanQualityByCycle on Spark'
+complete -k -c gatk -n __fish_use_subcommand -x -a MeanQualityByCycle -d 'Collect mean quality by cycle.'
+complete -k -c gatk -n __fish_use_subcommand -x -a LiftOverHaplotypeMap -d 'Lifts over a haplotype database from one reference to another'
+complete -k -c gatk -n __fish_use_subcommand -x -a IdentifyContaminant -d 'Computes a fingerprint from the supplied SAM/BAM file, given a contamination estimate.'
+complete -k -c gatk -n __fish_use_subcommand -x -a GetSampleName -d 'Emit a single sample name'
+complete -k -c gatk -n __fish_use_subcommand -x -a GatherPileupSummaries -d 'Combine output files from GetPileupSummary in the order defined by a sequence dictionary'
+complete -k -c gatk -n __fish_use_subcommand -x -a FlagStatSpark -d 'Spark tool to accumulate flag statistics'
+complete -k -c gatk -n __fish_use_subcommand -x -a FlagStat -d 'Accumulate flag statistics given a BAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a ExtractFingerprint -d 'Computes a fingerprint from the input file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a EstimateLibraryComplexity -d 'Estimates the numbers of unique molecules in a sequencing library.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CrosscheckReadGroupFingerprints -d 'DEPRECATED: USE CrosscheckFingerprints.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CrosscheckFingerprints -d 'Checks that all data in the input files appear to have come from the same individual'
+complete -k -c gatk -n __fish_use_subcommand -x -a ConvertSequencingArtifactToOxoG -d 'Extract OxoG metrics from generalized artifacts metrics.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CompareSAMs -d 'Compare two input ".sam" or ".bam" files.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CompareMetrics -d 'Compare two metrics files.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CompareDuplicatesSpark -d '(BETA Tool) Determine if two potentially identical BAMs have the same duplicate reads'
+complete -k -c gatk -n __fish_use_subcommand -x -a CompareBaseQualities -d 'Compares the base qualities of two SAM/BAM/CRAM files'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectWgsMetricsWithNonZeroCoverage -d '(EXPERIMENTAL Tool) Collect metrics about coverage and performance of whole genome sequencing (WGS) experiments.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectWgsMetrics -d 'Collect metrics about coverage and performance of whole genome sequencing (WGS) experiments.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectVariantCallingMetrics -d 'Collects per-sample and aggregate (spanning all samples) metrics from the provided VCF file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectTargetedPcrMetrics -d 'Calculate PCR-related metrics from targeted sequencing data.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectSequencingArtifactMetrics -d 'Collect metrics to quantify single-base sequencing artifacts.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectSamErrorMetrics -d 'Program to collect error metrics on bases stratified in various ways.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectRrbsMetrics -d '<b>Collects metrics from reduced representation bisulfite sequencing (Rrbs) data.</b>'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectRnaSeqMetrics -d 'Produces RNA alignment metrics for a SAM or BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectRawWgsMetrics -d 'Collect whole genome sequencing-related metrics.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectQualityYieldMetricsSpark -d '(BETA Tool) Collects quality yield metrics from SAM/BAM/CRAM file(s).'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectQualityYieldMetrics -d 'Collect metrics about reads that pass quality thresholds and Illumina-specific filters.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectOxoGMetrics -d 'Collect metrics to assess oxidative artifacts.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectMultipleMetricsSpark -d '(BETA Tool) Runs multiple metrics collection modules for a given alignment file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectMultipleMetrics -d 'Collect multiple classes of metrics.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectJumpingLibraryMetrics -d 'Collect jumping library metrics.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectInsertSizeMetricsSpark -d '(BETA Tool) Collects insert size distribution information on alignment data'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectInsertSizeMetrics -d 'Collect metrics about the insert size distribution of a paired-end library.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectIndependentReplicateMetrics -d '(EXPERIMENTAL Tool) Estimates the rate of independent replication rate of reads within a bam.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectHsMetrics -d 'Collects hybrid-selection (HS) metrics for a SAM or BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectHiSeqXPfFailMetrics -d 'Classify PF-Failing reads in a HiSeqX Illumina Basecalling directory into various categories.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectGcBiasMetrics -d 'Collect metrics regarding GC bias.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectBaseDistributionByCycleSpark -d '(BETA Tool) Collects base distribution per cycle in SAM/BAM/CRAM file(s).'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectBaseDistributionByCycle -d 'Chart the nucleotide distribution per cycle in a SAM or BAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectArraysVariantCallingMetrics -d 'Collects summary and per-sample from the provided arrays VCF file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectAlignmentSummaryMetrics -d '<b>Produces a summary of alignment metrics from a SAM or BAM file.</b>'
+complete -k -c gatk -n __fish_use_subcommand -x -a ClusterCrosscheckMetrics -d 'Clusters the results of a CrosscheckFingerprints run by LOD score'
+complete -k -c gatk -n __fish_use_subcommand -x -a CheckTerminatorBlock -d 'Asserts the provided gzip file\'s (e.g., BAM) last block is well-formed; RC 100 otherwise'
+complete -k -c gatk -n __fish_use_subcommand -x -a CheckPileup -d 'Compare GATK\'s internal pileup to a reference Samtools mpileup'
+complete -k -c gatk -n __fish_use_subcommand -x -a CheckFingerprint -d 'Computes a fingerprint from the supplied input (SAM/BAM/CRAM or VCF) file and compares it to the provided genotypes'
+complete -k -c gatk -n __fish_use_subcommand -x -a CheckDuplicateMarking -d 'Checks the consistency of duplicate markings.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalculateReadGroupChecksum -d 'Creates a hash code based on the read groups (RG).'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalculateFingerprintMetrics -d 'Calculate statistics on fingerprints, checking their viability'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalculateContamination -d 'Calculate the fraction of reads coming from cross-sample contamination'
+complete -k -c gatk -n __fish_use_subcommand -x -a CalcMetadataSpark -d '(BETA Tool) (Internal) Collects read metrics relevant to structural variant discovery'
+complete -k -c gatk -n __fish_use_subcommand -x -a BamIndexStats -d 'Generate index statistics from a BAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a AnalyzeCovariates -d 'Evaluate and compare base quality score recalibration (BQSR) tables'
+complete -k -c gatk -n __fish_use_subcommand -x -a AccumulateVariantCallingMetrics -d 'Combines multiple Variant Calling Metrics files into a single file'
+complete -k -c gatk -n __fish_use_subcommand -x -a PileupSpark -d '(BETA Tool) Prints read alignments in samtools pileup format'
+complete -k -c gatk -n __fish_use_subcommand -x -a Pileup -d 'Prints read alignments in samtools pileup format'
+complete -k -c gatk -n __fish_use_subcommand -x -a GetPileupSummaries -d 'Tabulates pileup metrics for inferring contamination'
+complete -k -c gatk -n __fish_use_subcommand -x -a GeneExpressionEvaluation -d '(BETA Tool) Evaluate gene expression from RNA-seq reads aligned to genome.'
+complete -k -c gatk -n __fish_use_subcommand -x -a DepthOfCoverage -d '(BETA Tool) Generate coverage summary information for reads data'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountReadsSpark -d 'Counts reads in the input SAM/BAM'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountReads -d 'Count reads in a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountBasesSpark -d 'Counts bases in the input SAM/BAM'
+complete -k -c gatk -n __fish_use_subcommand -x -a CountBases -d 'Count bases in a SAM/BAM/CRAM file'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectReadCounts -d 'Collects read counts at specified intervals'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectF1R2Counts -d 'Collect F1R2 read counts for the Mutect2 orientation bias mixture model filter'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectAllelicCountsSpark -d 'Collects reference and alternate allele counts at specified sites'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectAllelicCounts -d 'Collects reference and alternate allele counts at specified sites'
+complete -k -c gatk -n __fish_use_subcommand -x -a AnalyzeSaturationMutagenesis -d '(BETA Tool) (EXPERIMENTAL) Processes reads from a MITESeq or other saturation mutagenesis experiment.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ASEReadCounter -d 'Generates table of filtered base counts at het sites for allele specific expression'
+complete -k -c gatk -n __fish_use_subcommand -x -a TagGermlineEvents -d '(EXPERIMENTAL Tool) Do a simplistic tagging of germline events in a tumor segment file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a PostprocessGermlineCNVCalls -d 'Postprocesses the output of GermlineCNVCaller and generates VCFs and denoised copy ratios'
+complete -k -c gatk -n __fish_use_subcommand -x -a PlotModeledSegments -d 'Creates plots of denoised and segmented copy-ratio and minor-allele-fraction estimates'
+complete -k -c gatk -n __fish_use_subcommand -x -a PlotDenoisedCopyRatios -d 'Creates plots of denoised copy ratios'
+complete -k -c gatk -n __fish_use_subcommand -x -a ModelSegments -d 'Models segmented copy ratios from denoised read counts and segmented minor-allele fractions from allelic counts'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergeAnnotatedRegionsByAnnotation -d '(EXPERIMENTAL Tool) Merge annotated genomic regions within specified distance if annotation value(s) are exactly the same.'
+complete -k -c gatk -n __fish_use_subcommand -x -a MergeAnnotatedRegions -d '(EXPERIMENTAL Tool) Merge annotated genomic regions based entirely on touching/overlapping intervals.'
+complete -k -c gatk -n __fish_use_subcommand -x -a GermlineCNVCaller -d 'Calls copy-number variants in germline samples given their counts and the output of DetermineGermlineContigPloidy'
+complete -k -c gatk -n __fish_use_subcommand -x -a FilterIntervals -d 'Filters intervals based on annotations and/or count statistics'
+complete -k -c gatk -n __fish_use_subcommand -x -a DetermineGermlineContigPloidy -d 'Determines the baseline contig ploidy for germline samples given counts data'
+complete -k -c gatk -n __fish_use_subcommand -x -a DenoiseReadCounts -d 'Denoises read counts to produce denoised copy ratios'
+complete -k -c gatk -n __fish_use_subcommand -x -a CreateReadCountPanelOfNormals -d 'Creates a panel of normals for read-count denoising'
+complete -k -c gatk -n __fish_use_subcommand -x -a CombineSegmentBreakpoints -d '(EXPERIMENTAL Tool) Combine the breakpoints of two segment files and annotate the resulting intervals with chosen columns from each file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CallCopyRatioSegments -d 'Calls copy-ratio segments as amplified, deleted, or copy-number neutral'
+complete -k -c gatk -n __fish_use_subcommand -x -a AnnotateIntervals -d 'Annotates intervals with GC content, mappability, and segmental-duplication content'
+complete -k -c gatk -n __fish_use_subcommand -x -a MarkIlluminaAdapters -d 'Reads a SAM or BAM file and rewrites it with new adapter-trimming tags.'
+complete -k -c gatk -n __fish_use_subcommand -x -a IlluminaBasecallsToSam -d 'Transforms raw Illumina sequencing data into an unmapped SAM or BAM file.'
+complete -k -c gatk -n __fish_use_subcommand -x -a IlluminaBasecallsToFastq -d 'Generate FASTQ file(s) from Illumina basecall read data.'
+complete -k -c gatk -n __fish_use_subcommand -x -a ExtractIlluminaBarcodes -d 'Tool determines the barcode for each read in an Illumina lane.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectIlluminaLaneMetrics -d 'Collects Illumina lane metrics for the given BaseCalling analysis directory.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CollectIlluminaBasecallingMetrics -d 'Collects Illumina Basecalling metrics for a sequencing run.'
+complete -k -c gatk -n __fish_use_subcommand -x -a CheckIlluminaDirectory -d 'Asserts the validity for specified Illumina basecalling data.'
 
 
 
@@ -491,7 +491,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l REFERE
 
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l output -s O -d 'Output file for annotated intervals.' -r
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -510,7 +510,7 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l gatk-conf
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -519,13 +519,13 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l lenient -
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l mappability-track -d 'Path to Umap single-read mappability track in .bed or .bed.gz format (see https://bismap.hoffmanlab.org/).' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l segmental-duplication-track -d 'Path to segmental-duplication track in .bed or .bed.gz format.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -570,7 +570,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l neutr
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l neutral-segment-copy-ratio-upper-bound -d 'Upper bound on non-log2 copy ratio used for determining copy-neutral segments.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l outlier-neutral-segment-copy-ratio-z-score-threshold -d 'Threshold on z-score of non-log2 copy ratio used for determining outlier copy-neutral segments.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -598,7 +598,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l g
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -608,13 +608,13 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l l
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -667,7 +667,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" 
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l spark-verbosity -d 'Spark verbosity.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -688,7 +688,7 @@ complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l gcs-proje
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l number-of-eigensamples -d 'Number of eigensamples to use for denoising.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -739,7 +739,7 @@ complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" 
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l num-thermal-advi-iters -d 'Number of thermal ADVI iterations (for DA-ADVI).' -x
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l sample-psi-scale -d 'Prior scale of the sample-specific correction to the coverage unexplained variance.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -772,7 +772,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l maximum-seg
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l minimum-gc-content -d 'Minimum allowed value for GC-content annotation (inclusive).' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l minimum-segmental-duplication-content -d 'Minimum allowed value for segmental-duplication-content annotation (inclusive).' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -838,7 +838,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l p-active 
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l p-alt -d 'Total prior probability of alternative copy-number states (the reference copy-number is set to the contig integer ploidy) Default value: 1.0E-6.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l sample-psi-scale -d 'Typical scale of sample-specific correction to the unexplained variance.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -866,7 +866,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l gatk-
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -875,13 +875,13 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l inter
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -934,7 +934,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotati
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -945,13 +945,13 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotati
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l output-end-column -d 'Output end column name.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1013,7 +1013,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l number-of-smo
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l smoothing-credible-interval-threshold-allele-fraction -d 'Number of 10% equal-tailed credible-interval widths to use for allele-fraction segmentation smoothing.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l smoothing-credible-interval-threshold-copy-ratio -d 'Number of 10% equal-tailed credible-interval widths to use for copy-ratio segmentation smoothing.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1037,7 +1037,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l maxi
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l minimum-contig-length -d 'Threshold length (in bp) for contigs to be plotted.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l point-size-copy-ratio -d 'Point size to use for plotting copy-ratio points.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1062,7 +1062,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l minimum
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l point-size-allele-fraction -d 'Point size to use for plotting allele-fraction points.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l point-size-copy-ratio -d 'Point size to use for plotting copy-ratio points.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1099,7 +1099,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l het-deletion-qs-threshold -d 'Filter out heterozygous deletions with quality lower than this.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l hom-deletion-qs-threshold -d 'Filter out homozygous deletions with quality lower than this.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l input-intervals-vcf -d 'Input VCF with combined intervals for all samples Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
@@ -1109,15 +1109,15 @@ complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l sample-index -d 'Sample index in the call-set (must be contained in all shards).' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l site-frequency-threshold -d 'Filter out variants with site frequency higher than this.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1152,7 +1152,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l
 
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l called-matched-normal-seg-file -d 'Matched normal called segment file.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l output -s O -d 'Output TSV file identical to the tumor segment file, but with additional germline tag column (POSSIBLE_GERMLINE).' -r
-complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l segments -s S -d 'Input tumor (called) segment file -- the output will be a copy of this file with the additional information.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -1172,7 +1172,7 @@ complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l gatk-conf
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l input-call-header -d 'Column header to use for the call (amplified, neutral, or deleted).' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
@@ -1182,13 +1182,13 @@ complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l intervals
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l reciprocal-threshold -d 'Reciprocal threshold to match a segment (when endpoints do not match).' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1221,7 +1221,7 @@ complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l soft-clip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l variant -s V -d 'One or more VCF files This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -1254,13 +1254,13 @@ complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l output -s O 
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l output-format -d 'Format of the output file Default value: RTABLE.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1294,10 +1294,10 @@ complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l min-base-qua
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l orf -d 'reference interval(s) of the ORF (1-based, inclusive), for example, \'134-180,214-238\' (no spaces) Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l output-file-prefix -s O -d 'output file prefix Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -1332,12 +1332,12 @@ complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l paired-mode -d 'paired mode evaluation of variants (combine mates, when possible) Default value: true.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1371,10 +1371,10 @@ complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l output -s O -d 'Output file for allelic counts.' -r
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -1401,12 +1401,12 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l max-de
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l minimum-base-quality -d 'Minimum base quality.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1439,10 +1439,10 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l soft-c
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l output -s O -d 'Output file for allelic counts.' -r
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -1468,7 +1468,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l o
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l read-shard-size -o read-shard-size -d 'Maximum size of each read shard, in bases.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
@@ -1476,7 +1476,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l s
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -1510,9 +1510,9 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l s
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l output -s O -d 'Output .tar.gz file Required.' -r
-complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -1542,12 +1542,12 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l lenient -
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l max-depth-per-sample -o max-depth-per-sample -d 'Maximum number of reads to retain per sample per locus.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1580,7 +1580,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l soft-clip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l output -s O -d 'Output file for read counts.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
@@ -1608,13 +1608,13 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l interval-
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1647,7 +1647,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l soft-clip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -1671,16 +1671,16 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l interval-padding
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l output -s O -d 'Optional output file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l output -s O -d 'Optional output file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1713,7 +1713,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l soft-clipped-rat
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -1739,14 +1739,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l output-shar
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -1780,7 +1780,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l soft-clippe
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -1804,16 +1804,16 @@ complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l interval-padding
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l output -s O -d 'Optional output file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l output -s O -d 'Optional output file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1846,7 +1846,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l soft-clipped-rat
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -1872,14 +1872,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l output-shar
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -1913,10 +1913,10 @@ complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l soft-clippe
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l output -s O -d 'Base file location to which to write coverage summary information, must be a path to a file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -1953,12 +1953,12 @@ complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l partition-t
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l print-base-counts -d 'Add base counts to per-locus output Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -1999,7 +1999,7 @@ complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l soft-clippe
 
 
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l gff-file -s G -d 'Gff3 file containing feature annotations Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l output -s O -d 'Output file for gene expression.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -2031,14 +2031,14 @@ complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l mu
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l overlap-type -d 'Feature overlap types This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l read-strands -d 'Which strands (forward or reverse) each read is expected to be on Default value: FORWARD_REVERSE.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l unspliced -d 'Whether the rna is unspliced.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -2072,7 +2072,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l so
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l output -s O -d 'The output table Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l variant -s V -d 'A VCF file containing variants and allele frequencies Required.' -x
@@ -2104,13 +2104,13 @@ complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l min-mapp
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l minimum-population-allele-frequency -o min-af -d 'Minimum population allele frequency of sites to consider.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -2143,7 +2143,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l soft-cli
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l output -s O -d 'An output file created to be created by the walker.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -2173,14 +2173,14 @@ complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l metadata -o metadata
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l output-insert-length -o output-insert-length -d 'If enabled, inserts lengths will be added to the output pileup.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l show-verbose -o verbose -d 'Add extra informative columns to the pileup output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -2213,7 +2213,7 @@ complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l soft-clipped-ratio-t
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l output -s O -d 'The output directory to which the scattered output will be written.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -2242,17 +2242,17 @@ complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l output-shard-tm
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l read-shard-size -o read-shard-size -d 'Maximum size of each read shard, in bases.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l show-verbose -o verbose -d 'Add extra informative columns to the pileup output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l shuffle -o shuffle -d 'whether to use the shuffle implementation or overlaps partitioning (the default) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -2318,7 +2318,7 @@ complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l ignore-la
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l intermediate-csv-file -o csv -d 'location of the csv intermediate file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l plots-report-file -o plots -d 'location of the output report Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -2347,7 +2347,7 @@ complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l REFERENCE_SEQ
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l output -s O -d 'output file for metadata Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -2373,14 +2373,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l output-sh
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -2426,7 +2426,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l high
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l low-coverage-ratio-threshold -d 'The minimum coverage relative to the median.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l matched-normal -o matched -d 'The matched normal input table Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l tumor-segmentation -o segments -d 'The output table containing segmentation of the tumor by minor allele fraction Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -2529,9 +2529,9 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l REFERENCE_
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l pileup -d 'Pileup generated by Samtools Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -2561,12 +2561,12 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l max-depth-per-s
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l output -s O -d 'Output file (if not provided, defaults to STDOUT) Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -2732,7 +2732,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleS
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -2745,14 +2745,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleS
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -2933,7 +2933,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l RE
 
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l histogram-plot-file -s H -d 'File to write insert size histogram chart to.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l output -s O -d 'File to write the output to.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -2963,14 +2963,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" 
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -3074,7 +3074,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -3086,14 +3086,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -3183,7 +3183,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l 
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l output -s O -d 'File to write the output to.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -3209,14 +3209,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -3547,7 +3547,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l output
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l reference -s R -d 'Reference sequence file.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l throw-on-diff -d 'Throw exception on difference.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l VALIDATION_STRINGENCY -d 'Validation stringency for all SAM files read by this program.' -x
@@ -3559,7 +3559,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l static
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l input2 -o I2 -d 'The second BAM Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -3588,15 +3588,15 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l prin
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l throw-on-diff -d 'Throw error if any differences were found Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -3838,7 +3838,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l REFERENC
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -3862,16 +3862,16 @@ complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l interval-padding -
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l output -s O -d 'Optional output file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l output -s O -d 'Optional output file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -3904,7 +3904,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l soft-clipped-ratio
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -3930,14 +3930,14 @@ complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l output-shard-
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -3981,7 +3981,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l gcs-p
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -3990,8 +3990,8 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l showH
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l output -s O -d 'Output file with only the sample name in it.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l output -s O -d 'Output file with only the sample name in it.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -4017,13 +4017,13 @@ complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l intervals -s 
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l use-url-encoding -o encode -d 'Apply URL encoding to convert spaces and other special characters in sample name.' -x
@@ -4145,7 +4145,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l gat
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -4158,14 +4158,14 @@ complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l pfR
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -4240,7 +4240,7 @@ complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" 
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -4253,14 +4253,14 @@ complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" 
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -4363,7 +4363,7 @@ complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l intervals -s L
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l notag -o notag -d 'A tag which should be excluded.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l tag -o tag -d 'A tag which should be included.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -4562,7 +4562,7 @@ complete -c gatk -n "__fish_seen_subcommand_from BedToIntervalList" -l REFERENCE
 
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l L -d 'Undocumented option Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l L2 -d 'Undocumented option Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l gatk-config-file -d 'A configuration file to use with the GATK.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
@@ -4570,7 +4570,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l gcs-pr
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -4663,7 +4663,7 @@ complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l REFERE
 
 
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l output -s O -d 'Output Picard interval-list file containing the preprocessed intervals.' -r
-complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -4682,7 +4682,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l gatk-co
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -4692,12 +4692,12 @@ complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l lenient
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l padding -d 'Length (in bp) of the padding regions on each side of the intervals.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -4750,7 +4750,7 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l gatk-config-
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -4760,15 +4760,15 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l lenient -o L
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l min-contig-size -d 'Minimum contig size to keep if getting intervals from the reference Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l scatter-count -o scatter -d 'scatter count: number of output interval files to split into Default value: 1.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l subdivision-mode -o mode -d 'How to divide intervals.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -4802,7 +4802,7 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l soft-clipped
 
 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l output -s O -d 'File for k-mer set output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l reference -s R -d 'Reference FASTA file path on local disk Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l reference -s R -d 'Reference FASTA file path on local disk Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l bloom-false-positive-probability -s P -d 'If non-zero, creates a Bloom filter with this false positive probability Default value: 0.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l gatk-config-file -d 'A configuration file to use with the GATK.' -x
@@ -4813,7 +4813,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l kmer-mask
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l kmer-size -o SZ -d 'K-mer size, must be odd and less than 32 Default value: 31.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l kmer-spacing -o SP -d 'Spacing between successive k-mers Default value: 1.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -4823,7 +4823,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l showHidde
 
 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l output -s O -d 'Local path for the output file.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l tax-dump -o TD -d 'Local path to taxonomy dump tarball (taxdump.tar.gz available at ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/) Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l gatk-config-file -d 'A configuration file to use with the GATK.' -x
@@ -4833,7 +4833,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l min-non-virus-contig-length -o min-non-virus-contig-length -d 'Minimum reference contig length for non-viruses Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l refseq-catalog -o RC -d 'Local path to catalog file (RefSeq-releaseXX.catalog.gz available at ftp://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/) Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -4859,7 +4859,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l gatk-config
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -4873,14 +4873,14 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l paired-outp
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l unpaired-input -d 'Input BAM containing only unpaired reads Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l unpaired-output -d 'Output BAM containing only unpaired reads Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -4916,7 +4916,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l soft-clippe
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -4959,15 +4959,15 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l program-
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l quality-threshold -d 'Quality score trimmer threshold Default value: 15.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l skip-quality-filters -d 'Skip low-quality and low-complexity read filtering Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l unpaired-output -d 'Output BAM containing only unpaired reads Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -5004,7 +5004,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l soft-cli
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l microbe-bwa-image -d 'Microbe reference BWA index image file generated using BwaMemIndexImageCreator.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l microbe-dict -d 'Use the given sequence dictionary as the microbe sequence dictionary.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l scores-output -o SO -d 'URI for the taxonomic scores output Required.' -x
@@ -5058,10 +5058,10 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l progra
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l quality-threshold -d 'Quality score trimmer threshold Default value: 15.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l readsPerPartitionOutput -d 'Number of reads per partition for output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l score-metrics -o SM -d 'Log counts of mapped and unmapped reads to this file Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l score-warnings -o SW -d 'Write accessions found in the reads header but not the taxonomy database to this file Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
@@ -5069,7 +5069,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l skip-q
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -5124,7 +5124,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l gcs-max-r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l identity-margin -o identity-margin -d 'Identity margin, as a fraction of the best hit (between 0 and 1).' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -5139,16 +5139,16 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l paired-in
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l score-metrics -o SM -d 'Log counts of mapped and unmapped reads to this file Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l score-warnings -o SW -d 'Write accessions found in the reads header but not the taxonomy database to this file Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l unpaired-input -d 'Input BAM containing only unpaired reads Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -5184,9 +5184,9 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l soft-clip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l output -s O -d 'Output VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l output -s O -d 'Output VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -5213,12 +5213,12 @@ complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l lenie
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l max-depth-per-sample -o max-depth-per-sample -d 'Maximum number of reads to retain per sample per locus.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -5262,7 +5262,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" 
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l splitting-index-granularity -d 'Splitting index granularity, an entry is created in the index every this many reads.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -5302,7 +5302,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l gcs-proje
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -5311,9 +5311,9 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l showHidde
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l input -s I -d 'List of scattered tranches files This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l input -s I -d 'List of scattered tranches files This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l mode -o mode -d 'Recalibration mode to employ Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l output -s O -d 'File to output the gathered tranches file to Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l output -s O -d 'File to output the gathered tranches file to Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l gatk-config-file -d 'A configuration file to use with the GATK.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
@@ -5321,7 +5321,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l gcs-project-
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l truth-sensitivity-tranche -o tranche -d 'The levels of truth sensitivity at which to slice the data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -5331,15 +5331,15 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l showHidden -
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l input -s I -d 'Feature file (eg., VCF or BED file) to index.' -x
+complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l input -s I -d 'Feature file (eg., VCF or BED file) to index.' -r
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l gatk-config-file -d 'A configuration file to use with the GATK.' -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l output -s O -d 'The output index file.' -x
+complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l output -s O -d 'The output index file.' -r
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -5364,7 +5364,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDF
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l input-file-glob -d 'optional wildcard glob to subset files in the input directory to copy Default value: *.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
@@ -5376,14 +5376,14 @@ complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDF
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -5425,7 +5425,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l g
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l output -s O -d 'File to which to write block information (if not specified, prints to standard output) Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -5434,9 +5434,9 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l s
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l output -s O -d 'Output bam file.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l output -s O -d 'Output bam file.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -5462,13 +5462,13 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l intervals -s
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l ref-base-quality -o ref-base-quality -d 'Quality for bases that are set to the reference base.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l use-simple-cigar -o use-simple-cigar -d 'If true, will produce a simplified cigar string (without `=` and `X`).' -x
@@ -5580,8 +5580,8 @@ complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l REFE
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l output -s O -d 'Write output to this file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l output -s O -d 'Write output to this file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -5607,13 +5607,13 @@ complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l in
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -5646,8 +5646,8 @@ complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l so
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l output -s O -d 'Write output to this file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l output -s O -d 'Write output to this file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -5677,13 +5677,13 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l preserve-qscores-
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l quantize-quals -d 'Quantize quality scores to a given number of levels Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l use-original-qualities -o OQ -d 'Use the base quality scores from the OQ tag Default value: false.' -x
@@ -5720,7 +5720,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l soft-clipped-rati
 
 
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l bqsr-recal-file -o bqsr -d 'Input covariates table file for base quality score recalibration Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l output -s O -d 'the output bam Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -5750,14 +5750,14 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l program-name
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l quantize-quals -d 'Quantize quality scores to a given number of levels Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -5794,10 +5794,10 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l soft-clipped
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l known-sites -d 'the known variants This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l output -s O -d 'the output bam Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -5837,13 +5837,13 @@ complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l quantize-
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l quantizing-levels -d 'number of distinct quality scores in the quantized output Default value: 16.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -5910,10 +5910,10 @@ complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l REFERENCE_SEQUENCE
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l known-sites -d 'One or more databases of known polymorphic sites used to exclude regions around known polymorphisms from analysis.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l output -s O -d 'The output recalibration table file to create Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l output -s O -d 'The output recalibration table file to create Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -5951,12 +5951,12 @@ complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l preserve-q
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l quantizing-levels -d 'number of distinct quality scores in the quantized output Default value: 16.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l use-original-qualities -o OQ -d 'Use the base quality scores from the OQ tag Default value: false.' -x
@@ -5990,10 +5990,10 @@ complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l soft-clipp
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l known-sites -d 'the known variants This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l output -s O -d 'Path to save the final recalibration tables to.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -6030,13 +6030,13 @@ complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l progr
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l quantizing-levels -d 'number of distinct quality scores in the quantized output Default value: 16.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -6091,9 +6091,9 @@ complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l REFERENCE_SEQ
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l output -s O -d 'the output bam Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -6121,7 +6121,7 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpa
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l remove-all-duplicates -d 'If true do not write duplicates to the output file instead of writing them with appropriate flags set.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l remove-sequencing-duplicates -d 'If true do not write optical/sequencing duplicates to the output file instead of writing them with appropriate flags set.' -x
@@ -6130,7 +6130,7 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpa
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -6164,9 +6164,9 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpa
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l output -s O -d 'the output bam Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -6191,14 +6191,14 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l output-shard-tmp-d
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l single-end-alignment -o se -d 'Run single-end instead of paired-end alignment Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -6253,14 +6253,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l REFERENCE_SEQUENCE
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l output -s O -d 'BAM output file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l output -s O -d 'BAM output file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l clip-representation -o CR -d 'How should we actually clip the bases? Default value: WRITE_NS.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l clip-sequence -s X -d 'Remove sequences within reads matching this sequence This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l clip-sequences-file -o XF -d 'Remove sequences within reads matching the sequences in this FASTA file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l clip-sequences-file -o XF -d 'Remove sequences within reads matching the sequences in this FASTA file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l cloud-index-prefetch-buffer -o CIPB -d 'Size of the cloud-only prefetch buffer (in MB; 0 to disable).' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l cloud-prefetch-buffer -o CPB -d 'Size of the cloud-only prefetch buffer (in MB; 0 to disable).' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l create-output-bam-index -o OBI -d 'If true, create a BAM/CRAM index when writing a coordinate-sorted BAM/CRAM file.' -x
@@ -6282,18 +6282,18 @@ complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l interval-padding 
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l output-statistics -o os -d 'File to output statistics Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l output-statistics -o os -d 'File to output statistics Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l q-trimming-threshold -o QT -d 'If provided, the Q-score clipper will be applied Default value: -1.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l read -o read -d 'Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -6359,7 +6359,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShard
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -6368,8 +6368,8 @@ complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShard
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l output -s O -d 'Output BAM file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l output -s O -d 'Output BAM file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -6398,13 +6398,13 @@ complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l mi
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l min-reads -d 'The mininum total number of reads required in the set Default value: 1.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -6462,7 +6462,7 @@ complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l showHidden -o
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l output -s O -d 'file to write reads to Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l read-name-file -s f -d 'file containing list of read names Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -6490,14 +6490,14 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecords
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -6622,8 +6622,8 @@ complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l REFERENC
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l output -s O -d 'Write output to this file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l output -s O -d 'Write output to this file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -6649,13 +6649,13 @@ complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" 
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -6709,9 +6709,9 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l REFERENCE_SE
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l output -s O -d 'Output BAM Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l output -s O -d 'Output BAM Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -6737,12 +6737,12 @@ complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l intervals -
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -6821,7 +6821,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l REFERENCE_SE
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l output -s O -d 'the output bam Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -6852,17 +6852,17 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l output-
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l read-name-regex -d 'Regular expression that can be used to parse read names in the incoming SAM file.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l remove-all-duplicates -d 'If true do not write duplicates to the output file instead of writing them with appropriate flags set.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l remove-sequencing-duplicates -d 'If true do not write optical/sequencing duplicates to the output file instead of writing them with appropriate flags set.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -7037,8 +7037,8 @@ complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l 
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l output -s O -d 'Write output to this file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l output -s O -d 'Write output to this file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7064,13 +7064,13 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l intervals -s L -
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -7103,8 +7103,8 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l soft-clipped-rat
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l output -s O -d 'file to write the bam header to Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l output -s O -d 'file to write the bam header to Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7130,13 +7130,13 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l intervals 
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -7169,7 +7169,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l soft-clipp
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l output -s O -d 'uri for the output file: a local file path Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7195,14 +7195,14 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l output-shar
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -7282,8 +7282,8 @@ complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l REFERENCE_
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l output -s O -d 'Write output to this file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l output -s O -d 'Write output to this file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7309,13 +7309,13 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l int
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -7404,7 +7404,7 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l REFERENCE_SEQUENC
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l output -s O -d 'The output SAM/BAM/CRAM file to create, or an output directory if \'--output-by-readgroup\' is set.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l output-map -d 'Tab separated file with two columns, OUTPUT_MAP_READ_GROUP_FIELD_NAME and OUTPUT_MAP_OUTPUT_FILE_FIELD_NAME, providing file mapping only used if \'--output-by-readgroup\' is set.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -7437,9 +7437,9 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l output-shard
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l remove-default-attributes-to-clear -d 'When removing alignment information, the set of optional tags to remove.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l remove-duplicate-information -d 'By default we remove duplicate read flags from all reads.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l sanitize -d 'WARNING: This option is potentially destructive.' -x
@@ -7448,7 +7448,7 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l sort-order -
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -7695,7 +7695,7 @@ complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l REFERENCE_SEQUENCE 
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l output -s O -d 'the output file path Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7721,15 +7721,15 @@ complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l output-shard-t
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l sort-order -o SO -d 'sort order of the output file Default value: coordinate.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -7763,9 +7763,9 @@ complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l soft-clipped-r
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l output -s O -d 'Write output to this BAM filename Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l output -s O -d 'Write output to this BAM filename Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7795,14 +7795,14 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l max-mismat
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l process-secondary-alignments -d 'have the walker split secondary alignments (will still repair MC tag without it) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l refactor-cigar-string -o fixNDN -d 'refactor cigar string with NDN elements to one element Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l skip-mapping-quality-transform -o skip-mq-transform -d 'skip the 255 -> 60 MQ read transform Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -7836,8 +7836,8 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l soft-clipp
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l output -s O -d 'The directory to output SAM/BAM/CRAM files.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l output -s O -d 'The directory to output SAM/BAM/CRAM files.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -7863,16 +7863,16 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l intervals -s L -
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l split-library-name -o LB -d 'Split file by library.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l split-read-group -o RG -d 'Split file by read group.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l split-sample -o SM -d 'Split file by sample.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -7999,8 +7999,8 @@ complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateC
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l output -s O -d 'Write output to this file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l output -s O -d 'Write output to this file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -8026,13 +8026,13 @@ complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l intervals 
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8107,7 +8107,7 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l gcs
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l output -s O -d 'Output reference index image file (ending in ".img").' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8116,8 +8116,8 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l sho
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l output -s O -d 'name of the zip file where the sites sampled will be stored Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l output -s O -d 'name of the zip file where the sites sampled will be stored Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -8136,7 +8136,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l gatk-co
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -8147,12 +8147,12 @@ complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l max-per
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l max-repeats -d 'maximum STR repeat sampled Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8185,7 +8185,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l soft-cl
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -8203,22 +8203,22 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l gatk-
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l output -s O -d 'Optional output file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l output -s O -d 'Optional output file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8297,7 +8297,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l REFERENCE_
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l output -s O -d 'Path to write the output fasta to Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l variant -s V -d 'A source of variants to merge with the reference sequence.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -8316,7 +8316,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -8326,14 +8326,14 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l line-width -d 'Maximum length of sequence to write per line Default value: 60.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l snp-mask -d 'SNP mask VCF file Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l snp-mask-priority -d 'Give the snp mask priority over the input VCF.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l use-iupac-sample -d 'If specified, heterozygous SNP sites will be output using IUPAC ambiguity codes given the genotypes for this sample Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -8368,7 +8368,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l output -s O -d 'Path to write the output fasta to Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -8386,7 +8386,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l gatk-co
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -8396,12 +8396,12 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l lenient
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l line-width -d 'Maximum length of sequence to write per line Default value: 60.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8435,7 +8435,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l soft-cl
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l output -s O -d 'file for ubiquitous kmer output Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l bam-partition-size -d 'maximum number of bytes to read from a file into each partition of reads.' -x
@@ -8451,7 +8451,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l gc
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l high-copy-fasta -d 'additional high copy kmers (mitochondrion, e.g.) fasta file name Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -8464,13 +8464,13 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l ou
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -8567,10 +8567,10 @@ complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l showHi
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l output -s O -d 'where to write the parameter output file.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l str-table-path -o str -d 'location of the zip that contains the sampling sites for the reference Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l output -s O -d 'where to write the parameter output file.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l str-table-path -o str -d 'location of the zip that contains the sampling sites for the reference Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l api-values -d 'Possible prior probabilities for the heterozygous indel call for the DRAGstr model parameter esimation.' -x
@@ -8608,15 +8608,15 @@ complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l paral
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l pileup-padding -d 'bases on either side of the repeat that are included in the STR pileup Default value: 5.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l sampling-min-mq -d 'the minimum read mapping quality allowed in sampled loci.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l shard-size -d 'when running in parallel this is the suggested shard size in base pairs.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l threads -d 'suggested number of parallel threads to perform the estimation, the default 0 leave it up to the VM to decide.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8649,9 +8649,9 @@ complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l soft-
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l output -s O -d 'The combined GVCF output file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l output -s O -d 'The combined GVCF output file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l annotation -s A -d 'One or more specific annotations to add to variant calls This argument may be specified 0 or more times.' -x
@@ -8677,7 +8677,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l gatk-config-fi
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l input-is-somatic -d 'Merge input GVCFs according to somatic (i.e. Mutect2) annotations (BETA) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
@@ -8685,15 +8685,15 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l interval-paddi
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -8757,7 +8757,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l genomicsdb
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l genomicsdb-shared-posixfs-optimizations -d 'Allow for optimizations to improve the usability and performance for shared Posix Filesystems(e.g. NFS, Lustre).' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l genomicsdb-vcf-buffer-size -d 'Buffer size in bytes to store variant contexts.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -8769,13 +8769,13 @@ complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l output-int
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l overwrite-existing-genomicsdb-workspace -d 'Will overwrite given workspace if it exists.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l validate-sample-name-map -d 'Boolean flag to enable checks on the sampleNameMap file.' -x
@@ -8814,8 +8814,8 @@ complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l soft-clipp
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l variant -s V -d 'A VCF file containing variants Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -8848,7 +8848,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l heterozygosit
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l heterozygosity-stdev -d 'Standard deviation of heterozygosity for SNP and indel calling.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l include-non-variant-sites -o all-sites -d 'Include loci found to be non-variant after genotyping Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l indel-heterozygosity -d 'Heterozygosity for indel calling.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l input-is-somatic -d 'Finalize input GVCF according to somatic (i.e. Mutect2) TLODs (BETA feature) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
@@ -8859,18 +8859,18 @@ complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l keep-combined
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l merge-input-intervals -o merge-input-intervals -d 'Boolean flag to import all data in between intervals.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l num-reference-samples-if-no-call -d 'Number of hom-ref genotypes to infer at sites not present in a panel Default value: 0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l population-callset -o population -d 'Callset to use in calculating genotype priors Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l sample-ploidy -o ploidy -d 'Ploidy (number of chromosomes) per sample.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l standard-min-confidence-threshold-for-calling -o stand-call-conf -d 'The minimum phred-scaled confidence threshold at which variants should be called Default value: 30.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l tumor-lod-to-emit -o emit-lod -d 'LOD threshold to emit variant to VCF.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -8914,9 +8914,9 @@ complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l soft-clipped-
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l annotate-with-num-discovered-alleles -d 'If provided, we will annotate records with the number of alternate alleles that were discovered (but not necessarily genotyped) at a given site Default value: false.' -x
@@ -8941,7 +8941,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l help -s h -
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l heterozygosity -d 'Heterozygosity value used to compute prior likelihoods for any locus.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l heterozygosity-stdev -d 'Standard deviation of heterozygosity for SNP and indel calling.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l indel-heterozygosity -d 'Heterozygosity for indel calling.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -8952,18 +8952,18 @@ complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l lenient -o 
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l max-genotype-count -d 'Maximum number of genotypes to consider at any site  Default value: 1024.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l merge-input-intervals -o merge-input-intervals -d 'Boolean flag to read in all data in between intervals.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l num-reference-samples-if-no-call -d 'Number of hom-ref genotypes to infer at sites not present in a panel Default value: 0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l output-database-name -o output-db -d 'File to which the sites-only annotation database derived from these input samples should be written Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l output-database-name -o output-db -d 'File to which the sites-only annotation database derived from these input samples should be written Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l population-callset -o population -d 'Callset to use in calculating genotype priors Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l sample-ploidy -o ploidy -d 'Ploidy (number of chromosomes) per sample.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l standard-min-confidence-threshold-for-calling -o stand-call-conf -d 'The minimum phred-scaled confidence threshold at which variants should be called Default value: 30.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l use-new-qual-calculator -o new-qual -d 'Use the new AF model instead of the so-called exact model Default value: true.' -x
@@ -9002,9 +9002,9 @@ complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l soft-clippe
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l alleles -d 'The set of alleles to force-call regardless of evidence Default value: null.' -x
@@ -9030,7 +9030,7 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l disable-seq
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l dont-use-dragstr-pair-hmm-scores -d 'disable DRAGstr pair-hmm score even when dragstr-params-path was provided Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l dragen-mode -d 'Single argument for enabling the bulk of DRAGEN-GATK features.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l dragstr-het-hom-ratio -d 'het to hom prior ratio use with DRAGstr on Default value: 2.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l enable-dynamic-read-disqualification-for-genotyping -d 'Will enable less strict read disqualification low base quality reads Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l exclude-intervals -o XL -d 'One or more genomic intervals to exclude from processing This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l founder-id -o founder-id -d 'Samples representing the population "founders" This argument may be specified 0 or more times.' -x
@@ -9058,20 +9058,20 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l native-pair
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l native-pair-hmm-use-double-precision -d 'use double precision in the native pairHmm.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l num-reference-samples-if-no-call -d 'Number of hom-ref genotypes to infer at sites not present in a panel Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l output-mode -d 'Specifies which type of calls we should output Default value: EMIT_VARIANTS_ONLY.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l population-callset -o population -d 'Callset to use in calculating genotype priors Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l recover-dangling-heads -d 'This argument is deprecated since version 3.3 Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l sample-name -o ALIAS -d 'Name of single sample to use from a multi-sample bam Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l sample-ploidy -o ploidy -d 'Ploidy (number of chromosomes) per sample.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l standard-min-confidence-threshold-for-calling -o stand-call-conf -d 'The minimum phred-scaled confidence threshold at which variants should be called Default value: 30.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l use-new-qual-calculator -o new-qual -d 'Use the new AF model instead of the so-called exact model Default value: true.' -x
@@ -9161,9 +9161,9 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l soft-clippe
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l output -s O -d 'Single file to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l alleles -d 'The set of alleles to force-call regardless of evidence Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l annotate-with-num-discovered-alleles -d 'If provided, we will annotate records with the number of alternate alleles that were discovered (but not necessarily genotyped) at a given site Default value: false.' -x
@@ -9185,7 +9185,7 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l disabl
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l dont-use-dragstr-pair-hmm-scores -d 'disable DRAGstr pair-hmm score even when dragstr-params-path was provided Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l dragen-mode -d 'Single argument for enabling the bulk of DRAGEN-GATK features.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l dragstr-het-hom-ratio -d 'het to hom prior ratio use with DRAGstr on Default value: 2.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l enable-dynamic-read-disqualification-for-genotyping -d 'Will enable less strict read disqualification low base quality reads Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l exclude-intervals -o XL -d 'One or more genomic intervals to exclude from processing This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l founder-id -o founder-id -d 'Samples representing the population "founders" This argument may be specified 0 or more times.' -x
@@ -9213,12 +9213,12 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l num-re
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l num-reference-samples-if-no-call -d 'Number of hom-ref genotypes to infer at sites not present in a panel Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l output-mode -d 'Specifies which type of calls we should output Default value: EMIT_VARIANTS_ONLY.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l output-shard-tmp-dir -d 'when writing a bam, in single sharded mode this directory to write the temporary intermediate output shards, if not specified .parts/ will be used Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l population-callset -o population -d 'Callset to use in calculating genotype priors Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l read-shard-padding -o read-shard-padding -d 'Each read shard has this many bases of extra context on each side.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l read-shard-size -o read-shard-size -d 'Maximum size of each read shard, in bases.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
@@ -9232,7 +9232,7 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l spark-
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l standard-min-confidence-threshold-for-calling -o stand-call-conf -d 'The minimum phred-scaled confidence threshold at which variants should be called Default value: 30.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l strict -d 'whether to use the strict implementation or not (defaults to the faster implementation that doesn\'t strictly match the walker version) Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l use-new-qual-calculator -o new-qual -d 'Use the new AF model instead of the so-called exact model Default value: true.' -x
@@ -9335,7 +9335,7 @@ complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l h
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l max-depth -d 'sites with depth higher than this value will be grouped Default value: 200.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l num-em-iterations -d 'give up on EM after this many iterations Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -9353,7 +9353,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l gcs-projec
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -9362,9 +9362,9 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l showHidden
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l af-of-alleles-not-in-resource -o default-af -d 'Population allele fraction assigned to alleles not found in germline resource.' -x
@@ -9389,7 +9389,7 @@ complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l disable-sequence-di
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l dont-use-dragstr-pair-hmm-scores -d 'disable DRAGstr pair-hmm score even when dragstr-params-path was provided Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l downsampling-stride -o stride -d 'Downsample a pool of reads starting within a range of one or more bases.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l dragstr-het-hom-ratio -d 'het to hom prior ratio use with DRAGstr on Default value: 2.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l enable-dynamic-read-disqualification-for-genotyping -d 'Will enable less strict read disqualification low base quality reads Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l exclude-intervals -o XL -d 'One or more genomic intervals to exclude from processing This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l f1r2-max-depth -d 'sites with depth higher than this value will be grouped Default value: 200.' -x
@@ -9426,15 +9426,15 @@ complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l normal-sample -o no
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l panel-of-normals -o pon -d 'VCF file of sites observed in normal.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l pcr-indel-qual -d 'Phred-scaled PCR indel qual for overlapping fragments Default value: 40.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l pcr-snv-qual -d 'Phred-scaled PCR SNV qual for overlapping fragments Default value: 40.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l tumor-lod-to-emit -o emit-lod -d 'Log 10 odds threshold to emit variant to VCF.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l tumor-sample -o tumor -d 'BAM sample name of tumor.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -9509,10 +9509,10 @@ complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l soft-clipped-ratio-
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l known-sites -d 'the known variants This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l output -s O -d 'the output vcf Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l align -d 'whether to perform alignment using BWA-MEM Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l alleles -d 'The set of alleles to force-call regardless of evidence Default value: null.' -x
@@ -9541,7 +9541,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l do-not-m
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l dont-use-dragstr-pair-hmm-scores -d 'disable DRAGstr pair-hmm score even when dragstr-params-path was provided Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l dragen-mode -d 'Single argument for enabling the bulk of DRAGEN-GATK features.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l dragstr-het-hom-ratio -d 'het to hom prior ratio use with DRAGstr on Default value: 2.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l dragstr-params-path -d 'location of the DRAGstr model parameters for STR error correction used in the Pair HMM.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l duplicate-scoring-strategy -o DS -d 'The scoring strategy for choosing the non-duplicate among candidates.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l duplicate-tagging-policy -d 'Determines how duplicate types are recorded in the DT optional attribute.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l emit-original-quals -d 'Emit original base qualities under the OQ tag Default value: false.' -x
@@ -9581,7 +9581,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l num-refe
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l output-bam -d 'the output bam Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l output-mode -d 'Specifies which type of calls we should output Default value: EMIT_VARIANTS_ONLY.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l output-shard-tmp-dir -d 'when writing a bam, in single sharded mode this directory to write the temporary intermediate output shards, if not specified .parts/ will be used Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l population-callset -o population -d 'Callset to use in calculating genotype priors Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l preserve-qscores-less-than -d 'Don\'t recalibrate bases with quality scores less than this threshold (with -bqsr) Default value: 6.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l program-name -d 'Name of the program running Default value: null.' -x
@@ -9589,7 +9589,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l quantize
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l quantizing-levels -d 'number of distinct quality scores in the quantized output Default value: 16.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l read-shard-padding -o read-shard-padding -d 'Each read shard has this many bases of extra context on each side.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l read-shard-size -o read-shard-size -d 'Maximum size of each read shard, in bases.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
@@ -9605,7 +9605,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l spark-ve
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l standard-min-confidence-threshold-for-calling -o stand-call-conf -d 'The minimum phred-scaled confidence threshold at which variants should be called Default value: 30.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l strict -d 'whether to use the strict implementation or not (defaults to the faster implementation that doesn\'t strictly match the walker version) Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l use-new-qual-calculator -o new-qual -d 'Use the new AF model instead of the so-called exact model Default value: true.' -x
@@ -9700,9 +9700,9 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l soft-cli
 
 
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l cpx-vcf -d 'file containing complex variants as output by GATK-SV Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l prefix-out-vcf -d 'prefix for two files containing derived simple variants for complex variants having one/multiple entry in SEGMENT annotation Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l assembly-imprecise-evidence-overlap-uncertainty -d 'Uncertainty in overlap of assembled breakpoints and evidence target links.' -x
@@ -9734,13 +9734,13 @@ complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l truth-interval-padding -d 'Breakpoint padding for evaluation against truth data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -9776,9 +9776,9 @@ complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l output -s O -d 'prefix for discovery (non-genotyped) VCF; sample name will be appended after the provided argument, followed by "_inv_del_ins.vcf" Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l assembly-imprecise-evidence-overlap-uncertainty -d 'Uncertainty in overlap of assembled breakpoints and evidence target links.' -x
@@ -9809,13 +9809,13 @@ complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlign
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l truth-interval-padding -d 'Breakpoint padding for evaluation against truth data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -9852,7 +9852,7 @@ complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlign
 
 
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l aligner-index-image -d 'bwa-mem index image file  Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l kmers-to-ignore -d 'file containing ubiquitous kmer list.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l output -s O -d 'HDFS path for output Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l adapter-sequence -d 'Adapter sequence.' -x
@@ -9912,10 +9912,10 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l qnam
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l qname-intervals-mapped -d 'file for mapped qname intervals output Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l read-metadata -d 'output file for read metadata Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l run-without-gaps-annotation -d 'Allow evidence filter to run without gaps annotation (assume no gaps).' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l run-without-umap-s100-annotation -d 'Allow evidence filter to run without annotation for single-read mappability of 100-mers (assume all mappable).' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
@@ -9928,7 +9928,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l sv-e
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l sv-genome-gaps-file -d 'Path to file enumerating gaps in the reference genome, used by classifier to score evidence for filtering.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l sv-genome-umap-s100-file -d 'Path to single read 100-mer mappability file in the reference genome, used by classifier to score evidence for filtering.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l target-link-file -d 'output file for non-assembled breakpoints in bedpe format Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l unfiltered-breakpoint-evidence-dir -d 'directory for evidence output Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -9969,7 +9969,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l soft
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l aligner-index-image -d 'bwa-mem index image file  Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l kmers-to-ignore -d 'file containing ubiquitous kmer list.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l output -s O -d 'sam file for aligned contigs Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l adapter-sequence -d 'Adapter sequence.' -x
@@ -10029,10 +10029,10 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l qname-intervals-mapped -d 'file for mapped qname intervals output Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l read-metadata -d 'output file for read metadata Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l run-without-gaps-annotation -d 'Allow evidence filter to run without gaps annotation (assume no gaps).' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l run-without-umap-s100-annotation -d 'Allow evidence filter to run without annotation for single-read mappability of 100-mers (assume all mappable).' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
@@ -10045,7 +10045,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l sv-genome-gaps-file -d 'Path to file enumerating gaps in the reference genome, used by classifier to score evidence for filtering.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l sv-genome-umap-s100-file -d 'Path to single read 100-mer mappability file in the reference genome, used by classifier to score evidence for filtering.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l target-link-file -d 'output file for non-assembled breakpoints in bedpe format Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l unfiltered-breakpoint-evidence-dir -d 'directory for evidence output Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -10085,11 +10085,11 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l model-call-intervals -d 'gCNV model intervals created with the FilterIntervals tool.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l output -s O -d 'The combined output VCF Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l pedigree -o ped -d 'Pedigree file for samples Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l model-call-intervals -d 'gCNV model intervals created with the FilterIntervals tool.' -r
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l output -s O -d 'The combined output VCF Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l pedigree -o ped -d 'Pedigree file for samples Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10110,7 +10110,7 @@ complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10121,12 +10121,12 @@ complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l minimum-qs-score -d 'Minimum QS score to combine a variant segment Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10163,10 +10163,10 @@ complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l pe-file -o PE -d 'Output file for paired end evidence Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l pe-file -o PE -d 'Output file for paired end evidence Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l sample-name -d 'Sample name Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l sr-file -o SR -d 'Output file for split read evidence Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l sr-file -o SR -d 'Output file for split read evidence Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10193,13 +10193,13 @@ complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCo
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCollection" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10232,8 +10232,8 @@ complete -c gatk -n "__fish_seen_subcommand_from PairedEndAndSplitReadEvidenceCo
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l evidence-file -d 'Input file URI with extension \'.sr.txt\', \'.pe.txt\', \'.baf.txt\', or \'.rd.txt\' (may be gzipped).' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l output -s O -d 'Output file with an evidence extension matching the input.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l evidence-file -d 'Input file URI with extension \'.sr.txt\', \'.pe.txt\', \'.baf.txt\', or \'.rd.txt\' (may be gzipped).' -r
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l output -s O -d 'Output file with an evidence extension matching the input.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10252,7 +10252,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l gatk-config
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10261,13 +10261,13 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l intervals -
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10301,9 +10301,9 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l soft-clippe
 
 
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l aligner-index-image -d 'bwa-mem index image file  Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l outputVCFName -s O -d 'Name of output VCF.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10336,12 +10336,12 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l non-canonical-contig-names-file -o alt-tigs -d 'file containing non-canonical chromosome names (e.g chrUn_KI270588v1) in the reference, human reference (hg19 or hg38) assumed when omitted Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l truth-interval-padding -d 'Breakpoint padding for evaluation against truth data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -10377,10 +10377,10 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l
 
 
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l contig-sam-file -d 'sam file for aligned contigs Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l kmers-to-ignore -d 'file containing ubiquitous kmer list.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l output -s O -d 'directory for VCF output, including those from experimental interpretation tool if so requested, will be created if not present; sample name will be appended after the provided argument Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l adapter-sequence -d 'Adapter sequence.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l allowed-short-fragment-overhang -d 'Proper pairs have the positive strand read upstream of the negative strand read, but we allow this much slop for short fragments.' -x
@@ -10444,7 +10444,7 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPip
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l qname-intervals-mapped -d 'file for mapped qname intervals output Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l read-metadata -d 'output file for read metadata Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l run-without-gaps-annotation -d 'Allow evidence filter to run without gaps annotation (assume no gaps).' -x
@@ -10459,7 +10459,7 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPip
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l sv-genome-gaps-file -d 'Path to file enumerating gaps in the reference genome, used by classifier to score evidence for filtering.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l sv-genome-umap-s100-file -d 'Path to single read 100-mer mappability file in the reference genome, used by classifier to score evidence for filtering.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l target-link-file -d 'output file for non-assembled breakpoints in bedpe format Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l truth-interval-padding -d 'Breakpoint padding for evaluation against truth data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l unfiltered-breakpoint-evidence-dir -d 'directory for evidence output Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -10502,9 +10502,9 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l output -s O -d 'prefix for output files (including VCF files and if enabled, the signaling assembly contig\'s alignments); sample name will be appended after the provided argument Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l assembly-imprecise-evidence-overlap-uncertainty -d 'Uncertainty in overlap of assembled breakpoints and evidence target links.' -x
@@ -10536,13 +10536,13 @@ complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyCont
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l truth-interval-padding -d 'Breakpoint padding for evaluation against truth data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -10606,7 +10606,7 @@ complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l gcs-max-r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l gold-standard -o gold -d 'Evaluations that count calls at sites of true variation (e.g., indel calls) will use this argument as their gold standard for comparison Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10620,23 +10620,23 @@ complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l list -o l
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l mendelian-violation-qual-threshold -o mvq -d 'Minimum genotype QUAL score for each trio member required to accept a site as a violation.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l merge-evals -o merge-evals -d 'If provided, all -eval tracks will be merged into a single eval track Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l min-phase-quality -o mpq -d 'Minimum phasing quality Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l require-strict-allele-match -o strict -d 'If provided only comp and eval tracks with exactly matching reference and alternate alleles will be counted as overlapping Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l sample -o sn -d 'Derive eval and comp contexts using only these sample genotypes, when genotypes are available in the original context This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l sample-ploidy -o ploidy -d 'Per-sample ploidy (number of chromosomes per sample) Default value: 2.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l SELECT_EXPS -o select -d 'One or more stratifications to use when evaluating the data","This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l SELECT_NAMES -o select-name -d 'Names to use for the list of stratifications (must be a 1-to-1 mapping) This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l strat-intervals -o strat-intervals -d 'File containing tribble-readable features for the IntervalStratificiation Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l stratification-module -o ST -d 'One or more specific stratification modules to apply to the eval track(s) (in addition to the standard stratifications, unless -noS is specified) This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l threshold -o pvalue-threshold -d 'Threshold to cut off the pvalue.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10645,8 +10645,8 @@ complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l showHidde
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l output -s O -d 'The output filtered VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l output -s O -d 'The output filtered VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10664,7 +10664,7 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l gat
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10673,13 +10673,13 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l int
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10713,8 +10713,8 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l sof
 
 
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l mixing-fractions -o mixing-fractions -d 'The input mixing fractions table Required.' -r
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l output -s O -d 'The output annotated VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l output -s O -d 'The output annotated VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10732,7 +10732,7 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFr
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10741,13 +10741,13 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFr
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10780,8 +10780,8 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFr
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10805,7 +10805,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l global-prior-snp -d 'Global Dirichlet prior parameters for the SNP allele frequency Default value: 0.001.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l ignore-input-samples -d 'Use external information only Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10813,19 +10813,19 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l num-reference-samples-if-no-call -d 'Number of hom-ref genotypes to infer at sites not present in a panel Default value: 0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l pedigree -o ped -d 'Pedigree file for samples Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l pedigree -o ped -d 'Pedigree file for samples Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l skip-family-priors -d 'Skip application of family-based priors Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l skip-population-priors -d 'Skip application of population-based priors Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l supporting-callsets -o supporting -d 'Other callsets to use in generating genotype posteriors This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l use-flat-priors-for-indels -o skipIndels -d 'Use flat priors for indels Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -10860,7 +10860,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l
 
 
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l output -s O -d 'The output table of samplemixing fractions Required.' -r
-complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -10878,7 +10878,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l ga
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10887,13 +10887,13 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l in
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -10927,7 +10927,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l so
 
 
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l evaluation -o eval -d 'A VCF containing variants to be compared to the truth Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l summary -s S -d 'A table of summary statistics (true positives, sensitivity, etc.) Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l summary -s S -d 'A table of summary statistics (true positives, sensitivity, etc.) Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l truth -o truth -d 'A VCF containing truth variants Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
@@ -10943,13 +10943,13 @@ complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l disable-bam-ind
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l disable-read-filter -o DF -d 'Read filters to be disabled before analysis This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l disable-sequence-dictionary-validation -o disable-sequence-dictionary-validation -d 'If specified, do not check the sequence dictionaries from our inputs for compatibility.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l exclude-intervals -o XL -d 'One or more genomic intervals to exclude from processing This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l filter-analysis -d 'A table of the contribution of each filter to true and false negatives Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l filtered-true-negatives-and-false-negatives -o ftnfn -d 'A vcf to write filtered true negatives and false negatives Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l filter-analysis -d 'A table of the contribution of each filter to true and false negatives Default value: null.' -r
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l filtered-true-negatives-and-false-negatives -o ftnfn -d 'A vcf to write filtered true negatives and false negatives Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l gatk-config-file -d 'A configuration file to use with the GATK.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -10958,15 +10958,15 @@ complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l intervals -s L 
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l tmp-dir -d 'Temp directory to use.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l true-positives-and-false-negatives -o tpfn -d 'A vcf to write true positives and false negatives Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l true-positives-and-false-positives -o tpfp -d 'A vcf to write true positives and false positives Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l tmp-dir -d 'Temp directory to use.' -r
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l true-positives-and-false-negatives -o tpfn -d 'A vcf to write true positives and false negatives Default value: null.' -r
+complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l true-positives-and-false-positives -o tpfp -d 'A vcf to write true positives and false positives Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11000,8 +11000,8 @@ complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l soft-clipped-ra
 
 
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l output -s O -d 'Output file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l output -s O -d 'Output file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11019,7 +11019,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l gatk-co
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11027,13 +11027,13 @@ complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l interva
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11066,7 +11066,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l soft-cl
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11084,23 +11084,23 @@ complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l gatk-config-f
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l interval-set-rule -o isr -d 'Set merging approach to use for combining interval inputs Default value: UNION.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l output -s O -d 'Optional output file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l output -s O -d 'Optional output file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11147,7 +11147,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l gatk-con
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11158,14 +11158,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l output -
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l output-shard-tmp-dir -d 'when writing a bam, in single sharded mode this directory to write the temporary intermediate output shards, if not specified .parts/ will be used Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -11198,7 +11198,7 @@ complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11207,13 +11207,13 @@ complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11249,9 +11249,9 @@ complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l allele-frequency-data-source -d 'The allele frequency data source (ExAC or gnomAD) that was used to Funcotate the input VCF.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l output -s O -d 'Output VCF file to which filtered variants should be written.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l output -s O -d 'Output VCF file to which filtered variants should be written.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l ref-version -d 'The version of the Human Genome reference which was used to Funcotate the input VCF.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11269,7 +11269,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l gatk-con
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11278,13 +11278,13 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l interval
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11353,8 +11353,8 @@ complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l data-sour
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l output -s O -d 'Output file to which annotated variants should be written.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l output-file-format -d 'The output file format.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l ref-version -d 'The version of the Human Genome reference to use (e.g. hg19, hg38, etc.). This will correspond to a sub-folder of each data source corresponding to that data source for the given reference.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l segments -d 'Input segment file (tab-separated values).' -x
+complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l segments -d 'Input segment file (tab-separated values).' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l alias-to-key-mapping -d '(Advanced) Mapping between an alias and key values that are recognized by the backend.' -x
@@ -11376,7 +11376,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l gatk-conf
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11386,12 +11386,12 @@ complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l lenient -
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l lookahead-cache-bp -d 'Number of base-pairs to cache when querying variants.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l transcript-list -d 'File to use as a list of transcripts (one transcript ID per line, version numbers are ignored) OR A set of transcript IDs to use for annotation to override selected transcript.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l transcript-selection-mode -d 'Method of detailed transcript selection.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotateSegments" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -11431,8 +11431,8 @@ complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l data-sources-pat
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l output -s O -d 'Output file to which annotated variants should be written.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l output-file-format -d 'The output file format.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l ref-version -d 'The version of the Human Genome reference to use (e.g. hg19, hg38, etc.). This will correspond to a sub-folder of each data source corresponding to that data source for the given reference.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l annotation-default -d 'Annotations to include in all annotated variants if the annotation is not specified in the data sources (in the format <ANNOTATION>:<VALUE>).' -x
@@ -11454,7 +11454,7 @@ complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l gatk-config-file
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11463,14 +11463,14 @@ complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l intervals -s L -
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l remove-filtered-variants -d 'Ignore/drop variants that have been filtered in the input.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l three-prime-flank-size -d 'Variants within this many bases of the 3\' end of a transcript (and not overlapping any part of the transcript itself) will be annotated as being in the 3\' flanking region of that transcript Default value: 0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l transcript-list -d 'File to use as a list of transcripts (one transcript ID per line, version numbers are ignored) OR A set of transcript IDs to use for annotation to override selected transcript.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l transcript-selection-mode -d 'Method of detailed transcript selection.' -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -11517,7 +11517,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader"
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l overwrite-output-file -o overwrite-output-file -d 'Overwrite output file if it exists already.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l somatic -o somatic -d 'Download the latest pre-packaged datasources for somatic functional annotation.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l validate-integrity -o validate-integrity -d 'Validate the integrity of the data sources after downloading them using sha256.' -x
@@ -11559,11 +11559,11 @@ complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l REFEREN
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l confidence-concordance-histogram -o cch -d 'Reflects the confidence scores of bases in reference blocks in the truth and eval VCF, respectively.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l eval-block-histogram -o ebh -d 'A histogram of block lengths and their associated confidence scores for the eval sample Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l confidence-concordance-histogram -o cch -d 'Reflects the confidence scores of bases in reference blocks in the truth and eval VCF, respectively.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l eval-block-histogram -o ebh -d 'A histogram of block lengths and their associated confidence scores for the eval sample Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l evaluation -o eval -d 'A VCF containing variants to be compared to the truth Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l truth -o truth -d 'A VCF containing truth variants Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l truth-block-histogram -o tbh -d 'A histogram of block lengths and their associated confidence scores for the truth sample Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l truth-block-histogram -o tbh -d 'A histogram of block lengths and their associated confidence scores for the truth sample Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11582,7 +11582,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l g
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11591,13 +11591,13 @@ complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l i
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11631,15 +11631,15 @@ complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l s
 
 
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l discovery-sample-name -d 'sample name for discovery in VCF.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l output -s O -d 'The output file, which will be a validation table (tsv).' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l reference -s R -d 'Reference sequence file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l output -s O -d 'The output file, which will be a validation table (tsv).' -r
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l reference -s R -d 'Reference sequence file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l val-case-sample-name -d 'validation case sample name (in the bam) Required.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l val-control-sample-name -d 'validation control sample name (in the bam) Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l annotated-vcf -d 'Optional output vcf containing original variants annotated with validation info.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l annotated-vcf -d 'Optional output vcf containing original variants annotated with validation info.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l cloud-index-prefetch-buffer -o CIPB -d 'Size of the cloud-only prefetch buffer (in MB; 0 to disable).' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l cloud-prefetch-buffer -o CPB -d 'Size of the cloud-only prefetch buffer (in MB; 0 to disable).' -x
@@ -11666,13 +11666,13 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutati
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l min-power -d 'Minimum power for an unvalidated variant to be considered a false positive.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l summary -d 'A table of summary statistics (true positives, sensitivity, etc.) Default value: null.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l summary -d 'A table of summary statistics (true positives, sensitivity, etc.) Default value: null.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11705,7 +11705,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutati
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11725,7 +11725,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l gatk-confi
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11734,13 +11734,13 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l intervals 
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l validate-GVCF -o gvcf -d 'Validate this file as a GVCF Default value: false.' -x
@@ -11801,7 +11801,7 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l gcs-max-retries
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l gold-standard -o gold -d 'Evaluations that count calls at sites of true variation (e.g., indel calls) will use this argument as their gold standard for comparison Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11815,22 +11815,22 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l list -o ls -d '
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l mendelian-violation-qual-threshold -o mvq -d 'Minimum genotype QUAL score for each trio member required to accept a site as a violation.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l merge-evals -o merge-evals -d 'If provided, all -eval tracks will be merged into a single eval track Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l min-phase-quality -o mpq -d 'Minimum phasing quality Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l require-strict-allele-match -o strict -d 'If provided only comp and eval tracks with exactly matching reference and alternate alleles will be counted as overlapping Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l sample -o sn -d 'Derive eval and comp contexts using only these sample genotypes, when genotypes are available in the original context This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l sample-ploidy -o ploidy -d 'Per-sample ploidy (number of chromosomes per sample) Default value: 2.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l SELECT_EXPS -o select -d 'One or more stratifications to use when evaluating the data","This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l SELECT_NAMES -o select-name -d 'Names to use for the list of stratifications (must be a 1-to-1 mapping) This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l strat-intervals -o strat-intervals -d 'File containing tribble-readable features for the IntervalStratificiation Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l stratification-module -o ST -d 'One or more specific stratification modules to apply to the eval track(s) (in addition to the standard stratifications, unless -noS is specified) This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11840,7 +11840,7 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l showHidden -o s
 
 
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l output -s O -d 'File to which the tab-delimited table is written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11862,7 +11862,7 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l gcs-max-ret
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l genotype-fields -o GF -d 'The name of a genotype field to include in the output table This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11871,15 +11871,15 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l intervals -
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l show-filtered -o raw -d 'Include filtered records in the output Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l split-multi-allelic -o SMA -d 'Split multi-allelic records into multiple lines Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -11914,9 +11914,9 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l soft-clippe
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l output -s O -d 'The output filtered and recalibrated VCF file in which each variant is annotated with its VQSLOD value Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l output -s O -d 'The output filtered and recalibrated VCF file in which each variant is annotated with its VQSLOD value Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l recal-file -d 'The input recal file used by ApplyVQSR Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -11937,7 +11937,7 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l gcs-project-for-r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l ignore-all-filters -d 'If specified, the variant recalibrator will ignore all input filters.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l ignore-filter -d 'If specified, the recalibration will be applied to variants marked as filtered by the specified filter name in the input VCF file This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -11947,14 +11947,14 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l lenient -o LE -d 
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l mode -o mode -d 'Recalibration mode to employ: 1.) SNP for recalibrating only SNPs (emitting indels untouched in the output VCF); 2.) INDEL for indels; and 3.) BOTH for recalibrating both SNPs and indels simultaneously.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l tmp-dir -d 'Temp directory to use.' -x
-complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l tranches-file -d 'The input tranches file describing where to cut the data Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l tmp-dir -d 'Temp directory to use.' -r
+complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l tranches-file -d 'The input tranches file describing where to cut the data Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l truth-sensitivity-filter-level -o ts-filter-level -d 'The truth sensitivity level at which to start filtering Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l use-allele-specific-annotations -o AS -d 'If specified, the tool will attempt to apply a filter to each allele based on the input tranches and allele-specific .recal file.' -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -11990,9 +11990,9 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l soft-clipped-rati
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l output -s O -d 'Output file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l output -s O -d 'Output file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l architecture -o architecture -d 'Neural Net architecture configuration json file Default value: null.' -x
@@ -12012,7 +12012,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l gatk-confi
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12021,14 +12021,14 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l intervals 
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l read-limit -o read-limit -d 'Maximum number of reads to encode in a tensor, for 2D models only.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l tensor-type -o tensor-type -d 'Name of the tensors to generate, reference for 1D reference tensors and read_tensor for 2D tensors.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12094,7 +12094,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l padding -o 
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l spatial-dropout -o spatial-dropout -d 'Spatial dropout on convolution layers Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l tensor-type -o tensor-type -d 'Type of tensors to use as input reference for 1D reference tensors and read_tensor for 2D tensors.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l training-steps -o training-steps -d 'Number of training steps per epoch.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
@@ -12123,7 +12123,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l help
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l max-tensors -o max-tensors -d 'Maximum number of tensors to write.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l tensor-type -o tensor-type -d 'Name of the tensors to generate.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12135,7 +12135,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l show
 
 
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l output -s O -d 'Output vcf Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12154,7 +12154,7 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l germline-resource -d 'Population vcf of germline sequencing containing allele fractions.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12165,13 +12165,13 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l min-sample-count -d 'Number of samples containing a variant site required to include it in the panel of normals.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12205,10 +12205,10 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l bwa-mem-index-image -o index -d 'BWA-mem index image Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l output -s O -d 'The output filtered VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument must be specified at least once.' -r
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l output -s O -d 'The output filtered VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12245,13 +12245,13 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l mi
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l num-regular-contigs -d 'Number of regular i.e. non-alt contigs Default value: 250000.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l seed-split-factor -o split-factor -d 'MEMs longer than the minimum seed length times this factor are split and re-seeded.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12289,8 +12289,8 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l so
 
 
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l output -s O -d 'The output filtered VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12315,7 +12315,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l gcs-max-r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l initial-threshold -d 'Initial artifact probability threshold used in first iteration Default value: 0.1.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12342,14 +12342,14 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l orientati
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l pcr-slippage-rate -d 'The frequency of polymerase slippage in contexts where it is suspected Default value: 0.1.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l stats -d 'The Mutect stats file output by Mutect2 Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l threshold-strategy -d 'The method for optimizing the posterior probability threshold Default value: OPTIMAL_F_SCORE.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l tumor-segmentation -d 'Tables containing tumor segments\' minor allele fractions for germline hets emitted by CalculateContamination This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l unique-alt-read-count -o unique -d 'Minimum unique (i.e. deduplicated) reads supporting the alternate allele Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -12384,9 +12384,9 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l soft-clip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l output -s O -d 'Output VCF file Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l output -s O -d 'Output VCF file Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l resource -d 'A list of validated VCFs with known sites of common variation This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12406,7 +12406,7 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l gcs-p
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l indel-tranche -o indel-tranche -d 'The level(s) of sensitivity to indels in the resource VCFs at which to filter indels.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l info-key -o info-key -d 'The key must be in the INFO field of the input VCF.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12416,14 +12416,14 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l inval
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l snp-tranche -o snp-tranche -d 'The level(s) of sensitivity to SNPs in the resource VCFs at which to filter SNPs.' -x
-complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12482,8 +12482,8 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l REFERENCE_SEQUENC
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l output -s O -d 'Output VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l output -s O -d 'Output VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12501,7 +12501,7 @@ complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12512,13 +12512,13 @@ complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l max-allowed-low-hets -d 'Number of low het sites allowed to pass other filters before filtering out all low het sites.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12551,8 +12551,8 @@ complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l output -s O -d 'Output VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l output -s O -d 'Output VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12571,7 +12571,7 @@ complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l gatk-config-
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12581,13 +12581,13 @@ complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l lenient -o L
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l max-numt-autosomal-copies -d 'Max expected NUMT copies in autosome used for filtering potential NuMTs when calling on mitochondria.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12620,8 +12620,8 @@ complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l soft-clipped
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l apply-allele-specific-filters -d 'Set mask at the allele level.' -x
@@ -12647,7 +12647,7 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l gcs-proje
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l genotype-filter-expression -o G-filter -d 'One or more expressions used with FORMAT (sample/genotype-level) fields to filter (see documentation guide for more info)  This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l genotype-filter-name -o G-filter-name -d 'Names to use for the list of sample/genotype filters (must be a 1-to-1 mapping)' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12663,14 +12663,14 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l mask-name
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l missing-values-evaluate-as-failing -d 'When evaluating the JEXL expressions, missing values should be considered failing the expression Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l set-filtered-genotype-to-no-call -d 'Set filtered genotypes to no-call Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12703,11 +12703,11 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l soft-clip
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l output -s O -d 'The output recal file used by ApplyVQSR Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l output -s O -d 'The output recal file used by ApplyVQSR Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l resource -d 'A list of sites for which to apply a prior probability of being correct but which aren\'t used by the algorithm (training and truth sets are required to run) This argument must be specified at least once.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l tranches-file -d 'The output tranches file used by ApplyVQSR Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l use-annotation -o an -d 'The names of the annotations which should used for calculations This argument must be specified at least once.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l variant -s V -d 'One or more VCF files containing variants This argument must be specified at least once.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l aggregate -o aggregate -d 'Additional raw input variants to be used in building the model This argument may be specified 0 or more times.' -x
@@ -12728,8 +12728,8 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l gcs-pro
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l ignore-all-filters -d 'If specified, the variant recalibrator will ignore all input filters.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l ignore-filter -d 'If specified, the variant recalibrator will also use variants marked as filtered by the specified filter name in the input VCF file This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l input-model -d 'If specified, the variant recalibrator will read the VQSR model from this file path.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l input-model -d 'If specified, the variant recalibrator will read the VQSR model from this file path.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12737,18 +12737,18 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l interva
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l mode -o mode -d 'Recalibration mode to employ Default value: SNP.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l output-model -d 'If specified, the variant recalibrator will output the VQSR model to this file path.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l output-model -d 'If specified, the variant recalibrator will output the VQSR model to this file path.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l rscript-file -d 'The output rscript file generated by the VQSR to aid in visualization of the input data and learned model Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l target-titv -o titv -d 'The expected novel Ti/Tv ratio to use when calculating FDR tranches and for display on the optimization curve output figures.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l truth-sensitivity-tranche -o tranche -d 'The levels of truth sensitivity at which to slice the data.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l use-allele-specific-annotations -o AS -d 'If specified, the variant recalibrator will attempt to use the allele-specific versions of the specified annotations.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
@@ -12858,7 +12858,7 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l gcs-project
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l help -s h -d 'display the help message Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l MAX_RECORDS_IN_RAM -d 'When writing files that need to be sorted, this will specify the number of records stored in RAM before spilling to disk.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
-complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -12869,9 +12869,9 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l showHidden 
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l output -s O -d 'File to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l reference -s R -d 'Reference sequence file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l output -s O -d 'File to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l reference -s R -d 'Reference sequence file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -12890,7 +12890,7 @@ complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l ga
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -12902,13 +12902,13 @@ complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l ma
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l max-leading-bases -d 'Set max reference window size to look back before allele Default value: 1000.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l split-multi-allelics -d 'Split multiallelic records and left-align individual alleles Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -13055,7 +13055,7 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l gatk-con
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -13066,15 +13066,15 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l output-s
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l program-name -d 'Name of the program running Default value: null.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l sharded-output -d 'For tools that write an output, write the output in multiple pieces (shards) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l shuffle -o shuffle -d 'whether to use the shuffle implementation or not Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l spark-master -d 'URL of the Spark Master to submit jobs to when using the Spark pipeline runner.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l spark-verbosity -d 'Spark verbosity.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l splitting-index-granularity -d 'Granularity to use when writing a splitting index, one entry will be put into the index every n reads where n is this granularity value.' -x
-complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l use-nio -d 'Whether to use NIO or the Hadoop filesystem (default) for reading files.' -x
@@ -13109,8 +13109,8 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l soft-cli
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l output -s O -d 'The output filtered VCF file Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l output -s O -d 'The output filtered VCF file Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -13128,7 +13128,7 @@ complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l gatk-con
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -13138,13 +13138,13 @@ complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l lenient 
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l min-indel-spacing -o min-indel-spacing -d 'Minimum spacing between neighboring indels to be emitted Default value: 1.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -13199,8 +13199,8 @@ complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l REFERENCE
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l output -s O -d 'Path to which variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l output -s O -d 'Path to which variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -13228,7 +13228,7 @@ complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l gcs-max-retr
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l genomicsdb-shared-posixfs-optimizations -d 'Allow for optimizations to improve the usability and performance for shared Posix Filesystems(e.g. NFS, Lustre).' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -13250,13 +13250,13 @@ complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l mendelian-vi
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l min-filtered-genotypes -d 'Minimum number of samples filtered at the genotype level Default value: 0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l min-fraction-filtered-genotypes -d 'Maximum fraction of samples filtered at the genotype level Default value: 0.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l min-indel-size -d 'Minimum size of indels to include Default value: 0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l pedigree -o ped -d 'Pedigree file Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l pedigree -o ped -d 'Pedigree file Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l preserve-alleles -d 'Preserve original alleles, do not trim Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l remove-fraction-genotypes -d 'Select a fraction of genotypes at random from the input and sets them to no-call Default value: 0.0.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l remove-unused-alternates -d 'Remove alternate alleles not present in any genotypes Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l restrict-alleles-to -d 'Select only variants of a particular allelicity Default value: ALL.' -x
@@ -13267,10 +13267,10 @@ complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l select-rando
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l select-type-to-exclude -o xl-select-type -d 'Do not select certain type of variants from the input file This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l select-type-to-include -o select-type -d 'Select only a certain type of variants from the input file This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l selectExpressions -o select -d 'One or more criteria to use when selecting the data This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l set-filtered-gt-to-nocall -d 'Set filtered genotypes to no-call Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -13350,8 +13350,8 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l REFERENCE_SEQUENC
 
 
 
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l output -s O -d 'File to which updated variants should be written Required.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l output -s O -d 'File to which updated variants should be written Required.' -r
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l arguments_file -d 'read one or more arguments files and add them to the command line This argument may be specified 0 or more times.' -r
@@ -13369,7 +13369,7 @@ complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -13378,15 +13378,15 @@ complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l replace -d 'Force replacement of the dictionary if the input file already has a dictionary Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l source-dictionary -d 'A variant, alignment, dictionary, or reference file to use as a dictionary source (optional if the sequence dictionary source is specified as a reference argument).' -x
-complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l source-dictionary -d 'A variant, alignment, dictionary, or reference file to use as a dictionary source (optional if the sequence dictionary source is specified as a reference argument).' -r
+complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x
@@ -13441,7 +13441,7 @@ complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l
 
 
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l output -s O -d 'The file to which variants should be written Required.' -r
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l variant -s V -d 'A VCF file containing variants Required.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l variant -s V -d 'A VCF file containing variants Required.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l add-output-sam-program-record -o add-output-sam-program-record -d 'If true, adds a PG tag to created SAM/BAM/CRAM files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l add-output-vcf-command-line -o add-output-vcf-command-line -d 'If true, adds a command line header line to created VCF files.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l annotation -s A -d 'One or more specific annotations to add to variant calls This argument may be specified 0 or more times.' -x
@@ -13465,7 +13465,7 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l gatk-confi
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l gcs-max-retries -o gcs-retries -d 'If the GCS bucket channel errors out, how many times it will attempt to re-initiate the connection Default value: 20.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l gcs-project-for-requester-pays -d 'Project to bill when accessing "requester pays" buckets.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l help -s h -d 'display the help message Default value: false.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l input -s I -d 'BAM/SAM/CRAM file containing reads This argument may be specified 0 or more times.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l interval-exclusion-padding -o ixp -d 'Amount of padding (in bp) to add to each interval you are excluding.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l interval-merging-rule -o imr -d 'Interval merging rule for abutting intervals Default value: ALL.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l interval-padding -o ip -d 'Amount of padding (in bp) to add to each interval you are including.' -x
@@ -13473,18 +13473,18 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l interval-s
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l intervals -s L -d 'One or more genomic intervals over which to operate This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l lenient -o LE -d 'Lenient processing of VCF files Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l min-base-quality-score -d 'Minimum base quality required to confidently assign a read to an allele Default value: 10.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l pedigree -o ped -d 'Pedigree file for determining the population "founders" Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l QUIET -d 'Whether to suppress job-summary info on System.err.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l read-filter -o RF -d 'Read filters to be applied before analysis This argument may be specified 0 or more times.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l read-index -o read-index -d 'Indices to use for the read inputs.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l read-validation-stringency -o VS -d 'Validation stringency for all SAM/BAM/CRAM/SRA files read by this program.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l reference -s R -d 'Reference sequence Default value: null.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l reference -s R -d 'Reference sequence Default value: null.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l resource -d 'External resource VCF file This argument may be specified 0 or more times.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l resource-allele-concordance -o rac -d 'Check for allele concordances when using an external resource VCF file Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l seconds-between-progress-updates -o seconds-between-progress-updates -d 'Output traversal statistics every time this many seconds elapse Default value: 10.0.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l sequence-dictionary -o sequence-dictionary -d 'Use the given sequence dictionary as the master/canonical sequence dictionary.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l sites-only-vcf-output -d 'If true, don\'t emit genotype fields when writing vcf file output.' -x
-complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l tmp-dir -d 'Temp directory to use.' -x
+complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l tmp-dir -d 'Temp directory to use.' -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l use-jdk-deflater -o jdk-deflater -d 'Whether to use the JdkDeflater (as opposed to IntelDeflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l use-jdk-inflater -o jdk-inflater -d 'Whether to use the JdkInflater (as opposed to IntelInflater) Default value: false.' -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l verbosity -o verbosity -d 'Control verbosity of logging.' -x

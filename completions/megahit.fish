@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c megahit -s 1 -d 'comma-separated list of fasta/q paired-end #1 files, paired with files in <pe2>' -x
 complete -c megahit -s 2 -d 'comma-separated list of fasta/q paired-end #2 files, paired with files in <pe1>' -x

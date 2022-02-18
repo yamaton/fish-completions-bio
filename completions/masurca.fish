@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c masurca -s v -l version -d 'Report version'
 complete -c masurca -s o -l output -d 'Assembly script (assemble.sh)'

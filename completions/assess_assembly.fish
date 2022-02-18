@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c assess_assembly -s h -d 'show this help text.'
 complete -c assess_assembly -s r -d 'reference, should be a fasta file.' -x

@@ -1,18 +1,18 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c bamtools -n __fish_use_subcommand -x -a convert -d 'Converts between BAM and a number of other formats'
-complete -c bamtools -n __fish_use_subcommand -x -a count -d 'Prints number of alignments in BAM file(s)'
-complete -c bamtools -n __fish_use_subcommand -x -a coverage -d 'Prints coverage statistics from the input BAM file'
-complete -c bamtools -n __fish_use_subcommand -x -a filter -d 'Filters BAM file(s) by user-specified criteria'
-complete -c bamtools -n __fish_use_subcommand -x -a header -d 'Prints BAM header information'
-complete -c bamtools -n __fish_use_subcommand -x -a index -d 'Generates index for BAM file'
-complete -c bamtools -n __fish_use_subcommand -x -a merge -d 'Merge multiple BAM files into single file'
-complete -c bamtools -n __fish_use_subcommand -x -a random -d 'Select random alignments from existing BAM file(s), intended more as a testing tool.'
-complete -c bamtools -n __fish_use_subcommand -x -a resolve -d 'Resolves paired-end reads (marking the IsProperPair flag as needed)'
-complete -c bamtools -n __fish_use_subcommand -x -a revert -d 'Removes duplicate marks and restores original base qualities'
-complete -c bamtools -n __fish_use_subcommand -x -a sort -d 'Sorts the BAM file according to some criteria'
-complete -c bamtools -n __fish_use_subcommand -x -a split -d 'Splits a BAM file on user-specified property, creating a new BAM output file for each value found'
-complete -c bamtools -n __fish_use_subcommand -x -a stats -d 'Prints some basic statistics from input BAM file(s)'
+complete -k -c bamtools -n __fish_use_subcommand -x -a stats -d 'Prints some basic statistics from input BAM file(s)'
+complete -k -c bamtools -n __fish_use_subcommand -x -a split -d 'Splits a BAM file on user-specified property, creating a new BAM output file for each value found'
+complete -k -c bamtools -n __fish_use_subcommand -x -a sort -d 'Sorts the BAM file according to some criteria'
+complete -k -c bamtools -n __fish_use_subcommand -x -a revert -d 'Removes duplicate marks and restores original base qualities'
+complete -k -c bamtools -n __fish_use_subcommand -x -a resolve -d 'Resolves paired-end reads (marking the IsProperPair flag as needed)'
+complete -k -c bamtools -n __fish_use_subcommand -x -a random -d 'Select random alignments from existing BAM file(s), intended more as a testing tool.'
+complete -k -c bamtools -n __fish_use_subcommand -x -a merge -d 'Merge multiple BAM files into single file'
+complete -k -c bamtools -n __fish_use_subcommand -x -a index -d 'Generates index for BAM file'
+complete -k -c bamtools -n __fish_use_subcommand -x -a header -d 'Prints BAM header information'
+complete -k -c bamtools -n __fish_use_subcommand -x -a filter -d 'Filters BAM file(s) by user-specified criteria'
+complete -k -c bamtools -n __fish_use_subcommand -x -a coverage -d 'Prints coverage statistics from the input BAM file'
+complete -k -c bamtools -n __fish_use_subcommand -x -a count -d 'Prints number of alignments in BAM file(s)'
+complete -k -c bamtools -n __fish_use_subcommand -x -a convert -d 'Converts between BAM and a number of other formats'
 
 
 

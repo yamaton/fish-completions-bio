@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c spades.py -s o -d 'directory to store all the resulting files (required)' -r
 complete -c spades.py -l isolate -d 'this flag is highly recommended for high-coverage isolate and multi-cell data'

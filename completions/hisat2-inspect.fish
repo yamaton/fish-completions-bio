@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hisat2-inspect -l large-index -d 'force inspection of the \'large\' index, even if a \'small\' one is present.'
 complete -c hisat2-inspect -s a -l across -d 'Number of characters across in FASTA output (default: 60)' -x

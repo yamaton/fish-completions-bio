@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c vep -l help -d 'Display this message and quit'
 complete -c vep -s i -l input_file -d 'Input file'

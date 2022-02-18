@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hifiasm -s o -d 'Prefix of output files [hifiasm.asm].' -r
 complete -c hifiasm -s t -d 'Number of CPU threads used by hifiasm [1].' -x

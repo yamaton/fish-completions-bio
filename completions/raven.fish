@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c raven -l weaken -d 'use larger (k, w) when assembling highly accurate sequences'
 complete -c raven -s p -l polishing-rounds -d 'number of times racon is invoked [default: 2]' -x

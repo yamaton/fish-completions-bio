@@ -1,16 +1,16 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c trycycler -n "not __fish_seen_subcommand_from subsample cluster reconcile msa partition consensus" -s h -l help -d 'Show this help message and exit'
 complete -c trycycler -n "not __fish_seen_subcommand_from subsample cluster reconcile msa partition consensus" -l version -d 'Show program\'s version number and exit'
 
 
 
-complete -c trycycler -n __fish_use_subcommand -x -a subsample -d 'subsample a long-read set'
-complete -c trycycler -n __fish_use_subcommand -x -a cluster -d 'cluster contigs by similarity'
-complete -c trycycler -n __fish_use_subcommand -x -a reconcile -d 'reconcile contig sequences'
-complete -c trycycler -n __fish_use_subcommand -x -a msa -d 'multiple sequence alignment'
-complete -c trycycler -n __fish_use_subcommand -x -a partition -d 'partition reads by cluster'
-complete -c trycycler -n __fish_use_subcommand -x -a consensus -d 'derive a consensus sequence'
+complete -k -c trycycler -n __fish_use_subcommand -x -a consensus -d 'derive a consensus sequence'
+complete -k -c trycycler -n __fish_use_subcommand -x -a partition -d 'partition reads by cluster'
+complete -k -c trycycler -n __fish_use_subcommand -x -a msa -d 'multiple sequence alignment'
+complete -k -c trycycler -n __fish_use_subcommand -x -a reconcile -d 'reconcile contig sequences'
+complete -k -c trycycler -n __fish_use_subcommand -x -a cluster -d 'cluster contigs by similarity'
+complete -k -c trycycler -n __fish_use_subcommand -x -a subsample -d 'subsample a long-read set'
 
 
 

@@ -1,11 +1,11 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c delly -n __fish_use_subcommand -x -a call -d 'discover and genotype structural variants'
-complete -c delly -n __fish_use_subcommand -x -a merge -d 'merge structural variants across VCF/BCF files and within a single VCF/BCF file'
-complete -c delly -n __fish_use_subcommand -x -a filter -d 'filter somatic or germline structural variants'
-complete -c delly -n __fish_use_subcommand -x -a lr -d 'long-read SV discovery'
-complete -c delly -n __fish_use_subcommand -x -a cnv -d 'discover and genotype copy-number variants'
-complete -c delly -n __fish_use_subcommand -x -a classify -d 'classify somatic or germline copy-number variants'
+complete -k -c delly -n __fish_use_subcommand -x -a classify -d 'classify somatic or germline copy-number variants'
+complete -k -c delly -n __fish_use_subcommand -x -a cnv -d 'discover and genotype copy-number variants'
+complete -k -c delly -n __fish_use_subcommand -x -a lr -d 'long-read SV discovery'
+complete -k -c delly -n __fish_use_subcommand -x -a filter -d 'filter somatic or germline structural variants'
+complete -k -c delly -n __fish_use_subcommand -x -a merge -d 'merge structural variants across VCF/BCF files and within a single VCF/BCF file'
+complete -k -c delly -n __fish_use_subcommand -x -a call -d 'discover and genotype structural variants'
 
 
 

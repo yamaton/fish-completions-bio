@@ -1,7 +1,7 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
-complete -c plass -n __fish_use_subcommand -x -a plass-assemble -d 'plass-assemble'
-complete -c plass -n __fish_use_subcommand -x -a plass-nuclassemble -d 'plass-nuclassemble'
+complete -k -c plass -n __fish_use_subcommand -x -a plass-nuclassemble -d 'plass-nuclassemble'
+complete -k -c plass -n __fish_use_subcommand -x -a plass-assemble -d 'plass-assemble'
 
 
 

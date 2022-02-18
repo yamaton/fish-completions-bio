@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmconvert -s h -d 'show brief help on version and usage'
 complete -c hmmconvert -s a -d 'ascii:  output models in HMMER3 ASCII format  [default]'

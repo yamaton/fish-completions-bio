@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hisat2_extract_snps_haplotypes_VCF.py -s h -l help -d 'show this help message and exit'
 complete -c hisat2_extract_snps_haplotypes_VCF.py -l reference-type -d 'Reference type: gene, chromosome, and genome (default: genome)' -x

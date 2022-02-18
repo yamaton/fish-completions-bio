@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c fastqc -s h -l help -d 'Print this help file and exit'
 complete -c fastqc -s v -l version -d 'Print the version of the program and exit'

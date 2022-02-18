@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c bioawk -s t -d 'Equivalent to -F\'\t\' -v OFS="\t"'
 complete -c bioawk -s c -d 'Specify input format (hdr|header|sam|vcf|bed|gff|fastx)' -x

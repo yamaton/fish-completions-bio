@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hypo -s r -l reads-short -d 'Input file name containing reads (in fasta/fastq format; can be compressed).' -x
 complete -c hypo -s d -l draft -d 'Input file name containing the draft contigs (in fasta/fastq format; can be compressed).' -x

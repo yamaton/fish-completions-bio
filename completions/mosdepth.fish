@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c mosdepth -s t -l threads -d 'number of BAM decompression threads [default: 0]' -x
 complete -c mosdepth -s c -l chrom -d 'chromosome to restrict depth calculation.' -x

@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c unicycler_scrub -s h -l help -d 'show this help message and exit'
 complete -c unicycler_scrub -s i -l input -d 'These are the reads or assembly to be scrubbed (can be FASTA or FASTQ format' -x

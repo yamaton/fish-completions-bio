@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c makehmmerdb -s h -d 'show brief help on version and usage'
 complete -c makehmmerdb -l informat -d 'specify that input file is in format <s>' -x

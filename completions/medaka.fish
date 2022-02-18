@@ -1,21 +1,21 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c medaka -n "not __fish_seen_subcommand_from compress_bam features train consensus smolecule consensus_from_features fastrle stitch variant snp tools" -s h -l help -d 'show this help message and exit'
 complete -c medaka -n "not __fish_seen_subcommand_from compress_bam features train consensus smolecule consensus_from_features fastrle stitch variant snp tools" -l version -d 'show program\'s version number and exit'
 
 
 
-complete -c medaka -n __fish_use_subcommand -x -a compress_bam -d 'Compress an alignment into RLE form.'
-complete -c medaka -n __fish_use_subcommand -x -a features -d 'Create features for inference.'
-complete -c medaka -n __fish_use_subcommand -x -a train -d 'Train a model from features.'
-complete -c medaka -n __fish_use_subcommand -x -a consensus -d 'Run inference from a trained model and alignments.'
-complete -c medaka -n __fish_use_subcommand -x -a smolecule -d 'Create consensus sequences from single-molecule reads.'
-complete -c medaka -n __fish_use_subcommand -x -a consensus_from_features -d 'Run inference from a trained model on existing features.'
-complete -c medaka -n __fish_use_subcommand -x -a fastrle -d 'Create run-length encoded fastq (lengths in quality track).'
-complete -c medaka -n __fish_use_subcommand -x -a stitch -d 'Stitch together output from medaka consensus into final output.'
-complete -c medaka -n __fish_use_subcommand -x -a variant -d 'Decode probabilities to VCF.'
-complete -c medaka -n __fish_use_subcommand -x -a snp -d 'Decode probabilities to SNPs.'
-complete -c medaka -n __fish_use_subcommand -x -a tools -d 'tools subcommand.'
+complete -k -c medaka -n __fish_use_subcommand -x -a tools -d 'tools subcommand.'
+complete -k -c medaka -n __fish_use_subcommand -x -a snp -d 'Decode probabilities to SNPs.'
+complete -k -c medaka -n __fish_use_subcommand -x -a variant -d 'Decode probabilities to VCF.'
+complete -k -c medaka -n __fish_use_subcommand -x -a stitch -d 'Stitch together output from medaka consensus into final output.'
+complete -k -c medaka -n __fish_use_subcommand -x -a fastrle -d 'Create run-length encoded fastq (lengths in quality track).'
+complete -k -c medaka -n __fish_use_subcommand -x -a consensus_from_features -d 'Run inference from a trained model on existing features.'
+complete -k -c medaka -n __fish_use_subcommand -x -a smolecule -d 'Create consensus sequences from single-molecule reads.'
+complete -k -c medaka -n __fish_use_subcommand -x -a consensus -d 'Run inference from a trained model and alignments.'
+complete -k -c medaka -n __fish_use_subcommand -x -a train -d 'Train a model from features.'
+complete -k -c medaka -n __fish_use_subcommand -x -a features -d 'Create features for inference.'
+complete -k -c medaka -n __fish_use_subcommand -x -a compress_bam -d 'Compress an alignment into RLE form.'
 
 
 

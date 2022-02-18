@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c minimap2 -s H -d 'use homopolymer-compressed k-mer (preferrable for PacBio)'
 complete -c minimap2 -s k -d 'k-mer size (no larger than 28) [15]' -x

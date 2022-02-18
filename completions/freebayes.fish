@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -l haplotype-length -d '# naive variant calling: simply annotate observation counts of SNPs and indels' -x
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -s h -l help -d 'Prints this help dialog.'
@@ -81,8 +81,8 @@ complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -
 
 
 
-complete -c freebayes -n __fish_use_subcommand -x -a FreeBayes -d 'can act as a frequency-based pooled caller and describe variants'
-complete -c freebayes -n __fish_use_subcommand -x -a freebayes -d '... | vcfallelicprimitives -kg >calls.vcf'
+complete -k -c freebayes -n __fish_use_subcommand -x -a freebayes -d '... | vcfallelicprimitives -kg >calls.vcf'
+complete -k -c freebayes -n __fish_use_subcommand -x -a FreeBayes -d 'can act as a frequency-based pooled caller and describe variants'
 
 
 

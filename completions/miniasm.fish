@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c miniasm -s R -d 'prefilter clearly contained reads (2-pass required)'
 complete -c miniasm -s m -d 'min match length [100]' -x

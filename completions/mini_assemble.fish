@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c mini_assemble -s h -d 'show this help text.'
 complete -c mini_assemble -s i -d 'fastx input reads (required).' -x

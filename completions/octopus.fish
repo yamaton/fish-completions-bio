@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c octopus -s h -d 'Report detailed option information' -x
 complete -c octopus -l version -d 'Report detailed version information'

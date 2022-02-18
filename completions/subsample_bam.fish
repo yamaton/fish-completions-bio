@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c subsample_bam -s h -l help -d 'show this help message and exit'
 complete -c subsample_bam -s o -l output_prefix -d 'Output prefix (default: sub_sampled)' -x

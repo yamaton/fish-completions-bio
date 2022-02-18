@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c canu -o haplotype -d 'generate haplotype-specific reads'
 complete -c canu -o correct -d 'generate corrected reads'

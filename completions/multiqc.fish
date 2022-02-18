@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c multiqc -s f -l force -d 'Overwrite any existing reports'
 complete -c multiqc -s d -l dirs -d 'Prepend directory to sample names'
@@ -15,9 +15,9 @@ complete -c multiqc -s x -l ignore -d 'Ignore analysis files (glob expression)' 
 complete -c multiqc -l ignore-samples -d 'Ignore sample names (glob expression)' -x
 complete -c multiqc -l ignore-symlinks -d 'Ignore symlinked directories and files'
 complete -c multiqc -l fn_as_s_name -d 'Use the log filename as the sample name'
-complete -c multiqc -l replace-names -d 'Path to TSV file to rename sample names during report generation' -x
-complete -c multiqc -l sample-names -d 'Path to TSV file containing alternative sample names for renaming buttons in the report' -x
-complete -c multiqc -l sample-filters -d 'Path to TSV file containing show/hide patterns for the report' -x
+complete -c multiqc -l replace-names -d 'Path to TSV file to rename sample names during report generation' -r
+complete -c multiqc -l sample-names -d 'Path to TSV file containing alternative sample names for renaming buttons in the report' -r
+complete -c multiqc -l sample-filters -d 'Path to TSV file containing show/hide patterns for the report' -r
 complete -c multiqc -s l -l file-list -d 'Supply a file containing a list of file paths to be searched, one per row'
 complete -c multiqc -s e -l exclude -d 'Do not use this module.' -x
 complete -c multiqc -s m -l module -d 'Use only this module.' -x
@@ -31,7 +31,7 @@ complete -c multiqc -o ip -l interactive -d 'Use only interactive plots (HighCha
 complete -c multiqc -l lint -d 'Use strict linting (validation) to help code development'
 complete -c multiqc -l pdf -d 'Creates PDF report with \'simple\' template.'
 complete -c multiqc -l no-megaqc-upload -d 'Don\'t upload generated report to MegaQC, even if MegaQC options are found'
-complete -c multiqc -s c -l config -d 'Specific config file to load, after those in MultiQC dir / home dir / working dir.' -x
+complete -c multiqc -s c -l config -d 'Specific config file to load, after those in MultiQC dir / home dir / working dir.' -r
 complete -c multiqc -l cl-config -l cl_config -d 'Specify MultiQC config YAML on the command line' -x
 complete -c multiqc -s v -l verbose -d 'Increase output verbosity.'
 complete -c multiqc -s q -l quiet -d 'Only show log warnings'

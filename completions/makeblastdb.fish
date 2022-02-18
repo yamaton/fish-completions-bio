@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c makeblastdb -o dbtype -d 'Molecule type of target db' -x
 complete -c makeblastdb -s h -d 'Print USAGE and DESCRIPTION;  ignore all other parameters'

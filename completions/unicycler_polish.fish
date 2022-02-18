@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c unicycler_polish -s h -l help -d 'show this help message and exit'
 complete -c unicycler_polish -s a -l assembly -d 'Input assembly to be polished' -x

@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmpgmd_shard -s h -d 'show brief hel   p on version and usage'
 complete -c hmmpgmd_shard -l master -d 'run program as the master server'

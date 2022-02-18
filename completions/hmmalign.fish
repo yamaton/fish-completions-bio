@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmalign -s h -d 'show brief help on version and usage'
 complete -c hmmalign -s o -d 'output alignment to file <f>, not stdout' -x

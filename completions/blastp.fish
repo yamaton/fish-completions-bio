@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c blastp -s h -d 'Print USAGE and DESCRIPTION;  ignore all other parameters'
 complete -c blastp -o help -d 'Print USAGE, DESCRIPTION and ARGUMENTS; ignore all other parameters'

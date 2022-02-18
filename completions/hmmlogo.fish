@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmlogo -s h -d 'show brief help on version and usage'
 complete -c hmmlogo -l height_relent_all -d 'total height = relative entropy ; all letters shown (default)'

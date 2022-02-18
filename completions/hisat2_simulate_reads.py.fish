@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hisat2_simulate_reads.py -s h -l help -d 'show this help message and exit'
 complete -c hisat2_simulate_reads.py -s d -l dna -d 'DNA-seq reads (default: RNA-seq reads)'

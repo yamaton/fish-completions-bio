@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c alimask -s h -d 'show brief help on version and usage'
 complete -c alimask -s o -d 'direct summary output to file <f>, not stdout' -x

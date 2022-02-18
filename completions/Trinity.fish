@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c Trinity -l seqType -d ':type of reads: (\'fa\' or \'fq\')' -x
 complete -c Trinity -l max_memory -d ':suggested max memory to use by Trinity where limiting can be enabled.' -x

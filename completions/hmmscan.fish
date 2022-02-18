@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hmmscan -s h -d 'show brief   help on version and usage'
 complete -c hmmscan -l incE -d 'consider models <= this E-value threshold as significant' -x

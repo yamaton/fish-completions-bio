@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hisat2 -s q -d 'query input files are FASTQ .fq/.fastq (default)'
 complete -c hisat2 -l qseq -d 'query input files are in Illumina\'s qseq format'
@@ -27,9 +27,9 @@ complete -c hisat2 -l pen-canintronlen -d 'penalty for long introns (G,-8,1) wit
 complete -c hisat2 -l pen-noncanintronlen -d 'penalty for long introns (G,-8,1) with noncanonical splice sites' -x
 complete -c hisat2 -l min-intronlen -d 'minimum intron length (20)' -x
 complete -c hisat2 -l max-intronlen -d 'maximum intron length (500000)' -x
-complete -c hisat2 -l known-splicesite-infile -d 'provide a list of known splice sites' -x
-complete -c hisat2 -l novel-splicesite-outfile -d 'report a list of splice sites' -x
-complete -c hisat2 -l novel-splicesite-infile -d 'provide a list of novel splice sites' -x
+complete -c hisat2 -l known-splicesite-infile -d 'provide a list of known splice sites' -r
+complete -c hisat2 -l novel-splicesite-outfile -d 'report a list of splice sites' -r
+complete -c hisat2 -l novel-splicesite-infile -d 'provide a list of novel splice sites' -r
 complete -c hisat2 -l no-temp-splicesite -d 'disable the use of splice sites found'
 complete -c hisat2 -l no-spliced-alignment -d 'disable spliced alignment'
 complete -c hisat2 -l rna-strandness -d 'specify strand-specific information (unstranded)' -x
@@ -55,14 +55,14 @@ complete -c hisat2 -l fr -l rf -l ff -d '-1, -2 mates align fw/rev, rev/fw, fw/f
 complete -c hisat2 -l no-mixed -d 'suppress unpaired alignments for paired reads'
 complete -c hisat2 -l no-discordant -d 'suppress discordant alignments for paired reads'
 complete -c hisat2 -s t -l time -d 'print wall-clock time taken by search phases'
-complete -c hisat2 -l un -d 'write unpaired reads that didn\'t align to <path>' -x
-complete -c hisat2 -l al -d 'write unpaired reads that aligned at least once to <path>' -x
-complete -c hisat2 -l un-conc -d 'write pairs that didn\'t align concordantly to <path>' -x
-complete -c hisat2 -l al-conc -d 'write pairs that aligned concordantly at least once to <path>' -x
-complete -c hisat2 -l summary-file -d 'print alignment summary to this file.' -x
+complete -c hisat2 -l un -d 'write unpaired reads that didn\'t align to <path>' -r
+complete -c hisat2 -l al -d 'write unpaired reads that aligned at least once to <path>' -r
+complete -c hisat2 -l un-conc -d 'write pairs that didn\'t align concordantly to <path>' -r
+complete -c hisat2 -l al-conc -d 'write pairs that aligned concordantly at least once to <path>' -r
+complete -c hisat2 -l summary-file -d 'print alignment summary to this file.' -r
 complete -c hisat2 -l new-summary -d 'print alignment summary in a new style, which is more machine-friendly.'
 complete -c hisat2 -l quiet -d 'print nothing to stderr except serious errors'
-complete -c hisat2 -l met-file -d 'send metrics to file at <path> (off)' -x
+complete -c hisat2 -l met-file -d 'send metrics to file at <path> (off)' -r
 complete -c hisat2 -l met-stderr -d 'send metrics to stderr (off)'
 complete -c hisat2 -l met -d 'report internal counters & metrics every <int> secs (1)' -x
 complete -c hisat2 -l no-head -d 'suppress header lines, i.e. lines starting with @'

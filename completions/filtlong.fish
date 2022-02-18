@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c filtlong -s t -l target_bases -d 'keep only the best reads up to this many total bases' -x
 complete -c filtlong -s p -l keep_percent -d 'keep only this percentage of the best reads (measured by bases)' -x

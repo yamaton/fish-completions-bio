@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c nextflow -n "not __fish_seen_subcommand_from clean clone config console drop help info kuberun list log pull run self-update view" -s C -d 'Use the specified configuration file(s) overriding any defaults'
 complete -c nextflow -n "not __fish_seen_subcommand_from clean clone config console drop help info kuberun list log pull run self-update view" -s D -d 'Set JVM properties'
@@ -13,20 +13,20 @@ complete -c nextflow -n "not __fish_seen_subcommand_from clean clone config cons
 
 
 
-complete -c nextflow -n __fish_use_subcommand -x -a clean -d 'Clean up project cache and work directories'
-complete -c nextflow -n __fish_use_subcommand -x -a clone -d 'Clone a project into a folder'
-complete -c nextflow -n __fish_use_subcommand -x -a config -d 'Print a project configuration'
-complete -c nextflow -n __fish_use_subcommand -x -a console -d 'Launch Nextflow interactive console'
-complete -c nextflow -n __fish_use_subcommand -x -a drop -d 'Delete the local copy of a project'
-complete -c nextflow -n __fish_use_subcommand -x -a help -d 'Print the usage help for a command'
-complete -c nextflow -n __fish_use_subcommand -x -a info -d 'Print project and system runtime information'
-complete -c nextflow -n __fish_use_subcommand -x -a kuberun -d 'Execute a workflow in a Kubernetes cluster (experimental)'
-complete -c nextflow -n __fish_use_subcommand -x -a list -d 'List all downloaded projects'
-complete -c nextflow -n __fish_use_subcommand -x -a log -d 'Print executions log and runtime info'
-complete -c nextflow -n __fish_use_subcommand -x -a pull -d 'Download or update a project'
-complete -c nextflow -n __fish_use_subcommand -x -a run -d 'Execute a pipeline project'
-complete -c nextflow -n __fish_use_subcommand -x -a self-update -d 'Update nextflow runtime to the latest available version'
-complete -c nextflow -n __fish_use_subcommand -x -a view -d 'View project script file(s)'
+complete -k -c nextflow -n __fish_use_subcommand -x -a view -d 'View project script file(s)'
+complete -k -c nextflow -n __fish_use_subcommand -x -a self-update -d 'Update nextflow runtime to the latest available version'
+complete -k -c nextflow -n __fish_use_subcommand -x -a run -d 'Execute a pipeline project'
+complete -k -c nextflow -n __fish_use_subcommand -x -a pull -d 'Download or update a project'
+complete -k -c nextflow -n __fish_use_subcommand -x -a log -d 'Print executions log and runtime info'
+complete -k -c nextflow -n __fish_use_subcommand -x -a list -d 'List all downloaded projects'
+complete -k -c nextflow -n __fish_use_subcommand -x -a kuberun -d 'Execute a workflow in a Kubernetes cluster (experimental)'
+complete -k -c nextflow -n __fish_use_subcommand -x -a info -d 'Print project and system runtime information'
+complete -k -c nextflow -n __fish_use_subcommand -x -a help -d 'Print the usage help for a command'
+complete -k -c nextflow -n __fish_use_subcommand -x -a drop -d 'Delete the local copy of a project'
+complete -k -c nextflow -n __fish_use_subcommand -x -a console -d 'Launch Nextflow interactive console'
+complete -k -c nextflow -n __fish_use_subcommand -x -a config -d 'Print a project configuration'
+complete -k -c nextflow -n __fish_use_subcommand -x -a clone -d 'Clone a project into a folder'
+complete -k -c nextflow -n __fish_use_subcommand -x -a clean -d 'Clean up project cache and work directories'
 
 
 

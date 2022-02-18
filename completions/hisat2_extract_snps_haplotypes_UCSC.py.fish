@@ -1,4 +1,4 @@
-# Generated with h2o 0.1.18
+# Auto-generated with h2o
 
 complete -c hisat2_extract_snps_haplotypes_UCSC.py -s h -l help -d 'show this help message and exit'
 complete -c hisat2_extract_snps_haplotypes_UCSC.py -l inter-gap -d 'Maximum distance for variants to be in the same haplotype' -x
