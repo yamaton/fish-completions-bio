@@ -5,7 +5,11 @@ This repository contains [fish shell](https://fishshell.com/) command completion
 
 
 ## Install
-Just put the `.fish` files in the directory `~/.config/fish/completions`. [This script](https://github.com/yamaton/fish-completions-bio/blob/main/install.sh) downloads a [released file](https://github.com/yamaton/fish-completions-bio/releases), and extracts files to the directory.
+Just put the `.fish` files in the directory `~/.config/fish/completions`. [This script](https://github.com/yamaton/fish-completions-bio/blob/main/install.sh) downloads the [released package](https://github.com/yamaton/fish-completions-bio/releases), and extracts to the directory.
 ```shell
 curl https://raw.githubusercontent.com/yamaton/fish-completions-bio/main/install.sh | bash
 ```
+
+## Support for more files?
+
+I generated fish scripts in this repository using [my program](https://github.com/yamaton/h2o) extracting information from help/man pages. Just [post](https://github.com/yamaton/fish-completions-bio/issues/1) a request for further additions.
