@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c show-coords -s b -d 'Merges overlapping alignments regardless of match dir or frame and does not display any idenitity information.'
 complete -c show-coords -s B -d 'Switch output to btab format'
 complete -c show-coords -s c -d 'Include percent coverage information in the output'

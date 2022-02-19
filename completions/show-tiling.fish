@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c show-tiling -s a -d 'Describe the tiling path by printing the tab-delimited alignment region coordinates to stdout'
 complete -c show-tiling -s c -d 'Assume the reference sequences are circular, and allow tiled contigs to span the origin'
 complete -c show-tiling -s h -d 'Display help information'
@@ -9,5 +11,5 @@ complete -c show-tiling -s R -d 'Deal with repetitive contigs by randomly placin
 complete -c show-tiling -s t -d 'Output a TIGR style contig list of each query sequence that sufficiently matches the reference (non-circular)' -r
 complete -c show-tiling -s u -d 'Output the tab-delimited alignment region coordinates of the unusable contigs to \'file\'' -r
 complete -c show-tiling -s v -d 'Set minimum contig coverage to tile [0.0, 100.0] (nucmer default = 95.0) sum of individual alignments (promer default = 50.0) extent of syntenic region' -x
-complete -c show-tiling -s V -d 'Set minimum contig coverage difference [0.0, 100.0] i.e. the difference needed to determine one alignment is \'better\' than another alignment' -x
+complete -c show-tiling -s V -d 'Set minimum contig coverage difference [0.0, 100.0] i.e. the difference needed to determine one alignment is \'better\' than another alignment (nucmer default = 10.0) sum of individual alignments (promer default = 30.0) extent of syntenic region' -x
 complete -c show-tiling -s x -d 'Describe the tiling path by printing the XML contig linking information to stdout'

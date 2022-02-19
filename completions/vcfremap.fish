@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c vcfremap -s w -l ref-window-size -d 'align using this many bases flanking each side of the reference allele' -x
 complete -c vcfremap -s s -l alt-window-size -d 'align using this many flanking bases from the reference around each alternate allele' -x
 complete -c vcfremap -s r -l reference -d 'FASTA reference file, required with -i and -u' -r

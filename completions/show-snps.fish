@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c show-snps -s C -d 'Do not report SNPs from alignments with an ambiguous mapping, i.e. only report SNPs where the [R] and [Q] columns equal 0 and do not output these columns'
 complete -c show-snps -s h -d 'Display help information'
 complete -c show-snps -s H -d 'Do not print the output header'

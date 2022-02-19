@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c vcfallelicprimitives -s m -l use-mnps -d 'Retain MNPs as separate events (default: false).'
 complete -c vcfallelicprimitives -s t -l tag-parsed -d 'Tag records which are split apart of a complex allele with this flag.' -x
 complete -c vcfallelicprimitives -s L -l max-length -d 'Do not manipulate records in which either the ALT or REF is longer than LEN (default: 200).' -x

@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c vcfgeno2haplo -s h -l help -d 'Print this message'
 complete -c vcfgeno2haplo -s v -l version -d 'Print version'
 complete -c vcfgeno2haplo -s r -l reference -d 'FASTA reference file' -r

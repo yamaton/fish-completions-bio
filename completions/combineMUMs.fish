@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c combineMUMs -s D -d 'Only output to stdout the difference positions and characters'
 complete -c combineMUMs -s n -d 'Allow matches only between nucleotides, i.e., ACGTs'
 complete -c combineMUMs -s N -d 'Break matches at <num> or more consecutive non-ACGTs' -x

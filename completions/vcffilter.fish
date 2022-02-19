@@ -1,5 +1,7 @@
-complete -c vcffilter -s f -l info-filter -d 'specifies a filter to apply to the info fields of records, removes alleles which do not pass the filter' -x
-complete -c vcffilter -s g -l genotype-filter -d 'specifies a filter to apply to the genotype fields of records' -x
+# Auto-generated with h2o
+
+complete -c vcffilter -s f -l info-filter -d 'specifies a filter to apply to the info fields of records, removes alleles which do not pass the filter'
+complete -c vcffilter -s g -l genotype-filter -d 'specifies a filter to apply to the genotype fields of records'
 complete -c vcffilter -s k -l keep-info -d 'used in conjunction with \'-g\', keeps variant info, but removes genotype'
 complete -c vcffilter -s s -l filter-sites -d 'filter entire records, not just alleles'
 complete -c vcffilter -s t -l tag-pass -d 'tag vcf records as positively filtered with this tag, print all records'

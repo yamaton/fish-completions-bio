@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c show-diff -s f -d 'Output diff information as AMOS features'
 complete -c show-diff -s h -d 'Display help information'
 complete -c show-diff -s H -d 'Do not show header'

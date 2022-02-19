@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c delta-filter -s 1 -d '1-to-1 alignment allowing for rearrangements (intersection of -r and -q alignments)'
 complete -c delta-filter -s g -d '1-to-1 global alignment not allowing rearrangements'
 complete -c delta-filter -s h -d 'Display help information'

@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c zindex -l index-file -d 'Store index in <index-file> (default <file>.zindex)' -r
 complete -c zindex -s p -l pipe -d 'Create indices by piping output through <CMD> which should output a single line for each input line.' -x
 complete -c zindex -l tab-delimiter -d 'Use a tab character as the field delimiter'
@@ -16,6 +18,6 @@ complete -c zindex -l color -d 'Use color even on non-TTY'
 complete -c zindex -l colour -d 'Use colour even on non-TTY'
 complete -c zindex -l debug -d 'Be even more verbose'
 complete -c zindex -s v -l verbose -d 'Be more verbose'
-complete -c zindex -l ignore_rest -d 'Ignores the rest of the labeled arguments following this flag.'
+complete -c zindex  -l ignore_rest -d 'Ignores the rest of the labeled arguments following this flag.'
 complete -c zindex -l version -d 'Displays version information and exits.'
 complete -c zindex -s h -l help -d 'Displays usage information and exits.'

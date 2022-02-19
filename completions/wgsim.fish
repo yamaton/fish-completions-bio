@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c wgsim -s e -d 'base error rate [0.000]' -x
 complete -c wgsim -s d -d 'outer distance between the two ends [500]' -x
 complete -c wgsim -s s -d 'standard deviation [50]' -x

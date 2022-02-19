@@ -1,3 +1,5 @@
+# Auto-generated with h2o
+
 complete -c vcfinfosummarize -s f -l field -d 'Summarize this field in the INFO column'
 complete -c vcfinfosummarize -s i -l info -d 'Store the computed statistic in this info field'
 complete -c vcfinfosummarize -s a -l average -d 'Take the mean for field (default)'
