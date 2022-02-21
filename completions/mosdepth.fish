@@ -5,6 +5,7 @@ complete -c mosdepth -s c -l chrom -d 'chromosome to restrict depth calculation.
 complete -c mosdepth -s b -l by -d 'optional BED file or (integer) window-sizes.' -x
 complete -c mosdepth -s n -l no-per-base -d 'dont output per-base depth.'
 complete -c mosdepth -s f -l fasta -d 'fasta file for use with CRAM files [default: ].' -x
+complete -c mosdepth -l d4 -d 'output per-base depth in d4 format.'
 complete -c mosdepth -s F -l flag -d 'exclude reads with any of the bits in FLAG set [default: 1796]' -x
 complete -c mosdepth -s i -l include-flag -d 'only include reads with any of the bits in FLAG set.' -x
 complete -c mosdepth -s x -l fast-mode -d 'dont look at internal cigar operations or correct mate overlaps (recommended for most use-cases).'
