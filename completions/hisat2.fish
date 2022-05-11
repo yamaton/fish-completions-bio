@@ -1,5 +1,9 @@
 # Auto-generated with h2o
 
+complete -c hisat2 -s 1 -d 'Files with #1 mates, paired with files in <m2>.' -x
+complete -c hisat2 -s 2 -d 'Files with #2 mates, paired with files in <m1>.' -x
+complete -c hisat2 -s U -d 'Files with unpaired reads.' -x
+complete -c hisat2 -s S -d 'File for SAM output (default: stdout)' -x
 complete -c hisat2 -s q -d 'query input files are FASTQ .fq/.fastq (default)'
 complete -c hisat2 -l qseq -d 'query input files are in Illumina\'s qseq format'
 complete -c hisat2 -s f -d 'query input files are (multi-)FASTA .fa/.mfa'

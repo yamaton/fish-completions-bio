@@ -13,6 +13,7 @@ complete -c STAR -l genomeFastaFiles -d 'path(s) to the fasta files with the gen
 complete -c STAR -l genomeChainFiles -d 'chain files for genomic liftover.' -r
 complete -c STAR -l genomeFileSizes -d 'genome files exact sizes in bytes.' -x
 complete -c STAR -l genomeTransformOutput -d 'which output to transform back to original genome (default: None)' -x
+complete -c STAR -l genomeChrSetMitochondrial -d 'names of the mitochondrial chromosomes.' -x
 complete -c STAR -l genomeChrBinNbits -d 'where chrBin is the size of the bins for genome storage: each chromosome will occupy an integer number of bins.' -x
 complete -c STAR -l genomeSAindexNbases -d 'length (bases) of the SA pre-indexing string.' -x
 complete -c STAR -l genomeSAsparseD -d 'suffux array sparsity, i.e. distance between indices: use bigger numbers to decrease needed RAM at the cost of mapping speed reduction (default: 1)' -x
@@ -195,3 +196,4 @@ complete -c STAR -l soloUMIfiltering -d 'type of UMI filtering (for reads unique
 complete -c STAR -l soloOutFileNames -d 'file names for STARsolo output.' -x
 complete -c STAR -l soloCellFilter -d 'cell filtering type and parameters (default: CellRanger2.2 3000 0.99 10)' -x
 complete -c STAR -l soloOutFormatFeaturesGeneField3 -d 'field 3 in the Gene features.tsv file.' -x
+complete -c STAR -l soloCellReadStats -d 'Output reads statistics for each CB.' -x

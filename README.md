@@ -10,6 +10,6 @@ Just put the `.fish` files in the directory `~/.config/fish/completions`. [This 
 curl https://raw.githubusercontent.com/yamaton/fish-completions-bio/main/install.sh | bash
 ```
 
-## Support for more files?
+## Adding more compleation files
 
-I generated fish scripts in this repository using [my program](https://github.com/yamaton/h2o) extracting information from help/man pages. Just [post](https://github.com/yamaton/fish-completions-bio/issues/1) a request for further additions.
+I generated fish scripts in this repository using [my program](https://github.com/yamaton/h2o) extracting information from help/man pages. Please [post](https://github.com/yamaton/fish-completions-bio/issues/1) a request for further additions.

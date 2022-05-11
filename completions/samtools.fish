@@ -1,8 +1,10 @@
 # Auto-generated with h2o
 
+complete -k -c samtools -n __fish_use_subcommand -x -a samples -d 'list the samples in a set of SAM/BAM/CRAM files'
 complete -k -c samtools -n __fish_use_subcommand -x -a depad -d 'convert padded BAM to unpadded BAM'
 complete -k -c samtools -n __fish_use_subcommand -x -a view -d 'SAM<->BAM<->CRAM conversion'
 complete -k -c samtools -n __fish_use_subcommand -x -a tview -d 'text alignment viewer'
+complete -k -c samtools -n __fish_use_subcommand -x -a head -d 'header viewer'
 complete -k -c samtools -n __fish_use_subcommand -x -a flags -d 'explain BAM flags'
 complete -k -c samtools -n __fish_use_subcommand -x -a ampliconstats -d 'generate amplicon specific stats'
 complete -k -c samtools -n __fish_use_subcommand -x -a stats -d 'generate stats (former bamcheck)'
@@ -20,6 +22,7 @@ complete -k -c samtools -n __fish_use_subcommand -x -a split -d 'splits a file b
 complete -k -c samtools -n __fish_use_subcommand -x -a sort -d 'sort alignment file'
 complete -k -c samtools -n __fish_use_subcommand -x -a mpileup -d 'multi-way pileup'
 complete -k -c samtools -n __fish_use_subcommand -x -a merge -d 'merge sorted alignments'
+complete -k -c samtools -n __fish_use_subcommand -x -a consensus -d 'produce a consensus Pileup/FASTA/FASTQ'
 complete -k -c samtools -n __fish_use_subcommand -x -a cat -d 'concatenate BAMs'
 complete -k -c samtools -n __fish_use_subcommand -x -a collate -d 'shuffle and group alignments by name'
 complete -k -c samtools -n __fish_use_subcommand -x -a ampliconclip -d 'clip oligos from the end of reads'
@@ -139,8 +142,12 @@ complete -c samtools -n "__fish_seen_subcommand_from markdup" -s m -l mode -d 'D
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s u -d 'Output uncompressed SAM, BAM or CRAM.'
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -l include-fails -d 'Include quality checked failed reads.'
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -l no-multi-dup -d 'Stop checking duplicates of duplicates for correctness.'
+complete -c samtools -n "__fish_seen_subcommand_from markdup" -l read-coords -d 'This takes a POSIX regular expression for at least x and y to be used in optical duplicate marking It can also include another part of the read name to test for equality, eg lane:tile elements.' -x
+complete -c samtools -n "__fish_seen_subcommand_from markdup" -l coords-order -d 'The order of the elements captured in the regular expression.' -x
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -l no-PG -d 'Do not add a PG line to the output file.'
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s @ -l threads -d 'Number of input/output compression threads to use in addition to main thread [0].' -x
+complete -c samtools -n "__fish_seen_subcommand_from markdup" -l coords-order -d 'To match only the coordinates of x:y:randomstuff use:' -x
+complete -c samtools -n "__fish_seen_subcommand_from markdup" -l coords-order -d 'It is possible that complex regular expressions may slow the running of the program.' -x
 
 
 
@@ -185,6 +192,34 @@ complete -c samtools -n "__fish_seen_subcommand_from cat" -s @ -l threads -d 'Nu
 
 
 
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s r -l region -d 'Limit the query to region REG.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s f -l format -d 'Produce format FMT, with "fastq", "fasta" and "pileup" as permitted options.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s l -l line-len -d 'Sets the maximum line length of line-wrapped fasta and fastq formats to N.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s o -l output -d 'Output consensus to FILE instead of stdout.' -r
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s m -l mode -d 'Select the consensus algorithm.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s a -d 'Outputs all bases, from start to end of reference, even when the aligned data does not extend to the ends.'
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l rf -l incl-flags -d 'Only include reads with at least one FLAG bit set.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l ff -l excl-flags -d 'Exclude reads with any FLAG bit set.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l min-MQ -d 'Filters out reads with a mapping quality below INT.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l show-del -d 'Whether to show deletions as "*" (no) or to omit from the output (yes).' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l show-ins -d 'Whether to show insertions in the consensus.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s A -l ambig -d 'Enables IUPAC ambiguity codes in the consensus output.'
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s q -l use-qual -d 'For the simple consensus algorithm, this enables use of base quality values.'
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s d -l min-depth -d 'The minimum depth required to make a call.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s H -l het-fract -d 'For consensus columns containing multiple base types, if the second most frequent type is at least H fraction of the most common type then a heterozygous base type will be reported in the consensus.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s c -l call-fract -d 'Only used for the simple consensus algorithm.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s 5 -d 'Enable Bayesian consensus algorithm.'
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -s C -l cutoff -d 'Only used for the Gap5 consensus mode, which produces a Phred style score for the final consensus quality.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l use-MQ -l no-use-MQ -d 'Enable or disable the use of mapping qualities.'
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l adj-MQ -l no-adj-MQ -d 'If mapping qualities are used, this controls whether they are scaled by the local number of mismatches to the reference.'
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l NM-halo -d 'Specifies the distance either side of the base call being considered for computing the number of local mismatches.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l low-MQ -l high-MQ -d 'Specifies a minimum and maximum value of the mapping quality.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l scale-MQ -d 'This is a general multiplicative mapping quality scaling factor.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus" -l P-het -d 'Controls the likelihood of any position being a heterozygous site.' -x
+complete -c samtools -n "__fish_seen_subcommand_from consensus"  -d 'Create a FASTQ file for the contigs with aligned data, including insertions.'
+
+
+
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s 1 -d 'Use Deflate compression level 1 to compress the output.'
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s b -d 'List of input BAM files, one file per line.' -r
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s f -d 'Force to overwrite the output file if present.'
@@ -215,7 +250,7 @@ complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s f -l fasta-ref 
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s G -l exclude-RG -d 'Exclude reads from read groups listed in FILE (one @RG-ID per line)' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s l -l positions -d 'BED or position list file containing a list of regions or sites where pileup or BCF should be generated.' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s q -l min-MQ -d 'Minimum mapping quality for an alignment to be used [0]' -x
-complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s Q -l min-BQ -d 'Minimum base quality for a base to be considered [13]' -x
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s Q -l min-BQ -d 'Minimum base quality for a base to be considered.' -x
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s r -l region -d 'Only generate pileup in region.' -x
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s R -l ignore-RG -d 'Ignore RG tags.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l rf -l incl-flags -d 'Required flags: include reads with any of the mask bits set [null]' -x
@@ -223,12 +258,18 @@ complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l ff -l excl-flag
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s x -l ignore-overlaps -d 'Disable read-pair overlap detection.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s X -d 'Include customized index file as a part of arguments.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s o -l output -d 'Write pileup output to FILE, rather than the default of standard output.' -r
-complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s O -l output-BP -d 'Output base positions on reads.'
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s O -l output-BP -d 'Output base positions on reads in orientation listed in the SAM file (left to right).'
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l output-BP-5 -d 'Output base positions on reads in their original 5\' to 3\' orientation.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s s -l output-MQ -d 'Output mapping qualities encoded as ASCII characters.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l output-QNAME -d 'Output an extra column containing comma-separated read names.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l output-extra -d 'Output extra columns containing comma-separated values of read fields or read tags.' -x
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l output-sep -d 'Specify a different separator character for tag value lists, when those values might contain one or more commas (,), which is the default list separator.' -x
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l output-empty -d 'Specify a different \'no value\' character for tag list entries corresponding to reads that don\'t have a tag requested with the --output-extra option.' -x
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s M -l output-mods -d 'Adds base modification markup into the sequence column.'
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l no-output-ins -d 'Do not output the inserted bases in the sequence column.'
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l no-output-ins-mods -d 'Outputs the inserted bases in the sequence, but excluding any base modifications.'
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l no-output-del -d 'Do not output deleted reference bases in the sequence column.'
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l no-output-ends -d 'Removes the “^” (with mapping quality) and “$” markup from the sequence column.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l reverse-del -d 'Mark the deletions on the reverse strand with the character #, instead of the usual *.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s a -d 'Output all positions, including those with zero depth.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s a -o aa -d 'Output absolutely all positions, including unused reference sequences.'
@@ -255,7 +296,7 @@ complete -c samtools -n "__fish_seen_subcommand_from split" -s h -d 'Use the hea
 complete -c samtools -n "__fish_seen_subcommand_from split" -s f -d 'Output filename format string (see below) ["%*_%#.%."]' -x
 complete -c samtools -n "__fish_seen_subcommand_from split" -s v -d 'Verbose output'
 complete -c samtools -n "__fish_seen_subcommand_from split" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
-complete -c samtools -n "__fish_seen_subcommand_from split" -s @ -l threads -d 'Number of input/output compression threads to use in addition to main thread [0].' -x
+complete -c samtools -n "__fish_seen_subcommand_from split" -s @ -l threads -d 'INT'
 
 
 
@@ -318,6 +359,7 @@ complete -c samtools -n "__fish_seen_subcommand_from import" -s 0 -d 'Import sin
 complete -c samtools -n "__fish_seen_subcommand_from import" -s 1 -s 2 -d 'Import paired data from a pair of FILEs.' -r
 complete -c samtools -n "__fish_seen_subcommand_from import" -l i1 -l i2 -d 'Specifies index barcodes associated with the -1 and -2 files.' -r
 complete -c samtools -n "__fish_seen_subcommand_from import" -s i -d 'Specifies that the Illumina CASAVA identifiers should be processed.'
+complete -c samtools -n "__fish_seen_subcommand_from import" -s N -l name2 -d 'Assume the read names are encoded in the SRA and ENA formats where the first word is an automatically generated name with the second field being the original name.'
 complete -c samtools -n "__fish_seen_subcommand_from import" -l barcode-tag -d 'Changes the auxiliary tag used for barcode sequence.' -x
 complete -c samtools -n "__fish_seen_subcommand_from import" -l quality-tag -d 'Changes the auxiliary tag used for barcode quality.' -x
 complete -c samtools -n "__fish_seen_subcommand_from import" -o oFILE -d 'Output to FILE.'
@@ -329,7 +371,7 @@ complete -c samtools -n "__fish_seen_subcommand_from import" -s T -d 'This looks
 
 
 
-complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s Q -d 'Only count reads with mapping quality greater than INT' -x
+complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s Q -l min-MQ -d 'Only count reads with mapping quality greater than or equal to INT' -x
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s g -d 'By default, reads that have any of the flags UNMAP, SECONDARY, QCFAIL, or DUP set are skipped.' -x
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s G -d 'Discard any read that has any of the flags specified by FLAGS set.' -x
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s j -d 'Do not include deletions (D) and ref skips (N) in bedcov computation.'
@@ -363,8 +405,8 @@ complete -c samtools -n "__fish_seen_subcommand_from depth" -s H -d 'Write a com
 complete -c samtools -n "__fish_seen_subcommand_from depth" -s l -d 'Ignore reads shorter than INT.' -x
 complete -c samtools -n "__fish_seen_subcommand_from depth" -s m -s d -d '(Deprecated since 1.13) This option previously limited the depth to a maximum value.' -x
 complete -c samtools -n "__fish_seen_subcommand_from depth" -s o -d 'Write output to FILE.' -r
-complete -c samtools -n "__fish_seen_subcommand_from depth" -s q -d 'Only count reads with base quality greater than or equal to INT' -x
-complete -c samtools -n "__fish_seen_subcommand_from depth" -s Q -d 'Only count reads with mapping quality greater than or equal to INT' -x
+complete -c samtools -n "__fish_seen_subcommand_from depth" -s q -l min-BQ -d 'Only count reads with base quality greater than or equal to INT' -x
+complete -c samtools -n "__fish_seen_subcommand_from depth" -s Q -l min-MQ -d 'Only count reads with mapping quality greater than or equal to INT' -x
 complete -c samtools -n "__fish_seen_subcommand_from depth" -s r -d 'Only report depth in specified region.' -x
 complete -c samtools -n "__fish_seen_subcommand_from depth" -s X -d 'If this option is set, it will allow the user to specify customized index file location(s) if the data folder does not contain any index file.'
 complete -c samtools -n "__fish_seen_subcommand_from depth" -s g -d 'By default, reads that have any of the flags UNMAP, SECONDARY, QCFAIL, or DUP set are skipped.' -x
@@ -384,12 +426,11 @@ complete -c samtools -n "__fish_seen_subcommand_from phase" -s b -d 'Prefix of B
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s F -d 'Do not attempt to fix chimeric reads.'
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s k -d 'Maximum length for local phasing.' -x
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s q -d 'Minimum Phred-scaled LOD to call a heterozygote.' -x
-complete -c samtools -n "__fish_seen_subcommand_from phase" -s Q -d 'Minimum base quality to be used in het calling.' -x
+complete -c samtools -n "__fish_seen_subcommand_from phase" -s Q -l min-BQ -d 'Minimum base quality to be used in het calling.' -x
 complete -c samtools -n "__fish_seen_subcommand_from phase" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
 
 
 
-complete -c samtools -n "__fish_seen_subcommand_from stats" -s q -d 'bases duplicated - number of bases that belong to reads duplicated.' -x
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s c -l coverage -d 'Set coverage distribution to the specified range (MIN, MAX, STEP all given as integers) [1,1000,1]' -x
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s d -l remove-dups -d 'Exclude from statistics reads marked as duplicates'
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s f -l required-flag -d 'Required flag, 0 for unset.' -x
@@ -430,6 +471,11 @@ complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s @ -d 'Num
 
 
 
+complete -c samtools -n "__fish_seen_subcommand_from head" -s h -l headers -d 'Display only the first INT header lines.' -x
+complete -c samtools -n "__fish_seen_subcommand_from head" -s n -l records -d 'Also display the first INT alignment records.' -x
+
+
+
 complete -c samtools -n "__fish_seen_subcommand_from tview" -s d -d 'Output as (H)tml, (C)urses or (T)ext.' -x
 complete -c samtools -n "__fish_seen_subcommand_from tview" -s p -d 'Go directly to this position' -x
 complete -c samtools -n "__fish_seen_subcommand_from tview" -s s -d 'Display only alignments from this sample or read group' -x
@@ -439,8 +485,8 @@ complete -c samtools -n "__fish_seen_subcommand_from tview" -s X -d 'If this opt
 
 complete -c samtools -n "__fish_seen_subcommand_from view" -s b -l bam -d 'Output in the BAM format.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s C -l cram -d 'Output in the CRAM format (requires -T).'
-complete -c samtools -n "__fish_seen_subcommand_from view" -s 1 -l fast -d 'Enable fast BAM compression (implies -b).'
-complete -c samtools -n "__fish_seen_subcommand_from view" -s u -l uncompressed -d 'Output uncompressed BAM.'
+complete -c samtools -n "__fish_seen_subcommand_from view" -s 1 -l fast -d 'Enable fast compression.'
+complete -c samtools -n "__fish_seen_subcommand_from view" -s u -l uncompressed -d 'Output uncompressed data.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s h -l with-header -d 'Include the header in the output.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s H -l header-only -d 'Output the header only.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -l no-header -d 'When producing SAM format, output alignment records but not headers.'
@@ -448,6 +494,7 @@ complete -c samtools -n "__fish_seen_subcommand_from view" -s c -l count -d 'Ins
 complete -c samtools -n "__fish_seen_subcommand_from view" -s \? -l help -d 'Output long help and exit immediately.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s o -l output -d 'Output to FILE [stdout].' -r
 complete -c samtools -n "__fish_seen_subcommand_from view" -s U -l unoutput -l output-unselected -d 'Write alignments that are not selected by the various filter options to FILE.' -r
+complete -c samtools -n "__fish_seen_subcommand_from view" -s p -l unmap -d 'Set the UNMAP flag on alignments that are not selected by the filter options.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s t -l fai-reference -d 'A tab-delimited FILE.' -r
 complete -c samtools -n "__fish_seen_subcommand_from view" -s T -l reference -d 'A FASTA format reference FILE, optionally compressed by bgzip and ideally indexed by samtools faidx.' -r
 complete -c samtools -n "__fish_seen_subcommand_from view" -s L -l target-file -l targets-file -d 'Only output alignments overlapping the input BED FILE [null].' -r
@@ -464,8 +511,10 @@ complete -c samtools -n "__fish_seen_subcommand_from view" -s m -l min-qlen -d '
 complete -c samtools -n "__fish_seen_subcommand_from view" -s e -l expr -d 'Only include alignments that match the filter expression STR.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s f -l require-flags -d 'Only output alignments with all bits set in FLAG present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s F -l excl-flags -l exclude-flags -d 'Do not output alignments with any bits set in FLAG present in the FLAG field.' -x
+complete -c samtools -n "__fish_seen_subcommand_from view" -l rf -l incl-flags -l include-flags -d 'Only output alignments with any bit set in FLAG present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s G -d 'Do not output alignments with all bits set in INT present in the FLAG field.' -x
-complete -c samtools -n "__fish_seen_subcommand_from view" -s x -l remove-tag -d 'Read tag to exclude from output (repeatable) [null]' -x
+complete -c samtools -n "__fish_seen_subcommand_from view" -s x -l remove-tag -d 'Read tag(s) to exclude from output (repeatable) [null].' -x
+complete -c samtools -n "__fish_seen_subcommand_from view" -l keep-tag -d 'This keeps only tags listed in STR and is directly equivalent to --remove-tag ^STR.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s B -l remove-B -d 'Collapse the backward CIGAR operation.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -l add-flags -d 'Adds flag(s) to read.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -l remove-flags -d 'Remove flag(s) from read.' -x
@@ -473,6 +522,7 @@ complete -c samtools -n "__fish_seen_subcommand_from view" -l subsample -d 'Outp
 complete -c samtools -n "__fish_seen_subcommand_from view" -l subsample-seed -d 'Subsampling seed used to influence which subset of reads is kept.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s s -d 'Subsampling shorthand option: -s INT.FRAC is equivalent to --subsample-seed INT --subsample 0.FRAC.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s @ -l threads -d 'Number of BAM compression threads to use in addition to main thread [0].' -x
+complete -c samtools -n "__fish_seen_subcommand_from view" -s P -l fetch-pairs -d 'Retrieve pairs even when the mate is outside of the requested region.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s S -d 'Ignored for compatibility with previous samtools versions.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -s X -l customized-index -d 'Include customized index file as a part of arguments.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
@@ -487,3 +537,11 @@ complete -c samtools -n "__fish_seen_subcommand_from depad" -s 1 -d 'Enable fast
 complete -c samtools -n "__fish_seen_subcommand_from depad" -s T -d 'Provides the padded reference file.' -r
 complete -c samtools -n "__fish_seen_subcommand_from depad" -s o -d 'Specifies the output filename.' -r
 complete -c samtools -n "__fish_seen_subcommand_from depad" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
+
+
+
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s \? -d 'print help and exit'
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s h -d 'print a header'
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s i -d 'test if the file is indexed.'
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s T -d 'provide the sample tag name from the @RG line [SM].' -x
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s o -d '-f FILE load an indexed fasta file in the collection of references.' -r
