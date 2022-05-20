@@ -18,6 +18,7 @@ complete -c iqtree -o fconst -d 'Add constant patterns into alignment (N=no.' -x
 complete -c iqtree -l epsilon -d 'Likelihood epsilon for parameter estimate (default 0.01)' -x
 complete -c iqtree -s T -d 'No.' -x
 complete -c iqtree -l threads-max -d 'Max number of threads for -T AUTO (default: all cores)' -x
+complete -c iqtree -l export-alisim-cmd -d 'Export a command-line from the inferred tree and model params to simulate new MSAs with AliSim'
 complete -c iqtree -l redo -d 'Redo both ModelFinder and tree search'
 complete -c iqtree -l redo-tree -d 'Restore ModelFinder and only redo tree search'
 complete -c iqtree -l undo -d 'Revoke finished run, used when changing some options'
@@ -75,7 +76,7 @@ complete -c iqtree -s m -d 'Additionally test Lie Markov models with RY symmetry
 complete -c iqtree -s m -d 'Additionally test Lie Markov models with WS symmetry' -x
 complete -c iqtree -s m -d 'Additionally test Lie Markov models with MK symmetry' -x
 complete -c iqtree -s m -d 'Additionally test strand-symmetric models' -x
-complete -c iqtree -l mset -d 'Restrict search to models supported by other programs (raxml, phyml or mrbayes)' -x
+complete -c iqtree -l mset -d 'Restrict search to models supported by other programs (raxml, phyml, mrbayes, beast1 or beast2)' -x
 complete -c iqtree -l mset -d 'Comma-separated model list (e.g. -mset WAG,LG,JTT)' -x
 complete -c iqtree -l msub -d 'Amino-acid model source (nuclear, mitochondrial, chloroplast or viral)' -x
 complete -c iqtree -l mfreq -d 'List of state frequencies' -x
@@ -156,6 +157,19 @@ complete -c iqtree -s s -d 'Sequence alignment for --scf' -r
 complete -c iqtree -s p -d 'Partition file or directory for --scf' -r
 complete -c iqtree -l cf-verbose -d 'Write CF per tree/locus to cf.stat_tree/_loci'
 complete -c iqtree -l cf-quartet -d 'Write sCF for all resampled quartets to .cf.quartet'
+complete -c iqtree -l gentrius -d 'File must contain either a single species-tree or a set of subtrees.' -r
+complete -c iqtree -o pr_ab_matrix -d 'Presence-absence matrix of loci coverage.' -r
+complete -c iqtree -s p -d 'NEXUS/RAxML partition file' -r
+complete -c iqtree -o g_stop_t -d 'Stop after NUM species-trees were generated, or use 0 to turn off this stopping rule.' -x
+complete -c iqtree -o g_stop_i -d 'Stop after NUM intermediate trees were visited, or use 0 to turn off this stopping rule.' -x
+complete -c iqtree -o g_stop_h -d 'Stop after NUM hours (CPU time), or use 0 to turn off this stopping rule.' -x
+complete -c iqtree -o g_non_stop -d 'Turn off all stopping rules.'
+complete -c iqtree -o g_query -d 'Species-trees to test for identical set of subtrees.' -r
+complete -c iqtree -o g_print -d 'Write all generated species-trees.'
+complete -c iqtree -o g_print_lim -d 'Limit on the number of species-trees to be written.' -x
+complete -c iqtree -o g_print_induced -d 'Write induced partition subtrees.'
+complete -c iqtree -o g_print_m -d 'Write presence-absence matrix.'
+complete -c iqtree -o g_rm_leaves -d 'Invoke reverse analysis for complex datasets.' -x
 complete -c iqtree -l date -d 'File containing dates of tips or ancestral nodes' -r
 complete -c iqtree -l date -d 'Extract dates from taxon names after last \'|\'' -x
 complete -c iqtree -l date-tip -d 'Tip dates as a real number or YYYY-MM-DD' -x
