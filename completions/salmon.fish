@@ -10,7 +10,7 @@ complete -k -c salmon -n __fish_use_subcommand -x -a index -d 'create a salmon i
 
 complete -c salmon -n "__fish_seen_subcommand_from index" -s v -l version -d 'print version string'
 complete -c salmon -n "__fish_seen_subcommand_from index" -s h -l help -d 'produce help message'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s t -l transcripts -d 'Transcript fasta file.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -s t -l transcripts -d 'Transcript fasta file.' -r
 complete -c salmon -n "__fish_seen_subcommand_from index" -s k -l kmerLen -d 'The size of k-mers that should be used for the quasi index.' -x
 complete -c salmon -n "__fish_seen_subcommand_from index" -s i -l index -d 'salmon index.' -x
 complete -c salmon -n "__fish_seen_subcommand_from index" -l gencode -d 'This flag will expect the input transcript fasta to be in GENCODE format, and will split the transcript name at the first \'|\' character.'
@@ -19,7 +19,7 @@ complete -c salmon -n "__fish_seen_subcommand_from index" -l keepDuplicates -d '
 complete -c salmon -n "__fish_seen_subcommand_from index" -s p -l threads -d 'Number of threads to use during indexing.' -x
 complete -c salmon -n "__fish_seen_subcommand_from index" -l keepFixedFasta -d 'Retain the fixed fasta file (without short transcripts and duplicates, clipped, etc.) generated during indexing'
 complete -c salmon -n "__fish_seen_subcommand_from index" -s f -l filterSize -d 'The size of the Bloom filter that will be used by TwoPaCo during indexing.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -l tmpdir -d 'The directory location that will be used for TwoPaCo temporary files; it will be created if need be and be removed prior to indexing completion.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -l tmpdir -d 'The directory location that will be used for TwoPaCo temporary files; it will be created if need be and be removed prior to indexing completion.' -r
 complete -c salmon -n "__fish_seen_subcommand_from index" -l sparse -d 'Build the index using a sparse sampling of k-mer positions This will require less memory (especially during quantification), but will take longer to construct and can slow down mapping / alignment'
 complete -c salmon -n "__fish_seen_subcommand_from index" -s d -l decoys -d 'Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript.' -x
 complete -c salmon -n "__fish_seen_subcommand_from index" -s n -l no-clip -d 'Don\'t clip poly-A tails from the ends of target sequences'
@@ -29,19 +29,19 @@ complete -c salmon -n "__fish_seen_subcommand_from index" -l type -d 'The type o
 
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s l -l libType -d 'Format string describing the library type' -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s i -l index -d 'salmon index' -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s r -l unmatedReads -d 'List of files containing unmated reads of (e.g. single-end reads)' -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s 1 -l mates1 -d 'File containing the #1 mates' -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s 2 -l mates2 -d 'File containing the #2 mates' -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s r -l unmatedReads -d 'List of files containing unmated reads of (e.g. single-end reads)' -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s 1 -l mates1 -d 'File containing the #1 mates' -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s 2 -l mates2 -d 'File containing the #2 mates' -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s v -l version -d 'print version string'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s h -l help -d 'produce help message'
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s o -l output -d 'Output quantification directory.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s o -l output -d 'Output quantification directory.' -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l seqBias -d 'Perform sequence-specific bias correction.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l gcBias -d '[beta for single-end reads] Perform fragment GC bias correction.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l posBias -d 'Perform positional bias correction.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s p -l threads -d 'The number of threads to use concurrently.' -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l incompatPrior -d 'This option sets the prior probability that an alignment that disagrees with the specified library type (--libType) results from the true fragment origin.' -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s g -l geneMap -d 'File containing a mapping of transcripts to genes.' -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l auxTargetFile -d 'A file containing a list of "auxiliary" targets.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s g -l geneMap -d 'File containing a mapping of transcripts to genes.' -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l auxTargetFile -d 'A file containing a list of "auxiliary" targets.' -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l meta -d 'If you\'re using Salmon on a metagenomic dataset, consider setting this flag to disable parts of the abundance estimation model that make less sense for metagenomic data.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l discardOrphansQuasi -d '[selective-alignment mode only] : Discard orphan mappings in selective-alignment mode.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l discardOrphans -d '[alignment-based mode only] : Discard orphan alignments in the input .'
@@ -77,9 +77,9 @@ complete -c salmon -n "__fish_seen_subcommand_from quant" -s s -l sampleOut -d '
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s u -l sampleUnaligned -d 'In addition to sampling the aligned reads, also write the un-aligned reads to "postSample.bam".'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l gencode -d 'This flag will expect the input transcript fasta to be in GENCODE format, and will split the transcript name at the first \'|\' character.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l scoreExp -d 'The factor by which sub-optimal alignment scores are downweighted to produce a probability.' -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l mappingCacheMemoryLimit -d 'If the file contained fewer than this many mapped reads, then just keep the data in memory for subsequent rounds of inference.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l mappingCacheMemoryLimit -d 'If the file contained fewer than this many mapped reads, then just keep the data in memory for subsequent rounds of inference.' -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l alternativeInitMode -d '[Experimental]: Use an alternative strategy (rather than simple interpolation between) the online and uniform abundance estimates to initialize the EM / VBEM algorithm.'
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l auxDir -d 'The sub-directory of the quantification directory where auxiliary information e.g. bootstraps, bias parameters, etc.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l auxDir -d 'The sub-directory of the quantification directory where auxiliary information e.g. bootstraps, bias parameters, etc.' -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l skipQuant -d 'Skip performing the actual transcript quantification (including any Gibbs sampling or bootstrapping).'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l dumpEq -d 'Dump the simple equivalence class counts that were computed during mapping or alignment.'
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s d -l dumpEqWeights -d 'Dump conditional probabilities associated with transcripts when equivalence class information is being dumped to file.'
@@ -122,17 +122,17 @@ complete -c salmon -n "__fish_seen_subcommand_from quant" -l writeUnmappedNames 
 
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s l -l libType -d 'Format string describing the library type' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s i -l index -d 'salmon index' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -s r -l unmatedReads -d 'List of files containing unmated reads of (e.g. single-end reads)' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -s 1 -l mates1 -d 'File containing the #1 mates' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -s 2 -l mates2 -d 'File containing the #2 mates' -x
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -s r -l unmatedReads -d 'List of files containing unmated reads of (e.g. single-end reads)' -r
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -s 1 -l mates1 -d 'File containing the #1 mates' -r
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -s 2 -l mates2 -d 'File containing the #2 mates' -r
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s v -l version -d 'print version string'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s h -l help -d 'produce help message'
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -s o -l output -d 'Output quantification directory.' -x
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -s o -l output -d 'Output quantification directory.' -r
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s j -l rad -d 'just selectively align the data and write the results to a RAD file.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l sketch -d 'perform sketching rather than selective alignment and write the results to a RAD file.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s p -l threads -d 'The number of threads to use concurrently.' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -l tgMap -d 'transcript to gene map tsv file' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -l hash -d 'Secondary input point for Alevin using Big freaking Hash (bfh.txt) file.' -x
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l tgMap -d 'transcript to gene map tsv file' -r
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l hash -d 'Secondary input point for Alevin using Big freaking Hash (bfh.txt) file.' -r
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l dropseq -d 'Use DropSeq Single Cell protocol for the library'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l chromiumV3 -d 'Use 10x chromium v3 Single Cell protocol for the library.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l chromium -d 'Use 10x chromium v2 Single Cell protocol for the library.'
@@ -144,7 +144,7 @@ complete -c salmon -n "__fish_seen_subcommand_from alevin" -l splitseqV1 -d 'Use
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l splitseqV2 -d 'Use Split-SeqV2 Single Cell protocol for the library.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l quartzseq2 -d 'Use Quartz-Seq2 v3.2 Single Cell protocol for the library assumes 15 length barcode and 8 length UMI.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l sciseq3 -d 'Use sci-RNA-seq3 protocol for the library.'
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -l whitelist -d 'File containing white-list barcodes' -x
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l whitelist -d 'File containing white-list barcodes' -r
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l featureStart -d 'This flag should be used with citeseq and specifies the starting index of the feature barcode on Read2.' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l featureLength -d 'This flag should be used with citeseq and specifies the length of the feature barcode.' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l noQuant -d 'Don\'t run downstream barcode-salmon model.'
@@ -152,8 +152,8 @@ complete -c salmon -n "__fish_seen_subcommand_from alevin" -l numCellBootstraps 
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l numCellGibbsSamples -d 'Generate mean and variance for cell x gene matrix quantification by running gibbs chain estimates.' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l forceCells -d 'Explicitly specify the number of cells.' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l expectCells -d 'define a close upper bound on expected number of cells' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -l mrna -d 'path to a file containing mito-RNA gene, one per line' -x
-complete -c salmon -n "__fish_seen_subcommand_from alevin" -l rrna -d 'path to a file containing ribosomal RNA, one per line' -x
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l mrna -d 'path to a file containing mito-RNA gene, one per line' -r
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l rrna -d 'path to a file containing ribosomal RNA, one per line' -r
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l keepCBFraction -d 'fraction of CB to keep, value must be in range (0,1], use 1 to quantify all CB.' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l read-geometry -d 'format string describing the geometry of the read' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l bc-geometry -d 'format string describing the geometry of the cell barcode' -x
@@ -178,9 +178,9 @@ complete -c salmon -n "__fish_seen_subcommand_from alevin" -l maxNumBarcodes -d 
 
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s v -l version -d 'print version string'
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s h -l help -d 'produce help message'
-complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l quants -d 'List of quantification directories.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l quants -d 'List of quantification directories.' -r
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l names -d 'Optional list of names to give to the samples.' -x
-complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s c -l column -d 'The name of the column that will be merged together into the output files.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s c -l column -d 'The name of the column that will be merged together into the output files.' -r
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l genes -d 'Use gene quantification instead of transcript.'
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l missing -d 'The value of missing values.' -x
-complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s o -l output -d 'Output quantification file.' -x
+complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s o -l output -d 'Output quantification file.' -r

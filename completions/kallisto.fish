@@ -12,14 +12,14 @@ complete -k -c kallisto -n __fish_use_subcommand -x -a index -d 'Builds a kallis
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from index" -s i -l index -d 'Filename for the kallisto index to be constructed' -x
+complete -c kallisto -n "__fish_seen_subcommand_from index" -s i -l index -d 'Filename for the kallisto index to be constructed' -r
 complete -c kallisto -n "__fish_seen_subcommand_from index" -s k -l kmer-size -d 'k-mer (odd) length (default: 31, max value: 31)' -x
 complete -c kallisto -n "__fish_seen_subcommand_from index" -l make-unique -d 'Replace repeated target names with unique names'
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from quant" -s i -l index -d 'Filename for the kallisto index to be used for' -x
-complete -c kallisto -n "__fish_seen_subcommand_from quant" -s o -l output-dir -d 'Directory to write output to' -x
+complete -c kallisto -n "__fish_seen_subcommand_from quant" -s i -l index -d 'Filename for the kallisto index to be used for' -r
+complete -c kallisto -n "__fish_seen_subcommand_from quant" -s o -l output-dir -d 'Directory to write output to' -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -l bias -d 'Perform sequence based bias correction'
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -s b -l bootstrap-samples -d 'Number of bootstrap samples (default: 0)' -x
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -l seed -d 'Seed for the bootstrap sampling (default: 42)' -x
@@ -40,9 +40,9 @@ complete -c kallisto -n "__fish_seen_subcommand_from quant" -l verbose -d 'Print
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s o -l output-dir -d 'Directory to write output to' -x
-complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s i -l index -d 'Filename for the kallisto index to be used (required if file with names of transcripts not supplied)' -x
-complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s T -l txnames -d 'File with names of transcripts   (required if index file not supplied)' -x
+complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s o -l output-dir -d 'Directory to write output to' -r
+complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s i -l index -d 'Filename for the kallisto index to be used (required if file with names of transcripts not supplied)' -r
+complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s T -l txnames -d 'File with names of transcripts   (required if index file not supplied)' -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s e -l ec-file -d 'File containing equivalence classes (default: equivalence classes are taken from the index)' -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s f -l fragment-file -d 'File containing fragment length distribution (default: effective length normalization is not performed)' -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s l -l fragment-length -d 'Estimated average fragment length' -x
@@ -55,8 +55,8 @@ complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -l seed -d 'Seed
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from bus" -s i -l index -d 'Filename for the kallisto index to be used for pseudoalignment' -x
-complete -c kallisto -n "__fish_seen_subcommand_from bus" -s o -l output-dir -d 'Directory to write output to' -x
+complete -c kallisto -n "__fish_seen_subcommand_from bus" -s i -l index -d 'Filename for the kallisto index to be used for pseudoalignment' -r
+complete -c kallisto -n "__fish_seen_subcommand_from bus" -s o -l output-dir -d 'Directory to write output to' -r
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -s x -l technology -d 'Single-cell technology used' -x
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -s l -l list -d 'List all single-cell technologies supported'
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -s B -l batch -d 'Process files listed in FILE' -r
@@ -75,15 +75,15 @@ complete -c kallisto -n "__fish_seen_subcommand_from bus" -l verbose -d 'Print o
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from merge" -s i -l index -d 'Filename for the kallisto index to be used for pseudoalignment' -x
-complete -c kallisto -n "__fish_seen_subcommand_from merge" -s o -l output-dir -d 'Directory to write output to' -x
+complete -c kallisto -n "__fish_seen_subcommand_from merge" -s i -l index -d 'Filename for the kallisto index to be used for pseudoalignment' -r
+complete -c kallisto -n "__fish_seen_subcommand_from merge" -s o -l output-dir -d 'Directory to write output to' -r
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from h5dump" -s o -l output-dir -d 'Directory to write output to' -x
+complete -c kallisto -n "__fish_seen_subcommand_from h5dump" -s o -l output-dir -d 'Directory to write output to' -r
 
 
 
-complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s G -l gfa -d 'Filename for GFA output of T-DBG' -x
-complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s g -l gtf -d 'Filename for GTF file' -x
-complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s b -l bed -d 'Filename for BED output (default: index + ".bed")' -x
+complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s G -l gfa -d 'Filename for GFA output of T-DBG' -r
+complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s g -l gtf -d 'Filename for GTF file' -r
+complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s b -l bed -d 'Filename for BED output (default: index + ".bed")' -r
