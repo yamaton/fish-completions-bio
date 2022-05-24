@@ -1,9 +1,29 @@
 # Auto-generated with h2o
 
 complete -k -c salmon -n __fish_use_subcommand -x -a quantmerge -d 'merge multiple quantifications into a single file'
+complete -k -c salmon -n __fish_use_subcommand -x -a swim -d 'perform super-secret operation'
+complete -k -c salmon -n __fish_use_subcommand -x -a alevin -d 'single cell analysis'
 complete -k -c salmon -n __fish_use_subcommand -x -a quant -d 'quantify a sample'
 complete -k -c salmon -n __fish_use_subcommand -x -a index -d 'create a salmon index'
-complete -k -c salmon -n __fish_use_subcommand -x -a alevin -d 'single cell analysis'
+
+
+
+complete -c salmon -n "__fish_seen_subcommand_from index" -s v -l version -d 'print version string'
+complete -c salmon -n "__fish_seen_subcommand_from index" -s h -l help -d 'produce help message'
+complete -c salmon -n "__fish_seen_subcommand_from index" -s t -l transcripts -d 'Transcript fasta file.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -s k -l kmerLen -d 'The size of k-mers that should be used for the quasi index.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -s i -l index -d 'salmon index.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -l gencode -d 'This flag will expect the input transcript fasta to be in GENCODE format, and will split the transcript name at the first \'|\' character.'
+complete -c salmon -n "__fish_seen_subcommand_from index" -l features -d 'This flag will expect the input reference to be in the tsv file format, and will split the feature name at the first \'tab\' character.'
+complete -c salmon -n "__fish_seen_subcommand_from index" -l keepDuplicates -d 'This flag will disable the default indexing behavior of discarding sequence-identical duplicate transcripts.'
+complete -c salmon -n "__fish_seen_subcommand_from index" -s p -l threads -d 'Number of threads to use during indexing.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -l keepFixedFasta -d 'Retain the fixed fasta file (without short transcripts and duplicates, clipped, etc.) generated during indexing'
+complete -c salmon -n "__fish_seen_subcommand_from index" -s f -l filterSize -d 'The size of the Bloom filter that will be used by TwoPaCo during indexing.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -l tmpdir -d 'The directory location that will be used for TwoPaCo temporary files; it will be created if need be and be removed prior to indexing completion.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -l sparse -d 'Build the index using a sparse sampling of k-mer positions This will require less memory (especially during quantification), but will take longer to construct and can slow down mapping / alignment'
+complete -c salmon -n "__fish_seen_subcommand_from index" -s d -l decoys -d 'Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript.' -x
+complete -c salmon -n "__fish_seen_subcommand_from index" -s n -l no-clip -d 'Don\'t clip poly-A tails from the ends of target sequences'
+complete -c salmon -n "__fish_seen_subcommand_from index" -l type -d 'The type of index to build; the only option is "puff" in this version of salmon.' -x
 
 
 
@@ -27,7 +47,10 @@ complete -c salmon -n "__fish_seen_subcommand_from alevin" -l gemcode -d 'Use 10
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l citeseq -d 'Use CITESeq Single Cell protocol for the library, 16 CB, 12 UMI and features.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l celseq -d 'Use CEL-Seq Single Cell protocol for the library.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l celseq2 -d 'Use CEL-Seq2 Single Cell protocol for the library.'
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l splitseqV1 -d 'Use Split-SeqV1 Single Cell protocol for the library.'
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l splitseqV2 -d 'Use Split-SeqV2 Single Cell protocol for the library.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l quartzseq2 -d 'Use Quartz-Seq2 v3.2 Single Cell protocol for the library assumes 15 length barcode and 8 length UMI.'
+complete -c salmon -n "__fish_seen_subcommand_from alevin" -l sciseq3 -d 'Use sci-RNA-seq3 protocol for the library.'
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l whitelist -d 'File containing white-list barcodes' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l featureStart -d 'This flag should be used with citeseq and specifies the starting index of the feature barcode on Read2.' -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l featureLength -d 'This flag should be used with citeseq and specifies the length of the feature barcode.' -x
@@ -60,49 +83,8 @@ complete -c salmon -n "__fish_seen_subcommand_from alevin" -l maxNumBarcodes -d 
 
 
 
-complete -c salmon -n "__fish_seen_subcommand_from index" -s v -d 'print version string' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s h -d 'produce help message' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s t -d 'arg   Transcript fasta file.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s t -l transcripts -d 'arg   Transcript fasta file.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s t -d 'Transcript fasta file.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s t -l transcripts -d 'Transcript fasta file.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s k -d 'arg (=31)   The size of k-mers that should be used for the quasi index.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s k -l kmerLen -d 'arg (=31)   The size of k-mers that should be used for the quasi index.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s k -d 'The size of k-mers that should be used for the quasi index.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s k -l kmerLen -d 'The size of k-mers that should be used for the quasi index.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s i -d 'arg   salmon index.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s i -l index -d 'arg   salmon index.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s i -d 'salmon index.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s i -l index -d 'salmon index.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -l gencode -d 'This flag will expect the input transcript fasta to be in GENCODE format, and will split the transcript name at the first \'|\' character.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -l features -d 'This flag will expect the input reference to be in the tsv file format, and will split the feature name at the first \'tab\' character.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -l keepDuplicates -d 'This flag will disable the default indexing behavior of discarding sequence-identical duplicate transcripts.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s p -d 'arg (=2)   Number of threads to use during indexing.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s p -l threads -d 'arg (=2)   Number of threads to use during indexing.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s p -d 'Number of threads to use during indexing.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s p -l threads -d 'Number of threads to use during indexing.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -l keepFixedFasta -d 'Retain the fixed fasta file (without short transcripts and duplicates, clipped, etc.) generated during indexing'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s f -d 'arg (=-1) The size of the Bloom filter that will be used by TwoPaCo during indexing.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s f -l filterSize -d 'arg (=-1) The size of the Bloom filter that will be used by TwoPaCo during indexing.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s f -d 'The size of the Bloom filter that will be used by TwoPaCo during indexing.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s f -l filterSize -d 'The size of the Bloom filter that will be used by TwoPaCo during indexing.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -l tmpdir -d 'The directory location that will be used for TwoPaCo temporary files; it will be created if need be and be removed prior to indexing completion.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -l sparse -d 'Build the index using a sparse sampling of k-mer positions This will require less memory (especially during quantification), but will take longer to construct and can slow down mapping / alignment'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s d -d 'arg Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s d -l decoys -d 'arg Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript.'
-complete -c salmon -n "__fish_seen_subcommand_from index" -s d -d 'Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -s d -l decoys -d 'Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript.' -x
-complete -c salmon -n "__fish_seen_subcommand_from index" -l type -d 'The type of index to build; the only option is "puff" in this version of salmon.' -x
-
-
-
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l help-reads -d 'view the help for salmon\'s selective-alignment-based mode'
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l help-alignment -d 'view the help for salmon\'s alignment-based mode'
-
-
-
-complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s v -l version -d 'print version string'
-complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s h -l help -d 'produce help message'
+complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s v -d 'print version string' -x
+complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s h -d 'produce help message' -x
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l quants -d 'List of quantification directories.' -x
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -l names -d 'Optional list of names to give to the samples.' -x
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s c -l column -d 'The name of the column that will be merged together into the output files.' -x
