@@ -1,14 +1,14 @@
 # Auto-generated with h2o
 
 complete -c csvgrep -s h -l help -d 'show this help message and exit'
-complete -c csvgrep -s d -l delimiter -d 'Delimiting character of the input CSV file.' -x
+complete -c csvgrep -s d -l delimiter -d 'Delimiting character of the input CSV file.' -r
 complete -c csvgrep -s t -l tabs -d 'Specify that the input CSV file is delimited with tabs.'
-complete -c csvgrep -s q -l quotechar -d 'Character used to quote strings in the input CSV file.' -x
-complete -c csvgrep -s u -l quoting -d 'Quoting style used in the input CSV file.' -x
+complete -c csvgrep -s q -l quotechar -d 'Character used to quote strings in the input CSV file.' -r
+complete -c csvgrep -s u -l quoting -d 'Quoting style used in the input CSV file.' -r
 complete -c csvgrep -s b -l no-doublequote -d 'Whether or not double quotes are doubled in the input CSV file.'
 complete -c csvgrep -s p -l escapechar -d 'Character used to escape the delimiter if --quoting 3 ("Quote None") is specified and to escape the QUOTECHAR if --no-doublequote is specified.' -x
-complete -c csvgrep -s z -l maxfieldsize -d 'Maximum length of a single field in the input CSV file.' -x
-complete -c csvgrep -s e -l encoding -d 'Specify the encoding of the input CSV file.' -x
+complete -c csvgrep -s z -l maxfieldsize -d 'Maximum length of a single field in the input CSV file.' -r
+complete -c csvgrep -s e -l encoding -d 'Specify the encoding of the input CSV file.' -r
 complete -c csvgrep -s S -l skipinitialspace -d 'Ignore whitespace immediately following the delimiter.'
 complete -c csvgrep -s H -l no-header-row -d 'Specify that the input CSV file has no header row.'
 complete -c csvgrep -s K -l skip-lines -d 'Specify the number of initial lines to skip before the header row (e.g. comments, copyright notices, empty rows).' -x

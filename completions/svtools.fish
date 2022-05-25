@@ -52,10 +52,10 @@ complete -c svtools -n "__fish_seen_subcommand_from prune" -s o -l output -d 'Ou
 
 
 complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s h -l help -d 'show this help message and exit'
-complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s d -l distance -d 'max separation distance (bp) of adjacent loci between bedpe files [50]' -x
+complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s d -l distance -d 'max separation distance (bp) of adjacent loci between bedpe files [50]' -r
 complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s a -l aFile -d 'Pruned merged bedpe (A file) or standard input (-a stdin).' -r
 complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s b -l bFile -d 'Pruned merged bedpe (B file) (-b stdin).' -r
-complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s c -l cohort -d 'Cohort name to add information of matching variants (default:bFile)' -x
+complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s c -l cohort -d 'Cohort name to add information of matching variants (default:bFile)' -r
 complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s o -l output -d 'Output BEDPE to write (default: stdout)' -x
 
 
@@ -75,14 +75,14 @@ complete -c svtools -n "__fish_seen_subcommand_from lmerge" -l product -d 'Calcu
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s h -l help -d 'show this help message and exit'
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s v -l input_vcf -d 'VCF input' -x
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s c -l coordinates -d 'BED input' -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s r -l root -d 'CNVnator .root histogram file (required)' -x
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s r -l root -d 'CNVnator .root histogram file (required)' -r
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s w -l window -d 'CNVnator window size (required)' -x
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s s -l sample -d 'sample to annotate' -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -l cnvnator -d 'path to cnvnator-multi binary' -x
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -l cnvnator -d 'path to cnvnator-multi binary' -r
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s o -l output_vcf -d 'compressed(.gz) output VCF to write (default: stdout)' -x
 complete -c svtools -n "__fish_seen_subcommand_from copynumber" -l debug -d 'debugging verbosity'
 
 
 
 complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s h -l help -d 'show this help message and exit'
-complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s m -l master -d 'VCF file to set first 8 columns of variant info [first file in vcf_list]' -x
+complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s m -l master -d 'VCF file to set first 8 columns of variant info [first file in vcf_list]' -r

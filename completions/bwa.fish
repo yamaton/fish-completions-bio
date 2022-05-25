@@ -9,7 +9,7 @@ complete -k -c bwa -n __fish_use_subcommand -x -a index -d 'Index database seque
 
 
 
-complete -c bwa -n "__fish_seen_subcommand_from index" -s p -d 'Prefix of the output database [same as db filename]' -x
+complete -c bwa -n "__fish_seen_subcommand_from index" -s p -d 'Prefix of the output database [same as db filename]' -r
 complete -c bwa -n "__fish_seen_subcommand_from index" -s a -d 'Algorithm for constructing BWT index.' -x
 
 
@@ -33,7 +33,7 @@ complete -c bwa -n "__fish_seen_subcommand_from mem" -s U -d 'Penalty for an unp
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s x -d 'Read type.' -x
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s p -d 'Smart pairing.'
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s R -d 'Complete read group header line.' -x
-complete -c bwa -n "__fish_seen_subcommand_from mem" -s H -d 'If ARG starts with @, it is interpreted as a string and gets inserted into the output SAM header; otherwise, ARG is interpreted as a file with all lines starting with @ in the file inserted into the SAM header.' -x
+complete -c bwa -n "__fish_seen_subcommand_from mem" -s H -d 'If ARG starts with @, it is interpreted as a string and gets inserted into the output SAM header; otherwise, ARG is interpreted as a file with all lines starting with @ in the file inserted into the SAM header.' -r
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s o -d 'Write the output SAM file to FILE.' -r
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s 5 -d 'For split alignment, mark the segment with the smallest coordinate as the primary.'
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s K -d 'Process INT input bases in each batch regardless of the number of threads in use [10000000*nThreads].' -x

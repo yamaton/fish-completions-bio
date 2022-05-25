@@ -17,7 +17,7 @@ complete -c hifiasm -s n -d 'A unitig is considered small if it is composed of l
 complete -c hifiasm -s x -s y -d 'Max and min overlap drop ratio [0.8, 0.2].' -x
 complete -c hifiasm -s i -d 'Ignore error corrected reads and overlaps saved in prefix.*.bin files.'
 complete -c hifiasm -l pri-range -d 'Min and max coverage cutoff of primary contigs.' -x
-complete -c hifiasm -l lowQ -d 'Output contig regions with >=INT% inconsistency to the bed file with suffix lowQ.bed [70].' -x
+complete -c hifiasm -l lowQ -d 'Output contig regions with >=INT% inconsistency to the bed file with suffix lowQ.bed [70].' -r
 complete -c hifiasm -l b-cov -d 'Break contigs at potential misassemblies with <INT-fold coverage [0].' -x
 complete -c hifiasm -l h-cov -d 'Break contigs at potential misassemblies with >INT-fold coverage [-1].' -x
 complete -c hifiasm -l m-rate -d 'Break contigs with <=FLOAT*coverage exact overlaps [0.75].' -x

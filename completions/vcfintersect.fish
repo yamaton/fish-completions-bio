@@ -12,4 +12,4 @@ complete -c vcfintersect -s l -l loci -d 'output whole loci when one alternate a
 complete -c vcfintersect -s m -l ref-match -d 'intersect on the basis of record REF string'
 complete -c vcfintersect -s t -l tag -d 'attach TAG to each record\'s info field if it would intersect' -x
 complete -c vcfintersect -s V -l tag-value -d 'use this value to indicate that the allele is passing \'.\' will be used otherwise.' -x
-complete -c vcfintersect -s M -l merge-from -s T -l merge-to -d 'merge from FROM-TAG used in the -i file, setting TO-TAG in the current file.' -x
+complete -c vcfintersect -s M -l merge-from -s T -l merge-to -d 'merge from FROM-TAG used in the -i file, setting TO-TAG in the current file.' -r

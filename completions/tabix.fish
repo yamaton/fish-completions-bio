@@ -7,9 +7,9 @@ complete -c tabix -s C -l csi -d 'Produce CSI format index instead of classical 
 complete -c tabix -s e -l end -d 'Column of end chromosomal position.' -x
 complete -c tabix -s f -l force -d 'Force to overwrite the index file if it is present.'
 complete -c tabix -s m -l min-shift -d 'set minimal interval size for CSI indices to 2^INT [14]' -x
-complete -c tabix -s p -l preset -d 'Input format for indexing.' -x
-complete -c tabix -s s -l sequence -d 'Column of sequence name.' -x
-complete -c tabix -s S -l skip-lines -d 'Skip first INT lines in the data file.' -x
+complete -c tabix -s p -l preset -d 'Input format for indexing.' -r
+complete -c tabix -s s -l sequence -d 'Column of sequence name.' -r
+complete -c tabix -s S -l skip-lines -d 'Skip first INT lines in the data file.' -r
 complete -c tabix -s h -l print-header -d 'Print also the header/meta lines.'
 complete -c tabix -s H -l only-header -d 'Print only the header/meta lines.'
 complete -c tabix -s l -l list-chroms -d 'List the sequence names stored in the index file.'

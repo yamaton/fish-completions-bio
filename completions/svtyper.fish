@@ -7,7 +7,7 @@ complete -c svtyper -s B -l bam -d 'BAM or CRAM file(s), comma-separated if geno
 complete -c svtyper -s T -l ref_fasta -d 'Indexed reference FASTA file (recommended for reading CRAM files)' -r
 complete -c svtyper -s l -l lib_info -d 'create/read JSON file of library information' -r
 complete -c svtyper -s m -l min_aligned -d 'minimum number of aligned bases to consider read as evidence [20]' -x
-complete -c svtyper -s n -d 'number of reads to sample from BAM file for building insert size distribution [1000000]' -x
+complete -c svtyper -s n -d 'number of reads to sample from BAM file for building insert size distribution [1000000]' -r
 complete -c svtyper -s q -l sum_quals -d 'add genotyping quality to existing QUAL (default: overwrite QUAL field)'
 complete -c svtyper -l max_reads -d 'maximum number of reads to assess at any variant (reduces processing time in high-depth regions, default: unlimited)' -x
 complete -c svtyper -l split_weight -d 'weight for split reads [1]' -x

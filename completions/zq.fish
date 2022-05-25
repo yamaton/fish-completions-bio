@@ -2,7 +2,7 @@
 
 complete -c zq -l raw -d 'Expert Mode - Since zindex is a sqlite3 database under the covers, this flag lets you run a custom query for use cases not supported by command line args.' -x
 complete -c zq -s i -l index -d 'Use specified index for searching' -x
-complete -c zq -l index-file -d 'Use index from <index-file> (default <file>.zindex)' -x
+complete -c zq -l index-file -d 'Use index from <index-file> (default <file>.zindex)' -r
 complete -c zq -s S -l separator -d 'Print SEPARATOR between non-overlapping contexts (if -A, -B or -C specified)' -x
 complete -c zq -l no-separator -d 'Don\'t print a separator between non-overlapping contexts'
 complete -c zq -s C -l context -d 'Print NUM lines of context around each match' -x

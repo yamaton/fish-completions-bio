@@ -2,9 +2,9 @@
 
 complete -c mosdepth -s t -l threads -d 'number of BAM decompression threads [default: 0]' -x
 complete -c mosdepth -s c -l chrom -d 'chromosome to restrict depth calculation.' -x
-complete -c mosdepth -s b -l by -d 'optional BED file or (integer) window-sizes.' -x
+complete -c mosdepth -s b -l by -d 'optional BED file or (integer) window-sizes.' -r
 complete -c mosdepth -s n -l no-per-base -d 'dont output per-base depth.'
-complete -c mosdepth -s f -l fasta -d 'fasta file for use with CRAM files [default: ].' -x
+complete -c mosdepth -s f -l fasta -d 'fasta file for use with CRAM files [default: ].' -r
 complete -c mosdepth -l d4 -d 'output per-base depth in d4 format.'
 complete -c mosdepth -s F -l flag -d 'exclude reads with any of the bits in FLAG set [default: 1796]' -x
 complete -c mosdepth -s i -l include-flag -d 'only include reads with any of the bits in FLAG set.' -x

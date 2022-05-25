@@ -22,7 +22,7 @@ complete -c nucmer -s l -d 'Set the minimum length of a single match (default 20
 complete -c nucmer -s o -l coords -d 'Automatically generate the original NUCmer1.1 coords output file using the \'show-coords\' program'
 complete -c nucmer -l optimize -d 'Toggle alignment score optimization, i.e. if an alignment extension reaches the end of a sequence, it will backtrack to optimize the alignment score instead of terminating the alignment at the end of the sequence (default --optimize)'
 complete -c nucmer -l nooptimize -d 'Toggle alignment score optimization, i.e. if an alignment extension reaches the end of a sequence, it will backtrack to optimize the alignment score instead of terminating the alignment at the end of the sequence (default --optimize)'
-complete -c nucmer -s p -d 'Set the prefix of the output files (default "out")' -x
+complete -c nucmer -s p -d 'Set the prefix of the output files (default "out")' -r
 complete -c nucmer -s r -l reverse -d 'Use only the reverse complement of the Query sequences'
 complete -c nucmer -l simplify -d 'Simplify alignments by removing shadowed clusters.'
 complete -c nucmer -l nosimplify -d 'Simplify alignments by removing shadowed clusters.'

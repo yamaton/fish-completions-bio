@@ -3,7 +3,7 @@
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -s h -l help -d 'show this help message and exit'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l dry-run -l dryrun -s n -d 'Do not execute anything, and display what would be done.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l profile -d 'Name of profile to use for configuring Snakemake.' -r
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cache -d 'Store output files of given rules in a central cache given by the environment variable $SNAKEMAKE_OUTPUT_CACHE.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cache -d 'Store output files of given rules in a central cache given by the environment variable $SNAKEMAKE_OUTPUT_CACHE.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l snakefile -s s -d 'The workflow definition in form of a snakefile.Usually, you should not need to specify this.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cores -s c -d 'Use at most N CPU cores/jobs in parallel.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l jobs -s j -d 'Use at most N CPU cluster/cloud jobs in parallel.' -x
@@ -11,12 +11,12 @@ complete -c snakemake -n "not __fish_seen_subcommand_from target" -l local-cores
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l resources -d '[NAME=INT ...]], --res [NAME=INT [NAME=INT ...]] Define additional resources that shall constrain the scheduling analogously to threads (see above).' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l set-threads -d 'Overwrite thread usage of rules.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l max-threads -d 'Define a global maximum number of threads for any job.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l set-resources -d 'Overwrite resource usage of rules.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l set-scatter -d 'Overwrite number of scatter items of scattergather processes.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l default-resources -d 'AME=INT [NAME=INT ...]], --default-res [NAME=INT [NAME=INT ...]] Define default values of resources for rules that do not define their own values.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l set-resources -d 'Overwrite resource usage of rules.' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l set-scatter -d 'Overwrite number of scatter items of scattergather processes.' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l default-resources -d 'AME=INT [NAME=INT ...]], --default-res [NAME=INT [NAME=INT ...]] Define default values of resources for rules that do not define their own values.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l preemption-default -d 'A preemptible instance can be requested when using the Google Life Sciences API.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l preemptible-rules -d 'A preemptible instance can be requested when using the Google Life Sciences API.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l config -s C -d 'Set or overwrite values in the workflow config object.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l config -s C -d 'Set or overwrite values in the workflow config object.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l configfile -l configfiles -d 'Specify or overwrite the config file of the workflow (see the docs).' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l envvars -d 'Environment variables to pass to cloud jobs.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l directory -s d -d 'Specify working directory (relative paths in the snakefile will use this as their origin).' -r
@@ -24,11 +24,11 @@ complete -c snakemake -n "not __fish_seen_subcommand_from target" -l touch -s t 
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l keep-going -s k -d 'Go on with independent jobs if a job fails.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l force -s f -d 'Force the execution of the selected target or the first rule regardless of already created output.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l forceall -s F -d 'Force the execution of the selected (or the first) rule and all rules it is dependent on regardless of already created output.'
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l forcerun -s R -d 'Force the re-execution or creation of the given rules or files.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l forcerun -s R -d 'Force the re-execution or creation of the given rules or files.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l prioritize -s P -d 'Tell the scheduler to assign creation of given targets (and all their dependencies) highest priority.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l batch -d 'Only create the given BATCH of the input files of the given RULE.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l until -s U -d 'Runs the pipeline until it reaches the specified rules or files.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l omit-from -s O -d 'Prevent the execution or creation of the given rules or files as well as any rules or files that are downstream of these targets in the DAG.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l batch -d 'Only create the given BATCH of the input files of the given RULE.' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l until -s U -d 'Runs the pipeline until it reaches the specified rules or files.' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l omit-from -s O -d 'Prevent the execution or creation of the given rules or files as well as any rules or files that are downstream of these targets in the DAG.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l rerun-incomplete -l ri -d 'Re-run all jobs the output of which is recognized as incomplete.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l shadow-prefix -d 'Specify a directory in which the \'shadow\' directory is created.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l scheduler -d 'Specifies if jobs are selected by a greedy algorithm or by solving an ilp.' -x
@@ -42,8 +42,8 @@ complete -c snakemake -n "not __fish_seen_subcommand_from target" -l groups -d '
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l group-components -d 'Set the number of connected components a group is allowed to span.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l report -d 'Create an HTML report with results and statistics.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l report-stylesheet -d 'Custom stylesheet to use for report.' -r
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l draft-notebook -d 'Draft a skeleton notebook for the rule used to generate the given target file.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l edit-notebook -d 'Interactively edit the notebook associated with the rule used to generate the given target file.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l draft-notebook -d 'Draft a skeleton notebook for the rule used to generate the given target file.' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l edit-notebook -d 'Interactively edit the notebook associated with the rule used to generate the given target file.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l notebook-listen -d 'The IP address and PORT the notebook server used for editing the notebook (--edit-notebook) will listen on.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l lint -d 'Perform linting on the given workflow.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l generate-unit-tests -d 'Automatically generate unit tests for each workflow rule.' -r
@@ -86,21 +86,21 @@ complete -c snakemake -n "not __fish_seen_subcommand_from target" -l force-use-t
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l allow-ambiguity -s a -d 'Don\'t check for ambiguous rules and simply use the first if several can produce the same file.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l nolock -d 'Do not lock the working directory (default: False)'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l ignore-incomplete -l ii -d 'Do not check for incomplete output files.'
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l max-inventory-time -d 'Spend at most SECONDS seconds to create a file inventory for the working directory.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l latency-wait -l output-wait -s w -d 'Wait given seconds if an output file of a job is not present after the job finished.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l max-inventory-time -d 'Spend at most SECONDS seconds to create a file inventory for the working directory.' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l latency-wait -l output-wait -s w -d 'Wait given seconds if an output file of a job is not present after the job finished.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l wait-for-files -d 'Wait --latency-wait seconds for these files to be present before executing the workflow.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l wait-for-files-file -d 'Same behaviour as --wait-for-files, but file list is stored in file instead of being passed on the commandline.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l notemp -l nt -d 'Ignore temp() declarations.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l all-temp -d 'Mark all output files as temp files.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l keep-remote -d 'Keep local copies of remote input files.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l keep-target-files -d 'Do not adjust the paths of given target files relative to the working directory.'
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l allowed-rules -d 'Only consider given rules.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l allowed-rules -d 'Only consider given rules.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l max-jobs-per-second -d 'Maximal number of cluster/drmaa jobs per second, default is 10, fractions allowed.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l max-status-checks-per-second -d 'Maximal number of job status checks per second, default is 10, fractions allowed.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -s T -l restart-times -d 'Number of times to restart failing jobs (defaults to 0).' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l attempt -d 'Internal use only: define the initial value of the attempt parameter (default: 1).' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l wrapper-prefix -d 'Prefix for URL created from wrapper directive (default: https://github.com/snakemake/snakemakewrappers/raw/).' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l default-remote-provider -d 'Specify default remote provider to be used for all input and output files that don\'t yet specify one.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l wrapper-prefix -d 'Prefix for URL created from wrapper directive (default: https://github.com/snakemake/snakemakewrappers/raw/).' -r
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l default-remote-provider -d 'Specify default remote provider to be used for all input and output files that don\'t yet specify one.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l default-remote-prefix -d 'Specify prefix for default remote provider.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l no-shared-fs -d 'Do not assume that jobs share a common file system.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l greediness -d 'Set the greediness of scheduling.' -x
@@ -112,12 +112,12 @@ complete -c snakemake -n "not __fish_seen_subcommand_from target" -l mode -d 'Se
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l show-failed-logs -d 'Automatically display logs of failed jobs.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l log-handler-script -d 'Provide a custom script containing a function \'def log_handler(msg):\'.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l log-service -d 'Set a specific messaging service for logging output.Snakemake will notify the service on errors and completed execution.Currently slack and workflow management system (wms) are supported.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cluster -d 'Execute snakemake rules with the given submit command, e.g. qsub.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cluster -d 'Execute snakemake rules with the given submit command, e.g. qsub.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cluster-sync -d 'cluster submission command will block, returning the remote exitstatus upon remote termination (for example, this should be usedif the cluster command is \'qsub -sync y\' (SGE) (default: None)' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l drmaa -d 'Execute snakemake on a cluster accessed via DRMAA, Snakemake compiles jobs into scripts that are submitted to the cluster with the given command, once all input files for a particular job are present.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l drmaa -d 'Execute snakemake on a cluster accessed via DRMAA, Snakemake compiles jobs into scripts that are submitted to the cluster with the given command, once all input files for a particular job are present.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cluster-config -s u -d 'A JSON or YAML file that defines the wildcards used in \'cluster\'for specific rules, instead of having them specified in the Snakefile.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l immediate-submit -l is -d 'Immediately submit all jobs to the cluster instead of waiting for present input files.'
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l jobscript -l js -d 'Provide a custom job script for submission to the cluster.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l jobscript -l js -d 'Provide a custom job script for submission to the cluster.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l jobname -l jn -d 'Provide a custom name for the jobscript that is submitted to the cluster (see --cluster).' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l cluster-status -d 'Status command for cluster execution.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l drmaa-log-dir -d 'Specify a directory in which stdout and stderr files of DRMAA jobs will be written.' -r
@@ -125,7 +125,7 @@ complete -c snakemake -n "not __fish_seen_subcommand_from target" -l kubernetes 
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l container-image -d 'Docker image to use, e.g., when submitting jobs to kubernetes Defaults to \'https://hub.docker.com/r/snakemake/snakemake\', tagged with the same version as the currently running Snakemake instance.' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l tibanna -d 'Execute workflow on AWS cloud using Tibanna.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l tibanna-sfn -d 'Name of Tibanna Unicorn step function (e.g. tibanna_unicorn_monty).This works as serverless scheduler/resource allocator and must be deployed first using tibanna cli.' -x
-complete -c snakemake -n "not __fish_seen_subcommand_from target" -l precommand -d 'Any command to execute before snakemake command on AWS cloud such as wget, git clone, unzip, etc.' -x
+complete -c snakemake -n "not __fish_seen_subcommand_from target" -l precommand -d 'Any command to execute before snakemake command on AWS cloud such as wget, git clone, unzip, etc.' -r
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l tibanna-config -d 'Additional tibanna config e.g. --tibanna-config spot_instance=true subnet=<subnet_id> security group=<security_group_id> (default: None)' -x
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l google-lifesciences -d 'Execute workflow on Google Cloud cloud using the Google Life.'
 complete -c snakemake -n "not __fish_seen_subcommand_from target" -l google-lifesciences-regions -d 'Specify one or more valid instance regions (defaults to US) (default: [\'us-east1\', \'us-west1\', \'uscentral1\'])' -x
@@ -154,7 +154,7 @@ complete -k -c snakemake -n __fish_use_subcommand -x -a target -d 'Targets to bu
 complete -c snakemake -n "__fish_seen_subcommand_from target" -s h -l help -d 'show this help message and exit'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l dry-run -l dryrun -s n -d 'Do not execute anything, and display what would be done.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l profile -d 'Name of profile to use for configuring Snakemake.' -r
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l cache -d 'Store output files of given rules in a central cache given by the environment variable $SNAKEMAKE_OUTPUT_CACHE.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l cache -d 'Store output files of given rules in a central cache given by the environment variable $SNAKEMAKE_OUTPUT_CACHE.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l snakefile -s s -d 'The workflow definition in form of a snakefile.Usually, you should not need to specify this.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l cores -s c -d 'Use at most N CPU cores/jobs in parallel.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l jobs -s j -d 'Use at most N CPU cluster/cloud jobs in parallel.' -x
@@ -162,12 +162,12 @@ complete -c snakemake -n "__fish_seen_subcommand_from target" -l local-cores -d 
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l resources -d '[NAME=INT ...]], --res [NAME=INT [NAME=INT ...]] Define additional resources that shall constrain the scheduling analogously to threads (see above).' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l set-threads -d 'Overwrite thread usage of rules.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l max-threads -d 'Define a global maximum number of threads for any job.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l set-resources -d 'Overwrite resource usage of rules.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l set-scatter -d 'Overwrite number of scatter items of scattergather processes.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l default-resources -d 'AME=INT [NAME=INT ...]], --default-res [NAME=INT [NAME=INT ...]] Define default values of resources for rules that do not define their own values.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l set-resources -d 'Overwrite resource usage of rules.' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l set-scatter -d 'Overwrite number of scatter items of scattergather processes.' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l default-resources -d 'AME=INT [NAME=INT ...]], --default-res [NAME=INT [NAME=INT ...]] Define default values of resources for rules that do not define their own values.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l preemption-default -d 'A preemptible instance can be requested when using the Google Life Sciences API.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l preemptible-rules -d 'A preemptible instance can be requested when using the Google Life Sciences API.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l config -s C -d 'Set or overwrite values in the workflow config object.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l config -s C -d 'Set or overwrite values in the workflow config object.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l configfile -l configfiles -d 'Specify or overwrite the config file of the workflow (see the docs).' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l envvars -d 'Environment variables to pass to cloud jobs.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l directory -s d -d 'Specify working directory (relative paths in the snakefile will use this as their origin).' -r
@@ -175,11 +175,11 @@ complete -c snakemake -n "__fish_seen_subcommand_from target" -l touch -s t -d '
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l keep-going -s k -d 'Go on with independent jobs if a job fails.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l force -s f -d 'Force the execution of the selected target or the first rule regardless of already created output.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l forceall -s F -d 'Force the execution of the selected (or the first) rule and all rules it is dependent on regardless of already created output.'
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l forcerun -s R -d 'Force the re-execution or creation of the given rules or files.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l forcerun -s R -d 'Force the re-execution or creation of the given rules or files.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l prioritize -s P -d 'Tell the scheduler to assign creation of given targets (and all their dependencies) highest priority.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l batch -d 'Only create the given BATCH of the input files of the given RULE.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l until -s U -d 'Runs the pipeline until it reaches the specified rules or files.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l omit-from -s O -d 'Prevent the execution or creation of the given rules or files as well as any rules or files that are downstream of these targets in the DAG.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l batch -d 'Only create the given BATCH of the input files of the given RULE.' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l until -s U -d 'Runs the pipeline until it reaches the specified rules or files.' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l omit-from -s O -d 'Prevent the execution or creation of the given rules or files as well as any rules or files that are downstream of these targets in the DAG.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l rerun-incomplete -l ri -d 'Re-run all jobs the output of which is recognized as incomplete.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l shadow-prefix -d 'Specify a directory in which the \'shadow\' directory is created.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l scheduler -d 'Specifies if jobs are selected by a greedy algorithm or by solving an ilp.' -x
@@ -193,8 +193,8 @@ complete -c snakemake -n "__fish_seen_subcommand_from target" -l groups -d 'Assi
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l group-components -d 'Set the number of connected components a group is allowed to span.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l report -d 'Create an HTML report with results and statistics.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l report-stylesheet -d 'Custom stylesheet to use for report.' -r
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l draft-notebook -d 'Draft a skeleton notebook for the rule used to generate the given target file.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l edit-notebook -d 'Interactively edit the notebook associated with the rule used to generate the given target file.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l draft-notebook -d 'Draft a skeleton notebook for the rule used to generate the given target file.' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l edit-notebook -d 'Interactively edit the notebook associated with the rule used to generate the given target file.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l notebook-listen -d 'The IP address and PORT the notebook server used for editing the notebook (--edit-notebook) will listen on.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l lint -d 'Perform linting on the given workflow.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l generate-unit-tests -d 'Automatically generate unit tests for each workflow rule.' -r
@@ -237,21 +237,21 @@ complete -c snakemake -n "__fish_seen_subcommand_from target" -l force-use-threa
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l allow-ambiguity -s a -d 'Don\'t check for ambiguous rules and simply use the first if several can produce the same file.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l nolock -d 'Do not lock the working directory (default: False)'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l ignore-incomplete -l ii -d 'Do not check for incomplete output files.'
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l max-inventory-time -d 'Spend at most SECONDS seconds to create a file inventory for the working directory.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l latency-wait -l output-wait -s w -d 'Wait given seconds if an output file of a job is not present after the job finished.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l max-inventory-time -d 'Spend at most SECONDS seconds to create a file inventory for the working directory.' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l latency-wait -l output-wait -s w -d 'Wait given seconds if an output file of a job is not present after the job finished.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l wait-for-files -d 'Wait --latency-wait seconds for these files to be present before executing the workflow.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l wait-for-files-file -d 'Same behaviour as --wait-for-files, but file list is stored in file instead of being passed on the commandline.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l notemp -l nt -d 'Ignore temp() declarations.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l all-temp -d 'Mark all output files as temp files.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l keep-remote -d 'Keep local copies of remote input files.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l keep-target-files -d 'Do not adjust the paths of given target files relative to the working directory.'
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l allowed-rules -d 'Only consider given rules.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l allowed-rules -d 'Only consider given rules.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l max-jobs-per-second -d 'Maximal number of cluster/drmaa jobs per second, default is 10, fractions allowed.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l max-status-checks-per-second -d 'Maximal number of job status checks per second, default is 10, fractions allowed.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -s T -l restart-times -d 'Number of times to restart failing jobs (defaults to 0).' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l attempt -d 'Internal use only: define the initial value of the attempt parameter (default: 1).' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l wrapper-prefix -d 'Prefix for URL created from wrapper directive (default: https://github.com/snakemake/snakemakewrappers/raw/).' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l default-remote-provider -d 'Specify default remote provider to be used for all input and output files that don\'t yet specify one.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l wrapper-prefix -d 'Prefix for URL created from wrapper directive (default: https://github.com/snakemake/snakemakewrappers/raw/).' -r
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l default-remote-provider -d 'Specify default remote provider to be used for all input and output files that don\'t yet specify one.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l default-remote-prefix -d 'Specify prefix for default remote provider.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l no-shared-fs -d 'Do not assume that jobs share a common file system.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l greediness -d 'Set the greediness of scheduling.' -x
@@ -263,12 +263,12 @@ complete -c snakemake -n "__fish_seen_subcommand_from target" -l mode -d 'Set ex
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l show-failed-logs -d 'Automatically display logs of failed jobs.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l log-handler-script -d 'Provide a custom script containing a function \'def log_handler(msg):\'.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l log-service -d 'Set a specific messaging service for logging output.Snakemake will notify the service on errors and completed execution.Currently slack and workflow management system (wms) are supported.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l cluster -d 'Execute snakemake rules with the given submit command, e.g. qsub.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l cluster -d 'Execute snakemake rules with the given submit command, e.g. qsub.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l cluster-sync -d 'cluster submission command will block, returning the remote exitstatus upon remote termination (for example, this should be usedif the cluster command is \'qsub -sync y\' (SGE) (default: None)' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l drmaa -d 'Execute snakemake on a cluster accessed via DRMAA, Snakemake compiles jobs into scripts that are submitted to the cluster with the given command, once all input files for a particular job are present.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l drmaa -d 'Execute snakemake on a cluster accessed via DRMAA, Snakemake compiles jobs into scripts that are submitted to the cluster with the given command, once all input files for a particular job are present.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l cluster-config -s u -d 'A JSON or YAML file that defines the wildcards used in \'cluster\'for specific rules, instead of having them specified in the Snakefile.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l immediate-submit -l is -d 'Immediately submit all jobs to the cluster instead of waiting for present input files.'
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l jobscript -l js -d 'Provide a custom job script for submission to the cluster.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l jobscript -l js -d 'Provide a custom job script for submission to the cluster.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l jobname -l jn -d 'Provide a custom name for the jobscript that is submitted to the cluster (see --cluster).' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l cluster-status -d 'Status command for cluster execution.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l drmaa-log-dir -d 'Specify a directory in which stdout and stderr files of DRMAA jobs will be written.' -r
@@ -276,7 +276,7 @@ complete -c snakemake -n "__fish_seen_subcommand_from target" -l kubernetes -d '
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l container-image -d 'Docker image to use, e.g., when submitting jobs to kubernetes Defaults to \'https://hub.docker.com/r/snakemake/snakemake\', tagged with the same version as the currently running Snakemake instance.' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l tibanna -d 'Execute workflow on AWS cloud using Tibanna.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l tibanna-sfn -d 'Name of Tibanna Unicorn step function (e.g. tibanna_unicorn_monty).This works as serverless scheduler/resource allocator and must be deployed first using tibanna cli.' -x
-complete -c snakemake -n "__fish_seen_subcommand_from target" -l precommand -d 'Any command to execute before snakemake command on AWS cloud such as wget, git clone, unzip, etc.' -x
+complete -c snakemake -n "__fish_seen_subcommand_from target" -l precommand -d 'Any command to execute before snakemake command on AWS cloud such as wget, git clone, unzip, etc.' -r
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l tibanna-config -d 'Additional tibanna config e.g. --tibanna-config spot_instance=true subnet=<subnet_id> security group=<security_group_id> (default: None)' -x
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l google-lifesciences -d 'Execute workflow on Google Cloud cloud using the Google Life.'
 complete -c snakemake -n "__fish_seen_subcommand_from target" -l google-lifesciences-regions -d 'Specify one or more valid instance regions (defaults to US) (default: [\'us-east1\', \'us-west1\', \'uscentral1\'])' -x

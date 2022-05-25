@@ -19,6 +19,6 @@ complete -c promer -s m -d 'Set the maximum bookend masking lenth, measured in a
 complete -c promer -s o -l coords -d 'Automatically generate the original PROmer1.1 ".coords" output file using the "show-coords" program'
 complete -c promer -l optimize -d 'Toggle alignment score optimization, i.e. if an alignment extension reaches the end of a sequence, it will backtrack to optimize the alignment score instead of terminating the alignment at the end of the sequence (default --optimize)'
 complete -c promer -l nooptimize -d 'Toggle alignment score optimization, i.e. if an alignment extension reaches the end of a sequence, it will backtrack to optimize the alignment score instead of terminating the alignment at the end of the sequence (default --optimize)'
-complete -c promer -s p -d 'Set the prefix of the output files (default "out")' -x
+complete -c promer -s p -d 'Set the prefix of the output files (default "out")' -r
 complete -c promer -s V -l version -d 'Display the version information and exit'
 complete -c promer -s x -d 'Set the alignment matrix number to 1 [BLOSUM 45], 2 [BLOSUM 62] or 3 [BLOSUM 80] (default 2)' -x

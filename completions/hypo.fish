@@ -1,12 +1,12 @@
 # Auto-generated with h2o
 
-complete -c hypo -s r -l reads-short -d 'Input file name containing reads (in fasta/fastq format; can be compressed).' -x
-complete -c hypo -s d -l draft -d 'Input file name containing the draft contigs (in fasta/fastq format; can be compressed).' -x
-complete -c hypo -s b -l bam-sr -d 'Input file name containing the alignments of short reads against the draft (in bam/sam format; must have CIGAR information).' -x
+complete -c hypo -s r -l reads-short -d 'Input file name containing reads (in fasta/fastq format; can be compressed).' -r
+complete -c hypo -s d -l draft -d 'Input file name containing the draft contigs (in fasta/fastq format; can be compressed).' -r
+complete -c hypo -s b -l bam-sr -d 'Input file name containing the alignments of short reads against the draft (in bam/sam format; must have CIGAR information).' -r
 complete -c hypo -s c -l coverage-short -d 'Approximate mean coverage of the short reads.' -x
 complete -c hypo -s s -l size-ref -d 'Approximate size of the genome (a number; could be followed by units k/m/g; e.g. 10m, 2.3g).' -x
-complete -c hypo -s B -l bam-lr -d 'Input file name containing the alignments of long reads against the draft (in bam/sam format; must have CIGAR information).' -x
-complete -c hypo -s o -l output -d 'Output file name.' -x
+complete -c hypo -s B -l bam-lr -d 'Input file name containing the alignments of long reads against the draft (in bam/sam format; must have CIGAR information).' -r
+complete -c hypo -s o -l output -d 'Output file name.' -r
 complete -c hypo -s t -l threads -d 'Number of threads.' -x
 complete -c hypo -s p -l processing-size -d 'Number of contigs to be processed in one batch.' -x
 complete -c hypo -s k -l kind-sr -d 'Kind of the short reads.' -x

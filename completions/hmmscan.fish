@@ -17,12 +17,12 @@ complete -c hmmscan -l nonull2 -d 'turn off biased composition score corrections
 complete -c hmmscan -s Z -d 'set # of comparisons done, for E-value calculation' -x
 complete -c hmmscan -l domZ -d 'set # of significant seqs, for domain E-value calculation' -x
 complete -c hmmscan -l seed -d 'set RNG seed to <n> (if 0: one-time arbitrary seed)  [42]' -x
-complete -c hmmscan -l qformat -d 'assert input <seqfile> is in format <s>: no autodetection' -x
+complete -c hmmscan -l qformat -d 'assert input <seqfile> is in format <s>: no autodetection' -r
 complete -c hmmscan -l cpu -d 'number of parallel CPU workers to use for multithreads  [2]' -x
-complete -c hmmscan -s o -d 'direct output to file <f>, not stdout' -x
-complete -c hmmscan -l tblout -d 'save parseable table of per-sequence hits to file <f>' -x
-complete -c hmmscan -l domtblout -d 'save parseable table of per-domain hits to file <f>' -x
-complete -c hmmscan -l pfamtblout -d 'save table of hits and domains to file, in Pfam format <f>' -x
+complete -c hmmscan -s o -d 'direct output to file <f>, not stdout' -r
+complete -c hmmscan -l tblout -d 'save parseable table of per-sequence hits to file <f>' -r
+complete -c hmmscan -l domtblout -d 'save parseable table of per-domain hits to file <f>' -r
+complete -c hmmscan -l pfamtblout -d 'save table of hits and domains to file, in Pfam format <f>' -r
 complete -c hmmscan -l acc -d 'prefer accessions over names in output'
 complete -c hmmscan -l noali -d 'don\'t output alignments, so output is smaller'
 complete -c hmmscan -l notextw -d 'unlimit ASCII text output line width'

@@ -1,7 +1,7 @@
 # Auto-generated with h2o
 
 complete -c busco -s i -l in -d 'Input sequence file in FASTA format.' -r
-complete -c busco -s o -l out -d 'Give your analysis run a recognisable short name.' -x
+complete -c busco -s o -l out -d 'Give your analysis run a recognisable short name.' -r
 complete -c busco -s m -l mode -d 'Specify which BUSCO analysis mode to run.' -x
 complete -c busco -s l -l lineage_dataset -d 'Specify the name of the BUSCO lineage to be used.' -x
 complete -c busco -l augustus -d 'Use augustus gene predictor for eukaryote runs'

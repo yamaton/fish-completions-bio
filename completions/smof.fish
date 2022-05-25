@@ -145,9 +145,9 @@ complete -c smof -n "__fish_seen_subcommand_from sort" -s p -l pair-separator -d
 
 
 complete -c smof -n "__fish_seen_subcommand_from split" -s h -l help -d 'show this help message and exit'
-complete -c smof -n "__fish_seen_subcommand_from split" -s n -l number -d 'Number of output files or sequences per file' -x
+complete -c smof -n "__fish_seen_subcommand_from split" -s n -l number -d 'Number of output files or sequences per file' -r
 complete -c smof -n "__fish_seen_subcommand_from split" -s q -l seqs -d 'split by maximum sequences per file'
-complete -c smof -n "__fish_seen_subcommand_from split" -s p -l prefix -d 'prefix for output files (default="xxx")' -x
+complete -c smof -n "__fish_seen_subcommand_from split" -s p -l prefix -d 'prefix for output files (default="xxx")' -r
 
 
 

@@ -6,7 +6,7 @@ complete -c canu -o trim -d 'generate trimmed reads'
 complete -c canu -o assemble -d 'generate an assembly'
 complete -c canu -o trim-assemble -d 'generate trimmed reads and then assemble them'
 complete -c canu -s d -d 'Directory the assembly is computed in' -r
-complete -c canu -s p -d 'Prefix of the output files name' -x
+complete -c canu -s p -d 'Prefix of the output files name' -r
 complete -c canu -s s -d 'Assembly specificatin file' -r
 complete -c canu -o haplotype -d 'Specify haplotypes for TrioCanu' -x
 complete -c canu -o corrected -o trimmed -o untrimmed -o raw -d 'Specify input data type: Choose from -trimmed, -untrimmed, -raw, -corrected.' -x

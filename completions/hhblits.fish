@@ -56,7 +56,7 @@ complete -c hhblits -o ovlp -d 'banded alignment: forbid <ovlp> largest diagonal
 complete -c hhblits -o alt -d 'show up to this many alternative alignments with raw score > smin(def=4)' -x
 complete -c hhblits -o premerge -d 'hits to query MSA before aligning remaining hits (def=3)' -x
 complete -c hhblits -o smin -d 'minimum raw score for alternative alignments (def=20.0)' -x
-complete -c hhblits -o shift -d 'profile-profile score offset (def=-0.03)' -x
+complete -c hhblits -o shift -d 'profile-profile score offset (def=-0.03)' -r
 complete -c hhblits -o corr -d 'weight of term for pair correlations (def=0.10)' -x
 complete -c hhblits -o sc -d 'amino acid score (tja: template HMM at column j) (def=1)' -x
 complete -c hhblits -o ssm -d '0: no ss scoring.' -x

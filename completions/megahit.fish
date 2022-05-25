@@ -1,9 +1,9 @@
 # Auto-generated with h2o
 
-complete -c megahit -s 1 -d 'comma-separated list of fasta/q paired-end #1 files, paired with files in <pe2>' -x
-complete -c megahit -s 2 -d 'comma-separated list of fasta/q paired-end #2 files, paired with files in <pe1>' -x
-complete -c megahit -l 12 -d 'comma-separated list of interleaved fasta/q paired-end files' -x
-complete -c megahit -s r -l read -d 'comma-separated list of fasta/q single-end files' -x
+complete -c megahit -s 1 -d 'comma-separated list of fasta/q paired-end #1 files, paired with files in <pe2>' -r
+complete -c megahit -s 2 -d 'comma-separated list of fasta/q paired-end #2 files, paired with files in <pe1>' -r
+complete -c megahit -l 12 -d 'comma-separated list of interleaved fasta/q paired-end files' -r
+complete -c megahit -s r -l read -d 'comma-separated list of fasta/q single-end files' -r
 complete -c megahit -l min-count -d 'minimum multiplicity for filtering (k_min+1)-mers [2]' -x
 complete -c megahit -l k-list -d 'comma-separated list of kmer size all must be odd, in the range 15-255, increment <= 28) [21,29,39,59,79,99,119,141]' -x
 complete -c megahit -l k-min -d 'minimum kmer size (<= 255), must be odd number [21]' -x
@@ -25,11 +25,11 @@ complete -c megahit -s m -l memory -d 'max memory in byte to be used in SdBG con
 complete -c megahit -l mem-flag -d 'SdBG builder memory mode.' -x
 complete -c megahit -s t -l num-cpu-threads -d 'number of CPU threads [# of logical processors]' -x
 complete -c megahit -l no-hw-accel -d 'run MEGAHIT without BMI2 and POPCNT hardware instructions'
-complete -c megahit -s o -l out-dir -d 'output directory [./megahit_out]' -x
-complete -c megahit -l out-prefix -d 'output prefix (the contig file will be OUT_DIR/OUT_PREFIX.contigs.fa)' -x
+complete -c megahit -s o -l out-dir -d 'output directory [./megahit_out]' -r
+complete -c megahit -l out-prefix -d 'output prefix (the contig file will be OUT_DIR/OUT_PREFIX.contigs.fa)' -r
 complete -c megahit -l min-contig-len -d 'minimum length of contigs to output [200]' -x
 complete -c megahit -l keep-tmp-files -d 'keep all temporary files'
-complete -c megahit -l tmp-dir -d 'set temp directory' -x
+complete -c megahit -l tmp-dir -d 'set temp directory' -r
 complete -c megahit -l continue -d 'continue a MEGAHIT run from its last available check point.'
 complete -c megahit -l test -d 'run MEGAHIT on a toy test dataset'
 complete -c megahit -s h -l help -d 'print the usage message'

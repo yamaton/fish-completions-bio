@@ -1,6 +1,6 @@
 # Auto-generated with h2o
 
-complete -c bgzip -s b -l offset -d 'Decompress to standard output from virtual file position (0-based uncompressed offset).' -x
+complete -c bgzip -s b -l offset -d 'Decompress to standard output from virtual file position (0-based uncompressed offset).' -r
 complete -c bgzip -s c -l stdout -d 'Write to standard output, keep original files unchanged.'
 complete -c bgzip -s d -l decompress -d 'Decompress.'
 complete -c bgzip -s f -l force -d 'Overwrite files without asking, or decompress files that don\'t have a known compression filename extension (e.g., .gz) without asking.'

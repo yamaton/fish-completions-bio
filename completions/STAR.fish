@@ -5,13 +5,13 @@ complete -c STAR -l parametersFiles -d 'name of a user-defined parameters file, 
 complete -c STAR -l sysShell -d 'path to the shell binary, preferably bash, e.g. /bin/bash.' -r
 complete -c STAR -l runMode -d 'type of the run.' -x
 complete -c STAR -l runThreadN -d 'number of threads to run STAR (default: 1)' -x
-complete -c STAR -l runDirPerm -d 'permissions for the directories created at the run-time.' -x
+complete -c STAR -l runDirPerm -d 'permissions for the directories created at the run-time.' -r
 complete -c STAR -l runRNGseed -d 'random number generator seed.' -x
 complete -c STAR -l genomeDir -d 'path to the directory where genome files are stored (for --runMode alignReads) or will be generated (for --runMode generateGenome) (default: ./GenomeDir/)' -r
-complete -c STAR -l genomeLoad -d 'mode of shared memory usage for the genome files.' -x
+complete -c STAR -l genomeLoad -d 'mode of shared memory usage for the genome files.' -r
 complete -c STAR -l genomeFastaFiles -d 'path(s) to the fasta files with the genome sequences, separated by spaces.' -r
 complete -c STAR -l genomeChainFiles -d 'chain files for genomic liftover.' -r
-complete -c STAR -l genomeFileSizes -d 'genome files exact sizes in bytes.' -x
+complete -c STAR -l genomeFileSizes -d 'genome files exact sizes in bytes.' -r
 complete -c STAR -l genomeTransformOutput -d 'which output to transform back to original genome (default: None)' -x
 complete -c STAR -l genomeChrSetMitochondrial -d 'names of the mitochondrial chromosomes.' -x
 complete -c STAR -l genomeChrBinNbits -d 'where chrBin is the size of the bins for genome storage: each chromosome will occupy an integer number of bins.' -x
@@ -23,23 +23,23 @@ complete -c STAR -l genomeTransformVCF -d 'path to VCF file for genome transform
 complete -c STAR -l sjdbFileChrStartEnd -d 'path to the files with genomic coordinates (chr <tab> start <tab> end <tab> strand) for the splice junction introns.' -r
 complete -c STAR -l sjdbGTFfile -d 'path to the GTF file with annotations' -r
 complete -c STAR -l sjdbGTFchrPrefix -d 'prefix for chromosome names in a GTF file (e.g. \'chr\' for using ENSMEBL annotations with UCSC genomes)' -r
-complete -c STAR -l sjdbGTFfeatureExon -d 'feature type in GTF file to be used as exons for building transcripts (default: exon)' -x
-complete -c STAR -l sjdbGTFtagExonParentTranscript -d 'GTF attribute name for parent transcript ID (default "transcript_id" works for GTF files) (default: transcript_id)' -x
-complete -c STAR -l sjdbGTFtagExonParentGene -d 'GTF attribute name for parent gene ID (default "gene_id" works for GTF files) (default: gene_id)' -x
+complete -c STAR -l sjdbGTFfeatureExon -d 'feature type in GTF file to be used as exons for building transcripts (default: exon)' -r
+complete -c STAR -l sjdbGTFtagExonParentTranscript -d 'GTF attribute name for parent transcript ID (default "transcript_id" works for GTF files) (default: transcript_id)' -r
+complete -c STAR -l sjdbGTFtagExonParentGene -d 'GTF attribute name for parent gene ID (default "gene_id" works for GTF files) (default: gene_id)' -r
 complete -c STAR -l sjdbGTFtagExonParentGeneName -d 'GTF attrbute name for parent gene name (default: gene_name)' -x
 complete -c STAR -l sjdbGTFtagExonParentGeneType -d 'GTF attrbute name for parent gene type (default: gene_type gene_biotype)' -x
 complete -c STAR -l sjdbOverhang -d 'length of the donor/acceptor sequence on each side of the junctions, ideally = (mate_length - 1) (default: 100)' -x
 complete -c STAR -l sjdbScore -d 'extra alignment score for alignments that cross database junctions (default: 2)' -x
-complete -c STAR -l sjdbInsertSave -d 'which files to save when sjdb junctions are inserted on the fly at the mapping step (default: Basic)' -x
+complete -c STAR -l sjdbInsertSave -d 'which files to save when sjdb junctions are inserted on the fly at the mapping step (default: Basic)' -r
 complete -c STAR -l varVCFfile -d 'path to the VCF file that contains variation data.' -r
 complete -c STAR -l inputBAMfile -d 'path to BAM input file, to be used with --runMode inputAlignmentsFromBAM' -r
-complete -c STAR -l readFilesType -d 'format of input read files (default: Fastx)' -x
-complete -c STAR -l readFilesSAMattrKeep -d 'for --readFilesType SAM SE/PE, which SAM tags to keep in the output BAM, e.g.: --readFilesSAMtagsKeep RG PL (default: All)' -x
+complete -c STAR -l readFilesType -d 'format of input read files (default: Fastx)' -r
+complete -c STAR -l readFilesSAMattrKeep -d 'for --readFilesType SAM SE/PE, which SAM tags to keep in the output BAM, e.g.: --readFilesSAMtagsKeep RG PL (default: All)' -r
 complete -c STAR -l readFilesIn -d 'paths to files that contain input read1 (and, if needed, read2) (default: Read1 Read2)' -r
 complete -c STAR -l readFilesManifest -d 'path to the "manifest" file with the names of read files.' -r
-complete -c STAR -l readFilesPrefix -d 'prefix for the read files names, i.e. it will be added in front of the strings in --readFilesIn' -x
-complete -c STAR -l readFilesCommand -d 'command line to execute for each of the input file.' -x
-complete -c STAR -l readMapNumber -d 'number of reads to map from the beginning of the file.' -x
+complete -c STAR -l readFilesPrefix -d 'prefix for the read files names, i.e. it will be added in front of the strings in --readFilesIn' -r
+complete -c STAR -l readFilesCommand -d 'command line to execute for each of the input file.' -r
+complete -c STAR -l readMapNumber -d 'number of reads to map from the beginning of the file.' -r
 complete -c STAR -l readMatesLengthsIn -d 'Equal/NotEqual - lengths of names,sequences,qualities for both mates are the same / not the same.' -x
 complete -c STAR -l readNameSeparator -d 'character(s) separating the part of the read names that will be trimmed in output (read name after space is always trimmed) (default: /)' -x
 complete -c STAR -l readQualityScoreBase -d 'number to be subtracted from the ASCII code to get Phred quality score (default: 33)' -x
@@ -58,12 +58,12 @@ complete -c STAR -l limitBAMsortRAM -d 'maximum available RAM (bytes) for sortin
 complete -c STAR -l limitSjdbInsertNsj -d 'maximum number of junction to be inserted to the genome on the fly at the mapping stage, including those from annotations and those detected in the 1st step of the 2-pass run (default: 1000000)' -x
 complete -c STAR -l limitNreadsSoft -d 'soft limit on the number of reads (default: -1)' -x
 complete -c STAR -l outFileNamePrefix -d 'output files name prefix (including full or relative path).' -r
-complete -c STAR -l outTmpDir -d 'path to a directory that will be used as temporary by STAR.' -x
-complete -c STAR -l outTmpKeep -d 'whether to keep the temporary files after STAR runs is finished (default: None)' -x
-complete -c STAR -l outStd -d 'which output will be directed to stdout (standard out) (default: Log)' -x
-complete -c STAR -l outReadsUnmapped -d 'output of unmapped and partially mapped (i.e. mapped only one mate of a paired end read) reads in separate file(s).' -x
+complete -c STAR -l outTmpDir -d 'path to a directory that will be used as temporary by STAR.' -r
+complete -c STAR -l outTmpKeep -d 'whether to keep the temporary files after STAR runs is finished (default: None)' -r
+complete -c STAR -l outStd -d 'which output will be directed to stdout (standard out) (default: Log)' -r
+complete -c STAR -l outReadsUnmapped -d 'output of unmapped and partially mapped (i.e. mapped only one mate of a paired end read) reads in separate file(s).' -r
 complete -c STAR -l outQSconversionAdd -d 'add this number to the quality score (e.g. to convert from Illumina to Sanger, use -31) (default: 0)' -x
-complete -c STAR -l outMultimapperOrder -d 'order of multimapping alignments in the output files (default: Old_2.4)' -x
+complete -c STAR -l outMultimapperOrder -d 'order of multimapping alignments in the output files (default: Old_2.4)' -r
 complete -c STAR -l outSAMtype -d 'type of SAM/BAM output.' -x
 complete -c STAR -l outSAMmode -d 'mode of SAM output (default: Full)' -x
 complete -c STAR -l outSAMstrandField -d 'Cufflinks-like strand field flag (default: None)' -x
@@ -76,21 +76,21 @@ complete -c STAR -l outSAMreadID -d 'read ID record type (default: Standard)' -x
 complete -c STAR -l outSAMmapqUnique -d 'the MAPQ value for unique mappers (default: 255)' -x
 complete -c STAR -l outSAMflagOR -d 'sam FLAG will be bitwise OR\'d with this value, i.e. FLAG=FLAG | outSAMflagOR.' -x
 complete -c STAR -l outSAMflagAND -d 'sam FLAG will be bitwise AND\'d with this value, i.e. FLAG=FLAG & outSAMflagOR.' -x
-complete -c STAR -l outSAMattrRGline -d 'SAM/BAM read group line.' -x
+complete -c STAR -l outSAMattrRGline -d 'SAM/BAM read group line.' -r
 complete -c STAR -l outSAMheaderHD -d '@HD (header) line of the SAM header' -x
 complete -c STAR -l outSAMheaderPG -d 'extra @PG (software) line of the SAM header (in addition to STAR)' -x
 complete -c STAR -l outSAMheaderCommentFile -d 'path to the file with @CO (comment) lines of the SAM header' -r
-complete -c STAR -l outSAMfilter -d 'filter the output into main SAM/BAM files (default: None)' -x
-complete -c STAR -l outSAMmultNmax -d 'max number of multiple alignments for a read that will be output to the SAM/BAM files.' -x
-complete -c STAR -l outSAMtlen -d 'calculation method for the TLEN field in the SAM/BAM files (default: 1)' -x
+complete -c STAR -l outSAMfilter -d 'filter the output into main SAM/BAM files (default: None)' -r
+complete -c STAR -l outSAMmultNmax -d 'max number of multiple alignments for a read that will be output to the SAM/BAM files.' -r
+complete -c STAR -l outSAMtlen -d 'calculation method for the TLEN field in the SAM/BAM files (default: 1)' -r
 complete -c STAR -l outBAMcompression -d 'BAM compression level from -1 to 10, -1=default compression (6?), 0=no compression, 10=maximum compression (default: 1)' -x
 complete -c STAR -l outBAMsortingThreadN -d 'number of threads for BAM sorting.' -x
 complete -c STAR -l outBAMsortingBinsN -d 'number of genome bins fo coordinate-sorting (default: 50)' -x
-complete -c STAR -l bamRemoveDuplicatesType -d 'mark duplicates in the BAM file, for now only works with (i) sorted BAM fed with inputBAMfile, and (ii) for paired-end alignments only' -x
+complete -c STAR -l bamRemoveDuplicatesType -d 'mark duplicates in the BAM file, for now only works with (i) sorted BAM fed with inputBAMfile, and (ii) for paired-end alignments only' -r
 complete -c STAR -l bamRemoveDuplicatesMate2basesN -d 'number of bases from the 5\' of mate 2 to use in collapsing (e.g. for RAMPAGE) (default: 0)' -x
 complete -c STAR -l outWigType -d 'type of signal output, e.g. "bedGraph" OR "bedGraph read1_5p".' -x
 complete -c STAR -l outWigStrand -d 'strandedness of wiggle/bedGraph output (default: Stranded)' -x
-complete -c STAR -l outWigReferencesPrefix -d 'prefix matching reference names to include in the output wiggle file, e.g. "chr", default "-" - include all references' -x
+complete -c STAR -l outWigReferencesPrefix -d 'prefix matching reference names to include in the output wiggle file, e.g. "chr", default "-" - include all references' -r
 complete -c STAR -l outWigNorm -d 'type of normalization for the signal (default: RPM)' -x
 complete -c STAR -l outFilterType -d 'type of filtering (default: Normal)' -x
 complete -c STAR -l outFilterMultimapScoreRange -d 'the score range below the maximum score for multimapping alignments (default: 1)' -x
@@ -166,7 +166,7 @@ complete -c STAR -l chimMainSegmentMultNmax -d 'maximum number of multi-alignmen
 complete -c STAR -l chimMultimapNmax -d 'maximum number of chimeric multi-alignments (default: 0) 0 ...' -x
 complete -c STAR -l chimMultimapScoreRange -d 'the score range for multi-mapping chimeras below the best chimeric score.' -x
 complete -c STAR -l chimNonchimScoreDropMin -d 'to trigger chimeric detection, the drop in the best non-chimeric alignment score with respect to the read length has to be greater than this value (default: 20)' -x
-complete -c STAR -l chimOutJunctionFormat -d 'formatting type for the Chimeric.out.junction file (default: 0)' -x
+complete -c STAR -l chimOutJunctionFormat -d 'formatting type for the Chimeric.out.junction file (default: 0)' -r
 complete -c STAR -l quantMode -d 'types of quantification requested' -x
 complete -c STAR -l quantTranscriptomeBAMcompression -d 'transcriptome BAM compression level (default: 1)' -x
 complete -c STAR -l quantTranscriptomeBan -d 'prohibit various alignment type (default: IndelSoftclipSingleend)' -x
@@ -186,14 +186,14 @@ complete -c STAR -l soloUMIposition -d 'position of the UMI on the barcode read,
 complete -c STAR -l soloAdapterSequence -d 'adapter sequence to anchor barcodes.' -x
 complete -c STAR -l soloAdapterMismatchesNmax -d 'maximum number of mismatches allowed in adapter sequence.' -x
 complete -c STAR -l soloCBmatchWLtype -d 'matching the Cell Barcodes to the WhiteList (default: 1MM_multi)' -x
-complete -c STAR -l soloInputSAMattrBarcodeSeq -d 'when inputting reads from a SAM file (--readsFileType SAM SE/PE), these SAM attributes mark the barcode sequence (in proper order).' -x
-complete -c STAR -l soloInputSAMattrBarcodeQual -d 'when inputting reads from a SAM file (--readsFileType SAM SE/PE), these SAM attributes mark the barcode qualities (in proper order).' -x
+complete -c STAR -l soloInputSAMattrBarcodeSeq -d 'when inputting reads from a SAM file (--readsFileType SAM SE/PE), these SAM attributes mark the barcode sequence (in proper order).' -r
+complete -c STAR -l soloInputSAMattrBarcodeQual -d 'when inputting reads from a SAM file (--readsFileType SAM SE/PE), these SAM attributes mark the barcode qualities (in proper order).' -r
 complete -c STAR -l soloStrand -d 'strandedness of the solo libraries (default: Forward)' -x
 complete -c STAR -l soloFeatures -d 'genomic features for which the UMI counts per Cell Barcode are collected (default: Gene)' -x
 complete -c STAR -l soloMultiMappers -d 'counting method for reads mapping to multiple genes (default: Unique)' -x
 complete -c STAR -l soloUMIdedup -d 'type of UMI deduplication (collapsing) algorithm (default: 1MM_All)' -x
 complete -c STAR -l soloUMIfiltering -d 'type of UMI filtering (for reads uniquely mapping to genes) (default: -)' -x
-complete -c STAR -l soloOutFileNames -d 'file names for STARsolo output.' -x
+complete -c STAR -l soloOutFileNames -d 'file names for STARsolo output.' -r
 complete -c STAR -l soloCellFilter -d 'cell filtering type and parameters (default: CellRanger2.2 3000 0.99 10)' -x
-complete -c STAR -l soloOutFormatFeaturesGeneField3 -d 'field 3 in the Gene features.tsv file.' -x
+complete -c STAR -l soloOutFormatFeaturesGeneField3 -d 'field 3 in the Gene features.tsv file.' -r
 complete -c STAR -l soloCellReadStats -d 'Output reads statistics for each CB.' -x

@@ -19,7 +19,7 @@ complete -k -c seqmagick -n __fish_use_subcommand -x -a convert -d 'Convert betw
 
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -s h -l help -d 'show this help message and exit'
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l alphabet -d 'Input alphabet.' -x
-complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l line-wrap -d 'Adjust line wrap for sequence strings.' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l line-wrap -d 'Adjust line wrap for sequence strings.' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l sort -d 'Perform sorting by length or name, ascending or descending.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l cut -d 'Keep only the residues within the 1-indexed start and end positions specified, : separated.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l relative-to -d 'Apply --cut relative to the indexes of non-gap residues in sequence identified by ID' -x
@@ -57,22 +57,22 @@ complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l name-suffix -d
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l name-prefix -d 'Insert a prefix for all IDs.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l pattern-replace -d 'Replace regex pattern "search_pattern" with "replace_pattern" in sequence ID and description' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l strip-range -d 'Strip ranges from sequences IDs, matching </x-y>'
-complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l input-format -d 'Input file format (default: determine from extension)' -x
-complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l output-format -d 'Output file format (default: determine from extension)' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l input-format -d 'Input file format (default: determine from extension)' -r
+complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l output-format -d 'Output file format (default: determine from extension)' -r
 
 
 
 complete -c seqmagick -n "__fish_seen_subcommand_from info" -s h -l help -d 'show this help message and exit'
-complete -c seqmagick -n "__fish_seen_subcommand_from info" -l input-format -d 'Input format.' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from info" -l input-format -d 'Input format.' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from info" -l out-file -d 'Output destination.' -r
-complete -c seqmagick -n "__fish_seen_subcommand_from info" -l format -d 'Specify output format as tab-delimited, CSV or aligned in a borderless table.' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from info" -l format -d 'Specify output format as tab-delimited, CSV or aligned in a borderless table.' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from info" -l threads -d 'Number of threads (CPUs).' -x
 
 
 
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -s h -l help -d 'show this help message and exit'
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l alphabet -d 'Input alphabet.' -x
-complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l line-wrap -d 'Adjust line wrap for sequence strings.' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l line-wrap -d 'Adjust line wrap for sequence strings.' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l sort -d 'Perform sorting by length or name, ascending or descending.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l cut -d 'Keep only the residues within the 1-indexed start and end positions specified, : separated.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l relative-to -d 'Apply --cut relative to the indexes of non-gap residues in sequence identified by ID' -x
@@ -110,8 +110,8 @@ complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l name-suffix -d
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l name-prefix -d 'Insert a prefix for all IDs.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l pattern-replace -d 'Replace regex pattern "search_pattern" with "replace_pattern" in sequence ID and description' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l strip-range -d 'Strip ranges from sequences IDs, matching </x-y>'
-complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l input-format -d 'Input file format (default: determine from extension)' -x
-complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l output-format -d 'Output file format (default: determine from extension)' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l input-format -d 'Input file format (default: determine from extension)' -r
+complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l output-format -d 'Output file format (default: determine from extension)' -r
 
 
 
@@ -126,15 +126,15 @@ complete -c seqmagick -n "__fish_seen_subcommand_from primer-trim" -l prune-acti
 
 
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -s h -l help -d 'show this help message and exit'
-complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l input-qual -d 'The quality scores associated with the input file.' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l input-qual -d 'The quality scores associated with the input file.' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l min-mean-quality -d 'Minimum mean quality score for each read [default: 25.0]' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l min-length -d 'Minimum length to keep sequence [default: 200]' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l max-length -d 'Maximum length to keep before truncating [default: 1000].' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l ambiguous-action -d 'Action to take on ambiguous base in sequence (N\'s).' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l max-ambiguous -d 'Maximum number of ambiguous bases in a sequence.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l pct-ambiguous -d 'Maximun percent of ambiguous bases in a sequence.' -x
-complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l report-out -d 'Output file for report [default: stdout]' -x
-complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l details-out -d 'Output file to report fate of each sequence' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l report-out -d 'Output file for report [default: stdout]' -r
+complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l details-out -d 'Output file to report fate of each sequence' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l no-details-comment -d 'Do not write comment lines with version and call to start --details-out'
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l quality-window-mean-qual -d 'Minimum quality score within the window defined by --quality-window.' -x
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l quality-window-prop -d 'Proportion of reads within quality window to that must pass filter.' -x
@@ -143,14 +143,14 @@ complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l primer 
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l no-primer -d 'Do not use a primer.'
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l barcode-file -d 'CSV file containing sample_id,barcode[,primer] in the rows.' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l barcode-header -d 'Barcodes have a header row [default: False]'
-complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l map-out -d 'Path to write sequence_id,sample_id pairs' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l map-out -d 'Path to write sequence_id,sample_id pairs' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from quality-filter" -l quoting -d 'A string naming an attribute of the csv module defining the quoting behavior for `SAMPLE_MAP`.' -x
 
 
 
 complete -c seqmagick -n "__fish_seen_subcommand_from extract-ids" -s h -l help -d 'show this help message and exit'
 complete -c seqmagick -n "__fish_seen_subcommand_from extract-ids" -s o -l output-file -d 'Destination file' -r
-complete -c seqmagick -n "__fish_seen_subcommand_from extract-ids" -l input-format -d 'Input format for sequence file' -x
+complete -c seqmagick -n "__fish_seen_subcommand_from extract-ids" -l input-format -d 'Input format for sequence file' -r
 complete -c seqmagick -n "__fish_seen_subcommand_from extract-ids" -s d -l include-description -d 'Include the sequence description in output [default: False]'
 
 

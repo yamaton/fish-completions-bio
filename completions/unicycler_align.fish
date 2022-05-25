@@ -1,10 +1,10 @@
 # Auto-generated with h2o
 
 complete -c unicycler_align -s h -l help -d 'show this help message and exit'
-complete -c unicycler_align -l ref -d 'FASTA file containing one or more reference sequences' -x
-complete -c unicycler_align -l reads -d 'FASTQ or FASTA file of long reads' -x
-complete -c unicycler_align -l sam -d 'SAM file of resulting alignments' -x
-complete -c unicycler_align -l contamination -d 'FASTA file of known contamination in long reads' -x
+complete -c unicycler_align -l ref -d 'FASTA file containing one or more reference sequences' -r
+complete -c unicycler_align -l reads -d 'FASTQ or FASTA file of long reads' -r
+complete -c unicycler_align -l sam -d 'SAM file of resulting alignments' -r
+complete -c unicycler_align -l contamination -d 'FASTA file of known contamination in long reads' -r
 complete -c unicycler_align -l scores -d 'Comma-delimited string of alignment scores: match, mismatch, gap open, gap extend (default: 3,-6,-5,-2)' -x
 complete -c unicycler_align -l low_score -d 'Score threshold - alignments below this are considered poor (default: set threshold automatically)' -x
 complete -c unicycler_align -l keep_bad -d 'Include alignments in the results even if they are below the low score threshold (default: low-scoring alignments are discarded)'

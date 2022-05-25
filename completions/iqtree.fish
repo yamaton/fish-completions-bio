@@ -5,8 +5,8 @@ complete -c iqtree -s s -d 'PHYLIP/FASTA/NEXUS/CLUSTAL/MSF alignment file(s)' -r
 complete -c iqtree -s s -d 'Directory of alignment files' -r
 complete -c iqtree -l seqtype -d 'BIN, DNA, AA, NT2AA, CODON, MORPH (default: auto-detect)' -x
 complete -c iqtree -s t -d 'Starting tree (default: 99 parsimony and BIONJ)' -r
-complete -c iqtree -s o -d 'Outgroup taxon (list) for writing .treefile' -x
-complete -c iqtree -l prefix -d 'Prefix for all output files (default: aln/partition)' -x
+complete -c iqtree -s o -d 'Outgroup taxon (list) for writing .treefile' -r
+complete -c iqtree -l prefix -d 'Prefix for all output files (default: aln/partition)' -r
 complete -c iqtree -l seed -d 'Random seed number, normally used for debugging purpose' -x
 complete -c iqtree -l safe -d 'Safe likelihood kernel to avoid numerical underflow'
 complete -c iqtree -l mem -d 'Maximal RAM usage in GB | MB | %' -x
@@ -178,7 +178,7 @@ complete -c iqtree -l date-ci -d 'Number of replicates to compute confidence int
 complete -c iqtree -l clock-sd -d 'Std-dev for lognormal relaxed clock (default: 0.2)' -x
 complete -c iqtree -l date-no-outgroup -d 'Exclude outgroup from time tree'
 complete -c iqtree -l date-outlier -d 'Z-score cutoff to remove outlier tips/nodes (e.g. 3)' -x
-complete -c iqtree -l date-options -d 'Extra options passing directly to LSD2' -x
+complete -c iqtree -l date-options -d 'Extra options passing directly to LSD2' -r
 complete -c iqtree -l dating -d 'Dating method: LSD for least square dating (default)' -x
 complete -c iqtree -s t -d 'Set of input trees for consensus reconstruction' -r
 complete -c iqtree -l sup-min -d 'Min split support, 0.5 for majority-rule consensus (default: 0, extended consensus)' -x

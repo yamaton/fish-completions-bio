@@ -44,7 +44,7 @@ complete -c samtools -n "__fish_seen_subcommand_from dict" -s A -l alias -l alte
 complete -c samtools -n "__fish_seen_subcommand_from dict" -s H -l no-header -d 'Do not print the @HD header line.'
 complete -c samtools -n "__fish_seen_subcommand_from dict" -s o -l output -d 'Output to FILE [stdout].' -r
 complete -c samtools -n "__fish_seen_subcommand_from dict" -s s -l species -d 'Specify the species for the SP tag.' -x
-complete -c samtools -n "__fish_seen_subcommand_from dict" -s u -l uri -d 'Specify the URI for the UR tag.' -x
+complete -c samtools -n "__fish_seen_subcommand_from dict" -s u -l uri -d 'Specify the URI for the UR tag.' -r
 
 
 
@@ -105,7 +105,7 @@ complete -c samtools -n "__fish_seen_subcommand_from fixmate" -s @ -l threads -d
 
 complete -c samtools -n "__fish_seen_subcommand_from reheader" -s P -l no-PG -d 'Do not add a @PG line to the header of the output file.'
 complete -c samtools -n "__fish_seen_subcommand_from reheader" -s i -l in-place -d 'Perform the header edit in-place, if possible.'
-complete -c samtools -n "__fish_seen_subcommand_from reheader" -s c -l command -d 'Allow the header from in.bam to be processed by external CMD and read back the result.' -x
+complete -c samtools -n "__fish_seen_subcommand_from reheader" -s c -l command -d 'Allow the header from in.bam to be processed by external CMD and read back the result.' -r
 
 
 
@@ -114,7 +114,7 @@ complete -c samtools -n "__fish_seen_subcommand_from targetcut" -s i -d 'Penalty
 complete -c samtools -n "__fish_seen_subcommand_from targetcut" -s 0 -d 'Emission score 0.' -x
 complete -c samtools -n "__fish_seen_subcommand_from targetcut" -s 1 -d 'Emission score 1.' -x
 complete -c samtools -n "__fish_seen_subcommand_from targetcut" -s 2 -d 'Emission score 2.' -x
-complete -c samtools -n "__fish_seen_subcommand_from targetcut" -s f -d 'Reference FASTA file.' -x
+complete -c samtools -n "__fish_seen_subcommand_from targetcut" -s f -d 'Reference FASTA file.' -r
 
 
 
@@ -132,7 +132,7 @@ complete -c samtools -n "__fish_seen_subcommand_from addreplacerg" -s @ -l threa
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s l -d 'Expected maximum read length of INT bases.' -x
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s r -d 'Remove duplicate reads.'
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s s -d 'Print some basic stats.'
-complete -c samtools -n "__fish_seen_subcommand_from markdup" -s T -d 'Write temporary files to PREFIX.samtools.nnnn.mmmm.tmp' -x
+complete -c samtools -n "__fish_seen_subcommand_from markdup" -s T -d 'Write temporary files to PREFIX.samtools.nnnn.mmmm.tmp' -r
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s S -d 'Mark supplementary reads of duplicates as duplicates.'
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s f -d 'Write stats to named file.' -r
 complete -c samtools -n "__fish_seen_subcommand_from markdup" -s d -d 'The optical duplicate distance.' -x
@@ -176,7 +176,7 @@ complete -c samtools -n "__fish_seen_subcommand_from collate" -s O -d 'Output to
 complete -c samtools -n "__fish_seen_subcommand_from collate" -s o -d 'Write output to FILE.' -r
 complete -c samtools -n "__fish_seen_subcommand_from collate" -s u -d 'Write uncompressed BAM output'
 complete -c samtools -n "__fish_seen_subcommand_from collate" -s l -d 'Compression level.' -x
-complete -c samtools -n "__fish_seen_subcommand_from collate" -s n -d 'Number of temporary files to use.' -x
+complete -c samtools -n "__fish_seen_subcommand_from collate" -s n -d 'Number of temporary files to use.' -r
 complete -c samtools -n "__fish_seen_subcommand_from collate" -s f -d 'Fast mode (primary alignments only).'
 complete -c samtools -n "__fish_seen_subcommand_from collate" -s r -d 'Number of reads to store in memory (for use with -f).' -x
 complete -c samtools -n "__fish_seen_subcommand_from collate" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
@@ -184,7 +184,7 @@ complete -c samtools -n "__fish_seen_subcommand_from collate" -s @ -l threads -d
 
 
 
-complete -c samtools -n "__fish_seen_subcommand_from cat" -s b -d 'Read the list of input BAM or CRAM files from FOFN.' -x
+complete -c samtools -n "__fish_seen_subcommand_from cat" -s b -d 'Read the list of input BAM or CRAM files from FOFN.' -r
 complete -c samtools -n "__fish_seen_subcommand_from cat" -s h -d 'Uses the SAM header from FILE.' -r
 complete -c samtools -n "__fish_seen_subcommand_from cat" -s o -d 'Write the concatenated output to FILE.' -r
 complete -c samtools -n "__fish_seen_subcommand_from cat" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
@@ -227,7 +227,7 @@ complete -c samtools -n "__fish_seen_subcommand_from merge" -s h -d 'Use the lin
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s n -d 'The input alignments are sorted by read names rather than by chromosomal coordinates'
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s o -d 'Write merged output to FILE, specifying the filename via an option rather than as the first filename argument.' -r
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s t -d 'The input alignments have been sorted by the value of TAG, then by either position or name (if -n is given).' -x
-complete -c samtools -n "__fish_seen_subcommand_from merge" -s R -d 'Merge files in the specified region indicated by STR [null]' -x
+complete -c samtools -n "__fish_seen_subcommand_from merge" -s R -d 'Merge files in the specified region indicated by STR [null]' -r
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s r -d 'Attach an RG tag to each alignment.'
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s u -d 'Uncompressed BAM output'
 complete -c samtools -n "__fish_seen_subcommand_from merge" -s c -d 'When several input files contain @RG headers with the same ID, emit only one of them (namely, the header line from the first file we find that ID in) to the merged output file.'
@@ -244,14 +244,14 @@ complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s A -l count-orph
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s b -l bam-list -d 'List of input BAM files, one file per line [null]' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s B -l no-BAQ -d 'Disable base alignment quality (BAQ) computation.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s C -l adjust-MQ -d 'Coefficient for downgrading mapping quality for reads containing excessive mismatches.' -x
-complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s d -l max-depth -d 'At a position, read maximally INT reads per input file.' -x
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s d -l max-depth -d 'At a position, read maximally INT reads per input file.' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s E -l redo-BAQ -d 'Recalculate BAQ on the fly, ignore existing BQ tags.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s f -l fasta-ref -d 'The faidx-indexed reference file in the FASTA format.' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s G -l exclude-RG -d 'Exclude reads from read groups listed in FILE (one @RG-ID per line)' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s l -l positions -d 'BED or position list file containing a list of regions or sites where pileup or BCF should be generated.' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s q -l min-MQ -d 'Minimum mapping quality for an alignment to be used [0]' -x
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s Q -l min-BQ -d 'Minimum base quality for a base to be considered.' -x
-complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s r -l region -d 'Only generate pileup in region.' -x
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s r -l region -d 'Only generate pileup in region.' -r
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s R -l ignore-RG -d 'Ignore RG tags.'
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l rf -l incl-flags -d 'Required flags: include reads with any of the mask bits set [null]' -x
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l ff -l excl-flags -d 'Filter flags: skip reads with any of the mask bits set [UNMAP,SECONDARY,QCFAIL,DUP]' -x
@@ -277,7 +277,7 @@ complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s a -o aa -d 'Out
 
 
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s K -d 'Sets the kmer size to be used in the -M option.' -x
-complete -c samtools -n "__fish_seen_subcommand_from sort" -s l -d 'Set the desired compression level for the final output file, ranging from 0 (uncompressed) or 1 (fastest but minimal compression) to 9 (best compression but slowest to write), similarly to gzip(1)\'s compression level setting.' -x
+complete -c samtools -n "__fish_seen_subcommand_from sort" -s l -d 'Set the desired compression level for the final output file, ranging from 0 (uncompressed) or 1 (fastest but minimal compression) to 9 (best compression but slowest to write), similarly to gzip(1)\'s compression level setting.' -r
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s u -d 'Set the compression level to 0, for uncompressed output.'
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s m -d 'Approximately the maximum required memory per thread, specified either in bytes or with a K, M, or G suffix.' -x
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s M -d 'Sort unmapped reads (those in chromosome "*") by their sequence minimiser (Schleimer et al., 2003; Roberts et al., 2004), also reverse complementing as appropriate.'
@@ -285,7 +285,7 @@ complete -c samtools -n "__fish_seen_subcommand_from sort" -s n -d 'Sort by read
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s t -d 'Sort first by the value in the alignment tag TAG, then by position or name (if also using -n).' -x
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s o -d 'Write the final sorted output to FILE, rather than to standard output.' -r
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s O -d 'Write the final output as sam, bam, or cram.' -x
-complete -c samtools -n "__fish_seen_subcommand_from sort" -s T -d 'Write temporary files to PREFIX.nnnn.bam, or if the specified PREFIX is an existing directory, to PREFIX/samtools.mmm.mmm.tmp.nnnn.bam, where mmm is unique to this invocation of the sort command.' -x
+complete -c samtools -n "__fish_seen_subcommand_from sort" -s T -d 'Write temporary files to PREFIX.nnnn.bam, or if the specified PREFIX is an existing directory, to PREFIX/samtools.mmm.mmm.tmp.nnnn.bam, where mmm is unique to this invocation of the sort command.' -r
 complete -c samtools -n "__fish_seen_subcommand_from sort" -s @ -d 'Set number of sorting and compression threads.' -x
 complete -c samtools -n "__fish_seen_subcommand_from sort" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
 
@@ -293,7 +293,7 @@ complete -c samtools -n "__fish_seen_subcommand_from sort" -l no-PG -d 'Do not a
 
 complete -c samtools -n "__fish_seen_subcommand_from split" -s u -d 'Put reads with no RG tag or an unrecognised RG tag into FILE1' -r
 complete -c samtools -n "__fish_seen_subcommand_from split" -s h -d 'Use the header from FILE2 when writing the file given in the -u option.' -r
-complete -c samtools -n "__fish_seen_subcommand_from split" -s f -d 'Output filename format string (see below) ["%*_%#.%."]' -x
+complete -c samtools -n "__fish_seen_subcommand_from split" -s f -d 'Output filename format string (see below) ["%*_%#.%."]' -r
 complete -c samtools -n "__fish_seen_subcommand_from split" -s v -d 'Verbose output'
 complete -c samtools -n "__fish_seen_subcommand_from split" -l no-PG -d 'Do not add a @PG line to the header of the output file.'
 complete -c samtools -n "__fish_seen_subcommand_from split" -s @ -l threads -d 'INT'
@@ -320,7 +320,7 @@ complete -c samtools -n "__fish_seen_subcommand_from fastq" -s f -d 'Only output
 complete -c samtools -n "__fish_seen_subcommand_from fastq" -s F -d 'Do not output alignments with any bits set in INT present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from fastq" -s G -d 'Only EXCLUDE reads with all of the bits set in INT present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from fastq" -s i -d 'add Illumina Casava 1.8 format entry to header (eg 1:N:0:ATCACG)'
-complete -c samtools -n "__fish_seen_subcommand_from fastq" -s c -d 'set compression level when writing gz or bgzf fastq files.' -x
+complete -c samtools -n "__fish_seen_subcommand_from fastq" -s c -d 'set compression level when writing gz or bgzf fastq files.' -r
 complete -c samtools -n "__fish_seen_subcommand_from fastq" -l i1 -d 'write first index reads to FILE' -r
 complete -c samtools -n "__fish_seen_subcommand_from fastq" -l i2 -d 'write second index reads to FILE' -r
 complete -c samtools -n "__fish_seen_subcommand_from fastq" -l barcode-tag -d 'aux tag to find index reads in [default: BC]' -x
@@ -344,7 +344,7 @@ complete -c samtools -n "__fish_seen_subcommand_from fasta" -s f -d 'Only output
 complete -c samtools -n "__fish_seen_subcommand_from fasta" -s F -d 'Do not output alignments with any bits set in INT present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from fasta" -s G -d 'Only EXCLUDE reads with all of the bits set in INT present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from fasta" -s i -d 'add Illumina Casava 1.8 format entry to header (eg 1:N:0:ATCACG)'
-complete -c samtools -n "__fish_seen_subcommand_from fasta" -s c -d 'set compression level when writing gz or bgzf fastq files.' -x
+complete -c samtools -n "__fish_seen_subcommand_from fasta" -s c -d 'set compression level when writing gz or bgzf fastq files.' -r
 complete -c samtools -n "__fish_seen_subcommand_from fasta" -l i1 -d 'write first index reads to FILE' -r
 complete -c samtools -n "__fish_seen_subcommand_from fasta" -l i2 -d 'write second index reads to FILE' -r
 complete -c samtools -n "__fish_seen_subcommand_from fasta" -l barcode-tag -d 'aux tag to find index reads in [default: BC]' -x
@@ -375,7 +375,7 @@ complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s Q -l min-MQ -d '
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s g -d 'By default, reads that have any of the flags UNMAP, SECONDARY, QCFAIL, or DUP set are skipped.' -x
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s G -d 'Discard any read that has any of the flags specified by FLAGS set.' -x
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s j -d 'Do not include deletions (D) and ref skips (N) in bedcov computation.'
-complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s d -d 'Print an additional column, for each file, containing the number of bases having a depth above and including the given threshold.' -x
+complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s d -d 'Print an additional column, for each file, containing the number of bases having a depth above and including the given threshold.' -r
 complete -c samtools -n "__fish_seen_subcommand_from bedcov" -s X -d 'If this option is set, it will allows user to specify customized index file location(s) if the data folder does not contain any index file.'
 
 
@@ -416,13 +416,13 @@ complete -c samtools -n "__fish_seen_subcommand_from depth" -s s -d 'For the ove
 
 
 
-complete -c samtools -n "__fish_seen_subcommand_from flagstat" -s @ -d 'Set number of additional threads to use when reading the file.' -x
+complete -c samtools -n "__fish_seen_subcommand_from flagstat" -s @ -d 'Set number of additional threads to use when reading the file.' -r
 complete -c samtools -n "__fish_seen_subcommand_from flagstat" -s O -d 'Set the output format.' -x
 
 
 
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s A -d 'Drop reads with ambiguous phase.'
-complete -c samtools -n "__fish_seen_subcommand_from phase" -s b -d 'Prefix of BAM output.' -x
+complete -c samtools -n "__fish_seen_subcommand_from phase" -s b -d 'Prefix of BAM output.' -r
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s F -d 'Do not attempt to fix chimeric reads.'
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s k -d 'Maximum length for local phasing.' -x
 complete -c samtools -n "__fish_seen_subcommand_from phase" -s q -d 'Minimum Phred-scaled LOD to call a heterozygote.' -x
@@ -441,7 +441,7 @@ complete -c samtools -n "__fish_seen_subcommand_from stats" -s i -l insert-size 
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s I -l id -d 'Include only listed read group or sample name []' -x
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s l -l read-length -d 'Include in the statistics only reads with the given read length [-1]' -x
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s m -l most-inserts -d 'Report only the main part of inserts [0.99]' -x
-complete -c samtools -n "__fish_seen_subcommand_from stats" -s P -l split-prefix -d 'A path or string prefix to prepend to filenames output when creating categorised statistics files with -S/--split.' -x
+complete -c samtools -n "__fish_seen_subcommand_from stats" -s P -l split-prefix -d 'A path or string prefix to prepend to filenames output when creating categorised statistics files with -S/--split.' -r
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s q -l trim-quality -d 'The BWA trimming parameter [0]' -x
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s r -l ref-seq -d 'Reference sequence (required for GC-depth and mismatches-per-cycle calculation).' -r
 complete -c samtools -n "__fish_seen_subcommand_from stats" -s S -l split -d 'In addition to the complete statistics, also output categorised statistics based on the tagged field TAG (e.g., use --split RG to split into read groups).' -x
@@ -460,9 +460,9 @@ complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s a -l max-
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s b -l tcoord-bin -d 'Bin the template start,end positions into multiples of NT prior to counting their frequency and reporting in the FTCOORD / CTCOORD lines.' -x
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s c -l tcoord-min-count -d 'In the FTCOORD and CTCOORD lines, only record template start,end coordinate combination if they occur at least INT times.' -x
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s d -l min-depth -d 'Specifies the minimum base depth to consider a reference position to be covered, for purposes of the FRPERC and CRPERC sections.' -x
-complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s D -l depth-bin -d 'Controls the merging of neighbouring similar depths for the FDP_ALL and FDP_VALID plots.' -x
+complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s D -l depth-bin -d 'Controls the merging of neighbouring similar depths for the FDP_ALL and FDP_VALID plots.' -r
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s l -l max-amplicon-length -d 'Specifies the maximum length of any individual amplicon.' -x
-complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s m -l pos-margin -d 'Reads are compared against the primer start and end locations specified in the BED file.' -x
+complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s m -l pos-margin -d 'Reads are compared against the primer start and end locations specified in the BED file.' -r
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s o -d 'Output stats to FILE.' -r
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s s -l use-sample-name -d 'Instead of using the basename component of the input path names, use the SM field from the first @RG header line.'
 complete -c samtools -n "__fish_seen_subcommand_from ampliconstats" -s S -l single-ref -d 'Force the output format to match the older single-reference style used in Samtools 1.12 and earlier.'
@@ -477,7 +477,7 @@ complete -c samtools -n "__fish_seen_subcommand_from head" -s n -l records -d 'A
 
 
 complete -c samtools -n "__fish_seen_subcommand_from tview" -s d -d 'Output as (H)tml, (C)urses or (T)ext.' -x
-complete -c samtools -n "__fish_seen_subcommand_from tview" -s p -d 'Go directly to this position' -x
+complete -c samtools -n "__fish_seen_subcommand_from tview" -s p -d 'Go directly to this position' -r
 complete -c samtools -n "__fish_seen_subcommand_from tview" -s s -d 'Display only alignments from this sample or read group' -x
 complete -c samtools -n "__fish_seen_subcommand_from tview" -s X -d 'If this option is set, it will allows user to specify customized index file location(s) if the data folder does not contain any index file.'
 
@@ -514,7 +514,7 @@ complete -c samtools -n "__fish_seen_subcommand_from view" -s F -l excl-flags -l
 complete -c samtools -n "__fish_seen_subcommand_from view" -l rf -l incl-flags -l include-flags -d 'Only output alignments with any bit set in FLAG present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s G -d 'Do not output alignments with all bits set in INT present in the FLAG field.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -s x -l remove-tag -d 'Read tag(s) to exclude from output (repeatable) [null].' -x
-complete -c samtools -n "__fish_seen_subcommand_from view" -l keep-tag -d 'This keeps only tags listed in STR and is directly equivalent to --remove-tag ^STR.' -x
+complete -c samtools -n "__fish_seen_subcommand_from view" -l keep-tag -d 'This keeps only tags listed in STR and is directly equivalent to --remove-tag ^STR.' -r
 complete -c samtools -n "__fish_seen_subcommand_from view" -s B -l remove-B -d 'Collapse the backward CIGAR operation.'
 complete -c samtools -n "__fish_seen_subcommand_from view" -l add-flags -d 'Adds flag(s) to read.' -x
 complete -c samtools -n "__fish_seen_subcommand_from view" -l remove-flags -d 'Remove flag(s) from read.' -x

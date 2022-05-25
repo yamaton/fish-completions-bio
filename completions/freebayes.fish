@@ -16,7 +16,7 @@ complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -l gvcf -d 'Write gVCF output, which indicates coverage in uncalled regions.'
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -l gvcf-chunk -d 'When writing gVCF output emit a record for every NUM bases.' -x
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -s \& -l gvcf-dont-use-chunk -d 'When writing the gVCF output emit a record for all bases if set to "true" , will also route an int to --gvcf-chunk similar to --output-mode EMIT_ALL_SITES from GATK' -x
-complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -s @ -l variant-input -d 'Use variants reported in VCF file as input to the algorithm.' -x
+complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -s @ -l variant-input -d 'Use variants reported in VCF file as input to the algorithm.' -r
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -s l -l only-use-input-alleles -d 'Only provide variant calls and genotype likelihoods for sites and alleles which are provided in the VCF input, and provide output in the VCF for all input alleles, not just those which have support in the data.'
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -l haplotype-basis-alleles -d 'When specified, only variant alleles provided in this input VCF will be used for the construction of complex or haplotype alleles.' -x
 complete -c freebayes -n "not __fish_seen_subcommand_from FreeBayes freebayes" -l report-all-haplotype-alleles -d 'At sites where genotypes are made over haplotype alleles, provide information about all alleles in output, not only those which are called.'
@@ -102,7 +102,7 @@ complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -s v -l vcf -d 
 complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -l gvcf -d 'Write gVCF output, which indicates coverage in uncalled regions.'
 complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -l gvcf-chunk -d 'When writing gVCF output emit a record for every NUM bases.' -x
 complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -s \& -l gvcf-dont-use-chunk -d 'When writing the gVCF output emit a record for all bases if set to "true" , will also route an int to --gvcf-chunk similar to --output-mode EMIT_ALL_SITES from GATK' -x
-complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -s @ -l variant-input -d 'Use variants reported in VCF file as input to the algorithm.' -x
+complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -s @ -l variant-input -d 'Use variants reported in VCF file as input to the algorithm.' -r
 complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -s l -l only-use-input-alleles -d 'Only provide variant calls and genotype likelihoods for sites and alleles which are provided in the VCF input, and provide output in the VCF for all input alleles, not just those which have support in the data.'
 complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -l haplotype-basis-alleles -d 'When specified, only variant alleles provided in this input VCF will be used for the construction of complex or haplotype alleles.' -x
 complete -c freebayes -n "__fish_seen_subcommand_from FreeBayes" -l report-all-haplotype-alleles -d 'At sites where genotypes are made over haplotype alleles, provide information about all alleles in output, not only those which are called.'
@@ -179,7 +179,7 @@ complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -s v -l vcf -d 
 complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -l gvcf -d 'Write gVCF output, which indicates coverage in uncalled regions.'
 complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -l gvcf-chunk -d 'When writing gVCF output emit a record for every NUM bases.' -x
 complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -s \& -l gvcf-dont-use-chunk -d 'When writing the gVCF output emit a record for all bases if set to "true" , will also route an int to --gvcf-chunk similar to --output-mode EMIT_ALL_SITES from GATK' -x
-complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -s @ -l variant-input -d 'Use variants reported in VCF file as input to the algorithm.' -x
+complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -s @ -l variant-input -d 'Use variants reported in VCF file as input to the algorithm.' -r
 complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -s l -l only-use-input-alleles -d 'Only provide variant calls and genotype likelihoods for sites and alleles which are provided in the VCF input, and provide output in the VCF for all input alleles, not just those which have support in the data.'
 complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -l haplotype-basis-alleles -d 'When specified, only variant alleles provided in this input VCF will be used for the construction of complex or haplotype alleles.' -x
 complete -c freebayes -n "__fish_seen_subcommand_from freebayes" -l report-all-haplotype-alleles -d 'At sites where genotypes are made over haplotype alleles, provide information about all alleles in output, not only those which are called.'

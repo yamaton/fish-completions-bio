@@ -2,35 +2,35 @@
 
 complete -c octopus -s h -d 'Report detailed option information' -x
 complete -c octopus -l version -d 'Report detailed version information'
-complete -c octopus -l config -d 'Config file to populate command line options' -x
-complete -c octopus -l debug -d 'Create log file for debugging' -x
-complete -c octopus -l trace -d 'Create very verbose log file for debugging' -x
+complete -c octopus -l config -d 'Config file to populate command line options' -r
+complete -c octopus -l debug -d 'Create log file for debugging' -r
+complete -c octopus -l trace -d 'Create very verbose log file for debugging' -r
 complete -c octopus -s w -d 'Sets the working directory' -r
 complete -c octopus -l resolve-symlinks -d 'Replace all symlinks to their resolved targets'
 complete -c octopus -l threads -d 'Maximum number of threads to be used.' -x
 complete -c octopus -s X -d 'Maximum memory for cached reference sequence' -x
 complete -c octopus -s B -d 'None-binding request to limit the memory of buffered read data' -x
 complete -c octopus -l target-working-memory -d 'Target working memory per thread for computation, not including read or reference data' -x
-complete -c octopus -l max-open-read-files -d 'Limits the number of read files that are open simultaneously' -x
-complete -c octopus -l temp-directory-prefix -d 'File name prefix of temporary directory for calling' -x
-complete -c octopus -s R -d 'Indexed FASTA format reference genome file to be analysed' -x
-complete -c octopus -s I -d 'Indexed BAM/CRAM files to be analysed' -x
+complete -c octopus -l max-open-read-files -d 'Limits the number of read files that are open simultaneously' -r
+complete -c octopus -l temp-directory-prefix -d 'File name prefix of temporary directory for calling' -r
+complete -c octopus -s R -d 'Indexed FASTA format reference genome file to be analysed' -r
+complete -c octopus -s I -d 'Indexed BAM/CRAM files to be analysed' -r
 complete -c octopus -s i -d 'Files containing lists of BAM/CRAM files, one per line, to be analysed' -r
 complete -c octopus -s T -d 'Space-separated list of regions (chrom:begin-end) to be analysed' -x
 complete -c octopus -s t -d 'File containing a list of regions (chrom:begin-end), one per line, to be analysed' -r
 complete -c octopus -s K -d 'Space-separated list of regions (chrom:begin-end) to skip' -x
 complete -c octopus -s k -d 'File of regions (chrom:begin-end), one per line, to skip' -r
 complete -c octopus -l one-based-indexing -d 'Assume one-based indexing rather than zero-based for input region options'
-complete -c octopus -s S -d 'Sub-set of sample names present in input read files to analyse' -x
+complete -c octopus -s S -d 'Sub-set of sample names present in input read files to analyse' -r
 complete -c octopus -s s -d 'File of sample names to analyse, one per line' -r
 complete -c octopus -l ignore-unmapped-contigs -d 'Ignore any contigs that are not mapped in the read files'
-complete -c octopus -l pedigree -d 'PED file containing sample pedigree' -x
-complete -c octopus -s o -d 'File to where output is written (calls are written to stdout if unspecified)' -x
+complete -c octopus -l pedigree -d 'PED file containing sample pedigree' -r
+complete -c octopus -s o -d 'File to where output is written (calls are written to stdout if unspecified)' -r
 complete -c octopus -l contig-output-order -d 'The order that contigs should be written to the output [LEXICOGRAPHICAL_ASCENDING, LEXICOGRAPHICAL_DESCENDING, CONTIG_SIZE_ASCENDING, CONTIG_SIZE_DESCENDING, REFERENCE_INDEX, REFERENCE_INDEX_REVERS ED]' -x
 complete -c octopus -l sites-only -d 'Only reports call sites (i.e. drop sample genotype information)'
-complete -c octopus -l bamout -d 'Output realigned BAM files' -x
+complete -c octopus -l bamout -d 'Output realigned BAM files' -r
 complete -c octopus -l bamout-type -d 'Type of realigned evidence BAM to output [MINI, FULL]' -x
-complete -c octopus -l data-profile -d 'Output a profile of variation and errors found in the data' -x
+complete -c octopus -l data-profile -d 'Output a profile of variation and errors found in the data' -r
 complete -c octopus -l fast -d 'Turns off some features to improve runtime, at the cost of worse calling accuracy and phasing'
 complete -c octopus -l very-fast -d 'Like --fast but even faster'
 complete -c octopus -l disable-read-preprocessing -d 'Disable all read preprocessing'
@@ -73,8 +73,8 @@ complete -c octopus -l disable-denovo-variant-discovery -d 'Disable all candidat
 complete -c octopus -l disable-pileup-candidate-generator -d 'Disable candidate generation from raw read alignments (CIGAR strings)'
 complete -c octopus -l disable-repeat-candidate-generator -d 'Disable candidate generation from adjusted read alignments (CIGAR strings) around tandem repeats'
 complete -c octopus -l disable-assembly-candidate-generator -d 'Enable candidate generation using local re-assembly'
-complete -c octopus -s c -d 'Variant file paths containing known variants.' -x
-complete -c octopus -l source-candidates-file -d 'Files containing lists of source candidate variant files' -x
+complete -c octopus -s c -d 'Variant file paths containing known variants.' -r
+complete -c octopus -l source-candidates-file -d 'Files containing lists of source candidate variant files' -r
 complete -c octopus -l min-source-candidate-quality -d 'Only variants with quality above this value are considered for candidate generation' -x
 complete -c octopus -l use-filtered-source-candidates -d 'Use variants from source VCF records that have been filtered'
 complete -c octopus -l min-pileup-base-quality -d 'Only bases with quality above this value are considered for candidate generation' -x
@@ -105,7 +105,7 @@ complete -c octopus -l dont-protect-reference-haplotype -d 'Do not protect the r
 complete -c octopus -s C -d 'Which of the octopus calling models to use' -x
 complete -c octopus -s P -d 'All contigs with unspecified ploidies are assumed the organism ploidy' -x
 complete -c octopus -s p -d 'Space-separated list of contig (contig=ploidy) or sample contig (sample:contig=ploidy) ploidies' -x
-complete -c octopus -l contig-ploidies-file -d 'File containing a list of contig (contig=ploidy) or sample contig (sample:contig=ploidy) ploidies, one per line' -x
+complete -c octopus -l contig-ploidies-file -d 'File containing a list of contig (contig=ploidy) or sample contig (sample:contig=ploidy) ploidies, one per line' -r
 complete -c octopus -l min-variant-posterior -d 'Report variant alleles with posterior probability (phred scale) greater than this' -x
 complete -c octopus -l refcall -d 'Caller will report reference confidence calls for each position [POSITIONAL], or in automatically sized blocks [BLOCKED]' -x
 complete -c octopus -l refcall-block-merge-quality -d 'Threshold to merge adjacent refcall positions when using blocked refcalling' -x
@@ -166,7 +166,7 @@ complete -c octopus -l keep-unfiltered-calls -d 'Keep a copy of unfiltered calls
 complete -c octopus -l annotations -d 'Annotations to write to final VCF' -x
 complete -c octopus -l aggregate-annotations -d 'Aggregate all multi-value annotations into a single value'
 complete -c octopus -l filter-vcf -d 'Filter the given Octopus VCF without calling' -x
-complete -c octopus -l forest-model -d 'Trained Ranger random forest model file' -x
-complete -c octopus -l somatic-forest-model -d 'Trained Ranger random forest model file for somatic variants' -x
+complete -c octopus -l forest-model -d 'Trained Ranger random forest model file' -r
+complete -c octopus -l somatic-forest-model -d 'Trained Ranger random forest model file for somatic variants' -r
 complete -c octopus -l min-forest-quality -d 'Minimum PASSing random forest probability (Phred scale)' -x
 complete -c octopus -l use-germline-forest-for-somatic-normals -d 'Use the germline forest model for evaluating somatic variant normal sample genotypes rather than the somatic forest model'

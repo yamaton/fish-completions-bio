@@ -7,7 +7,7 @@ complete -c hmmpgmd -l cport -d 'port to use for client/server communication  [5
 complete -c hmmpgmd -l wport -d 'port to use for server/worker communication  [51372]' -x
 complete -c hmmpgmd -l ccncts -d 'maximum number of client side connections to accept  [16]' -x
 complete -c hmmpgmd -l wcncts -d 'maximum number of worker side connections to accept  [32]' -x
-complete -c hmmpgmd -l pid -d 'file to write process id to' -x
+complete -c hmmpgmd -l pid -d 'file to write process id to' -r
 complete -c hmmpgmd -l seqdb -d 'protein database to cache for searches' -x
 complete -c hmmpgmd -l hmmdb -d 'hmm database to cache for searches' -x
 complete -c hmmpgmd -l cpu -d 'number of parallel CPU workers to use for multithreads  [2]' -x

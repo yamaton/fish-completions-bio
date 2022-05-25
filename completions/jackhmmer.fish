@@ -2,12 +2,12 @@
 
 complete -c jackhmmer -s h -d 'show brief   help on version and usage'
 complete -c jackhmmer -s N -d 'set maximu   m number of iterations to <n>  [5]  (n>0)' -x
-complete -c jackhmmer -s o -d 'direct output to file <f>, not stdout' -x
-complete -c jackhmmer -s A -d 'save multiple alignment of hits to file <f>' -x
-complete -c jackhmmer -l tblout -d 'save parseable table of per-sequence hits to file <f>' -x
-complete -c jackhmmer -l domtblout -d 'save parseable table of per-domain hits to file <f>' -x
-complete -c jackhmmer -l chkhmm -d 'save HMM checkpoints to files <f>-<iteration>.hmm' -x
-complete -c jackhmmer -l chkali -d 'save alignment checkpoints to files <f>-<iteration>.sto' -x
+complete -c jackhmmer -s o -d 'direct output to file <f>, not stdout' -r
+complete -c jackhmmer -s A -d 'save multiple alignment of hits to file <f>' -r
+complete -c jackhmmer -l tblout -d 'save parseable table of per-sequence hits to file <f>' -r
+complete -c jackhmmer -l domtblout -d 'save parseable table of per-domain hits to file <f>' -r
+complete -c jackhmmer -l chkhmm -d 'save HMM checkpoints to files <f>-<iteration>.hmm' -r
+complete -c jackhmmer -l chkali -d 'save alignment checkpoints to files <f>-<iteration>.sto' -r
 complete -c jackhmmer -l acc -d 'prefer accessions over names in output'
 complete -c jackhmmer -l noali -d 'don\'t output alignments, so output is smaller'
 complete -c jackhmmer -l notextw -d 'unlimit ASCII text output line width'
@@ -15,7 +15,7 @@ complete -c jackhmmer -l textw -d 'set max width of ASCII text output lines  [12
 complete -c jackhmmer -l popen -d 'gap open probability' -x
 complete -c jackhmmer -l pextend -d 'gap extend probability' -x
 complete -c jackhmmer -l mx -d 'substitution score matrix choice (of some built-in matrices)' -x
-complete -c jackhmmer -l mxfile -d 'read substitution score matrix from file <f>' -x
+complete -c jackhmmer -l mxfile -d 'read substitution score matrix from file <f>' -r
 complete -c jackhmmer -s E -d 'report sequences <= this E-value threshold in output  [10.0]  (x>0)' -x
 complete -c jackhmmer -s T -d 'report sequences >= this score threshold in output' -x
 complete -c jackhmmer -l domE -d 'report domains <= this E-value threshold in output  [10.0]  (x>0)' -x
@@ -56,6 +56,6 @@ complete -c jackhmmer -l nonull2 -d 'turn off biased composition score correctio
 complete -c jackhmmer -s Z -d 'set # of comparisons done, for E-value calculation' -x
 complete -c jackhmmer -l domZ -d 'set # of significant seqs, for domain E-value calculation' -x
 complete -c jackhmmer -l seed -d 'set RNG seed to <n> (if 0: one-time arbitrary seed)  [42]' -x
-complete -c jackhmmer -l qformat -d 'assert query <seqfile> is in format <s>: no autodetection' -x
+complete -c jackhmmer -l qformat -d 'assert query <seqfile> is in format <s>: no autodetection' -r
 complete -c jackhmmer -l tformat -d 'assert target <seqdb> is in format <s>>: no autodetection' -x
 complete -c jackhmmer -l cpu -d 'number of parallel CPU workers to use for multithreads  [2]' -x

@@ -2,8 +2,8 @@
 
 complete -c hmmbuild -s h -d 'show brief help on version and usage'
 complete -c hmmbuild -s n -d 'name the HMM <s>' -x
-complete -c hmmbuild -s o -d 'direct summary output to file <f>, not stdout' -x
-complete -c hmmbuild -s O -d 'resave annotated, possibly modified MSA to file <f>' -x
+complete -c hmmbuild -s o -d 'direct summary output to file <f>, not stdout' -r
+complete -c hmmbuild -s O -d 'resave annotated, possibly modified MSA to file <f>' -r
 complete -c hmmbuild -l amino -d 'input alignment is protein sequence data'
 complete -c hmmbuild -l dna -d 'input alignment is DNA sequence data'
 complete -c hmmbuild -l rna -d 'input alignment is RNA sequence data'
@@ -28,7 +28,7 @@ complete -c hmmbuild -l pnone -d 'don\'t use any prior; parameters are frequenci
 complete -c hmmbuild -l plaplace -d 'use a Laplace +1 prior'
 complete -c hmmbuild -l singlemx -d 'use substitution score matrix for single-sequence inputs'
 complete -c hmmbuild -l mx -d 'substitution score matrix (built-in matrices, with --singlemx)' -x
-complete -c hmmbuild -l mxfile -d 'read substitution score matrix from file <f> (with --singlemx)' -x
+complete -c hmmbuild -l mxfile -d 'read substitution score matrix from file <f> (with --singlemx)' -r
 complete -c hmmbuild -l popen -d 'force gap open prob.' -x
 complete -c hmmbuild -l pextend -d 'force gap extend prob.' -x
 complete -c hmmbuild -l EmL -d 'length of sequences for MSV Gumbel mu fit  [200]  (n>0)' -x
@@ -40,7 +40,7 @@ complete -c hmmbuild -l EfN -d 'number of sequences for Forward exp tail tau fit
 complete -c hmmbuild -l Eft -d 'tail mass for Forward exponential tail tau fit  [0.04]  (0<x<1)' -x
 complete -c hmmbuild -l cpu -d 'number of parallel CPU workers for multithreads  [2]' -x
 complete -c hmmbuild -l stall -d 'arrest after start: for attaching debugger to process'
-complete -c hmmbuild -l informat -d 'assert input alifile is in format <s> (no autodetect)' -x
+complete -c hmmbuild -l informat -d 'assert input alifile is in format <s> (no autodetect)' -r
 complete -c hmmbuild -l seed -d 'set RNG seed to <n> (if 0: one-time arbitrary seed)  [42]' -x
 complete -c hmmbuild -l w_beta -d 'tail mass at which window length is determined' -x
 complete -c hmmbuild -l w_length -d 'window length' -x

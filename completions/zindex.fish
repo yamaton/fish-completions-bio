@@ -4,7 +4,7 @@ complete -c zindex -l index-file -d 'Store index in <index-file> (default <file>
 complete -c zindex -s p -l pipe -d 'Create indices by piping output through <CMD> which should output a single line for each input line.' -x
 complete -c zindex -l tab-delimiter -d 'Use a tab character as the field delimiter'
 complete -c zindex -s d -l delimiter -d 'Use <delim> as the field delimiter' -x
-complete -c zindex -s c -l config -d 'Create indexes using json config file <file>' -x
+complete -c zindex -s c -l config -d 'Create indexes using json config file <file>' -r
 complete -c zindex -s f -l field -d 'Create an index using field <num> (delimited by -d/--delimiter, 1-based)' -x
 complete -c zindex -l skip-first -d 'Skip the first <num> lines' -x
 complete -c zindex -l capture -d 'Determines which capture group in an regex to use' -x

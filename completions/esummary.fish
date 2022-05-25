@@ -11,7 +11,7 @@ complete -c esummary -o strand -d 'Strand of DNA to retrieve: 1 for plus, 2 for 
 complete -c esummary -o chr_start -d 'First sequence position to retrieve (0-based).' -x
 complete -c esummary -o chr_stop -d 'Last sequence position to retrieve (1-based).' -x
 complete -c esummary -o complexity -d 'How much context to fetch: 0 default 1 Bioseq 3 Nuc-prot set' -x
-complete -c esummary -o extend -d 'Extend sequence retrieval by N residues in both directions.' -x
+complete -c esummary -o extend -d 'Extend sequence retrieval by N residues in both directions.' -r
 complete -c esummary -o extrafeat -d 'Bit flag specifying extra features.' -x
 complete -c esummary -o raw -d 'Skip database-specific XML modifications.'
 complete -c esummary -o json -d 'Convert adjusted XML output to JSON.'

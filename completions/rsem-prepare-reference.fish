@@ -23,4 +23,4 @@ complete -c rsem-prepare-reference -s p -l num-threads -d 'Number of threads to 
 complete -c rsem-prepare-reference -s q -l quiet -d 'Suppress the output of logging information.'
 complete -c rsem-prepare-reference -s h -l help -d 'Show help information.'
 complete -c rsem-prepare-reference -l prep-pRSEM -d 'A Boolean indicating whether to prepare reference files for pRSEM, including building Bowtie indices for a genome and selecting training set isoforms.'
-complete -c rsem-prepare-reference -l mappability-bigwig-file -d 'Full path to a whole-genome mappability file in bigWig format.' -x
+complete -c rsem-prepare-reference -l mappability-bigwig-file -d 'Full path to a whole-genome mappability file in bigWig format.' -r

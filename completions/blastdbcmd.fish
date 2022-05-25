@@ -23,7 +23,7 @@ complete -c blastdbcmd -o get_dups -d 'Retrieve duplicate accessions'
 complete -c blastdbcmd -o line_length -d 'Line length for output' -x
 complete -c blastdbcmd -o ctrl_a -d 'Use Ctrl-A as the non-redundant defline separator'
 complete -c blastdbcmd -o show_blastdb_search_path -d 'Displays the default BLAST database search paths'
-complete -c blastdbcmd -o list -d 'List BLAST databases in the specified directory' -x
+complete -c blastdbcmd -o list -d 'List BLAST databases in the specified directory' -r
 complete -c blastdbcmd -o remove_redundant_dbs -d 'Remove the databases that are referenced by another alias file in the'
 complete -c blastdbcmd -o recursive -d 'Recursively traverse the directory structure to list available BLAST'
 complete -c blastdbcmd -o list_outfmt -d 'Output format for the list option, where the available format specifiers' -x

@@ -1,13 +1,13 @@
 # Auto-generated with h2o
 
 complete -c pilon -l genome -d 'The input genome we are trying to improve, which must be the reference used for the bam alignments.' -x
-complete -c pilon -l frags -d 'A bam file consisting of fragment paired-end alignments, aligned to the --genome argument using bwa or bowtie2.' -x
-complete -c pilon -l jumps -d 'A bam file consisting of jump (mate pair) paired-end alignments, aligned to the --genome argument using bwa or bowtie2.' -x
-complete -c pilon -l unpaired -d 'A bam file consisting of unpaired alignments, aligned to the --genome argument using bwa or bowtie2.' -x
-complete -c pilon -l bam -d 'A bam file of unknown type; Pilon will scan it and attempt to classify it as one of the above bam types.' -x
-complete -c pilon -l nanopore -d 'A bam file containing Oxford Nanopore read alignments.' -x
-complete -c pilon -l pacbio -d 'A bam file containing Pacific Biosciences read alignments.' -x
-complete -c pilon -l output -d 'Prefix for output files' -x
+complete -c pilon -l frags -d 'A bam file consisting of fragment paired-end alignments, aligned to the --genome argument using bwa or bowtie2.' -r
+complete -c pilon -l jumps -d 'A bam file consisting of jump (mate pair) paired-end alignments, aligned to the --genome argument using bwa or bowtie2.' -r
+complete -c pilon -l unpaired -d 'A bam file consisting of unpaired alignments, aligned to the --genome argument using bwa or bowtie2.' -r
+complete -c pilon -l bam -d 'A bam file of unknown type; Pilon will scan it and attempt to classify it as one of the above bam types.' -r
+complete -c pilon -l nanopore -d 'A bam file containing Oxford Nanopore read alignments.' -r
+complete -c pilon -l pacbio -d 'A bam file containing Pacific Biosciences read alignments.' -r
+complete -c pilon -l output -d 'Prefix for output files' -r
 complete -c pilon -l outdir -d 'Use this directory for all output files.' -r
 complete -c pilon -l changes -d 'If specified, a file listing changes in the <output>.fasta will be generated.'
 complete -c pilon -l vcf -d 'If specified, a vcf file will be generated'
@@ -19,7 +19,7 @@ complete -c pilon -l dumpreads -d 'Dump reads for local re-assemblies.'
 complete -c pilon -l duplicates -d 'Use reads marked as duplicates in the input BAMs (ignored by default).'
 complete -c pilon -l iupac -d 'Output IUPAC ambiguous base codes in the output FASTA file when appropriate.'
 complete -c pilon -l nonpf -d 'Use reads which failed sequencer quality filtering (ignored by default).'
-complete -c pilon -l targets -d 'Only process the specified target(s).' -x
+complete -c pilon -l targets -d 'Only process the specified target(s).' -r
 complete -c pilon -l verbose -d 'More verbose output.'
 complete -c pilon -l debug -d 'Debugging output (implies verbose).'
 complete -c pilon -l version -d 'Print version string and exit.'

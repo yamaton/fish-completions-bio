@@ -6,4 +6,4 @@ complete -c iHS -s f -l file -d 'Proper formatted and phased VCF.' -r
 complete -c iHS -s y -l type -d 'Genotype likelihood format: GT,PL,GL,GP' -x
 complete -c iHS -s a -l af -d 'Alternative alleles with frquences less than [0.05] are skipped.' -x
 complete -c iHS -s x -l threads -d 'Number of CPUS [1].' -x
-complete -c iHS -s g -l gen -d 'A PLINK formatted map file.' -x
+complete -c iHS -s g -l gen -d 'A PLINK formatted map file.' -r

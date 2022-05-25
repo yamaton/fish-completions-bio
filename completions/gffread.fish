@@ -31,7 +31,7 @@ complete -c gffread -l in-bed -d 'input should be parsed as BED format (automati
 complete -c gffread -l in-tlf -d 'input GFF-like one-line-per-transcript format without exon/CDS features (see --tlf option below); automatic if the input filename ends with .tlf)'
 complete -c gffread -l stream -d 'fast processing of input GFF/BED transcripts as they are received ((no sorting, exons must be grouped by transcript in the input data)'
 complete -c gffread -s M -l merge -d 'cluster the input transcripts into loci, discarding "duplicated" transcripts (those with the same exact introns and fully contained or equal boundaries)'
-complete -c gffread -s d -d 'for -M option, write duplication info to file <dupinfo>' -x
+complete -c gffread -s d -d 'for -M option, write duplication info to file <dupinfo>' -r
 complete -c gffread -l cluster-only -d 'same as -M/--merge but without discarding any of the "duplicate" transcripts, only create "locus" features'
 complete -c gffread -s K -d 'for -M option: also discard as redundant the shorter, fully contained transcripts (intron chains matching a part of the container)'
 complete -c gffread -s Q -d 'for -M option, no longer require boundary containment when assessing redundancy (can be combined with -K); only introns have to match for multi-exon transcripts, and >=80% overlap for single-exon transcripts'

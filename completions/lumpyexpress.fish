@@ -9,7 +9,7 @@ complete -c lumpyexpress -s o -d 'output file [fullBam.bam.vcf]' -r
 complete -c lumpyexpress -s x -d 'BED file to exclude' -r
 complete -c lumpyexpress -s P -d 'output probability curves for each variant'
 complete -c lumpyexpress -s m -d 'minimum sample weight for a call [4]' -x
-complete -c lumpyexpress -s r -d '-T DIR temp directory [./output_prefix.XXXXXXXXXXXX]' -x
+complete -c lumpyexpress -s r -d '-T DIR temp directory [./output_prefix.XXXXXXXXXXXX]' -r
 complete -c lumpyexpress -s k -d 'keep temporary files'
 complete -c lumpyexpress -s K -d 'path to lumpyexpress.config file' -r
 complete -c lumpyexpress -s v -d 'verbose'

@@ -1,7 +1,7 @@
 # Auto-generated with h2o
 
-complete -c wtdbg2 -s i -d 'Long reads sequences file (REQUIRED; can be multiple), []' -x
-complete -c wtdbg2 -s o -d 'Prefix of output files (REQUIRED), []' -x
+complete -c wtdbg2 -s i -d 'Long reads sequences file (REQUIRED; can be multiple), []' -r
+complete -c wtdbg2 -s o -d 'Prefix of output files (REQUIRED), []' -r
 complete -c wtdbg2 -s t -d 'Number of threads, 0 for all cores, [4]' -x
 complete -c wtdbg2 -s f -d 'Force to overwrite output files'
 complete -c wtdbg2 -s x -d 'Presets, comma delimited, []' -x
@@ -59,7 +59,7 @@ complete -c wtdbg2 -l quiet -d 'See -q'
 complete -c wtdbg2 -l limit-input -d 'Limit the input sequences to at most <int> M bp.' -x
 complete -c wtdbg2 -s L -l tidy-reads -d 'Default: 0.' -x
 complete -c wtdbg2 -l tidy-name -d 'Rename reads into \'S%010d\' format.'
-complete -c wtdbg2 -l rdname-filter -d 'A file contains lines of reads name to be discarded in loading.' -x
+complete -c wtdbg2 -l rdname-filter -d 'A file contains lines of reads name to be discarded in loading.' -r
 complete -c wtdbg2 -l rdname-includeonly -d 'Reverse manner with --rdname-filter' -x
 complete -c wtdbg2 -s g -l genome-size -d 'Provide genome size, e.g. 100.4m, 2.3g.' -x
 complete -c wtdbg2 -s X -l rdcov-cutoff -d 'Default: 50.0. Retaining 50.0 folds of genome coverage, combined with -g and --rdcov-filter.' -x
@@ -75,11 +75,11 @@ complete -c wtdbg2 -l drop-low-cov-edges -d 'Don\'t attempt to rescue low covera
 complete -c wtdbg2 -l node-min -d 'Min depth of an interval to be selected as valid node.' -x
 complete -c wtdbg2 -l node-max -d 'Nodes with too high depth will be regarded as repetitive, and be masked.' -x
 complete -c wtdbg2 -l ttr-cutoff-depth -l ttr-cutoff-ratio -d 'Tiny Tandom Repeat.' -x
-complete -c wtdbg2 -l dump-kbm -d 'Dump kbm index into file for loaded by `kbm` or `wtdbg`' -x
-complete -c wtdbg2 -l dump-seqs -d 'Dump kbm index (only sequences, no k-mer index) into file for loaded by `kbm` or `wtdbg` Please note: normally load it with --load-kbm, not with --load-seqs' -x
-complete -c wtdbg2 -l load-kbm -d 'Instead of reading sequences and building kbm index, which is time-consumed, loading kbm-index from already dumped file.' -x
+complete -c wtdbg2 -l dump-kbm -d 'Dump kbm index into file for loaded by `kbm` or `wtdbg`' -r
+complete -c wtdbg2 -l dump-seqs -d 'Dump kbm index (only sequences, no k-mer index) into file for loaded by `kbm` or `wtdbg` Please note: normally load it with --load-kbm, not with --load-seqs' -r
+complete -c wtdbg2 -l load-kbm -d 'Instead of reading sequences and building kbm index, which is time-consumed, loading kbm-index from already dumped file.' -r
 complete -c wtdbg2 -l load-seqs -d 'Similar with --load-kbm, but only use the sequences in kbmidx, and rebuild index in process\'s RAM.' -x
-complete -c wtdbg2 -l load-alignments -d '`wtdbg` output reads\' alignments into <--prefix>.alignments, program can load them to fastly build assembly graph.' -x
+complete -c wtdbg2 -l load-alignments -d '`wtdbg` output reads\' alignments into <--prefix>.alignments, program can load them to fastly build assembly graph.' -r
 complete -c wtdbg2 -l load-clips -d 'Combined with --load-nodes.' -x
 complete -c wtdbg2 -l load-nodes -d 'Load dumped nodes from previous execution for fast construct the assembly graph, should be combined with --load-clips.' -x
 complete -c wtdbg2 -l bubble-step -d 'Max step to search a bubble, meaning the max step from the starting node to the ending node.' -x

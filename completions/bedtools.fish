@@ -489,8 +489,8 @@ complete -c bedtools -n "__fish_seen_subcommand_from links" -o base -d '-org mou
 
 
 
-complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s g -d 'Genome file size (see notes below).' -x
-complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s b -d 'BED file (with chrom,start,end fields).' -x
+complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s g -d 'Genome file size (see notes below).' -r
+complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s b -d 'BED file (with chrom,start,end fields).' -r
 complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s w -d 'Divide each input interval (either a chromosome or a BED interval)' -x
 complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s s -d 'Step size: i.e., how many base pairs to step before' -x
 complete -c bedtools -n "__fish_seen_subcommand_from makewindows" -s n -d 'Divide each input interval (either a chromosome or a BED interval)' -x
@@ -519,8 +519,8 @@ complete -c bedtools -n "__fish_seen_subcommand_from expand" -s c -d 'Specify th
 
 
 complete -c bedtools -n "__fish_seen_subcommand_from split" -s i -l input -d 'BED input file (req\'d).' -r
-complete -c bedtools -n "__fish_seen_subcommand_from split" -s n -l number -d 'Number of files to create (req\'d).' -x
-complete -c bedtools -n "__fish_seen_subcommand_from split" -s p -l prefix -d 'Output BED file prefix.' -x
+complete -c bedtools -n "__fish_seen_subcommand_from split" -s n -l number -d 'Number of files to create (req\'d).' -r
+complete -c bedtools -n "__fish_seen_subcommand_from split" -s p -l prefix -d 'Output BED file prefix.' -r
 complete -c bedtools -n "__fish_seen_subcommand_from split" -s a -l algorithm -d 'Algorithm used to split data.' -x
 complete -c bedtools -n "__fish_seen_subcommand_from split" -s h -l help -d 'Print help (this screen).'
 complete -c bedtools -n "__fish_seen_subcommand_from split" -s v -l version -d 'Print version.'

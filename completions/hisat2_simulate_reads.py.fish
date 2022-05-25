@@ -7,7 +7,7 @@ complete -c hisat2_simulate_reads.py -s r -l read-length -d 'read length (defaul
 complete -c hisat2_simulate_reads.py -s f -l fragment-length -d 'fragment length (default: 250)' -x
 complete -c hisat2_simulate_reads.py -s n -l num-fragment -d 'number of fragments (default: 1000000)' -x
 complete -c hisat2_simulate_reads.py -s e -l expr-profile -d 'expression profile: flux or constant (default: flux)' -r
-complete -c hisat2_simulate_reads.py -l repeat-info -d 'repeat information filename' -x
+complete -c hisat2_simulate_reads.py -l repeat-info -d 'repeat information filename' -r
 complete -c hisat2_simulate_reads.py -l error-rate -d 'per-base sequencing error rate (%) (default: 0.0)' -x
 complete -c hisat2_simulate_reads.py -l max-mismatch -d 'max mismatches due to sequencing errors (default: 3)' -x
 complete -c hisat2_simulate_reads.py -l random-seed -d 'random seeding value (default: 0)' -x

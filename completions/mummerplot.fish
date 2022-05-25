@@ -10,7 +10,7 @@ complete -c mummerplot -s f -l filter -d 'Only display .delta alignments which r
 complete -c mummerplot -s h -l help -d 'Display help information and exit'
 complete -c mummerplot -s l -l layout -d 'Layout a .delta multiplot in an intelligible fashion, this option requires the -R -Q options'
 complete -c mummerplot -l fat -d 'Layout sequences using fattest alignment only'
-complete -c mummerplot -s p -d 'Set the prefix of the output files (default \'out\')' -x
+complete -c mummerplot -s p -d 'Set the prefix of the output files (default \'out\')' -r
 complete -c mummerplot -o rv -d 'Reverse video for x11 plots'
 complete -c mummerplot -s r -d 'Plot a particular reference sequence ID on the X-axis' -x
 complete -c mummerplot -s q -d 'Plot a particular query sequence ID on the Y-axis' -x

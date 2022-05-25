@@ -40,25 +40,25 @@ complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l reverse-fra
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l translation-table -d '1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE 9) FLATWORM_MITOCHONDRIAL, 10) EUPLOTID, 11) PROKARYOTE, 12) ALT_YEAST, 13) ASCIDIAN_MITOCHONDRIAL, 14) ALT_FLATWORM_MITOCHONDRIAL 15) BLEPHARISMA, 16) CHLOROPHYCEAN_MITOCHONDRIAL, 21) TREMATODE_MITOCHONDRIAL, 22) SCENEDESMUS_MITOCHONDRIAL 23) THRAUSTOCHYTRIUM_MITOCHONDRIAL, 24) PTEROBRANCHIA_MITOCHONDRIAL, 25) GRACILIBACTERIA, 26) PACHYSOLEN, 27) KARYORELICT, 28) CONDYLOSTOMA' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l translate -d 'Translate ORF to amino acid [0]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l use-all-table-starts -d 'Use all alteratives for a start codon in the genetic table, if false - only ATG (AUG) [0]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l id-offset -d 'Numeric ids in index file are offset by this value [0]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l id-offset -d 'Numeric ids in index file are offset by this value [0]' -r
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l protein-filter-threshold -d 'filter proteins lower than threshold [0.0,1.0] [0.200]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l filter-proteins -d 'filter proteins by a neural network [0,1] [1]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l dbtype -d 'Database type 0: auto, 1: amino acid 2: nucleotides [0]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l shuffle -d 'Shuffle input database [1]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l createdb-mode -d 'Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [0]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l sub-mat -d 'Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l sub-mat -d 'Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]' -r
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l db-load-mode -d 'Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l threads -d 'Number of CPU-cores used (all by default) [12]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l compressed -d 'Write compressed output [0]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -s v -d 'Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l max-seq-len -d 'Maximum sequence length [65535]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l delete-tmp-inc -d 'Delete temporary files incremental [0,1] [1]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l remove-tmp-files -d 'Delete temporary files [0]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l delete-tmp-inc -d 'Delete temporary files incremental [0,1] [1]' -r
+complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l remove-tmp-files -d 'Delete temporary files [0]' -r
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l mpi-runner -d 'Use MPI on compute cluster with this MPI command (e.g. "mpirun -np 42") []' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l filter-hits -d 'Filter hits by seq.id.' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l sort-results -d 'Sort results: 0: no sorting, 1: sort by E-value (Alignment) or seq.id.' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l create-lookup -d 'Create database lookup file (can be very large) [0]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l write-lookup -d 'write .lookup file containing mapping from internal id, fasta id and file number [1]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l create-lookup -d 'Create database lookup file (can be very large) [0]' -r
+complete -c plass -n "__fish_seen_subcommand_from plass-assemble" -l write-lookup -d 'write .lookup file containing mapping from internal id, fasta id and file number [1]' -r
 
 
 
@@ -92,16 +92,16 @@ complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l min-con
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l dbtype -d 'Database type 0: auto, 1: amino acid 2: nucleotides [0]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l shuffle -d 'Shuffle input database [1]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l createdb-mode -d 'Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [0]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l id-offset -d 'Numeric ids in index file are offset by this value [0]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l sub-mat -d 'Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l id-offset -d 'Numeric ids in index file are offset by this value [0]' -r
+complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l sub-mat -d 'Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]' -r
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l db-load-mode -d 'Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l threads -d 'Number of CPU-cores used (all by default) [12]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l compressed -d 'Use compressed database format for temporary files [0]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l compressed -d 'Use compressed database format for temporary files [0]' -r
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -s v -d 'Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l max-seq-len -d 'Maximum sequence length [65535]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l remove-tmp-files -d 'Delete temporary files [0]' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l delete-tmp-inc -d 'Delete temporary files incremental [0,1] [1]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l remove-tmp-files -d 'Delete temporary files [0]' -r
+complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l delete-tmp-inc -d 'Delete temporary files incremental [0,1] [1]' -r
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l mpi-runner -d 'Use MPI on compute cluster with this MPI command (e.g. "mpirun -np 42") []' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l filter-hits -d 'Filter hits by seq.id.' -x
 complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l sort-results -d 'Sort results: 0: no sorting, 1: sort by E-value (Alignment) or seq.id.' -x
-complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l write-lookup -d 'write .lookup file containing mapping from internal id, fasta id and file number [1]' -x
+complete -c plass -n "__fish_seen_subcommand_from plass-nuclassemble" -l write-lookup -d 'write .lookup file containing mapping from internal id, fasta id and file number [1]' -r

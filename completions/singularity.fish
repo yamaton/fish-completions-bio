@@ -1,6 +1,6 @@
 # Auto-generated with h2o
 
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s c -l config -d 'specify a configuration file (for root or unprivileged installation only) (default "/usr/local/etc/singularity/singularity.conf")' -x
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s c -l config -d 'specify a configuration file (for root or unprivileged installation only) (default "/usr/local/etc/singularity/singularity.conf")' -r
 complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s d -l debug -d 'print debugging information (highest verbosity)'
 complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s h -l help -d 'help for singularity'
 complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -l nocolor -d 'print without color output (default False)'
@@ -40,7 +40,7 @@ complete -k -c singularity -n __fish_use_subcommand -x -a build -d 'Build a Sing
 
 
 complete -c singularity -n "__fish_seen_subcommand_from build" -l arch -d 'architecture for remote build (default "amd64")' -x
-complete -c singularity -n "__fish_seen_subcommand_from build" -s B -l bind -d 'a user-bind path specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from build" -s B -l bind -d 'a user-bind path specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from build" -l builder -d 'remote Build Service URL, setting this implies --remote' -x
 complete -c singularity -n "__fish_seen_subcommand_from build" -s d -l detached -d 'submit build job and print build ID (no real-time logs and requires --remote)'
 complete -c singularity -n "__fish_seen_subcommand_from build" -l disable-cache -d 'do not use cache or create cache'
@@ -57,11 +57,11 @@ complete -c singularity -n "__fish_seen_subcommand_from build" -l nohttps -d 'do
 complete -c singularity -n "__fish_seen_subcommand_from build" -s T -l notest -d 'build without running tests in %test section'
 complete -c singularity -n "__fish_seen_subcommand_from build" -l nv -d 'inject host Nvidia libraries during build for post and test sections (not supported with remote build)'
 complete -c singularity -n "__fish_seen_subcommand_from build" -l passphrase -d 'prompt for an encryption passphrase'
-complete -c singularity -n "__fish_seen_subcommand_from build" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -x
+complete -c singularity -n "__fish_seen_subcommand_from build" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -r
 complete -c singularity -n "__fish_seen_subcommand_from build" -s r -l remote -d 'build image remotely (does not require root)'
 complete -c singularity -n "__fish_seen_subcommand_from build" -l rocm -d 'inject host Rocm libraries during build for post and test sections (not supported with remote build)'
 complete -c singularity -n "__fish_seen_subcommand_from build" -s s -l sandbox -d 'build image as sandbox format (chroot directory structure)'
-complete -c singularity -n "__fish_seen_subcommand_from build" -l section -d 'only run specific section(s) of deffile (setup, post, files, environment, test, labels, none) (default [all])' -x
+complete -c singularity -n "__fish_seen_subcommand_from build" -l section -d 'only run specific section(s) of deffile (setup, post, files, environment, test, labels, none) (default [all])' -r
 complete -c singularity -n "__fish_seen_subcommand_from build" -s u -l update -d 'run definition over existing container (skips header)'
 
 
@@ -88,8 +88,8 @@ complete -c singularity -n "__fish_seen_subcommand_from delete" -l library -d 'd
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l add-caps -d 'a comma separated capability list to add' -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l allow-setuid -d 'allow setuid binaries in container (root only)'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l app -d 'set an application to run inside a container' -x
-complete -c singularity -n "__fish_seen_subcommand_from exec" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -x
-complete -c singularity -n "__fish_seen_subcommand_from exec" -s B -l bind -d 'a user-bind path specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -r
+complete -c singularity -n "__fish_seen_subcommand_from exec" -s B -l bind -d 'a user-bind path specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s e -l cleanenv -d 'clean environment before running container'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s c -l contain -d 'use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s C -l containall -d 'contain not only file systems, but also PID, IPC, and environment'
@@ -98,11 +98,11 @@ complete -c singularity -n "__fish_seen_subcommand_from exec" -l dns -d 'list of
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l docker-login -d 'login to a Docker Repository interactively'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l drop-caps -d 'a comma separated capability list to drop' -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l env -d 'pass environment variable to contained process' -x
-complete -c singularity -n "__fish_seen_subcommand_from exec" -l env-file -d 'pass environment variables from file to contained process' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -l env-file -d 'pass environment variables from file to contained process' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s f -l fakeroot -d 'run container in new user namespace as uid 0'
-complete -c singularity -n "__fish_seen_subcommand_from exec" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s h -l help -d 'help for exec'
-complete -c singularity -n "__fish_seen_subcommand_from exec" -s H -l home -d 'a home directory specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -s H -l home -d 'a home directory specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l hostname -d 'set container hostname' -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s i -l ipc -d 'run container in a new IPC namespace'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l keep-privs -d 'let root user keep privileges in container (root only)'
@@ -119,11 +119,11 @@ complete -c singularity -n "__fish_seen_subcommand_from exec" -l nonet -d 'disab
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l nv -d 'enable experimental Nvidia support'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s o -l overlay -d 'use an overlayFS image for persistent data storage or as read-only layer of container' -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l passphrase -d 'prompt for an encryption passphrase'
-complete -c singularity -n "__fish_seen_subcommand_from exec" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s p -l pid -d 'run container in a new PID namespace'
-complete -c singularity -n "__fish_seen_subcommand_from exec" -l pwd -d 'initial working directory for payload process inside the container' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -l pwd -d 'initial working directory for payload process inside the container' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l rocm -d 'enable experimental Rocm support'
-complete -c singularity -n "__fish_seen_subcommand_from exec" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l security -d 'enable security features (SELinux, Apparmor, Seccomp)' -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s u -l userns -d 'run container in a new user namespace, allowing Singularity to run completely unprivileged on recent kernels.'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l uts -d 'run container in a new UTS namespace'
@@ -132,7 +132,7 @@ complete -c singularity -n "__fish_seen_subcommand_from exec" -l vm-cpu -d 'numb
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l vm-err -d 'enable attaching stderr from VM'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l vm-ip -d 'IP Address to assign for container usage.' -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l vm-ram -d 'amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default "1024")' -x
-complete -c singularity -n "__fish_seen_subcommand_from exec" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -x
+complete -c singularity -n "__fish_seen_subcommand_from exec" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s w -l writable -d 'by default all Singularity containers are available as read only.'
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l writable-tmpfs -d 'makes the file system accessible as read-write with non persistent data (with overlay support only)'
 
@@ -178,7 +178,7 @@ complete -c singularity -n "__fish_seen_subcommand_from plugin" -s h -l help -d 
 
 
 complete -c singularity -n "__fish_seen_subcommand_from pull" -l arch -d 'architecture to pull from library (default "amd64")' -x
-complete -c singularity -n "__fish_seen_subcommand_from pull" -l dir -d 'download images to the specific directory' -x
+complete -c singularity -n "__fish_seen_subcommand_from pull" -l dir -d 'download images to the specific directory' -r
 complete -c singularity -n "__fish_seen_subcommand_from pull" -l disable-cache -d 'dont use cached images/blobs and dont create them'
 complete -c singularity -n "__fish_seen_subcommand_from pull" -l docker-login -d 'login to a Docker Repository interactively'
 complete -c singularity -n "__fish_seen_subcommand_from pull" -s F -l force -d 'overwrite an image file if it exists'
@@ -196,7 +196,7 @@ complete -c singularity -n "__fish_seen_subcommand_from push" -l library -d 'the
 
 
 
-complete -c singularity -n "__fish_seen_subcommand_from remote" -s c -l config -d 'path to the file holding remote endpoint configurations (default "/home/vierbein/.singularity/remote.yaml")' -x
+complete -c singularity -n "__fish_seen_subcommand_from remote" -s c -l config -d 'path to the file holding remote endpoint configurations (default "~/.singularity/remote.yaml")' -r
 complete -c singularity -n "__fish_seen_subcommand_from remote" -s h -l help -d 'help for remote'
 
 
@@ -204,8 +204,8 @@ complete -c singularity -n "__fish_seen_subcommand_from remote" -s h -l help -d 
 complete -c singularity -n "__fish_seen_subcommand_from run" -l add-caps -d 'a comma separated capability list to add' -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -l allow-setuid -d 'allow setuid binaries in container (root only)'
 complete -c singularity -n "__fish_seen_subcommand_from run" -l app -d 'set an application to run inside a container' -x
-complete -c singularity -n "__fish_seen_subcommand_from run" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -x
-complete -c singularity -n "__fish_seen_subcommand_from run" -s B -l bind -d 'a user-bind path specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -r
+complete -c singularity -n "__fish_seen_subcommand_from run" -s B -l bind -d 'a user-bind path specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s e -l cleanenv -d 'clean environment before running container'
 complete -c singularity -n "__fish_seen_subcommand_from run" -s c -l contain -d 'use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host'
 complete -c singularity -n "__fish_seen_subcommand_from run" -s C -l containall -d 'contain not only file systems, but also PID, IPC, and environment'
@@ -214,11 +214,11 @@ complete -c singularity -n "__fish_seen_subcommand_from run" -l dns -d 'list of 
 complete -c singularity -n "__fish_seen_subcommand_from run" -l docker-login -d 'login to a Docker Repository interactively'
 complete -c singularity -n "__fish_seen_subcommand_from run" -l drop-caps -d 'a comma separated capability list to drop' -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -l env -d 'pass environment variable to contained process' -x
-complete -c singularity -n "__fish_seen_subcommand_from run" -l env-file -d 'pass environment variables from file to contained process' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -l env-file -d 'pass environment variables from file to contained process' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s f -l fakeroot -d 'run container in new user namespace as uid 0'
-complete -c singularity -n "__fish_seen_subcommand_from run" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s h -l help -d 'help for run'
-complete -c singularity -n "__fish_seen_subcommand_from run" -s H -l home -d 'a home directory specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -s H -l home -d 'a home directory specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -l hostname -d 'set container hostname' -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -s i -l ipc -d 'run container in a new IPC namespace'
 complete -c singularity -n "__fish_seen_subcommand_from run" -l keep-privs -d 'let root user keep privileges in container (root only)'
@@ -235,11 +235,11 @@ complete -c singularity -n "__fish_seen_subcommand_from run" -l nonet -d 'disabl
 complete -c singularity -n "__fish_seen_subcommand_from run" -l nv -d 'enable experimental Nvidia support'
 complete -c singularity -n "__fish_seen_subcommand_from run" -s o -l overlay -d 'use an overlayFS image for persistent data storage or as read-only layer of container' -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -l passphrase -d 'prompt for an encryption passphrase'
-complete -c singularity -n "__fish_seen_subcommand_from run" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s p -l pid -d 'run container in a new PID namespace'
-complete -c singularity -n "__fish_seen_subcommand_from run" -l pwd -d 'initial working directory for payload process inside the container' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -l pwd -d 'initial working directory for payload process inside the container' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -l rocm -d 'enable experimental Rocm support'
-complete -c singularity -n "__fish_seen_subcommand_from run" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -l security -d 'enable security features (SELinux, Apparmor, Seccomp)' -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -s u -l userns -d 'run container in a new user namespace, allowing Singularity to run completely unprivileged on recent kernels.'
 complete -c singularity -n "__fish_seen_subcommand_from run" -l uts -d 'run container in a new UTS namespace'
@@ -248,7 +248,7 @@ complete -c singularity -n "__fish_seen_subcommand_from run" -l vm-cpu -d 'numbe
 complete -c singularity -n "__fish_seen_subcommand_from run" -l vm-err -d 'enable attaching stderr from VM'
 complete -c singularity -n "__fish_seen_subcommand_from run" -l vm-ip -d 'IP Address to assign for container usage.' -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -l vm-ram -d 'amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default "1024")' -x
-complete -c singularity -n "__fish_seen_subcommand_from run" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -x
+complete -c singularity -n "__fish_seen_subcommand_from run" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s w -l writable -d 'by default all Singularity containers are available as read only.'
 complete -c singularity -n "__fish_seen_subcommand_from run" -l writable-tmpfs -d 'makes the file system accessible as read-write with non persistent data (with overlay support only)'
 
@@ -269,8 +269,8 @@ complete -c singularity -n "__fish_seen_subcommand_from search" -l signed -d 'ar
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l add-caps -d 'a comma separated capability list to add' -x
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l allow-setuid -d 'allow setuid binaries in container (root only)'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l app -d 'set an application to run inside a container' -x
-complete -c singularity -n "__fish_seen_subcommand_from shell" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -x
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s B -l bind -d 'a user-bind path specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -r
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s B -l bind -d 'a user-bind path specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s e -l cleanenv -d 'clean environment before running container'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s c -l contain -d 'use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s C -l containall -d 'contain not only file systems, but also PID, IPC, and environment'
@@ -279,11 +279,11 @@ complete -c singularity -n "__fish_seen_subcommand_from shell" -l dns -d 'list o
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l docker-login -d 'login to a Docker Repository interactively'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l drop-caps -d 'a comma separated capability list to drop' -x
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l env -d 'pass environment variable to contained process' -x
-complete -c singularity -n "__fish_seen_subcommand_from shell" -l env-file -d 'pass environment variables from file to contained process' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -l env-file -d 'pass environment variables from file to contained process' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s f -l fakeroot -d 'run container in new user namespace as uid 0'
-complete -c singularity -n "__fish_seen_subcommand_from shell" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s h -l help -d 'help for shell'
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s H -l home -d 'a home directory specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s H -l home -d 'a home directory specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l hostname -d 'set container hostname' -x
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s i -l ipc -d 'run container in a new IPC namespace'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l keep-privs -d 'let root user keep privileges in container (root only)'
@@ -300,13 +300,13 @@ complete -c singularity -n "__fish_seen_subcommand_from shell" -l nonet -d 'disa
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l nv -d 'enable experimental Nvidia support'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s o -l overlay -d 'use an overlayFS image for persistent data storage or as read-only layer of container' -x
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l passphrase -d 'prompt for an encryption passphrase'
-complete -c singularity -n "__fish_seen_subcommand_from shell" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s p -l pid -d 'run container in a new PID namespace'
-complete -c singularity -n "__fish_seen_subcommand_from shell" -l pwd -d 'initial working directory for payload process inside the container' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -l pwd -d 'initial working directory for payload process inside the container' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l rocm -d 'enable experimental Rocm support'
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l security -d 'enable security features (SELinux, Apparmor, Seccomp)' -x
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s s -l shell -d 'path to program to use for interactive shell' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s s -l shell -d 'path to program to use for interactive shell' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l syos -d 'execute SyOS shell'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s u -l userns -d 'run container in a new user namespace, allowing Singularity to run completely unprivileged on recent kernels.'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l uts -d 'run container in a new UTS namespace'
@@ -315,7 +315,7 @@ complete -c singularity -n "__fish_seen_subcommand_from shell" -l vm-cpu -d 'num
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l vm-err -d 'enable attaching stderr from VM'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l vm-ip -d 'IP Address to assign for container usage.' -x
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l vm-ram -d 'amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default "1024")' -x
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -x
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s w -l writable -d 'by default all Singularity containers are available as read only.'
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l writable-tmpfs -d 'makes the file system accessible as read-write with non persistent data (with overlay support only)'
 
@@ -335,8 +335,8 @@ complete -c singularity -n "__fish_seen_subcommand_from sign" -s i -l sif-id -d 
 complete -c singularity -n "__fish_seen_subcommand_from test" -l add-caps -d 'a comma separated capability list to add' -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -l allow-setuid -d 'allow setuid binaries in container (root only)'
 complete -c singularity -n "__fish_seen_subcommand_from test" -l app -d 'set an application to run inside a container' -x
-complete -c singularity -n "__fish_seen_subcommand_from test" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -x
-complete -c singularity -n "__fish_seen_subcommand_from test" -s B -l bind -d 'a user-bind path specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -l apply-cgroups -d 'apply cgroups from file for container processes (root only)' -r
+complete -c singularity -n "__fish_seen_subcommand_from test" -s B -l bind -d 'a user-bind path specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s e -l cleanenv -d 'clean environment before running container'
 complete -c singularity -n "__fish_seen_subcommand_from test" -s c -l contain -d 'use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host'
 complete -c singularity -n "__fish_seen_subcommand_from test" -s C -l containall -d 'contain not only file systems, but also PID, IPC, and environment'
@@ -345,11 +345,11 @@ complete -c singularity -n "__fish_seen_subcommand_from test" -l dns -d 'list of
 complete -c singularity -n "__fish_seen_subcommand_from test" -l docker-login -d 'login to a Docker Repository interactively'
 complete -c singularity -n "__fish_seen_subcommand_from test" -l drop-caps -d 'a comma separated capability list to drop' -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -l env -d 'pass environment variable to contained process' -x
-complete -c singularity -n "__fish_seen_subcommand_from test" -l env-file -d 'pass environment variables from file to contained process' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -l env-file -d 'pass environment variables from file to contained process' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s f -l fakeroot -d 'run container in new user namespace as uid 0'
-complete -c singularity -n "__fish_seen_subcommand_from test" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -l fusemount -d 'A FUSE filesystem mount specification of the form \'<type>:<fuse command> <mountpoint>\' - where <type> is \'container\' or \'host\', specifying where the mount will be performed (\'container-daemon\' or \'host-daemon\' will run the FUSE process detached).' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s h -l help -d 'help for test'
-complete -c singularity -n "__fish_seen_subcommand_from test" -s H -l home -d 'a home directory specification.' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -s H -l home -d 'a home directory specification.' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -l hostname -d 'set container hostname' -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -s i -l ipc -d 'run container in a new IPC namespace'
 complete -c singularity -n "__fish_seen_subcommand_from test" -l keep-privs -d 'let root user keep privileges in container (root only)'
@@ -366,11 +366,11 @@ complete -c singularity -n "__fish_seen_subcommand_from test" -l nonet -d 'disab
 complete -c singularity -n "__fish_seen_subcommand_from test" -l nv -d 'enable experimental Nvidia support'
 complete -c singularity -n "__fish_seen_subcommand_from test" -s o -l overlay -d 'use an overlayFS image for persistent data storage or as read-only layer of container' -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -l passphrase -d 'prompt for an encryption passphrase'
-complete -c singularity -n "__fish_seen_subcommand_from test" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -l pem-path -d 'enter an path to a PEM formated RSA key for an encrypted container' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s p -l pid -d 'run container in a new PID namespace'
-complete -c singularity -n "__fish_seen_subcommand_from test" -l pwd -d 'initial working directory for payload process inside the container' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -l pwd -d 'initial working directory for payload process inside the container' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -l rocm -d 'enable experimental Rocm support'
-complete -c singularity -n "__fish_seen_subcommand_from test" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -s S -l scratch -d 'include a scratch directory within the container that is linked to a temporary dir (use -W to force location)' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -l security -d 'enable security features (SELinux, Apparmor, Seccomp)' -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -s u -l userns -d 'run container in a new user namespace, allowing Singularity to run completely unprivileged on recent kernels.'
 complete -c singularity -n "__fish_seen_subcommand_from test" -l uts -d 'run container in a new UTS namespace'
@@ -379,7 +379,7 @@ complete -c singularity -n "__fish_seen_subcommand_from test" -l vm-cpu -d 'numb
 complete -c singularity -n "__fish_seen_subcommand_from test" -l vm-err -d 'enable attaching stderr from VM'
 complete -c singularity -n "__fish_seen_subcommand_from test" -l vm-ip -d 'IP Address to assign for container usage.' -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -l vm-ram -d 'amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default "1024")' -x
-complete -c singularity -n "__fish_seen_subcommand_from test" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -x
+complete -c singularity -n "__fish_seen_subcommand_from test" -s W -l workdir -d 'working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)' -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s w -l writable -d 'by default all Singularity containers are available as read only.'
 complete -c singularity -n "__fish_seen_subcommand_from test" -l writable-tmpfs -d 'makes the file system accessible as read-write with non persistent data (with overlay support only)'
 

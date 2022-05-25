@@ -32,8 +32,8 @@ complete -c seqfu -n "__fish_seen_subcommand_from count" -s h -l help -d 'Show t
 
 
 complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s o -l output-basename -d 'save output to output_R1.fq and output_R2.fq' -x
-complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s f -l for-ext -d 'extension for R1 file [default: _R1.fq]' -x
-complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s r -l rev-ext -d 'extension for R2 file [default: _R2.fq]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s f -l for-ext -d 'extension for R1 file [default: _R1.fq]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s r -l rev-ext -d 'extension for R2 file [default: _R2.fq]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s c -l check -d 'enable careful mode (check sequence names and numbers)'
 complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s v -l verbose -d 'print verbose output'
 complete -c seqfu -n "__fish_seen_subcommand_from deinterleave" -s s -l strip-comments -d 'skip comments'
@@ -58,8 +58,8 @@ complete -c seqfu -n "__fish_seen_subcommand_from derep" -s h -l help -d 'Show t
 
 
 
-complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s f -l for-tag -d 'string identifying forward files [default: auto]' -x
-complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s r -l rev-tag -d 'string identifying reverse files [default: auto]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s f -l for-tag -d 'string identifying forward files [default: auto]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s r -l rev-tag -d 'string identifying reverse files [default: auto]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s o -l output -d 'save file to <out-file> instead of STDOUT' -r
 complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s c -l check -d 'enable careful mode (check sequence names and numbers)'
 complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s v -l verbose -d 'print verbose output'
@@ -69,8 +69,8 @@ complete -c seqfu -n "__fish_seen_subcommand_from interleave" -s p -l prefix -d 
 
 
 complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s o -l outdir -d 'Output directory' -r
-complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s e -l extension -d 'File extension [default: .fastq]' -x
-complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s s -l file-separator -d 'Field separator in filenames [default: _]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s e -l extension -d 'File extension [default: .fastq]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s s -l file-separator -d 'Field separator in filenames [default: _]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from lanes" -l comment-separator -d 'String separating sequence name and its comment [default: TAB]' -x
 complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s v -l verbose -d 'Verbose output'
 complete -c seqfu -n "__fish_seen_subcommand_from lanes" -s h -l help -d 'Show this help'
@@ -86,16 +86,16 @@ complete -c seqfu -n "__fish_seen_subcommand_from list" -l help -d 'Show this he
 
 
 
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s 1 -l for-tag -d 'String found in filename of forward reads [default: _R1]' -x
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s 2 -l rev-tag -d 'String found in filename of forward reads [default: _R2]' -x
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s s -l split -d 'Separator used in filename to identify the sample ID [default: _]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s 1 -l for-tag -d 'String found in filename of forward reads [default: _R1]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s 2 -l rev-tag -d 'String found in filename of forward reads [default: _R2]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s s -l split -d 'Separator used in filename to identify the sample ID [default: _]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s f -l format -d 'Output format: dadaist, manifest, qiime1, qiime2, irida [default: manifest]' -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s P -l project -d 'Project ID (only for irida)' -x
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l pos -d 'Which part of the filename is the Sample ID [default: 1]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l pos -d 'Which part of the filename is the Sample ID [default: 1]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l pe -d 'Enforce paired-end reads (not supported)'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s p -l add-path -d 'Add the reads absolute path as column'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s c -l counts -d 'Add the number of reads as a property column'
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s t -l threads -d 'Number of simultaneously opened files [default: 2]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s t -l threads -d 'Number of simultaneously opened files [default: 2]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s v -l verbose -d 'Verbose output'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s h -l help -d 'Show this help'
 

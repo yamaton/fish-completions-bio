@@ -25,7 +25,7 @@ complete -c trycycler -n "__fish_seen_subcommand_from subsample" -l version -d '
 
 
 
-complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s a -l assemblies -d 'Input assemblies whose contigs will be clustered (multiple FASTA files)' -x
+complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s a -l assemblies -d 'Input assemblies whose contigs will be clustered (multiple FASTA files)' -r
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s r -l reads -d 'Long reads (FASTQ format) used to generate the assemblies' -x
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s o -l out_dir -d 'Output directory' -r
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -l min_contig_len -d 'Exclude contigs shorter than this many base pairs in length (default: 1000)' -x

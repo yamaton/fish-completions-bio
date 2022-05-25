@@ -2,16 +2,16 @@
 
 complete -c multiqc -s f -l force -d 'Overwrite any existing reports'
 complete -c multiqc -s d -l dirs -d 'Prepend directory to sample names'
-complete -c multiqc -o dd -l dirs-depth -d 'Prepend [INT] directories to sample names.' -x
+complete -c multiqc -o dd -l dirs-depth -d 'Prepend [INT] directories to sample names.' -r
 complete -c multiqc -s s -l fullnames -d 'Do not clean the sample names (leave as full file name)'
-complete -c multiqc -s i -l title -d 'Report title.' -x
+complete -c multiqc -s i -l title -d 'Report title.' -r
 complete -c multiqc -s b -l comment -d 'Custom comment, will be printed at the top of the report.' -x
-complete -c multiqc -s n -l filename -d 'Report filename.' -x
-complete -c multiqc -s o -l outdir -d 'Create report in the specified output directory.' -x
+complete -c multiqc -s n -l filename -d 'Report filename.' -r
+complete -c multiqc -s o -l outdir -d 'Create report in the specified output directory.' -r
 complete -c multiqc -s t -l template -d 'Report template to use.' -x
 complete -c multiqc -l tag -d 'Use only modules which tagged with this keyword, eg.' -x
 complete -c multiqc -l view-tags -l view_tags -d 'View the available tags and which modules they load'
-complete -c multiqc -s x -l ignore -d 'Ignore analysis files (glob expression)' -x
+complete -c multiqc -s x -l ignore -d 'Ignore analysis files (glob expression)' -r
 complete -c multiqc -l ignore-samples -d 'Ignore sample names (glob expression)' -x
 complete -c multiqc -l ignore-symlinks -d 'Ignore symlinked directories and files'
 complete -c multiqc -l fn_as_s_name -d 'Use the log filename as the sample name'

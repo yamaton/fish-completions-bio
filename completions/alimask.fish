@@ -1,7 +1,7 @@
 # Auto-generated with h2o
 
 complete -c alimask -s h -d 'show brief help on version and usage'
-complete -c alimask -s o -d 'direct summary output to file <f>, not stdout' -x
+complete -c alimask -s o -d 'direct summary output to file <f>, not stdout' -r
 complete -c alimask -l modelrange -d 'range(s) for mask(s) in model coordinates' -x
 complete -c alimask -l alirange -d 'range(s) for mask(s) in alignment coordinates' -x
 complete -c alimask -l apendmask -d 'add to existing mask (default ignores to existing mask)'
@@ -21,5 +21,5 @@ complete -c alimask -l wblosum -d 'Henikoff simple filter weights'
 complete -c alimask -l wnone -d 'don\'t do any relative weighting; set all to 1'
 complete -c alimask -l wgiven -d 'use weights as given in MSA file'
 complete -c alimask -l wid -d 'for --wblosum: set identity cutoff  [0.62]  (0<=x<=1)' -x
-complete -c alimask -l informat -d 'assert input alifile is in format <s> (no autodetect)' -x
+complete -c alimask -l informat -d 'assert input alifile is in format <s> (no autodetect)' -r
 complete -c alimask -l seed -d 'set RNG seed to <n> (if 0: one-time arbitrary seed)  [42]' -x

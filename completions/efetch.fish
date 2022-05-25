@@ -11,7 +11,7 @@ complete -c efetch -o strand -d 'Strand of DNA to retrieve: 1 for plus, 2 for mi
 complete -c efetch -o chr_start -d 'First sequence position to retrieve (0-based).' -x
 complete -c efetch -o chr_stop -d 'Last sequence position to retrieve (1-based).' -x
 complete -c efetch -o complexity -d 'How much context to fetch: 0 default 1 Bioseq 3 Nuc-prot set' -x
-complete -c efetch -o extend -d 'Extend sequence retrieval by N residues in both directions.' -x
+complete -c efetch -o extend -d 'Extend sequence retrieval by N residues in both directions.' -r
 complete -c efetch -o extrafeat -d 'Bit flag specifying extra features.' -x
 complete -c efetch -o raw -d 'Skip database-specific XML modifications.'
 complete -c efetch -o json -d 'Convert adjusted XML output to JSON.'

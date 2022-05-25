@@ -19,8 +19,8 @@ complete -k -c bamtools -n __fish_use_subcommand -x -a convert -d 'Converts betw
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o in -d 'the input BAM file(s) [stdin]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o list -d 'the input BAM file list, one line per file' -r
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o out -d 'the output BAM file [stdout]' -r
-complete -c bamtools -n "__fish_seen_subcommand_from convert" -o format -d 'the output file format - see README for recognized formats' -x
-complete -c bamtools -n "__fish_seen_subcommand_from convert" -o region -d 'genomic region.' -x
+complete -c bamtools -n "__fish_seen_subcommand_from convert" -o format -d 'the output file format - see README for recognized formats' -r
+complete -c bamtools -n "__fish_seen_subcommand_from convert" -o region -d 'genomic region.' -r
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o fasta -d 'FASTA reference file' -r
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o mapqual -d 'print the mapping qualities'
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o noheader -d 'omit the SAM header from output'
@@ -30,7 +30,7 @@ complete -c bamtools -n "__fish_seen_subcommand_from convert" -l help -s h -d 's
 
 complete -c bamtools -n "__fish_seen_subcommand_from count" -o in -d 'the input BAM file(s) [stdin]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from count" -o list -d 'the input BAM file list, one line per file' -r
-complete -c bamtools -n "__fish_seen_subcommand_from count" -o region -d 'genomic region.' -x
+complete -c bamtools -n "__fish_seen_subcommand_from count" -o region -d 'genomic region.' -r
 complete -c bamtools -n "__fish_seen_subcommand_from count" -l help -s h -d 'shows this help text'
 
 
@@ -94,7 +94,7 @@ complete -c bamtools -n "__fish_seen_subcommand_from merge" -l help -s h -d 'sho
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o in -d 'the input BAM file [stdin]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o list -d 'the input BAM file list, one line per file' -r
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o out -d 'the output BAM file [stdout]' -r
-complete -c bamtools -n "__fish_seen_subcommand_from random" -o region -d 'only pull random alignments from within this genomic region.' -x
+complete -c bamtools -n "__fish_seen_subcommand_from random" -o region -d 'only pull random alignments from within this genomic region.' -r
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o forceCompression -d 'if results are sent to stdout (like when piping to another tool), default behavior is to leave output uncompressed.'
 complete -c bamtools -n "__fish_seen_subcommand_from random" -s n -d 'number of alignments to grab.' -x
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o seed -d 'random number generator seed (for repeatable results).' -x
@@ -129,21 +129,21 @@ complete -c bamtools -n "__fish_seen_subcommand_from revert" -l help -s h -d 'sh
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o in -d 'the input BAM file [stdin]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o out -d 'the output BAM file [stdout]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o byname -d 'sort by alignment name'
-complete -c bamtools -n "__fish_seen_subcommand_from sort" -s n -d 'max number of alignments per tempfile [500000]' -x
+complete -c bamtools -n "__fish_seen_subcommand_from sort" -s n -d 'max number of alignments per tempfile [500000]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o mem -d 'max memory to use [1024]' -x
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -l help -s h -d 'shows this help text'
 
 
 
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o in -d 'the input BAM file [stdin]' -r
-complete -c bamtools -n "__fish_seen_subcommand_from split" -o refPrefix -d 'custom prefix for splitting by references.' -x
-complete -c bamtools -n "__fish_seen_subcommand_from split" -o tagPrefix -d 'custom prefix for splitting by tags.' -x
+complete -c bamtools -n "__fish_seen_subcommand_from split" -o refPrefix -d 'custom prefix for splitting by references.' -r
+complete -c bamtools -n "__fish_seen_subcommand_from split" -o tagPrefix -d 'custom prefix for splitting by tags.' -r
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o stub -d 'prefix stub for output BAM files (default behavior is to use input filename, without .bam extension, as stub).' -r
-complete -c bamtools -n "__fish_seen_subcommand_from split" -o tagListDelim -d 'delimiter used to separate values in the filenames generated from splitting on list-type tags [--]' -x
+complete -c bamtools -n "__fish_seen_subcommand_from split" -o tagListDelim -d 'delimiter used to separate values in the filenames generated from splitting on list-type tags [--]' -r
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o mapped -d 'split mapped/unmapped alignments'
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o paired -d 'split single-end/paired-end alignments'
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o reference -d 'split alignments by reference'
-complete -c bamtools -n "__fish_seen_subcommand_from split" -o tag -d 'splits alignments based on all values of TAG encountered (i.e. -tag RG creates a BAM file for each read group in original BAM file)' -x
+complete -c bamtools -n "__fish_seen_subcommand_from split" -o tag -d 'splits alignments based on all values of TAG encountered (i.e. -tag RG creates a BAM file for each read group in original BAM file)' -r
 complete -c bamtools -n "__fish_seen_subcommand_from split" -l help -s h -d 'shows this help text'
 
 

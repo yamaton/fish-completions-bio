@@ -5,7 +5,7 @@ complete -c fastp -s o -l out1 -d 'read1 output file name (string [=])' -r
 complete -c fastp -s I -l in2 -d 'read2 input file name (string [=])' -r
 complete -c fastp -s O -l out2 -d 'read2 output file name (string [=])' -r
 complete -c fastp -l unpaired1 -d 'for PE input, if read1 passed QC but read2 not, it will be written to unpaired1.' -x
-complete -c fastp -l unpaired2 -d 'for PE input, if read2 passed QC but read1 not, it will be written to unpaired2.' -x
+complete -c fastp -l unpaired2 -d 'for PE input, if read2 passed QC but read1 not, it will be written to unpaired2.' -r
 complete -c fastp -l failed_out -d 'specify the file to store reads that cannot pass the filters.' -r
 complete -c fastp -s m -l merge -d 'for paired-end input, merge each pair of reads into a single read if they are overlapped.'
 complete -c fastp -l merged_out -d 'in the merging mode, specify the file name to store merged output, or specify --stdout to stream the merged output (string [=])' -r
@@ -74,9 +74,9 @@ complete -c fastp -s j -l json -d 'the json format report file name (string [=fa
 complete -c fastp -s h -l html -d 'the html format report file name (string [=fastp.html])' -r
 complete -c fastp -s R -l report_title -d 'should be quoted with \' or ", default is "fastp report" (string [=fastp report])' -x
 complete -c fastp -s w -l thread -d 'worker thread number, default is 2 (int [=2])' -x
-complete -c fastp -s s -l split -d 'split output by limiting total split file number with this option (2~999), a sequential number prefix will be added to output name ( 0001.out.fq, 0002.out.fq...), disabled by default (int [=0])' -x
-complete -c fastp -s S -l split_by_lines -d 'split output by limiting lines of each file with this option(>=1000), a sequential number prefix will be added to output name ( 0001.out.fq, 0002.out.fq...), disabled by default (long [=0])' -x
-complete -c fastp -s d -l split_prefix_digits -d 'the digits for the sequential number padding (1~10), default is 4, so the filename will be padded as 0001.xxx, 0 to disable padding (int [=4])' -x
+complete -c fastp -s s -l split -d 'split output by limiting total split file number with this option (2~999), a sequential number prefix will be added to output name ( 0001.out.fq, 0002.out.fq...), disabled by default (int [=0])' -r
+complete -c fastp -s S -l split_by_lines -d 'split output by limiting lines of each file with this option(>=1000), a sequential number prefix will be added to output name ( 0001.out.fq, 0002.out.fq...), disabled by default (long [=0])' -r
+complete -c fastp -s d -l split_prefix_digits -d 'the digits for the sequential number padding (1~10), default is 4, so the filename will be padded as 0001.xxx, 0 to disable padding (int [=4])' -r
 complete -c fastp -l cut_by_quality5 -d 'DEPRECATED, use --cut_front instead.'
 complete -c fastp -l cut_by_quality3 -d 'DEPRECATED, use --cut_tail instead.'
 complete -c fastp -l cut_by_quality_aggressive -d 'DEPRECATED, use --cut_right instead.'

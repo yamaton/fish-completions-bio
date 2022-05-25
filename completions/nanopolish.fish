@@ -24,8 +24,8 @@ complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s q -l
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s t -l threads -d 'use NUM threads (default: 1)' -x
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l watch -d 'watch the sequencing run directory DIR and call methylation as data is generated' -r
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l watch-write-bam -d 'in watch mode, write the alignments for each fastq'
-complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s c -l watch-process-total -d 'in watch mode, there are TOTAL calling processes running against this directory' -x
-complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s i -l watch-process-index -d 'in watch mode, the index of this process is IDX the previous two options allow you to run multiple independent methylation calling processes against a single directory.' -x
+complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s c -l watch-process-total -d 'in watch mode, there are TOTAL calling processes running against this directory' -r
+complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s i -l watch-process-index -d 'in watch mode, the index of this process is IDX the previous two options allow you to run multiple independent methylation calling processes against a single directory.' -r
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l progress -d 'print out a progress message'
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s K -l batchsize -d 'the batch size (default: 512)' -x
 
@@ -90,7 +90,7 @@ complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -s b -l bam 
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -s g -l genome -d 'the reference genome is in FILE' -r
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -s t -l threads -d 'use NUM threads (default: 1)' -x
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l filter-policy -d 'filter reads for [R7] or [R9] project' -x
-complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -s s -l out-suffix -d 'name output files like <strand>.out_suffix' -x
+complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -s s -l out-suffix -d 'name output files like <strand>.out_suffix' -r
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l out-fofn -d 'write the names of the output models into FILE' -r
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l rounds -d 'number of training rounds to perform' -x
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l max-reads -d 'stop after processing NUM reads in each round' -x
