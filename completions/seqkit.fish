@@ -288,7 +288,7 @@ complete -c seqkit -n "__fish_seen_subcommand_from fx2tab" -s j -l threads -d 'n
 
 
 
-complete -c seqkit -n "__fish_seen_subcommand_from genautocomplete" -l file -d 'autocompletion file (default "/home/vierbein/.bash_completion.d/seqkit.sh")' -r
+complete -c seqkit -n "__fish_seen_subcommand_from genautocomplete" -l file -d 'autocompletion file (default "~/.bash_completion.d/seqkit.sh")' -r
 complete -c seqkit -n "__fish_seen_subcommand_from genautocomplete" -s h -l help -d 'help for genautocomplete'
 complete -c seqkit -n "__fish_seen_subcommand_from genautocomplete" -l shell -d 'autocompletion type (bash|zsh|fish|powershell) (default "bash")' -x
 complete -c seqkit -n "__fish_seen_subcommand_from genautocomplete" -l alphabet-guess-seq-length -d 'length of sequence prefix of the first FASTA record based on which seqkit guesses the sequence type (0 for whole seq) (default 10000)' -x
