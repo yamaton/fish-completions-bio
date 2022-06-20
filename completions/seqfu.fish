@@ -89,15 +89,27 @@ complete -c seqfu -n "__fish_seen_subcommand_from list" -l help -d 'Show this he
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s 1 -l for-tag -d 'String found in filename of forward reads [default: _R1]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s 2 -l rev-tag -d 'String found in filename of forward reads [default: _R2]' -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s s -l split -d 'Separator used in filename to identify the sample ID [default: _]' -r
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s f -l format -d 'Output format: dadaist, manifest, qiime1, qiime2, irida [default: manifest]' -x
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s P -l project -d 'Project ID (only for irida)' -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l pos -d 'Which part of the filename is the Sample ID [default: 1]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s f -l format -d 'Output format: dadaist, irida, manifest, metaphage, qiime1, qiime2 [default: manifest]' -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l pe -d 'Enforce paired-end reads (not supported)'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s p -l add-path -d 'Add the reads absolute path as column'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s c -l counts -d 'Add the number of reads as a property column'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s t -l threads -d 'Number of simultaneously opened files [default: 2]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s P -l project -d 'Project ID (only for irida)' -x
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l meta-split -d 'Separator in the SampleID to extract metadata, used in MetaPhage [default: _]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l meta-part -d 'Which part of the SampleID to extract metadata, used in MetaPhage [default: 1]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l meta-default -d 'Default value for metadata, used in MetaPhage [default: Cond]' -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s v -l verbose -d 'Verbose output'
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s h -l help -d 'Show this help'
+
+
+
+complete -c seqfu -n "__fish_seen_subcommand_from rotate" -s i -l start-pos -d 'Restart from base POS, where 1 is the first base [default: 1]' -x
+complete -c seqfu -n "__fish_seen_subcommand_from rotate" -s m -l motif -d 'Rotate sequences using motif STR as the new start, where STR is a string of bases' -x
+complete -c seqfu -n "__fish_seen_subcommand_from rotate" -s s -l skip-unmached -d 'If a motif is provided, skip sequences that do not match the motif'
+complete -c seqfu -n "__fish_seen_subcommand_from rotate" -s r -l revcomp -d 'Also scan for reverse complemented motif'
+complete -c seqfu -n "__fish_seen_subcommand_from rotate" -s v -l verbose -d 'Verbose output'
+complete -c seqfu -n "__fish_seen_subcommand_from rotate" -s h -l help -d 'Show this help'
 
 
 
@@ -112,8 +124,14 @@ complete -c seqfu -n "__fish_seen_subcommand_from sort" -s h -l help -d 'Show th
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s a -l abs-path -d 'Print absolute paths'
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s b -l basename -d 'Print only filenames'
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s n -l nice -d 'Print nice terminal table'
-complete -c seqfu -n "__fish_seen_subcommand_from stats" -l csv -d 'Separate with commas (default: tabs)'
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -s j -l json -d 'Print json (experimental)'
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -s s -l sort-by -d 'Sort by KEY from: filename, counts, n50, tot, avg, min, max descending for values, ascending for filenames [default: none]' -r
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -s r -l reverse -d 'Reverse sort order'
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -s t -l thousands -d 'Add thousands separator'
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -l csv -d 'Separate output by commas instead of tabs'
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -l gc -d 'Also print %GC'
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -l multiqc -d 'Saves a MultiQC report to FILE (suggested: name_mqc.txt)' -r
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -l precision -d 'Number of decimal places to round to [default: 2]' -x
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s v -l verbose -d 'Verbose output'
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s h -l help -d 'Show this help'
 

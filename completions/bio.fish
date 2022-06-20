@@ -1,5 +1,8 @@
 # Auto-generated with h2o
 
+complete -k -c bio -n __fish_use_subcommand -x -a uniq -d 'find unique elements'
+complete -k -c bio -n __fish_use_subcommand -x -a comm -d 'find common elements'
+complete -k -c bio -n __fish_use_subcommand -x -a gtf -d 'parse GTF to create mappings'
 complete -k -c bio -n __fish_use_subcommand -x -a mygene -d 'connect to mygene interface'
 complete -k -c bio -n __fish_use_subcommand -x -a meta -d 'download metadata by taxonomy ID'
 complete -k -c bio -n __fish_use_subcommand -x -a explain -d 'explain biological terms'
@@ -143,3 +146,28 @@ complete -c bio -n "__fish_seen_subcommand_from mygene" -s l -l limit -d 'downlo
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s s -l species -d 'species'
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s f -l fields -d 'fields'
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s S -l scopes -d 'mbol scopes' -x
+
+
+
+complete -c bio -n "__fish_seen_subcommand_from gtf" -s h -l help -d 'show this help message and exit'
+complete -c bio -n "__fish_seen_subcommand_from gtf" -s T -l type -d 'GTF type filter' -x
+complete -c bio -n "__fish_seen_subcommand_from gtf" -s s -l source -d 'source attribute' -x
+complete -c bio -n "__fish_seen_subcommand_from gtf" -s t -l target -d 'target attribute' -x
+complete -c bio -n "__fish_seen_subcommand_from gtf" -s l -l limit -d 'how many lines to parse' -x
+
+
+
+complete -c bio -n "__fish_seen_subcommand_from comm" -s h -l help -d 'show this help message and exit'
+complete -c bio -n "__fish_seen_subcommand_from comm" -s 1 -l uniq1 -d 'prints elements unique to file 1'
+complete -c bio -n "__fish_seen_subcommand_from comm" -s 2 -l uniq2 -d 'prints elements unique to file 2'
+complete -c bio -n "__fish_seen_subcommand_from comm" -s 3 -l union -d 'prints elements present in both files'
+complete -c bio -n "__fish_seen_subcommand_from comm" -s t -l tab -d 'tab delimited (default is csv)'
+complete -c bio -n "__fish_seen_subcommand_from comm" -s x -l col1 -d 'column index for file 1 [default=1]' -r
+complete -c bio -n "__fish_seen_subcommand_from comm" -s y -l col2 -d 'column index for file 2 [default=1]' -r
+
+
+
+complete -c bio -n "__fish_seen_subcommand_from uniq" -s h -l help -d 'show this help message and exit'
+complete -c bio -n "__fish_seen_subcommand_from uniq" -s f -l field -d 'field index (1 by default)' -x
+complete -c bio -n "__fish_seen_subcommand_from uniq" -s c -l count -d 'produce counts'
+complete -c bio -n "__fish_seen_subcommand_from uniq" -s t -l tab -d 'tab delimited (default is csv)'
