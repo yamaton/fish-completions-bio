@@ -1,5 +1,6 @@
 # Auto-generated with h2o
 
+complete -c minimap2 -s x -d 'preset (always applied before other options; see minimap2.1 for details) []' -x
 complete -c minimap2 -s H -d 'use homopolymer-compressed k-mer (preferrable for PacBio)'
 complete -c minimap2 -s k -d 'k-mer size (no larger than 28) [15]' -x
 complete -c minimap2 -s w -d 'minimizer window size [10]' -x
@@ -34,4 +35,3 @@ complete -c minimap2 -s Y -d 'use soft clipping for supplementary alignments'
 complete -c minimap2 -s t -d 'number of threads [3]' -x
 complete -c minimap2 -s K -d 'minibatch size for mapping [500M]' -x
 complete -c minimap2 -l version -d 'show version number'
-complete -c minimap2 -s x -d 'preset (always applied before other options; see minimap2.1 for details) [] - map-pb/map-ont - PacBio CLR/Nanopore vs reference mapping - map-hifi - PacBio HiFi reads vs reference mapping - ava-pb/ava-ont - PacBio/Nanopore read overlap - asm5/asm10/asm20 - asm-to-ref mapping, for ~0.1/1/5% sequence divergence - splice/splice:hq - long-read/Pacbio-CCS spliced alignment - sr - genomic short-read mapping' -x

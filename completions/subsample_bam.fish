@@ -2,6 +2,7 @@
 
 complete -c subsample_bam -s h -l help -d 'show this help message and exit'
 complete -c subsample_bam -s o -l output_prefix -d 'Output prefix (default: sub_sampled)' -x
+complete -c subsample_bam -s r -l regions -d 'Only process given regions.' -x
 complete -c subsample_bam -s p -l profile -d 'Stride in genomic coordinates for depth profile.' -r
 complete -c subsample_bam -s O -l orientation -d 'Sample only forward or reverse reads.' -x
 complete -c subsample_bam -s t -l threads -d 'Number of threads to use.' -x
