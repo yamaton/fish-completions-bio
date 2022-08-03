@@ -39,9 +39,9 @@ complete -c medaka -n "__fish_seen_subcommand_from features" -l truth -d 'Bam of
 complete -c medaka -n "__fish_seen_subcommand_from features" -l truth_haplotag -d 'Two-letter tag defining haplotype of alignments for polyploidy labels.' -x
 complete -c medaka -n "__fish_seen_subcommand_from features" -l threads -d 'Number of threads for parallel execution.' -x
 complete -c medaka -n "__fish_seen_subcommand_from features" -l label_scheme -d 'Labelling scheme.' -x
-complete -c medaka -n "__fish_seen_subcommand_from features" -l label_scheme_args -d 'Y1=VAL1 KEY2=VAL2a,VAL2b...' -x
+complete -c medaka -n "__fish_seen_subcommand_from features" -l label_scheme_args -d 'Label scheme key-word arguments.' -x
 complete -c medaka -n "__fish_seen_subcommand_from features" -l feature_encoder -d 'FeatureEncoder used to create the features.' -x
-complete -c medaka -n "__fish_seen_subcommand_from features" -l feature_encoder_args -d 'KEY1=VAL1 KEY2=VAL2a,VAL2b...'
+complete -c medaka -n "__fish_seen_subcommand_from features" -l feature_encoder_args -d 'Feature encoder key-word arguments.' -x
 
 
 
@@ -60,7 +60,7 @@ complete -c medaka -n "__fish_seen_subcommand_from train" -l device -d 'GPU devi
 complete -c medaka -n "__fish_seen_subcommand_from train" -l optimizer -d 'Optimizer to use.' -x
 complete -c medaka -n "__fish_seen_subcommand_from train" -l optim_args -d 'Optimizer key-word arguments.' -x
 complete -c medaka -n "__fish_seen_subcommand_from train" -l validation_split -d 'Fraction of data to validate on.' -x
-complete -c medaka -n "__fish_seen_subcommand_from train" -l validation_features -d 'VALIDATION_FEATURES [VALIDATION_FEATURES ...] Paths to validation data (default: None)'
+complete -c medaka -n "__fish_seen_subcommand_from train" -l validation_features -d 'Paths to validation data (default: None)' -r
 
 
 
@@ -91,12 +91,14 @@ complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l batch_size -d '
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l chunk_len -d 'Chunk length of samples.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l chunk_ovlp -d 'Overlap of chunks.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l model -d 'Model to use.' -x
+complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l min_depth -d 'Sites with depth lower than min_depth will not be polished.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l method -d 'Pre-medaka consensus generation method.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l depth -d 'Minimum subread count.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l length -d 'Minimum median subread length.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l threads -d 'Number of threads used by inference.' -x
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l check_output -d 'Verify integrity of output file after inference.'
 complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l save_features -d 'Save features with consensus probabilities.'
+complete -c medaka -n "__fish_seen_subcommand_from smolecule" -l qualities -d 'Output consensus with per-base quality scores (fastq).'
 
 
 
@@ -118,8 +120,10 @@ complete -c medaka -n "__fish_seen_subcommand_from stitch" -s h -l help -d 'show
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l debug -d 'Verbose logging of debug information.'
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l quiet -d 'Minimal logging; warnings only).'
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l regions -d 'Genomic ref_names to process, or a bed file.' -r
+complete -c medaka -n "__fish_seen_subcommand_from stitch" -l min_depth -d 'Sites with depth lower than min_depth will not be polished.' -x
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l threads -d 'Number of worker processes to use.' -x
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l no-fillgaps -d 'Don\'t fill gaps in consensus sequence with draft sequence.'
+complete -c medaka -n "__fish_seen_subcommand_from stitch" -l qualities -d 'Output with per-base quality scores (fastq).'
 
 
 
