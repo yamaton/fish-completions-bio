@@ -1,0 +1,18 @@
+# Auto-generated with h2o
+
+complete -c dwgsim_eval -s "a" -d "INT split by [0]:"
+complete -c dwgsim_eval -s "b" -d "alignments are from BWA (SOLiD only) [False]"
+complete -c dwgsim_eval -s "c" -d "color space alignments [False]"
+complete -c dwgsim_eval -s "d" -d "INT divide quality/alignment score by this factor [1]"
+complete -c dwgsim_eval -s "g" -d "gap \"wiggle\" [5]"
+complete -c dwgsim_eval -s "m" -d "consecutive alignments with the same name (and end for multi-ends) should be treated as multi-mapped reads [False]"
+complete -c dwgsim_eval -s "n" -d "INT number of raw input paired-end reads (otherwise, inferred from all SAM records present) [0]"
+complete -c dwgsim_eval -s "q" -d "INT consider only alignments with this mapping quality or greater [0]"
+complete -c dwgsim_eval -s "z" -d "input contains only single end reads [False]"
+complete -c dwgsim_eval -s "S" -d "input is SAM [False]"
+complete -c dwgsim_eval -s "p" -d "print incorrect alignments [False]"
+complete -c dwgsim_eval -s "s" -d "INT consider only alignments with the number of specified SNPs [-1]"
+complete -c dwgsim_eval -s "e" -d "INT consider only alignments with the number of specified errors [-1]"
+complete -c dwgsim_eval -s "i" -d "consider only alignments with indels [False]"
+complete -c dwgsim_eval -s "P" -d "STRING a read prefix that was prepended to each read name [not using]"
+complete -c dwgsim_eval -s "h" -d "print this help message"
