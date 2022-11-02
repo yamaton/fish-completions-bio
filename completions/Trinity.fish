@@ -16,7 +16,7 @@ complete -c Trinity -l "long_reads_bam" -d "long reads to include for genome-gui
 complete -c Trinity -l "jaccard_clip" -d "option, set if you have paired reads and you expect high gene density with UTR overlap (use FASTQ input file format for reads)."
 complete -c Trinity -l "trimmomatic" -d "run Trimmomatic to quality trim reads   see '--quality_trimming_params' under full usage info for tailored settings."
 complete -c Trinity -l "output" -d "name of directory for output (will be   created if it doesn't already exist) default: (your current working directory) note: must include 'trinity' in the name as a safety precaution! )" -r
-complete -c Trinity -l "full_cleanup" -d "only retain the Trinity fasta file, rename as ${output_dir}.Trinity.fasta"
+complete -c Trinity -l "full_cleanup" -d "only retain the Trinity fasta file, rename as \${output_dir}.Trinity.fasta"
 complete -c Trinity -l "cite" -d "show the Trinity literature citation"
 complete -c Trinity -l "verbose" -d "provide additional job status info during the run."
 complete -c Trinity -l "version" -d "reports Trinity version (Trinity-v2.13.2) and exits."

@@ -26,7 +26,7 @@ complete -c fasterq-dump -s "B" -l "bases" -d "filter output by matching against
 complete -c fasterq-dump -s "A" -l "append" -d "append to output-file, instead of overwriting it"
 complete -c fasterq-dump -l "fasta" -d "produce FASTA output"
 complete -c fasterq-dump -l "fasta-unsorted" -d "produce FASTA output, unsorted"
-complete -c fasterq-dump -l "seq-defline" -d "custom defline for sequence: $ac=accession, $sn=spot-name, $sg=spot-group, $si=spot-id, $ri=read-id, $rl=read-length"
+complete -c fasterq-dump -l "seq-defline" -d "custom defline for sequence: \$ac=accession, \$sn=spot-name, \$sg=spot-group, \$si=spot-id, \$ri=read-id, \$rl=read-length"
 complete -c fasterq-dump -l "qual-defline" -d "custom defline for qualities (see seq-defline)"
 complete -c fasterq-dump -s "U" -l "only-unaligned" -d "process only unaligned reads"
 complete -c fasterq-dump -s "a" -l "only-aligned" -d "process only aligned reads"

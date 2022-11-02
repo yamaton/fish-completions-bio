@@ -52,7 +52,7 @@ complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "tmscore-th
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "tmalign-fast" -d "turn on fast search in TM-align [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "alignment-type" -d "How to compute the alignment:   0: 3di alignment 1: TM alignment 2: 3Di+AA [2]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "tar-include" -d "Include file names based on this regex [.*]" -r
-complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "tar-exclude" -d "Exclude file names based on this regex [^$]" -r
+complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "tar-exclude" -d "Exclude file names based on this regex [^\$]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "format-mode" -d "0: BLAST-TAB 1: SAM 2: BLAST-TAB + query/db length 3: Pretty HTML 4: BLAST-TAB + column headers BLAST-TAB (0) and BLAST-TAB + column headers (4) support custom output formats (--format-output) [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen tstart,tend,tlen,alnlen,raw,bits,cigar,qseq,tseq,qheader,theader,qaln,taln,mismatch,qcov,tcov qset,qsetid,tset,tsetid,taxid,taxname,taxlineagebla,qca,tca,t,u,alntmscore" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
@@ -108,7 +108,7 @@ complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "tmscore-thres
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "tmalign-fast" -d "turn on fast search in TM-align [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "alignment-type" -d "How to compute the alignment:   0: 3di alignment 1: TM alignment 2: 3Di+AA [2]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "tar-include" -d "Include file names based on this regex [.*]" -r
-complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "tar-exclude" -d "Exclude file names based on this regex [^$]" -r
+complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "tar-exclude" -d "Exclude file names based on this regex [^\$]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "format-mode" -d "0: BLAST-TAB 1: SAM 2: BLAST-TAB + query/db length 3: Pretty HTML 4: BLAST-TAB + column headers BLAST-TAB (0) and BLAST-TAB + column headers (4) support custom output formats (--format-output) [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen tstart,tend,tlen,alnlen,raw,bits,cigar,qseq,tseq,qheader,theader,qaln,taln,mismatch,qcov,tcov qset,qsetid,tset,tsetid,taxid,taxname,taxlineagebla,qca,tca,t,u,alntmscore" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
@@ -131,7 +131,7 @@ complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "db-output" -d
 
 
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "tar-include" -d "Include file names based on this regex [.*]" -r
-complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "tar-exclude" -d "Exclude file names based on this regex [^$]" -r
+complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "tar-exclude" -d "Exclude file names based on this regex [^\$]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "chain-name-mode" -d "Add chain to name: 0: auto 1: always add" -x

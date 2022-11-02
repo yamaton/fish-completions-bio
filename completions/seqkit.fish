@@ -678,7 +678,7 @@ complete -c seqkit -n "__fish_seen_subcommand_from split" -s "e" -l "extension" 
 complete -c seqkit -n "__fish_seen_subcommand_from split" -s "f" -l "force" -d "overwrite output directory"
 complete -c seqkit -n "__fish_seen_subcommand_from split" -s "h" -l "help" -d "help for split"
 complete -c seqkit -n "__fish_seen_subcommand_from split" -s "k" -l "keep-temp" -d "keep temporary FASTA and .fai file when using 2-pass mode"
-complete -c seqkit -n "__fish_seen_subcommand_from split" -s "O" -l "out-dir" -d "output directory (default value is $infile.split)" -r
+complete -c seqkit -n "__fish_seen_subcommand_from split" -s "O" -l "out-dir" -d "output directory (default value is \$infile.split)" -r
 complete -c seqkit -n "__fish_seen_subcommand_from split" -s "2" -l "two-pass" -d "two-pass mode read files twice to lower memory usage."
 complete -c seqkit -n "__fish_seen_subcommand_from split" -l "alphabet-guess-seq-length" -d "length of sequence prefix of the first FASTA record based on which seqkit guesses the sequence type (0 for whole seq) (default 10000)" -x
 complete -c seqkit -n "__fish_seen_subcommand_from split" -l "id-ncbi" -d "FASTA head is NCBI-style, e.g. >gi|110645304|ref|NC_002516.2| Pseud..."
@@ -701,7 +701,7 @@ complete -c seqkit -n "__fish_seen_subcommand_from split2" -l "by-size-prefix" -
 complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "e" -l "extension" -d "set output file extension, e.g., \".gz\", \".xz\", or \".zst\"" -r
 complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "f" -l "force" -d "overwrite output directory"
 complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "h" -l "help" -d "help for split2"
-complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "O" -l "out-dir" -d "output directory (default value is $infile.split)" -r
+complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "O" -l "out-dir" -d "output directory (default value is \$infile.split)" -r
 complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "1" -l "read1" -d "(gzipped) read1 file" -r
 complete -c seqkit -n "__fish_seen_subcommand_from split2" -s "2" -l "read2" -d "(gzipped) read2 file" -r
 complete -c seqkit -n "__fish_seen_subcommand_from split2" -l "alphabet-guess-seq-length" -d "length of sequence prefix of the first FASTA record based on which seqkit guesses the sequence type (0 for whole seq) (default 10000)" -x

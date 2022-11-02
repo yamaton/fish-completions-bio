@@ -26,7 +26,7 @@ complete -c jellyfish -n "__fish_seen_subcommand_from count" -l "sam" -d "SAM/BA
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "F" -l "Files" -d "Number files open simultaneously (1)" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "g" -l "generator" -d "File of commands generating fast[aq]" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "G" -l "Generators" -d "Number of generators run simultaneously (1)" -x
-complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "S" -l "shell" -d "Shell used to run generator commands ($SHELL or /bin/sh)" -x
+complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "S" -l "shell" -d "Shell used to run generator commands (\$SHELL or /bin/sh)" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "o" -l "output" -d "Output file (mer_counts.jf)" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "c" -l "counter-len" -d "Length bits of counting field (7)" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -l "out-counter-len" -d "Length in bytes of counter field in output (4)" -x
@@ -59,7 +59,7 @@ complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "o" -l "output" -d 
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "F" -l "Files" -d "Number files open simultaneously (1)" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "g" -l "generator" -d "File of commands generating fast[aq]" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "G" -l "Generators" -d "Number of generators run simultaneously (1)" -x
-complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "S" -l "shell" -d "Shell used to run generator commands ($SHELL or /bin/sh)" -x
+complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "S" -l "shell" -d "Shell used to run generator commands (\$SHELL or /bin/sh)" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -l "timing" -d "Print timing information" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "U" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "V" -l "version" -d "Version"

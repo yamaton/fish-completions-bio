@@ -105,7 +105,7 @@ complete -c paftools.js -n "__fish_seen_subcommand_from pafcmp" -s "q" -d "min m
 complete -c paftools.js -n "__fish_seen_subcommand_from junceval" -s "l" -d "tolerance of junction positions (0 for exact) [0]" -x
 complete -c paftools.js -n "__fish_seen_subcommand_from junceval" -s "p" -d "print overlapping introns"
 complete -c paftools.js -n "__fish_seen_subcommand_from junceval" -s "e" -d "print erroreous overlapping introns"
-complete -c paftools.js -n "__fish_seen_subcommand_from junceval" -s "c" -d "only consider alignments to /^(chr)?([0-9]+|X|Y)$/"
+complete -c paftools.js -n "__fish_seen_subcommand_from junceval" -s "c" -d "only consider alignments to /^(chr)?([0-9]+|X|Y)\$/"
 
 
 

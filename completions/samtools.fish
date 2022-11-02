@@ -269,7 +269,7 @@ complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s "M" -l "output-
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l "no-output-ins" -d "Do not output the inserted bases in the sequence column."
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l "no-output-ins-mods" -d "Outputs the inserted bases in the sequence, but excluding any base modifications."
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l "no-output-del" -d "Do not output deleted reference bases in the sequence column."
-complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l "no-output-ends" -d "Removes the \8220^\8221 (with mapping quality) and \8220$\8221 markup from the sequence column."
+complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l "no-output-ends" -d "Removes the \8220^\8221 (with mapping quality) and \8220\$\8221 markup from the sequence column."
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -l "reverse-del" -d "Mark the deletions on the reverse strand with the character #, instead of the usual *."
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s "a" -d "Output all positions, including those with zero depth."
 complete -c samtools -n "__fish_seen_subcommand_from mpileup" -s "a" -o "aa" -d "Output absolutely all positions, including unused reference sequences."

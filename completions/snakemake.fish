@@ -3,7 +3,7 @@
 complete -c snakemake -s "h" -l "help" -d "show this help message and exit"
 complete -c snakemake -l "dry-run" -l "dryrun" -s "n" -d "Do not execute anything, and display what would be done."
 complete -c snakemake -l "profile" -d "Name of profile to use for configuring Snakemake." -r
-complete -c snakemake -l "cache" -d "Store output files of given rules in a central cache given by the environment variable $SNAKEMAKE_OUTPUT_CACHE." -r
+complete -c snakemake -l "cache" -d "Store output files of given rules in a central cache given by the environment variable \$SNAKEMAKE_OUTPUT_CACHE." -r
 complete -c snakemake -l "snakefile" -s "s" -d "The workflow definition in form of a snakefile.Usually, you should not need to specify this." -r
 complete -c snakemake -l "cores" -s "c" -d "Use at most N CPU cores/jobs in parallel." -x
 complete -c snakemake -l "jobs" -s "j" -d "Use at most N CPU cluster/cloud jobs in parallel." -x

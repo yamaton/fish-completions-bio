@@ -912,11 +912,11 @@ complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "t" -l "tool" 
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "n" -l "name" -d "Name for new tool (user facing)" -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "version" -d "Tool XML version." -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "d" -l "description" -d "Short description for new tool (user facing)" -x
-complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "c" -l "command" -d "Command potentially including cheetah variables ()(e.g. 'seqtk seq -A $input > $output')" -x
+complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "c" -l "command" -d "Command potentially including cheetah variables ()(e.g. 'seqtk seq -A \$input > \$output')" -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "example_command" -d "Example to command with paths to build Cheetah template from (e.g. 'seqtk seq -A 2.fastq > 2.fasta')." -r
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "example_input" -d "For use with --example_command, replace input file (e.g. 2.fastq with a data input parameter)." -r
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "example_output" -d "For use with --example_command, replace input file (e.g. 2.fastq with a tool output)." -r
-complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "named_output" -d "Create a named output for use with command block for example specify --named_output=output1.bam and then use '-o $output1' in your command block." -x
+complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "named_output" -d "Create a named output for use with command block for example specify --named_output=output1.bam and then use '-o \$output1' in your command block." -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "input" -d "An input description (e.g. input.fasta)" -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "output" -d "An output location (e.g. output.bam), the Galaxy datatype is inferred from the extension." -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "help_text" -d "Help text (reStructuredText)" -x

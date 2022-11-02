@@ -91,7 +91,7 @@ complete -c singularity -n "__fish_seen_subcommand_from exec" -l "app" -d "set a
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "apply-cgroups" -d "apply cgroups from file for container processes (root only)" -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s "B" -l "bind" -d "a user-bind path specification." -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s "e" -l "cleanenv" -d "clean environment before running container"
-complete -c singularity -n "__fish_seen_subcommand_from exec" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host"
+complete -c singularity -n "__fish_seen_subcommand_from exec" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and \$HOME) instead of sharing filesystems from your host"
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s "C" -l "containall" -d "contain not only file systems, but also PID, IPC, and environment"
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "disable-cache" -d "dont use cache, and dont create cache"
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "dns" -d "list of DNS server separated by commas to add in resolv.conf" -x
@@ -132,7 +132,7 @@ complete -c singularity -n "__fish_seen_subcommand_from exec" -l "vm-cpu" -d "nu
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "vm-err" -d "enable attaching stderr from VM"
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "vm-ip" -d "IP Address to assign for container usage." -x
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "vm-ram" -d "amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default \"1024\")" -x
-complete -c singularity -n "__fish_seen_subcommand_from exec" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)" -r
+complete -c singularity -n "__fish_seen_subcommand_from exec" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and \$HOME (if -c/--contain was also used)" -r
 complete -c singularity -n "__fish_seen_subcommand_from exec" -s "w" -l "writable" -d "by default all Singularity containers are available as read only."
 complete -c singularity -n "__fish_seen_subcommand_from exec" -l "writable-tmpfs" -d "makes the file system accessible as read-write with non persistent data (with overlay support only)"
 
@@ -207,7 +207,7 @@ complete -c singularity -n "__fish_seen_subcommand_from run" -l "app" -d "set an
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "apply-cgroups" -d "apply cgroups from file for container processes (root only)" -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s "B" -l "bind" -d "a user-bind path specification." -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s "e" -l "cleanenv" -d "clean environment before running container"
-complete -c singularity -n "__fish_seen_subcommand_from run" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host"
+complete -c singularity -n "__fish_seen_subcommand_from run" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and \$HOME) instead of sharing filesystems from your host"
 complete -c singularity -n "__fish_seen_subcommand_from run" -s "C" -l "containall" -d "contain not only file systems, but also PID, IPC, and environment"
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "disable-cache" -d "dont use cache, and dont create cache"
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "dns" -d "list of DNS server separated by commas to add in resolv.conf" -x
@@ -248,7 +248,7 @@ complete -c singularity -n "__fish_seen_subcommand_from run" -l "vm-cpu" -d "num
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "vm-err" -d "enable attaching stderr from VM"
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "vm-ip" -d "IP Address to assign for container usage." -x
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "vm-ram" -d "amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default \"1024\")" -x
-complete -c singularity -n "__fish_seen_subcommand_from run" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)" -r
+complete -c singularity -n "__fish_seen_subcommand_from run" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and \$HOME (if -c/--contain was also used)" -r
 complete -c singularity -n "__fish_seen_subcommand_from run" -s "w" -l "writable" -d "by default all Singularity containers are available as read only."
 complete -c singularity -n "__fish_seen_subcommand_from run" -l "writable-tmpfs" -d "makes the file system accessible as read-write with non persistent data (with overlay support only)"
 
@@ -272,7 +272,7 @@ complete -c singularity -n "__fish_seen_subcommand_from shell" -l "app" -d "set 
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "apply-cgroups" -d "apply cgroups from file for container processes (root only)" -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s "B" -l "bind" -d "a user-bind path specification." -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s "e" -l "cleanenv" -d "clean environment before running container"
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host"
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and \$HOME) instead of sharing filesystems from your host"
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s "C" -l "containall" -d "contain not only file systems, but also PID, IPC, and environment"
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "disable-cache" -d "dont use cache, and dont create cache"
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "dns" -d "list of DNS server separated by commas to add in resolv.conf" -x
@@ -315,7 +315,7 @@ complete -c singularity -n "__fish_seen_subcommand_from shell" -l "vm-cpu" -d "n
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "vm-err" -d "enable attaching stderr from VM"
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "vm-ip" -d "IP Address to assign for container usage." -x
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "vm-ram" -d "amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default \"1024\")" -x
-complete -c singularity -n "__fish_seen_subcommand_from shell" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)" -r
+complete -c singularity -n "__fish_seen_subcommand_from shell" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and \$HOME (if -c/--contain was also used)" -r
 complete -c singularity -n "__fish_seen_subcommand_from shell" -s "w" -l "writable" -d "by default all Singularity containers are available as read only."
 complete -c singularity -n "__fish_seen_subcommand_from shell" -l "writable-tmpfs" -d "makes the file system accessible as read-write with non persistent data (with overlay support only)"
 
@@ -338,7 +338,7 @@ complete -c singularity -n "__fish_seen_subcommand_from test" -l "app" -d "set a
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "apply-cgroups" -d "apply cgroups from file for container processes (root only)" -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s "B" -l "bind" -d "a user-bind path specification." -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s "e" -l "cleanenv" -d "clean environment before running container"
-complete -c singularity -n "__fish_seen_subcommand_from test" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host"
+complete -c singularity -n "__fish_seen_subcommand_from test" -s "c" -l "contain" -d "use minimal /dev and empty other directories (e.g. /tmp and \$HOME) instead of sharing filesystems from your host"
 complete -c singularity -n "__fish_seen_subcommand_from test" -s "C" -l "containall" -d "contain not only file systems, but also PID, IPC, and environment"
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "disable-cache" -d "dont use cache, and dont create cache"
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "dns" -d "list of DNS server separated by commas to add in resolv.conf" -x
@@ -379,7 +379,7 @@ complete -c singularity -n "__fish_seen_subcommand_from test" -l "vm-cpu" -d "nu
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "vm-err" -d "enable attaching stderr from VM"
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "vm-ip" -d "IP Address to assign for container usage." -x
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "vm-ram" -d "amount of RAM in MiB to allocate to Virtual Machine (implies --vm) (default \"1024\")" -x
-complete -c singularity -n "__fish_seen_subcommand_from test" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)" -r
+complete -c singularity -n "__fish_seen_subcommand_from test" -s "W" -l "workdir" -d "working directory to be used for /tmp, /var/tmp and \$HOME (if -c/--contain was also used)" -r
 complete -c singularity -n "__fish_seen_subcommand_from test" -s "w" -l "writable" -d "by default all Singularity containers are available as read only."
 complete -c singularity -n "__fish_seen_subcommand_from test" -l "writable-tmpfs" -d "makes the file system accessible as read-write with non persistent data (with overlay support only)"
 

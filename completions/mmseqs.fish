@@ -1393,7 +1393,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from tsv2db" -s "v" -d "Verbosity 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "output-dbtype" -d "Set database type for resulting database: Amino acid sequences 0, Nucl." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "tar-include" -d "Include file names based on this regex [.*]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "tar-exclude" -d "Exclude file names based on this regex [^$]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "tar-exclude" -d "Exclude file names based on this regex [^\$]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
@@ -2494,7 +2494,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "add-self-matche
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "filter-expression" -d "Specify a mathematical expression to filter lines []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "filter-column" -d "column [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "column-to-take" -d "column to take in join mode." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "filter-regex" -d "Regex to select column (example float: [0-9]*(.[0-9]+)? int:[1-9]{1}[0-9]) [^.*$]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "filter-regex" -d "Regex to select column (example float: [0-9]*(.[0-9]+)? int:[1-9]{1}[0-9]) [^.*\$]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "positive-filter" -d "Used in conjunction with --filter-file." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "filter-file" -d "Specify a file that contains the filtering elements []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "beats-first" -d "Filter by comparing each entry to the first entry [0]" -x

@@ -27,9 +27,9 @@ complete -c blobtools -n "__fish_seen_subcommand_from create" -s "d" -l "min_dif
 complete -c blobtools -n "__fish_seen_subcommand_from create" -l "tax_collision_random" -d "Random allocation of taxonomy if highest scoring taxonomies have equal scores (otherwise \"unresolved\") [default: False]"
 complete -c blobtools -n "__fish_seen_subcommand_from create" -l "nodes" -d "NCBI nodes.dmp file." -r
 complete -c blobtools -n "__fish_seen_subcommand_from create" -l "names" -d "NCBI names.dmp file." -r
-complete -c blobtools -n "__fish_seen_subcommand_from create" -l "db" -d "NodesDB file (default: $BLOBTOOLS/data/nodesDB.txt)." -r
+complete -c blobtools -n "__fish_seen_subcommand_from create" -l "db" -d "NodesDB file (default: \$BLOBTOOLS/data/nodesDB.txt)." -r
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "b" -l "bam" -d "BAM file(s), can be specified multiple times" -r
-complete -c blobtools -n "__fish_seen_subcommand_from create" -s "a" -l "cas" -d "CAS file(s) (requires clc_mapping_info in $PATH), can be specified multiple times" -r
+complete -c blobtools -n "__fish_seen_subcommand_from create" -s "a" -l "cas" -d "CAS file(s) (requires clc_mapping_info in \$PATH), can be specified multiple times" -r
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "c" -l "cov" -d "COV file(s), can be specified multiple times" -r
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "C" -l "calculate_cov" -d "Legacy coverage when getting coverage from BAM (does not apply to COV parsing)."
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "o" -l "out" -d "BlobDB output prefix" -x
@@ -117,7 +117,7 @@ complete -c blobtools -n "__fish_seen_subcommand_from covplot" -l "catcolour" -d
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "i" -l "infile" -d "FASTA file of assembly." -r
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "b" -l "bam" -d "BAM file (requires pysam)" -r
-complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "a" -l "cas" -d "CAS file (requires clc_mapping_info in $PATH)" -r
+complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "a" -l "cas" -d "CAS file (requires clc_mapping_info in \$PATH)" -r
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "o" -l "output" -d "Output prefix" -x
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "c" -l "calculate_cov" -d "Legacy coverage, slower."
 
