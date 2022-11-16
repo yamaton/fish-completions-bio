@@ -1,11 +1,6 @@
 # Auto-generated with h2o
 
-complete -c prokka -l "help" -d "This help"
-complete -c prokka -l "version" -d "Print version and exit"
-complete -c prokka -l "citation" -d "Print citation for referencing Prokka"
-complete -c prokka -l "quiet" -d "No screen output (default OFF)"
-complete -c prokka -l "debug" -d "Debug mode: keep all temporary files (default OFF)"
-complete -c prokka -l "dbdir" -d "Prokka database root folders (default '~/miniconda3/envs/prokka/db')" -x
+complete -c prokka -l "dbdir" -d "Prokka database root folders (default '~/.local/share/condax/envs/prokka/db')" -x
 complete -c prokka -l "listdb" -d "List all configured databases"
 complete -c prokka -l "setupdb" -d "Index all installed databases"
 complete -c prokka -l "cleandb" -d "Remove all database indices"
@@ -45,3 +40,8 @@ complete -c prokka -l "rfam" -d "Enable searching for ncRNAs with Infernal+Rfam 
 complete -c prokka -l "norrna" -d "Don't run rRNA search (default OFF)"
 complete -c prokka -l "notrna" -d "Don't run tRNA search (default OFF)"
 complete -c prokka -l "rnammer" -d "Prefer RNAmmer over Barrnap for rRNA prediction (default OFF)"
+complete -c prokka -l "help" -d "This help"
+complete -c prokka -l "version" -d "Print version and exit"
+complete -c prokka -l "citation" -d "Print citation for referencing Prokka"
+complete -c prokka -l "quiet" -d "No screen output (default OFF)"
+complete -c prokka -l "debug" -d "Debug mode: keep all temporary files (default OFF)"

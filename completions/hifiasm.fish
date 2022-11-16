@@ -7,15 +7,21 @@ complete -c hifiasm -l "version" -d "Show version number."
 complete -c hifiasm -s "k" -d "K-mer length [51]." -x
 complete -c hifiasm -s "w" -d "Minimizer window size [51]." -x
 complete -c hifiasm -s "f" -d "Number of bits for bloom filter; 0 to disable [37]." -x
+complete -c hifiasm -s "D" -d "Drop k-mers occurring >FLOAT*coverage times [5.0]." -x
+complete -c hifiasm -s "N" -d "Consider up to max(-D*coverage,-N) overlaps for each oriented read [100]." -x
 complete -c hifiasm -s "r" -d "Rounds of haplotype-aware error corrections [3]." -x
-complete -c hifiasm -l "min-hist-cnt" -d "When analyzing the k-mer spectrum, ignore counts below INT." -x
-complete -c hifiasm -s "a" -d "Rounds of assembly graph cleaning [4]." -x
 complete -c hifiasm -s "z" -d "Length of adapters that should be removed [0]." -x
+complete -c hifiasm -l "max-kocc" -d "Employ k-mers occurring < INT times to rescue repetitive overlaps [2000]." -x
+complete -c hifiasm -l "hg-size" -d "Estimated haploid genome size used for inferring read coverage [auto]." -x
+complete -c hifiasm -l "min-hist-cnt" -d "When analyzing the k-mer spectrum, ignore counts below INT [5]." -x
+complete -c hifiasm -s "a" -d "Rounds of assembly graph cleaning [4]." -x
 complete -c hifiasm -s "m" -d "Maximal probing distance for bubble popping when generating primary/alternate contig graphs [10000000]." -x
-complete -c hifiasm -s "p" -d "Maximal probing distance for bubble popping when generating haplotype-resolved processed unitig graph without small bubbles [100000]." -x
+complete -c hifiasm -s "p" -d "Maximal probing distance for bubble popping when generating haplotype-resolved processed unitig graph without small bubbles [0]." -x
 complete -c hifiasm -s "n" -d "A unitig is considered small if it is composed of less than INT reads [3]." -x
 complete -c hifiasm -s "x" -s "y" -d "Max and min overlap drop ratio [0.8, 0.2]." -x
-complete -c hifiasm -s "i" -d "Ignore error corrected reads and overlaps saved in prefix.*.bin files."
+complete -c hifiasm -s "i" -d "Ignore error corrected reads and overlaps saved in prefix.*.bin files so that hifiasm will start again from scratch."
+complete -c hifiasm -s "u" -d "Disable post-join step for contigs which may improve N50."
+complete -c hifiasm -l "hom-cov" -d "Homozygous read coverage inferred automatically in default." -x
 complete -c hifiasm -l "pri-range" -d "Min and max coverage cutoff of primary contigs." -x
 complete -c hifiasm -l "lowQ" -d "Output contig regions with >=INT% inconsistency to the bed file with suffix lowQ.bed [70]." -r
 complete -c hifiasm -l "b-cov" -d "Break contigs at potential misassemblies with <INT-fold coverage [0]." -x
@@ -28,15 +34,16 @@ complete -c hifiasm -s "3" -d "List of paternal/haplotype1 read names []" -r
 complete -c hifiasm -s "4" -d "List of maternal/haplotype2 read names []" -r
 complete -c hifiasm -s "c" -d "Lower bound of the binned k-mer's frequency [2]." -x
 complete -c hifiasm -s "d" -d "Upper bound of the binned k-mer's frequency [5]." -x
+complete -c hifiasm -l "t-occ" -d "Forcedly remove unitig including > INT unexpected haplotype-specific reads without considering graph topology [60]." -x
 complete -c hifiasm -s "l" -d "Level of purge-dup." -x
 complete -c hifiasm -s "s" -d "Similarity threshold for duplicate haplotigs that should be purged [0.75 for -l1/-l2, 0.55 for -l3]." -x
 complete -c hifiasm -s "O" -d "Min number of overlapped reads for duplicate haplotigs that should be purged [1]." -x
-complete -c hifiasm -l "purge-cov" -d "Coverage upper bound of Purge-dups, which is inferred automatically in default." -x
+complete -c hifiasm -l "purge-max" -d "Coverage upper bound of Purge-dups, which is inferred automatically in default." -x
 complete -c hifiasm -l "n-hap" -d "Assumption of haplotype number." -x
-complete -c hifiasm -l "dbg-gfa" -d "Write additional files to speed up the debugging of graph cleaning."
 complete -c hifiasm -l "h1" -d "File names of input Hi-C R1 [r1_1.fq,r1_2.fq,...]." -r
 complete -c hifiasm -l "h2" -d "File names of input Hi-C R2 [r2_1.fq,r2_2.fq,...]." -r
 complete -c hifiasm -l "n-weight" -d "Rounds of reweighting Hi-C links [3]." -x
 complete -c hifiasm -l "n-perturb" -d "Rounds of perturbation [10000]." -x
 complete -c hifiasm -l "f-perturb" -d "Fraction to flip for perturbation [0.1]." -x
+complete -c hifiasm -l "l-msjoin" -d "Detect misjoined unitigs of >= INT in size; 0 to disable [500000]." -x
 complete -c hifiasm -l "seed" -d "RNG seed [11]." -x

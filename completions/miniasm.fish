@@ -6,7 +6,7 @@ complete -c miniasm -s "i" -d "min identity [0.05]" -x
 complete -c miniasm -s "s" -d "min span [2000]" -x
 complete -c miniasm -s "c" -d "min coverage [3]" -x
 complete -c miniasm -s "o" -d "min overlap [same as -s]" -x
-complete -c miniasm -s "h" -d "max over hang length [0]" -x
+complete -c miniasm -s "h" -d "max over hang length [1000]" -x
 complete -c miniasm -s "I" -d "min end-to-end match ratio [0.8]" -x
 complete -c miniasm -s "g" -d "max gap differences between reads for trans-reduction [1000]" -x
 complete -c miniasm -s "d" -d "max distance for bubble popping [50000]" -x

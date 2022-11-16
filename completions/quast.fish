@@ -10,7 +10,7 @@ complete -c quast -s "l" -l "labels" -d "Names of assemblies to use in reports, 
 complete -c quast -s "L" -d "Take assembly names from their parent directory names"
 complete -c quast -s "e" -l "eukaryote" -d "Genome is eukaryotic (primarily affects gene prediction)"
 complete -c quast -l "fungus" -d "Genome is fungal (primarily affects gene prediction)"
-complete -c quast -l "large" -d "Use optimal parameters for evaluation of large genomes In particular, imposes '-e -m 3000 -i 500 -x 7000' (can be overridden manually)"
+complete -c quast -l "large" -d "Use optimal parameters for evaluation of large genomes   In particular, imposes '-e -m 3000 -i 500 -x 7000' (can be overridden manually)"
 complete -c quast -s "k" -l "k-mer-stats" -d "Compute k-mer-based quality metrics (recommended for large genomes) This may significantly increase memory and time consumption on large genomes"
 complete -c quast -l "k-mer-size" -d "Size of k used in --k-mer-stats [default: 101]"
 complete -c quast -l "circos" -d "Draw Circos plot"
@@ -23,6 +23,7 @@ complete -c quast -s "b" -l "conserved-genes-finding" -d "Count conserved orthol
 complete -c quast -l "operons" -d "File with operon coordinates in the reference (GFF, BED, NCBI or TXT)" -r
 complete -c quast -l "est-ref-size" -d "Estimated reference size (for computing NGx metrics without a reference)" -x
 complete -c quast -l "contig-thresholds" -d "Comma-separated list of contig length thresholds [default: 0,1000,5000,10000,25000,50000]" -x
+complete -c quast -l "x-for-Nx" -d "Value of 'x' for Nx, Lx, etc metrics reported in addition to N50, L50, etc (0, 100) [default: 90]" -x
 complete -c quast -s "u" -l "use-all-alignments" -d "Compute genome fraction, # genes, # operons in QUAST v1.* style."
 complete -c quast -s "i" -l "min-alignment" -d "The minimum alignment length [default: 65]" -x
 complete -c quast -l "min-identity" -d "The minimum alignment identity (80.0, 100.0) [default: 95.0]" -x
@@ -30,14 +31,16 @@ complete -c quast -s "a" -l "ambiguity-usage" -d "Use none, one, or all alignmen
 complete -c quast -l "ambiguity-score" -d "Score S for defining equally good alignments of a single contig." -x
 complete -c quast -l "strict-NA" -d "Break contigs in any misassembly event when compute NAx and NGAx."
 complete -c quast -s "x" -l "extensive-mis-size" -d "Lower threshold for extensive misassembly size." -x
+complete -c quast -l "local-mis-size" -d "Lower threshold on local misassembly size." -x
 complete -c quast -l "scaffold-gap-max-size" -d "Max allowed scaffold gap length difference." -x
 complete -c quast -l "unaligned-part-size" -d "Lower threshold for detecting partially unaligned contigs." -x
 complete -c quast -l "skip-unaligned-mis-contigs" -d "Do not distinguish contigs with >= 50% unaligned bases as a separate group By default, QUAST does not count misassemblies in them"
 complete -c quast -l "fragmented" -d "Reference genome may be fragmented into small pieces (e.g. scaffolded reference)"
-complete -c quast -l "fragmented-max-indent" -d "Mark translocation as fake if both alignments are located no further than N bases from the ends of the reference fragments [default: 85] Requires --fragmented option" -x
+complete -c quast -l "fragmented-max-indent" -d "Mark translocation as fake if both alignments are located no further than N bases from the ends of the reference fragments [default: 200] Requires --fragmented option" -x
 complete -c quast -l "upper-bound-assembly" -d "Simulate upper bound assembly based on the reference genome and reads"
 complete -c quast -l "upper-bound-min-con" -d "Minimal number of 'connecting reads' needed for joining upper bound contigs into a scaffold [default: 2 for mate-pairs and 1 for long reads]" -x
 complete -c quast -l "est-insert-size" -d "Use provided insert size in upper bound assembly simulation [default: auto detect from reads or 255]" -x
+complete -c quast -l "report-all-metrics" -d "Keep all quality metrics in the main report even if their values are '-' for all assemblies or if they are not applicable (e.g., reference-based metrics in the no-reference mode)"
 complete -c quast -l "plots-format" -d "Save plots in specified format [default: pdf]." -x
 complete -c quast -l "memory-efficient" -d "Run everything using one thread, separately per each assembly."
 complete -c quast -l "space-efficient" -d "Create only reports and plots files."
@@ -62,7 +65,6 @@ complete -c quast -l "no-icarus" -d "Do not build Icarus viewers"
 complete -c quast -l "no-snps" -d "Do not report SNPs (may significantly reduce memory consumption on large genomes)"
 complete -c quast -l "no-gc" -d "Do not compute GC% and GC-distribution"
 complete -c quast -l "no-sv" -d "Do not run structural variation detection (make sense only if reads are specified)"
-complete -c quast -l "no-gzip" -d "Do not compress large output files"
 complete -c quast -l "no-read-stats" -d "Do not align reads to assemblies Reads will be aligned to reference and used for coverage analysis, upper bound assembly simulation, and structural variation detection."
 complete -c quast -l "fast" -d "A combination of all speedup options except --no-check"
 complete -c quast -l "silent" -d "Do not print detailed information about each step to stdout (log file is not affected)"

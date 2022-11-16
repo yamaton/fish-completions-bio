@@ -5,14 +5,15 @@ complete -c snakemake -l "dry-run" -l "dryrun" -s "n" -d "Do not execute anythin
 complete -c snakemake -l "profile" -d "Name of profile to use for configuring Snakemake." -r
 complete -c snakemake -l "cache" -d "Store output files of given rules in a central cache given by the environment variable \$SNAKEMAKE_OUTPUT_CACHE." -r
 complete -c snakemake -l "snakefile" -s "s" -d "The workflow definition in form of a snakefile.Usually, you should not need to specify this." -r
-complete -c snakemake -l "cores" -s "c" -d "Use at most N CPU cores/jobs in parallel." -x
+complete -c snakemake -l "cores" -s "c" -d "Use at most N CPU cores/jobs in parallel." -r
 complete -c snakemake -l "jobs" -s "j" -d "Use at most N CPU cluster/cloud jobs in parallel." -x
 complete -c snakemake -l "local-cores" -d "In cluster/cloud mode, use at most N cores of the host machine in parallel (default: number of CPU cores of the host)." -x
-complete -c snakemake -l "resources" -l "res" -d "Define additional resources that shall constrain the scheduling analogously to threads (see above)." -x
+complete -c snakemake -l "resources" -l "res" -d "Define additional resources that shall constrain the scheduling analogously to --cores (see above)." -r
 complete -c snakemake -l "set-threads" -d "Overwrite thread usage of rules." -x
-complete -c snakemake -l "max-threads" -d "Define a global maximum number of threads for any job." -x
+complete -c snakemake -l "max-threads" -d "Define a global maximum number of threads available to any rule." -x
 complete -c snakemake -l "set-resources" -d "Overwrite resource usage of rules." -r
 complete -c snakemake -l "set-scatter" -d "Overwrite number of scatter items of scattergather processes." -r
+complete -c snakemake -l "set-resource-scopes" -d "Overwrite resource scopes." -r
 complete -c snakemake -l "default-resources" -l "default-res" -d "Define default values of resources for rules that do not define their own values." -r
 complete -c snakemake -l "preemption-default" -d "A preemptible instance can be requested when using the Google Life Sciences API." -x
 complete -c snakemake -l "preemptible-rules" -d "A preemptible instance can be requested when using the Google Life Sciences API." -x
@@ -96,6 +97,7 @@ complete -c snakemake -l "all-temp" -d "Mark all output files as temp files."
 complete -c snakemake -l "keep-remote" -d "Keep local copies of remote input files."
 complete -c snakemake -l "keep-target-files" -d "Do not adjust the paths of given target files relative to the working directory."
 complete -c snakemake -l "allowed-rules" -d "Only consider given rules." -r
+complete -c snakemake -l "target-jobs" -d "Target particular jobs by RULE:WILDCARD1=VALUE,WILDCARD2=VALUE,..." -x
 complete -c snakemake -l "local-groupid" -d "Name for local groupid, meant for internal use only." -x
 complete -c snakemake -l "max-jobs-per-second" -d "Maximal number of cluster/drmaa jobs per second, default is 10, fractions allowed." -x
 complete -c snakemake -l "max-status-checks-per-second" -d "Maximal number of job status checks per second, default is 10, fractions allowed." -x
@@ -126,8 +128,10 @@ complete -c snakemake -l "cluster-cancel" -d "Specify a command that allows to s
 complete -c snakemake -l "cluster-cancel-nargs" -d "Specify maximal number of job ids to pass to --cluster-cancel command, defaults to 1000." -x
 complete -c snakemake -l "cluster-sidecar" -d "Optional command to start a sidecar process during cluster execution." -x
 complete -c snakemake -l "drmaa-log-dir" -d "Specify a directory in which stdout and stderr files of DRMAA jobs will be written." -r
+complete -c snakemake -l "flux" -d "Execute your workflow on a flux cluster."
 complete -c snakemake -l "kubernetes" -d "Execute workflow in a kubernetes cluster (in the cloud)." -x
 complete -c snakemake -l "container-image" -d "Docker image to use, e.g., when submitting jobs to kubernetes Defaults to 'https://hub.docker.com/r/snakemake/snakemake', tagged with the same version as the currently running Snakemake instance." -x
+complete -c snakemake -l "k8s-cpu-scalar" -d "K8s reserves some proportion of available CPUs for its own use." -x
 complete -c snakemake -l "tibanna" -d "Execute workflow on AWS cloud using Tibanna."
 complete -c snakemake -l "tibanna-sfn" -d "Name of Tibanna Unicorn step function (e.g. tibanna_unicorn_monty).This works as serverless scheduler/resource allocator and must be deployed first using tibanna cli." -x
 complete -c snakemake -l "precommand" -d "Any command to execute before snakemake command on AWS cloud such as wget, git clone, unzip, etc." -r

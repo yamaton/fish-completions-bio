@@ -12,6 +12,7 @@ complete -c busco -l "auto-lineage-euk" -d "Run auto-placement just on eukaryote
 complete -c busco -l "auto-lineage-prok" -d "Run auto-lineage just on non-eukaryote trees to find optimum lineage path"
 complete -c busco -s "c" -l "cpu" -d "Specify the number (N=integer) of threads/cores to use." -x
 complete -c busco -l "config" -d "Provide a config file" -r
+complete -c busco -l "contig_break" -d "Number of contiguous Ns to signify a break between contigs." -x
 complete -c busco -l "datasets_version" -d "Specify the version of BUSCO datasets, e.g. odb10" -x
 complete -c busco -l "download" -d "Download dataset." -x
 complete -c busco -l "download_base_url" -d "Set the url to the remote BUSCO dataset location" -x
@@ -28,6 +29,7 @@ complete -c busco -l "offline" -d "To indicate that BUSCO cannot attempt to down
 complete -c busco -l "out_path" -d "Optional location for results folder, excluding results folder name." -r
 complete -c busco -s "q" -l "quiet" -d "Disable the info logs, displays only errors"
 complete -c busco -s "r" -l "restart" -d "Continue a run that had already partially completed."
+complete -c busco -l "scaffold_composition" -d "Writes ACGTN content per scaffold to a file scaffold_composition.txt"
 complete -c busco -l "tar" -d "Compress some subdirectories with many files to save space"
 complete -c busco -l "update-data" -d "Download and replace with last versions all lineages datasets and files necessary to their automated selection"
 complete -c busco -s "v" -l "version" -d "Show this version and exit"

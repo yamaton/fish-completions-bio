@@ -44,7 +44,6 @@ complete -c salmon -n "__fish_seen_subcommand_from quant" -s "g" -l "geneMap" -d
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "auxTargetFile" -d "A file containing a list of \"auxiliary\" targets." -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "meta" -d "If you're using Salmon on a metagenomic dataset, consider setting this flag to disable parts of the abundance estimation model that make less sense for metagenomic data."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "discardOrphansQuasi" -d "[selective-alignment mode only] : Discard orphan mappings in selective-alignment mode."
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "discardOrphans" -d "[alignment-based mode only] : Discard orphan alignments in the input ."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "validateMappings" -d "[*deprecated* (no effect; selective-alignment is the default)]"
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "consensusSlack" -d "[selective-alignment mode only] : The amount of slack allowed in the selective-alignment filtering mechanism." -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "preMergeChainSubThresh" -d "[selective-alignment mode only] : The threshold of sub-optimal chains, compared to the best chain on a given target, that will be retained and passed to the next phase of mapping." -x
@@ -69,26 +68,20 @@ complete -c salmon -n "__fish_seen_subcommand_from quant" -l "softclipOverhangs"
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fullLengthAlignment" -d "[selective-alignment mode only] : Perform selective alignment over the full length of the read, beginning from the (approximate) initial mapping location and using extension alignment."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "hardFilter" -d "[selective-alignemnt mode only] : Instead of weighting mappings by their alignment score, this flag will discard any mappings with sub-optimal alignment score."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "minAlnProb" -d "[selective-alignment mode only] : Any mapping whose alignment probability (as computed by P(aln) = exp(-scoreExp * difference from best mapping score) is less than minAlnProb will not be considered as a valid alignment for this read." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s "z" -l "writeMappings" -d "If this option is provided, then the selective-alignment results will be written out in SAM-compatible format."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s "z" -l "writeMappings" -d "If this option is provided, then the selective-alignment results will be written out in SAM-compatible format." -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "writeQualities" -d "This flag only has meaning if mappings are being written (with --writeMappings/-z)."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "hitFilterPolicy" -d "[selective-alignment mode only] : Determines the policy by which hits are filtered in selective alignment." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "noErrorModel" -d "Turn off the alignment error model, which takes into account the the observed frequency of different types of mismatches / indels when computing the likelihood of a given alignment."
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "numErrorBins" -d "The number of bins into which to divide each read when learning and applying the error model." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s "s" -l "sampleOut" -d "Write a \"postSample.bam\" file in the output directory that will sample the input alignments according to the estimated transcript abundances."
-complete -c salmon -n "__fish_seen_subcommand_from quant" -s "u" -l "sampleUnaligned" -d "In addition to sampling the aligned reads, also write the un-aligned reads to \"postSample.bam\"."
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "gencode" -d "This flag will expect the input transcript fasta to be in GENCODE format, and will split the transcript name at the first '|' character."
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "scoreExp" -d "The factor by which sub-optimal alignment scores are downweighted to produce a probability." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "mappingCacheMemoryLimit" -d "If the file contained fewer than this many mapped reads, then just keep the data in memory for subsequent rounds of inference." -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "alternativeInitMode" -d "[Experimental]: Use an alternative strategy (rather than simple interpolation between) the online and uniform abundance estimates to initialize the EM / VBEM algorithm."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "auxDir" -d "The sub-directory of the quantification directory where auxiliary information e.g. bootstraps, bias parameters, etc." -r
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "skipQuant" -d "Skip performing the actual transcript quantification (including any Gibbs sampling or bootstrapping)."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "dumpEq" -d "Dump the simple equivalence class counts that were computed during mapping or alignment."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s "d" -l "dumpEqWeights" -d "Dump conditional probabilities associated with transcripts when equivalence class information is being dumped to file."
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "minAssignedFrags" -d "The minimum number of fragments that must be assigned to the transcriptome for quantification to proceed.(Default: 10)" -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "minAssignedFrags" -d "The minimum number of fragments that must be assigned to the transcriptome for quantification to proceed." -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "reduceGCMemory" -d "If this option is selected, a more memory efficient (but slightly slower) representation is used to compute fragment GC content."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "biasSpeedSamp" -d "The value at which the fragment length PMF is down-sampled when evaluating sequence-specific & GC fragment bias." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fldMax" -d "The maximum fragment length to consider when building the empirical distribution." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fldMean" -d "The mean used in the fragment length distribution prior." -x
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fldSD" -d "The standard deviation used in the fragment length distribution prior." -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fldMax" -d "The maximum fragment length to consider when building the empirical distribution" -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fldMean" -d "The mean used in the fragment length distribution prior" -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "fldSD" -d "The standard deviation used in the fragment length distribution prior" -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s "f" -l "forgettingFactor" -d "The forgetting factor used in the online learning schedule." -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "initUniform" -d "initialize the offline inference with uniform parameters, rather than seeding with online parameters."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "maxOccsPerHit" -d "When collecting \"hits\" (MEMs), hits having more than maxOccsPerHit occurrences won't be considered." -x
@@ -113,10 +106,22 @@ complete -c salmon -n "__fish_seen_subcommand_from quant" -l "thinningFactor" -d
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s "q" -l "quiet" -d "Be quiet while doing quantification (don't write informative output to the console unless something goes wrong)."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "perTranscriptPrior" -d "The prior (either the default or the argument provided via --vbPrior) will be interpreted as a transcript-level prior (i.e. each transcript will be given a prior read count of this value)"
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "perNucleotidePrior" -d "The prior (either the default or the argument provided via --vbPrior) will be interpreted as a nucleotide-level prior (i.e. each nucleotide will be given a prior read count of this value)"
-complete -c salmon -n "__fish_seen_subcommand_from quant" -l "sigDigits" -d "The number of significant digits to write when outputting the EffectiveLength and NumReads columns." -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "sigDigits" -d "The number of significant digits to write when outputting the EffectiveLength and NumReads columns" -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "vbPrior" -d "The prior that will be used in the VBEM algorithm." -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "writeOrphanLinks" -d "Write the transcripts that are linked by orphaned reads."
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "writeUnmappedNames" -d "Write the names of un-mapped reads to the file unmapped_names.txt in the auxiliary directory."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "discardOrphans" -d "[alignment-based mode only] : Discard orphan alignments in the input ."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s "a" -l "alignments" -d "input alignment (BAM) file(s)." -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s "e" -l "eqclasses" -d "input salmon weighted equivalence class file." -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s "t" -l "targets" -d "FASTA format file containing target transcripts." -r
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "ont" -d "use alignment model for Oxford Nanopore long reads"
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "noErrorModel" -d "Turn off the alignment error model, which takes into account the the observed frequency of different types of mismatches / indels when computing the likelihood of a given alignment."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "numErrorBins" -d "The number of bins into which to divide each read when learning and applying the error model." -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s "s" -l "sampleOut" -d "Write a \"postSample.bam\" file in the output directory that will sample the input alignments according to the estimated transcript abundances."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -s "u" -l "sampleUnaligned" -d "In addition to sampling the aligned reads, also write the un-aligned reads to \"postSample.bam\"."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "gencode" -d "This flag will expect the input transcript fasta to be in GENCODE format, and will split the transcript name at the first '|' character."
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "scoreExp" -d "The factor by which sub-optimal alignment scores are downweighted to produce a probability." -x
+complete -c salmon -n "__fish_seen_subcommand_from quant" -l "mappingCacheMemoryLimit" -d "If the file contained fewer than this many mapped reads, then just keep the data in memory for subsequent rounds of inference." -r
 
 
 

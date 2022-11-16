@@ -27,5 +27,5 @@ complete -c in2csv -s "n" -l "names" -d "Display sheet names from the input Exce
 complete -c in2csv -l "sheet" -d "The name of the Excel sheet to operate on." -x
 complete -c in2csv -l "write-sheets" -d "The names of the Excel sheets to write to files, or \"-\" to write all sheets." -r
 complete -c in2csv -l "encoding-xls" -d "Specify the encoding of the input XLS file." -r
-complete -c in2csv -s "y" -l "snifflimit" -d "Limit CSV dialect sniffing to the specified number of bytes." -x
+complete -c in2csv -s "y" -l "snifflimit" -d "Limit CSV dialect sniffing to the specified number of bytes." -r
 complete -c in2csv -s "I" -l "no-inference" -d "Disable type inference (and --locale, --date-format, --datetime-format) when parsing CSV input."

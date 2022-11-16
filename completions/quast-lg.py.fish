@@ -20,6 +20,7 @@ complete -c quast-lg.py -s "b" -l "conserved-genes-finding" -d "Count conserved 
 complete -c quast-lg.py -l "operons" -d "File with operon coordinates in the reference (GFF, BED, NCBI or TXT)" -r
 complete -c quast-lg.py -l "est-ref-size" -d "Estimated reference size (for computing NGx metrics without a reference)" -x
 complete -c quast-lg.py -l "contig-thresholds" -d "Comma-separated list of contig length thresholds [default: 0,1000,5000,10000,25000,50000]" -x
+complete -c quast-lg.py -l "x-for-Nx" -d "Value of 'x' for Nx, Lx, etc metrics reported in addition to N50, L50, etc (0, 100) [default: 90]" -x
 complete -c quast-lg.py -s "u" -l "use-all-alignments" -d "Compute genome fraction, # genes, # operons in QUAST v1.* style."
 complete -c quast-lg.py -s "i" -l "min-alignment" -d "The minimum alignment length [default: 500]" -x
 complete -c quast-lg.py -l "min-identity" -d "The minimum alignment identity (80.0, 100.0) [default: 95.0]" -x
@@ -27,14 +28,16 @@ complete -c quast-lg.py -s "a" -l "ambiguity-usage" -d "Use none, one, or all al
 complete -c quast-lg.py -l "ambiguity-score" -d "Score S for defining equally good alignments of a single contig." -x
 complete -c quast-lg.py -l "strict-NA" -d "Break contigs in any misassembly event when compute NAx and NGAx."
 complete -c quast-lg.py -s "x" -l "extensive-mis-size" -d "Lower threshold for extensive misassembly size." -x
+complete -c quast-lg.py -l "local-mis-size" -d "Lower threshold on local misassembly size." -x
 complete -c quast-lg.py -l "scaffold-gap-max-size" -d "Max allowed scaffold gap length difference." -x
 complete -c quast-lg.py -l "unaligned-part-size" -d "Lower threshold for detecting partially unaligned contigs." -x
 complete -c quast-lg.py -l "skip-unaligned-mis-contigs" -d "Do not distinguish contigs with >= 50% unaligned bases as a separate group By default, QUAST does not count misassemblies in them"
 complete -c quast-lg.py -l "fragmented" -d "Reference genome may be fragmented into small pieces (e.g. scaffolded reference)"
-complete -c quast-lg.py -l "fragmented-max-indent" -d "Mark translocation as fake if both alignments are located no further than N bases from the ends of the reference fragments [default: 85] Requires --fragmented option" -x
+complete -c quast-lg.py -l "fragmented-max-indent" -d "Mark translocation as fake if both alignments are located no further than N bases from the ends of the reference fragments [default: 200] Requires --fragmented option" -x
 complete -c quast-lg.py -l "upper-bound-assembly" -d "Simulate upper bound assembly based on the reference genome and reads"
 complete -c quast-lg.py -l "upper-bound-min-con" -d "Minimal number of 'connecting reads' needed for joining upper bound contigs into a scaffold [default: 2 for mate-pairs and 1 for long reads]" -x
 complete -c quast-lg.py -l "est-insert-size" -d "Use provided insert size in upper bound assembly simulation [default: auto detect from reads or 255]" -x
+complete -c quast-lg.py -l "report-all-metrics" -d "Keep all quality metrics in the main report even if their values are '-' for all assemblies or if they are not applicable (e.g., reference-based metrics in the no-reference mode)"
 complete -c quast-lg.py -l "plots-format" -d "Save plots in specified format [default: pdf]." -x
 complete -c quast-lg.py -l "memory-efficient" -d "Run everything using one thread, separately per each assembly."
 complete -c quast-lg.py -l "space-efficient" -d "Create only reports and plots files."
@@ -59,7 +62,6 @@ complete -c quast-lg.py -l "no-icarus" -d "Do not build Icarus viewers"
 complete -c quast-lg.py -l "no-snps" -d "Do not report SNPs (may significantly reduce memory consumption on large genomes)"
 complete -c quast-lg.py -l "no-gc" -d "Do not compute GC% and GC-distribution"
 complete -c quast-lg.py -l "no-sv" -d "Do not run structural variation detection (make sense only if reads are specified)"
-complete -c quast-lg.py -l "no-gzip" -d "Do not compress large output files"
 complete -c quast-lg.py -l "no-read-stats" -d "Do not align reads to assemblies Reads will be aligned to reference and used for coverage analysis, upper bound assembly simulation, and structural variation detection."
 complete -c quast-lg.py -l "fast" -d "A combination of all speedup options except --no-check"
 complete -c quast-lg.py -l "silent" -d "Do not print detailed information about each step to stdout (log file is not affected)"
