@@ -14,7 +14,7 @@ complete -c megahit -l "bubble-level" -d "intensity of bubble merging (0-2), 0 t
 complete -c megahit -l "merge-level" -d "merge complex bubbles of length <= l*kmer_size and similarity >= s [20,0.95]" -x
 complete -c megahit -l "prune-level" -d "strength of low depth pruning (0-3) [2]" -x
 complete -c megahit -l "prune-depth" -d "remove unitigs with avg kmer depth less than this value [2]" -x
-complete -c megahit -l "disconnect-ratio" -d "disconnect unitigs if its depth is less than this ratio times the total depth of itself and its siblings [0.1]  " -x
+complete -c megahit -l "disconnect-ratio" -d "disconnect unitigs if its depth is less than this ratio times the total depth of itself and its siblings [0.1]" -x
 complete -c megahit -l "low-local-ratio" -d "remove unitigs if its depth is less than this ratio times the average depth of the neighborhoods [0.2]" -x
 complete -c megahit -l "max-tip-len" -d "remove tips less than this value [2*k]" -x
 complete -c megahit -l "cleaning-rounds" -d "number of rounds for graph cleanning [5]" -x

@@ -11,6 +11,8 @@ complete -c pilon -l "output" -d "Prefix for output files" -r
 complete -c pilon -l "outdir" -d "Use this directory for all output files." -r
 complete -c pilon -l "changes" -d "If specified, a file listing changes in the <output>.fasta will be generated."
 complete -c pilon -l "vcf" -d "If specified, a vcf file will be generated"
+complete -c pilon -l "vcfqe" -d "If specified, the VCF will contain a QE (quality-weighted evidence) field rather than the default QP (quality-weighted percentage of evidence) field."
+complete -c pilon -l "tracks" -d "This options will cause many track files (*.bed, *.wig) suitable for viewing in a genome browser to be written."
 complete -c pilon -l "variant" -d "Sets up heuristics for variant calling, as opposed to assembly improvement; equivalent to \"--vcf --fix all,breaks\"."
 complete -c pilon -l "chunksize" -d "Input FASTA elements larger than this will be processed in smaller pieces not to exceed this size (default 10000000)."
 complete -c pilon -l "diploid" -d "Sample is from diploid organism; will eventually affect calling of heterozygous SNPs"

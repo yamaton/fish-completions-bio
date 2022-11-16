@@ -1,19 +1,19 @@
 # Auto-generated with h2o
 
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "h" -l "help" -d "help for csvtk"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fold freq gather grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "h" -l "help" -d "help for csvtk"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
 
 
 
@@ -39,17 +39,19 @@ complete -k -c csvtk -n __fish_use_subcommand -x -a pretty -d "convert CSV to re
 complete -k -c csvtk -n __fish_use_subcommand -x -a plot -d "plot common figures"
 complete -k -c csvtk -n __fish_use_subcommand -x -a nrow -d "print number of records"
 complete -k -c csvtk -n __fish_use_subcommand -x -a ncol -d "print number of columns"
-complete -k -c csvtk -n __fish_use_subcommand -x -a mutate2 -d "create new column from selected fields by awk-like artithmetic/string expressions"
+complete -k -c csvtk -n __fish_use_subcommand -x -a mutate2 -d "create new column from selected fields by awk-like arithmetic/string expressions"
 complete -k -c csvtk -n __fish_use_subcommand -x -a mutate -d "create new column from selected fields by regular expression"
 complete -k -c csvtk -n __fish_use_subcommand -x -a join -d "join files by selected fields (inner, left and outer join)"
 complete -k -c csvtk -n __fish_use_subcommand -x -a inter -d "intersection of multiple files"
 complete -k -c csvtk -n __fish_use_subcommand -x -a headers -d "print headers"
 complete -k -c csvtk -n __fish_use_subcommand -x -a head -d "print first N records"
 complete -k -c csvtk -n __fish_use_subcommand -x -a grep -d "grep data by selected fields with patterns/regular expressions"
+complete -k -c csvtk -n __fish_use_subcommand -x -a genautocomplete -d "generate shell autocompletion script (bash|zsh|fish|powershell)"
 complete -k -c csvtk -n __fish_use_subcommand -x -a gather -d "gather columns into key-value pairs"
 complete -k -c csvtk -n __fish_use_subcommand -x -a freq -d "frequencies of selected fields"
 complete -k -c csvtk -n __fish_use_subcommand -x -a fold -d "fold multiple values of a field into cells of groups"
-complete -k -c csvtk -n __fish_use_subcommand -x -a filter2 -d "filter rows by awk-like artithmetic/string expressions"
+complete -k -c csvtk -n __fish_use_subcommand -x -a fmtdate -d "format date of selected fields"
+complete -k -c csvtk -n __fish_use_subcommand -x -a filter2 -d "filter rows by awk-like arithmetic/string expressions"
 complete -k -c csvtk -n __fish_use_subcommand -x -a filter -d "filter rows by values of selected fields with arithmetic expression"
 complete -k -c csvtk -n __fish_use_subcommand -x -a dim -d "dimensions of CSV file"
 complete -k -c csvtk -n __fish_use_subcommand -x -a del-header -d "delete column names"
@@ -263,6 +265,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "t" -l "tabs" -d 
 
 
 
+complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "m" -l "allow-missing-col" -d "allow missing column"
+complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "b" -l "blank-missing-col" -d "blank missing column"
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "f" -l "fields" -d "select only these fields." -x
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "F" -l "fuzzy-fields" -d "using fuzzy fields, e.g., -F -f \"*name\" or -F -f \"id123*\""
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "h" -l "help" -d "help for cut"
@@ -346,6 +350,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "t" -l "tabs" -d "s
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "f" -l "filter" -d "awk-like filter condition." -x
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "h" -l "help" -d "help for filter2"
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "n" -l "line-number" -d "print line number as the first column (\"n\")"
+complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "s" -l "numeric-as-string" -d "treat even numeric fields as strings to avoid converting big numbers into scientific notation"
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
@@ -359,6 +364,28 @@ complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "D" -l "out-delimi
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
+
+
+
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "f" -l "fields" -d "select only these fields." -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -l "format" -d "output date format in MS Excel (TM) syntax, type \"csvtk fmtdate -h\" for details (default \"YYYY-MM-DD hh:mm:ss\")" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "F" -l "fuzzy-fields" -d "using fuzzy fields, e.g., -F -f \"*name\" or -F -f \"id123*\""
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "h" -l "help" -d "help for fmtdate"
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "k" -l "keep-unparsed" -d "keep the key as value when no value found for the key"
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "z" -l "time-zone" -d "timezone aka \"Asia/Shanghai\" or \"America/Los_Angeles\" formatted time-zone, type \"csvtk fmtdate -h\" for details" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
 
 
 
@@ -425,6 +452,25 @@ complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "D" -l "out-delimit
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
+
+
+
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -l "file" -d "autocompletion file (default \"~/.bash_completion.d/csvtk.sh\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "h" -l "help" -d "help for genautocomplete"
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -l "shell" -d "autocompletion type (bash|zsh|fish|powershell) (default \"bash\")" -x
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
 
 
 
@@ -517,6 +563,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from join" -s "f" -l "fields" -d "S
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "F" -l "fuzzy-fields" -d "using fuzzy fields, e.g., -F -f \"*name\" or -F -f \"id123*\""
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "h" -l "help" -d "help for join"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "i" -l "ignore-case" -d "ignore case"
+complete -c csvtk -n "__fish_seen_subcommand_from join" -s "n" -l "ignore-null" -d "do not match NULL values"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "k" -l "keep-unmatched" -d "keep unmatched data of the first file (left join)"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "L" -l "left-join" -d "left join, equals to -k/--keep-unmatched, exclusive with --outer-join"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -l "na" -d "content for filling NA data" -x
@@ -560,8 +607,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "t" -l "tabs" -d "s
 
 
 
-complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "L" -l "digits" -d "number of digits after the decimal dot (default 2)" -x
-complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "e" -l "expression" -d "artithmetic/string expressions." -x
+complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "w" -l "decimal-width" -d "limit floats to N decimal points (default 2)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "e" -l "expression" -d "arithmetic/string expressions." -x
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "h" -l "help" -d "help for mutate2"
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "n" -l "name" -d "new column name" -x
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "s" -l "numeric-as-string" -d "treat even numeric fields as strings to avoid converting big numbers into scientific notation"
@@ -624,6 +671,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "g" -l "group-field" 
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "height" -d "Figure height (default 4.5)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "h" -l "help" -d "help for plot"
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "label-size" -d "label font size (default 14)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "na-values" -d "NA values, case ignored (default [,NA,N/A])" -x
+complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "skip-na" -d "skip NA values in --na-values"
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "tick-width" -d "axis tick width (default 1.5)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "title" -d "Figure title" -x
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "title-size" -d "title font size (default 16)" -x
@@ -896,7 +945,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "t" -l "tabs" -d
 
 
 
-complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "n" -l "decimal-width" -d "limit floats to N decimal points (default 2)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "w" -l "decimal-width" -d "limit floats to N decimal points (default 2)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "f" -l "fields" -d "operations on these fields." -x
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "g" -l "groups" -d "group via fields." -x
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "h" -l "help" -d "help for summary"
