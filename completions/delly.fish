@@ -13,7 +13,7 @@ complete -c delly -n "__fish_seen_subcommand_from call" -s "?" -l "help" -d "sho
 complete -c delly -n "__fish_seen_subcommand_from call" -s "t" -l "svtype" -d "SV type to compute [DEL, INS, DUP, INV, BND, ALL]" -x
 complete -c delly -n "__fish_seen_subcommand_from call" -s "g" -l "genome" -d "genome fasta file" -r
 complete -c delly -n "__fish_seen_subcommand_from call" -s "x" -l "exclude" -d "file with regions to exclude" -r
-complete -c delly -n "__fish_seen_subcommand_from call" -s "o" -l "outfile" -d "SV BCF output file" -r
+complete -c delly -n "__fish_seen_subcommand_from call" -s "o" -l "outfile" -d "BCF output file" -r
 complete -c delly -n "__fish_seen_subcommand_from call" -s "q" -l "map-qual" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from call" -s "r" -l "qual-tra" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from call" -s "s" -l "mad-cutoff" -d "insert size cutoff, median+s*MAD (deletions only)" -x
@@ -45,6 +45,7 @@ complete -c delly -n "__fish_seen_subcommand_from merge" -s "r" -l "rec-overlap"
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "f" -l "filter" -d "Filter mode (somatic, germline)" -x
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "o" -l "outfile" -d "Filtered SV BCF output file" -r
+complete -c delly -n "__fish_seen_subcommand_from filter" -s "y" -l "quality" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "a" -l "altaf" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "m" -l "minsize" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "n" -l "maxsize" -d "max." -x
@@ -64,7 +65,7 @@ complete -c delly -n "__fish_seen_subcommand_from lr" -s "t" -l "svtype" -d "SV 
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "y" -l "technology" -d "seq." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "g" -l "genome" -d "genome fasta file" -r
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "x" -l "exclude" -d "file with regions to exclude" -r
-complete -c delly -n "__fish_seen_subcommand_from lr" -s "o" -l "outfile" -d "SV BCF output file" -r
+complete -c delly -n "__fish_seen_subcommand_from lr" -s "o" -l "outfile" -d "BCF output file" -r
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "q" -l "mapqual" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "c" -l "minclip" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "z" -l "min-clique-size" -d "min." -x
@@ -73,6 +74,9 @@ complete -c delly -n "__fish_seen_subcommand_from lr" -s "n" -l "maxreadsep" -d 
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "p" -l "max-reads" -d "max." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "f" -l "flank-size" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "a" -l "flank-quality" -d "min." -x
+complete -c delly -n "__fish_seen_subcommand_from lr" -s "i" -l "indel-size" -d "use exact alleles for InDels <10kbp" -x
+complete -c delly -n "__fish_seen_subcommand_from lr" -s "r" -l "max-isize" -d "max." -x
+complete -c delly -n "__fish_seen_subcommand_from lr" -s "v" -l "vcffile" -d "input VCF/BCF file for genotyping" -r
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "u" -l "geno-qual" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "d" -l "dump" -d "gzipped output file for SV-reads" -r
 
@@ -83,8 +87,8 @@ complete -c delly -n "__fish_seen_subcommand_from cnv" -s "g" -l "genome" -d "ge
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "q" -l "quality" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "m" -l "mappability" -d "input mappability map" -x
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "y" -l "ploidy" -d "baseline ploidy" -x
-complete -c delly -n "__fish_seen_subcommand_from cnv" -s "o" -l "outfile" -d "output CNV file" -r
-complete -c delly -n "__fish_seen_subcommand_from cnv" -s "c" -l "covfile" -d "output coverage file" -r
+complete -c delly -n "__fish_seen_subcommand_from cnv" -s "o" -l "outfile" -d "BCF output file" -r
+complete -c delly -n "__fish_seen_subcommand_from cnv" -s "c" -l "covfile" -d "gzipped coverage file" -r
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "x" -l "sdrd" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "t" -l "cn-offset" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "z" -l "cnv-size" -d "min." -x

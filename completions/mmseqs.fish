@@ -19,13 +19,12 @@ complete -k -c mmseqs -n __fish_use_subcommand -x -a view -d "Print DB entries g
 complete -k -c mmseqs -n __fish_use_subcommand -x -a expand2profile -d "Expand an alignment result based on another and create a profile"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a expandaln -d "Expand an alignment result based on another"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a convertca3m -d "Convert a cA3M DB to a result DB"
-complete -k -c mmseqs -n __fish_use_subcommand -x -a profile2cs -d "Convert a profile DB into a column state sequence DB"
-complete -k -c mmseqs -n __fish_use_subcommand -x -a result2pp -d "Merge two profile DBs by shared hits"
-complete -k -c mmseqs -n __fish_use_subcommand -x -a enrich -d "Boost diversity of search result"
+complete -k -c mmseqs -n __fish_use_subcommand -x -a tsv2exprofiledb -d "Create a expandable profile db from TSV files"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a convertprofiledb -d "Convert a HH-suite HHM DB to a profile DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a profile2repseq -d "Extract representative sequence DB from a profile DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a profile2consensus -d "Extract consensus sequence DB from a profile DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a profile2pssm -d "Convert a profile DB to a tab-separated PSSM file"
+complete -k -c mmseqs -n __fish_use_subcommand -x -a sequence2profile -d "Turn sequence into profile by adding context specific pseudo counts"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a msa2result -d "Convert a MSA DB to a profile DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a result2profile -d "Compute profile DB from a result DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a mergeclusters -d "Merge multiple cascaded clustering steps"
@@ -53,6 +52,7 @@ complete -k -c mmseqs -n __fish_use_subcommand -x -a aggregatetax -d "Aggregate 
 complete -k -c mmseqs -n __fish_use_subcommand -x -a filtertaxseqdb -d "Filter taxonomy sequence database"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a filtertaxdb -d "Filter taxonomy result database"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a addtaxonomy -d "Add taxonomic labels to result DB"
+complete -k -c mmseqs -n __fish_use_subcommand -x -a createbintaxmapping -d "Create binary taxonomy mapping from tabular taxonomy mapping"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a createbintaxonomy -d "Create binary taxonomy from NCBI input"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a createtaxdb -d "Add taxonomic labels to sequence DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a summarizeresult -d "Extract annotations from alignment DB"
@@ -89,6 +89,7 @@ complete -k -c mmseqs -n __fish_use_subcommand -x -a concatdbs -d "Concatenate t
 complete -k -c mmseqs -n __fish_use_subcommand -x -a createsubdb -d "Create a subset of a DB from list of DB keys"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a touchdb -d "Preload DB into memory (page cache)"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a unpackdb -d "Unpack a DB into separate files"
+complete -k -c mmseqs -n __fish_use_subcommand -x -a aliasdb -d "Create relative symlink of DB to another name in the same folder"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a lndb -d "Symlink a DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a cpdb -d "Copy a DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a mvdb -d "Move a DB"
@@ -96,6 +97,7 @@ complete -k -c mmseqs -n __fish_use_subcommand -x -a rmdb -d "Remove a DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a decompress -d "Decompress DB entries"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a compress -d "Compress DB entries"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a msa2profile -d "Convert a MSA DB to a profile DB"
+complete -k -c mmseqs -n __fish_use_subcommand -x -a db2tar -d "Archive contents of a DB to a tar archive"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a tar2db -d "Convert content of tar archives to any DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a tsv2db -d "Convert a TSV file to any DB"
 complete -k -c mmseqs -n __fish_use_subcommand -x -a convertmsa -d "Convert Stockholm/PFAM MSA file to a MSA DB"
@@ -121,12 +123,13 @@ complete -k -c mmseqs -n __fish_use_subcommand -x -a easy-search -d "Sensitive h
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [5.700]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -134,6 +137,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "split-memory
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -141,8 +145,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "spaced-kmer-
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -157,24 +161,29 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "score-bias" 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -203,10 +212,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "dbtype" -d "
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "shuffle" -d "Shuffle input database [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "createdb-mode" -d "Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "greedy-best-hits" -d "Choose the best hits greedily to cover the query [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -224,14 +233,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-search" -l "write-lookup
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -246,15 +257,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "score-bia
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "pick-n-sim-kmer" -d "Add N similar k-mers to search [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "result-direction" -d "result is 0: query, 1: target centric [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "max-length" -d "Maximum codon number in open reading frames [32734]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "max-gaps" -d "Maximum number of codons with gaps or unknown residues before an open reading frame is rejected [2147483647]" -x
@@ -271,10 +283,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "add-orf-s
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "format-mode" -d "Output format: 0: BLAST-TAB, 1: SAM, 2: BLAST-TAB + query/db length, 3: Pretty HTML [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen tstart,tend,tlen,alnlen,raw,bits,cigar,qseq,tseq,qheader,theader,qaln,taln,qframe,tframe,mismatch,qcov,tcov qset,qsetid,tset,tsetid,taxid,taxname,taxlineage,qorfstart,qorfend,torfstart,torfend [query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -287,19 +299,21 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-linsearch" -l "db-output
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [20]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
@@ -309,8 +323,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "local-tmp" 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.800]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -323,9 +337,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "score-bias"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "similarity-type" -d "Type of score used for clustering." -x
@@ -333,22 +348,23 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "single-step
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "cluster-steps" -d "Cascaded clustering steps from 1 to -s [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "cluster-reassign" -d "Cascaded clustering can cluster sequence that do not fulfill the clustering criteria." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "include-only-extendable" -d "Include only extendable [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "dbtype" -d "Database type 0: auto, 1: amino acid 2: nucleotides [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "shuffle" -d "Shuffle input database [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "createdb-mode" -d "Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "remove-tmp-files" -d "Delete temporary files [1]" -r
@@ -361,17 +377,19 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-cluster" -l "write-looku
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -386,29 +404,30 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "score-bias
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "similarity-type" -d "Type of score used for clustering." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "include-only-extendable" -d "Include only extendable [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "dbtype" -d "Database type 0: auto, 1: amino acid 2: nucleotides [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "shuffle" -d "Shuffle input database [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "createdb-mode" -d "Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "remove-tmp-files" -d "Delete temporary files [1]" -r
@@ -421,12 +440,13 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-linclust" -l "write-look
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -434,6 +454,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "split-memo
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -441,8 +462,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "spaced-kme
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -457,25 +478,28 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "score-bias
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "orf-filter" -d "Prefilter query ORFs with non-selective search Only used during nucleotide-vs-protein classification NOTE: Consider disabling when classifying short reads [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "orf-filter" -d "Prefilter query ORFs with non-selective search   Only used during nucleotide-vs-protein classification NOTE: Consider disabling when classifying short reads [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "orf-filter-e" -d "E-value threshold used for query ORF prefiltering [1.000E+02]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "orf-filter-s" -d "Sensitivity used for query ORF prefiltering [2.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "lca-mode" -d "LCA Mode 1: single search LCA , 2/3: approximate 2bLCA, 4: top hit [3]" -x
@@ -484,6 +508,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "vote-mode"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "lca-ranks" -d "Add column with specified ranks (',' separated) []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "blacklist" -d "Comma separated list of ignored taxa in LCA computation [12908:unclassified sequences,28384:other sequences]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -503,8 +528,6 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "sequence-o
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "sequence-split-mode" -d "Sequence split mode 0: copy data, 1: soft link data and write new index, [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "headers-split-mode" -d "Header split mode: 0: split position, 1: original header [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "start-sens" -d "Start sensitivity [4.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "report-mode" -d "Taxonomy report mode 0: Kraken 1: Krona [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "format-mode" -d "Output format: 0: BLAST-TAB, 1: SAM, 2: BLAST-TAB + query/db length, 3: Pretty HTML [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen tstart,tend,tlen,alnlen,raw,bits,cigar,qseq,tseq,qheader,theader,qaln,taln,qframe,tframe,mismatch,qcov,tcov qset,qsetid,tset,tsetid,taxid,taxname,taxlineage,qorfstart,qorfend,torfstart,torfend [query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits]" -x
@@ -516,9 +539,9 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "dbtype" -d
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "shuffle" -d "Shuffle input database [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "createdb-mode" -d "Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -536,12 +559,13 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-taxonomy" -l "write-look
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [5.700]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -549,6 +573,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "split-memory-li
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -556,8 +581,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "spaced-kmer-pat
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -572,24 +597,29 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "score-bias" -d 
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -611,17 +641,17 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "headers-split-m
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "start-sens" -d "Start sensitivity [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "format-mode" -d "Output format: 0: BLAST-TAB, 1: SAM, 2: BLAST-TAB + query/db length, 3: Pretty HTML [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "format-mode" -d "0: BLAST-TAB 1: SAM 2: BLAST-TAB + query/db length 3: Pretty HTML 4: BLAST-TAB + column headers BLAST-TAB (0) and BLAST-TAB + column headers (4) support custom output formats (--format-output) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen tstart,tend,tlen,alnlen,raw,bits,cigar,qseq,tseq,qheader,theader,qaln,taln,qframe,tframe,mismatch,qcov,tcov qset,qsetid,tset,tsetid,taxid,taxname,taxlineage,qorfstart,qorfend,torfstart,torfend [query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "overlap" -d "Maximum overlap of covered regions [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "dbtype" -d "Database type 0: auto, 1: amino acid 2: nucleotides [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "shuffle" -d "Shuffle input database [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "createdb-mode" -d "Createdb mode 0: copy data, 1: soft link data and write new index (works only with single line fasta/q) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "greedy-best-hits" -d "Choose the best hits greedily to cover the query [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -639,12 +669,13 @@ complete -c mmseqs -n "__fish_seen_subcommand_from easy-rbh" -l "write-lookup" -
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [5.700]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -652,6 +683,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "split-memory-limi
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -659,8 +691,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "spaced-kmer-patte
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -675,24 +707,29 @@ complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "score-bias" -d "S
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -714,10 +751,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "headers-split-mod
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "start-sens" -d "Start sensitivity [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -733,14 +770,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from search" -l "strand" -d "Stran
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -755,15 +794,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "score-bias" -d
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "pick-n-sim-kmer" -d "Add N similar k-mers to search [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "result-direction" -d "result is 0: query, 1: target centric [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "max-length" -d "Maximum codon number in open reading frames [32734]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "max-gaps" -d "Maximum number of codons with gaps or unknown residues before an open reading frame is rejected [2147483647]" -x
@@ -778,10 +818,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "use-all-table-
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "add-orf-stop" -d "Add stop codon '*' at complete start and end [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -793,19 +833,21 @@ complete -c mmseqs -n "__fish_seen_subcommand_from linsearch" -l "merge-query" -
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [2.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
@@ -820,8 +862,9 @@ complete -c mmseqs -n "__fish_seen_subcommand_from map" -s "a" -d "Add backtrace
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "min-aln-len" -d "Minimum alignment length (range 0-INT_MAX) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "seq-id-mode" -d "0: alignment length 1: shorter, 2: longer sequence [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "min-length" -d "Minimum codon number in open reading frames [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "max-length" -d "Maximum codon number in open reading frames [32734]" -x
@@ -838,10 +881,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "id-offset" -d "Numer
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "add-orf-stop" -d "Add stop codon '*' at complete start and end [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "start-sens" -d "Start sensitivity [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -854,12 +897,13 @@ complete -c mmseqs -n "__fish_seen_subcommand_from map" -l "create-lookup" -d "C
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -867,6 +911,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "split-memory-limit" 
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -874,8 +919,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "spaced-kmer-pattern"
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -890,24 +935,29 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "score-bias" -d "Scor
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "min-length" -d "Minimum codon number in open reading frames [10]" -x
@@ -929,10 +979,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "headers-split-mode" 
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "start-sens" -d "Start sensitivity [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -948,17 +998,19 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rbh" -l "strand" -d "Strand s
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.900]" -x
@@ -973,25 +1025,26 @@ complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "score-bias" -d 
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "similarity-type" -d "Type of score used for clustering." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "include-only-extendable" -d "Include only extendable [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
@@ -999,22 +1052,25 @@ complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "force-reuse" -d
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "filter-hits" -d "Filter hits by seq.id." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "sort-results" -d "Sort results: 0: no sorting, 1: sort by E-value (Alignment) or seq.id." -x
+complete -c mmseqs -n "__fish_seen_subcommand_from linclust" -l "cov-mode" -d "# Sequence 0 1 2"
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [20]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
@@ -1024,8 +1080,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "local-tmp" -d "P
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.800]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -1038,28 +1094,30 @@ complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "score-bias" -d "
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "cluster-mode" -d "1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "similarity-type" -d "Type of score used for clustering." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "single-step-clustering" -d "Switch from cascaded to simple clustering workflow [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "cluster-steps" -d "Cascaded clustering steps from 1 to -s [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "cluster-reassign" -d "Cascaded clustering can cluster sequence that do not fulfill the clustering criteria." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "include-only-extendable" -d "Include only extendable [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
@@ -1071,18 +1129,20 @@ complete -c mmseqs -n "__fish_seen_subcommand_from cluster" -l "sort-results" -d
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -1090,8 +1150,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "spaced-kme
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -1106,36 +1166,41 @@ complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "score-bias
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "cluster-mode" -d "1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "similarity-type" -d "Type of score used for clustering." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "single-step-clustering" -d "Switch from cascaded to simple clustering workflow [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "cluster-steps" -d "Cascaded clustering steps from 1 to -s [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "cluster-reassign" -d "Cascaded clustering can cluster sequence that do not fulfill the clustering criteria." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "include-only-extendable" -d "Include only extendable [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -1159,10 +1224,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "start-sens
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "use-seq-id" -d "Sequence ID (Uniprot, GenBank, ...) is used for identifying matches between the old and the new DB [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "recover-deleted" -d "Find and recover deleted sequences during updating of clustering [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -1178,12 +1243,13 @@ complete -c mmseqs -n "__fish_seen_subcommand_from clusterupdate" -l "strand" -d
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [2.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -1191,6 +1257,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "split-memory-li
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -1198,8 +1265,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "spaced-kmer-pat
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E+00]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -1214,25 +1281,28 @@ complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "score-bias" -d 
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "orf-filter" -d "Prefilter query ORFs with non-selective search Only used during nucleotide-vs-protein classification NOTE: Consider disabling when classifying short reads [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "orf-filter" -d "Prefilter query ORFs with non-selective search   Only used during nucleotide-vs-protein classification NOTE: Consider disabling when classifying short reads [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "orf-filter-e" -d "E-value threshold used for query ORF prefiltering [1.000E+02]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "orf-filter-s" -d "Sensitivity used for query ORF prefiltering [2.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "lca-mode" -d "LCA Mode 1: single search LCA , 2/3: approximate 2bLCA, 4: top hit [3]" -x
@@ -1242,6 +1312,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "vote-mode" -d "
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "lca-ranks" -d "Add column with specified ranks (',' separated) []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "blacklist" -d "Comma separated list of ignored taxa in LCA computation [12908:unclassified sequences,28384:other sequences]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -1261,12 +1332,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "sequence-overla
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "sequence-split-mode" -d "Sequence split mode 0: copy data, 1: soft link data and write new index, [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "headers-split-mode" -d "Header split mode: 0: split position, 1: original header [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "start-sens" -d "Start sensitivity [4.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -1281,10 +1350,11 @@ complete -c mmseqs -n "__fish_seen_subcommand_from taxonomy" -l "strand" -d "Str
 
 
 
+complete -c mmseqs -n "__fish_seen_subcommand_from databases" -l "tsv" -d "Return output in TSV format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from databases" -l "force-reuse" -d "Reuse tmp filse in tmp/latest folder ignoring parameters and version changes [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from databases" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from databases" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from databases" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from databases" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from databases" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1299,17 +1369,19 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createdb" -l "write-lookup" -
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [7.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:0,prof:0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "check-compatible" -d "0: Always recreate index, 1: Check if recreating index is needed, 2: Fail if index is incompatible [0]" -x
@@ -1322,7 +1394,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "contig-end-m
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "orf-start-mode" -d "Orf fragment can be 0: from start to stop, 1: from any to stop, 2: from last encountered start to stop (no start in the middle) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "forward-frames" -d "Comma-separated list of frames on the forward strand to be extracted [1,2,3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "reverse-frames" -d "Comma-separated list of frames on the reverse strand to be extracted [1,2,3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "translation-table" -d "1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "translation-table" -d "1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE 9) FLATWORM_MITOCHONDRIAL, 10) EUPLOTID, 11) PROKARYOTE, 12) ALT_YEAST, 13) ASCIDIAN_MITOCHONDRIAL, 14) ALT_FLATWORM_MITOCHONDRIAL 15) BLEPHARISMA, 16) CHLOROPHYCEAN_MITOCHONDRIAL, 21) TREMATODE_MITOCHONDRIAL, 22) SCENEDESMUS_MITOCHONDRIAL 23) THRAUSTOCHYTRIUM_MITOCHONDRIAL, 24) PTEROBRANCHIA_MITOCHONDRIAL, 25) GRACILIBACTERIA, 26) PACHYSOLEN, 27) KARYORELICT, 28) CONDYLOSTOMA" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "translate" -d "Translate ORF to amino acid [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "use-all-table-starts" -d "Use all alternatives for a start codon in the genetic table, if false - only ATG (AUG) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
@@ -1332,7 +1404,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "sequence-spl
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "headers-split-mode" -d "Header split mode: 0: split position, 1: original header [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
@@ -1340,18 +1412,19 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createindex" -l "strand" -d "
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "split-memory-limit" -d "Set max memory per split." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "kmer-per-seq" -d "k-mers per sequence [21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "check-compatible" -d "0: Always recreate index, 1: Check if recreating index is needed, 2: Fail if index is incompatible [0]" -x
@@ -1371,7 +1444,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "id-offset
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "add-orf-stop" -d "Add stop codon '*' at complete start and end [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from createlinindex" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
@@ -1395,40 +1468,47 @@ complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "output-dbtype" -d
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "tar-include" -d "Include file names based on this regex [.*]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "tar-exclude" -d "Exclude file names based on this regex [^\$]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from tar2db" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
+complete -c mmseqs -n "__fish_seen_subcommand_from db2tar" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
+
+
+
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "match-mode" -d "0: Columns that have a residue in the first sequence are kept, 1: columns that have a residue in --match-ratio of all sequences are kept [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "match-ratio" -d "Columns that have a residue in this ratio of all sequences are kept [0.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "pca" -d "Pseudo count admixture strength [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "msa-type" -d "MSA Type: 0: cA3M, 1: A3M, 2: FASTA [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2profile" -l "skip-query" -d "Skip the query sequence [0]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from compress" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from compress" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from compress" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from decompress" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from decompress" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from decompress" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1449,16 +1529,24 @@ complete -c mmseqs -n "__fish_seen_subcommand_from lndb" -s "v" -d "Verbosity le
 
 
 
+complete -c mmseqs -n "__fish_seen_subcommand_from aliasdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
+
+
+
+complete -c mmseqs -n "__fish_seen_subcommand_from unpackdb" -l "unpack-name-mode" -d "Name unpacked files by 0: DB key, 1: accession (through .lookup) [1]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from unpackdb" -l "unpack-suffix" -d "File suffix for unpacked files []" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from unpackdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from unpackdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from touchdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from touchdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from touchdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from createsubdb" -l "subdb-mode" -d "Subdb mode 0: copy data 1: soft link data and write index [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createsubdb" -l "id-mode" -d "Select DB entries based on 0: database keys, 1: FASTA identifiers (.lookup) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createsubdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1487,21 +1575,21 @@ complete -c mmseqs -n "__fish_seen_subcommand_from mergedbs" -l "merge-stop-empt
 
 complete -c mmseqs -n "__fish_seen_subcommand_from subtractdbs" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from subtractdbs" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
-complete -c mmseqs -n "__fish_seen_subcommand_from subtractdbs" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from subtractdbs" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from subtractdbs" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from subtractdbs" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "format-mode" -d "Output format: 0: BLAST-TAB, 1: SAM, 2: BLAST-TAB + query/db length, 3: Pretty HTML [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "translation-table" -d "1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "format-mode" -d "0: BLAST-TAB 1: SAM 2: BLAST-TAB + query/db length 3: Pretty HTML 4: BLAST-TAB + column headers BLAST-TAB (0) and BLAST-TAB + column headers (4) support custom output formats (--format-output) [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "format-output" -d "Choose comma separated list of output columns from: query,target,evalue,gapopen,pident,fident,nident,qstart,qend,qlen tstart,tend,tlen,alnlen,raw,bits,cigar,qseq,tseq,qheader,theader,qaln,taln,qframe,tframe,mismatch,qcov,tcov qset,qsetid,tset,tsetid,taxid,taxname,taxlineage,qorfstart,qorfend,torfstart,torfend [query,target,fident,alnlen,mismatch,gapopen,qstart,qend,tstart,tend,evalue,bits]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "translation-table" -d "1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE 9) FLATWORM_MITOCHONDRIAL, 10) EUPLOTID, 11) PROKARYOTE, 12) ALT_YEAST, 13) ASCIDIAN_MITOCHONDRIAL, 14) ALT_FLATWORM_MITOCHONDRIAL 15) BLEPHARISMA, 16) CHLOROPHYCEAN_MITOCHONDRIAL, 21) TREMATODE_MITOCHONDRIAL, 22) SCENEDESMUS_MITOCHONDRIAL 23) THRAUSTOCHYTRIUM_MITOCHONDRIAL, 24) PTEROBRANCHIA_MITOCHONDRIAL, 25) GRACILIBACTERIA, 26) PACHYSOLEN, 27) KARYORELICT, 28) CONDYLOSTOMA" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertalis" -l "db-output" -d "Return a result DB instead of a text file [0]" -r
@@ -1512,7 +1600,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "first-seq-as-r
 complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "target-column" -d "Select a target column (default 1), 0 if no target id exists [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "full-header" -d "Replace DB ID by its corresponding Full Header [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "idx-seq-src" -d "0: auto, 1: split/translated sequences, 2: input sequences [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createtsv" -l "db-output" -d "Return a result DB instead of a text file [0]" -r
@@ -1533,14 +1621,14 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "min-sequ
 complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "max-sequences" -d "Maximum number of sequences a cluster may contain [2147483647]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "hh-format" -d "Format entries to use with hhsuite (for singleton clusters) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createseqfiledb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomyreport" -l "report-mode" -d "Taxonomy report mode 0: Kraken 1: Krona [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from taxonomyreport" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from taxonomyreport" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from taxonomyreport" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1557,7 +1645,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "translation-
 complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "translate" -d "Translate ORF to amino acid [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "use-all-table-starts" -d "Use all alternatives for a start codon in the genetic table, if false - only ATG (AUG) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
@@ -1566,20 +1654,20 @@ complete -c mmseqs -n "__fish_seen_subcommand_from extractorfs" -l "create-looku
 
 complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -l "forward-frames" -d "Comma-separated list of frames on the forward strand to be extracted [1,2,3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -l "reverse-frames" -d "Comma-separated list of frames on the reverse strand to be extracted [1,2,3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractframes" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from orftocontig" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from orftocontig" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from orftocontig" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from orftocontig" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from reverseseq" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from reverseseq" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from reverseseq" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from reverseseq" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1589,11 +1677,11 @@ complete -c mmseqs -n "__fish_seen_subcommand_from translatenucs" -l "translatio
 complete -c mmseqs -n "__fish_seen_subcommand_from translatenucs" -l "add-orf-stop" -d "Add stop codon '*' at complete start and end [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from translatenucs" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from translatenucs" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from translatenucs" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from translatenucs" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from translateaa" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from translateaa" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from translateaa" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from translateaa" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1603,14 +1691,15 @@ complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "sequence-o
 complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "sequence-split-mode" -d "Sequence split mode 0: copy data, 1: soft link data and write new index, [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "headers-split-mode" -d "Header split mode: 0: split position, 1: original header [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "max-seq-len" -d "Maximum sequence length [10000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from splitsequence" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from masksequence" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from masksequence" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from masksequence" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from masksequence" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from masksequence" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1619,33 +1708,34 @@ complete -c mmseqs -n "__fish_seen_subcommand_from masksequence" -s "v" -d "Verb
 complete -c mmseqs -n "__fish_seen_subcommand_from extractalignedregion" -l "extract-mode" -d "Extract from 1: Query, 2: Target [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractalignedregion" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractalignedregion" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from extractalignedregion" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from extractalignedregion" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractalignedregion" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from swapresults" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from result2rbh" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2rbh" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2rbh" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2rbh" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
@@ -1653,8 +1743,9 @@ complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "cov" -d "Filt
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "msa-format-mode" -d "Format MSA as: 0: binary cA3M DB 1: binary ca3m w." -r
-complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "summary-prefix" -d "Set the cluster summary prefix [cl]" -x
@@ -1662,7 +1753,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from result2msa" -l "skip-query" -
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from result2dnamsa" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2dnamsa" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2dnamsa" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2dnamsa" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2dnamsa" -l "skip-query" -d "Skip the query sequence [0]" -x
@@ -1672,29 +1763,32 @@ complete -c mmseqs -n "__fish_seen_subcommand_from result2dnamsa" -l "skip-query
 complete -c mmseqs -n "__fish_seen_subcommand_from result2stats" -l "stat" -d "One of: linecount, mean, doolittle, charges, seqlen, firstline []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2stats" -l "tsv" -d "Return output in TSV format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2stats" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2stats" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2stats" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2stats" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "add-self-matches" -d "keep the query (representative) sequence [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterresult" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
@@ -1703,10 +1797,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from offsetalignment" -l "merge-qu
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1714,18 +1808,18 @@ complete -c mmseqs -n "__fish_seen_subcommand_from proteinaln2nucl" -s "v" -d "V
 
 complete -c mmseqs -n "__fish_seen_subcommand_from result2repseq" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2repseq" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2repseq" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2repseq" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2repseq" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from sortresult" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from sortresult" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from sortresult" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from sortresult" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from summarizealis" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from summarizealis" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizealis" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizealis" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1734,7 +1828,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from summarizealis" -s "v" -d "Ver
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -l "overlap" -d "Maximum overlap of covered regions [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeresult" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1744,7 +1838,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -l "ncbi-tax-dum
 complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -l "tax-mapping-file" -d "File to map sequence identifier to taxonomical identifier []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -l "tax-mapping-mode" -d "Map taxonomy based on sequence database 0: .lookup file 1: .source file [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -l "tax-db-mode" -d "Create taxonomy database as: 0: .dmp flat files (human readable) 1: binary dump (faster readin) [1]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from createtaxdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1753,18 +1847,22 @@ complete -c mmseqs -n "__fish_seen_subcommand_from createbintaxonomy" -s "v" -d 
 
 
 
+complete -c mmseqs -n "__fish_seen_subcommand_from createbintaxmapping" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
+
+
+
 complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -l "lca-ranks" -d "Add column with specified ranks (',' separated) []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -l "pick-id-from" -d "Query 1, Target 2 [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from addtaxonomy" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxdb" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxdb" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1772,7 +1870,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxdb" -s "v" -d "Verbo
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -l "subdb-mode" -d "Subdb mode 0: copy data 1: soft link data and write index [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1780,7 +1878,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from filtertaxseqdb" -s "v" -d "Ve
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetax" -l "lca-ranks" -d "Add column with specified ranks (',' separated) []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetax" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetax" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetax" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetax" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetax" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1790,16 +1888,17 @@ complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -l "vote
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -l "lca-ranks" -d "Add column with specified ranks (',' separated) []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from aggregatetaxweights" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -1814,15 +1913,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "score-bias" -d 
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lcaalign" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1832,7 +1932,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from lca" -l "lca-ranks" -d "Add c
 complete -c mmseqs -n "__fish_seen_subcommand_from lca" -l "blacklist" -d "Comma separated list of ignored taxa in LCA computation [12908:unclassified sequences,28384:other sequences]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lca" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lca" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from lca" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from lca" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from lca" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1843,7 +1943,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -l "lca-ranks" -
 complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -l "blacklist" -d "Comma separated list of ignored taxa in LCA computation [12908:unclassified sequences,28384:other sequences]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -l "tax-lineage" -d "0: don't show, 1: add all lineage names, 2: add all lineage taxids [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from majoritylca" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -1868,19 +1968,20 @@ complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "stat" -d "One
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "tsv" -d "Return output in TSV format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "write-lookup" -d "write .lookup file containing mapping from internal id, fasta id and file number [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitdb" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [5.700]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
@@ -1888,6 +1989,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "split-mem
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
@@ -1895,8 +1997,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "spaced-km
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E+02]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -1911,24 +2013,29 @@ complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "score-bia
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "num-iterations" -d "Number of iterative profile search iterations [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
@@ -1951,10 +2058,10 @@ complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "search-ty
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "start-sens" -d "Start sensitivity [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "simple-best-hit" -d "Update the p-value by a single best hit, or by best and second best hits [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
@@ -1970,7 +2077,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from multihitsearch" -l "strand" -
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from besthitperset" -l "simple-best-hit" -d "Update the p-value by a single best hit, or by best and second best hits [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from besthitperset" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from besthitperset" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from besthitperset" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from besthitperset" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -1978,31 +2085,33 @@ complete -c mmseqs -n "__fish_seen_subcommand_from besthitperset" -s "v" -d "Ver
 
 complete -c mmseqs -n "__fish_seen_subcommand_from combinepvalperset" -l "alpha" -d "Set alpha for combining p-values during aggregation [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from combinepvalperset" -l "aggregation-mode" -d "Combined P-values computed from 0: multi-hit, 1: minimum of all P-values, 2: product-of-P-values, 3: truncated product [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from combinepvalperset" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from combinepvalperset" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from combinepvalperset" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from combinepvalperset" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from mergeresultsbyset" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from mergeresultsbyset" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from mergeresultsbyset" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from mergeresultsbyset" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [seq:2147483647,prof:2147483647]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "split" -d "Split input into N equally distributed chunks." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
@@ -2011,34 +2120,37 @@ complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "spaced-kmer-pa
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "taxon-list" -d "Taxonomy ID, possibly multiple values separated by ',' []" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefilter" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from ungappedprefilter" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:13]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "alph-size" -d "Alphabet size (range 2-21) [aa:13,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "split-memory-limit" -d "Set max memory per split." -x
@@ -2046,41 +2158,43 @@ complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "min-seq-id" 
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.800]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "kmer-per-seq" -d "k-mers per sequence [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "adjust-kmer-len" -d "Adjust k-mer length based on specificity (only for nucleotides) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "hash-shift" -d "Shift k-mer hash initialization [67]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "include-only-extendable" -d "Include only extendable [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "ignore-multi-kmer" -d "Skip k-mers occurring multiple times (>=2) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmermatcher" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:VTML80.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "mask-prob" -d "Mask sequences is probablity is above threshold [0.900]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "split-memory-limit" -d "Set max memory per split." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.800]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "kmer-per-seq" -d "k-mers per sequence [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [nucl:0.200,aa:0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "kmer-per-seq-scale" -d "Scale k-mer per sequence based on sequence length as kmer-per-seq val + scale x seqlen [aa:0.000,nucl:0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "pick-n-sim-kmer" -d "Add N similar k-mers to search [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "result-direction" -d "result is 0: query, 1: target centric [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from kmersearch" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -2095,15 +2209,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "score-bias" -d "Sc
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from align" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2112,7 +2227,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from align" -s "v" -d "Verbosity l
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "min-aln-len" -d "Minimum alignment length (range 0-INT_MAX) [0]" -x
@@ -2120,25 +2235,26 @@ complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "seq-id-mode" -d
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "score-bias" -d "Score bias when computing SW alignment (in bits) [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignall" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "alignment-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "alignment-output-mode" -d "How to compute the alignment   0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
@@ -2153,15 +2269,16 @@ complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "score-bi
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "corr-score-weight" -d "Weight of backtrace correlation score that is added to the alignment score [0.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated (nucleotide alignment only) [40]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from transitivealign" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2177,9 +2294,9 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "min-seq-
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "min-aln-len" -d "Minimum alignment length (range 0-INT_MAX) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "seq-id-mode" -d "0: alignment length 1: shorter, 2: longer sequence [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "filter-hits" -d "Filter hits by seq.id." -x
@@ -2190,17 +2307,17 @@ complete -c mmseqs -n "__fish_seen_subcommand_from rescorediagonal" -l "sort-res
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "alph-size" -d "Alphabet size (range 2-21) [aa:21,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "min-aln-len" -d "Minimum alignment length (range 0-INT_MAX) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "filter-hits" -d "Filter hits by seq.id." -x
@@ -2210,24 +2327,24 @@ complete -c mmseqs -n "__fish_seen_subcommand_from alignbykmer" -l "filter-hits"
 complete -c mmseqs -n "__fish_seen_subcommand_from clust" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clust" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clust" -l "similarity-type" -d "Type of score used for clustering." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clust" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clust" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clust" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clust" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:3]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "alph-size" -d "Alphabet size (range 2-21) [aa:3,nucl:5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.990]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from clusthash" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from mergeclusters" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from mergeclusters" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from mergeclusters" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from mergeclusters" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2235,225 +2352,145 @@ complete -c mmseqs -n "__fish_seen_subcommand_from mergeclusters" -s "v" -d "Ver
 
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "pca" -d "Pseudo count admixture strength [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from result2profile" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "match-mode" -d "0: Columns that have a residue in the first sequence are kept, 1: columns that have a residue in --match-ratio of all sequences are kept [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "match-ratio" -d "Columns that have a residue in this ratio of all sequences are kept [0.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "pca" -d "Pseudo count admixture strength [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "msa-type" -d "MSA Type: 0: cA3M, 1: A3M, 2: FASTA [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from msa2result" -l "skip-query" -d "Skip the query sequence [0]" -x
 
 
 
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "neff" -d "Neff included into context state profile (1.0,20.0) [1.000]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "tau" -d "Tau: context state pseudo count mixture (0.0,1.0) [0.900]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -l "compressed" -d "Write compressed output [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from sequence2profile" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
+
+
+
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2pssm" -l "db-output" -d "Return a result DB instead of a text file [0]" -r
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2consensus" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from profile2repseq" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from convertprofiledb" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from convertprofiledb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertprofiledb" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from convertprofiledb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertprofiledb" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertprofiledb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [nucl:nucleotide.out,aa:VTML80.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -s "s" -d "Sensitivity: 1.0 faster; 4.0 fast; 7.5 sensitive [4.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "k-score" -d "k-mer threshold for generating similar k-mer lists [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "alph-size" -d "Alphabet size (range 2-21) [nucl:5,aa:21]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-seqs" -d "Maximum results per query sequence allowed to pass the prefilter (affects sensitivity) [300]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "split" -d "Split input into N equally distributed chunks." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "split-mode" -d "0: split target db; 1: split query db; 2: auto, depending on main memory [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "split-memory-limit" -d "Set max memory per split." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "diag-score" -d "Use ungapped diagonal scoring during prefilter [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "exact-kmer-matching" -d "Extract only exact k-mers for matching (range 0-1) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "mask" -d "Mask sequences in k-mer stage: 0: w/o low complexity masking, 1: with low complexity masking [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "mask-lower-case" -d "Lowercase letters will be excluded from k-mer search 0: include region, 1: exclude region [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "min-ungapped-score" -d "Accept only matches with ungapped alignment score above threshold [15]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "local-tmp" -d "Path where some of the temporary files will be created []" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "disk-space-limit" -d "Set max disk space to use for reverse profile searches." -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -s "a" -d "Add backtrace string (convert to alignments with mmseqs convertalis module) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "alignment-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "alignment-output-mode" -d "How to compute the alignment: 0: automatic 1: only score and end_pos 2: also start_pos and cov 3: also seq.id 4: only ungapped alignment 5: score only (output) cluster format [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "wrapped-scoring" -d "Double the (nucleotide) query sequence during the scoring process to allow wrapped diagonal scoring around end and start [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "min-aln-len" -d "Minimum alignment length (range 0-INT_MAX) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "seq-id-mode" -d "0: alignment length 1: shorter, 2: longer sequence [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "alt-ali" -d "Show up to this many alternative alignments [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-rejected" -d "Maximum rejected alignments before alignment calculation for a query is stopped [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-accept" -d "Maximum accepted alignments before alignment calculation for a query is stopped [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "score-bias" -d "Score bias when computing SW alignment (in bits) [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "realign" -d "Compute more conservative, shorter alignments (scores and E-values not changed) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "realign-score-bias" -d "Additional bias when computing realignment [-0.200]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "realign-max-seqs" -d "Maximum number of results to return in realignment [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "zdrop" -d "Maximal allowed difference between score values before alignment is truncated  (nucleotide alignment only) [40]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "exhaustive-search-filter" -d "Filter result during search: 0: do not filter, 1: filter [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "cov" -d "Filter output MSAs using min." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "num-iterations" -d "Number of iterative profile search iterations [3]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "exhaustive-search" -d "For bigger profile DB, run iteratively the search by greedily swapping the search results [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "lca-search" -d "Efficient search for LCA candidates [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "rescore-mode" -d "Rescore diagonals with: 0: Hamming distance 1: local alignment (score only) 2: local alignment 3: global alignment 4: longest alignment fulfilling window quality criterion [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "min-length" -d "Minimum codon number in open reading frames [30]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-length" -d "Maximum codon number in open reading frames [32734]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-gaps" -d "Maximum number of codons with gaps or unknown residues before an open reading frame is rejected [2147483647]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "contig-start-mode" -d "Contig start can be 0: incomplete, 1: complete, 2: both [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "contig-end-mode" -d "Contig end can be 0: incomplete, 1: complete, 2: both [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "orf-start-mode" -d "Orf fragment can be 0: from start to stop, 1: from any to stop, 2: from last encountered start to stop (no start in the middle) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "forward-frames" -d "Comma-separated list of frames on the forward strand to be extracted [1,2,3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "reverse-frames" -d "Comma-separated list of frames on the reverse strand to be extracted [1,2,3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "translation-table" -d "1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE 9) FLATWORM_MITOCHONDRIAL, 10) EUPLOTID, 11) PROKARYOTE, 12) ALT_YEAST, 13) ASCIDIAN_MITOCHONDRIAL, 14) ALT_FLATWORM_MITOCHONDRIAL 15) BLEPHARISMA, 16) CHLOROPHYCEAN_MITOCHONDRIAL, 21) TREMATODE_MITOCHONDRIAL, 22) SCENEDESMUS_MITOCHONDRIAL 23) THRAUSTOCHYTRIUM_MITOCHONDRIAL, 24) PTEROBRANCHIA_MITOCHONDRIAL, 25) GRACILIBACTERIA, 26) PACHYSOLEN, 27) KARYORELICT, 28) CONDYLOSTOMA" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "translate" -d "Translate ORF to amino acid [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "use-all-table-starts" -d "Use all alternatives for a start codon in the genetic table, if false - only ATG (AUG) [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "add-orf-stop" -d "Add stop codon '*' at complete start and end [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "sequence-overlap" -d "Overlap between sequences [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "sequence-split-mode" -d "Sequence split mode 0: copy data, 1: soft link data and write new index, [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "headers-split-mode" -d "Header split mode: 0: split position, 1: original header [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "search-type" -d "Search type 0: auto 1: amino acid, 2: translated, 3: nucleotide, 4: translated nucleotide alignment [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "start-sens" -d "Start sensitivity [4.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "sens-steps" -d "Number of search steps performed from --start-sens to -s [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "expansion-mode" -d "Update score, E-value, and sequence identity by 0: input alignment 1: rescoring the inferred backtrace [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "force-reuse" -d "Reuse tmp filse in tmp/latest folder ignoring parameters and version changes [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "filter-hits" -d "Filter hits by seq.id." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "sort-results" -d "Sort results: 0: no sorting, 1: sort by E-value (Alignment) or seq.id." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "chain-alignments" -d "Chain overlapping alignments [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "merge-query" -d "Combine ORFs/split sequences to a single entry [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from enrich" -l "strand" -d "Strand selection only works for DNA/DNA search 0: reverse, 1: forward, 2: both [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from tsv2exprofiledb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from result2pp" -l "e-profile" -d "Include sequences matches with < E-value thr." -r
-complete -c mmseqs -n "__fish_seen_subcommand_from result2pp" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from result2pp" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2pp" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2pp" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from result2pp" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-
-
-
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2cs" -l "pca" -d "Pseudo count admixture strength [1.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2cs" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2cs" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2cs" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2cs" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from profile2cs" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-
-
-
-complete -c mmseqs -n "__fish_seen_subcommand_from convertca3m" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from convertca3m" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertca3m" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from convertca3m" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "score-bias" -d "Score bias when computing SW alignment (in bits) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "pca" -d "Pseudo count admixture strength [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "cov" -d "Filter output MSAs using min." -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "expansion-mode" -d "Update score, E-value, and sequence identity by 0: input alignment 1: rescoring the inferred backtrace [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "expand-filter-clusters" -d "Filter each target cluster during expansion 0: no filter 1: filter [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expandaln" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "gap-open" -d "Gap open cost [nucl:5,aa:11]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "gap-extend" -d "Gap extension cost [nucl:2,aa:1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "gap-pc" -d "Pseudo count for calculating position-specific gap opening penalties [10]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "score-bias" -d "Score bias when computing SW alignment (in bits) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
@@ -2461,30 +2498,35 @@ complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "e-profile
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "mask-profile" -d "Mask query sequence of profile using tantan [0,1] [1]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "wg" -d "Use global sequence weighting for profile calculation [0]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "filter-msa" -d "Filter msa: 0: do not filter, 1: filter [1]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "filter-min-enable" -d "Only filter MSAs with more than N sequences, 0 always filters [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "max-seq-id" -d "Reduce redundancy of output MSA using max." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "qid" -d "Reduce diversity of output MSAs using min.seq." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "qsc" -d "Reduce diversity of output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "cov" -d "Filter output MSAs using min." -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "diff" -d "Filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 [1000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "pca" -d "Pseudo count admixture strength [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) [1.500]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "pseudo-cnt-mode" -d "use 0: substitution-matrix or 1: context-specific pseudocounts [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "pca" -d "Pseudo count admixture strength []"
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "pcb" -d "Pseudo counts: Neff at half of maximum admixture (range 0.0-inf) []"
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "expansion-mode" -d "Update score, E-value, and sequence identity by 0: input alignment 1: rescoring the inferred backtrace [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "allow-deletion" -d "Allow deletions in a MSA [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "expand-filter-clusters" -d "Filter each target cluster during expansion 0: no filter 1: filter [0]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "max-seq-len" -d "Maximum sequence length [65535]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "compressed" -d "Write compressed output [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from expand2profile" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from view" -l "id-list" -d "Entries to be printed separated by ',' []" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from view" -l "id-mode" -d "Select DB entries based on 0: database keys, 1: FASTA identifiers (.lookup) [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from view" -l "idx-entry-type" -d "0: sequence, 1: src sequence, 2: header, 3: src header [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from view" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from apply" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from apply" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from apply" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from apply" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2505,14 +2547,14 @@ complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "comparison-oper
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "comparison-value" -d "Filter by comparing each entry to this value [0.000E+00]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "sort-entries" -d "Sort column set by --filter-column, by 0: no sorting, 1: increasing, 2: decreasing, 3: random shuffle [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "join-db" -d "Join another database entry with respect to the database identifier in the chosen column []" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from filterdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from swapdb" -l "split-memory-limit" -d "Set max memory per split." -x
-complete -c mmseqs -n "__fish_seen_subcommand_from swapdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from swapdb" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from swapdb" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from swapdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2521,7 +2563,7 @@ complete -c mmseqs -n "__fish_seen_subcommand_from swapdb" -s "v" -d "Verbosity 
 complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -l "prefix" -d "Use this prefix for all entries []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -l "mapping-file" -d "Specify a file that translates the keys of a DB to new keys, TSV format []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -l "tsv" -d "Return output in TSV format [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2530,20 +2572,20 @@ complete -c mmseqs -n "__fish_seen_subcommand_from prefixid" -s "v" -d "Verbosit
 complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -l "prefix" -d "Use this prefix for all entries []" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -l "mapping-file" -d "Specify a file that translates the keys of a DB to new keys, TSV format []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -l "tsv" -d "Return output in TSV format [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from suffixid" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from renamedbkeys" -l "subdb-mode" -d "Subdb mode 0: copy data 1: soft link data and write index [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from renamedbkeys" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from renamedbkeys" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from renamedbkeys" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from diffseqdbs" -l "use-seq-id" -d "Sequence ID (Uniprot, GenBank, ...) is used for identifying matches between the old and the new DB [0]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from diffseqdbs" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from diffseqdbs" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from diffseqdbs" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from diffseqdbs" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2552,20 +2594,22 @@ complete -c mmseqs -n "__fish_seen_subcommand_from diffseqdbs" -s "v" -d "Verbos
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -l "overlap" -d "Maximum overlap of covered regions [0.000]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizetabs" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from gff2db" -l "gff-type" -d "Type in the GFF file to filter by []" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from gff2db" -l "gff-type" -d "Comma separated list of feature types in the GFF file to select []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from gff2db" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from gff2db" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from gff2db" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from maskbygff" -l "gff-type" -d "Type in the GFF file to filter by []" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from maskbygff" -l "gff-type" -d "Comma separated list of feature types in the GFF file to select []" -r
 complete -c mmseqs -n "__fish_seen_subcommand_from maskbygff" -l "id-offset" -d "Numeric ids in index file are offset by this value [0]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from maskbygff" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from maskbygff" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -2578,14 +2622,14 @@ complete -c mmseqs -n "__fish_seen_subcommand_from convertkb" -s "v" -d "Verbosi
 
 
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeheaders" -l "header-type" -d "Header Type: 1: Uniclust, 2: Metaclust [1]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from summarizeheaders" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from summarizeheaders" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeheaders" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeheaders" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from summarizeheaders" -l "summary-prefix" -d "Set the cluster summary prefix [cl]" -x
 
 
 
-complete -c mmseqs -n "__fish_seen_subcommand_from nrtotaxmapping" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from nrtotaxmapping" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from nrtotaxmapping" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
 
@@ -2593,8 +2637,8 @@ complete -c mmseqs -n "__fish_seen_subcommand_from nrtotaxmapping" -s "v" -d "Ve
 complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -s "e" -d "List matches below this E-value (range 0.0-inf) [1.000E-03]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -l "msa-type" -d "MSA Type: 0: cA3M, 1: A3M, 2: FASTA [2]" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -l "sub-mat" -d "Substitution matrix file [nucl:nucleotide.out,aa:blosum62.out]" -r
-complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -l "sub-mat" -d "Substitution matrix file [aa:blosum62.out,nucl:nucleotide.out]" -r
+complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -l "compressed" -d "Write compressed output [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
@@ -2603,4 +2647,4 @@ complete -c mmseqs -n "__fish_seen_subcommand_from extractdomains" -s "v" -d "Ve
 complete -c mmseqs -n "__fish_seen_subcommand_from countkmer" -s "k" -d "k-mer length (0: automatically set to optimum) [5]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from countkmer" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [0]" -x
 complete -c mmseqs -n "__fish_seen_subcommand_from countkmer" -l "spaced-kmer-pattern" -d "User-specified spaced k-mer pattern []" -x
-complete -c mmseqs -n "__fish_seen_subcommand_from countkmer" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
+complete -c mmseqs -n "__fish_seen_subcommand_from countkmer" -l "threads" -d "Number of CPU-cores used (all by default) [12]" -x

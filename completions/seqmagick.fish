@@ -1,19 +1,24 @@
 # Auto-generated with h2o
 
-complete -c seqmagick -n "not __fish_seen_subcommand_from convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "h" -l "help" -d "show this help message and exit"
-complete -c seqmagick -n "not __fish_seen_subcommand_from convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "V" -l "version" -d "Print the version number and exit"
-complete -c seqmagick -n "not __fish_seen_subcommand_from convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "v" -l "verbose" -d "Be more verbose."
-complete -c seqmagick -n "not __fish_seen_subcommand_from convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "q" -l "quiet" -d "Suppress output"
+complete -c seqmagick -n "not __fish_seen_subcommand_from help convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "h" -l "help" -d "show this help message and exit"
+complete -c seqmagick -n "not __fish_seen_subcommand_from help convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "V" -l "version" -d "Print the version number and exit"
+complete -c seqmagick -n "not __fish_seen_subcommand_from help convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "v" -l "verbose" -d "Be more verbose."
+complete -c seqmagick -n "not __fish_seen_subcommand_from help convert info mogrify primer-trim quality-filter extract-ids backtrans-align" -s "q" -l "quiet" -d "Suppress output"
 
 
 
-complete -k -c seqmagick -n __fish_use_subcommand -x -a backtrans-align -d "Given a protein alignment and unaligned nucleotides,"
+complete -k -c seqmagick -n __fish_use_subcommand -x -a backtrans-align -d "Given a protein alignment and unaligned nucleotides, align the nucleotides using the protein alignment. Protein and nucleotide sequence files must contain the same number of sequences, in the same order, with the same IDs."
 complete -k -c seqmagick -n __fish_use_subcommand -x -a extract-ids -d "Extract the sequence IDs from a file"
 complete -k -c seqmagick -n __fish_use_subcommand -x -a quality-filter -d "Filter reads based on quality scores"
-complete -k -c seqmagick -n __fish_use_subcommand -x -a primer-trim -d "Find a primer sequence in a gapped alignment, trim to"
+complete -k -c seqmagick -n __fish_use_subcommand -x -a primer-trim -d "Find a primer sequence in a gapped alignment, trim to amplicon"
 complete -k -c seqmagick -n __fish_use_subcommand -x -a mogrify -d "Modify sequence file(s) in place."
 complete -k -c seqmagick -n __fish_use_subcommand -x -a info -d "Info action"
 complete -k -c seqmagick -n __fish_use_subcommand -x -a convert -d "Convert between sequence formats"
+complete -k -c seqmagick -n __fish_use_subcommand -x -a help -d "Detailed help for actions using help <action>"
+
+
+
+complete -c seqmagick -n "__fish_seen_subcommand_from help" -s "h" -l "help" -d "show this help message and exit"
 
 
 
@@ -26,7 +31,7 @@ complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "relative-to" 
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "drop" -d "Remove the residues at the specified indices." -x
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "dash-gap" -d "Replace any of the characters \"?.:~\" with a \"-\" for all sequences"
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "lower" -d "Translate the sequences to lower case"
-complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "mask" -d "Replace residues in 1-indexed slice with gapcharacters." -x
+complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "mask" -d "Replace residues in 1-indexed slice with gap-characters." -x
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "reverse" -d "Reverse the order of sites in sequences"
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "reverse-complement" -d "Convert sequences into reverse complements"
 complete -c seqmagick -n "__fish_seen_subcommand_from convert" -l "squeeze" -d "Remove any gaps that are present in the same position across all sequences in an alignment (equivalent to --squeeze-threshold=1.0)"
@@ -79,7 +84,7 @@ complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "relative-to" 
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "drop" -d "Remove the residues at the specified indices." -x
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "dash-gap" -d "Replace any of the characters \"?.:~\" with a \"-\" for all sequences"
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "lower" -d "Translate the sequences to lower case"
-complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "mask" -d "Replace residues in 1-indexed slice with gapcharacters." -x
+complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "mask" -d "Replace residues in 1-indexed slice with gap-characters." -x
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "reverse" -d "Reverse the order of sites in sequences"
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "reverse-complement" -d "Convert sequences into reverse complements"
 complete -c seqmagick -n "__fish_seen_subcommand_from mogrify" -l "squeeze" -d "Remove any gaps that are present in the same position across all sequences in an alignment (equivalent to --squeeze-threshold=1.0)"

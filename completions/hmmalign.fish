@@ -8,4 +8,4 @@ complete -c hmmalign -l "amino" -d "assert <seqfile>, <hmmfile> both protein: no
 complete -c hmmalign -l "dna" -d "assert <seqfile>, <hmmfile> both DNA: no autodetection"
 complete -c hmmalign -l "rna" -d "assert <seqfile>, <hmmfile> both RNA: no autodetection"
 complete -c hmmalign -l "informat" -d "assert <seqfile> is in format <s>: no autodetection" -r
-complete -c hmmalign -l "outformat" -d "output alignment in format <s>  [Stockholm]" -x
+complete -c hmmalign -l "outformat" -d "output alignment in format <s> [Stockholm]" -x

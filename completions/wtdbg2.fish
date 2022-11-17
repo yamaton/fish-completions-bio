@@ -18,7 +18,8 @@ complete -c wtdbg2 -s "R" -d "Enable realignment mode"
 complete -c wtdbg2 -s "A" -d "Keep contained reads during alignment"
 complete -c wtdbg2 -s "s" -d "Min similarity, calculated by kmer matched length / aligned length, [0.05]" -x
 complete -c wtdbg2 -s "e" -d "Min read depth of a valid edge, [3]" -x
-complete -c wtdbg2 -s "q" -s "v" -d "Verbose (can be multiple)" -x
+complete -c wtdbg2 -s "q" -d "Quiet"
+complete -c wtdbg2 -s "v" -d "Verbose (can be multiple)"
 complete -c wtdbg2 -s "V" -d "Print version information and then exit"
 complete -c wtdbg2 -l "help" -d "Show more options"
 complete -c wtdbg2 -l "cpu" -d "See -t 0, default: all cores" -x

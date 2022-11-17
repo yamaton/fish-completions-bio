@@ -1,5 +1,6 @@
 # Auto-generated with h2o
 
+complete -c bgzip -l "binary" -d "Bgzip will attempt to ensure BGZF blocks end on a newline when the input is a text file."
 complete -c bgzip -s "b" -l "offset" -d "Decompress to standard output from virtual file position (0-based uncompressed offset)." -r
 complete -c bgzip -s "c" -l "stdout" -d "Write to standard output, keep original files unchanged."
 complete -c bgzip -s "d" -l "decompress" -d "Decompress."

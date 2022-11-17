@@ -1,13 +1,13 @@
 # Auto-generated with h2o
 
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "c" -l "config" -d "specify a configuration file (for root or unprivileged installation only) (default \"/usr/local/etc/singularity/singularity.conf\")" -r
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "d" -l "debug" -d "print debugging information (highest verbosity)"
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "h" -l "help" -d "help for singularity"
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -l "nocolor" -d "print without color output (default False)"
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "q" -l "quiet" -d "suppress normal output"
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "s" -l "silent" -d "only print errors"
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "v" -l "verbose" -d "print additional information"
-complete -c singularity -n "not __fish_seen_subcommand_from build cache capability config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -l "version" -d "version for singularity"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "c" -l "config" -d "specify a configuration file (for root or unprivileged installation only) (default \"~/.local/share/condax/envs/singularity/etc/singularity/singularity.conf\")" -r
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "d" -l "debug" -d "print debugging information (highest verbosity)"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "h" -l "help" -d "help for singularity"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -l "nocolor" -d "print without color output (default False)"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "q" -l "quiet" -d "suppress normal output"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "s" -l "silent" -d "only print errors"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -s "v" -l "verbose" -d "print additional information"
+complete -c singularity -n "not __fish_seen_subcommand_from build cache capability completion config delete exec help inspect instance key oci overlay plugin pull push remote run run-help search shell sif sign test verify version" -l "version" -d "version for singularity"
 
 
 
@@ -33,6 +33,7 @@ complete -k -c singularity -n __fish_use_subcommand -x -a help -d "Help about an
 complete -k -c singularity -n __fish_use_subcommand -x -a exec -d "Run a command within a container"
 complete -k -c singularity -n __fish_use_subcommand -x -a delete -d "Deletes requested image from the library"
 complete -k -c singularity -n __fish_use_subcommand -x -a config -d "Manage various singularity configuration (root user only)"
+complete -k -c singularity -n __fish_use_subcommand -x -a completion -d "generate the autocompletion script for the specified shell"
 complete -k -c singularity -n __fish_use_subcommand -x -a capability -d "Manage Linux capabilities for users and groups"
 complete -k -c singularity -n __fish_use_subcommand -x -a cache -d "Manage the local cache"
 complete -k -c singularity -n __fish_use_subcommand -x -a build -d "Build a Singularity image"
@@ -71,6 +72,10 @@ complete -c singularity -n "__fish_seen_subcommand_from cache" -s "h" -l "help" 
 
 
 complete -c singularity -n "__fish_seen_subcommand_from capability" -s "h" -l "help" -d "help for capability"
+
+
+
+complete -c singularity -n "__fish_seen_subcommand_from completion" -s "h" -l "help" -d "help for completion"
 
 
 

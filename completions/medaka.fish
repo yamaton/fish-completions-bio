@@ -123,6 +123,7 @@ complete -c medaka -n "__fish_seen_subcommand_from stitch" -l "regions" -d "Geno
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l "min_depth" -d "Sites with depth lower than min_depth will not be polished." -x
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l "threads" -d "Number of worker processes to use." -x
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l "no-fillgaps" -d "Don't fill gaps in consensus sequence with draft sequence."
+complete -c medaka -n "__fish_seen_subcommand_from stitch" -l "fill_char" -d "Use a designated character to fill gaps." -x
 complete -c medaka -n "__fish_seen_subcommand_from stitch" -l "qualities" -d "Output with per-base quality scores (fastq)."
 
 

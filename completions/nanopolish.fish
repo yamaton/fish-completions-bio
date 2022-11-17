@@ -1,5 +1,10 @@
 # Auto-generated with h2o
 
+complete -c nanopolish -n "not __fish_seen_subcommand_from call-methylation detect-polyi eventalign fast5-check help index methyltrain phase-reads polya scorereads variants vcf2fasta" -l "help" -d "Show help"
+complete -c nanopolish -n "not __fish_seen_subcommand_from call-methylation detect-polyi eventalign fast5-check help index methyltrain phase-reads polya scorereads variants vcf2fasta" -l "version" -d "Show version"
+
+
+
 complete -k -c nanopolish -n __fish_use_subcommand -x -a vcf2fasta -d "Write a new genome sequence by introducing variants from the input files"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a variants -d "Find SNPs using a signal-level HMM"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a scorereads -d "Score reads against an alignment, model"
@@ -7,9 +12,10 @@ complete -k -c nanopolish -n __fish_use_subcommand -x -a polya -d "Estimate the 
 complete -k -c nanopolish -n __fish_use_subcommand -x -a phase-reads -d "Output a BAM file where each record shows the combination of alleles from variants.vcf that each read supports."
 complete -k -c nanopolish -n __fish_use_subcommand -x -a methyltrain -d "Train a methylation model"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a index -d "Build an index mapping from basecalled reads to the signals measured by the sequencer"
-complete -k -c nanopolish -n __fish_use_subcommand -x -a getmodel -d "Write the pore models for the given read to stdout"
-complete -k -c nanopolish -n __fish_use_subcommand -x -a extract -d "Extract reads in fasta format"
+complete -k -c nanopolish -n __fish_use_subcommand -x -a help -d "Show help"
+complete -k -c nanopolish -n __fish_use_subcommand -x -a fast5-check -d "Check whether the fast5 files are indexed correctly and readable by nanopolish"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a eventalign -d "Align nanopore events to reference k-mers"
+complete -k -c nanopolish -n __fish_use_subcommand -x -a detect-polyi -d "Detect presence of poly(I) tails and estimate length of tails in direct RNA reads"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a call-methylation -d "Classify nucleotides as methylated or not."
 
 
@@ -21,7 +27,10 @@ complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "r" 
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "b" -l "bam" -d "the reads aligned to the genome assembly are in bam FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "g" -l "genome" -d "the genome we are calling methylation for is in fasta FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "q" -l "methylation" -d "the type of methylation (cpg,gpc,dam,dcm)" -x
+complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "o" -l "modbam-output-name" -d "write the results as tags in FILE (default: tsv output)" -r
+complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "s" -l "modbam-style" -d "modbam output style either 'reference' or 'read' (default: read) when this is set to reference the SEQ field in the output will be the reference sequence spanned by the read" -x
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
+complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l "min-mapping-quality" -d "only use reads with mapQ >= NUM (default: 20)" -x
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l "watch" -d "watch the sequencing run directory DIR and call methylation as data is generated" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l "watch-write-bam" -d "in watch mode, write the alignments for each fastq"
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "c" -l "watch-process-total" -d "in watch mode, there are TOTAL calling processes running against this directory" -r
@@ -31,12 +40,23 @@ complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "K" 
 
 
 
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "v" -l "verbose" -d "display verbose output"
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -l "version" -d "display version"
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -l "help" -d "display this help and exit"
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "w" -l "window" -d "only compute the poly-A lengths for reads in window STR (format: ctg:start_id-end_id)" -x
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "r" -l "reads" -d "the 1D ONT direct RNA reads are in fasta FILE" -r
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "b" -l "bam" -d "the reads aligned to the genome assembly are in bam FILE" -r
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "g" -l "genome" -d "the reference genome assembly for the reads is in FILE" -r
+complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
+
+
+
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "version" -d "display version"
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "help" -d "display this help and exit"
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "sam" -d "write output in SAM format"
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "w" -l "window" -d "compute the consensus for window STR (format: ctg:start_id-end_id)" -x
-complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "r" -l "reads" -d "the 2D ONT reads are in fasta FILE" -r
+complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "r" -l "reads" -d "the ONT reads are in fasta FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "b" -l "bam" -d "the reads aligned to the genome assembly are in bam FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "g" -l "genome" -d "the genome we are computing a consensus for is in FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
@@ -51,26 +71,16 @@ complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "models-fo
 
 
 
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -l "help" -d "display this help and exit"
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -l "version" -d "display version"
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -s "v" -l "verbose" -d "display verbose output"
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -s "r" -l "recurse" -d "recurse into subdirectories"
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -s "q" -l "fastq" -d "extract fastq (default: fasta)"
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -s "t" -l "type" -d "read type: template, complement, 2d, 2d-or-template, any" -x
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -s "b" -l "basecaller" -d "consider only data produced by basecaller NAME," -x
-complete -c nanopolish -n "__fish_seen_subcommand_from extract" -s "o" -l "output" -d "write output to FILE" -r
-
-
-
-complete -c nanopolish -n "__fish_seen_subcommand_from getmodel" -s "v" -l "verbose" -d "display verbose output"
-complete -c nanopolish -n "__fish_seen_subcommand_from getmodel" -l "version" -d "display version"
-complete -c nanopolish -n "__fish_seen_subcommand_from getmodel" -l "help" -d "display this help and exit"
+complete -c nanopolish -n "__fish_seen_subcommand_from fast5-check" -l "help" -d "display this help and exit"
+complete -c nanopolish -n "__fish_seen_subcommand_from fast5-check" -l "version" -d "display version"
+complete -c nanopolish -n "__fish_seen_subcommand_from fast5-check" -s "r" -l "reads" -d "file containing the basecalled reads"
 
 
 
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -l "help" -d "display this help and exit"
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -l "version" -d "display version"
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "v" -l "verbose" -d "display verbose output"
+complete -c nanopolish -n "__fish_seen_subcommand_from index" -l "slow5" -d "slow5 file" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "d" -l "directory" -d "path to the directory containing the raw ONT signal files."
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "s" -l "sequencing-summary" -d "the sequencing summary file from albacore, providing this option will make indexing much faster"
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "f" -l "summary-fofn" -d "file containing the paths to the sequencing summary files (one per line)"

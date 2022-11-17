@@ -12,6 +12,8 @@ complete -c blastdbcmd -o "ipg_batch" -d "Input file for batch processing (Forma
 complete -c blastdbcmd -o "taxids" -d "Comma-delimited taxonomy identifiers" -x
 complete -c blastdbcmd -o "taxidlist" -d "Input file for taxonomy identifiers" -r
 complete -c blastdbcmd -o "info" -d "Print BLAST database information"
+complete -c blastdbcmd -o "metadata" -d "BLAST database metatdata"
+complete -c blastdbcmd -o "metadata_output_prefix" -d "Path prefix for location of database files in metadata" -r
 complete -c blastdbcmd -o "tax_info" -d "Print taxonomic information contained in this BLAST database."
 complete -c blastdbcmd -o "range" -d "Range of sequence to extract in 1-based offsets (Format: start-stop, for" -x
 complete -c blastdbcmd -o "strand" -d "Strand of nucleotide sequence to extract" -x

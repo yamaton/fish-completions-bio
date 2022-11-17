@@ -66,3 +66,7 @@ complete -c rsem-calculate-expression -l "chipseq-bed-files-multi-targets" -d "C
 complete -c rsem-calculate-expression -l "cap-stacked-chipseq-reads" -d "Keep a maximum number of ChIP-seq reads that aligned to the same genomic interval."
 complete -c rsem-calculate-expression -l "n-max-stacked-chipseq-reads" -d "The maximum number of stacked ChIP-seq reads to keep." -x
 complete -c rsem-calculate-expression -l "partition-model" -d "A keyword to specify the partition model used by prior-enhanced RSEM." -x
+complete -c rsem-calculate-expression -l "sam" -d "Inputs are alignments in SAM format."
+complete -c rsem-calculate-expression -l "bam" -d "Inputs are alignments in BAM format."
+complete -c rsem-calculate-expression -l "strand-specific" -d "Equivalent to '--strandedness forward'."
+complete -c rsem-calculate-expression -l "forward-prob" -d "Probability of generating a read from the forward strand of a transcript." -x
