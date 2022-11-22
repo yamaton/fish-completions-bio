@@ -139,7 +139,7 @@ complete -c smof -n "__fish_seen_subcommand_from sort" -s "n" -l "numeric-sort" 
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "l" -l "length-sort" -d "sort by sequence length"
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "R" -l "random-sort" -d "randomly sort sequences"
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "k" -l "key" -d "Key to sort on (column number or tag)" -x
-complete -c smof -n "__fish_seen_subcommand_from sort" -s "t"  -d "field-separator FIELD_SEPARATOR The field separator (default: '|')" -x
+complete -c smof -n "__fish_seen_subcommand_from sort" -s "t" -l "field-separator" -d "The field separator (default: '|')" -x
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "p" -l "pair-separator" -d "The separator between a tag and value (default: '=')" -x
 
 

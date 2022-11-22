@@ -1,10 +1,10 @@
 # Auto-generated with h2o
 
-complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools clone conda_build conda_env conda_init conda_install conda_lint conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "version" -d "Show the version and exit."
-complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools clone conda_build conda_env conda_init conda_install conda_lint conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -s "v" -l "verbose" -d "Enables verbose mode."
-complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools clone conda_build conda_env conda_init conda_install conda_lint conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "config" -d "Planemo configuration YAML file." -r
-complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools clone conda_build conda_env conda_init conda_install conda_lint conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "directory" -d "Workspace for planemo." -x
-complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools clone conda_build conda_env conda_init conda_install conda_lint conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "help" -d "Show this message and exit."
+complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "version" -d "Show the version and exit."
+complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -s "v" -l "verbose" -d "Enables verbose mode."
+complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "config" -d "Planemo configuration YAML file." -r
+complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "directory" -d "Workspace for planemo." -x
+complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "help" -d "Show this message and exit."
 
 
 
@@ -20,7 +20,7 @@ complete -k -c planemo -n __fish_use_subcommand -x -a training_generate_from_wf 
 complete -k -c planemo -n __fish_use_subcommand -x -a training_fill_data_library -d "Build training template from workflow."
 complete -k -c planemo -n __fish_use_subcommand -x -a tool_init -d "Generate tool outline from given arguments."
 complete -k -c planemo -n __fish_use_subcommand -x -a test_reports -d "Generate human readable tool test reports."
-complete -k -c planemo -n __fish_use_subcommand -x -a test -d "Run specified tool's tests within Galaxy."
+complete -k -c planemo -n __fish_use_subcommand -x -a test -d "Run specified tool or workflow tests within..."
 complete -k -c planemo -n __fish_use_subcommand -x -a syntax -d "Open tool config syntax page in web browser."
 complete -k -c planemo -n __fish_use_subcommand -x -a shed_upload -d "Low-level command to upload tarballs."
 complete -k -c planemo -n __fish_use_subcommand -x -a shed_update -d "Update Tool Shed repository."
@@ -63,12 +63,12 @@ complete -k -c planemo -n __fish_use_subcommand -x -a create_alias -d "Add an al
 complete -k -c planemo -n __fish_use_subcommand -x -a container_register -d "Register multi-requirement containers as..."
 complete -k -c planemo -n __fish_use_subcommand -x -a config_init -d "Initialise global configuration for Planemo."
 complete -k -c planemo -n __fish_use_subcommand -x -a conda_search -d "Perform conda search with Planemo's conda."
-complete -k -c planemo -n __fish_use_subcommand -x -a conda_lint -d "Check conda recipe for common issues."
 complete -k -c planemo -n __fish_use_subcommand -x -a conda_install -d "Install conda packages for tool requirements."
 complete -k -c planemo -n __fish_use_subcommand -x -a conda_init -d "Download and install conda."
 complete -k -c planemo -n __fish_use_subcommand -x -a conda_env -d "Activate a conda environment for tool."
 complete -k -c planemo -n __fish_use_subcommand -x -a conda_build -d "Perform conda build with Planemo's conda."
 complete -k -c planemo -n __fish_use_subcommand -x -a clone -d "Short-cut to quickly clone, fork, and..."
+complete -k -c planemo -n __fish_use_subcommand -x -a ci_setup -d "Launch Galaxy instance, then terminate..."
 complete -k -c planemo -n __fish_use_subcommand -x -a ci_find_tools -d "Find all tools in one or more directories."
 complete -k -c planemo -n __fish_use_subcommand -x -a ci_find_repos -d "Find all shed repositories in one or more..."
 complete -k -c planemo -n __fish_use_subcommand -x -a autoupdate -d "Auto-update tool requirements by checking..."
@@ -108,8 +108,10 @@ complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "docker_sudo"
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "test_data" -d "test-data directory to for specified tool(s)." -r
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "tool_data_table" -d "tool_data_table_conf.xml file to for specified tool(s)." -r
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "dependency_resolvers_config_file" -d "Dependency resolver configuration for Galaxy to target." -r
@@ -165,6 +167,30 @@ complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "help" -d 
 
 
 
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_python_version" -d "Python version to start Galaxy under" -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "extra_tools" -d "Extra tool sources to include in Galaxy's tool panel (file or directory)." -r
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "install_galaxy" -d "Download and configure a disposable copy of Galaxy from github."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_branch" -d "Branch of Galaxy to target (defaults to master) if a Galaxy root isn't specified." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_source" -d "Git source of Galaxy to target (defaults to the official galaxyproject github source if a Galaxy root isn't specified." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "skip_venv" -d "Do not create or source a virtualenv environment for Galaxy, this should be used to preserve an externally configured virtual environment or conda environment."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "no_cache_galaxy" -d "Skip caching of Galaxy source and dependencies obtained with --install_galaxy."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "no_cleanup" -d "Do not cleanup temp files created for and by Galaxy."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_email" -d "E-mail address to use when launching singleuser Galaxy server." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "docker" -l "no_docker" -d "Run Galaxy tools in Docker if enabled."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "docker_cmd" -d "Command used to launch docker (defaults to docker)." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "docker_sudo" -l "no_docker_sudo" -d "Flag to use sudo when running docker."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "tool_data_path" -d "Directory where data used by tools is located." -r
+complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "help" -d "Show this message and exit."
+
+
+
 complete -c planemo -n "__fish_seen_subcommand_from clone" -l "fork" -l "skip_fork" -d "--branch TEXT Create a named branch on result."
 complete -c planemo -n "__fish_seen_subcommand_from clone" -l "help" -d "Show this message and exit."
 
@@ -202,11 +228,6 @@ complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "conda_use
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "global" -d "Install Conda dependencies globally instead of in requirement specific environments packaged for tools."
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "conda_auto_init" -l "no_conda_auto_init" -d "Conda dependency resolution for Galaxy will auto install conda itself using miniconda if not availabe on conda_prefix."
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "help" -d "Show this message and exit."
-
-
-
-complete -c planemo -n "__fish_seen_subcommand_from conda_lint" -l "report_level" -l "fail_level" -s "r" -l "recursive" -d "Recursively perform command for nested conda directories." -r
-complete -c planemo -n "__fish_seen_subcommand_from conda_lint" -l "help" -d "Show this message and exit."
 
 
 
@@ -314,6 +335,7 @@ complete -c planemo -n "__fish_seen_subcommand_from docker_shell" -l "help" -d "
 
 
 
+complete -c planemo -n "__fish_seen_subcommand_from dockstore_init" -l "publish" -l "no_publish" -d "Set publish attribute to true in .dockstore.yml file"
 complete -c planemo -n "__fish_seen_subcommand_from dockstore_init" -l "help" -d "Show this message and exit."
 
 
@@ -456,8 +478,10 @@ complete -c planemo -n "__fish_seen_subcommand_from run" -l "docker_sudo" -l "no
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from run" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from run" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "test_data" -d "test-data directory to for specified tool(s)." -r
@@ -540,8 +564,10 @@ complete -c planemo -n "__fish_seen_subcommand_from serve" -l "docker_sudo" -l "
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from serve" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from serve" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "engine" -d "Select an engine to serve artifacts such as tools and workflows." -x
@@ -609,6 +635,7 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_create" -l "help" -d "S
 
 
 
+complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "shed_target_source" -d "This command will return an exit code of:" -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "owner" -d "Tool Shed repository owner (username)." -x
@@ -688,8 +715,10 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "docker_sudo"
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "engine" -d "Select an engine to serve artifacts such as tools and workflows." -x
@@ -758,8 +787,10 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "docker_sudo" 
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "update_test_data" -d "Update test-data directory with job outputs (normally written to directory --job_output_files if specified.)"
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "paste_test_data_paths" -l "no_paste_test_data_paths" -d "By default Planemo will use or not use Galaxy's path paste option to load test data into a history based on the engine type it is targeting."
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "test_output" -d "Output test report (HTML - for humans) defaults to tool_test_output.html." -r
@@ -836,8 +867,10 @@ complete -c planemo -n "__fish_seen_subcommand_from test" -l "docker_sudo" -l "n
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from test" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from test" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "test_data" -d "test-data directory to for specified tool(s)." -r
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "tool_data_table" -d "tool_data_table_conf.xml file to for specified tool(s)." -r
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "dependency_resolvers_config_file" -d "Dependency resolver configuration for Galaxy to target." -r
@@ -963,8 +996,10 @@ complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "engine" -d "Select an engine to serve artifacts such as tools and workflows." -x
@@ -1037,8 +1072,10 @@ complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "docker_su
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "engine" -d "Select an engine to serve artifacts such as tools and workflows." -x
@@ -1097,8 +1134,10 @@ complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "docker_sudo
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "test_data" -d "test-data directory to for specified tool(s)." -r
@@ -1150,8 +1189,10 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "docker
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "engine" -d "Select an engine to serve artifacts such as tools and workflows." -x
@@ -1210,8 +1251,10 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "docker_su
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "mulled_containers" -l "biocontainers" -d "Test tools against mulled containers (forces --docker)."
+complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "galaxy_startup_timeout" -d "Wait for galaxy to start before assuming Galaxy did not start." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "job_config_file" -d "Job configuration file for Galaxy to target." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "tool_dependency_dir" -d "Tool dependency dir for Galaxy to target." -r
+complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "port" -d "Port to serve Galaxy on (default is 9090)." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "host" -d "Host to bind Galaxy to." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "engine" -d "Select an engine to serve artifacts such as tools and workflows." -x
@@ -1280,5 +1323,6 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -l "help
 
 
 complete -c planemo -n "__fish_seen_subcommand_from workflow_upload" -l "namespace" -d "Organization or username under which to create or update workflow repository." -x
+complete -c planemo -n "__fish_seen_subcommand_from workflow_upload" -l "github_branch" -d "GitHub branch to use for the action." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_upload" -l "dry_run" -d "Don't execute action, show preview of action."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_upload" -l "help" -d "Show this message and exit."

@@ -1,88 +1,149 @@
 # Auto-generated with h2o
 
-complete -c svtools -n "not __fish_seen_subcommand_from vcftobedpe bedpetovcf bedpetobed12 vcfsort bedpesort prune varlookup afreq lsort lmerge genotype copynumber vcfpaste classify" -l "help" -d "print this help menu."
-complete -c svtools -n "not __fish_seen_subcommand_from vcftobedpe bedpetovcf bedpetobed12 vcfsort bedpesort prune varlookup afreq lsort lmerge genotype copynumber vcfpaste classify" -l "version" -d "what version of svtools are you using?."
-complete -c svtools -n "not __fish_seen_subcommand_from vcftobedpe bedpetovcf bedpetobed12 vcfsort bedpesort prune varlookup afreq lsort lmerge genotype copynumber vcfpaste classify" -l "contact" -d "feature requests, bugs, mailing lists, etc."
+complete -c svtools -n "not __fish_seen_subcommand_from lsort lmerge vcfpaste copynumber genotype afreq bedpetobed12 bedpetovcf vcftobedpe vcfsort bedpesort prune varlookup classify" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "not __fish_seen_subcommand_from lsort lmerge vcfpaste copynumber genotype afreq bedpetobed12 bedpetovcf vcftobedpe vcfsort bedpesort prune varlookup classify" -l "version" -d "show program's version number and exit"
+complete -c svtools -n "not __fish_seen_subcommand_from lsort lmerge vcfpaste copynumber genotype afreq bedpetobed12 bedpetovcf vcftobedpe vcfsort bedpesort prune varlookup classify" -l "support" -d "information on obtaining support"
 
 
 
-complete -k -c svtools -n __fish_use_subcommand -x -a classify -d "classify structural variants"
-complete -k -c svtools -n __fish_use_subcommand -x -a vcfpaste -d "combine multiple vcf files produced by genotype command."
-complete -k -c svtools -n __fish_use_subcommand -x -a copynumber -d "add cn information using cnvnator."
-complete -k -c svtools -n __fish_use_subcommand -x -a genotype -d "return a vcf file with genotype information added by svtyper."
-complete -k -c svtools -n __fish_use_subcommand -x -a lmerge -d "merges multiple sorted vcf files."
-complete -k -c svtools -n __fish_use_subcommand -x -a lsort -d "sorts a vcf file by type."
-complete -k -c svtools -n __fish_use_subcommand -x -a afreq -d "add allele frequency information to a VCF file."
-complete -k -c svtools -n __fish_use_subcommand -x -a varlookup -d "look for variants common between two bedpe files."
-complete -k -c svtools -n __fish_use_subcommand -x -a prune -d "cluster a BEDPE file by position based on allele frequency."
-complete -k -c svtools -n __fish_use_subcommand -x -a bedpesort -d "sorts a bedpe file."
-complete -k -c svtools -n __fish_use_subcommand -x -a vcfsort -d "sorts a vcf file."
-complete -k -c svtools -n __fish_use_subcommand -x -a bedpetobed12 -d "converts bedpe file to bed12."
-complete -k -c svtools -n __fish_use_subcommand -x -a bedpetovcf -d "converts bedpe file to vcf."
-complete -k -c svtools -n __fish_use_subcommand -x -a vcftobedpe -d "converts vcf file into bedpe."
+complete -k -c svtools -n __fish_use_subcommand -x -a classify -d "reclassify DEL and DUP based on read depth information"
+complete -k -c svtools -n __fish_use_subcommand -x -a varlookup -d "look for variants common between two BEDPE files"
+complete -k -c svtools -n __fish_use_subcommand -x -a prune -d "cluster and prune a BEDPE file by position based on allele frequency"
+complete -k -c svtools -n __fish_use_subcommand -x -a bedpesort -d "sort a BEDPE file"
+complete -k -c svtools -n __fish_use_subcommand -x -a vcfsort -d "sort a VCF file"
+complete -k -c svtools -n __fish_use_subcommand -x -a vcftobedpe -d "convert a VCF file to a BEDPE file"
+complete -k -c svtools -n __fish_use_subcommand -x -a bedpetovcf -d "convert a BEDPE file to VCF"
+complete -k -c svtools -n __fish_use_subcommand -x -a bedpetobed12 -d "convert a BEDPE file to BED12 format for viewing in IGV or the UCSC browser"
+complete -k -c svtools -n __fish_use_subcommand -x -a afreq -d "add allele frequency information to a VCF file"
+complete -k -c svtools -n __fish_use_subcommand -x -a genotype -d "compute genotype of structural variants based on breakpoint depth"
+complete -k -c svtools -n __fish_use_subcommand -x -a copynumber -d "add copynumber information using cnvnator"
+complete -k -c svtools -n __fish_use_subcommand -x -a vcfpaste -d "paste VCFs from multiple samples"
+complete -k -c svtools -n __fish_use_subcommand -x -a lmerge -d "merge LUMPY calls inside a single file from svtools lsort"
+complete -k -c svtools -n __fish_use_subcommand -x -a lsort -d "sort N LUMPY VCF files into a single file"
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from lsort" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from lsort" -s "f" -l "vcf-list" -d "file containing a line-delimited list of VCF files to combine and sort" -r
+complete -c svtools -n "__fish_seen_subcommand_from lsort" -s "r" -l "include-reference" -d "whether or not to include homozygous reference or missing calls in the output."
+complete -c svtools -n "__fish_seen_subcommand_from lsort" -s "t" -l "tempdir" -d "temporary directory" -r
+complete -c svtools -n "__fish_seen_subcommand_from lsort" -s "b" -l "batchsize" -d "number of files to sort in batch" -r
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "i" -l "inFile" -d "a sorted VCF file generated by svtools lsort." -r
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "p" -l "percent-slop" -d "increase the the breakpoint confidence interval both up and down stream by a given proportion of the original size" -x
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "f" -l "fixed-slop" -d "increase the the breakpoint confidence interval both up and down stream by a given fixed size" -x
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -l "sum" -d "calculate breakpoint PDF and position using sum algorithm instead of product"
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "g" -d "include original genotypes in output."
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "w" -d "weighting scheme (intended for use in tiered merging), options: unweighted, carrier_wt, evidence_wt" -x
+complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "f" -l "vcf-list" -d "file containing a line-delimited list of VCF files to paste (required)" -r
+complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "m" -l "master" -d "VCF file to set first 8 columns of variant info (otherwise first file in --vcf-list)" -r
+complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
+complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "q" -l "sum-quals" -d "sum QUAL scores of input VCFs as output QUAL score"
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "c" -l "coordinates" -d "file containing coordinate for which to retrieve copynumber (required)" -r
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "r" -l "root" -d "CNVnator .root histogram file (required)" -r
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "w" -l "window" -d "CNVnator window size (required)" -x
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "s" -l "sample" -d "sample to annotate (required)" -x
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -l "cnvnator" -d "path to cnvnator binary for the cnvnator used by speedseq (required)" -r
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "i" -l "input" -d "VCF input" -x
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "o" -l "output" -d "output VCF to write (default: stdout)" -r
+complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "i" -l "input_vcf" -d "VCF input (default: stdin)" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "o" -l "output_vcf" -d "output VCF to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "B" -l "bam" -d "BAM or CRAM file" -r
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "T" -l "ref_fasta" -d "Indexed reference FASTA file (recommended for reading CRAM files)" -r
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "l" -l "lib_info" -d "create/read JSON file of library information" -r
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "m" -l "min_aligned" -d "minimum number of aligned bases to consider read as evidence [20]" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "n" -d "number of pairs to sample from BAM file for building insert size distribution [1000000]" -r
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "q" -l "sum_quals" -d "add genotyping quality to existing QUAL (default: overwrite QUAL field)"
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -l "max_reads" -d "maximum number of reads to assess at any variant (reduces processing time in high-depth regions, default: 10000)" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -l "max_ci_dist" -d "maximum size of a confidence interval before 95% CI is used intead (default: 1e10)" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -l "split_weight" -d "weight for split reads [1]" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -l "disc_weight" -d "weight for discordant paired-end reads [1]" -x
+complete -c svtools -n "__fish_seen_subcommand_from genotype" -s "w" -l "write_alignment" -d "write relevant reads to BAM file" -r
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from afreq" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from afreq" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "i" -l "input" -d "BEDPE input file" -r
+complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "o" -l "output" -d "Output BED12 to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "n" -l "name" -d "The name of the track." -x
+complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "d" -l "maxdist" -d "The minimum distance for drawing intrachromosomal features as if they are interchromosomal (i.e., without a line spanning the two footprints)." -x
+complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
+
+
+
+complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "i" -l "input" -d "BEDPE input (default: stdin)" -x
+complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "o" -l "output" -d "Output VCF to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
 
 
 
 complete -c svtools -n "__fish_seen_subcommand_from vcftobedpe" -s "h" -l "help" -d "show this help message and exit"
 complete -c svtools -n "__fish_seen_subcommand_from vcftobedpe" -s "i" -l "input" -d "VCF input (default: stdin)" -x
-complete -c svtools -n "__fish_seen_subcommand_from vcftobedpe" -s "o" -l "output" -d "Output BEDPE to write (default: stdout)" -x
-complete -c svtools -n "__fish_seen_subcommand_from vcftobedpe" -o "ci" -l "confidence" -d "Confidence interval to be added in case absent in the input VCF." -x
+complete -c svtools -n "__fish_seen_subcommand_from vcftobedpe" -s "o" -l "output" -d "output BEDPE to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from vcftobedpe" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
 
 
 
-complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "h" -l "help" -d "show this help message and exit"
-complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "b" -l "bedpe" -d "BEDPE input (default: stdin)" -x
-complete -c svtools -n "__fish_seen_subcommand_from bedpetovcf" -s "o" -l "output" -d "Output VCF to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from vcfsort" -s "h" -l "help" -d "show this help message and exit"
 
 
 
-complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "h" -l "help" -d "show this help message and exit"
-complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "i" -l "bedpe" -d "BEDPE input file" -r
-complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "n" -l "name" -d "The name of the track." -x
-complete -c svtools -n "__fish_seen_subcommand_from bedpetobed12" -s "d" -l "maxdist" -d "The minimum distance for drawing intrachromosomal features as if they are interchromosomal (i.e., without a line spanning the two footprints)." -x
+complete -c svtools -n "__fish_seen_subcommand_from bedpesort" -s "h" -l "help" -d "show this help message and exit"
 
 
 
 complete -c svtools -n "__fish_seen_subcommand_from prune" -s "h" -l "help" -d "show this help message and exit"
 complete -c svtools -n "__fish_seen_subcommand_from prune" -s "d" -l "distance" -d "max separation distance (bp) of adjacent loci in cluster [50]" -x
-complete -c svtools -n "__fish_seen_subcommand_from prune" -s "e" -l "eval_param" -d "evaluating parameter for choosing best bedpe in a cluster(e.g. af=AlleleFrequency default:af)" -x
-complete -c svtools -n "__fish_seen_subcommand_from prune" -s "s" -l "is_sorted" -d "specifying if an input file is sorted (default=False)   (use following command to sort: 'cat FILE | sort -k1,1V -k2,2n -k3,3n -k4,4V -k5,5n -k6,6')"
-complete -c svtools -n "__fish_seen_subcommand_from prune" -s "o" -l "output" -d "Output bedpe to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from prune" -s "e" -l "eval-param" -d "evaluating parameter for choosing best bedpe in a cluster(e.g. af=AlleleFrequency default:af)" -x
+complete -c svtools -n "__fish_seen_subcommand_from prune" -s "s" -l "is-sorted" -d "specify if an input file is sorted."
+complete -c svtools -n "__fish_seen_subcommand_from prune" -s "o" -l "output" -d "output bedpe to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from prune" -s "t" -l "tempdir" -d "Directory for temp file downloads" -r
 
 
 
 complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "h" -l "help" -d "show this help message and exit"
 complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "d" -l "distance" -d "max separation distance (bp) of adjacent loci between bedpe files [50]" -r
-complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "a" -l "aFile" -d "Pruned merged bedpe (A file) or standard input (-a stdin)." -r
-complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "b" -l "bFile" -d "Pruned merged bedpe (B file) (-b stdin)." -r
-complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "c" -l "cohort" -d "Cohort name to add information of matching variants (default:bFile)" -r
-complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "o" -l "output" -d "Output BEDPE to write (default: stdout)" -x
+complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "a" -l "aFile" -d "pruned, merged BEDPE (A file) or standard input (-a stdin)." -r
+complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "b" -l "bFile" -d "pruned merged BEDPE (B file) (-b stdin)." -r
+complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "c" -l "cohort" -d "cohort name to add information of matching variants (default:bFile)" -r
+complete -c svtools -n "__fish_seen_subcommand_from varlookup" -s "o" -l "output" -d "output BEDPE to write (default: stdout)" -x
 
 
 
-complete -c svtools -n "__fish_seen_subcommand_from afreq" -s "h" -l "help" -d "show this help message and exit"
-
-
-
-complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "h" -l "help" -d "show this help message and exit"
-complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "i" -l "inFile" -d "A sorted lumpy output file generated by lsort; or stdin (-i stdin)." -r
-complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "p" -l "percent_slop" -d "Increase the the breakpoint confidence interval both up and down stream by a given proportion of the original size." -x
-complete -c svtools -n "__fish_seen_subcommand_from lmerge" -s "f" -l "fixed_slop" -d "Increase the the breakpoint confidence interval both up and down stream by a given fixed size." -x
-complete -c svtools -n "__fish_seen_subcommand_from lmerge" -l "product" -d "Calculate breakpoint PDF and position using product."
-
-
-
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "h" -l "help" -d "show this help message and exit"
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "v" -l "input_vcf" -d "VCF input" -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "c" -l "coordinates" -d "BED input" -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "r" -l "root" -d "CNVnator .root histogram file (required)" -r
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "w" -l "window" -d "CNVnator window size (required)" -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "s" -l "sample" -d "sample to annotate" -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -l "cnvnator" -d "path to cnvnator-multi binary" -r
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -s "o" -l "output_vcf" -d "compressed(.gz) output VCF to write (default: stdout)" -x
-complete -c svtools -n "__fish_seen_subcommand_from copynumber" -l "debug" -d "debugging verbosity"
-
-
-
-complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "h" -l "help" -d "show this help message and exit"
-complete -c svtools -n "__fish_seen_subcommand_from vcfpaste" -s "m" -l "master" -d "VCF file to set first 8 columns of variant info [first file in vcf_list]" -r
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "h" -l "help" -d "show this help message and exit"
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "i" -l "input" -d "VCF input" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "o" -l "output" -d "VCF output [stdout]" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "g" -l "gender" -d "tab delimited file of sample genders (male=1, female=2) ex: SAMPLE_A 2" -r
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "a" -l "annotation" -d "BED file of annotated elements" -r
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "f" -l "fraction" -d "fraction of reciprocal overlap to apply annotation to variant [0.9]" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "e" -l "exclude" -d "list of samples to exclude from classification algorithms" -r
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "s" -l "slope_threshold" -d "minimum slope absolute value of regression line to classify as DEL or DUP[1.0]" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "r" -l "rsquared_threshold" -d "minimum R^2 correlation value of regression line to classify as DEL or DUP [0.2], for large sample reclassification" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "t" -l "tSet" -d "high quality deletions & duplications training dataset[vcf], required by naive Bayes reclassification" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "m" -l "method" -d "reclassification method, one of (large_sample, naive_bayes, hybrid)" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -s "d" -l "diag_file" -d "text file to output method comparisons" -r
+complete -c svtools -n "__fish_seen_subcommand_from classify" -l "sex-chrom" -d "Comma-separated list of sex chromosome names [chrX,chrY]" -x
+complete -c svtools -n "__fish_seen_subcommand_from classify" -l "tempdir" -d "Directory for temp file downloads" -r

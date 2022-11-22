@@ -10,6 +10,8 @@ complete -c svtyper -s "m" -l "min_aligned" -d "minimum number of aligned bases 
 complete -c svtyper -s "n" -d "number of reads to sample from BAM file for building insert size distribution [1000000]" -r
 complete -c svtyper -s "q" -l "sum_quals" -d "add genotyping quality to existing QUAL (default: overwrite QUAL field)"
 complete -c svtyper -l "max_reads" -d "maximum number of reads to assess at any variant (reduces processing time in high-depth regions, default: unlimited)" -x
+complete -c svtyper -l "max_ci_dist" -d "maximum size of a confidence interval before 95% CI is used intead (default: 1e10)" -x
 complete -c svtyper -l "split_weight" -d "weight for split reads [1]" -x
 complete -c svtyper -l "disc_weight" -d "weight for discordant paired-end reads [1]" -x
 complete -c svtyper -s "w" -l "write_alignment" -d "write relevant reads to BAM file" -r
+complete -c svtyper -l "verbose" -d "Report status updates"

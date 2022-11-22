@@ -176,6 +176,7 @@ complete -c iqtree -l "site-freq" -d "Specify the option (MEAN (default), or SAM
 complete -c iqtree -l "site-rate" -d "Specify the option (MEAN (default), or SAMPLING, or MODEL) to mimic the discrete rate heterogeneity from the input alignment (see Manual)" -x
 complete -c iqtree -s "t" -d "Specify the model and the number of taxa to generate a random tree" -x
 complete -c iqtree -o "rlen" -d "Specify three numbers: minimum, mean and maximum branch lengths when generating a random tree" -x
+complete -c iqtree -s "p" -d "NEXUS/RAxML partition file Edge-linked proportional partition model" -r
 complete -c iqtree -l "distribution" -d "Supply a definition file of distributions, which could be used to generate random model parameters" -r
 complete -c iqtree -l "branch-distribution" -d "Specify a distribution, from which branch lengths of the input trees are randomly generated and overridden." -x
 complete -c iqtree -l "branch-scale" -d "Specify a value to scale all branch lengths" -x

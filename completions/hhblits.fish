@@ -1,7 +1,7 @@
 # Auto-generated with h2o
 
-complete -c hhblits -s "i" -d "input/query: single sequence or multiple sequence alignment (MSA) in a3m, a2m, or FASTA format, or HMM in hhm format <file> may be 'stdin' or 'stdout' throughout." -r
-complete -c hhblits -s "d" -d "Multiple databases may be specified with '-d <db1> -d <db2> ...'" -x
+complete -c hhblits -s "i" -d "input/query: single sequence or multiple sequence alignment (MSA) in a3m, a2m, or FASTA format, or HMM in hhm format" -r
+complete -c hhblits -s "d" -d "database name (e.g. uniprot20_29Feb2012) Multiple databases may be specified with '-d <db1> -d <db2> ...'" -x
 complete -c hhblits -s "n" -d "number of iterations (default=2)" -x
 complete -c hhblits -s "e" -d "E-value cutoff for inclusion in result alignment (def=0.001)" -x
 complete -c hhblits -s "M" -d "use A2M/A3M (default): upper case = Match; lower case = Insert; ' -' = Delete; '.' = gaps aligned to inserts (may be omitted)" -x
@@ -39,8 +39,9 @@ complete -c hhblits -o "pre_gap_open" -d "gap open penalty in prefilter Smith-Wa
 complete -c hhblits -o "pre_gap_extend" -d "gap extend penalty in prefilter Smith-Waterman alignment (default=4)"
 complete -c hhblits -o "pre_score_offset" -d "offset on sequence profile scores in prefilter S-W alignment (default=50)"
 complete -c hhblits -o "all" -d "show all sequences in result MSA; do not filter result MSA"
-complete -c hhblits -o "interim_filter" -d "filter sequences of query MSA during merging to avoid early stop (default: FULL) NONE: disables the intermediate filter FULL: if an early stop occurs compare filter seqs in an all vs." -x
+complete -c hhblits -o "interim_filter" -d "filter sequences of query MSA during merging to avoid early stop (default: FULL)" -x
 complete -c hhblits -o "id" -d "maximum pairwise sequence identity (def=90)" -x
+complete -c hhblits -o "diff" -d "filter MSAs by selecting most diverse set of sequences, keeping at least this many seqs in each MSA block of length 50 Zero and non-numerical values turn off the filtering." -x
 complete -c hhblits -o "cov" -d "minimum coverage with master sequence (%) (def=0)" -x
 complete -c hhblits -o "qid" -d "minimum sequence identity with master sequence (%) (def=0)" -x
 complete -c hhblits -o "qsc" -d "minimum score per column with master sequence (default=-20.0)" -x
@@ -54,18 +55,22 @@ complete -c hhblits -o "realign" -d "realign displayed hits with max."
 complete -c hhblits -o "realign_max" -d "realign max." -x
 complete -c hhblits -o "ovlp" -d "banded alignment: forbid <ovlp> largest diagonals |i-j| of DP matrix (def=0)" -x
 complete -c hhblits -o "alt" -d "show up to this many alternative alignments with raw score > smin(def=4)" -x
-complete -c hhblits -o "premerge" -d "hits to query MSA before aligning remaining hits (def=3)" -x
+complete -c hhblits -o "premerge" -d "merge <int> hits to query MSA before aligning remaining hits (def=3)" -x
 complete -c hhblits -o "smin" -d "minimum raw score for alternative alignments (def=20.0)" -x
 complete -c hhblits -o "shift" -d "profile-profile score offset (def=-0.03)" -r
 complete -c hhblits -o "corr" -d "weight of term for pair correlations (def=0.10)" -x
 complete -c hhblits -o "sc" -d "amino acid score (tja: template HMM at column j) (def=1)" -x
-complete -c hhblits -o "ssm" -d "0: no ss scoring." -x
+complete -c hhblits -o "ssm" -d "0: no ss scoring, 1,2: ss scoring after or during alignment 3,4: ss scoring after or during alignment, predicted vs." -x
 complete -c hhblits -o "ssw" -d "weight of ss score (def=0.11)" -x
 complete -c hhblits -o "ssa" -d "ss confusion matrix = (1-ssa)*I + ssa*psipred-confusion-matrix [def=1.00)" -x
 complete -c hhblits -o "wg" -d "use global sequence weighting for realignment!"
 complete -c hhblits -o "gapb" -d "Transition pseudocount admixture (def=1.00)" -x
 complete -c hhblits -o "gapd" -d "Transition pseudocount admixture for open gap (default=0.15)" -x
 complete -c hhblits -o "gape" -d "Transition pseudocount admixture for extend gap (def=1.00)" -x
+complete -c hhblits -o "gapf" -d "factor to increase/reduce gap open penalty for deletes (def=0.60)" -x
+complete -c hhblits -o "gapg" -d "factor to increase/reduce gap open penalty for inserts (def=0.60)" -x
+complete -c hhblits -o "gaph" -d "factor to increase/reduce gap extend penalty for deletes(def=0.60)" -x
+complete -c hhblits -o "gapi" -d "factor to increase/reduce gap extend penalty for inserts(def=0.60)" -x
 complete -c hhblits -o "egq" -d "penalty (bits) for end gaps aligned to query residues (def=0.00)" -x
 complete -c hhblits -o "egt" -d "penalty (bits) for end gaps aligned to template residues (def=0.00)" -x
 complete -c hhblits -o "pc_hhm_contxt_mode" -d "position dependence of pc admixture 'tau' (pc mode, default=2)" -x
