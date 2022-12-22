@@ -17,7 +17,7 @@ complete -c blastp -o "threshold" -d "Minimum word score such that the word is a
 complete -c blastp -o "comp_based_stats" -d "Use composition-based statistics: D or d: default (equivalent to 2 ) 0 or F or f: No composition-based statistics 1: Composition-based statistics as in NAR 29:2994-3005, 2001 2 or T or t : Composition-based score adjustment as in Bioinformatics (Default = `2')" -x
 complete -c blastp -o "subject" -d "Subject sequence(s) to search" -r
 complete -c blastp -o "subject_loc" -d "Location on the subject sequence in 1-based offsets (Format: start-stop)" -x
-complete -c blastp -o "outfmt" -d "alignment view options" -x
+complete -c blastp -o "outfmt" -d "alignment view: 0 (Pairwise) or 1 (Query-anchored with identities) or ..." -x
 complete -c blastp -o "show_gis" -d "Show NCBI GIs in deflines?"
 complete -c blastp -o "num_descriptions" -d "Number of database sequences to show one-line descriptions for." -x
 complete -c blastp -o "num_alignments" -d "Number of database sequences to show alignments for (Default = `250')" -x

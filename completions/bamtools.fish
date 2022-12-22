@@ -71,13 +71,13 @@ complete -c bamtools -n "__fish_seen_subcommand_from filter" -l "help" -s "h" -d
 
 
 complete -c bamtools -n "__fish_seen_subcommand_from header" -o "in" -d "the input BAM file(s) [stdin]" -r
-complete -c bamtools -n "__fish_seen_subcommand_from header" -o "list" -d "the input BAM file list, one" -r
+complete -c bamtools -n "__fish_seen_subcommand_from header" -o "list" -d "the input BAM file list, one line per file" -r
 complete -c bamtools -n "__fish_seen_subcommand_from header" -l "help" -s "h" -d "shows this help text"
 
 
 
 complete -c bamtools -n "__fish_seen_subcommand_from index" -o "in" -d "the input BAM file [stdin]" -r
-complete -c bamtools -n "__fish_seen_subcommand_from index" -o "bti" -d "create (non-standard) BamTools"
+complete -c bamtools -n "__fish_seen_subcommand_from index" -o "bti" -d "create (non-standard) BamTools index file (*.bti)."
 complete -c bamtools -n "__fish_seen_subcommand_from index" -l "help" -s "h" -d "shows this help text"
 
 

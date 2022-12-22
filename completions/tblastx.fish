@@ -15,7 +15,7 @@ complete -c tblastx -o "matrix" -d "Scoring matrix name (normally BLOSUM62)" -x
 complete -c tblastx -o "threshold" -d "Minimum word score such that the word is added to the BLAST lookup table" -x
 complete -c tblastx -o "subject" -d "Subject sequence(s) to search" -r
 complete -c tblastx -o "subject_loc" -d "Location on the subject sequence in 1-based offsets (Format: start-stop)" -x
-complete -c tblastx -o "outfmt" -d "alignment view options:" -x
+complete -c tblastx -o "outfmt" -d "alignment view: 0 (Pairwise) or 1 (Query-anchored with identities) or ..." -x
 complete -c tblastx -o "show_gis" -d "Show NCBI GIs in deflines?"
 complete -c tblastx -o "num_descriptions" -d "Number of database sequences to show one-line descriptions for" -x
 complete -c tblastx -o "num_alignments" -d "Number of database sequences to show alignments for" -x

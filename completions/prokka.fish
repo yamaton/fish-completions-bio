@@ -1,6 +1,6 @@
 # Auto-generated with h2o
 
-complete -c prokka -l "dbdir" -d "Prokka database root folders (default '~/.local/share/condax/envs/prokka/db')" -x
+complete -c prokka -l "dbdir" -d "Prokka database root folders" -x
 complete -c prokka -l "listdb" -d "List all configured databases"
 complete -c prokka -l "setupdb" -d "Index all installed databases"
 complete -c prokka -l "cleandb" -d "Remove all database indices"

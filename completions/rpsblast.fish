@@ -9,7 +9,7 @@ complete -c rpsblast -o "db" -d "BLAST database name" -x
 complete -c rpsblast -o "out" -d "Output file name" -r
 complete -c rpsblast -o "evalue" -d "Expectation value (E) threshold for saving hits" -x
 complete -c rpsblast -o "comp_based_stats" -d "Use composition-based statistics:" -x
-complete -c rpsblast -o "outfmt" -d "alignment view options." -x
+complete -c rpsblast -o "outfmt" -d "alignment view: 0 (Pairwise) or 1 (Query-anchored with identities) or ..." -x
 complete -c rpsblast -o "show_gis" -d "Show NCBI GIs in deflines?"
 complete -c rpsblast -o "num_descriptions" -d "Number of database sequences to show one-line descriptions for" -x
 complete -c rpsblast -o "num_alignments" -d "Number of database sequences to show alignments for" -x

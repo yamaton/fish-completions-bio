@@ -19,7 +19,7 @@ complete -c blastdbcmd -o "range" -d "Range of sequence to extract in 1-based of
 complete -c blastdbcmd -o "strand" -d "Strand of nucleotide sequence to extract" -x
 complete -c blastdbcmd -o "mask_sequence_with" -d "Produce lower-case masked FASTA using the algorithm ID specified" -x
 complete -c blastdbcmd -o "out" -d "Output file name" -r
-complete -c blastdbcmd -o "outfmt" -d "Output format, where the available format specifiers are:" -x
+complete -c blastdbcmd -o "outfmt" -d "Output format: %f (FASTA), %s (sequence without defline), %a (accession), %g (gi),..." -x
 complete -c blastdbcmd -o "target_only" -d "Definition line should contain target entry only"
 complete -c blastdbcmd -o "get_dups" -d "Retrieve duplicate accessions"
 complete -c blastdbcmd -o "line_length" -d "Line length for output" -x

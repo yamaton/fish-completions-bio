@@ -20,7 +20,7 @@ complete -c blastx -l "threshold" -d "Minimum word score such that the word is a
 complete -c blastx -o "comp_based_stats" -d "Use composition-based statistics (Default = `2')" -x
 complete -c blastx -o "subject" -d "Subject sequence(s) to search" -r
 complete -c blastx -o "subject_loc" -d "Location on the subject sequence in 1-based offsets (Format: start-stop)" -x
-complete -c blastx -o "outfmt" -d "alignment view options:" -x
+complete -c blastx -o "outfmt" -d "alignment view: 0 (Pairwise) or 1 (Query-anchored with identities) or ..." -x
 complete -c blastx -o "show_gis" -d "Show NCBI GIs in deflines?"
 complete -c blastx -o "num_descriptions" -d "Number of database sequences to show one-line descriptions for." -x
 complete -c blastx -o "num_alignments" -d "Number of database sequences to show alignments for." -x

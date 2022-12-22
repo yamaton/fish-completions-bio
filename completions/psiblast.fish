@@ -16,7 +16,7 @@ complete -c psiblast -o "threshold" -d "Minimum word score such that the word is
 complete -c psiblast -o "comp_based_stats" -d "Use composition-based statistics:" -x
 complete -c psiblast -o "subject" -d "Subject sequence(s) to search" -r
 complete -c psiblast -o "subject_loc" -d "Location on the subject sequence in 1-based offsets (Format: start-stop)" -x
-complete -c psiblast -o "outfmt" -d "alignment view options." -x
+complete -c psiblast -o "outfmt" -d "alignment view: 0 (Pairwise) or 1 (Query-anchored with identities) or ..." -x
 complete -c psiblast -o "show_gis" -d "Show NCBI GIs in deflines?"
 complete -c psiblast -o "num_descriptions" -d "Number of database sequences to show one-line descriptions for" -x
 complete -c psiblast -o "num_alignments" -d "Number of database sequences to show alignments for" -x

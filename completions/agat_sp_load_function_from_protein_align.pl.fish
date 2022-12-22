@@ -1,0 +1,15 @@
+# Auto-generated with h2o
+
+complete -c agat_sp_load_function_from_protein_align.pl -s "a" -l "annotation" -d "Input gtf/gff file of an annotation."
+complete -c agat_sp_load_function_from_protein_align.pl -o "pgff" -d "Input gff file of aligned proteins."
+complete -c agat_sp_load_function_from_protein_align.pl -o "pfasta" -d "Input protein fasta file where the extra information will be retrieved for each aligned protein."
+complete -c agat_sp_load_function_from_protein_align.pl -s "m" -l "method" -d "Rule to apply to lift function when a protein map properly."
+complete -c agat_sp_load_function_from_protein_align.pl -l "value" -l "threshold" -s "t" -d "Gene mapping percentage over which a gene must be reported."
+complete -c agat_sp_load_function_from_protein_align.pl -s "w" -d "Compute the overlap score based on the whole annotation sequence."
+complete -c agat_sp_load_function_from_protein_align.pl -l "pe" -d "Protein existence value."
+complete -c agat_sp_load_function_from_protein_align.pl -l "test" -d "Test to apply (> < = >= <=)."
+complete -c agat_sp_load_function_from_protein_align.pl -l "sp" -d "Species, between the set of the best protein aligned we try first to take the one that follow the species prioritization defined."
+complete -c agat_sp_load_function_from_protein_align.pl -s "p" -l "priority" -d "By default the priority is PE test before species test when both are applied."
+complete -c agat_sp_load_function_from_protein_align.pl -s "v" -d "Be verbose."
+complete -c agat_sp_load_function_from_protein_align.pl -s "o" -l "output" -l "out" -d "Output GFF file."
+complete -c agat_sp_load_function_from_protein_align.pl -s "h" -l "help" -d "Display this helpful text."

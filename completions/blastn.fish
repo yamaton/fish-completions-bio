@@ -19,7 +19,7 @@ complete -c blastn -o "use_index" -d "Use MegaBLAST database index (Default = `f
 complete -c blastn -o "index_name" -d "MegaBLAST database index name (deprecated; use only for old style indices)" -x
 complete -c blastn -o "subject" -d "Subject sequence(s) to search" -r
 complete -c blastn -o "subject_loc" -d "Location on the subject sequence in 1-based offsets (Format: start-stop)" -x
-complete -c blastn -o "outfmt" -d "alignment view options" -x
+complete -c blastn -o "outfmt" -d "alignment view: 0 (Pairwise) or 1 (Query-anchored with identities) or ..." -x
 complete -c blastn -o "show_gis" -d "Show NCBI GIs in deflines?"
 complete -c blastn -o "num_descriptions" -d "Number of database sequences to show one-line descriptions for." -x
 complete -c blastn -o "num_alignments" -d "Number of database sequences to show alignments for (Default = `250')" -x
