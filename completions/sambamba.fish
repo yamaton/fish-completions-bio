@@ -1,10 +1,5 @@
 # Auto-generated with h2o
 
-complete -c sambamba -n "not __fish_seen_subcommand_from view index merge sort slice markdup subsample flagstat depth validate mpileup" -s "q" -d "quiet mode (do not show banner)"
-
-
-
-complete -k -c sambamba -n __fish_use_subcommand -x -a mpileup -d "parallel execution of samtools (BAM)"
 complete -k -c sambamba -n __fish_use_subcommand -x -a validate -d "simple validator (BAM)"
 complete -k -c sambamba -n __fish_use_subcommand -x -a depth -d "output statistics (BAM)"
 complete -k -c sambamba -n __fish_use_subcommand -x -a flagstat -d "output statistics (BAM)"
@@ -14,7 +9,7 @@ complete -k -c sambamba -n __fish_use_subcommand -x -a slice -d "slice file (BAM
 complete -k -c sambamba -n __fish_use_subcommand -x -a sort -d "sort file (BAM)"
 complete -k -c sambamba -n __fish_use_subcommand -x -a merge -d "merge files (BAM)"
 complete -k -c sambamba -n __fish_use_subcommand -x -a index -d "build index (BAI)"
-complete -k -c sambamba -n __fish_use_subcommand -x -a view -d "view contents and convert from one format"
+complete -k -c sambamba -n __fish_use_subcommand -x -a view -d "view contents and convert from one format to another (SAM/BAM/JSON/UNPACK)"
 
 
 
@@ -87,12 +82,3 @@ complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "T" -l "cov-thres
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "w" -l "window-size" -d "breadth of the window, in bp (required)" -x
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -l "overlap" -d "overlap of successive windows, in bp (default is 0)" -x
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "T" -l "cov-threshold" -d "same meaning as in 'region' subcommand" -x
-
-
-
-complete -c sambamba -n "__fish_seen_subcommand_from mpileup" -s "L" -l "regions" -d "provide BED file with regions (no need to duplicate it in samtools args); all input files must be indexed" -r
-complete -c sambamba -n "__fish_seen_subcommand_from mpileup" -s "o" -l "output-filename" -d "specify output filename" -r
-complete -c sambamba -n "__fish_seen_subcommand_from mpileup" -l "tmpdir" -d "directory for temporary files" -r
-complete -c sambamba -n "__fish_seen_subcommand_from mpileup" -s "t" -l "nthreads" -d "maximum number of threads to use" -x
-complete -c sambamba -n "__fish_seen_subcommand_from mpileup" -s "b" -l "buffer-size" -d "chunk size (in bytes)" -x
-complete -c sambamba -n "__fish_seen_subcommand_from mpileup" -s "B" -l "output-buffer-size" -d "output buffer size (in bytes)" -x
