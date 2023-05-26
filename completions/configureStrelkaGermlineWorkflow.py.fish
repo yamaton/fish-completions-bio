@@ -2,7 +2,7 @@
 
 complete -c configureStrelkaGermlineWorkflow.py -l "version" -d "show program's version number and exit"
 complete -c configureStrelkaGermlineWorkflow.py -s "h" -l "help" -d "show this help message and exit"
-complete -c configureStrelkaGermlineWorkflow.py -l "config" -d "provide a configuration file to override defaults in global config file (~/.condax/strelka/share/strelka-2.9.10-1/bin/configureStrelkaGermlineWorkflow.py.ini)" -r
+complete -c configureStrelkaGermlineWorkflow.py -l "config" -d "provide a configuration file to override defaults in global config file" -r
 complete -c configureStrelkaGermlineWorkflow.py -l "allHelp" -d "show all extended/hidden options"
 complete -c configureStrelkaGermlineWorkflow.py -l "bam" -d "Sample BAM or CRAM file." -r
 complete -c configureStrelkaGermlineWorkflow.py -l "ploidy" -d "Provide ploidy file in VCF." -r

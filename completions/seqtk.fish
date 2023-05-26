@@ -1,6 +1,9 @@
 # Auto-generated with h2o
 
+complete -k -c seqtk -n __fish_use_subcommand -x -a telo -d "identify telomere repeats in asm or long reads"
+complete -k -c seqtk -n __fish_use_subcommand -x -a hpc -d "homopolyer-compressed sequence"
 complete -k -c seqtk -n __fish_use_subcommand -x -a listhet -d "extract the position of each het"
+complete -k -c seqtk -n __fish_use_subcommand -x -a gap -d "get the gap locations"
 complete -k -c seqtk -n __fish_use_subcommand -x -a cutN -d "cut sequence at long N"
 complete -k -c seqtk -n __fish_use_subcommand -x -a randbase -d "choose a random base from hets"
 complete -k -c seqtk -n __fish_use_subcommand -x -a rename -d "rename sequence names"
@@ -11,11 +14,13 @@ complete -k -c seqtk -n __fish_use_subcommand -x -a mutfa -d "point mutate FASTA
 complete -k -c seqtk -n __fish_use_subcommand -x -a gc -d "identify high- or low-GC regions"
 complete -k -c seqtk -n __fish_use_subcommand -x -a hety -d "regional heterozygosity"
 complete -k -c seqtk -n __fish_use_subcommand -x -a trimfq -d "trim FASTQ using the Phred algorithm"
+complete -k -c seqtk -n __fish_use_subcommand -x -a split -d "split one file into multiple smaller files"
 complete -k -c seqtk -n __fish_use_subcommand -x -a mergepe -d "interleave two PE FASTA/Q files"
 complete -k -c seqtk -n __fish_use_subcommand -x -a fqchk -d "fastq QC (base/quality summary)"
 complete -k -c seqtk -n __fish_use_subcommand -x -a subseq -d "extract subsequences from FASTA/Q"
 complete -k -c seqtk -n __fish_use_subcommand -x -a sample -d "subsample sequences"
 complete -k -c seqtk -n __fish_use_subcommand -x -a comp -d "get the nucleotide composition of FASTA/Q"
+complete -k -c seqtk -n __fish_use_subcommand -x -a size -d "report the number sequences and bases"
 complete -k -c seqtk -n __fish_use_subcommand -x -a seq -d "common transformation of FASTA/Q"
 
 
@@ -38,30 +43,26 @@ complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "1" -d "output the 2n-
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "2" -d "output the 2n reads only"
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "V" -d "shift quality by '(-Q) - 33'"
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "U" -d "convert all bases to uppercases"
+complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "x" -d "convert all lowercases to -n"
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "S" -d "strip of white spaces in sequences"
 
 
 
-complete -c seqtk -n "__fish_seen_subcommand_from comp" -s "u" -d "Upper only"
-complete -c seqtk -n "__fish_seen_subcommand_from comp" -s "r" -d "Specify input BED file" -r
-
-
-
-complete -c seqtk -n "__fish_seen_subcommand_from sample" -s "s" -d "RNG seed [11]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from sample" -s "2" -d "2-pass mode: twice as slow but with much reduced memory"
 
 
 
 complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "t" -d "TAB delimited output"
+complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "s" -d "strand aware"
 complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "l" -d "sequence line length [0]" -x
 
 
 
-complete -c seqtk -n "__fish_seen_subcommand_from fqchk" -s "q" -d "Quality value." -x
+complete -c seqtk -n "__fish_seen_subcommand_from split" -s "n" -d "number of files [10]" -r
+complete -c seqtk -n "__fish_seen_subcommand_from split" -s "l" -d "line length [0]" -x
 
 
 
-complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "q" -d "error rate threshold (disabled by -b/-e) [0.05]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "l" -d "maximally trim down to INT bp (disabled by -b/-e) [30]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "b" -d "trim INT bp from left (non-zero to disable -q/-l) [0]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "e" -d "trim INT bp from right (non-zero to disable -q/-l) [0]" -x
@@ -70,7 +71,6 @@ complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "Q" -d "force FASTQ
 
 
 
-complete -c seqtk -n "__fish_seen_subcommand_from hety" -s "w" -d "window size [50000]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from hety" -s "t" -d "# start positions in a window [5]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from hety" -s "m" -d "treat lowercases as masked"
 
@@ -83,7 +83,6 @@ complete -c seqtk -n "__fish_seen_subcommand_from gc" -s "x" -d "X-dropoff [10.0
 
 
 
-complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "q" -d "quality threshold [0]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "i" -d "take intersection"
 complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "m" -d "convert to lowercase when one of the input base is N"
 complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "r" -d "pick a random allele from het"
@@ -91,6 +90,12 @@ complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "h" -d "suppress h
 
 
 
-complete -c seqtk -n "__fish_seen_subcommand_from cutN" -s "n" -d "min size of N tract [1000]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from cutN" -s "p" -d "penalty for a non-N [10]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from cutN" -s "g" -d "print gaps only, no sequence"
+
+
+
+complete -c seqtk -n "__fish_seen_subcommand_from telo" -s "m" -d "motif [CCCTAA]" -x
+complete -c seqtk -n "__fish_seen_subcommand_from telo" -s "p" -d "penalty [1]" -x
+complete -c seqtk -n "__fish_seen_subcommand_from telo" -s "d" -d "max drop [2000]" -x
+complete -c seqtk -n "__fish_seen_subcommand_from telo" -s "s" -d "min score [300]" -x
