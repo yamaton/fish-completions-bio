@@ -1,8 +1,10 @@
 # Auto-generated with h2o
 
-complete -k -c bio -n __fish_use_subcommand -x -a code -d "downloads the Biostar Handbook code"
 complete -k -c bio -n __fish_use_subcommand -x -a uniq -d "find unique elements"
 complete -k -c bio -n __fish_use_subcommand -x -a comm -d "find common elements"
+complete -k -c bio -n __fish_use_subcommand -x -a code -d "downloads the Biostar Handbook code"
+complete -k -c bio -n __fish_use_subcommand -x -a enrichr -d "submits genes from a count file to Enrichr"
+complete -k -c bio -n __fish_use_subcommand -x -a gprofiler -d "submits genes from a count file to g:Profiler"
 complete -k -c bio -n __fish_use_subcommand -x -a mygene -d "connect to mygene interface"
 complete -k -c bio -n __fish_use_subcommand -x -a meta -d "download metadata by taxonomy ID"
 complete -k -c bio -n __fish_use_subcommand -x -a explain -d "explain biological terms"
@@ -149,6 +151,31 @@ complete -c bio -n "__fish_seen_subcommand_from mygene" -s "S" -l "scopes" -d "s
 
 
 
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "h" -l "help" -d "show this help message and exit"
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "c" -l "counts" -d "input counts" -x
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "d" -l "organism" -d "input counts" -x
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "n" -l "colname" -d "gene id column name" -x
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "t" -l "pval-cutoff" -d "pvalue cutoff" -x
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "p" -l "pval-column" -d "pvalue column name" -x
+complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "o" -l "output" -d "pvalue column name" -r
+
+
+
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "h" -l "help" -d "show this help message and exit"
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "c" -l "counts" -d "input counts" -x
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "d" -l "organism" -d "input counts" -x
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "n" -l "colname" -d "gene id column name" -x
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "t" -l "pval-cutoff" -d "pvalue cutoff" -x
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "p" -l "pval-column" -d "pvalue column name" -x
+complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "o" -l "output" -d "pvalue column name" -x
+
+
+
+complete -c bio -n "__fish_seen_subcommand_from code" -s "h" -l "help" -d "show this help message and exit"
+complete -c bio -n "__fish_seen_subcommand_from code" -s "u" -l "update" -d "update existing files"
+
+
+
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "1" -l "uniq1" -d "prints elements unique to file 1"
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "2" -l "uniq2" -d "prints elements unique to file 2"
@@ -163,8 +190,3 @@ complete -c bio -n "__fish_seen_subcommand_from uniq" -s "h" -l "help" -d "show 
 complete -c bio -n "__fish_seen_subcommand_from uniq" -s "f" -l "field" -d "field index (1 by default)" -x
 complete -c bio -n "__fish_seen_subcommand_from uniq" -s "c" -l "count" -d "produce counts"
 complete -c bio -n "__fish_seen_subcommand_from uniq" -s "t" -l "tab" -d "tab delimited (default is csv)"
-
-
-
-complete -c bio -n "__fish_seen_subcommand_from code" -s "h" -l "help" -d "show this help message and exit"
-complete -c bio -n "__fish_seen_subcommand_from code" -s "u" -l "update" -d "update existing files"
