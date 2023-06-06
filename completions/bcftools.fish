@@ -178,6 +178,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "f" -l "fasta-ref"
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "force" -d "Try to proceed even if malformed tags are encountered."
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "keep-sum" -d "Keep vector sum constant when splitting multiallelics (see github issue #360)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "m" -l "multiallelics" -d "Split multiallelics (-) or join biallelics (+), type: snps|indels|both|any [both]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "multi-overlaps" -d "Fill in the reference (0) or missing (.) allele when splitting multiallelics [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "no-version" -d "Do not append version and command line to the header"
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "N" -l "do-not-normalize" -d "Do not normalize indels (with -m or -c s)"
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "old-rec-tag" -d "Annotate modified records with INFO/STR indicating the original variant" -x
@@ -309,24 +310,23 @@ complete -c bcftools -n "__fish_seen_subcommand_from call" -s "P" -l "prior" -d 
 
 
 
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "sample" -d "option will apply genotype" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "sample" -d "option will apply genotype (or haplotype) calls from FORMAT/GT." -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "c" -l "chain" -d "write a chain file for liftover" -r
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "a" -l "absent" -d "replace positions absent from VCF with CHAR" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "e" -l "exclude" -d "exclude sites for which the expression is true (see man page for details)" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "f" -l "fasta-ref" -d "reference sequence in fasta format" -r
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "H" -l "haplotype" -d "choose which allele to use from the FORMAT/GT field, note the codes are case-insensitive:" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "i" -l "include" -d "select sites for which the expression is true (see man page for details)" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "I" -l "iupac-codes" -d "output variants in the form of IUPAC ambiguity codes"
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-del" -d "instead of removing sequence, insert CHAR for deletions" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-ins" -d "highlight insertions in uppercase (uc) or lowercase (lc), leaving the rest as is" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-snv" -d "highlight substitutions in uppercase (uc) or lowercase (lc), leaving the rest as is" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "m" -l "mask" -d "replace regions according to the next --mask-with option." -r
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mask-with" -d "replace with CHAR (skips overlapping variants); change to uppercase (uc) or lowercase (lc)" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "M" -l "missing" -d "output CHAR instead of skipping a missing genotype \"./.\"" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "o" -l "output" -d "write output to a file [standard output]" -r
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "p" -l "prefix" -d "prefix to add to output sequence names" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "s" -l "sample" -d "apply variants of the given sample" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "c" -l "chain" -d "Write a chain file for liftover" -r
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "a" -l "absent" -d "Replace positions absent from VCF with CHAR" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "e" -l "exclude" -d "Exclude sites for which the expression is true (see man page for details)" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "f" -l "fasta-ref" -d "Reference sequence in fasta format" -r
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "H" -l "haplotype" -d "Choose which allele to use from the FORMAT/GT field, note the codes are case-insensitive:" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "i" -l "include" -d "Select sites for which the expression is true (see man page for details)" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "I" -l "iupac-codes" -d "Output IUPAC codes based on FORMAT/GT, use -s/-S to subset samples"
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-del" -d "Instead of removing sequence, insert CHAR for deletions" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-ins" -d "Highlight insertions in uppercase (uc) or lowercase (lc), leaving the rest as is" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-snv" -d "Highlight substitutions in uppercase (uc) or lowercase (lc), leaving the rest as is" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "m" -l "mask" -d "Replace regions according to the next --mask-with option." -r
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mask-with" -d "Replace with CHAR (skips overlapping variants); change to uppercase (uc) or lowercase (lc)" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "M" -l "missing" -d "Output CHAR instead of skipping a missing genotype \"./.\"" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "o" -l "output" -d "Write output to a file [standard output]" -r
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "p" -l "prefix" -d "Prefix to add to output sequence names" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "s" -l "samples" -d "Comma-separated list of samples to include, \"-\" to ignore samples and use REF,ALT" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "S" -l "samples-file" -d "File of samples to include" -r
 
 
 
@@ -455,7 +455,6 @@ complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "g" -l "gvcf" -
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "no-version" -d "Do not append version and command line to the header"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "o" -l "output" -d "Write output to FILE [standard output]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "O" -l "output-type" -d "'b' compressed BCF; 'u' uncompressed BCF; 'z' compressed VCF; 'v' uncompressed VCF; 0-9 compression level [v]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "U" -l "mwu-u" -d "Use older probability scale for Mann-Whitney U test"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "threads" -d "Use multithreading with INT worker threads [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "X" -l "config" -d "Specify platform specific profiles (see below)" -r
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "e" -l "ext-prob" -d "Phred-scaled gap extension seq error probability [20]" -x
@@ -471,6 +470,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "P" -l "platfor
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "ar" -l "ambig-reads" -d "What to do with ambiguous indel reads: drop,incAD,incAD0 [drop]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indel-bias" -d "Raise to favour recall over precision [1.00]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indel-size" -d "Approximate maximum indel size considered [110]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indels-2.0" -d "New EXPERIMENTAL indel calling model (diploid reference consensus)"
 
 
 
