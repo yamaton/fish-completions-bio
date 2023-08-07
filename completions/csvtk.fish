@@ -1,19 +1,19 @@
 # Auto-generated with h2o
 
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "h" -l "help" -d "help for csvtk"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
-complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "h" -l "help" -d "help for csvtk"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
+complete -c csvtk -n "not __fish_seen_subcommand_from add-header cat comb concat corr csv2json csv2md csv2rst csv2tab csv2xlsx cut del-header dim filter filter2 fix fmtdate fold freq gather genautocomplete grep head headers inter join mutate mutate2 ncol nrow plot pretty rename rename2 replace round sample sep sort space2tab split splitxlsx summary tab2csv transpose unfold uniq version watch xlsx2csv" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
 
 
 
@@ -27,7 +27,7 @@ complete -k -c csvtk -n __fish_use_subcommand -x -a tab2csv -d "convert tabular 
 complete -k -c csvtk -n __fish_use_subcommand -x -a summary -d "summary statistics of selected numeric or text fields (groupby group fields)"
 complete -k -c csvtk -n __fish_use_subcommand -x -a splitxlsx -d "split XLSX sheet into multiple sheets according to column values"
 complete -k -c csvtk -n __fish_use_subcommand -x -a split -d "split CSV/TSV into multiple files according to column values"
-complete -k -c csvtk -n __fish_use_subcommand -x -a space2tab -d "convert space delimited format to CSV"
+complete -k -c csvtk -n __fish_use_subcommand -x -a space2tab -d "convert space delimited format to TSV"
 complete -k -c csvtk -n __fish_use_subcommand -x -a sort -d "sort by selected fields"
 complete -k -c csvtk -n __fish_use_subcommand -x -a sep -d "separate column into multiple columns"
 complete -k -c csvtk -n __fish_use_subcommand -x -a sample -d "sampling by proportion"
@@ -35,7 +35,7 @@ complete -k -c csvtk -n __fish_use_subcommand -x -a round -d "round float to n d
 complete -k -c csvtk -n __fish_use_subcommand -x -a replace -d "replace data of selected fields by regular expression"
 complete -k -c csvtk -n __fish_use_subcommand -x -a rename2 -d "rename column names by regular expression"
 complete -k -c csvtk -n __fish_use_subcommand -x -a rename -d "rename column names with new names"
-complete -k -c csvtk -n __fish_use_subcommand -x -a pretty -d "convert CSV to readable aligned table"
+complete -k -c csvtk -n __fish_use_subcommand -x -a pretty -d "convert CSV to a readable aligned table"
 complete -k -c csvtk -n __fish_use_subcommand -x -a plot -d "plot common figures"
 complete -k -c csvtk -n __fish_use_subcommand -x -a nrow -d "print number of records"
 complete -k -c csvtk -n __fish_use_subcommand -x -a ncol -d "print number of columns"
@@ -51,6 +51,7 @@ complete -k -c csvtk -n __fish_use_subcommand -x -a gather -d "gather columns in
 complete -k -c csvtk -n __fish_use_subcommand -x -a freq -d "frequencies of selected fields"
 complete -k -c csvtk -n __fish_use_subcommand -x -a fold -d "fold multiple values of a field into cells of groups"
 complete -k -c csvtk -n __fish_use_subcommand -x -a fmtdate -d "format date of selected fields"
+complete -k -c csvtk -n __fish_use_subcommand -x -a fix -d "fix CSV/TSV with different numbers of columns in rows"
 complete -k -c csvtk -n __fish_use_subcommand -x -a filter2 -d "filter rows by awk-like arithmetic/string expressions"
 complete -k -c csvtk -n __fish_use_subcommand -x -a filter -d "filter rows by values of selected fields with arithmetic expression"
 complete -k -c csvtk -n __fish_use_subcommand -x -a dim -d "dimensions of CSV file"
@@ -79,7 +80,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "I" -l "ignore-
 complete -c csvtk -n "__fish_seen_subcommand_from add-header" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from add-header" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -100,7 +101,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "I" -l "ignore-illegal
 complete -c csvtk -n "__fish_seen_subcommand_from cat" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -109,7 +110,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from cat" -s "t" -l "tabs" -d "spec
 
 
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "h" -l "help" -d "help for comb"
-complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "i" -l "ignore-case" -s "S" -l "nat-sort" -d "sort items in natural order" -x
+complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "i" -l "ignore-case" -d "ignore-case"
+complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "S" -l "nat-sort" -d "sort items in natural order"
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "n" -l "number" -d "number of items in a combination, 0 for no limit, i.e., return all combinations (default 2)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "s" -l "sort" -d "sort items in a combination"
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
@@ -120,7 +122,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from comb" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -140,7 +142,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from concat" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from concat" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -161,7 +163,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from corr" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from corr" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -182,7 +184,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "I" -l "ignore-il
 complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2json" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -201,7 +203,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2md" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -223,7 +225,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2rst" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -240,7 +242,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -248,6 +250,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2tab" -s "t" -l "tabs" -d "
 
 
 
+complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "f" -l "format-numbers" -d "save numbers in number format, instead of text"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "h" -l "help" -d "help for csv2xlsx"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
@@ -257,7 +260,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "I" -l "ignore-il
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from csv2xlsx" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -280,7 +283,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "I" -l "ignore-illegal
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from cut" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -297,7 +300,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "I" -l "ignore-
 complete -c csvtk -n "__fish_seen_subcommand_from del-header" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from del-header" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -318,7 +321,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "I" -l "ignore-illegal
 complete -c csvtk -n "__fish_seen_subcommand_from dim" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from dim" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -339,7 +342,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from filter" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -347,6 +350,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from filter" -s "t" -l "tabs" -d "s
 
 
 
+complete -c csvtk -n "__fish_seen_subcommand_from filter2"  -d "len(), length of strings, e.g., len(\$1), len(\$a), len(\$1, \$2)"
+complete -c csvtk -n "__fish_seen_subcommand_from filter2"  -d "ulen(), length of unicode strings/width of unicode strings rendered to a terminal, e.g., len(\"\27784\20255\")==6, ulen(\"\27784\20255\")==4"
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "f" -l "filter" -d "awk-like filter condition." -x
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "h" -l "help" -d "help for filter2"
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "n" -l "line-number" -d "print line number as the first column (\"n\")"
@@ -359,11 +364,29 @@ complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
 complete -c csvtk -n "__fish_seen_subcommand_from filter2" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
+
+
+
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "n" -l "buf-rows" -d "the number of rows to determine the maximum number of columns." -x
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "h" -l "help" -d "help for fix"
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "E" -l "ignore-empty-row" -d "ignore empty rows"
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "I" -l "ignore-illegal-row" -d "ignore illegal rows"
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
+complete -c csvtk -n "__fish_seen_subcommand_from fix" -s "t" -l "tabs" -d "specifies that the input CSV file is delimited with tabs."
 
 
 
@@ -381,7 +404,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from fmtdate" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -403,7 +426,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from fold" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from fold" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -426,7 +449,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from freq" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from freq" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -447,7 +470,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from gather" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -466,7 +489,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "I" -l "ig
 complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from genautocomplete" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -495,7 +518,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from grep" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from grep" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -513,7 +536,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from head" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from head" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from head" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from head" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from head" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from head" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from head" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from head" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from head" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -531,7 +554,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from headers" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from headers" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -551,7 +574,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "I" -l "ignore-illeg
 complete -c csvtk -n "__fish_seen_subcommand_from inter" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from inter" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -568,6 +591,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from join" -s "k" -l "keep-unmatche
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "L" -l "left-join" -d "left join, equals to -k/--keep-unmatched, exclusive with --outer-join"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -l "na" -d "content for filling NA data" -x
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "O" -l "outer-join" -d "outer join, exclusive with --left-join"
+complete -c csvtk -n "__fish_seen_subcommand_from join" -s "p" -l "prefix-filename" -d "add each filename as a prefix to each colname."
+complete -c csvtk -n "__fish_seen_subcommand_from join" -s "e" -l "prefix-trim-ext" -d "trim extension when adding filename as colname prefix"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
@@ -576,7 +601,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from join" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from join" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from join" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from join" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from join" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -599,7 +624,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from mutate" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -607,6 +632,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from mutate" -s "t" -l "tabs" -d "s
 
 
 
+complete -c csvtk -n "__fish_seen_subcommand_from mutate2"  -d "len(), length of strings, e.g., len(\$1), len(\$a), len(\$1, \$2)"
+complete -c csvtk -n "__fish_seen_subcommand_from mutate2"  -d "ulen(), length of unicode strings/width of unicode strings rendered to a terminal, e.g., len(\"\27784\20255\")==6, ulen(\"\27784\20255\")==4"
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "w" -l "decimal-width" -d "limit floats to N decimal points (default 2)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "e" -l "expression" -d "arithmetic/string expressions." -x
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "h" -l "help" -d "help for mutate2"
@@ -620,7 +647,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from mutate2" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -638,7 +665,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from ncol" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from ncol" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -656,7 +683,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from nrow" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from nrow" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -691,7 +718,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -699,11 +726,18 @@ complete -c csvtk -n "__fish_seen_subcommand_from plot" -s "t" -l "tabs" -d "spe
 
 
 
+complete -c csvtk -n "__fish_seen_subcommand_from pretty"  -d "----"
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "m" -l "align-center" -d "align center/middle"
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "r" -l "align-right" -d "align right"
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "n" -l "buf-rows" -d "the number of rows to determine the min and max widths (default 128)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -l "clip" -d "clip longer cell instead of wrapping"
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -l "clip-mark" -d "clip mark (default \"...\")" -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "h" -l "help" -d "help for pretty"
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "W" -l "max-width" -d "max width" -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "w" -l "min-width" -d "min width" -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "s" -l "separator" -d "fields/columns separator (default \" \")" -x
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "S" -l "style" -d "output syle." -x
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "x" -l "wrap-delimiter" -d "delimiter for wrapping cells (default \" \")" -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
@@ -712,7 +746,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from pretty" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -732,7 +766,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from rename" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from rename" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -760,7 +794,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from rename2" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from rename2" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -788,7 +822,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from replace" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from replace" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -809,7 +843,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from round" -s "I" -l "ignore-illeg
 complete -c csvtk -n "__fish_seen_subcommand_from round" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from round" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from round" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from round" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from round" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from round" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from round" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from round" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -829,7 +863,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from sample" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sample" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -846,7 +880,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from sep" -l "na" -d "content for f
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "n" -l "names" -d "new column names" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "N" -l "num-cols" -d "preset number of new created columns" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "R" -l "remove" -d "remove input column"
-complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "s" -l "sep" -s "r" -l "use-regexp" -d "separator is a regular expression" -x
+complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "s" -l "sep" -d "separator" -x
+complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "r" -l "use-regexp" -d "separator is a regular expression"
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "d" -l "delimiter" -d "delimiting character of the input CSV file (default \",\")" -r
@@ -855,7 +890,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "I" -l "ignore-illegal
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -864,7 +899,8 @@ complete -c csvtk -n "__fish_seen_subcommand_from sep" -s "t" -l "tabs" -d "spec
 
 
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "h" -l "help" -d "help for sort"
-complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "i" -l "ignore-case" -s "k" -l "keys" -d "keys (multiple values supported)." -x
+complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "i" -l "ignore-case" -d "ignore-case"
+complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "k" -l "keys" -d "keys (multiple values supported)." -x
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "L" -l "levels" -d "user-defined level file (one level per line, multiple values supported)." -r
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
@@ -874,7 +910,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -882,6 +918,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from sort" -s "t" -l "tabs" -d "spe
 
 
 
+complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "b" -l "buffer-size" -d "size of buffer, supported unit: K, M, G." -x
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "h" -l "help" -d "help for space2tab"
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "c" -l "chunk-size" -d "chunk size of CSV reader (default 50)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "C" -l "comment-char" -d "lines starting with commment-character will be ignored." -x
@@ -891,7 +928,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "I" -l "ignore-i
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from space2tab" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -914,7 +951,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from split" -s "I" -l "ignore-illeg
 complete -c csvtk -n "__fish_seen_subcommand_from split" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from split" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from split" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from split" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from split" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from split" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from split" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from split" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -937,7 +974,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "I" -l "ignore-i
 complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from splitxlsx" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -960,7 +997,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from summary" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -977,7 +1014,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from tab2csv" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -994,7 +1031,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "I" -l "ignore-i
 complete -c csvtk -n "__fish_seen_subcommand_from transpose" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from transpose" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -1013,7 +1050,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "I" -l "ignore-ille
 complete -c csvtk -n "__fish_seen_subcommand_from unfold" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from unfold" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -1034,7 +1071,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "I" -l "ignore-illega
 complete -c csvtk -n "__fish_seen_subcommand_from uniq" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from uniq" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -1052,7 +1089,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from version" -s "I" -l "ignore-ill
 complete -c csvtk -n "__fish_seen_subcommand_from version" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from version" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from version" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from version" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from version" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from version" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from version" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from version" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -1079,7 +1116,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "I" -l "ignore-illeg
 complete -c csvtk -n "__fish_seen_subcommand_from watch" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from watch" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."
@@ -1099,7 +1136,7 @@ complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "I" -l "ignore-il
 complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -l "infile-list" -d "file of input files list (one file per line), if given, they are appended to files from cli arguments" -r
 complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "l" -l "lazy-quotes" -d "if given, a quote may appear in an unquoted field and a non-doubled quote may appear in a quoted field"
 complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "H" -l "no-header-row" -d "specifies that the input CSV file does not have header row"
-complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 12)" -x
+complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "j" -l "num-cpus" -d "number of CPUs to use (default value depends on your computer) (default 8)" -x
 complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "D" -l "out-delimiter" -d "delimiting character of the output CSV file, e.g., -D \$'\\t' for tab (default \",\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c csvtk -n "__fish_seen_subcommand_from xlsx2csv" -s "T" -l "out-tabs" -d "specifies that the output is delimited with tabs."

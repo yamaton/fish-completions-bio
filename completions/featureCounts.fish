@@ -10,6 +10,7 @@ complete -c featureCounts -s "A" -d "Provide a chromosome name alias file to mat
 complete -c featureCounts -s "f" -d "Perform read counting at feature level (eg."
 complete -c featureCounts -s "O" -d "Assign reads to all their overlapping meta-features (or features if -f is specified)."
 complete -c featureCounts -l "minOverlap" -d "Minimum number of overlapping bases in a read that is required for read assignment." -x
+complete -c featureCounts -l "fracOverlap" -d "Minimum fraction of overlapping bases in a read that is required for read assignment." -x
 complete -c featureCounts -l "fracOverlapFeature" -d "<float> Minimum fraction of overlapping bases in a feature that is required for read assignment."
 complete -c featureCounts -l "largestOverlap" -d "Assign reads to a meta-feature/feature that has the largest number of overlapping bases."
 complete -c featureCounts -l "nonOverlap" -d "Maximum number of non-overlapping bases in a read (or a read pair) that is allowed when being assigned to a feature." -x
@@ -27,7 +28,8 @@ complete -c featureCounts -l "ignoreDup" -d "Ignore duplicate reads in read coun
 complete -c featureCounts -s "s" -d "Perform strand-specific read counting." -r
 complete -c featureCounts -s "J" -d "Count number of reads supporting each exon-exon junction."
 complete -c featureCounts -s "G" -d "Provide the name of a FASTA-format file that contains the reference sequences used in read mapping that produced the provided SAM/BAM files." -r
-complete -c featureCounts -s "p" -d "If specified, fragments (or templates) will be counted instead of reads."
+complete -c featureCounts -s "p" -d "Specify that input data contain paired-end reads."
+complete -c featureCounts -l "countReadPairs" -d "Count read pairs (fragments) instead of reads."
 complete -c featureCounts -s "B" -d "Only count read pairs that have both ends aligned."
 complete -c featureCounts -s "P" -d "Check validity of paired-end distance when counting read pairs."
 complete -c featureCounts -s "d" -d "Minimum fragment/template length, 50 by default." -x
