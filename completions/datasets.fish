@@ -35,6 +35,7 @@ complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "gzip" -d "re
 complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "list" -d "List files that would be downloaded during rehydration"
 complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "match" -d "Specify substring that matches files for rehydration" -r
 complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "max-workers" -d "Limit the maximum number of concurrent download workers (allowed range is 1-30) (default 10)" -x
+complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "no-progressbar" -d "Hide progress bar"
 complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "api-key" -d "Specify an NCBI API key" -x
 complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "debug" -d "Emit debugging info"
 complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "help" -d "Print detailed help about a datasets command"
