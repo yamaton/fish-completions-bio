@@ -1,25 +1,26 @@
 # Auto-generated with h2o
 
-complete -c cellranger -n "not __fish_seen_subcommand_from count multi vdj aggr reanalyze targeted-compare targeted-depth mkvdjref mkfastq testrun mat2csv mkref mkgtf upload sitecheck" -s "h" -l "help" -d "Print help information"
-complete -c cellranger -n "not __fish_seen_subcommand_from count multi vdj aggr reanalyze targeted-compare targeted-depth mkvdjref mkfastq testrun mat2csv mkref mkgtf upload sitecheck" -s "V" -l "version" -d "Print version information"
+complete -c cellranger -n "not __fish_seen_subcommand_from count multi vdj aggr reanalyze targeted-compare targeted-depth mkvdjref mkfastq testrun mat2csv mkref mkgtf upload sitecheck help" -s "h" -l "help" -d "Print help information"
+complete -c cellranger -n "not __fish_seen_subcommand_from count multi vdj aggr reanalyze targeted-compare targeted-depth mkvdjref mkfastq testrun mat2csv mkref mkgtf upload sitecheck help" -s "V" -l "version" -d "Print version information"
 
 
 
+complete -k -c cellranger -n __fish_use_subcommand -x -a help -d "Print this message or the help of the given subcommand(s)"
 complete -k -c cellranger -n __fish_use_subcommand -x -a sitecheck -d "Collect linux system configuration information"
 complete -k -c cellranger -n __fish_use_subcommand -x -a upload -d "Upload analysis logs to 10x Genomics support"
 complete -k -c cellranger -n __fish_use_subcommand -x -a mkgtf -d "Filter a GTF file by attribute prior to creating a 10x reference"
-complete -k -c cellranger -n __fish_use_subcommand -x -a mkref -d "Prepare a reference for use with 10x analysis software. Requires a GTF"
+complete -k -c cellranger -n __fish_use_subcommand -x -a mkref -d "Prepare a reference for use with 10x analysis software. Requires a GTF and FASTA"
 complete -k -c cellranger -n __fish_use_subcommand -x -a mat2csv -d "Convert a gene count matrix to CSV format"
 complete -k -c cellranger -n __fish_use_subcommand -x -a testrun -d "Execute the 'count' pipeline on a small test dataset"
-complete -k -c cellranger -n __fish_use_subcommand -x -a mkfastq -d "Run Illumina demultiplexer on sample sheets that contain 10x-specific"
+complete -k -c cellranger -n __fish_use_subcommand -x -a mkfastq -d "Run Illumina demultiplexer on sample sheets that contain 10x-specific sample index sets"
 complete -k -c cellranger -n __fish_use_subcommand -x -a mkvdjref -d "Prepare a reference for use with CellRanger VDJ"
-complete -k -c cellranger -n __fish_use_subcommand -x -a targeted-depth -d "Estimate targeted read depth values (mean reads per cell) for a"
-complete -k -c cellranger -n __fish_use_subcommand -x -a targeted-compare -d "Analyze targeted enrichment performance by comparing a targeted sample"
+complete -k -c cellranger -n __fish_use_subcommand -x -a targeted-depth -d "Estimate targeted read depth values (mean reads per cell) for a specified input parent WTA sample and a target panel CSV file"
+complete -k -c cellranger -n __fish_use_subcommand -x -a targeted-compare -d "Analyze targeted enrichment performance by comparing a targeted sample to its cognate parent WTA sample (used as input for targeted gene expression)"
 complete -k -c cellranger -n __fish_use_subcommand -x -a reanalyze -d "Re-run secondary analysis (dimensionality reduction, clustering, etc)"
 complete -k -c cellranger -n __fish_use_subcommand -x -a aggr -d "Aggregate data from multiple Cell Ranger runs"
-complete -k -c cellranger -n __fish_use_subcommand -x -a vdj -d "Assembles single-cell VDJ receptor sequences from 10x Immune Profiling"
-complete -k -c cellranger -n __fish_use_subcommand -x -a multi -d "Analyze multiplexed data or combined gene expression/immune"
-complete -k -c cellranger -n __fish_use_subcommand -x -a count -d "Count gene expression (targeted or whole-transcriptome) and/or feature"
+complete -k -c cellranger -n __fish_use_subcommand -x -a vdj -d "Assembles single-cell VDJ receptor sequences from 10x Immune Profiling libraries"
+complete -k -c cellranger -n __fish_use_subcommand -x -a multi -d "Analyze multiplexed data or combined gene expression/immune profiling/feature barcode data"
+complete -k -c cellranger -n __fish_use_subcommand -x -a count -d "Count gene expression (targeted or whole-transcriptome) and/or feature barcode reads from a single sample and GEM well"
 
 
 
@@ -247,9 +248,7 @@ complete -c cellranger -n "__fish_seen_subcommand_from mat2csv" -l "version" -d 
 
 
 
-complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "genome" -d "Unique genome name(s), used to name output folder [a-zA-Z0-9_-]+." -x
-complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "fasta" -d "Path(s) to FASTA file containing your genome reference." -r
-complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "genes" -d "Path(s) to genes GTF file(S) containing annotated genes for your genome reference." -r
+complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "genome" -l "fasta" -l "genes" -d "[options]" -x
 complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "nthreads" -d "Number of threads used during STAR genome index" -x
 complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "memgb" -d "Maximum memory (GB) used when aligning reads with STAR." -x
 complete -c cellranger -n "__fish_seen_subcommand_from mkref" -l "ref-version" -d "Optional reference version string to include with" -x
