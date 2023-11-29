@@ -37,6 +37,7 @@ complete -c bio -n "__fish_seen_subcommand_from fetch" -s "d" -l "db" -d "databa
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "t" -l "type" -d "get CDS/CDNA (Ensembl only)" -x
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "f" -l "format" -d "return format" -x
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "l" -l "limit" -d "limit results" -x
+complete -c bio -n "__fish_seen_subcommand_from fetch" -s "o" -l "out" -d "output file (used as prefix in for FASTQ)" -r
 
 
 
