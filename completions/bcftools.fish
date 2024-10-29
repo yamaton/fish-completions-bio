@@ -18,6 +18,7 @@ complete -k -c bcftools -n __fish_use_subcommand -x -a plugin -d "user-defined p
 complete -k -c bcftools -n __fish_use_subcommand -x -a norm -d "left-align and normalize indels"
 complete -k -c bcftools -n __fish_use_subcommand -x -a merge -d "merge VCF/BCF files files from non-overlapping sample sets"
 complete -k -c bcftools -n __fish_use_subcommand -x -a isec -d "intersections of VCF/BCF files"
+complete -k -c bcftools -n __fish_use_subcommand -x -a head -d "view VCF/BCF file headers"
 complete -k -c bcftools -n __fish_use_subcommand -x -a convert -d "convert VCF/BCF files to different formats and back"
 complete -k -c bcftools -n __fish_use_subcommand -x -a concat -d "concatenate VCF/BCF files from the same set of samples"
 complete -k -c bcftools -n __fish_use_subcommand -x -a annotate -d "annotate and edit VCF/BCF files"
@@ -64,6 +65,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from annotate" -s "S" -l "sample
 complete -c bcftools -n "__fish_seen_subcommand_from annotate" -l "single-overlaps" -d "Keep memory low by avoiding complexities arising from handling multiple overlapping intervals"
 complete -c bcftools -n "__fish_seen_subcommand_from annotate" -s "x" -l "remove" -d "List of annotations (e.g. ID,INFO/DP,FORMAT/DP,FILTER) to remove (or keep with \"^\" prefix)." -x
 complete -c bcftools -n "__fish_seen_subcommand_from annotate" -l "threads" -d "Number of extra output compression threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from annotate" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -72,6 +74,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "c" -l "compact-
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "d" -l "rm-dups" -d "Output duplicate records present in multiple files only once: <snps|indels|both|all|exact>" -r
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "D" -l "remove-duplicates" -d "Alias for -d exact"
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "f" -l "file-list" -d "Read the list of files from a file." -r
+complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "G" -l "drop-genotypes" -d "Drop individual genotype information."
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "l" -l "ligate" -d "Ligate phased VCFs by matching phase at overlapping haplotypes"
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -l "ligate-force" -d "Ligate even non-overlapping chunks, keep all sites"
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -l "ligate-warn" -d "Drop sites in imperfect overlaps"
@@ -86,6 +89,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "R" -l "regions-
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -l "regions-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -l "threads" -d "Use multithreading with <int> worker threads [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "v" -l "verbose" -d "Set verbosity level [1]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from concat" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -103,6 +107,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "no-version" -d
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "o" -l "output" -d "Output file name [stdout]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "O" -l "output-type" -d "u/b: un/compressed BCF, v/z: un/compressed VCF, 0-9: compression level [v]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "threads" -d "Use multithreading with INT worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "G" -l "gensample2vcf" -d "<PREFIX>|<GEN-FILE>,<SAMPLE-FILE>" -r
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "g" -l "gensample" -d "<PREFIX>|<GEN-FILE>,<SAMPLE-FILE>" -r
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "3N6" -d "Use 3*N+6 column format instead of the old 3*N+5 column format"
@@ -119,10 +124,15 @@ complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "haploid2diploi
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "vcf-ids" -d "Output VCF IDs instead of CHROM:POS_REF_ALT"
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "H" -l "haplegendsample2vcf" -d "<PREFIX>|<HAP-FILE>,<LEGEND-FILE>,<SAMPLE-FILE>" -r
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "h" -l "haplegendsample" -d "<PREFIX>|<HAP-FILE>,<LEGEND-FILE>,<SAMPLE-FILE>" -r
-complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "tsv2vcf" -d "Convert TSV to VCF." -r
-complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "c" -l "columns" -d "Columns of the input tsv file [ID,CHROM,POS,AA]" -r
+complete -c bcftools -n "__fish_seen_subcommand_from convert" -l "tsv2vcf" -s "c" -l "columns" -d "Columns of the input tsv file, see man page for details [ID,CHROM,POS,AA]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "s" -l "samples" -d "List of sample names" -x
 complete -c bcftools -n "__fish_seen_subcommand_from convert" -s "S" -l "samples-file" -d "File of sample names" -r
+
+
+
+complete -c bcftools -n "__fish_seen_subcommand_from head" -s "h" -l "headers" -d "Display INT header lines [all]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from head" -s "n" -l "records" -d "Display INT variant record lines [none]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from head" -s "s" -l "samples" -d "Display INT records starting with the #CHROM header line [none]" -x
 
 
 
@@ -131,6 +141,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "C" -l "complement
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "e" -l "exclude" -d "Exclude sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "f" -l "apply-filters" -d "Require at least one of the listed FILTER strings (e.g. \"PASS,.\")" -x
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "i" -l "include" -d "Include only sites for which the expression is true" -x
+complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "l" -l "file-list" -d "Read the input file names from the file" -r
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -l "no-version" -d "Do not append version and command line to the header"
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "n" -l "nfiles" -d "Output positions present in this many (=), this many or more (+), this many or fewer (-), the exact (~) files" -r
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "o" -l "output" -d "Write output to a file [standard output]" -r
@@ -144,20 +155,23 @@ complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "T" -l "targets-fi
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -l "targets-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -l "threads" -d "Use multithreading with <int> worker threads [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "w" -l "write" -d "List of files to write with -p given as 1-based indexes." -r
+complete -c bcftools -n "__fish_seen_subcommand_from isec" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "force-no-index" -d "Merge unindexed files, synonymous to --no-index"
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "force-samples" -d "Resolve duplicate sample names"
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "force-single" -d "Run even if there is only one file on input"
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "print-header" -d "Print only the merged header and exit"
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "use-header" -d "Use the provided header" -r
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "0" -l "missing-to-ref" -d "Assume genotypes at missing sites are 0/0"
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "f" -l "apply-filters" -d "Require at least one of the listed FILTER strings (e.g. \"PASS,.\")" -x
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "F" -l "filter-logic" -d "Remove filters if some input is PASS (\"x\"), or apply all filters (\"+\") [+]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "g" -l "gvcf" -d "Merge gVCF blocks, INFO/END tag is expected." -x
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "i" -l "info-rules" -d "Rules for merging INFO fields (method is one of sum,avg,min,max,join) or \"-\" to turn off the default [DP:sum,DP4:sum]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "l" -l "file-list" -d "Read file names from the file" -r
-complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "L" -l "local-alleles" -d "EXPERIMENTAL: if more than <int> ALT alleles are encountered, drop FMT/PL and output LAA+LPL instead; 0=unlimited [0]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "m" -l "merge" -d "Allow multiallelic records for <snps|indels|both|snp-ins-del|all|none|id>, see man page for details [both]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "L" -l "local-alleles" -d "If more than INT alt alleles are encountered, drop FMT/PL and output LAA+LPL instead; 0=unlimited [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "m" -l "merge" -d "Allow multiallelic records for snps,indels,both,snp-ins-del,all,none,id,*,**; see man page for details [both]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "M" -l "missing-rules" -d "Rules for replacing missing values in numeric vectors (.,0,max) when unknown allele <*> is not present [.]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "no-index" -d "Merge unindexed files, the same chromosomal order is required and -r/-R are not allowed"
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "no-version" -d "Do not append version and command line to the header"
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "o" -l "output" -d "Write output to a file [standard output]" -r
@@ -165,7 +179,8 @@ complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "O" -l "output-ty
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "r" -l "regions" -d "Restrict to comma-separated list of regions" -x
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "R" -l "regions-file" -d "Restrict to regions listed in a file" -r
 complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "regions-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "threads" -d "Use multithreading with <int> worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -l "threads" -d "Use multithreading with INT worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from merge" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -174,10 +189,12 @@ complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "atom-overlaps" -d
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "c" -l "check-ref" -d "Check REF alleles and exit (e), warn (w), exclude (x), or set (s) bad sites [e]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "D" -l "remove-duplicates" -d "Remove duplicate lines of the same type."
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "d" -l "rm-dup" -d "Remove duplicate snps|indels|both|all|exact" -x
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "e" -l "exclude" -d "Do not normalize records for which the expression is true (see man page for details)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "f" -l "fasta-ref" -d "Reference sequence" -r
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "force" -d "Try to proceed even if malformed tags are encountered."
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "g" -l "gff-annot" -d "Follow HGVS 3'rule and right-align variants in transcripts on the forward strand" -r
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "i" -l "include" -d "Normalize only records for which the expression is true (see man page for details)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "keep-sum" -d "Keep vector sum constant when splitting multiallelics (see github issue #360)" -x
-complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "m" -l "multiallelics" -d "Split multiallelics (-) or join biallelics (+), type: snps|indels|both|any [both]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "multi-overlaps" -d "Fill in the reference (0) or missing (.) allele when splitting multiallelics [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "no-version" -d "Do not append version and command line to the header"
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "N" -l "do-not-normalize" -d "Do not normalize indels (with -m or -c s)"
@@ -188,11 +205,14 @@ complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "r" -l "regions" -
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "R" -l "regions-file" -d "Restrict to regions listed in a file" -r
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "regions-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "s" -l "strict-filter" -d "When merging (-m+), merged site is PASS only if all sites being merged PASS"
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "S" -l "sort" -d "Sort order: chr_pos,lex [chr_pos]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "t" -l "targets" -d "Similar to -r but streams rather than index-jumps" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "T" -l "targets-file" -d "Similar to -R but streams rather than index-jumps" -r
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "targets-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "threads" -d "Use multithreading with <int> worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -l "threads" -d "Use multithreading with INT worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "v" -l "verbose" -d "Verbosity level (0-2) of GFF parsing [1]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "w" -l "site-win" -d "Buffer for sorting lines which changed position during realignment [1000]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from norm" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -212,15 +232,18 @@ complete -c bcftools -n "__fish_seen_subcommand_from plugin" -s "h" -l "help" -d
 complete -c bcftools -n "__fish_seen_subcommand_from plugin" -s "l" -l "list-plugins" -d "List available plugins."
 complete -c bcftools -n "__fish_seen_subcommand_from plugin" -s "v" -l "verbose" -d "Print verbose information, -vv increases verbosity"
 complete -c bcftools -n "__fish_seen_subcommand_from plugin" -s "V" -l "version" -d "Print version string and exit"
+complete -c bcftools -n "__fish_seen_subcommand_from plugin" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "e" -l "exclude" -d "Exclude sites for which the expression is true (see man page for details)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from query" -l "force-samples" -d "Only warn about unknown subset samples"
+complete -c bcftools -n "__fish_seen_subcommand_from query" -s "F" -l "print-filtered" -d "Output STR for samples failing the -i/-e filtering expression" -x
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "f" -l "format" -d "See man page for details" -x
-complete -c bcftools -n "__fish_seen_subcommand_from query" -s "H" -l "print-header" -d "Print header"
+complete -c bcftools -n "__fish_seen_subcommand_from query" -s "H" -l "print-header" -d "Print header, -HH to omit column indices"
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "i" -l "include" -d "Select sites for which the expression is true (see man page for details)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "l" -l "list-samples" -d "Print the list of samples and exit"
+complete -c bcftools -n "__fish_seen_subcommand_from query" -s "N" -l "disable-automatic-newline" -d "Disable automatic addition of newline character when not present"
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "o" -l "output" -d "Output file name [stdout]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "r" -l "regions" -d "Restrict to comma-separated list of regions" -x
 complete -c bcftools -n "__fish_seen_subcommand_from query" -s "R" -l "regions-file" -d "Restrict to regions listed in a file" -r
@@ -239,16 +262,16 @@ complete -c bcftools -n "__fish_seen_subcommand_from reheader" -s "f" -l "fai" -
 complete -c bcftools -n "__fish_seen_subcommand_from reheader" -s "h" -l "header" -d "new header" -r
 complete -c bcftools -n "__fish_seen_subcommand_from reheader" -s "o" -l "output" -d "write output to a file [standard output]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from reheader" -s "s" -l "samples" -d "new sample names" -r
-complete -c bcftools -n "__fish_seen_subcommand_from reheader" -s "T" -l "temp-prefix" -d "template for temporary file name [/tmp/bcftools.XXXXXX]" -r
+complete -c bcftools -n "__fish_seen_subcommand_from reheader" -s "T" -l "temp-prefix" -d "ignored; was template for temporary file name" -r
 complete -c bcftools -n "__fish_seen_subcommand_from reheader" -l "threads" -d "use multithreading with <int> worker threads (BCF only) [0]" -x
 
 
 
 complete -c bcftools -n "__fish_seen_subcommand_from sort" -s "m" -l "max-mem" -d "maximum memory to use [768M]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from sort" -s "o" -l "output" -d "output file name [stdout]" -r
-complete -c bcftools -n "__fish_seen_subcommand_from sort" -s "O" -l "output-type" -d "b: compressed BCF, u: uncompressed BCF, z: compressed VCF, v: uncompressed VCF [v]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from sort" -s "O" -l "output-type" -d "u/b: un/compressed BCF, v/z: un/compressed VCF, 0-9: compression level [v]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from sort" -s "T" -l "temp-dir" -d "temporary files [/tmp/bcftools.XXXXXX]" -r
+complete -c bcftools -n "__fish_seen_subcommand_from sort" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -267,13 +290,15 @@ complete -c bcftools -n "__fish_seen_subcommand_from view" -s "t" -l "targets" -
 complete -c bcftools -n "__fish_seen_subcommand_from view" -s "T" -l "targets-file" -d "Similar to -R but streams rather than index-jumps." -r
 complete -c bcftools -n "__fish_seen_subcommand_from view" -l "targets-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from view" -l "threads" -d "Use multithreading with INT worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from view" -s "A" -l "trim-unseen-allele" -d "Remove '<*>' or '<NON_REF>' at variant (-A) or at all (-AA) sites"
 complete -c bcftools -n "__fish_seen_subcommand_from view" -s "a" -l "trim-alt-alleles" -d "Trim ALT alleles not seen in the genotype fields (or their subset with -s/-S)"
 complete -c bcftools -n "__fish_seen_subcommand_from view" -s "I" -l "no-update" -d "Do not (re)calculate INFO fields for the subset (currently INFO/AC and INFO/AN)"
-complete -c bcftools -n "__fish_seen_subcommand_from view" -s "s" -l "samples" -d "Comma separated list of samples to include (or exclude with \"^\" prefix)" -x
+complete -c bcftools -n "__fish_seen_subcommand_from view" -s "s" -l "samples" -d "Comma separated list of samples to include (or exclude with \"^\" prefix)." -x
 complete -c bcftools -n "__fish_seen_subcommand_from view" -s "S" -l "samples-file" -d "File of samples to include (or exclude with \"^\" prefix)" -r
 complete -c bcftools -n "__fish_seen_subcommand_from view" -l "force-samples" -d "Only warn about unknown subset samples"
 complete -c bcftools -n "__fish_seen_subcommand_from view" -s "f" -l "apply-filters" -d "Require at least one of the listed FILTER strings (e.g. \"PASS,.\")" -x
 complete -c bcftools -n "__fish_seen_subcommand_from view" -s "g" -l "genotype" -d "Require one or more hom/het/missing genotype or, if prefixed with \"^\", exclude such sites" -x
+complete -c bcftools -n "__fish_seen_subcommand_from view" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -301,6 +326,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from call" -s "i" -l "insert-mis
 complete -c bcftools -n "__fish_seen_subcommand_from call" -s "M" -l "keep-masked-ref" -d "Keep sites with masked reference allele (REF=N)"
 complete -c bcftools -n "__fish_seen_subcommand_from call" -s "V" -l "skip-variants" -d "Skip indels/snps" -x
 complete -c bcftools -n "__fish_seen_subcommand_from call" -s "v" -l "variants-only" -d "Output variant sites only"
+complete -c bcftools -n "__fish_seen_subcommand_from call" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from call" -s "c" -l "consensus-caller" -d "The original calling method (conflicts with -m)"
 complete -c bcftools -n "__fish_seen_subcommand_from call" -s "C" -l "constrain" -d "One of: alleles, trio (see manual)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from call" -s "m" -l "multiallelic-caller" -d "Alternative model for multiallelic and rare-variant calling (conflicts with -c)"
@@ -310,6 +336,8 @@ complete -c bcftools -n "__fish_seen_subcommand_from call" -s "P" -l "prior" -d 
 
 
 
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "samples" -d "option will apply genotype" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "samples" -d "option will apply genotype (or haplotype) calls from FORMAT/GT." -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "c" -l "chain" -d "Write a chain file for liftover" -r
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "a" -l "absent" -d "Replace positions absent from VCF with CHAR" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "e" -l "exclude" -d "Exclude sites for which the expression is true (see man page for details)" -x
@@ -317,14 +345,15 @@ complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "f" -l "fasta
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "H" -l "haplotype" -d "Choose which allele to use from the FORMAT/GT field, note the codes are case-insensitive:" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "i" -l "include" -d "Select sites for which the expression is true (see man page for details)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "I" -l "iupac-codes" -d "Output IUPAC codes based on FORMAT/GT, use -s/-S to subset samples"
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-del" -d "Instead of removing sequence, insert CHAR for deletions" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-ins" -d "Highlight insertions in uppercase (uc) or lowercase (lc), leaving the rest as is" -x
-complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-snv" -d "Highlight substitutions in uppercase (uc) or lowercase (lc), leaving the rest as is" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-del" -d "Instead of removing sequence, insert character CHAR for deletions" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-ins" -d "Highlight insertions in uppercase (uc), lowercase (lc), or use CHAR, leaving the rest as is" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mark-snv" -d "Highlight substitutions in uppercase (uc), lowercase (lc), or use CHAR, leaving the rest as is" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "m" -l "mask" -d "Replace regions according to the next --mask-with option." -r
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "mask-with" -d "Replace with CHAR (skips overlapping variants); change to uppercase (uc) or lowercase (lc)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "M" -l "missing" -d "Output CHAR instead of skipping a missing genotype \"./.\"" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "o" -l "output" -d "Write output to a file [standard output]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "p" -l "prefix" -d "Prefix to add to output sequence names" -x
+complete -c bcftools -n "__fish_seen_subcommand_from consensus" -l "regions-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "s" -l "samples" -d "Comma-separated list of samples to include, \"-\" to ignore samples and use REF,ALT" -x
 complete -c bcftools -n "__fish_seen_subcommand_from consensus" -s "S" -l "samples-file" -d "File of samples to include" -r
 
@@ -360,8 +389,10 @@ complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "c" -l "custom-tag"
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "l" -l "local-csq" -d "Localized predictions, consider only one VCF record at a time"
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "n" -l "ncsq" -d "Maximum number of per-haplotype consequences to consider for each site [15]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "p" -l "phase" -d "How to handle unphased heterozygous genotypes: [r]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "e" -l "exclude" -d "Exclude sites for which the expression is true" -x
+complete -c bcftools -n "__fish_seen_subcommand_from csq" -l "dump-gff" -d "Dump the parsed GFF file (for debugging purposes)" -r
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -l "force" -d "Run even if some sanity checks fail"
+complete -c bcftools -n "__fish_seen_subcommand_from csq" -l "unify-chr-names" -d "Automatically unify chromosome naming (e.g. chrX vs X) in GFF, fasta, and VCF [1]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "e" -l "exclude" -d "Exclude sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "i" -l "include" -d "Select sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -l "no-version" -d "Do not append version and command line to the header"
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "o" -l "output" -d "Write output to a file [standard output]" -r
@@ -375,6 +406,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "T" -l "targets-fil
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -l "targets-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -l "threads" -d "Use multithreading with <int> worker threads [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "v" -l "verbose" -d "Verbosity level 0-2 [1]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from csq" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
@@ -398,16 +430,21 @@ complete -c bcftools -n "__fish_seen_subcommand_from filter" -s "t" -l "targets"
 complete -c bcftools -n "__fish_seen_subcommand_from filter" -s "T" -l "targets-file" -d "Similar to -R but streams rather than index-jumps" -r
 complete -c bcftools -n "__fish_seen_subcommand_from filter" -l "targets-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from filter" -l "threads" -d "Use multithreading with <int> worker threads [0]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from filter" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
 
 
 
-complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -l "distinctive-sites" -d "Find sites that can distinguish between at least NUM sample pairs." -x
+complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -l "distinctive-sites" -d "Find sites that can distinguish between at least NUM sample pairs."
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -l "dry-run" -d "Stop after first record to estimate required time"
-complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "e" -l "error-probability" -d "Phred-scaled probability of genotyping error, 0 for faster but less accurate results [40]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "E" -l "error-probability" -d "Phred-scaled probability of genotyping error, 0 for faster but less accurate results [40]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "e" -l "exclude" -d "Exclude sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "g" -l "genotypes" -d "Genotypes to compare against" -r
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "H" -l "homs-only" -d "Homozygous genotypes only, useful with low coverage data (requires -g)"
+complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "i" -l "include" -d "Include sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -l "n-matches" -d "Print only top INT matches for each sample (sorted by average score), 0 for unlimited." -x
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -l "no-HWE-prob" -d "Disable calculation of HWE probability"
+complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "o" -l "output" -d "Write output to a file [standard output]" -r
+complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "O" -l "output-type" -d "t: plain tab-delimited text output, z: compressed [t]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "p" -l "pairs" -d "Comma-separated sample pairs to compare (qry,gt[,qry,gt..] with -g or qry,qry[,qry,qry..] w/o)" -x
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "P" -l "pairs-file" -d "File with tab-delimited sample pairs to compare (qry,gt with -g or qry,qry w/o)" -r
 complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "r" -l "regions" -d "Restrict to comma-separated list of regions" -x
@@ -423,7 +460,7 @@ complete -c bcftools -n "__fish_seen_subcommand_from gtcheck" -s "u" -l "use" -d
 
 
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "6" -l "illumina1.3+" -d "Quality is in the Illumina-1.3+ encoding"
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "A" -l "count-orphans" -d "Do not discard anomalous read pairs"
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "A" -l "count-orphans" -d "Include anomalous read pairs, with flag PAIRED but not PROPER_PAIR set"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "b" -l "bam-list" -d "List of input BAM filenames, one per line" -r
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "B" -l "no-BAQ" -d "Disable BAQ (per-Base Alignment Quality)"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "C" -l "adjust-MQ" -d "Adjust mapping quality [0]" -x
@@ -438,17 +475,11 @@ complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "Q" -l "min-BQ"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "max-BQ" -d "Limit baseQ/BAQ to no more than INT [60]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "delta-BQ" -d "Use neighbour_qual + INT if less than qual [30]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "r" -l "regions" -d "Comma separated list of regions in which pileup is generated" -x
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "R" -l "regions-file" -d "Restrict to regions listed in a file" -r
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "ignore-RG" -d "Ignore RG tags (one BAM = one sample)"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "ls" -l "skip-all-set" -d "Skip reads with all of the bits set []" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "ns" -l "skip-any-set" -d "Skip reads with any of the bits set [UNMAP,SECONDARY,QCFAIL,DUP]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "lu" -l "skip-all-unset" -d "Skip reads with all of the bits unset []" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "nu" -l "skip-any-unset" -d "Skip reads with any of the bits unset []" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "s" -l "samples" -d "Comma separated list of samples to include" -x
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "S" -l "samples-file" -d "File of samples to include" -r
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "t" -l "targets" -d "Similar to -r but streams rather than index-jumps" -x
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "T" -l "targets-file" -d "Similar to -R but streams rather than index-jumps" -r
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "x" -l "ignore-overlaps" -d "Disable read-pair overlap detection"
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "seed" -d "Random number seed used for sampling deep regions [0]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "a" -l "annotate" -d "Optional tags to output; '\\?' to list available tags []" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "g" -l "gvcf" -d "Group non-variant sites into gVCF blocks according To minimum per-sample DP" -x
@@ -456,7 +487,8 @@ complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "no-version" -d
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "o" -l "output" -d "Write output to FILE [standard output]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "O" -l "output-type" -d "'b' compressed BCF; 'u' uncompressed BCF; 'z' compressed VCF; 'v' uncompressed VCF; 0-9 compression level [v]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "threads" -d "Use multithreading with INT worker threads [0]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "X" -l "config" -d "Specify platform specific profiles (see below)" -r
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "W" -l "write-index" -d "Automatically index the output files [off]" -r
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "X" -l "config" -d "Specify platform profile (use \"-X list\" for details)" -r
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "e" -l "ext-prob" -d "Phred-scaled gap extension seq error probability [20]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "F" -l "gap-frac" -d "Minimum fraction of gapped reads [0.05]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "h" -l "tandem-qual" -d "Coefficient for homopolymer errors [500]" -x
@@ -469,13 +501,18 @@ complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "p" -l "per-sam
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -s "P" -l "platforms" -d "Comma separated list of platforms for indels [all]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "ar" -l "ambig-reads" -d "What to do with ambiguous indel reads: drop,incAD,incAD0 [drop]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indel-bias" -d "Raise to favour recall over precision [1.00]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "del-bias" -d "Relative likelihood of insertion to deletion [0.00]" -x
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "score-vs-ref" -d "Ratio of score vs ref (1) or 2nd-best allele (0) [0.00]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indel-size" -d "Approximate maximum indel size considered [110]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indels-2.0" -d "New EXPERIMENTAL indel calling model (diploid reference consensus)"
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "indels-cns" -d "New EXPERIMENTAL indel calling model with edlib"
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "seqq-offset" -d "Indel-cns tuning for indel seq-qual scores [120]"
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "no-indels-cns" -d "Disable CNS mode, to use after a -X profile"
+complete -c bcftools -n "__fish_seen_subcommand_from mpileup" -l "poly-mqual" -d "(Edlib mode) Use minimum quality within homopolymers"
 
 
 
-complete -c bcftools -n "__fish_seen_subcommand_from polysomy" -s "o" -l "output-dir" -d "Output directory" -r
-complete -c bcftools -n "__fish_seen_subcommand_from polysomy" -s "r" -l "regions" -d "Restrict to comma-separated list of regions" -x
+complete -c bcftools -n "__fish_seen_subcommand_from polysomy" -s "o" -l "output-dir" -s "r" -l "regions" -d "Restrict to comma-separated list of regions" -r
 complete -c bcftools -n "__fish_seen_subcommand_from polysomy" -s "R" -l "regions-file" -d "Restrict to regions listed in a file" -r
 complete -c bcftools -n "__fish_seen_subcommand_from polysomy" -l "regions-overlap" -d "Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]" -x
 complete -c bcftools -n "__fish_seen_subcommand_from polysomy" -s "s" -l "sample" -d "Sample to analyze" -x
@@ -495,14 +532,14 @@ complete -c bcftools -n "__fish_seen_subcommand_from roh" -l "AF-dflt" -d "if AF
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -l "AF-tag" -d "use TAG for allele frequency" -x
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -l "AF-file" -d "read allele frequencies from file (CHR\\tPOS\\tREF,ALT\\tAF)" -r
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "b" -l "buffer-size" -d "buffer size and the number of overlapping sites, 0 for unlimited [0]" -x
-complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "e" -l "estimate-AF" -d "estimate AF from FORMAT/TAG (GT or PL) of all samples (\"-\") or samples listed in <file>." -r
+complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "e" -l "estimate-AF" -d "estimate AF from FORMAT/TAG (GT or PL) of all samples (\"-\") or samples listed" -r
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -l "exclude" -d "exclude sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "G" -l "GTs-only" -d "use GTs and ignore PLs, instead using <float> for PL of the two least likely genotypes." -x
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -l "include" -d "select sites for which the expression is true" -x
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "i" -l "ignore-homref" -d "skip hom-ref genotypes (0/0)"
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -l "include-noalt" -d "include sites with no ALT allele (ignored by default)"
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "I" -l "skip-indels" -d "skip indels as their genotypes are enriched for errors"
-complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "m" -l "genetic-map" -d "genetic map in IMPUTE2 format, single file or mask, where string \"{CHROM}\" is replaced with chromosome name" -r
+complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "m" -l "genetic-map" -d "genetic map in IMPUTE2 format, single file or mask, where string \"{CHROM}\"" -r
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "M" -l "rec-rate" -d "constant recombination rate per bp" -x
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "o" -l "output" -d "write output to a file [standard output]" -r
 complete -c bcftools -n "__fish_seen_subcommand_from roh" -s "O" -l "output-type" -d "output s:per-site, r:regions, z:compressed [sr]" -x
