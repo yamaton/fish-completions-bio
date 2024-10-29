@@ -1,19 +1,19 @@
 # Auto-generated with h2o
 
-complete -c qiime -n "not __fish_seen_subcommand_from info tools dev alignment composition cutadapt dada2 deblur demux diversity diversity-lib emperor feature-classifier feature-table fragment-insertion gneiss longitudinal metadata phylogeny quality-control quality-filter sample-classifier taxa vsearch" -l "version" -d "Show the version and exit."
-complete -c qiime -n "not __fish_seen_subcommand_from info tools dev alignment composition cutadapt dada2 deblur demux diversity diversity-lib emperor feature-classifier feature-table fragment-insertion gneiss longitudinal metadata phylogeny quality-control quality-filter sample-classifier taxa vsearch" -l "help" -d "Show this message and exit."
+complete -c qiime -n "not __fish_seen_subcommand_from info tools dev alignment composition cutadapt dada2 deblur demux diversity diversity-lib emperor feature-classifier feature-table fragment-insertion longitudinal metadata phylogeny quality-control quality-filter rescript sample-classifier taxa vsearch" -l "version" -d "Show the version and exit."
+complete -c qiime -n "not __fish_seen_subcommand_from info tools dev alignment composition cutadapt dada2 deblur demux diversity diversity-lib emperor feature-classifier feature-table fragment-insertion longitudinal metadata phylogeny quality-control quality-filter rescript sample-classifier taxa vsearch" -l "help" -d "Show this message and exit."
 
 
 
 complete -k -c qiime -n __fish_use_subcommand -x -a vsearch -d "Plugin for clustering and dereplicating with vsearch."
 complete -k -c qiime -n __fish_use_subcommand -x -a taxa -d "Plugin for working with feature taxonomy annotations."
-complete -k -c qiime -n __fish_use_subcommand -x -a sample-classifier -d "Plugin for machine learning prediction of sample metadata."
+complete -k -c qiime -n __fish_use_subcommand -x -a sample-classifier -d "Plugin for machine learning prediction of sample"
+complete -k -c qiime -n __fish_use_subcommand -x -a rescript -d "Pipeline for reference sequence annotation and curation."
 complete -k -c qiime -n __fish_use_subcommand -x -a quality-filter -d "Plugin for PHRED-based filtering and trimming."
 complete -k -c qiime -n __fish_use_subcommand -x -a quality-control -d "Plugin for quality control of feature and sequence data."
 complete -k -c qiime -n __fish_use_subcommand -x -a phylogeny -d "Plugin for generating and manipulating phylogenies."
 complete -k -c qiime -n __fish_use_subcommand -x -a metadata -d "Plugin for working with Metadata."
 complete -k -c qiime -n __fish_use_subcommand -x -a longitudinal -d "Plugin for paired sample and time series analyses."
-complete -k -c qiime -n __fish_use_subcommand -x -a gneiss -d "Plugin for building compositional models."
 complete -k -c qiime -n __fish_use_subcommand -x -a fragment-insertion -d "Plugin for extending phylogenies."
 complete -k -c qiime -n __fish_use_subcommand -x -a feature-table -d "Plugin for working with sample by feature tables."
 complete -k -c qiime -n __fish_use_subcommand -x -a feature-classifier -d "Plugin for taxonomic classification."
@@ -128,13 +128,6 @@ complete -c qiime -n "__fish_seen_subcommand_from fragment-insertion" -l "help" 
 
 
 
-complete -c qiime -n "__fish_seen_subcommand_from gneiss" -l "version" -d "Show the version and exit."
-complete -c qiime -n "__fish_seen_subcommand_from gneiss" -l "example-data" -d "Write example data and exit." -r
-complete -c qiime -n "__fish_seen_subcommand_from gneiss" -l "citations" -d "Show citations and exit."
-complete -c qiime -n "__fish_seen_subcommand_from gneiss" -l "help" -d "Show this message and exit."
-
-
-
 complete -c qiime -n "__fish_seen_subcommand_from longitudinal" -l "version" -d "Show the version and exit."
 complete -c qiime -n "__fish_seen_subcommand_from longitudinal" -l "example-data" -d "Write example data and exit." -r
 complete -c qiime -n "__fish_seen_subcommand_from longitudinal" -l "citations" -d "Show citations and exit."
@@ -167,6 +160,13 @@ complete -c qiime -n "__fish_seen_subcommand_from quality-filter" -l "version" -
 complete -c qiime -n "__fish_seen_subcommand_from quality-filter" -l "example-data" -d "Write example data and exit." -r
 complete -c qiime -n "__fish_seen_subcommand_from quality-filter" -l "citations" -d "Show citations and exit."
 complete -c qiime -n "__fish_seen_subcommand_from quality-filter" -l "help" -d "Show this message and exit."
+
+
+
+complete -c qiime -n "__fish_seen_subcommand_from rescript" -l "version" -d "Show the version and exit."
+complete -c qiime -n "__fish_seen_subcommand_from rescript" -l "example-data" -d "Write example data and exit." -r
+complete -c qiime -n "__fish_seen_subcommand_from rescript" -l "citations" -d "Show citations and exit."
+complete -c qiime -n "__fish_seen_subcommand_from rescript" -l "help" -d "Show this message and exit."
 
 
 
