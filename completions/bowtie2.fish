@@ -13,7 +13,7 @@ complete -c bowtie2 -l "tab6" -d "query input files are TAB6 .tab6"
 complete -c bowtie2 -l "qseq" -d "query input files are in Illumina's qseq format"
 complete -c bowtie2 -s "f" -d "query input files are (multi-)FASTA .fa/.mfa"
 complete -c bowtie2 -s "r" -d "query input files are raw one-sequence-per-line"
-complete -c bowtie2 -s "F" -d "query input files are continuous FASTA where reads are substrings (k-mers) extracted from a FASTA file <s> and aligned at offsets 1, 1+i, 1+2i ..." -r
+complete -c bowtie2 -s "F" -d "query input files are continuous FASTA where reads are substrings (k-mers) extracted from the FASTA file and aligned at offsets 1, 1+i, 1+2i ..." -r
 complete -c bowtie2 -s "c" -d "<m1>, <m2>, <r> are sequences themselves, not files"
 complete -c bowtie2 -s "s" -l "skip" -d "skip the first <int> reads/pairs in the input (none)" -x
 complete -c bowtie2 -s "u" -l "upto" -d "stop after first <int> reads/pairs (no limit)" -x
@@ -80,8 +80,9 @@ complete -c bowtie2 -l "rg" -d "add <text> (\"lab:value\") to @RG line of SAM he
 complete -c bowtie2 -l "omit-sec-seq" -d "put '*' in SEQ and QUAL fields for secondary alignments."
 complete -c bowtie2 -l "sam-no-qname-trunc" -d "Suppress standard behavior of truncating readname at first whitespace at the expense of generating non-standard SAM."
 complete -c bowtie2 -l "xeq" -d "Use '='/'X', instead of 'M,' to specify matches/mismatches in SAM record."
-complete -c bowtie2 -l "soft-clipped-unmapped-tlen" -d "Exclude soft-clipped bases when reporting TLEN"
-complete -c bowtie2 -l "sam-append-comment" -d "Append FASTA/FASTQ comment to SAM record"
+complete -c bowtie2 -l "soft-clipped-unmapped-tlen" -d "Exclude soft-clipped bases when reporting TLEN."
+complete -c bowtie2 -l "sam-append-comment" -d "Append FASTA/FASTQ comment to SAM record."
+complete -c bowtie2 -l "sam-opt-config" -d "Use <config>, example '-MD,YP,-AS', to toggle SAM Optional fields." -x
 complete -c bowtie2 -s "p" -l "threads" -d "number of alignment threads to launch (1)" -x
 complete -c bowtie2 -l "reorder" -d "force SAM output order to match order of input reads"
 complete -c bowtie2 -l "mm" -d "use memory-mapped I/O for index; many 'bowtie's can share"
