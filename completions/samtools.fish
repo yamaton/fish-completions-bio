@@ -626,4 +626,7 @@ complete -c samtools -n "__fish_seen_subcommand_from samples" -s "?" -d "print h
 complete -c samtools -n "__fish_seen_subcommand_from samples" -s "h" -d "print a header"
 complete -c samtools -n "__fish_seen_subcommand_from samples" -s "i" -d "test if the file is indexed."
 complete -c samtools -n "__fish_seen_subcommand_from samples" -s "T" -d "provide the sample tag name from the @RG line [SM]." -x
-complete -c samtools -n "__fish_seen_subcommand_from samples" -s "o" -d "-f FILE load an indexed fasta file in the collection of references." -r
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s "o" -d "output file [stdout]." -r
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s "f" -d "load an indexed fasta file in the collection of references." -r
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s "F" -d "read a file containing the paths to indexed fasta files." -r
+complete -c samtools -n "__fish_seen_subcommand_from samples" -s "X" -d "use a custom index file."
