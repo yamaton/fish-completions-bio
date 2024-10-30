@@ -4,7 +4,7 @@ complete -c minimap2 -s "x" -d "preset (always applied before other options; see
 complete -c minimap2 -s "H" -d "use homopolymer-compressed k-mer (preferrable for PacBio)"
 complete -c minimap2 -s "k" -d "k-mer size (no larger than 28) [15]" -x
 complete -c minimap2 -s "w" -d "minimizer window size [10]" -x
-complete -c minimap2 -s "I" -d "split index for every ~NUM input bases [4G]" -x
+complete -c minimap2 -s "I" -d "split index for every ~NUM input bases [8G]" -x
 complete -c minimap2 -s "d" -d "dump index to FILE []" -r
 complete -c minimap2 -s "f" -d "filter out top FLOAT fraction of repetitive minimizers [0.0002]" -x
 complete -c minimap2 -s "g" -d "stop chain enlongation if there are no minimizers in INT-bp [5000]" -x
@@ -17,18 +17,20 @@ complete -c minimap2 -s "X" -d "skip self and dual mappings (for the all-vs-all 
 complete -c minimap2 -s "p" -d "min secondary-to-primary score ratio [0.8]" -x
 complete -c minimap2 -s "N" -d "retain at most INT secondary alignments [5]" -x
 complete -c minimap2 -s "A" -d "matching score [2]" -x
-complete -c minimap2 -s "B" -d "mismatch penalty [4]" -x
+complete -c minimap2 -s "B" -d "mismatch penalty (larger value for lower divergence) [4]" -x
 complete -c minimap2 -s "O" -d "gap open penalty [4,24]" -x
 complete -c minimap2 -s "E" -d "gap extension penalty; a k-long gap costs min{O1+k*E1,O2+k*E2} [2,1]" -x
 complete -c minimap2 -s "z" -d "Z-drop score and inversion Z-drop score [400,200]" -x
 complete -c minimap2 -s "s" -d "minimal peak DP alignment score [80]" -x
 complete -c minimap2 -s "u" -d "how to find GT-AG." -x
+complete -c minimap2 -s "J" -d "splice mode." -x
 complete -c minimap2 -s "a" -d "output in the SAM format (PAF by default)"
 complete -c minimap2 -s "o" -d "output alignments to FILE [stdout]" -r
 complete -c minimap2 -s "L" -d "write CIGAR with >65535 ops at the CG tag"
 complete -c minimap2 -s "R" -d "SAM read group line in a format like '@RG\\tID:foo\\tSM:bar' []" -x
 complete -c minimap2 -s "c" -d "output CIGAR in PAF"
 complete -c minimap2 -l "cs" -d "output the cs tag; STR is 'short' (if absent) or 'long' [none]" -x
+complete -c minimap2 -l "ds" -d "output the ds tag, which is an extension to cs"
 complete -c minimap2 -l "MD" -d "output the MD tag"
 complete -c minimap2 -l "eqx" -d "write =/X CIGAR operators"
 complete -c minimap2 -s "Y" -d "use soft clipping for supplementary alignments"
