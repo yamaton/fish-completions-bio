@@ -1,49 +1,235 @@
-# Auto-generated with h2o
+# fish completion for datasets                             -*- shell-script -*-
 
-complete -c datasets -n "not __fish_seen_subcommand_from summary download rehydrate completion" -l "api-key" -d "Specify an NCBI API key" -x
-complete -c datasets -n "not __fish_seen_subcommand_from summary download rehydrate completion" -l "debug" -d "Emit debugging info"
-complete -c datasets -n "not __fish_seen_subcommand_from summary download rehydrate completion" -l "help" -d "Print detailed help about a datasets command"
-complete -c datasets -n "not __fish_seen_subcommand_from summary download rehydrate completion" -l "version" -d "Print version of datasets"
+function __datasets_debug
+    set -l file "$BASH_COMP_DEBUG_FILE"
+    if test -n "$file"
+        echo "$argv" >> $file
+    end
+end
+
+function __datasets_perform_completion
+    __datasets_debug "Starting __datasets_perform_completion"
+
+    # Extract all args except the last one
+    set -l args (commandline -opc)
+    # Extract the last arg and escape it in case it is a space
+    set -l lastArg (string escape -- (commandline -ct))
+
+    __datasets_debug "args: $args"
+    __datasets_debug "last arg: $lastArg"
+
+    # Disable ActiveHelp which is not supported for fish shell
+    set -l requestComp "DATASETS_ACTIVE_HELP=0 $args[1] __complete $args[2..-1] $lastArg"
+
+    __datasets_debug "Calling $requestComp"
+    set -l results (eval $requestComp 2> /dev/null)
+
+    # Some programs may output extra empty lines after the directive.
+    # Let's ignore them or else it will break completion.
+    # Ref: https://github.com/spf13/cobra/issues/1279
+    for line in $results[-1..1]
+        if test (string trim -- $line) = ""
+            # Found an empty line, remove it
+            set results $results[1..-2]
+        else
+            # Found non-empty line, we have our proper output
+            break
+        end
+    end
+
+    set -l comps $results[1..-2]
+    set -l directiveLine $results[-1]
+
+    # For Fish, when completing a flag with an = (e.g., <program> -n=<TAB>)
+    # completions must be prefixed with the flag
+    set -l flagPrefix (string match -r -- '-.*=' "$lastArg")
+
+    __datasets_debug "Comps: $comps"
+    __datasets_debug "DirectiveLine: $directiveLine"
+    __datasets_debug "flagPrefix: $flagPrefix"
+
+    for comp in $comps
+        printf "%s%s\n" "$flagPrefix" "$comp"
+    end
+
+    printf "%s\n" "$directiveLine"
+end
+
+# this function limits calls to __datasets_perform_completion, by caching the result behind $__datasets_perform_completion_once_result
+function __datasets_perform_completion_once
+    __datasets_debug "Starting __datasets_perform_completion_once"
+
+    if test -n "$__datasets_perform_completion_once_result"
+        __datasets_debug "Seems like a valid result already exists, skipping __datasets_perform_completion"
+        return 0
+    end
+
+    set --global __datasets_perform_completion_once_result (__datasets_perform_completion)
+    if test -z "$__datasets_perform_completion_once_result"
+        __datasets_debug "No completions, probably due to a failure"
+        return 1
+    end
+
+    __datasets_debug "Performed completions and set __datasets_perform_completion_once_result"
+    return 0
+end
+
+# this function is used to clear the $__datasets_perform_completion_once_result variable after completions are run
+function __datasets_clear_perform_completion_once_result
+    __datasets_debug ""
+    __datasets_debug "========= clearing previously set __datasets_perform_completion_once_result variable =========="
+    set --erase __datasets_perform_completion_once_result
+    __datasets_debug "Successfully erased the variable __datasets_perform_completion_once_result"
+end
+
+function __datasets_requires_order_preservation
+    __datasets_debug ""
+    __datasets_debug "========= checking if order preservation is required =========="
+
+    __datasets_perform_completion_once
+    if test -z "$__datasets_perform_completion_once_result"
+        __datasets_debug "Error determining if order preservation is required"
+        return 1
+    end
+
+    set -l directive (string sub --start 2 $__datasets_perform_completion_once_result[-1])
+    __datasets_debug "Directive is: $directive"
+
+    set -l shellCompDirectiveKeepOrder 32
+    set -l keeporder (math (math --scale 0 $directive / $shellCompDirectiveKeepOrder) % 2)
+    __datasets_debug "Keeporder is: $keeporder"
+
+    if test $keeporder -ne 0
+        __datasets_debug "This does require order preservation"
+        return 0
+    end
+
+    __datasets_debug "This doesn't require order preservation"
+    return 1
+end
 
 
+# This function does two things:
+# - Obtain the completions and store them in the global __datasets_comp_results
+# - Return false if file completion should be performed
+function __datasets_prepare_completions
+    __datasets_debug ""
+    __datasets_debug "========= starting completion logic =========="
 
-complete -k -c datasets -n __fish_use_subcommand -x -a completion -d "Generate autocompletion scripts"
-complete -k -c datasets -n __fish_use_subcommand -x -a rehydrate -d "Rehydrate a downloaded, dehydrated dataset"
-complete -k -c datasets -n __fish_use_subcommand -x -a download -d "Download a gene, genome or virus dataset as a zip file"
-complete -k -c datasets -n __fish_use_subcommand -x -a summary -d "Print a data report containing gene, genome or virus metadata"
+    # Start fresh
+    set --erase __datasets_comp_results
 
+    __datasets_perform_completion_once
+    __datasets_debug "Completion results: $__datasets_perform_completion_once_result"
 
+    if test -z "$__datasets_perform_completion_once_result"
+        __datasets_debug "No completion, probably due to a failure"
+        # Might as well do file completion, in case it helps
+        return 1
+    end
 
-complete -c datasets -n "__fish_seen_subcommand_from summary" -l "api-key" -d "Specify an NCBI API key" -x
-complete -c datasets -n "__fish_seen_subcommand_from summary" -l "debug" -d "Emit debugging info"
-complete -c datasets -n "__fish_seen_subcommand_from summary" -l "help" -d "Print detailed help about a datasets command"
-complete -c datasets -n "__fish_seen_subcommand_from summary" -l "version" -d "Print version of datasets"
+    set -l directive (string sub --start 2 $__datasets_perform_completion_once_result[-1])
+    set --global __datasets_comp_results $__datasets_perform_completion_once_result[1..-2]
 
+    __datasets_debug "Completions are: $__datasets_comp_results"
+    __datasets_debug "Directive is: $directive"
 
+    set -l shellCompDirectiveError 1
+    set -l shellCompDirectiveNoSpace 2
+    set -l shellCompDirectiveNoFileComp 4
+    set -l shellCompDirectiveFilterFileExt 8
+    set -l shellCompDirectiveFilterDirs 16
 
-complete -c datasets -n "__fish_seen_subcommand_from download" -l "filename" -d "Specify a custom file name for the downloaded data package (default \"ncbi_dataset.zip\")" -r
-complete -c datasets -n "__fish_seen_subcommand_from download" -l "no-progressbar" -d "Hide progress bar"
-complete -c datasets -n "__fish_seen_subcommand_from download" -l "api-key" -d "Specify an NCBI API key" -x
-complete -c datasets -n "__fish_seen_subcommand_from download" -l "debug" -d "Emit debugging info"
-complete -c datasets -n "__fish_seen_subcommand_from download" -l "help" -d "Print detailed help about a datasets command"
-complete -c datasets -n "__fish_seen_subcommand_from download" -l "version" -d "Print version of datasets"
+    if test -z "$directive"
+        set directive 0
+    end
 
+    set -l compErr (math (math --scale 0 $directive / $shellCompDirectiveError) % 2)
+    if test $compErr -eq 1
+        __datasets_debug "Received error directive: aborting."
+        # Might as well do file completion, in case it helps
+        return 1
+    end
 
+    set -l filefilter (math (math --scale 0 $directive / $shellCompDirectiveFilterFileExt) % 2)
+    set -l dirfilter (math (math --scale 0 $directive / $shellCompDirectiveFilterDirs) % 2)
+    if test $filefilter -eq 1; or test $dirfilter -eq 1
+        __datasets_debug "File extension filtering or directory filtering not supported"
+        # Do full file completion instead
+        return 1
+    end
 
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "directory" -d "Specify the directory containing the unzipped dehydrated bag" -r
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "gzip" -d "rehydrate files to gzip format"
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "list" -d "List files that would be downloaded during rehydration"
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "match" -d "Specify substring that matches files for rehydration" -r
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "max-workers" -d "Limit the maximum number of concurrent download workers (allowed range is 1-30) (default 10)" -x
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "no-progressbar" -d "Hide progress bar"
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "api-key" -d "Specify an NCBI API key" -x
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "debug" -d "Emit debugging info"
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "help" -d "Print detailed help about a datasets command"
-complete -c datasets -n "__fish_seen_subcommand_from rehydrate" -l "version" -d "Print version of datasets"
+    set -l nospace (math (math --scale 0 $directive / $shellCompDirectiveNoSpace) % 2)
+    set -l nofiles (math (math --scale 0 $directive / $shellCompDirectiveNoFileComp) % 2)
 
+    __datasets_debug "nospace: $nospace, nofiles: $nofiles"
 
+    # If we want to prevent a space, or if file completion is NOT disabled,
+    # we need to count the number of valid completions.
+    # To do so, we will filter on prefix as the completions we have received
+    # may not already be filtered so as to allow fish to match on different
+    # criteria than the prefix.
+    if test $nospace -ne 0; or test $nofiles -eq 0
+        set -l prefix (commandline -t | string escape --style=regex)
+        __datasets_debug "prefix: $prefix"
 
-complete -c datasets -n "__fish_seen_subcommand_from completion" -l "api-key" -d "Specify an NCBI API key" -x
-complete -c datasets -n "__fish_seen_subcommand_from completion" -l "debug" -d "Emit debugging info"
-complete -c datasets -n "__fish_seen_subcommand_from completion" -l "help" -d "Print detailed help about a datasets command"
-complete -c datasets -n "__fish_seen_subcommand_from completion" -l "version" -d "Print version of datasets"
+        set -l completions (string match -r -- "^$prefix.*" $__datasets_comp_results)
+        set --global __datasets_comp_results $completions
+        __datasets_debug "Filtered completions are: $__datasets_comp_results"
+
+        # Important not to quote the variable for count to work
+        set -l numComps (count $__datasets_comp_results)
+        __datasets_debug "numComps: $numComps"
+
+        if test $numComps -eq 1; and test $nospace -ne 0
+            # We must first split on \t to get rid of the descriptions to be
+            # able to check what the actual completion will be.
+            # We don't need descriptions anyway since there is only a single
+            # real completion which the shell will expand immediately.
+            set -l split (string split --max 1 \t $__datasets_comp_results[1])
+
+            # Fish won't add a space if the completion ends with any
+            # of the following characters: @=/:.,
+            set -l lastChar (string sub -s -1 -- $split)
+            if not string match -r -q "[@=/:.,]" -- "$lastChar"
+                # In other cases, to support the "nospace" directive we trick the shell
+                # by outputting an extra, longer completion.
+                __datasets_debug "Adding second completion to perform nospace directive"
+                set --global __datasets_comp_results $split[1] $split[1].
+                __datasets_debug "Completions are now: $__datasets_comp_results"
+            end
+        end
+
+        if test $numComps -eq 0; and test $nofiles -eq 0
+            # To be consistent with bash and zsh, we only trigger file
+            # completion when there are no other completions
+            __datasets_debug "Requesting file completion"
+            return 1
+        end
+    end
+
+    return 0
+end
+
+# Since Fish completions are only loaded once the user triggers them, we trigger them ourselves
+# so we can properly delete any completions provided by another script.
+# Only do this if the program can be found, or else fish may print some errors; besides,
+# the existing completions will only be loaded if the program can be found.
+if type -q "datasets"
+    # The space after the program name is essential to trigger completion for the program
+    # and not completion of the program name itself.
+    # Also, we use '> /dev/null 2>&1' since '&>' is not supported in older versions of fish.
+    complete --do-complete "datasets " > /dev/null 2>&1
+end
+
+# Remove any pre-existing completions for the program since we will be handling all of them.
+complete -c datasets -e
+
+# this will get called after the two calls below and clear the $__datasets_perform_completion_once_result global
+complete -c datasets -n '__datasets_clear_perform_completion_once_result'
+# The call to __datasets_prepare_completions will setup __datasets_comp_results
+# which provides the program's completion choices.
+# If this doesn't require order preservation, we don't use the -k flag
+complete -c datasets -n 'not __datasets_requires_order_preservation && __datasets_prepare_completions' -f -a '$__datasets_comp_results'
+# otherwise we use the -k flag
+complete -k -c datasets -n '__datasets_requires_order_preservation && __datasets_prepare_completions' -f -a '$__datasets_comp_results'
