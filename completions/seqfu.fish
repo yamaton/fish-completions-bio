@@ -35,6 +35,7 @@ complete -c seqfu -n "__fish_seen_subcommand_from bases" -l "help" -d "Show this
 
 
 
+complete -c seqfu -n "__fish_seen_subcommand_from check" -s "d" -l "deep" -d "Perform a deep check of the file and will not lsupport multiline Sanger FASTQ [default: false]"
 complete -c seqfu -n "__fish_seen_subcommand_from check" -s "n" -l "no-paired" -d "Disable autodetection of second pair"
 complete -c seqfu -n "__fish_seen_subcommand_from check" -s "s" -l "safe-exit" -d "Exit with 0 even if errors are found"
 complete -c seqfu -n "__fish_seen_subcommand_from check" -s "q" -l "quiet" -d "Do not print infos, just exit status"
@@ -115,16 +116,23 @@ complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "1" -l "for-tag" 
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "2" -l "rev-tag" -d "String found in filename of forward reads [default: _R2]" -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "s" -l "split" -d "Separator used in filename to identify the sample ID [default: _]" -r
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "pos" -d "Which part of the filename is the Sample ID [default: 1]" -r
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "f" -l "format" -d "Output format: dadaist, irida, manifest, metaphage, qiime1, qiime2 [default: manifest]" -x
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "pe" -d "Enforce paired-end reads (not supported)"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "f" -l "format" -d "Output format: dadaist, irida, manifest,..." -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "p" -l "add-path" -d "Add the reads absolute path as column"
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "c" -l "counts" -d "Add the number of reads as a property column"
-complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "t" -l "threads" -d "Number of simultaneously opened files [default: 2]" -r
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "c" -l "counts" -d "Add the number of reads as a property column (experimental)"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "t" -l "threads" -d "Number of simultaneously opened files (legacy: ignored)" -r
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "pe" -d "Enforce paired-end reads (not supported)"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "ont" -d "Long reads (Oxford Nanopore) [default: false]"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "abs" -d "Force absolute path"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "basename" -d "Use basename instead of full path"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "force-tsv" -d "Force '\\t' separator, otherwise selected by the format"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "force-csv" -d "Force ',' separator, otherwise selected by the format"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "R" -l "rand-meta" -d "Add a random metadata column with INT categories" -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "P" -l "project" -d "Project ID (only for irida)" -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "meta-split" -d "Separator in the SampleID to extract metadata, used in MetaPhage [default: _]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "meta-part" -d "Which part of the SampleID to extract metadata, used in MetaPhage [default: 1]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "meta-default" -d "Default value for metadata, used in MetaPhage [default: Cond]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "v" -l "verbose" -d "Verbose output"
+complete -c seqfu -n "__fish_seen_subcommand_from metadata" -l "debug" -d "Debug output"
 complete -c seqfu -n "__fish_seen_subcommand_from metadata" -s "h" -l "help" -d "Show this help"
 
 
@@ -155,8 +163,10 @@ complete -c seqfu -n "__fish_seen_subcommand_from stats" -s "r" -l "reverse" -d 
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s "t" -l "thousands" -d "Add thousands separator (only tabbed/nice output)"
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -l "csv" -d "Separate output by commas instead of tabs"
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -l "gc" -d "Also print %GC"
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -l "index" -d "Also print contig index (L50, L90)"
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -l "multiqc" -d "Saves a MultiQC report to FILE (suggested: name_mqc.txt)" -r
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -l "precision" -d "Number of decimal places to round to [default: 2]" -x
+complete -c seqfu -n "__fish_seen_subcommand_from stats" -l "noheader" -d "Do not print header"
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s "v" -l "verbose" -d "Verbose output"
 complete -c seqfu -n "__fish_seen_subcommand_from stats" -s "h" -l "help" -d "Show this help"
 
@@ -174,6 +184,7 @@ complete -c seqfu -n "__fish_seen_subcommand_from cat" -s "b" -l "basename" -d "
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "split" -d "Split basename at this char [default: .]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "part" -d "After splitting the basename, take this part [default: 1]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "basename-sep" -d "Separate basename from the rest with this [default: _]" -x
+complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "zero-pad" -d "Zero pad the counter to INT digits [default: 0]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -s "s" -l "strip-comments" -d "Remove original sequence comments"
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "comment-sep" -d "Comment separator [default: ]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "add-len" -d "Add 'len=LENGTH' to the comments"
@@ -193,7 +204,9 @@ complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "truncate" -d "Keep on
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "max-bp" -d "Stop printing after INT bases [default: 0]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "fasta" -d "Force FASTA output"
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "fastq" -d "Force FASTQ output"
+complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "report" -d "Save a report to FILE (original name, new name)" -r
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "list" -d "Output a list of sequence names"
+complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "anvio" -d "Output in Anvio format (-p c_ -s -z --zeropad 12 --report rename_report.txt)"
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -s "q" -l "fastq-qual" -d "FASTQ default quality [default: 33]" -x
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -s "v" -l "verbose" -d "Verbose output"
 complete -c seqfu -n "__fish_seen_subcommand_from cat" -l "debug" -d "Debug output"
