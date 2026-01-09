@@ -23,6 +23,8 @@ complete -c stringtie -s "g" -d "maximum gap allowed between read mappings (defa
 complete -c stringtie -s "M" -d "fraction of bundle allowed to be covered by multi-hit reads (default:1)"
 complete -c stringtie -s "p" -d "number of threads (CPUs) to use (default: 1)" -x
 complete -c stringtie -s "A" -d "gene abundance estimation output file" -r
+complete -c stringtie -s "N" -d "use with non-polyA RNA-seq"
+complete -c stringtie -l "nasc" -d "output nascent transcripts"
 complete -c stringtie -s "E" -d "define window around possibly erroneous splice sites from long reads to look out for correct splice sites (default: 25)" -x
 complete -c stringtie -s "B" -d "enable output of Ballgown table files which will be created in the same directory as the output GTF (requires -G, -o recommended)" -r
 complete -c stringtie -s "b" -d "enable output of Ballgown table files but these files will be created under the directory path given as <dir_path>" -r
