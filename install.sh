@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
-readonly URL="https://github.com/yamaton/fish-completions-bio/releases/download/2022-02-17/fish-completions-bio_2022-02-17.tar.gz"
+set -e
+
+readonly URL="https://github.com/yamaton/fish-completions-bio/archive/refs/heads/main.tar.gz"
 readonly TARGET="$HOME/.config/fish/completions"
+readonly TMPDIR=$(mktemp -d)
 
 mkdir -p "$TARGET"
-cd "$TARGET"
 
 echo "Downloading..."
-wget "$URL"
+curl -fsSL "$URL" -o "$TMPDIR/main.tar.gz"
 
 echo "Extracting..."
-readonly FILE=$(basename "$URL")
-tar -xvf "$FILE"
-rm -f "$FILE"
+tar -xzf "$TMPDIR/main.tar.gz" -C "$TMPDIR"
+cp "$TMPDIR"/fish-completions-bio-main/completions/*.fish "$TARGET/"
+
+rm -rf "$TMPDIR"
+echo "Done. Installed to $TARGET"
