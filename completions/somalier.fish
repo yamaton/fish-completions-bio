@@ -5,15 +5,11 @@ complete -k -c somalier -n __fish_use_subcommand -x -a ancestry -d "perform ance
 complete -k -c somalier -n __fish_use_subcommand -x -a relate -d "aggregate `extract`ed information and calculate relatedness among samples."
 complete -k -c somalier -n __fish_use_subcommand -x -a extract -d "extract genotype-like information for a single sample from VCF/BAM/CRAM."
 
-
-
 complete -c somalier -n "__fish_seen_subcommand_from extract" -s "s" -l "sites" -d "sites vcf file of variants to extract" -r
 complete -c somalier -n "__fish_seen_subcommand_from extract" -s "f" -l "fasta" -d "path to reference fasta file" -r
 complete -c somalier -n "__fish_seen_subcommand_from extract" -s "d" -l "out-dir" -d "path to output directory (default: .)" -r
 complete -c somalier -n "__fish_seen_subcommand_from extract" -l "sample-prefix" -d "prefix for the sample name stored inside the digest" -x
 complete -c somalier -n "__fish_seen_subcommand_from extract" -s "h" -l "help" -d "Show this help"
-
-
 
 complete -c somalier -n "__fish_seen_subcommand_from relate" -s "g" -l "groups" -d "optional path to expected groups of samples (e.g. tumor normal pairs)." -r
 complete -c somalier -n "__fish_seen_subcommand_from relate" -l "sample-prefix" -d "optional sample prefixes that can be removed to find identical samples." -x
@@ -25,8 +21,6 @@ complete -c somalier -n "__fish_seen_subcommand_from relate" -s "i" -l "infer" -
 complete -c somalier -n "__fish_seen_subcommand_from relate" -s "o" -l "output-prefix" -d "output prefix for results." -x
 complete -c somalier -n "__fish_seen_subcommand_from relate" -s "h" -l "help" -d "Show this help"
 
-
-
 complete -c somalier -n "__fish_seen_subcommand_from ancestry" -l "labels" -d "file with ancestry labels" -r
 complete -c somalier -n "__fish_seen_subcommand_from ancestry" -s "o" -l "output-prefix" -d "prefix for output files (default: somalier-ancestry)" -r
 complete -c somalier -n "__fish_seen_subcommand_from ancestry" -l "n-pcs" -d "number of principal components to use in the reduced dataset (default: 5)" -x
@@ -34,8 +28,6 @@ complete -c somalier -n "__fish_seen_subcommand_from ancestry" -l "nn-hidden-siz
 complete -c somalier -n "__fish_seen_subcommand_from ancestry" -l "nn-batch-size" -d "batch size fo training neural network (default: 32)" -x
 complete -c somalier -n "__fish_seen_subcommand_from ancestry" -l "nn-test-samples" -d "number of labeled samples to test for NN convergence (default: 101)" -x
 complete -c somalier -n "__fish_seen_subcommand_from ancestry" -s "h" -l "help" -d "Show this help"
-
-
 
 complete -c somalier -n "__fish_seen_subcommand_from find-sites" -s "x" -l "exclude" -d "optional exclude files" -r
 complete -c somalier -n "__fish_seen_subcommand_from find-sites" -s "i" -l "include" -d "optional include file." -r

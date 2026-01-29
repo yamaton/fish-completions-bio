@@ -3,8 +3,6 @@
 complete -c blobtools -n "not __fish_seen_subcommand_from create view plot covplot map2cov taxify bamfilter seqfilter nodesdb" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "not __fish_seen_subcommand_from create view plot covplot map2cov taxify bamfilter seqfilter nodesdb" -s "v" -l "version" -d "show version number"
 
-
-
 complete -k -c blobtools -n __fish_use_subcommand -x -a nodesdb -d "create nodesdb based on NCBI Taxdump's names.dmp and nodes.dmp"
 complete -k -c blobtools -n __fish_use_subcommand -x -a seqfilter -d "subset sequences in FASTA file based sequence IDs in list"
 complete -k -c blobtools -n __fish_use_subcommand -x -a bamfilter -d "subset paired-end reads from a BAM file"
@@ -14,8 +12,6 @@ complete -k -c blobtools -n __fish_use_subcommand -x -a covplot -d "generate a C
 complete -k -c blobtools -n __fish_use_subcommand -x -a plot -d "generate a BlobPlot from a BlobDB"
 complete -k -c blobtools -n __fish_use_subcommand -x -a view -d "generate tabular view, CONCOCT input or COV files from BlobDB"
 complete -k -c blobtools -n __fish_use_subcommand -x -a create -d "create a BlobDB"
-
-
 
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "i" -l "infile" -d "FASTA file of assembly." -r
@@ -35,8 +31,6 @@ complete -c blobtools -n "__fish_seen_subcommand_from create" -s "C" -l "calcula
 complete -c blobtools -n "__fish_seen_subcommand_from create" -s "o" -l "out" -d "BlobDB output prefix" -x
 complete -c blobtools -n "__fish_seen_subcommand_from create" -l "title" -d "Title of BlobDB [default: output prefix)" -x
 
-
-
 complete -c blobtools -n "__fish_seen_subcommand_from view" -l "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from view" -s "i" -l "input" -d "BlobDB file (created with \"blobtools create\")" -r
 complete -c blobtools -n "__fish_seen_subcommand_from view" -s "o" -l "out" -d "Output prefix" -x
@@ -48,8 +42,6 @@ complete -c blobtools -n "__fish_seen_subcommand_from view" -l "concoct" -d "Gen
 complete -c blobtools -n "__fish_seen_subcommand_from view" -l "cov" -d "Generate cov files [default: False]"
 complete -c blobtools -n "__fish_seen_subcommand_from view" -l "experimental" -d "Experimental output [default: False]" -x
 complete -c blobtools -n "__fish_seen_subcommand_from view" -s "n" -l "notable" -d "Do not generate table view [default: False]"
-
-
 
 complete -c blobtools -n "__fish_seen_subcommand_from plot" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from plot" -s "i" -l "infile" -d "BlobDB file (created with \"blobtools create\")" -r
@@ -78,8 +70,6 @@ complete -c blobtools -n "__fish_seen_subcommand_from plot" -l "colours" -d "Fil
 complete -c blobtools -n "__fish_seen_subcommand_from plot" -l "exclude" -d "Exclude these (taxonomic) groups (also works for 'other')" -x
 complete -c blobtools -n "__fish_seen_subcommand_from plot" -l "refcov" -d "File containing number of \"total\" and \"mapped\" reads" -r
 complete -c blobtools -n "__fish_seen_subcommand_from plot" -l "catcolour" -d "Colour plot based on categories from FILE" -r
-
-
 
 complete -c blobtools -n "__fish_seen_subcommand_from covplot" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from covplot" -s "i" -l "infile" -d "BlobDB file" -r
@@ -112,16 +102,12 @@ complete -c blobtools -n "__fish_seen_subcommand_from covplot" -l "exclude" -d "
 complete -c blobtools -n "__fish_seen_subcommand_from covplot" -l "refcov" -d "File containing number of \"total\" and \"mapped\" reads" -r
 complete -c blobtools -n "__fish_seen_subcommand_from covplot" -l "catcolour" -d "Colour plot based on categories from FILE" -r
 
-
-
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "i" -l "infile" -d "FASTA file of assembly." -r
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "b" -l "bam" -d "BAM file (requires pysam)" -r
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "a" -l "cas" -d "CAS file (requires clc_mapping_info in \$PATH)" -r
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "o" -l "output" -d "Output prefix" -x
 complete -c blobtools -n "__fish_seen_subcommand_from map2cov" -s "c" -l "calculate_cov" -d "Legacy coverage, slower."
-
-
 
 complete -c blobtools -n "__fish_seen_subcommand_from taxify" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from taxify" -s "f" -l "hit_file" -d "BLAST/Diamond similarity search result (TSV format)." -r
@@ -136,8 +122,6 @@ complete -c blobtools -n "__fish_seen_subcommand_from taxify" -s "x" -l "custom_
 complete -c blobtools -n "__fish_seen_subcommand_from taxify" -s "v" -l "custom_score" -d "Score to assign to all sequence IDs in list" -x
 complete -c blobtools -n "__fish_seen_subcommand_from taxify" -s "o" -l "out" -d "Output prefix" -x
 
-
-
 complete -c blobtools -n "__fish_seen_subcommand_from bamfilter" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from bamfilter" -s "b" -l "bam" -d "BAM file (sorted by name)" -r
 complete -c blobtools -n "__fish_seen_subcommand_from bamfilter" -s "i" -l "include" -d "List of contigs whose reads are included - writes FASTAs of pairs where at least" -r
@@ -147,15 +131,11 @@ complete -c blobtools -n "__fish_seen_subcommand_from bamfilter" -s "n" -l "noni
 complete -c blobtools -n "__fish_seen_subcommand_from bamfilter" -s "f" -l "read_format" -d "FASTQ = fq, FASTA = fa [default: fa]" -x
 complete -c blobtools -n "__fish_seen_subcommand_from bamfilter" -s "o" -l "out" -d "Output prefix" -x
 
-
-
 complete -c blobtools -n "__fish_seen_subcommand_from seqfilter" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from seqfilter" -s "i" -l "infile" -d "FASTA file of sequences (Headers are split at whitespaces)" -r
 complete -c blobtools -n "__fish_seen_subcommand_from seqfilter" -s "l" -l "list" -d "TXT file containing headers of sequences to keep" -r
 complete -c blobtools -n "__fish_seen_subcommand_from seqfilter" -s "o" -l "out" -d "Output prefix" -x
 complete -c blobtools -n "__fish_seen_subcommand_from seqfilter" -s "v" -l "invert" -d "Invert filtering (Sequences w/ headers NOT in list)"
-
-
 
 complete -c blobtools -n "__fish_seen_subcommand_from nodesdb" -s "h" -l "help" -d "show this"
 complete -c blobtools -n "__fish_seen_subcommand_from nodesdb" -l "nodes" -d "NCBI nodes.dmp file." -r

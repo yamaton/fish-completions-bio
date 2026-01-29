@@ -34,8 +34,6 @@ complete -c snpEff -n "not __fish_seen_subcommand_from build buildNextProt cds c
 complete -c snpEff -n "not __fish_seen_subcommand_from build buildNextProt cds closest count databases download dump genes2bed len pdb protein seq show translocReport" -o "strict" -d "Only use 'validated' transcripts (i.e. sequence has been checked)."
 complete -c snpEff -n "not __fish_seen_subcommand_from build buildNextProt cds closest count databases download dump genes2bed len pdb protein seq show translocReport" -o "ud" -o "upDownStreamLen" -d "Set upstream downstream interval length (in bases)" -x
 
-
-
 complete -k -c snpEff -n __fish_use_subcommand -x -a translocReport -d "Create a translocations report (from VCF file)."
 complete -k -c snpEff -n __fish_use_subcommand -x -a show -d "Show a text representation of genes or transcripts coordiantes, DNA sequence and protein sequence."
 complete -k -c snpEff -n __fish_use_subcommand -x -a seq -d "Show sequence (from command line) translation."
@@ -51,8 +49,6 @@ complete -k -c snpEff -n __fish_use_subcommand -x -a closest -d "Annotate the cl
 complete -k -c snpEff -n __fish_use_subcommand -x -a cds -d "Compare CDS sequences calculated form a SnpEff database to the one in a FASTA file. Used for checking databases correctness."
 complete -k -c snpEff -n __fish_use_subcommand -x -a buildNextProt -d "Build a SnpEff for NextProt (using NextProt's XML files)."
 complete -k -c snpEff -n __fish_use_subcommand -x -a build -d "Build a SnpEff database."
-
-
 
 complete -c snpEff -n "__fish_seen_subcommand_from build" -o "embl" -d "Use Embl format."
 complete -c snpEff -n "__fish_seen_subcommand_from build" -o "genbank" -d "Use GenBank format."
@@ -82,18 +78,13 @@ complete -c snpEff -n "__fish_seen_subcommand_from build" -s "v" -o "verbose" -d
 complete -c snpEff -n "__fish_seen_subcommand_from build" -o "version" -d "Show version number and exit"
 
 
-
 complete -c snpEff -n "__fish_seen_subcommand_from cds" -s "c" -o "config" -d "Specify config file" -r
 complete -c snpEff -n "__fish_seen_subcommand_from cds" -o "noLog" -d "Do not report usage statistics to server"
 complete -c snpEff -n "__fish_seen_subcommand_from cds" -s "v" -d "Verbose mode"
 complete -c snpEff -n "__fish_seen_subcommand_from cds" -s "d" -d "Debug mode"
 
-
-
 complete -c snpEff -n "__fish_seen_subcommand_from closest" -o "bed" -d "Input format is BED."
 complete -c snpEff -n "__fish_seen_subcommand_from closest" -o "tss" -d "Measure distance from TSS (transcription start site)"
-
-
 
 complete -c snpEff -n "__fish_seen_subcommand_from count" -s "n" -d "Output file base name." -r
 complete -c snpEff -n "__fish_seen_subcommand_from count" -s "p" -d "Calculate probability model (binomial)."
@@ -139,8 +130,6 @@ complete -c snpEff -n "__fish_seen_subcommand_from dump" -o "txt" -d "Dump as a 
 complete -c snpEff -n "__fish_seen_subcommand_from dump" -s "0" -d "Output zero-based coordinates."
 complete -c snpEff -n "__fish_seen_subcommand_from dump" -s "1" -d "Output one-based coordinates"
 
-
-
 complete -c snpEff -n "__fish_seen_subcommand_from genes2bed" -o "cds" -d "Show coding exons (no UTRs)."
 complete -c snpEff -n "__fish_seen_subcommand_from genes2bed" -s "e" -d "Show exons for every transcript."
 complete -c snpEff -n "__fish_seen_subcommand_from genes2bed" -s "f" -d "A TXT file having one gene ID (or name) per line." -r
@@ -149,13 +138,9 @@ complete -c snpEff -n "__fish_seen_subcommand_from genes2bed" -o "pc" -d "Use on
 complete -c snpEff -n "__fish_seen_subcommand_from genes2bed" -o "tr" -d "Show transcript coordinates."
 complete -c snpEff -n "__fish_seen_subcommand_from genes2bed" -o "ud" -d "Expand gene interval upstream and downstream by 'num' bases." -x
 
-
-
 complete -c snpEff -n "__fish_seen_subcommand_from len" -s "r" -d "<num> : Assume a read size of 'num' bases."
 complete -c snpEff -n "__fish_seen_subcommand_from len" -o "iter" -d "<num> : Perform 'num' iterations of random sampling."
 complete -c snpEff -n "__fish_seen_subcommand_from len" -o "reads" -d "Each random sampling iteration has 'num' reads." -x
-
-
 
 complete -c snpEff -n "__fish_seen_subcommand_from pdb" -o "aaSep" -d "Minimum number of AA of separation within the sequence." -x
 complete -c snpEff -n "__fish_seen_subcommand_from pdb" -o "idMap" -d "ID map file (i.e. file containing mapping from PDB ID to transcript ID)." -r
@@ -200,14 +185,9 @@ complete -c snpEff -n "__fish_seen_subcommand_from pdb" -o "spliceRegionIntronMa
 complete -c snpEff -n "__fish_seen_subcommand_from pdb" -o "strict" -d "Only use 'validated' transcripts (i.e. sequence has been checked)."
 complete -c snpEff -n "__fish_seen_subcommand_from pdb" -o "ud" -o "upDownStreamLen" -d "Set upstream downstream interval length (in bases)" -x
 
-
-
 complete -c snpEff -n "__fish_seen_subcommand_from protein" -o "codonTables" -d "Try all codon tables on each chromosome and calculate error rates."
 
-
-
 complete -c snpEff -n "__fish_seen_subcommand_from seq" -s "r" -d "Reverse-Watson-Cricks complement."
-
 
 
 complete -c snpEff -n "__fish_seen_subcommand_from translocReport" -o "onlyOneTr" -d "Report only one transcript (used for debugging)."

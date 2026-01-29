@@ -3,12 +3,8 @@
 complete -c svim-asm -n "not __fish_seen_subcommand_from haploid diploid" -s "h" -l "help" -d "show this help message and exit"
 complete -c svim-asm -n "not __fish_seen_subcommand_from haploid diploid" -l "version" -s "v" -d "show program's version number and exit"
 
-
-
 complete -k -c svim-asm -n __fish_use_subcommand -x -a diploid -d "Detect SVs from the alignment of a diploid query assembly to a reference assembly"
 complete -k -c svim-asm -n __fish_use_subcommand -x -a haploid -d "Detect SVs from the alignment of an haploid query assembly to a reference assembly"
-
-
 
 complete -c svim-asm -n "__fish_seen_subcommand_from haploid" -s "h" -l "help" -d "show this help message and exit"
 complete -c svim-asm -n "__fish_seen_subcommand_from haploid" -l "verbose" -d "Enable more verbose logging (default: False)"
@@ -25,8 +21,6 @@ complete -c svim-asm -n "__fish_seen_subcommand_from haploid" -l "symbolic_allel
 complete -c svim-asm -n "__fish_seen_subcommand_from haploid" -l "tandem_duplications_as_insertions" -d "Represent tandem duplications as insertions in output VCF (default: False)."
 complete -c svim-asm -n "__fish_seen_subcommand_from haploid" -l "interspersed_duplications_as_insertions" -d "Represent interspersed duplications as insertions in output VCF (default: False)."
 complete -c svim-asm -n "__fish_seen_subcommand_from haploid" -l "query_names" -d "Output names of supporting query sequences in INFO tag of VCF (default: False)."
-
-
 
 complete -c svim-asm -n "__fish_seen_subcommand_from diploid" -s "h" -l "help" -d "show this help message and exit"
 complete -c svim-asm -n "__fish_seen_subcommand_from diploid" -l "verbose" -d "Enable more verbose logging (default: False)"

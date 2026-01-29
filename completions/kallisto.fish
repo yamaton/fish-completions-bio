@@ -10,13 +10,9 @@ complete -k -c kallisto -n __fish_use_subcommand -x -a quant-tcc -d "Runs quanti
 complete -k -c kallisto -n __fish_use_subcommand -x -a quant -d "Runs the quantification algorithm"
 complete -k -c kallisto -n __fish_use_subcommand -x -a index -d "Builds a kallisto index"
 
-
-
 complete -c kallisto -n "__fish_seen_subcommand_from index" -s "i" -l "index" -d "Filename for the kallisto index to be constructed" -r
 complete -c kallisto -n "__fish_seen_subcommand_from index" -s "k" -l "kmer-size" -d "k-mer (odd) length (default: 31, max value: 31)" -x
 complete -c kallisto -n "__fish_seen_subcommand_from index" -l "make-unique" -d "Replace repeated target names with unique names"
-
-
 
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -s "i" -l "index" -d "Filename for the kallisto index to be used for" -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -s "o" -l "output-dir" -d "Directory to write output to" -r
@@ -38,8 +34,6 @@ complete -c kallisto -n "__fish_seen_subcommand_from quant" -s "g" -l "gtf" -d "
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -s "c" -l "chromosomes" -d "Tab separated file with chromosome names and lengths (optional for --genomebam, but recommended)"
 complete -c kallisto -n "__fish_seen_subcommand_from quant" -l "verbose" -d "Print out progress information every 1M proccessed reads"
 
-
-
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s "o" -l "output-dir" -d "Directory to write output to" -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s "i" -l "index" -d "Filename for the kallisto index to be used (required if file with names of transcripts not supplied)" -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s "T" -l "txnames" -d "File with names of transcripts   (required if index file not supplied)" -r
@@ -52,8 +46,6 @@ complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s "g" -l "genem
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s "G" -l "gtf" -d "GTF file for transcriptome information (can be used instead of --genemap for obtaining gene-level abundances)" -r
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -s "b" -l "bootstrap-samples" -d "Number of bootstrap samples (default: 0)" -x
 complete -c kallisto -n "__fish_seen_subcommand_from quant-tcc" -l "seed" -d "Seed for the bootstrap sampling (default: 42)" -x
-
-
 
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -s "i" -l "index" -d "Filename for the kallisto index to be used for pseudoalignment" -r
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -s "o" -l "output-dir" -d "Directory to write output to" -r
@@ -73,17 +65,13 @@ complete -c kallisto -n "__fish_seen_subcommand_from bus" -s "g" -l "gtf" -d "GT
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -s "c" -l "chromosomes" -d "Tab separated file with chromosome names and lengths (optional for --genomebam, but recommended)"
 complete -c kallisto -n "__fish_seen_subcommand_from bus" -l "verbose" -d "Print out progress information every 1M proccessed reads"
 
-
-
 complete -c kallisto -n "__fish_seen_subcommand_from merge" -s "i" -l "index" -d "Filename for the kallisto index to be used for pseudoalignment" -r
 complete -c kallisto -n "__fish_seen_subcommand_from merge" -s "o" -l "output-dir" -d "Directory to write output to" -r
 
-
-
 complete -c kallisto -n "__fish_seen_subcommand_from h5dump" -s "o" -l "output-dir" -d "Directory to write output to" -r
-
-
 
 complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s "G" -l "gfa" -d "Filename for GFA output of T-DBG" -r
 complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s "g" -l "gtf" -d "Filename for GTF file" -r
 complete -c kallisto -n "__fish_seen_subcommand_from inspect" -s "b" -l "bed" -d "Filename for BED output (default: index + \".bed\")" -r
+
+

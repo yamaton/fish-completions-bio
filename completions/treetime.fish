@@ -40,16 +40,12 @@ complete -c treetime -n "not __fish_seen_subcommand_from homoplasy ancestral mug
 complete -c treetime -n "not __fish_seen_subcommand_from homoplasy ancestral mugration clock arg version" -l "outdir" -d "directory to write the output to" -r
 complete -c treetime -n "not __fish_seen_subcommand_from homoplasy ancestral mugration clock arg version" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c treetime -n __fish_use_subcommand -x -a version -d "version"
 complete -k -c treetime -n __fish_use_subcommand -x -a arg -d "arg"
 complete -k -c treetime -n __fish_use_subcommand -x -a clock -d "Calculates the root-to-tip regression and quantifies the 'clock-i-ness' of the tree."
 complete -k -c treetime -n __fish_use_subcommand -x -a mugration -d "Reconstructs discrete ancestral states, for example geographic location, host, or similar."
 complete -k -c treetime -n __fish_use_subcommand -x -a ancestral -d "Reconstructs ancestral sequences and maps mutations to the tree."
 complete -k -c treetime -n __fish_use_subcommand -x -a homoplasy -d "Detect and quantify homoplasies or recurrent mutations."
-
-
 
 complete -c treetime -n "__fish_seen_subcommand_from homoplasy" -s "h" -l "help" -d "show this help message and exit"
 complete -c treetime -n "__fish_seen_subcommand_from homoplasy" -l "aln" -d "alignment file (fasta)" -r
@@ -67,8 +63,6 @@ complete -c treetime -n "__fish_seen_subcommand_from homoplasy" -l "drms" -d "TS
 complete -c treetime -n "__fish_seen_subcommand_from homoplasy" -l "verbose" -d "verbosity of output 0-6" -x
 complete -c treetime -n "__fish_seen_subcommand_from homoplasy" -l "outdir" -d "directory to write the output to" -r
 
-
-
 complete -c treetime -n "__fish_seen_subcommand_from ancestral" -s "h" -l "help" -d "show this help message and exit"
 complete -c treetime -n "__fish_seen_subcommand_from ancestral" -l "aln" -d "alignment file (fasta)" -r
 complete -c treetime -n "__fish_seen_subcommand_from ancestral" -l "vcf-reference" -d "only for vcf input: fasta file of the sequence the VCF was mapped to." -r
@@ -85,8 +79,6 @@ complete -c treetime -n "__fish_seen_subcommand_from ancestral" -l "method-anc" 
 complete -c treetime -n "__fish_seen_subcommand_from ancestral" -l "verbose" -d "verbosity of output 0-6" -x
 complete -c treetime -n "__fish_seen_subcommand_from ancestral" -l "outdir" -d "directory to write the output to" -r
 
-
-
 complete -c treetime -n "__fish_seen_subcommand_from mugration" -s "h" -l "help" -d "show this help message and exit"
 complete -c treetime -n "__fish_seen_subcommand_from mugration" -l "tree" -d "Name of file containing the tree in newick, nexus, or phylip format, the branch length of the tree should be in units of average number of nucleotide or protein substitutions per site." -r
 complete -c treetime -n "__fish_seen_subcommand_from mugration" -l "name-column" -d "label of the column to be used as taxon name" -x
@@ -99,8 +91,6 @@ complete -c treetime -n "__fish_seen_subcommand_from mugration" -l "missing-data
 complete -c treetime -n "__fish_seen_subcommand_from mugration" -l "sampling-bias-correction" -d "a rough estimate of how many more events would have been observed if sequences represented an even sample." -x
 complete -c treetime -n "__fish_seen_subcommand_from mugration" -l "verbose" -d "verbosity of output 0-6" -x
 complete -c treetime -n "__fish_seen_subcommand_from mugration" -l "outdir" -d "directory to write the output to" -r
-
-
 
 complete -c treetime -n "__fish_seen_subcommand_from clock" -s "h" -l "help" -d "show this help message and exit"
 complete -c treetime -n "__fish_seen_subcommand_from clock" -l "tree" -d "Name of file containing the tree in newick, nexus, or phylip format, the branch length of the tree should be in units of average number of nucleotide or protein substitutions per site." -r
@@ -119,8 +109,6 @@ complete -c treetime -n "__fish_seen_subcommand_from clock" -l "allow-negative-r
 complete -c treetime -n "__fish_seen_subcommand_from clock" -l "plot-rtt" -d "filename to save the plot to." -r
 complete -c treetime -n "__fish_seen_subcommand_from clock" -l "verbose" -d "verbosity of output 0-6" -x
 complete -c treetime -n "__fish_seen_subcommand_from clock" -l "outdir" -d "directory to write the output to" -r
-
-
 
 complete -c treetime -n "__fish_seen_subcommand_from arg" -s "h" -l "help" -d "show this help message and exit"
 complete -c treetime -n "__fish_seen_subcommand_from arg" -l "trees" -l "alignments" -l "mccs" -l "clock-rate" -d "if specified, the rate of the molecular clock won't be optimized." -x
@@ -156,7 +144,5 @@ complete -c treetime -n "__fish_seen_subcommand_from arg" -l "tip-slack" -d "exc
 complete -c treetime -n "__fish_seen_subcommand_from arg" -l "covariation" -d "Account for covariation when estimating rates or rerooting using root-to-tip regression, default False."
 complete -c treetime -n "__fish_seen_subcommand_from arg" -l "verbose" -d "verbosity of output 0-6" -x
 complete -c treetime -n "__fish_seen_subcommand_from arg" -l "outdir" -d "directory to write the output to" -r
-
-
 
 complete -c treetime -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "show this help message and exit"

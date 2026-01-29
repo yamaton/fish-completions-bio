@@ -27,11 +27,7 @@ complete -c velvetg -n "not __fish_seen_subcommand_from directory" -o "paired_ex
 complete -c velvetg -n "not __fish_seen_subcommand_from directory" -o "shortMatePaired" -d "for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)" -x
 complete -c velvetg -n "not __fish_seen_subcommand_from directory" -o "conserveLong" -d "preserve sequences with long reads in them (default no)" -x
 
-
-
 complete -k -c velvetg -n __fish_use_subcommand -x -a directory -d "working directory name"
-
-
 
 complete -c velvetg -n "__fish_seen_subcommand_from directory" -o "cov_cutoff" -d "removal of low coverage nodes AFTER tour bus or allow the system to infer it" -x
 complete -c velvetg -n "__fish_seen_subcommand_from directory" -o "ins_length" -d "expected distance between two paired end reads (default: no read pairing)" -x

@@ -49,8 +49,6 @@ complete -k -c vg -n __fish_use_subcommand -x -a rna -d "construct splicing grap
 complete -k -c vg -n __fish_use_subcommand -x -a construct -d "graph construction"
 complete -k -c vg -n __fish_use_subcommand -x -a autoindex -d "mapping tool-oriented index construction from interchange formats"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "p" -l "prefix" -d "prefix to use for all output (default: index)" -x
 complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "w" -l "workflow" -d "workflow to produce indexes for, can be provided multiple times." -x
 complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "r" -l "ref-fasta" -d "FASTA file containing the reference sequence (may repeat)" -r
@@ -65,8 +63,6 @@ complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "M" -l "target-mem"
 complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "t" -l "threads" -d "number of threads (default: all available)" -x
 complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "V" -l "verbosity" -d "log to stderr (0 = none, 1 = basic, 2 = debug; default 1)" -x
 complete -c vg -n "__fish_seen_subcommand_from autoindex" -s "h" -l "help" -d "print this help message to stderr and exit"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from construct" -s "r" -l "reference" -d "input FASTA reference (may repeat)" -r
 complete -c vg -n "__fish_seen_subcommand_from construct" -s "v" -l "vcf" -d "input VCF (may repeat)" -r
@@ -86,8 +82,6 @@ complete -c vg -n "__fish_seen_subcommand_from construct" -s "F" -l "msa-format"
 complete -c vg -n "__fish_seen_subcommand_from construct" -s "d" -l "drop-msa-paths" -d "don't add paths for the MSA sequences into the graph"
 complete -c vg -n "__fish_seen_subcommand_from construct" -s "m" -l "node-max" -d "limit the maximum allowable node sequence size (default: 32) nodes greater than this threshold will be divided Note: nodes larger than ~1024 bp can't be GCSA2-indexed" -x
 complete -c vg -n "__fish_seen_subcommand_from construct" -s "p" -l "progress" -d "show progress"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from rna" -s "t" -l "threads" -d "number of compute threads to use [1]" -x
 complete -c vg -n "__fish_seen_subcommand_from rna" -s "p" -l "progress" -d "show progress"
@@ -110,8 +104,6 @@ complete -c vg -n "__fish_seen_subcommand_from rna" -s "f" -l "write-fasta" -d "
 complete -c vg -n "__fish_seen_subcommand_from rna" -s "i" -l "write-info" -d "write pantranscriptome transcript info table as tsv file" -r
 complete -c vg -n "__fish_seen_subcommand_from rna" -s "q" -l "out-exclude-ref" -d "exclude reference transcripts from pantranscriptome output"
 complete -c vg -n "__fish_seen_subcommand_from rna" -s "g" -l "gbwt-bidirectional" -d "use bidirectional paths in GBWT index construction"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from index" -s "b" -l "temp-dir" -d "use DIR for temporary files" -r
 complete -c vg -n "__fish_seen_subcommand_from index" -s "t" -l "threads" -d "number of threads to use" -x
@@ -145,8 +137,6 @@ complete -c vg -n "__fish_seen_subcommand_from index" -l "index-sorted-vg" -d "i
 complete -c vg -n "__fish_seen_subcommand_from index" -s "j" -d "--dist-name FILE use this file to store a snarl-based distance index"
 complete -c vg -n "__fish_seen_subcommand_from index" -l "snarl-limit" -d "don't store snarl distances for snarls with more than N nodes (default 3000)" -x
 complete -c vg -n "__fish_seen_subcommand_from index" -s "w" -d "--distance-limit N cap beyond which the minimum distance is no longer accurate (default inf)"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from giraffe" -s "Z" -l "gbz-name" -d "use this GBZ file (GBWT index + GBWTGraph)" -r
 complete -c vg -n "__fish_seen_subcommand_from giraffe" -s "m" -l "minimizer-name" -d "use this minimizer index" -r
@@ -204,8 +194,6 @@ complete -c vg -n "__fish_seen_subcommand_from giraffe" -l "track-correctness" -
 complete -c vg -n "__fish_seen_subcommand_from giraffe" -s "B" -l "batch-size" -d "number of reads or pairs per batch to distribute to threads [512]" -x
 complete -c vg -n "__fish_seen_subcommand_from giraffe" -s "t" -l "threads" -d "number of mapping threads to use" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from mpmap" -s "x" -l "graph-name" -d "graph (required; XG format recommended but other formats are valid, see `vg convert`)" -r
 complete -c vg -n "__fish_seen_subcommand_from mpmap" -s "g" -l "gcsa-name" -d "use this GCSA2/LCP index pair for MEMs (required; both FILE and FILE.lcp, see `vg index`)" -r
 complete -c vg -n "__fish_seen_subcommand_from mpmap" -s "d" -l "dist-name" -d "use this snarl distance index for clustering (recommended, see `vg index`)" -r
@@ -241,8 +229,6 @@ complete -c vg -n "__fish_seen_subcommand_from mpmap" -s "L" -l "full-l-bonus" -
 complete -c vg -n "__fish_seen_subcommand_from mpmap" -s "w" -l "score-matrix" -d "read a 4x4 integer substitution scoring matrix from a file (in the order ACGT)" -r
 complete -c vg -n "__fish_seen_subcommand_from mpmap" -s "m" -l "remove-bonuses" -d "remove full length alignment bonuses in reported scores"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from augment" -s "i" -l "include-paths" -d "merge the paths implied by alignments into the graph"
 complete -c vg -n "__fish_seen_subcommand_from augment" -s "S" -l "keep-softclips" -d "include softclips from input alignments (they are cut by default)"
 complete -c vg -n "__fish_seen_subcommand_from augment" -s "B" -l "label-paths" -d "don't augment with alignments, just use them for labeling the graph"
@@ -263,8 +249,6 @@ complete -c vg -n "__fish_seen_subcommand_from augment" -s "t" -l "threads" -d "
 complete -c vg -n "__fish_seen_subcommand_from augment" -s "l" -l "include-loci" -d "merge all alleles in loci into the graph" -r
 complete -c vg -n "__fish_seen_subcommand_from augment" -s "L" -l "include-gt" -d "merge only the alleles in called genotypes into the graph" -r
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from pack" -s "x" -l "xg" -d "use this basis graph (any format accepted, does not have to be xg)" -r
 complete -c vg -n "__fish_seen_subcommand_from pack" -s "o" -l "packs-out" -d "write compressed coverage packs to this output file" -r
 complete -c vg -n "__fish_seen_subcommand_from pack" -s "i" -l "packs-in" -d "begin by summing coverage packs from each provided FILE" -r
@@ -281,8 +265,6 @@ complete -c vg -n "__fish_seen_subcommand_from pack" -s "Q" -l "min-mapq" -d "ig
 complete -c vg -n "__fish_seen_subcommand_from pack" -s "c" -l "expected-cov" -d "expected coverage." -x
 complete -c vg -n "__fish_seen_subcommand_from pack" -s "s" -l "trim-ends" -d "ignore the first and last N bases of each read" -x
 complete -c vg -n "__fish_seen_subcommand_from pack" -s "t" -l "threads" -d "use N threads (defaults to numCPUs)" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from call" -s "k" -l "pack" -d "Supports created from vg pack for given input graph" -r
 complete -c vg -n "__fish_seen_subcommand_from call" -s "m" -l "min-support" -d "Minimum allele support (M) and minimum site support (N) for call [default = 2,4]" -x
@@ -314,7 +296,6 @@ complete -c vg -n "__fish_seen_subcommand_from call" -s "t" -l "threads" -d "num
 complete -c vg -n "__fish_seen_subcommand_from call" -s "R" -l "ploidy-regex" -d "use the given comma-separated list of colon-delimited REGEX:PLOIDY rules to assign ploidies to contigs not visited by the selected samples, or to all contigs simulated from if no samples are used." -x
 
 
-
 complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "p" -l "path" -d "A reference path to deconstruct against (multiple allowed)." -r
 complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "P" -l "path-prefix" -d "All paths (and/or GBWT threads) beginning with NAME used as reference (multiple allowed)." -r
 complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "H" -l "path-sep" -d "Obtain alt paths from the set of paths, assuming a path name hierarchy (e.g. SEP='#' and sample#phase#contig)" -r
@@ -330,8 +311,6 @@ complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "K" -l "keep-conf
 complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "S" -l "strict-conflicts" -d "Drop genotypes when we have more than one haplotype for any given phase (set by default when using GBWT input)."
 complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "t" -l "threads" -d "Use N threads" -x
 complete -c vg -n "__fish_seen_subcommand_from deconstruct" -s "v" -l "verbose" -d "Print some status messages"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from gbwt" -s "x" -l "xg-name" -d "read the graph from FILE" -r
 complete -c vg -n "__fish_seen_subcommand_from gbwt" -s "o" -l "output" -d "write output GBWT to FILE" -r
@@ -393,16 +372,12 @@ complete -c vg -n "__fish_seen_subcommand_from gbwt" -l "tags" -d "list GBWT tag
 complete -c vg -n "__fish_seen_subcommand_from gbwt" -s "c" -l "count-threads" -d "print the number of threads"
 complete -c vg -n "__fish_seen_subcommand_from gbwt" -s "e" -l "extract" -d "extract threads in SDSL format to FILE" -r
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from ids" -s "c" -l "compact" -d "minimize the space of integers used by the ids"
 complete -c vg -n "__fish_seen_subcommand_from ids" -s "i" -l "increment" -d "increase ids by N" -x
 complete -c vg -n "__fish_seen_subcommand_from ids" -s "d" -l "decrement" -d "decrease ids by N" -x
 complete -c vg -n "__fish_seen_subcommand_from ids" -s "j" -l "join" -d "make a joint id space for all the graphs that are supplied by iterating through the supplied graphs and incrementing their ids to be non-conflicting (modifies original files)"
 complete -c vg -n "__fish_seen_subcommand_from ids" -s "m" -l "mapping" -d "create an empty node mapping for vg prune" -r
 complete -c vg -n "__fish_seen_subcommand_from ids" -s "s" -l "sort" -d "assign new node IDs in (generalized) topological sort order"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from minimizer" -s "o" -l "output-name" -d "store the index to file X" -r
 complete -c vg -n "__fish_seen_subcommand_from minimizer" -s "k" -l "kmer-length" -d "length of the kmers in the index (default 29, max 31)" -x
@@ -414,8 +389,6 @@ complete -c vg -n "__fish_seen_subcommand_from minimizer" -s "l" -l "load-index"
 complete -c vg -n "__fish_seen_subcommand_from minimizer" -s "g" -l "gbwt-name" -d "use the GBWT index in file X (required with a non-GBZ graph)" -r
 complete -c vg -n "__fish_seen_subcommand_from minimizer" -s "p" -l "progress" -d "show progress information"
 complete -c vg -n "__fish_seen_subcommand_from minimizer" -s "t" -l "threads" -d "use N threads for index construction (default 12) (using more than 16 threads rarely helps)" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from mod" -s "P" -l "label-paths" -d "don't edit with -i alignments, just use them for labeling the graph"
 complete -c vg -n "__fish_seen_subcommand_from mod" -s "c" -l "compact-ids" -d "should we sort and compact the id space? (default false)"
@@ -450,8 +423,6 @@ complete -c vg -n "__fish_seen_subcommand_from mod" -s "v" -l "sample-vcf" -d "f
 complete -c vg -n "__fish_seen_subcommand_from mod" -s "G" -l "sample-graph" -d "subset an augmented graph to a sample graph using a Locus file" -r
 complete -c vg -n "__fish_seen_subcommand_from mod" -s "t" -l "threads" -d "for tasks that can be done in parallel, use this many threads" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from prune" -s "k" -l "kmer-length" -d "kmer length used for pruning defaults: 24 with -P; 24 with -r; 24 with -u" -x
 complete -c vg -n "__fish_seen_subcommand_from prune" -s "e" -l "edge-max" -d "remove the edges on kmers making > N edge choices defaults: 3 with -P; 3 with -r; 3 with -u" -x
 complete -c vg -n "__fish_seen_subcommand_from prune" -s "s" -l "subgraph-min" -d "remove subgraphs of < N bases defaults: 33 with -P; 33 with -r; 33 with -u" -x
@@ -466,8 +437,6 @@ complete -c vg -n "__fish_seen_subcommand_from prune" -s "a" -l "append-mapping"
 complete -c vg -n "__fish_seen_subcommand_from prune" -s "p" -l "progress" -d "show progress"
 complete -c vg -n "__fish_seen_subcommand_from prune" -s "t" -l "threads" -d "use N threads (default: 12)" -x
 complete -c vg -n "__fish_seen_subcommand_from prune" -s "d" -l "dry-run" -d "determine the validity of the combination of options"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from sim" -s "x" -l "xg-name" -d "use the graph in FILE (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from sim" -s "n" -l "num-reads" -d "simulate N reads or read pairs" -x
@@ -499,8 +468,6 @@ complete -c vg -n "__fish_seen_subcommand_from sim" -s "H" -l "haplo-tx-file" -d
 complete -c vg -n "__fish_seen_subcommand_from sim" -s "u" -l "unsheared" -d "sample from unsheared fragments"
 complete -c vg -n "__fish_seen_subcommand_from sim" -s "E" -l "path-pos-file" -d "output a TSV with sampled position on path of each read (requires -F)" -r
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from snarls" -s "A" -l "algorithm" -d "compute snarls using 'cactus' or 'integrated' algorithms (default: integrated)" -x
 complete -c vg -n "__fish_seen_subcommand_from snarls" -s "p" -l "pathnames" -d "output variant paths as SnarlTraversals to STDOUT"
 complete -c vg -n "__fish_seen_subcommand_from snarls" -s "r" -l "traversals" -d "output SnarlTraversals for ultrabubbles." -r
@@ -516,8 +483,6 @@ complete -c vg -n "__fish_seen_subcommand_from snarls" -s "v" -l "vcf" -d "use v
 complete -c vg -n "__fish_seen_subcommand_from snarls" -s "f" -l "fasta" -d "reference in FASTA format (required for SVs by -v)" -r
 complete -c vg -n "__fish_seen_subcommand_from snarls" -s "i" -l "ins-fasta" -d "insertion sequences in FASTA format (required for SVs by -v)" -r
 complete -c vg -n "__fish_seen_subcommand_from snarls" -s "t" -l "threads" -d "number of threads to use [all available]" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from stats" -s "z" -l "size" -d "size of graph"
 complete -c vg -n "__fish_seen_subcommand_from stats" -s "N" -l "node-count" -d "number of nodes in graph"
@@ -541,8 +506,6 @@ complete -c vg -n "__fish_seen_subcommand_from stats" -s "R" -l "snarls" -d "pri
 complete -c vg -n "__fish_seen_subcommand_from stats" -s "F" -l "format" -d "graph format from {VG-Protobuf, PackedGraph, HashGraph, XG}."
 complete -c vg -n "__fish_seen_subcommand_from stats" -s "D" -l "degree-dist" -d "print degree distribution of the graph."
 complete -c vg -n "__fish_seen_subcommand_from stats" -s "v" -l "verbose" -d "output longer reports"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from view" -s "g" -l "gfa" -d "output GFA format (default)"
 complete -c vg -n "__fish_seen_subcommand_from view" -s "F" -l "gfa-in" -d "input GFA format, reducing overlaps if they occur"
@@ -590,8 +553,6 @@ complete -c vg -n "__fish_seen_subcommand_from view" -s "x" -l "extract-tag" -d 
 complete -c vg -n "__fish_seen_subcommand_from view" -l "verbose" -d "explain the file being read with --extract-tag"
 complete -c vg -n "__fish_seen_subcommand_from view" -l "threads" -d "for parallel operations use this many threads [1]" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from align" -s "s" -l "sequence" -d "align a string to the graph in graph.vg using partial order alignment" -x
 complete -c vg -n "__fish_seen_subcommand_from align" -s "Q" -l "seq-name" -d "name the sequence using this value" -x
 complete -c vg -n "__fish_seen_subcommand_from align" -s "j" -l "json" -d "output alignments in JSON format (default GAM)"
@@ -607,8 +568,6 @@ complete -c vg -n "__fish_seen_subcommand_from align" -s "L" -l "pin-left" -d "p
 complete -c vg -n "__fish_seen_subcommand_from align" -s "r" -l "reference" -d "don't use an input graph--- run SSW alignment between -s and -r" -x
 complete -c vg -n "__fish_seen_subcommand_from align" -s "D" -l "debug" -d "print out score matrices and other debugging info"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from annotate" -s "x" -l "xg-name" -d "xg index or graph to annotate (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from annotate" -s "b" -l "bed-name" -d "a BED file to convert to GAM." -r
 complete -c vg -n "__fish_seen_subcommand_from annotate" -s "f" -l "gff-name" -d "a GFF3 file to convert to GAM." -r
@@ -622,8 +581,6 @@ complete -c vg -n "__fish_seen_subcommand_from annotate" -s "l" -l "search-limit
 complete -c vg -n "__fish_seen_subcommand_from annotate" -s "b" -l "bed-name" -d "annotate alignments with overlapping region names from this BED." -r
 complete -c vg -n "__fish_seen_subcommand_from annotate" -s "n" -l "novelty" -d "output TSV table with header describing how much of each Alignment is novel"
 complete -c vg -n "__fish_seen_subcommand_from annotate" -s "t" -l "threads" -d "use the specified number of threads"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from chunk" -s "x" -l "xg-name" -d "use this graph or xg index to chunk subgraphs" -r
 complete -c vg -n "__fish_seen_subcommand_from chunk" -s "G" -l "gbwt-name" -d "use this GBWT haplotype index for haplotype extraction (for -T)" -r
@@ -652,15 +609,11 @@ complete -c vg -n "__fish_seen_subcommand_from chunk" -s "O" -l "output-fmt" -d 
 complete -c vg -n "__fish_seen_subcommand_from chunk" -s "t" -l "threads" -d "for tasks that can be done in parallel, use this many threads [1]" -x
 complete -c vg -n "__fish_seen_subcommand_from chunk" -s "h" -l "help" -d ""
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from circularize" -s "p" -d "--path <PATHNAME> circularize the path by connecting its head/tail node."
 complete -c vg -n "__fish_seen_subcommand_from circularize" -s "P" -l "pathfile" -d "circularize all paths in the provided file." -r
 complete -c vg -n "__fish_seen_subcommand_from circularize" -s "a" -l "head" -d "<node_id> circularize a head and tail node (must provide a tail)."
 complete -c vg -n "__fish_seen_subcommand_from circularize" -s "z" -l "tail" -d "<tail_id> circularize a head and tail node (must provide a head)."
 complete -c vg -n "__fish_seen_subcommand_from circularize" -s "d" -d "--describe list all the paths in the graph."
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from clip" -s "b" -l "bed" -d "BED regions corresponding to path intervals of the graph to target" -r
 complete -c vg -n "__fish_seen_subcommand_from clip" -s "r" -l "snarls" -d "Snarls from vg snarls (recomputed if not given unless -d and -P used)." -r
@@ -679,12 +632,8 @@ complete -c vg -n "__fish_seen_subcommand_from clip" -s "B" -l "output-bed" -d "
 complete -c vg -n "__fish_seen_subcommand_from clip" -s "t" -l "threads" -d "number of threads to use [default: all available]" -x
 complete -c vg -n "__fish_seen_subcommand_from clip" -s "v" -l "verbose" -d "Print some logging messages"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from combine" -s "c" -l "cat-proto" -d "Merge graphs by converting each to Protobuf (if not already) and catting the results."
 complete -c vg -n "__fish_seen_subcommand_from combine" -s "p" -l "connect-paths" -d "Add edges necessary to connect paths with the same name present in different graphs."
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from convert" -s "g" -l "gfa-in" -d "input in GFA format"
 complete -c vg -n "__fish_seen_subcommand_from convert" -s "r" -l "in-rgfa-rank" -d "import rgfa tags with rank <= N as paths [default=0]" -r
@@ -707,8 +656,6 @@ complete -c vg -n "__fish_seen_subcommand_from convert" -s "G" -l "gam-to-gaf" -
 complete -c vg -n "__fish_seen_subcommand_from convert" -s "F" -l "gaf-to-gam" -d "convert GAF FILE to GAM" -r
 complete -c vg -n "__fish_seen_subcommand_from convert" -s "t" -l "threads" -d "use N threads (defaults to numCPUs)" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from depth" -s "k" -l "pack" -d "supports created from vg pack for given input graph" -r
 complete -c vg -n "__fish_seen_subcommand_from depth" -s "d" -l "count-dels" -d "count deletion edges within the bin as covering reference positions"
 complete -c vg -n "__fish_seen_subcommand_from depth" -s "g" -l "gam" -d "read alignments from this GAM file (could be '-' for stdin)" -r
@@ -723,11 +670,7 @@ complete -c vg -n "__fish_seen_subcommand_from depth" -s "b" -l "bin-size" -d "b
 complete -c vg -n "__fish_seen_subcommand_from depth" -s "m" -l "min-coverage" -d "ignore nodes with less than N coverage depth [1]" -x
 complete -c vg -n "__fish_seen_subcommand_from depth" -s "t" -l "threads" -d "number of threads to use [all available]" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from dotplot" -s "x" -l "xg" -d "use the graph or the XG index FILE" -r
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from gamcompare" -s "d" -l "distance-index" -d "use distances from this distance index instead of path position annotations" -r
 complete -c vg -n "__fish_seen_subcommand_from gamcompare" -s "r" -l "range" -d "distance within which to consider reads correct" -x
@@ -736,22 +679,16 @@ complete -c vg -n "__fish_seen_subcommand_from gamcompare" -s "a" -l "aligner" -
 complete -c vg -n "__fish_seen_subcommand_from gamcompare" -s "s" -l "score-alignment" -d "get a correctness score of the alignment (higher is better)"
 complete -c vg -n "__fish_seen_subcommand_from gamcompare" -s "t" -l "threads" -d "number of threads to use" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from gampcompare" -s "G" -l "gam" -d "alignments are in GAM format rather than GAMP"
 complete -c vg -n "__fish_seen_subcommand_from gampcompare" -s "r" -l "range" -d "distance within which to consider reads correct [100]" -x
 complete -c vg -n "__fish_seen_subcommand_from gampcompare" -s "a" -l "aligner" -d "aligner name for TSV output [\"vg\"]" -x
 complete -c vg -n "__fish_seen_subcommand_from gampcompare" -s "d" -l "distance" -d "report minimum distance along a path rather than correctness"
 complete -c vg -n "__fish_seen_subcommand_from gampcompare" -s "t" -l "threads" -d "number of threads to use [1]" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from gamsort" -s "i" -l "index" -d "produce an index of the sorted GAM file" -r
 complete -c vg -n "__fish_seen_subcommand_from gamsort" -s "d" -l "dumb-sort" -d "use naive sorting algorithm (no tmp files, faster for small GAMs)"
 complete -c vg -n "__fish_seen_subcommand_from gamsort" -s "p" -l "progress" -d "Show progress."
 complete -c vg -n "__fish_seen_subcommand_from gamsort" -s "t" -l "threads" -d "Use the specified number of threads."
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from genotype" -s "j" -l "json" -d "output in JSON"
 complete -c vg -n "__fish_seen_subcommand_from genotype" -s "v" -l "vcf" -d "output in VCF"
@@ -771,12 +708,8 @@ complete -c vg -n "__fish_seen_subcommand_from genotype" -s "T" -l "traversal" -
 complete -c vg -n "__fish_seen_subcommand_from genotype" -s "p" -l "progress" -d "show progress"
 complete -c vg -n "__fish_seen_subcommand_from genotype" -s "t" -l "threads" -d "number of threads to use" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from inject" -s "x" -l "xg-name" -d "use this graph or xg index (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from inject" -s "t" -l "threads" -d "number of threads to use" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from paths" -s "x" -l "xg" -d "use the paths and haplotypes in this graph FILE." -r
 complete -c vg -n "__fish_seen_subcommand_from paths" -s "g" -l "gbwt" -d "use the threads in the GBWT index in FILE (graph also required for most output options; -g takes priority over -x)" -r
@@ -797,8 +730,6 @@ complete -c vg -n "__fish_seen_subcommand_from paths" -s "S" -l "sample" -d "sel
 complete -c vg -n "__fish_seen_subcommand_from paths" -s "a" -l "variant-paths" -d "select the variant paths added by 'vg construct -a'"
 complete -c vg -n "__fish_seen_subcommand_from paths" -s "G" -l "generic-paths" -d "select the generic, non-reference, non-haplotype paths"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from simplify" -s "a" -l "algorithm" -d "simplify using the given algorithm (small, rare; default: small)" -x
 complete -c vg -n "__fish_seen_subcommand_from simplify" -s "t" -l "threads" -d "use N threads to construct graph (defaults to numCPUs)" -x
 complete -c vg -n "__fish_seen_subcommand_from simplify" -s "p" -l "progress" -d "show progress"
@@ -808,8 +739,6 @@ complete -c vg -n "__fish_seen_subcommand_from simplify" -s "m" -l "min-size" -d
 complete -c vg -n "__fish_seen_subcommand_from simplify" -s "v" -l "vcf" -d "use the given VCF file to determine variant frequency (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from simplify" -s "f" -l "min-freq" -d "remove variants with total alt frequency under FLOAT (default: 0)" -x
 complete -c vg -n "__fish_seen_subcommand_from simplify" -s "c" -l "min-count" -d "remove variants with total alt occurrence count under N (default: 0)" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from surject" -s "x" -l "xg-name" -d "use this graph or xg index (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from surject" -s "t" -l "threads" -d "number of threads to use" -x
@@ -832,14 +761,10 @@ complete -c vg -n "__fish_seen_subcommand_from surject" -s "f" -l "max-frag-len"
 complete -c vg -n "__fish_seen_subcommand_from surject" -s "L" -l "list-all-paths" -d "annotate SAM records with a list of all attempted re-alignments to paths in SS tag"
 complete -c vg -n "__fish_seen_subcommand_from surject" -s "C" -l "compression" -d "level for compression [0-9]" -x
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from trace" -s "x" -l "index" -d "use this xg index or graph" -r
 complete -c vg -n "__fish_seen_subcommand_from trace" -s "G" -l "gbwt-name" -d "use this GBWT haplotype index instead of any in the graph" -r
 complete -c vg -n "__fish_seen_subcommand_from trace" -s "n" -l "start-node" -d "start at this node" -x
 complete -c vg -n "__fish_seen_subcommand_from trace" -s "d" -l "extend-distance" -d "extend search this many nodes [default=50]" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from vectorize" -s "x" -l "xg" -d "An xg index or graph of interest" -r
 complete -c vg -n "__fish_seen_subcommand_from vectorize" -s "g" -l "gcsa" -d "A gcsa2 index to use if generating MEM sketches" -r
@@ -853,8 +778,6 @@ complete -c vg -n "__fish_seen_subcommand_from vectorize" -s "M" -l "wabbit-mapp
 complete -c vg -n "__fish_seen_subcommand_from vectorize" -s "m" -l "mem-sketch" -d "Generate a MEM sketch of a given read based on the GCSA"
 complete -c vg -n "__fish_seen_subcommand_from vectorize" -s "i" -l "identity-hot" -d "Output a score vector based on percent identity and coverage"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from viz" -s "x" -l "xg" -d "use this basis graph" -r
 complete -c vg -n "__fish_seen_subcommand_from viz" -s "i" -l "pack-in" -d "use this compressed coverage format (multiple allowed)" -r
 complete -c vg -n "__fish_seen_subcommand_from viz" -s "n" -l "name" -d "apply name to the previous .pack (multiple allowed)" -x
@@ -865,15 +788,9 @@ complete -c vg -n "__fish_seen_subcommand_from viz" -s "C" -l "show-cnv" -d "vis
 complete -c vg -n "__fish_seen_subcommand_from viz" -s "P" -l "hide-paths" -d "hide reference paths in the graph"
 complete -c vg -n "__fish_seen_subcommand_from viz" -s "D" -l "hide-dna" -d "suppress the visualization of DNA sequences"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from benchmark" -s "p" -l "progress" -d "show progress"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from chain" -s "p" -l "progress" -d "show progress"
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from cluster" -s "x" -l "xg-name" -d "use this xg index or graph (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from cluster" -s "g" -l "gcsa-name" -d "use this GCSA2/LCP index pair (both FILE and FILE.lcp)" -r
@@ -881,8 +798,6 @@ complete -c vg -n "__fish_seen_subcommand_from cluster" -s "m" -l "minimizer-nam
 complete -c vg -n "__fish_seen_subcommand_from cluster" -s "d" -l "dist-name" -d "cluster using this distance index (required)" -r
 complete -c vg -n "__fish_seen_subcommand_from cluster" -s "c" -l "hit-cap" -d "ignore minimizers with more than this many locations [10]" -x
 complete -c vg -n "__fish_seen_subcommand_from cluster" -s "t" -l "threads" -d "number of compute threads to use" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from find" -s "x" -l "xg-name" -d "use this xg index or graph (instead of rocksdb db)" -r
 complete -c vg -n "__fish_seen_subcommand_from find" -s "n" -l "node" -d "find node(s), return 1-hop context as graph" -x
@@ -917,8 +832,6 @@ complete -c vg -n "__fish_seen_subcommand_from find" -s "Z" -l "min-mem" -d "the
 complete -c vg -n "__fish_seen_subcommand_from find" -s "D" -l "distance" -d "return distance on path between pair of nodes (-n)."
 complete -c vg -n "__fish_seen_subcommand_from find" -s "Q" -l "paths-named" -d "return all paths whose names are prefixed with S (multiple allowed)" -r
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "i" -l "iteration-number" -d "tells us the number of iterations to run mcmc_genotyper with" -x
 complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "r" -l "seed" -d "the seed we will use for the random number generator" -x
 complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "s" -l "sample" -d "sample name [default=SAMPLE]" -x
@@ -928,8 +841,6 @@ complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "l" -l "ref-length" -d "
 complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "v" -l "vcf-out" -d "write VCF output to this file" -r
 complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "b" -l "burn-in" -d "number of iterations to run original sample proposal only" -x
 complete -c vg -n "__fish_seen_subcommand_from mcmc" -s "g" -l "gamma-freq" -d "the frequency (every n iterations) for which to re-make the gamma set (starts after burn-in)" -x
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from test" -s "?" -s "h" -l "help" -d "display usage information"
 complete -c vg -n "__fish_seen_subcommand_from test" -s "l" -l "list-tests" -d "list all/matching test cases"
@@ -963,12 +874,8 @@ complete -c vg -n "__fish_seen_subcommand_from test" -l "benchmark-confidence-in
 complete -c vg -n "__fish_seen_subcommand_from test" -l "benchmark-no-analysis" -d "perform only measurements; do not perform any analysis"
 complete -c vg -n "__fish_seen_subcommand_from test" -l "benchmark-warmup-time" -d "amount of time in milliseconds"
 
-
-
 complete -c vg -n "__fish_seen_subcommand_from validate" -s "o" -l "orphans" -d "verify that all nodes have edges"
 complete -c vg -n "__fish_seen_subcommand_from validate" -s "a" -l "gam" -d "verify that edits in the alignment fit on nodes in the graph" -r
-
-
 
 complete -c vg -n "__fish_seen_subcommand_from version" -s "s" -l "slug" -d "print only the one-line, whitespace-free version string"
 complete -c vg -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "print this help"

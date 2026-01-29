@@ -15,8 +15,6 @@ complete -k -c lofreq -n __fish_use_subcommand -x -a somatic -d "Call somatic va
 complete -k -c lofreq -n __fish_use_subcommand -x -a call-parallel -d "Call variants in parallel"
 complete -k -c lofreq -n __fish_use_subcommand -x -a call -d "Call variants"
 
-
-
 complete -c lofreq -n "__fish_seen_subcommand_from call" -s "f" -l "ref" -d "Indexed reference fasta file (gzip supported) [null]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from call" -s "o" -l "out" -d "Vcf output file [- = stdout]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from call" -s "r" -l "region" -d "Limit calls to this region (chrom:start-end) [null]" -x
@@ -52,7 +50,6 @@ complete -c lofreq -n "__fish_seen_subcommand_from call" -l "verbose" -d "Be ver
 complete -c lofreq -n "__fish_seen_subcommand_from call" -l "debug" -d "Enable debugging"
 
 
-
 complete -c lofreq -n "__fish_seen_subcommand_from somatic" -s "h" -l "help" -d "show this help message and exit"
 complete -c lofreq -n "__fish_seen_subcommand_from somatic" -s "v" -l "verbose" -d "Be verbose"
 complete -c lofreq -n "__fish_seen_subcommand_from somatic" -s "n" -l "normal" -d "Normal BAM file" -r
@@ -77,23 +74,17 @@ complete -c lofreq -n "__fish_seen_subcommand_from somatic" -l "no-src-qual" -d 
 complete -c lofreq -n "__fish_seen_subcommand_from somatic" -l "debug" -d "Enable debugging"
 complete -c lofreq -n "__fish_seen_subcommand_from somatic" -l "continue" -d "continue interrupted run."
 
-
-
 complete -c lofreq -n "__fish_seen_subcommand_from viterbi" -s "f" -l "ref" -d "Indexed reference fasta file [null]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from viterbi" -s "k" -l "keepflags" -d "Don't delete flags MC, MD, NM and A, which are all prone to change during realignment."
 complete -c lofreq -n "__fish_seen_subcommand_from viterbi" -s "q" -l "defqual" -d "Assume INT as quality for all bases with BQ2." -x
 complete -c lofreq -n "__fish_seen_subcommand_from viterbi" -s "o" -l "out" -d "Output BAM file [- = stdout = default]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from viterbi" -l "verbose" -d "Be verbose"
 
-
-
 complete -c lofreq -n "__fish_seen_subcommand_from indelqual" -s "u" -l "uniform" -d "Add this indel quality uniformly to all bases." -x
 complete -c lofreq -n "__fish_seen_subcommand_from indelqual" -l "dindel" -d "Add Dindel's indel qualities (Illumina specific) (clashes with -u; needs --ref)"
 complete -c lofreq -n "__fish_seen_subcommand_from indelqual" -s "f" -l "ref" -d "Reference sequence used for mapping (Only required for --dindel)"
 complete -c lofreq -n "__fish_seen_subcommand_from indelqual" -s "o" -l "out" -d "Output BAM file [- = stdout = default]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from indelqual" -l "verbose" -d "Be verbose"
-
-
 
 complete -c lofreq -n "__fish_seen_subcommand_from alnqual" -s "b" -d "BAM output (instead of SAM)"
 complete -c lofreq -n "__fish_seen_subcommand_from alnqual" -s "u" -d "Uncompressed BAM output (for piping)"
@@ -102,7 +93,6 @@ complete -c lofreq -n "__fish_seen_subcommand_from alnqual" -s "e" -d "Use defau
 complete -c lofreq -n "__fish_seen_subcommand_from alnqual" -s "B" -d "Don't compute base alignment qualities"
 complete -c lofreq -n "__fish_seen_subcommand_from alnqual" -s "A" -d "Don't compute indel alignment qualities"
 complete -c lofreq -n "__fish_seen_subcommand_from alnqual" -s "r" -d "Recompute i.e. overwrite existing values"
-
 
 
 complete -c lofreq -n "__fish_seen_subcommand_from filter" -s "i" -l "in" -d "VCF input file (no streaming supported; gzip supported)" -r
@@ -131,8 +121,6 @@ complete -c lofreq -n "__fish_seen_subcommand_from filter" -l "no-defaults" -d "
 complete -c lofreq -n "__fish_seen_subcommand_from filter" -l "verbose" -d "Be verbose"
 complete -c lofreq -n "__fish_seen_subcommand_from filter" -l "debug" -d "Enable debugging"
 
-
-
 complete -c lofreq -n "__fish_seen_subcommand_from uniq" -s "v" -l "vcf-in" -d "Input vcf file listing variants [- = stdin; gzip supported]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from uniq" -s "o" -l "vcf-out" -d "Output vcf file [- = stdout; gzip supported]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from uniq" -s "f" -l "uni-freq" -d "Assume variants have uniform test frequency of this value (unused if <=0) [-1.000000]"
@@ -145,8 +133,6 @@ complete -c lofreq -n "__fish_seen_subcommand_from uniq" -l "use-det-lim" -d "Re
 complete -c lofreq -n "__fish_seen_subcommand_from uniq" -l "use-orphan" -d "Don't ignore anomalous read pairs / orphan reads"
 complete -c lofreq -n "__fish_seen_subcommand_from uniq" -l "verbose" -d "Be verbose"
 complete -c lofreq -n "__fish_seen_subcommand_from uniq" -l "debug" -d "Enable debugging"
-
-
 
 complete -c lofreq -n "__fish_seen_subcommand_from plpsummary" -s "f" -l "ref" -d "Indexed reference fasta file (gzip supported) [null]" -r
 complete -c lofreq -n "__fish_seen_subcommand_from plpsummary" -s "o" -l "out" -d "Vcf output file [- = stdout]" -r
@@ -182,8 +168,6 @@ complete -c lofreq -n "__fish_seen_subcommand_from plpsummary" -l "force-overwri
 complete -c lofreq -n "__fish_seen_subcommand_from plpsummary" -l "verbose" -d "Be verbose"
 complete -c lofreq -n "__fish_seen_subcommand_from plpsummary" -l "debug" -d "Enable debugging"
 
-
-
 complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -s "1" -l "vcf1" -d "1st VCF input file (bgzip supported)" -r
 complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -s "2" -l "vcf2" -d "2nd VCF input file (mandatory - except for concat - and needs to be tabix indexed)" -r
 complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -s "o" -l "vcfout" -d "VCF output file (default: - for stdout; gzip supported)."
@@ -196,3 +180,6 @@ complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -l "only-snvs" -d "Ig
 complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -l "only-indels" -d "Ignore anything but indels in both input files"
 complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -l "verbose" -d "Be verbose"
 complete -c lofreq -n "__fish_seen_subcommand_from vcfset" -l "debug" -d "Enable debugging"
+
+
+

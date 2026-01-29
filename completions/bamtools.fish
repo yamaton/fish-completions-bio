@@ -14,8 +14,6 @@ complete -k -c bamtools -n __fish_use_subcommand -x -a coverage -d "Prints cover
 complete -k -c bamtools -n __fish_use_subcommand -x -a count -d "Prints number of alignments in BAM file(s)"
 complete -k -c bamtools -n __fish_use_subcommand -x -a convert -d "Converts between BAM and a number of other formats"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o "in" -d "the input BAM file(s) [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o "list" -d "the input BAM file list, one line per file" -r
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o "out" -d "the output BAM file [stdout]" -r
@@ -26,20 +24,14 @@ complete -c bamtools -n "__fish_seen_subcommand_from convert" -o "mapqual" -d "p
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -o "noheader" -d "omit the SAM header from output"
 complete -c bamtools -n "__fish_seen_subcommand_from convert" -l "help" -s "h" -d "shows this help text"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from count" -o "in" -d "the input BAM file(s) [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from count" -o "list" -d "the input BAM file list, one line per file" -r
 complete -c bamtools -n "__fish_seen_subcommand_from count" -o "region" -d "genomic region." -r
 complete -c bamtools -n "__fish_seen_subcommand_from count" -l "help" -s "h" -d "shows this help text"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from coverage" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from coverage" -o "out" -d "the output file [stdout]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from coverage" -l "help" -s "h" -d "shows this help text"
-
-
 
 complete -c bamtools -n "__fish_seen_subcommand_from filter" -o "in" -d "the input BAM file(s) [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from filter" -o "list" -d "the input BAM file list, one line per file" -r
@@ -68,19 +60,13 @@ complete -c bamtools -n "__fish_seen_subcommand_from filter" -o "isSecondMate" -
 complete -c bamtools -n "__fish_seen_subcommand_from filter" -o "isSingleton" -d "keep only singletons [true]" -x
 complete -c bamtools -n "__fish_seen_subcommand_from filter" -l "help" -s "h" -d "shows this help text"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from header" -o "in" -d "the input BAM file(s) [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from header" -o "list" -d "the input BAM file list, one line per file" -r
 complete -c bamtools -n "__fish_seen_subcommand_from header" -l "help" -s "h" -d "shows this help text"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from index" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from index" -o "bti" -d "create (non-standard) BamTools index file (*.bti)."
 complete -c bamtools -n "__fish_seen_subcommand_from index" -l "help" -s "h" -d "shows this help text"
-
-
 
 complete -c bamtools -n "__fish_seen_subcommand_from merge" -o "in" -d "the input BAM file(s)" -r
 complete -c bamtools -n "__fish_seen_subcommand_from merge" -o "list" -d "the input BAM file list, one line per file" -r
@@ -88,8 +74,6 @@ complete -c bamtools -n "__fish_seen_subcommand_from merge" -o "out" -d "the out
 complete -c bamtools -n "__fish_seen_subcommand_from merge" -o "forceCompression" -d "if results are sent to stdout (like when piping to another tool), default behavior is to leave output uncompressed."
 complete -c bamtools -n "__fish_seen_subcommand_from merge" -o "region" -d "genomic region." -x
 complete -c bamtools -n "__fish_seen_subcommand_from merge" -l "help" -s "h" -d "shows this help text"
-
-
 
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o "list" -d "the input BAM file list, one line per file" -r
@@ -99,8 +83,6 @@ complete -c bamtools -n "__fish_seen_subcommand_from random" -o "forceCompressio
 complete -c bamtools -n "__fish_seen_subcommand_from random" -s "n" -d "number of alignments to grab." -x
 complete -c bamtools -n "__fish_seen_subcommand_from random" -o "seed" -d "random number generator seed (for repeatable results)." -x
 complete -c bamtools -n "__fish_seen_subcommand_from random" -l "help" -s "h" -d "shows this help text"
-
-
 
 complete -c bamtools -n "__fish_seen_subcommand_from resolve" -o "in" -d "the input BAM file(s) [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from resolve" -o "out" -d "the output BAM file [stdout]" -r
@@ -115,8 +97,6 @@ complete -c bamtools -n "__fish_seen_subcommand_from resolve" -o "umt" -d "unuse
 complete -c bamtools -n "__fish_seen_subcommand_from resolve" -o "force" -d "forces all read groups to be marked according to their top 2 'orientation models'."
 complete -c bamtools -n "__fish_seen_subcommand_from resolve" -l "help" -s "h" -d "shows this help text"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from revert" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from revert" -o "out" -d "the output BAM file [stdout]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from revert" -o "forceCompression" -d "if results are sent to stdout (like when piping to another tool), default behavior is to leave output uncompressed."
@@ -124,16 +104,12 @@ complete -c bamtools -n "__fish_seen_subcommand_from revert" -o "keepDuplicate" 
 complete -c bamtools -n "__fish_seen_subcommand_from revert" -o "keepQualities" -d "keep base qualities (do not replace with OQ contents)"
 complete -c bamtools -n "__fish_seen_subcommand_from revert" -l "help" -s "h" -d "shows this help text"
 
-
-
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o "out" -d "the output BAM file [stdout]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o "byname" -d "sort by alignment name"
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -s "n" -d "max number of alignments per tempfile [500000]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -o "mem" -d "max memory to use [1024]" -x
 complete -c bamtools -n "__fish_seen_subcommand_from sort" -l "help" -s "h" -d "shows this help text"
-
-
 
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o "refPrefix" -d "custom prefix for splitting by references." -r
@@ -145,8 +121,6 @@ complete -c bamtools -n "__fish_seen_subcommand_from split" -o "paired" -d "spli
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o "reference" -d "split alignments by reference"
 complete -c bamtools -n "__fish_seen_subcommand_from split" -o "tag" -d "splits alignments based on all values of TAG encountered (i.e. -tag RG creates a BAM file for each read group in original BAM file)" -r
 complete -c bamtools -n "__fish_seen_subcommand_from split" -l "help" -s "h" -d "shows this help text"
-
-
 
 complete -c bamtools -n "__fish_seen_subcommand_from stats" -o "in" -d "the input BAM file [stdin]" -r
 complete -c bamtools -n "__fish_seen_subcommand_from stats" -o "list" -d "the input BAM file list, one line per file" -r

@@ -6,8 +6,6 @@ complete -k -c salmon -n __fish_use_subcommand -x -a alevin -d "single cell anal
 complete -k -c salmon -n __fish_use_subcommand -x -a quant -d "quantify a sample"
 complete -k -c salmon -n __fish_use_subcommand -x -a index -d "create a salmon index"
 
-
-
 complete -c salmon -n "__fish_seen_subcommand_from index" -s "v" -l "version" -d "print version string"
 complete -c salmon -n "__fish_seen_subcommand_from index" -s "h" -l "help" -d "produce help message"
 complete -c salmon -n "__fish_seen_subcommand_from index" -s "t" -l "transcripts" -d "Transcript fasta file." -r
@@ -24,8 +22,6 @@ complete -c salmon -n "__fish_seen_subcommand_from index" -l "sparse" -d "Build 
 complete -c salmon -n "__fish_seen_subcommand_from index" -s "d" -l "decoys" -d "Treat these sequences ids from the reference as the decoys that may have sequence homologous to some known transcript." -x
 complete -c salmon -n "__fish_seen_subcommand_from index" -s "n" -l "no-clip" -d "Don't clip poly-A tails from the ends of target sequences"
 complete -c salmon -n "__fish_seen_subcommand_from index" -l "type" -d "The type of index to build; the only option is \"puff\" in this version of salmon." -x
-
-
 
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s "l" -l "libType" -d "Format string describing the library type" -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -s "i" -l "index" -d "salmon index" -x
@@ -123,8 +119,6 @@ complete -c salmon -n "__fish_seen_subcommand_from quant" -l "gencode" -d "This 
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "scoreExp" -d "The factor by which sub-optimal alignment scores are downweighted to produce a probability." -x
 complete -c salmon -n "__fish_seen_subcommand_from quant" -l "mappingCacheMemoryLimit" -d "If the file contained fewer than this many mapped reads, then just keep the data in memory for subsequent rounds of inference." -r
 
-
-
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s "l" -l "libType" -d "Format string describing the library type" -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s "i" -l "index" -d "salmon index" -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -s "r" -l "unmatedReads" -d "List of files containing unmated reads of (e.g. single-end reads)" -r
@@ -178,7 +172,6 @@ complete -c salmon -n "__fish_seen_subcommand_from alevin" -l "dumpFeatures" -d 
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l "dumpMtx" -d "Dump cell v transcripts count matrix in sparse mtx format."
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l "lowRegionMinNumBarcodes" -d "Minimum Number of CB to use for learning Low confidence region (Default: 200)." -x
 complete -c salmon -n "__fish_seen_subcommand_from alevin" -l "maxNumBarcodes" -d "Maximum allowable limit to process the cell barcodes." -x
-
 
 
 complete -c salmon -n "__fish_seen_subcommand_from quantmerge" -s "v" -l "version" -d "print version string"

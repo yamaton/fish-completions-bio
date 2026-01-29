@@ -7,8 +7,6 @@ complete -c taxonkit -n "not __fish_seen_subcommand_from cami-filter create-taxd
 complete -c taxonkit -n "not __fish_seen_subcommand_from cami-filter create-taxdump filter genautocomplete lca lineage list name2taxid profile2cami reformat taxid-changelog version" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "not __fish_seen_subcommand_from cami-filter create-taxdump filter genautocomplete lca lineage list name2taxid profile2cami reformat taxid-changelog version" -l "verbose" -d "print verbose information"
 
-
-
 complete -k -c taxonkit -n __fish_use_subcommand -x -a version -d "print version information and check for update"
 complete -k -c taxonkit -n __fish_use_subcommand -x -a taxid-changelog -d "Create TaxId changelog from dump archives"
 complete -k -c taxonkit -n __fish_use_subcommand -x -a reformat -d "Reformat lineage in canonical ranks"
@@ -21,8 +19,6 @@ complete -k -c taxonkit -n __fish_use_subcommand -x -a genautocomplete -d "gener
 complete -k -c taxonkit -n __fish_use_subcommand -x -a filter -d "Filter TaxIds by taxonomic rank range"
 complete -k -c taxonkit -n __fish_use_subcommand -x -a create-taxdump -d "Create NCBI-style taxdump files for custom taxonomy, e.g., GTDB and ICTV"
 complete -k -c taxonkit -n __fish_use_subcommand -x -a cami-filter -d "Remove taxa of given TaxIds and their descendants in CAMI metagenomic profile"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from cami-filter"  -d "No extra taxonomy data needed, so the original taxonomic information are used and not changed."
 complete -c taxonkit -n "__fish_seen_subcommand_from cami-filter"  -d "A mini taxonomic tree is built from records with abundance greater than zero, and only leaves are retained for later use."
@@ -45,8 +41,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from cami-filter" -s "o" -l "out
 complete -c taxonkit -n "__fish_seen_subcommand_from cami-filter" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from cami-filter" -l "verbose" -d "print verbose information"
 
-
-
 complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -s "A" -l "field-accession" -d "field index of assembly accession (genome ID), for outputting taxid.map" -x
 complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -s "S" -l "field-accession-as-subspecies" -d "treate the accession as subspecies rank"
 complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -l "field-accession-re" -d "regular expression to extract assembly accession (default \"^(.+)\$\")" -x
@@ -64,8 +58,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -l "line-bu
 complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from create-taxdump" -l "verbose" -d "print verbose information"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from filter" -s "B" -l "black-list" -d "black list of ranks to discard, e.g., '-B \"no rank\" -B \"clade\"" -x
 complete -c taxonkit -n "__fish_seen_subcommand_from filter" -s "N" -l "discard-noranks" -d "discard all ranks without order, type \"taxonkit filter --help\" for details"
@@ -86,8 +78,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from filter" -s "o" -l "out-file
 complete -c taxonkit -n "__fish_seen_subcommand_from filter" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from filter" -l "verbose" -d "print verbose information"
 
-
-
 complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -l "file" -d "autocompletion file (default \"~/.bash_completion.d/taxonkit.sh\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -s "h" -l "help" -d "help for genautocomplete"
 complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -l "shell" -d "autocompletion type (bash|zsh|fish|powershell) (default \"bash\")" -x
@@ -96,8 +86,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -l "line-b
 complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from genautocomplete" -l "verbose" -d "print verbose information"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from lca" -s "h" -l "help" -d "help for lca"
 complete -c taxonkit -n "__fish_seen_subcommand_from lca" -s "s" -l "separater" -d "separater for TaxIds (default \" \")" -x
@@ -109,8 +97,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from lca" -l "line-buffered" -d 
 complete -c taxonkit -n "__fish_seen_subcommand_from lca" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from lca" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from lca" -l "verbose" -d "print verbose information"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from lineage"  -d "List of TaxIds, one TaxId per line."
 complete -c taxonkit -n "__fish_seen_subcommand_from lineage"  -d "Supporting (gzipped) file or STDIN."
@@ -129,8 +115,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from lineage" -s "o" -l "out-fil
 complete -c taxonkit -n "__fish_seen_subcommand_from lineage" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from lineage" -l "verbose" -d "print verbose information"
 
-
-
 complete -c taxonkit -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "help for list"
 complete -c taxonkit -n "__fish_seen_subcommand_from list" -s "i" -l "ids" -d "TaxId(s), multiple values should be separated by comma" -x
 complete -c taxonkit -n "__fish_seen_subcommand_from list" -s "I" -l "indent" -d "indent (default \" \")" -x
@@ -143,8 +127,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from list" -s "o" -l "out-file" 
 complete -c taxonkit -n "__fish_seen_subcommand_from list" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from list" -l "verbose" -d "print verbose information"
 
-
-
 complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -s "h" -l "help" -d "help for name2taxid"
 complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -s "i" -l "name-field" -d "field index of name." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -s "s" -l "sci-name" -d "only searching scientific names"
@@ -154,8 +136,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -l "line-buffer
 complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from name2taxid" -l "verbose" -d "print verbose information"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from profile2cami" -s "a" -l "abundance-field" -d "field index of abundance." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from profile2cami" -s "h" -l "help" -d "help for profile2cami"
@@ -171,8 +151,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from profile2cami" -l "line-buff
 complete -c taxonkit -n "__fish_seen_subcommand_from profile2cami" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from profile2cami" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from profile2cami" -l "verbose" -d "print verbose information"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from reformat"  -d "Supporting (gzipped) file or STDIN."
 complete -c taxonkit -n "__fish_seen_subcommand_from reformat" -s "P" -l "add-prefix" -d "add prefixes for all ranks, single prefix for a rank is defined by flag --prefix-X"
@@ -206,8 +184,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from reformat" -s "o" -l "out-fi
 complete -c taxonkit -n "__fish_seen_subcommand_from reformat" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from reformat" -l "verbose" -d "print verbose information"
 
-
-
 complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -l "immediate-output" -d "-c -C download.rush"
 complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -s "i" -l "archive" -d "directory containing uncompressed dumped archives" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -s "h" -l "help" -d "help for taxid-changelog"
@@ -216,8 +192,6 @@ complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -l "line-b
 complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -s "o" -l "out-file" -d "out file (\"-\" for stdout, suffix .gz for gzipped out) (default \"-\")" -r
 complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -s "j" -l "threads" -d "number of CPUs." -x
 complete -c taxonkit -n "__fish_seen_subcommand_from taxid-changelog" -l "verbose" -d "print verbose information"
-
-
 
 complete -c taxonkit -n "__fish_seen_subcommand_from version" -s "u" -l "check-update" -d "check update"
 complete -c taxonkit -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "help for version"

@@ -7,8 +7,6 @@ complete -k -c delly -n __fish_use_subcommand -x -a filter -d "filter somatic or
 complete -k -c delly -n __fish_use_subcommand -x -a merge -d "merge structural variants across VCF/BCF files and within a single VCF/BCF file"
 complete -k -c delly -n __fish_use_subcommand -x -a call -d "discover and genotype structural variants"
 
-
-
 complete -c delly -n "__fish_seen_subcommand_from call" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from call" -s "t" -l "svtype" -d "SV type to compute [DEL, INS, DUP, INV, BND, ALL]" -x
 complete -c delly -n "__fish_seen_subcommand_from call" -s "g" -l "genome" -d "genome fasta file" -r
@@ -25,8 +23,6 @@ complete -c delly -n "__fish_seen_subcommand_from call" -s "v" -l "vcffile" -d "
 complete -c delly -n "__fish_seen_subcommand_from call" -s "u" -l "geno-qual" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from call" -s "d" -l "dump" -d "gzipped output file for SV-reads (optional)" -r
 
-
-
 complete -c delly -n "__fish_seen_subcommand_from merge" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from merge" -s "o" -l "outfile" -d "Merged SV BCF output file" -r
 complete -c delly -n "__fish_seen_subcommand_from merge" -s "u" -l "chunks" -d "max." -r
@@ -39,8 +35,6 @@ complete -c delly -n "__fish_seen_subcommand_from merge" -s "c" -l "precise" -d 
 complete -c delly -n "__fish_seen_subcommand_from merge" -s "p" -l "pass" -d "Filter sites for PASS"
 complete -c delly -n "__fish_seen_subcommand_from merge" -s "b" -l "bp-offset" -d "max." -x
 complete -c delly -n "__fish_seen_subcommand_from merge" -s "r" -l "rec-overlap" -d "min." -x
-
-
 
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "f" -l "filter" -d "Filter mode (somatic, germline)" -x
@@ -57,8 +51,6 @@ complete -c delly -n "__fish_seen_subcommand_from filter" -s "c" -l "controlcont
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "q" -l "gq" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "e" -l "rddel" -d "max." -x
 complete -c delly -n "__fish_seen_subcommand_from filter" -s "u" -l "rddup" -d "min." -x
-
-
 
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "t" -l "svtype" -d "SV type to compute [DEL, INS, DUP, INV, BND, ALL]" -x
@@ -79,8 +71,6 @@ complete -c delly -n "__fish_seen_subcommand_from lr" -s "r" -l "max-isize" -d "
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "v" -l "vcffile" -d "input VCF/BCF file for genotyping" -r
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "u" -l "geno-qual" -d "min." -x
 complete -c delly -n "__fish_seen_subcommand_from lr" -s "d" -l "dump" -d "gzipped output file for SV-reads" -r
-
-
 
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "g" -l "genome" -d "genome file" -r
@@ -106,8 +96,6 @@ complete -c delly -n "__fish_seen_subcommand_from cnv" -s "r" -l "scan-regions" 
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "d" -l "mad-cutoff" -d "median + 3 * mad count cutoff" -x
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "p" -l "percentile" -d "excl." -x
 complete -c delly -n "__fish_seen_subcommand_from cnv" -s "n" -l "no-window-selection" -d "no scan window selection"
-
-
 
 complete -c delly -n "__fish_seen_subcommand_from classify" -s "?" -l "help" -d "show help message"
 complete -c delly -n "__fish_seen_subcommand_from classify" -s "f" -l "filter" -d "Filter mode (somatic, germline)" -x

@@ -7,8 +7,6 @@ complete -c gt -n "not __fish_seen_subcommand_from bed_to_gff3 cds chain2dim chs
 complete -c gt -n "not __fish_seen_subcommand_from bed_to_gff3 cds chain2dim chseqids clean compreads condenseq congruence convertseq csa dot dupfeat encseq encseq2spm eval extractfeat extractseq fastq_sample featureindex fingerprint genomediff gff3 gff3_to_gtf gff3validator gtf_to_gff3 hop id_to_md5 inlineseq_add inlineseq_split interfeat loccheck ltrclustering ltrdigest ltrharvest matchtool matstat md5_to_id merge mergefeat mgth mkfeatureindex mkfmindex mmapandread orffinder packedindex prebwt readjoiner repfind scriptfilter seed_extend select seq seqfilter seqids seqmutate seqorder seqstat seqtransform seqtranslate sequniq shredder shulengthdist simreads sketch sketch_page snpper speck splicesiteinfo splitfasta stat suffixerator tagerator tallymer tirvish uniq uniquesub wtree" -o "help" -d "display help and exit"
 complete -c gt -n "not __fish_seen_subcommand_from bed_to_gff3 cds chain2dim chseqids clean compreads condenseq congruence convertseq csa dot dupfeat encseq encseq2spm eval extractfeat extractseq fastq_sample featureindex fingerprint genomediff gff3 gff3_to_gtf gff3validator gtf_to_gff3 hop id_to_md5 inlineseq_add inlineseq_split interfeat loccheck ltrclustering ltrdigest ltrharvest matchtool matstat md5_to_id merge mergefeat mgth mkfeatureindex mkfmindex mmapandread orffinder packedindex prebwt readjoiner repfind scriptfilter seed_extend select seq seqfilter seqids seqmutate seqorder seqstat seqtransform seqtranslate sequniq shredder shulengthdist simreads sketch sketch_page snpper speck splicesiteinfo splitfasta stat suffixerator tagerator tallymer tirvish uniq uniquesub wtree" -o "version" -d "display version information and exit"
 
-
-
 complete -k -c gt -n __fish_use_subcommand -x -a wtree -d "Call an wtree manipulation tool and pass argument(s) to it."
 complete -k -c gt -n __fish_use_subcommand -x -a uniquesub -d "Compute length of minimum unique prefixes."
 complete -k -c gt -n __fish_use_subcommand -x -a uniq -d "Filter out repeated feature node graphs in a sorted GFF3 file."
@@ -87,8 +85,6 @@ complete -k -c gt -n __fish_use_subcommand -x -a chain2dim -d "Chain pairwise ma
 complete -k -c gt -n __fish_use_subcommand -x -a cds -d "Add CDS (coding sequence) features to exon features given in GFF3 file."
 complete -k -c gt -n __fish_use_subcommand -x -a bed_to_gff3 -d "Parse BED file and convert it to GFF3."
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "featuretype" -d "Set type of parsed BED features default: BED_feature"
 complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "thicktype" -d "Set type of parsed thick BED features default: BED_thick_feature"
 complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "blocktype" -d "Set type of parsed BED blocks default: BED_block"
@@ -98,8 +94,6 @@ complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "bzip2" -d "write
 complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from bed_to_gff3" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from cds" -o "minorflen" -d "set the minimum length an open reading frame (ORF) must have to be added as a CDS feature (measured in amino acids) default: 64"
 complete -c gt -n "__fish_seen_subcommand_from cds" -o "startcodon" -d "require than an ORF must begin with a start codon default: no"
@@ -119,13 +113,9 @@ complete -c gt -n "__fish_seen_subcommand_from cds" -o "force" -d "force writing
 complete -c gt -n "__fish_seen_subcommand_from cds" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from cds" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from chain2dim"  -d "If no parameter is given, compute local chains with maximums score."
 complete -c gt -n "__fish_seen_subcommand_from chain2dim" -o "local" -d "const"
 complete -c gt -n "__fish_seen_subcommand_from chain2dim" -o "global" -d "default: 1.00" -x
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from chseqids" -o "sort" -d "sort the GFF3 features after changing the sequence ids (memory consumption is proportional to the input file size) default: no"
 complete -c gt -n "__fish_seen_subcommand_from chseqids" -s "v" -d "be verbose default: no"
@@ -136,27 +126,71 @@ complete -c gt -n "__fish_seen_subcommand_from chseqids" -o "force" -d "force wr
 complete -c gt -n "__fish_seen_subcommand_from chseqids" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from chseqids" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from clean" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from clean" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from compreads; and not __fish_seen_subcommand_from compress decompress refcompress refdecompress" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and not __fish_seen_subcommand_from compress decompress refcompress refdecompress" -o "version" -d "display version information and exit"
 
+complete -k -c gt -n "__fish_seen_subcommand_from compreads; and not __fish_seen_subcommand_from compress decompress refcompress refdecompress" -x -a refdecompress -d "Decodes a given RCR (Reference Compressed Reads)."
+complete -k -c gt -n "__fish_seen_subcommand_from compreads; and not __fish_seen_subcommand_from compress decompress refcompress refdecompress" -x -a refcompress -d "Generates compact encoding for fastq data using Reference Compressed Reads (RCR)."
+complete -k -c gt -n "__fish_seen_subcommand_from compreads; and not __fish_seen_subcommand_from compress decompress refcompress refdecompress" -x -a decompress -d "Decodes a file of compressed reads."
+complete -k -c gt -n "__fish_seen_subcommand_from compreads; and not __fish_seen_subcommand_from compress decompress refcompress refdecompress" -x -a compress -d "Generates compact encoding for fastq data."
 
-complete -c gt -n "__fish_seen_subcommand_from compreads" -o "help" -d "display help and exit"
-complete -c gt -n "__fish_seen_subcommand_from compreads" -o "version" -d "display version information and exit"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "descs" -d "encode descriptions default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "files" -d "File(s) containing reads."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "name" -d "specify base name for HCR to be generated."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "smap" -d "file containing alphabet description."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "qrange" -d "specify range of quality values."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "srate" -d "sampling rate, set to sensible default depending on sampling method default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "stype" -d "type of sampling one of regular - page - none default: page"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from compress" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "descs" -d "enable description decoding default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "file" -d "specify base name of files containing HCR."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "name" -d "specify base name for decoded hcr (suffix will be \".fastq\") default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "smap" -d "specify file containing alphabetdescription (file must be an .al1 file)."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "range" -d "decode multiple consecutive reads."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "width" -d "set width of output, 0 disables formatting."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from decompress" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "mquals" -d "store mapping quality for each read default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "quals" -d "store all quality values for each read, this implies enabling of option \"vquals\" default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "vquals" -d "store quality values of read positions having variations compared to reference default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "descs" -d "store read name for each read default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "ureads" -d "store unmapped reads in a separated fastq file (base name will be the value given in name and suffix will be \" _unmapped.fastq\" default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "ref" -d "Index file (generated by the gt encseq tool) for reference genome."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "bam" -d "File containing alignment of reads to genome (sorted \".bam\" file)."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "name" -d "specify base name for RCR to be generated."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refcompress" -o "version" -d "display version information and exit"
+
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -o "qnames" -d "decode read names, default is to just number them default: no"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -o "ref" -d "Index file (generated by the gt encseq tool) for reference genome."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -o "rcr" -d "specify base name of file containing RCR."
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -o "name" -d "specify base name for decoded RCR (suffix will be \".rcr.decoded\") default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from compreads; and __fish_seen_subcommand_from refdecompress" -o "version" -d "display version information and exit"
 
 complete -c gt -n "__fish_seen_subcommand_from condenseq" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from condenseq" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from congruence; and not __fish_seen_subcommand_from spacedseed" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from congruence; and not __fish_seen_subcommand_from spacedseed" -o "version" -d "display version information and exit"
 
+complete -k -c gt -n "__fish_seen_subcommand_from congruence; and not __fish_seen_subcommand_from spacedseed" -x -a spacedseed -d "Match spaced seeds."
 
-complete -c gt -n "__fish_seen_subcommand_from congruence" -o "help" -d "display help and exit"
-complete -c gt -n "__fish_seen_subcommand_from congruence" -o "version" -d "display version information and exit"
-
-
+complete -c gt -n "__fish_seen_subcommand_from congruence; and __fish_seen_subcommand_from spacedseed" -o "esa" -d "Specify index (enhanced suffix array) default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from congruence; and __fish_seen_subcommand_from spacedseed" -o "pck" -d "Specify index (packed index) default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from congruence; and __fish_seen_subcommand_from spacedseed" -s "q" -d "Specify files containing the query sequences"
+complete -c gt -n "__fish_seen_subcommand_from congruence; and __fish_seen_subcommand_from spacedseed" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from congruence; and __fish_seen_subcommand_from spacedseed" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from congruence; and __fish_seen_subcommand_from spacedseed" -o "version" -d "display version information and exit"
 
 complete -c gt -n "__fish_seen_subcommand_from convertseq" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from convertseq" -s "r" -d "reverse complement sequences default: no"
@@ -172,8 +206,6 @@ complete -c gt -n "__fish_seen_subcommand_from convertseq" -o "force" -d "force 
 complete -c gt -n "__fish_seen_subcommand_from convertseq" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from convertseq" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from csa" -o "join-length" -d "set join length for the spliced alignment clustering default: 300"
 complete -c gt -n "__fish_seen_subcommand_from csa" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from csa" -s "o" -d "redirect output to specified file default: undefined"
@@ -183,12 +215,8 @@ complete -c gt -n "__fish_seen_subcommand_from csa" -o "force" -d "force writing
 complete -c gt -n "__fish_seen_subcommand_from csa" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from csa" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from dot" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from dot" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from dupfeat" -o "dest" -d "set destination type default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from dupfeat" -o "source" -d "set source type default: undefined"
@@ -199,12 +227,104 @@ complete -c gt -n "__fish_seen_subcommand_from dupfeat" -o "force" -d "force wri
 complete -c gt -n "__fish_seen_subcommand_from dupfeat" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from dupfeat" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -o "version" -d "display version information and exit"
 
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a sample -d "Decode/extract encoded sequences by random choice."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a md5 -d "Display MD5 sums for an encoded sequence."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a info -d "Display meta-information about an encoded sequence."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a encode -d "Encode sequence files (FASTA/FASTQ, GenBank, EMBL) efficiently."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a decode -d "Decode/extract encoded sequences."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a check -d "Check the consistency of an encoded sequence file."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a bitextract -d "Extracts internal data from encoded sequences."
+complete -k -c gt -n "__fish_seen_subcommand_from encseq; and not __fish_seen_subcommand_from bench bitextract check decode encode info md5 sample" -x -a bench -d "Perform benchmark on extractions from encseq."
 
-complete -c gt -n "__fish_seen_subcommand_from encseq" -o "help" -d "display help and exit"
-complete -c gt -n "__fish_seen_subcommand_from encseq" -o "version" -d "display version information and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bench" -o "ccext" -d "specify number of random character extractions default: 0"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bench" -o "solepr" -d "prepare data structure for sequences ordered by their length default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bench" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bench" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bench" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "mirrored" -d "mirror sequence default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "stoppos" -d "output stop positions default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "specialranges" -d "output special ranges default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "bitpos" -d "extract and display two bit encoding for position default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "dir" -d "specify reading direction (fwd, cpl, rev, rcl) default: fwd"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from bitextract" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "scantrials" -d "specify number of scan trials default: 0"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "multicharcmptrials" -d "specify number of multicharacter trials default: 0"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "prefixlength" -d "prefix length default: 0"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "nocheckunit" -d "do not run checkextractunitatpos default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "mirrored" -d "use mirrored encseq default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from check" -o "version" -d "display version information and exit"
+
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "mirrored" -d "virtually append the reverse complement of each sequence default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "lossless" -d "allow lossless original sequence retrieval default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "dir" -d "specify reading direction (fwd, cpl, rev, rcl) default: fwd"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "seq" -d "extract sequence identified by its number default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "seqrange" -d "extract multiple consecutive sequences default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "output" -d "specify output format (choose from fasta|concat) default: fasta"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "range" -d "concatenated range to extract (implies '-output concat') default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "sepchar" -d "specify character to print as GT_SEPARATOR default: |"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "help" -d "display help for basic options and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "help+" -d "display help for all options and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from decode" -o "version" -d "display version information and exit"
+
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "showstats" -d "show compression results default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "ssp" -d "output sequence separator positions to file default: yes"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "des" -d "output sequence descriptions to file default: yes"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "sds" -d "output sequence description separator positions to file default: yes"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "md5" -d "output MD5 sums to file default: yes"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "clipdesc" -d "clip descriptions after first whitespace default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "sat" -d "specify kind of sequence representation by one of the keywords direct, bytecompress, eqlen, bit, uchar, ushort, uint32 default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "dna" -d "input is DNA sequence default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "protein" -d "input is protein sequence default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "dust" -d "mask low-complexity regions using the dust algorithm default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "dustwindow" -d "windowsize for the dust algorithm default: 64"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "dustthreshold" -d "threshold for the dust algorithm default: 2.00"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "dustlink" -d "Max."
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "indexname" -d "specify name for index to be generated default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "smap" -d "specify file containing a symbol mapping default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "lossless" -d "allow lossless original sequence retrieval default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "help" -d "display help for basic options and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "help+" -d "display help for all options and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from encode" -o "version" -d "display version information and exit"
+
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "nomap" -d "do not map encoded sequence (gives less information) default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "mirrored" -d "use mirrored encoded sequence (DNA only) default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "noindexname" -d "do not output index name default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "show_alphabet" -d "output alphabet definition default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "n50" -d "show N50 values (minimum length of largest sequences for covering at least 50% of total sequence length) default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -s "o" -d "redirect output to specified file default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "gzip" -d "write gzip compressed output file default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "bzip2" -d "write bzip2 compressed output file default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "force" -d "force writing to output file default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from info" -o "version" -d "display version information and exit"
+
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -o "fromindex" -d "use MD5 table from .md5 file default: yes"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -s "o" -d "redirect output to specified file default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -o "gzip" -d "write gzip compressed output file default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -o "bzip2" -d "write bzip2 compressed output file default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -o "force" -d "force writing to output file default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from md5" -o "version" -d "display version information and exit"
+
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "mirrored" -d "virtually append the reverse complement of each sequence default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "lossless" -d "allow lossless original sequence retrieval default: no"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "dir" -d "specify reading direction (fwd, cpl, rev, rcl) default: fwd"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "length" -d "minimum length to be extracted default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "seqrange" -d "extract multiple consecutive sequences default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "output" -d "specify output format (choose from fasta|concat) default: fasta"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "sepchar" -d "specify character to print as GT_SEPARATOR default: |"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "help" -d "display help for basic options and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "help+" -d "display help for all options and exit"
+complete -c gt -n "__fish_seen_subcommand_from encseq; and __fish_seen_subcommand_from sample" -o "version" -d "display version information and exit"
 
 complete -c gt -n "__fish_seen_subcommand_from encseq2spm" -s "l" -d "specify the minimum length default: 0"
 complete -c gt -n "__fish_seen_subcommand_from encseq2spm" -o "parts" -d "specify the number of parts default: 0"
@@ -216,8 +336,6 @@ complete -c gt -n "__fish_seen_subcommand_from encseq2spm" -s "v" -d "be verbose
 complete -c gt -n "__fish_seen_subcommand_from encseq2spm" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from encseq2spm" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from eval" -o "nuc" -d "evaluate nucleotide level (memory consumption is proportional to the input file sizes) default: yes"
 complete -c gt -n "__fish_seen_subcommand_from eval" -o "ltr" -d "evaluate a LTR retrotransposon prediction instead of a gene prediction (all LTR_retrotransposon elements are considered to have an undetermined strand) default: no"
 complete -c gt -n "__fish_seen_subcommand_from eval" -o "ltrdelta" -d "set allowed delta for LTR borders to be considered equal default: 20"
@@ -228,8 +346,6 @@ complete -c gt -n "__fish_seen_subcommand_from eval" -o "bzip2" -d "write bzip2 
 complete -c gt -n "__fish_seen_subcommand_from eval" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from eval" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from eval" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from extractfeat" -o "type" -d "set type of features to extract default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from extractfeat" -o "join" -d "join feature sequences in the same subgraph into a single one default: no"
@@ -255,8 +371,6 @@ complete -c gt -n "__fish_seen_subcommand_from extractfeat" -o "force" -d "force
 complete -c gt -n "__fish_seen_subcommand_from extractfeat" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from extractfeat" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from extractseq" -o "frompos" -d "extract sequence from this position counting from 1 on default: 0"
 complete -c gt -n "__fish_seen_subcommand_from extractseq" -o "topos" -d "extract sequence up to this position counting from 1 on default: 0"
 complete -c gt -n "__fish_seen_subcommand_from extractseq" -o "match" -d "extract all sequences whose description matches the given pattern."
@@ -269,13 +383,9 @@ complete -c gt -n "__fish_seen_subcommand_from extractseq" -o "force" -d "force 
 complete -c gt -n "__fish_seen_subcommand_from extractseq" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from extractseq" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from fastq_sample" -o "length" -d "minimum number of chars to be chosen default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from fastq_sample" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from fastq_sample" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from featureindex" -o "range" -d "range constraint for index query default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from featureindex" -o "seqid" -d "sequence region default: undefined"
@@ -285,8 +395,6 @@ complete -c gt -n "__fish_seen_subcommand_from featureindex" -o "filename" -d "f
 complete -c gt -n "__fish_seen_subcommand_from featureindex" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from featureindex" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from featureindex" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from fingerprint" -o "check" -d "compare all fingerprints contained in the given checklist file with checksums in given sequence_files(s)."
 complete -c gt -n "__fish_seen_subcommand_from fingerprint" -o "duplicates" -d "show duplicate fingerprints from given sequence_file(s)."
@@ -299,8 +407,6 @@ complete -c gt -n "__fish_seen_subcommand_from fingerprint" -o "force" -d "force
 complete -c gt -n "__fish_seen_subcommand_from fingerprint" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from fingerprint" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from genomediff" -o "indextype" -d "specify type of index, one of: esa|pck|encseq."
 complete -c gt -n "__fish_seen_subcommand_from genomediff" -o "indexname" -d "Basename of encseq to construct."
 complete -c gt -n "__fish_seen_subcommand_from genomediff" -o "unitfile" -d "specifies genomic units, see below for description."
@@ -312,8 +418,6 @@ complete -c gt -n "__fish_seen_subcommand_from genomediff" -s "v" -d "be verbose
 complete -c gt -n "__fish_seen_subcommand_from genomediff" -o "help" -d "display help for basic options and exit"
 complete -c gt -n "__fish_seen_subcommand_from genomediff" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from genomediff" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from gff3" -o "sort" -d "sort the GFF3 features (memory consumption is proportional to the input file size(s)) default: no"
 complete -c gt -n "__fish_seen_subcommand_from gff3" -o "sortlines" -d "sort the GFF3 features on a strict line basis (not sorted asdefined by GenomeTools) default: no"
@@ -339,8 +443,6 @@ complete -c gt -n "__fish_seen_subcommand_from gff3" -o "force" -d "force writin
 complete -c gt -n "__fish_seen_subcommand_from gff3" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from gff3" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from gff3_to_gtf" -s "o" -d "redirect output to specified file default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from gff3_to_gtf" -o "gzip" -d "write gzip compressed output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from gff3_to_gtf" -o "bzip2" -d "write bzip2 compressed output file default: no"
@@ -348,14 +450,10 @@ complete -c gt -n "__fish_seen_subcommand_from gff3_to_gtf" -o "force" -d "force
 complete -c gt -n "__fish_seen_subcommand_from gff3_to_gtf" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from gff3_to_gtf" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from gff3validator" -o "typecheck" -d "use an ontology given in an OBO file to validate parent-child relationships."
 complete -c gt -n "__fish_seen_subcommand_from gff3validator" -o "xrfcheck" -d "check Dbxref and Ontology_term attributes for correct syntax according to a abbreviation definition file."
 complete -c gt -n "__fish_seen_subcommand_from gff3validator" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from gff3validator" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from gtf_to_gff3" -o "tidy" -d "try to tidy the GTF file up during parsing default: no"
 complete -c gt -n "__fish_seen_subcommand_from gtf_to_gff3" -s "o" -d "redirect output to specified file default: undefined"
@@ -364,8 +462,6 @@ complete -c gt -n "__fish_seen_subcommand_from gtf_to_gff3" -o "bzip2" -d "write
 complete -c gt -n "__fish_seen_subcommand_from gtf_to_gff3" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from gtf_to_gff3" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from gtf_to_gff3" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from hop" -s "c" -d "cognate sequence (encoded using gt encseq encode)"
 complete -c gt -n "__fish_seen_subcommand_from hop" -o "map" -d "mapping of reads to the cognate sequence it must be in SAM/BAM format, and sorted by coordinate (can be prepared e.g. using: samtools sort)"
@@ -381,8 +477,6 @@ complete -c gt -n "__fish_seen_subcommand_from hop" -s "v" -d "be verbose defaul
 complete -c gt -n "__fish_seen_subcommand_from hop" -o "help" -d "display help for basic options and exit"
 complete -c gt -n "__fish_seen_subcommand_from hop" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from hop" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from id_to_md5" -o "seqfile" -d "set the sequence file from which to take the sequences default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from id_to_md5" -o "encseq" -d "set the encoded sequence indexname from which to take the sequences default: undefined"
@@ -400,8 +494,6 @@ complete -c gt -n "__fish_seen_subcommand_from id_to_md5" -o "force" -d "force w
 complete -c gt -n "__fish_seen_subcommand_from id_to_md5" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from id_to_md5" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_add" -o "seqfile" -d "set the sequence file from which to take the sequences default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_add" -o "encseq" -d "set the encoded sequence indexname from which to take the sequences default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_add" -o "seqfiles" -d "set the sequence files from which to extract the features use '--' to terminate the list of sequence files"
@@ -416,14 +508,10 @@ complete -c gt -n "__fish_seen_subcommand_from inlineseq_add" -o "force" -d "for
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_add" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_add" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_split" -o "seqfile" -d "output file for sequences as FASTA default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_split" -o "gff3file" -d "output file for annotations as GFF3 default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_split" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from inlineseq_split" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from interfeat" -o "outside" -d "set outside type default: exon"
 complete -c gt -n "__fish_seen_subcommand_from interfeat" -o "inter" -d "set intermediary type default: intron"
@@ -434,12 +522,8 @@ complete -c gt -n "__fish_seen_subcommand_from interfeat" -o "force" -d "force w
 complete -c gt -n "__fish_seen_subcommand_from interfeat" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from interfeat" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from loccheck" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from loccheck" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from ltrclustering" -o "psmall" -d "specify how many percent of the smaller sequence a match needs to cover in order to cluster the two sequences of the match."
 complete -c gt -n "__fish_seen_subcommand_from ltrclustering" -o "plarge" -d "specify how many percent of the larger sequence a match needs to cover in order to cluster the two sequences of the match."
@@ -449,8 +533,6 @@ complete -c gt -n "__fish_seen_subcommand_from ltrclustering" -o "bzip2" -d "wri
 complete -c gt -n "__fish_seen_subcommand_from ltrclustering" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from ltrclustering" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from ltrclustering" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from ltrdigest" -o "outfileprefix" -d "prefix for output files (e.g. 'foo' will create files called 'foo_*.csv' and 'foo_*.fas') Omit this option for GFF3 output only."
 complete -c gt -n "__fish_seen_subcommand_from ltrdigest" -o "metadata" -d "output metadata (run conditions) to separate file default: yes"
@@ -487,8 +569,6 @@ complete -c gt -n "__fish_seen_subcommand_from ltrdigest" -o "help" -d "display 
 complete -c gt -n "__fish_seen_subcommand_from ltrdigest" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from ltrdigest" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from ltrharvest" -o "index" -d "specify the name of the enhanced suffix array index (mandatory) default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from ltrharvest" -o "range" -d "specify range in the input sequence(s) in which LTR pairs are searched default: 0 0"
 complete -c gt -n "__fish_seen_subcommand_from ltrharvest" -o "seed" -d "specify minimum seed length for exact repeats default: 30"
@@ -520,8 +600,6 @@ complete -c gt -n "__fish_seen_subcommand_from ltrharvest" -o "help" -d "display
 complete -c gt -n "__fish_seen_subcommand_from ltrharvest" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from ltrharvest" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "type" -d "choose match file format: OPENMATCH: 'open match' format, e.g. vmatch BLASTOUT : tabular BLAST output (-m 8) BLASTALLP: invoke BLASTALL with blastp BLASTALLN: invoke BLASTALL with blastn BLASTP : invoke blastp BLASTN : invoke blastn LAST : invoke LAST SW : use Smith-Waterman default: OPENMATCH"
 complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "matchfile" -d "set input file name default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "db" -d "set database file name default: undefined"
@@ -530,8 +608,6 @@ complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "swmaxedist" -d "se
 complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "query" -d "set query file name default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from matchtool" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from matstat" -o "fmi" -d "specify fmindex default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from matstat" -o "esa" -d "specify suffix array default: undefined"
@@ -543,8 +619,6 @@ complete -c gt -n "__fish_seen_subcommand_from matstat" -o "output" -d "set outp
 complete -c gt -n "__fish_seen_subcommand_from matstat" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from matstat" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -s "o" -d "redirect output to specified file default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -o "gzip" -d "write gzip compressed output file default: no"
@@ -552,8 +626,6 @@ complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -o "bzip2" -d "write b
 complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from md5_to_id" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from merge" -o "retainids" -d "when available, use the original IDs provided in the source file (memory consumption is proportional to the input file size(s)) default: no"
 complete -c gt -n "__fish_seen_subcommand_from merge" -o "tidy" -d "try to tidy the GFF3 files up during parsing default: no"
@@ -564,16 +636,12 @@ complete -c gt -n "__fish_seen_subcommand_from merge" -o "force" -d "force writi
 complete -c gt -n "__fish_seen_subcommand_from merge" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from merge" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from mergefeat" -s "o" -d "redirect output to specified file default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from mergefeat" -o "gzip" -d "write gzip compressed output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from mergefeat" -o "bzip2" -d "write bzip2 compressed output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from mergefeat" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from mergefeat" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from mergefeat" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from mgth" -s "s" -d "score for synonymic base exchanges default: 1.00"
 complete -c gt -n "__fish_seen_subcommand_from mgth" -s "n" -d "score for non-synonymic base exchanges default: -1.00"
@@ -597,8 +665,6 @@ complete -c gt -n "__fish_seen_subcommand_from mgth" -s "x" -d "extend the EGTs 
 complete -c gt -n "__fish_seen_subcommand_from mgth" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from mgth" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from mkfeatureindex" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from mkfeatureindex" -o "backend" -d "database backend to use choose from [sqlite] default: sqlite"
 complete -c gt -n "__fish_seen_subcommand_from mkfeatureindex" -o "input" -d "input data format choose from gff|bed|gtf default: gff"
@@ -607,8 +673,6 @@ complete -c gt -n "__fish_seen_subcommand_from mkfeatureindex" -s "v" -d "be ver
 complete -c gt -n "__fish_seen_subcommand_from mkfeatureindex" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from mkfeatureindex" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from mkfmindex" -o "fmout" -d "specify name of FM-index to be generated (mandatory if more than one input index is specified) default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from mkfmindex" -o "ii" -d "specify indices to be used"
 complete -c gt -n "__fish_seen_subcommand_from mkfmindex" -o "size" -d "specify size (tiny, small, medium, big) default: medium"
@@ -616,12 +680,8 @@ complete -c gt -n "__fish_seen_subcommand_from mkfmindex" -o "noindexpos" -d "st
 complete -c gt -n "__fish_seen_subcommand_from mkfmindex" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from mkfmindex" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from mmapandread" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from mmapandread" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from orffinder" -o "types" -d "Specify regions which should be searched for open reading frames, e.g. 'LTR_retrotransposon'"
 complete -c gt -n "__fish_seen_subcommand_from orffinder" -o "allorfs" -d "search for all ORFs instead of only the longest default: no"
@@ -642,24 +702,16 @@ complete -c gt -n "__fish_seen_subcommand_from orffinder" -o "regionmapping" -d 
 complete -c gt -n "__fish_seen_subcommand_from orffinder" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from orffinder" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from packedindex" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from packedindex" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from prebwt" -o "pck" -d "Specify index (packed index) default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from prebwt" -o "maxdepth" -d "specify maximum depth (value > 0) default: 0"
 complete -c gt -n "__fish_seen_subcommand_from prebwt" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from prebwt" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from readjoiner" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from readjoiner" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from repfind" -s "l" -d "Specify minimum length of matches default: 0"
 complete -c gt -n "__fish_seen_subcommand_from repfind" -s "f" -d "Compute forward matches default: yes"
@@ -679,16 +731,12 @@ complete -c gt -n "__fish_seen_subcommand_from repfind" -s "v" -d "be verbose de
 complete -c gt -n "__fish_seen_subcommand_from repfind" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from repfind" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from scriptfilter" -o "showinfo" -d "show information about filter default: yes"
 complete -c gt -n "__fish_seen_subcommand_from scriptfilter" -o "validate" -d "validate filter function default: yes"
 complete -c gt -n "__fish_seen_subcommand_from scriptfilter" -o "oneline" -d "show compact information on one line default: no"
 complete -c gt -n "__fish_seen_subcommand_from scriptfilter" -o "scriptname" -d "show script name default: yes"
 complete -c gt -n "__fish_seen_subcommand_from scriptfilter" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from scriptfilter" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from seed_extend" -o "ii" -d "Input index for encseq encoded sequences"
 complete -c gt -n "__fish_seen_subcommand_from seed_extend" -o "qii" -d "Query input index (encseq)"
@@ -717,8 +765,6 @@ complete -c gt -n "__fish_seen_subcommand_from seed_extend" -s "v" -d "be verbos
 complete -c gt -n "__fish_seen_subcommand_from seed_extend" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seed_extend" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from select" -o "retainids" -d "when available, use the original IDs provided in the source file (memory consumption is proportional to the input file size(s)) default: no"
 complete -c gt -n "__fish_seen_subcommand_from select" -o "seqid" -d "select feature with the given sequence ID (all comments are selected)."
 complete -c gt -n "__fish_seen_subcommand_from select" -o "source" -d "select feature with the given source (the source is column 2 in regular GFF3 lines) default: undefined"
@@ -744,8 +790,6 @@ complete -c gt -n "__fish_seen_subcommand_from select" -o "force" -d "force writ
 complete -c gt -n "__fish_seen_subcommand_from select" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from select" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from seq" -o "recreate" -d "recreate index files, even if they exist already default: no"
 complete -c gt -n "__fish_seen_subcommand_from seq" -o "showfasta" -d "show all sequences (in FASTA format) default: no"
 complete -c gt -n "__fish_seen_subcommand_from seq" -o "showseqnum" -d "show sequence with given number (sequences are counted from 1 unless -seqnum_from_0 is specified) default: undefined"
@@ -763,8 +807,6 @@ complete -c gt -n "__fish_seen_subcommand_from seq" -o "force" -d "force writing
 complete -c gt -n "__fish_seen_subcommand_from seq" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seq" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from seqfilter" -o "minlength" -d "set minimum length a sequence must have to pass the filter default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from seqfilter" -o "maxlength" -d "set maximum length a sequence can have to pass the filter default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from seqfilter" -o "maxseqnum" -d "set the maximum number of sequences which can pass the filter default: undefined"
@@ -779,12 +821,8 @@ complete -c gt -n "__fish_seen_subcommand_from seqfilter" -o "force" -d "force w
 complete -c gt -n "__fish_seen_subcommand_from seqfilter" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqfilter" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from seqids" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqids" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from seqmutate" -o "rate" -d "set the mutation rate default: 1"
 complete -c gt -n "__fish_seen_subcommand_from seqmutate" -o "width" -d "set output width for FASTA sequence printing (0 disables formatting) default: 0"
@@ -795,8 +833,6 @@ complete -c gt -n "__fish_seen_subcommand_from seqmutate" -o "force" -d "force w
 complete -c gt -n "__fish_seen_subcommand_from seqmutate" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqmutate" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "invert" -d "invert order of sequences default: no"
 complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "sort" -d "sort sequences lexicographically (by actual sequence) default: no"
 complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "revsort" -d "sort sequences in reverse lexicographic order default: no"
@@ -806,8 +842,6 @@ complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "shuffle" -d "shuffl
 complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "sortlength" -d "sort by decreasing length default: no"
 complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqorder" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from seqstat" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from seqstat" -o "distlen" -d "show distribution of sequence length."
@@ -820,8 +854,6 @@ complete -c gt -n "__fish_seen_subcommand_from seqstat" -o "help" -d "display he
 complete -c gt -n "__fish_seen_subcommand_from seqstat" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqstat" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from seqtransform" -o "addstopaminos" -d "append stop amino acids ('*') to given protein sequences, if not already present default: no"
 complete -c gt -n "__fish_seen_subcommand_from seqtransform" -o "width" -d "set output width for FASTA sequence printing (0 disables formatting) default: 0"
 complete -c gt -n "__fish_seen_subcommand_from seqtransform" -s "o" -d "redirect output to specified file default: undefined"
@@ -830,8 +862,6 @@ complete -c gt -n "__fish_seen_subcommand_from seqtransform" -o "bzip2" -d "writ
 complete -c gt -n "__fish_seen_subcommand_from seqtransform" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from seqtransform" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqtransform" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from seqtranslate" -o "reverse" -d "also translate reverse complements default: yes"
 complete -c gt -n "__fish_seen_subcommand_from seqtranslate" -o "fastawidth" -d "width of the FASTA output, 0 for unlimited default: 60"
@@ -842,8 +872,6 @@ complete -c gt -n "__fish_seen_subcommand_from seqtranslate" -o "force" -d "forc
 complete -c gt -n "__fish_seen_subcommand_from seqtranslate" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from seqtranslate" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from sequniq" -o "rev" -d "also filter out sequences whose reverse complement is identical to a sequence already output default: no"
 complete -c gt -n "__fish_seen_subcommand_from sequniq" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from sequniq" -o "width" -d "set output width for FASTA sequence printing (0 disables formatting) default: 0"
@@ -853,8 +881,6 @@ complete -c gt -n "__fish_seen_subcommand_from sequniq" -o "bzip2" -d "write bzi
 complete -c gt -n "__fish_seen_subcommand_from sequniq" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from sequniq" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from sequniq" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from shredder" -o "coverage" -d "set the number of times the sequence_file is shreddered default: 1"
 complete -c gt -n "__fish_seen_subcommand_from shredder" -o "minlength" -d "set the minimum length of the shreddered fragments default: 300"
@@ -870,15 +896,11 @@ complete -c gt -n "__fish_seen_subcommand_from shredder" -o "force" -d "force wr
 complete -c gt -n "__fish_seen_subcommand_from shredder" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from shredder" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from shulengthdist" -o "ii" -d "Specify input index default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from shulengthdist" -o "scan" -d "scan index rather than mapping it to main memory default: no"
 complete -c gt -n "__fish_seen_subcommand_from shulengthdist" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from shulengthdist" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from shulengthdist" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from simreads" -o "num" -d "desired number of reads default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from simreads" -o "coverage" -d "desired coverage of the reads default: undefined"
@@ -897,8 +919,6 @@ complete -c gt -n "__fish_seen_subcommand_from simreads" -o "help" -d "display h
 complete -c gt -n "__fish_seen_subcommand_from simreads" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from simreads" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from sketch" -o "pipe" -d "use pipe mode (i.e., show all gff3 features on stdout) default: no"
 complete -c gt -n "__fish_seen_subcommand_from sketch" -o "flattenfiles" -d "do not group tracks by source file name and remove file names from track description default: no"
 complete -c gt -n "__fish_seen_subcommand_from sketch" -o "seqid" -d "sequence region identifier default: first one in file"
@@ -915,8 +935,6 @@ complete -c gt -n "__fish_seen_subcommand_from sketch" -o "force" -d "force writ
 complete -c gt -n "__fish_seen_subcommand_from sketch" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from sketch" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "seqid" -d "sequence region to draw default: first in file"
 complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "text" -d "text to show in header default: file name"
 complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "fontsize" -d "header and footer font size (in points) default: 10.00"
@@ -929,8 +947,6 @@ complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "style" -d "style
 complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "help" -d "display help for basic options and exit"
 complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from sketch_page" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from snpper" -o "trans_table" -d "NCBI translation table number, choose from: * 1: Standard * 2: Vertebrate Mitochondrial * 3: Yeast Mitochondrial * 4: Mold Mitochondrial; Protozoan Mitochondrial; Coelenterate Mitochondrial; Mycoplasma; Spiroplasma * 5: Invertebrate Mitochondrial * 6: Ciliate Nuclear; Dasycladacean Nuclear; Hexamita Nuclear * 9: Echinoderm Mitochondrial; Flatworm Mitochondrial * 10: Euplotid Nuclear * 11: Bacterial, Archaeal and Plant Plastid * 12: Alternative Yeast Nuclear * 13: Ascidian Mitochondrial * 14: Alternative Flatworm Mitochondrial * 15: Blepharisma Macronuclear * 16: Chlorophycean Mitochondrial * 21: Trematode Mitochondrial * 22: Scenedesmus obliquus Mitochondrial * 23: Thraustochytrium Mitochondrial * 24: Pterobranchia Mitochondrial * 25: Candidate Division SR1 and Gracilibacteria default: 1"
 complete -c gt -n "__fish_seen_subcommand_from snpper" -o "seqfile" -d "set the sequence file from which to take the sequences default: undefined"
@@ -946,8 +962,6 @@ complete -c gt -n "__fish_seen_subcommand_from snpper" -o "bzip2" -d "write bzip
 complete -c gt -n "__fish_seen_subcommand_from snpper" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from snpper" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from snpper" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from speck" -o "specfile" -d "file with specification definition default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from speck" -o "colored" -d "show colored output default: yes"
@@ -971,8 +985,6 @@ complete -c gt -n "__fish_seen_subcommand_from speck" -s "v" -d "be verbose defa
 complete -c gt -n "__fish_seen_subcommand_from speck" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from speck" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from splicesiteinfo" -o "seqfile" -d "set the sequence file from which to take the sequences default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from splicesiteinfo" -o "encseq" -d "set the encoded sequence indexname from which to take the sequences default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from splicesiteinfo" -o "seqfiles" -d "set the sequence files from which to extract the features use '--' to terminate the list of sequence files"
@@ -988,8 +1000,6 @@ complete -c gt -n "__fish_seen_subcommand_from splicesiteinfo" -o "force" -d "fo
 complete -c gt -n "__fish_seen_subcommand_from splicesiteinfo" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from splicesiteinfo" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "numfiles" -d "set the number of target files default: 0"
 complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "targetsize" -d "set the target file size in MB default: 50"
 complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "splitdesc" -d "put every fasta entry in a separate file named by its description in the given directory default: undefined"
@@ -997,8 +1007,6 @@ complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "width" -d "set ou
 complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from splitfasta" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from stat" -o "genelengthdistri" -d "show gene length distribution default: no"
 complete -c gt -n "__fish_seen_subcommand_from stat" -o "genescoredistri" -d "show gene score distribution default: no"
@@ -1015,8 +1023,6 @@ complete -c gt -n "__fish_seen_subcommand_from stat" -o "bzip2" -d "write bzip2 
 complete -c gt -n "__fish_seen_subcommand_from stat" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from stat" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from stat" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from suffixerator" -o "ssp" -d "output sequence separator positions to file default: yes"
 complete -c gt -n "__fish_seen_subcommand_from suffixerator" -o "des" -d "output sequence descriptions to file default: yes"
@@ -1052,8 +1058,6 @@ complete -c gt -n "__fish_seen_subcommand_from suffixerator" -o "help" -d "displ
 complete -c gt -n "__fish_seen_subcommand_from suffixerator" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from suffixerator" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from tagerator" -s "q" -d "Specify files containing the short sequence tags"
 complete -c gt -n "__fish_seen_subcommand_from tagerator" -s "e" -d "Specify the allowed number of differences (replacements/insertions/deletions) default: -1"
 complete -c gt -n "__fish_seen_subcommand_from tagerator" -o "esa" -d "Specify index (enhanced suffix array) default: undefined"
@@ -1069,12 +1073,43 @@ complete -c gt -n "__fish_seen_subcommand_from tagerator" -s "v" -d "be verbose 
 complete -c gt -n "__fish_seen_subcommand_from tagerator" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from tagerator" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and not __fish_seen_subcommand_from mkindex occratio search" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and not __fish_seen_subcommand_from mkindex occratio search" -o "version" -d "display version information and exit"
 
+complete -k -c gt -n "__fish_seen_subcommand_from tallymer; and not __fish_seen_subcommand_from mkindex occratio search" -x -a search -d "Search a set of k-mers in an index constructed by ``gt tallymer mkindex''."
+complete -k -c gt -n "__fish_seen_subcommand_from tallymer; and not __fish_seen_subcommand_from mkindex occratio search" -x -a occratio -d "Compute occurrence ratio for a set of sequences represented by an enhanced suffix array."
+complete -k -c gt -n "__fish_seen_subcommand_from tallymer; and not __fish_seen_subcommand_from mkindex occratio search" -x -a mkindex -d "Count and index k-mers in the given enhanced suffix array for a fixed value of k."
 
-complete -c gt -n "__fish_seen_subcommand_from tallymer" -o "help" -d "display help and exit"
-complete -c gt -n "__fish_seen_subcommand_from tallymer" -o "version" -d "display version information and exit"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "esa" -d "specify suffixerator-index (mandatory option) default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "mersize" -d "Specify the mer size."
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "minocc" -d "Specify the minimum occurrence number for the mers to output/index default: 0"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "maxocc" -d "Specify the maximum occurrence number for the mers to output/index default: 0"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "pl" -d "specify prefix length for bucket boundary construction recommendation: use without argument; then a reasonable prefix length is automatically determined default: 0"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "indexname" -d "store the mers specified by options -maxocc and -minocc in an index default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "counts" -d "store counts of the mers default: no"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "scan" -d "read enhanced suffix array sequentially instead of mapping it to memory default: no"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from mkindex" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "esa" -d "specify suffixerator-index (mandatory option) default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "minmersize" -d "specify minimum mer size for which to compute the occurrence distribution default: 0"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "maxmersize" -d "specify maximum mer size for which to compute the occurrence distribution default: 0"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "step" -d "specify step size when specifying mer sizes default: 1"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "mersizes" -d "specify mer sizes as non-empty sequence of non decreasing positive integers"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "output" -d "use combination of the following keywords: unique nonunique nonuniquemulti relative total to specify kind of output"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "scan" -d "read suffixerator-index sequentially instead of mapping it to memory default: no"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from occratio" -o "version" -d "display version information and exit"
 
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -o "tyr" -d "specify tallymer-index default: undefined"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -s "q" -d "specify query file names"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -o "strand" -d "specify the strand to be searched: use f (for forward strand) or p (for reverse complemented strand) or fp (for both); default is f default: f"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -o "output" -d "specify output flags (qseqnum, qpos, counts, sequence)"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -s "v" -d "be verbose default: no"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -o "help" -d "display help and exit"
+complete -c gt -n "__fish_seen_subcommand_from tallymer; and __fish_seen_subcommand_from search" -o "version" -d "display version information and exit"
 
 complete -c gt -n "__fish_seen_subcommand_from tirvish" -o "index" -d "specify the name of the enhanced suffix array index (mandatory) default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from tirvish" -o "seed" -d "specify minimum seed length for exact repeats default: 20"
@@ -1102,8 +1137,6 @@ complete -c gt -n "__fish_seen_subcommand_from tirvish" -o "help" -d "display he
 complete -c gt -n "__fish_seen_subcommand_from tirvish" -o "help+" -d "display help for all options and exit"
 complete -c gt -n "__fish_seen_subcommand_from tirvish" -o "version" -d "display version information and exit"
 
-
-
 complete -c gt -n "__fish_seen_subcommand_from uniq" -s "v" -d "be verbose default: no"
 complete -c gt -n "__fish_seen_subcommand_from uniq" -s "o" -d "redirect output to specified file default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from uniq" -o "gzip" -d "write gzip compressed output file default: no"
@@ -1111,8 +1144,6 @@ complete -c gt -n "__fish_seen_subcommand_from uniq" -o "bzip2" -d "write bzip2 
 complete -c gt -n "__fish_seen_subcommand_from uniq" -o "force" -d "force writing to output file default: no"
 complete -c gt -n "__fish_seen_subcommand_from uniq" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from uniq" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from uniquesub" -o "fmi" -d "specify fmindex default: undefined"
 complete -c gt -n "__fish_seen_subcommand_from uniquesub" -o "esa" -d "specify suffix array default: undefined"
@@ -1123,8 +1154,6 @@ complete -c gt -n "__fish_seen_subcommand_from uniquesub" -o "max" -d "only outp
 complete -c gt -n "__fish_seen_subcommand_from uniquesub" -o "output" -d "set output flags (sequence, querypos)"
 complete -c gt -n "__fish_seen_subcommand_from uniquesub" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from uniquesub" -o "version" -d "display version information and exit"
-
-
 
 complete -c gt -n "__fish_seen_subcommand_from wtree" -o "help" -d "display help and exit"
 complete -c gt -n "__fish_seen_subcommand_from wtree" -o "version" -d "display version information and exit"

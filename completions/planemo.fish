@@ -6,8 +6,6 @@ complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos
 complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "directory" -d "Workspace for planemo." -x
 complete -c planemo -n "not __fish_seen_subcommand_from autoupdate ci_find_repos ci_find_tools ci_setup clone conda_build conda_env conda_init conda_install conda_search config_init container_register create_alias create_gist database_create database_delete database_list delete_alias docker_build docker_shell dockstore_init docs lint list_alias list_invocations list_repos merge_test_reports mull mulled_init normalize open profile_create profile_delete profile_list project_init pull_request rerun run serve share_test shed_build shed_create shed_diff shed_download shed_init shed_lint shed_serve shed_test shed_update shed_upload syntax test test_reports tool_init training_fill_data_library training_generate_from_wf training_init upload_data workflow_convert workflow_edit workflow_job_init workflow_lint workflow_test_init workflow_upload" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c planemo -n __fish_use_subcommand -x -a workflow_upload -d "Upload workflows to github organization."
 complete -k -c planemo -n __fish_use_subcommand -x -a workflow_test_init -d "Initialize a Galaxy workflow test..."
 complete -k -c planemo -n __fish_use_subcommand -x -a workflow_lint -d "Check workflows for syntax errors and best..."
@@ -72,8 +70,6 @@ complete -k -c planemo -n __fish_use_subcommand -x -a ci_setup -d "Launch Galaxy
 complete -k -c planemo -n __fish_use_subcommand -x -a ci_find_tools -d "Find all tools in one or more directories."
 complete -k -c planemo -n __fish_use_subcommand -x -a ci_find_repos -d "Find all shed repositories in one or more..."
 complete -k -c planemo -n __fish_use_subcommand -x -a autoupdate -d "Auto-update tool requirements by checking..."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "dry-run" -d "Perform a dry run autoupdate without modifying the XML files."
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -s "r" -l "recursive" -d "Recursively perform command for subdirectories."
@@ -144,8 +140,6 @@ complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "fail_level" 
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "galaxy_user_key" -d "User key to use with external Galaxy engine." -x
 complete -c planemo -n "__fish_seen_subcommand_from autoupdate" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "exclude" -d "Paths to exclude." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "exclude_from" -d "File of paths to exclude." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "changed_in_commit_range" -d "Exclude paths unchanged in git commit range." -r
@@ -153,8 +147,6 @@ complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "chunk_cou
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "chunk" -d "When output is split into --chunk_count groups, output the group 0-indexedby this option." -x
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "output" -d "File to output to, or - for standard output." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_repos" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "exclude" -d "Paths to exclude." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "exclude_from" -d "File of paths to exclude." -r
@@ -164,8 +156,6 @@ complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "chunk" -d
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "output" -d "File to output to, or - for standard output." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "group_tools" -d "Group tools of the same repository on a single line."
 complete -c planemo -n "__fish_seen_subcommand_from ci_find_tools" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "galaxy_python_version" -d "Python version to start Galaxy under" -x
@@ -189,12 +179,8 @@ complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "tool_dependenc
 complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "tool_data_path" -d "Directory where data used by tools is located." -r
 complete -c planemo -n "__fish_seen_subcommand_from ci_setup" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from clone" -l "fork" -l "skip_fork" -d "--branch TEXT Create a named branch on result."
 complete -c planemo -n "__fish_seen_subcommand_from clone" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from conda_build" -l "conda_prefix" -d "Conda prefix to use for conda dependency commands." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_build" -l "conda_exec" -d "Location of conda executable." -r
@@ -202,23 +188,17 @@ complete -c planemo -n "__fish_seen_subcommand_from conda_build" -l "conda_chann
 complete -c planemo -n "__fish_seen_subcommand_from conda_build" -l "conda_use_local" -d "Use locally built packages while building Conda environments."
 complete -c planemo -n "__fish_seen_subcommand_from conda_build" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from conda_env" -l "conda_prefix" -d "Conda prefix to use for conda dependency commands." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_env" -l "conda_exec" -d "Location of conda executable." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_env" -l "conda_channels" -l "conda_ensure_channels" -d "Ensure conda is configured with specified comma separated list of channels." -x
 complete -c planemo -n "__fish_seen_subcommand_from conda_env" -l "conda_use_local" -d "Use locally built packages while building Conda environments."
 complete -c planemo -n "__fish_seen_subcommand_from conda_env" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from conda_init" -l "conda_prefix" -d "Conda prefix to use for conda dependency commands." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_init" -l "conda_exec" -d "Location of conda executable." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_init" -l "conda_channels" -l "conda_ensure_channels" -d "Ensure conda is configured with specified comma separated list of channels." -x
 complete -c planemo -n "__fish_seen_subcommand_from conda_init" -l "conda_use_local" -d "Use locally built packages while building Conda environments."
 complete -c planemo -n "__fish_seen_subcommand_from conda_init" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -s "r" -l "recursive" -d "Recursively perform command for subdirectories."
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "conda_prefix" -d "Conda prefix to use for conda dependency commands." -r
@@ -229,19 +209,13 @@ complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "global" -
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "conda_auto_init" -l "no_conda_auto_init" -d "Conda dependency resolution for Galaxy will auto install conda itself using miniconda if not availabe on conda_prefix."
 complete -c planemo -n "__fish_seen_subcommand_from conda_install" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from conda_search" -l "conda_prefix" -d "Conda prefix to use for conda dependency commands." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_search" -l "conda_exec" -d "Location of conda executable." -r
 complete -c planemo -n "__fish_seen_subcommand_from conda_search" -l "conda_channels" -l "conda_ensure_channels" -d "Ensure conda is configured with specified comma separated list of channels." -x
 complete -c planemo -n "__fish_seen_subcommand_from conda_search" -l "conda_use_local" -d "Use locally built packages while building Conda environments."
 complete -c planemo -n "__fish_seen_subcommand_from conda_search" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from config_init" -l "template" -d "--help Show this message and exit." -x
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from container_register" -s "r" -l "recursive" -d "Recursively perform command for subdirectories."
 complete -c planemo -n "__fish_seen_subcommand_from container_register" -l "mulled_namespace" -d "Build a mulled image with the specified namespace - defaults to biocontainers." -x
@@ -255,19 +229,13 @@ complete -c planemo -n "__fish_seen_subcommand_from container_register" -l "pull
 complete -c planemo -n "__fish_seen_subcommand_from container_register" -l "force_push" -l "no_force_push" -d "Force push branch for pull request in case it already exists."
 complete -c planemo -n "__fish_seen_subcommand_from container_register" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from create_alias" -l "alias" -d "Name of an alias." -x
 complete -c planemo -n "__fish_seen_subcommand_from create_alias" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from create_alias" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from create_gist" -l "link_type" -d "Link type to generate for the file."
 complete -c planemo -n "__fish_seen_subcommand_from create_gist" -l "link_type" -d "Link type to generate for the file." -r
 complete -c planemo -n "__fish_seen_subcommand_from create_gist" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from database_create" -l "postgres" -d "Use postgres database type."
 complete -c planemo -n "__fish_seen_subcommand_from database_create" -l "database_type" -d "Type of database to use for profile - 'auto', 'sqlite', 'postgres', and 'postgres_docker' are available options." -r
@@ -281,8 +249,6 @@ complete -c planemo -n "__fish_seen_subcommand_from database_create" -l "docker_
 complete -c planemo -n "__fish_seen_subcommand_from database_create" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from database_create" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "postgres" -d "Use postgres database type."
 complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "database_type" -d "Type of database to use for profile - 'auto', 'sqlite', 'postgres', and 'postgres_docker' are available options." -r
 complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "postgres_psql_path" -d "Name or or path to postgres client binary (psql)." -r
@@ -294,8 +260,6 @@ complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "docker_
 complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from database_delete" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from database_list" -l "postgres" -d "Use postgres database type."
 complete -c planemo -n "__fish_seen_subcommand_from database_list" -l "database_type" -d "Type of database to use for profile - 'auto', 'sqlite', 'postgres', and 'postgres_docker' are available options." -r
@@ -309,21 +273,15 @@ complete -c planemo -n "__fish_seen_subcommand_from database_list" -l "docker_ho
 complete -c planemo -n "__fish_seen_subcommand_from database_list" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from database_list" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from delete_alias" -l "alias" -d "Name of an alias." -x
 complete -c planemo -n "__fish_seen_subcommand_from delete_alias" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from delete_alias" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from docker_build" -l "dockerfile" -l "docker_image_cache" -l "docker_cmd" -d "Command used to launch docker (defaults to docker)." -x
 complete -c planemo -n "__fish_seen_subcommand_from docker_build" -l "docker_sudo" -l "no_docker_sudo" -d "Flag to use sudo when running docker."
 complete -c planemo -n "__fish_seen_subcommand_from docker_build" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from docker_build" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from docker_build" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from docker_shell" -l "from_tag" -d "Treat the tool's Docker container identifier as a locally cached tag."
 complete -c planemo -n "__fish_seen_subcommand_from docker_shell" -l "shell" -d "Shell to launch in container (defaults to /bin/bash)." -x
@@ -333,16 +291,10 @@ complete -c planemo -n "__fish_seen_subcommand_from docker_shell" -l "docker_sud
 complete -c planemo -n "__fish_seen_subcommand_from docker_shell" -l "docker_host" -d "Docker host to target when executing docker commands (defaults to localhost)." -x
 complete -c planemo -n "__fish_seen_subcommand_from docker_shell" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from dockstore_init" -l "publish" -l "no_publish" -d "Set publish attribute to true in .dockstore.yml file"
 complete -c planemo -n "__fish_seen_subcommand_from dockstore_init" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from docs" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from lint" -l "report_level" -l "report_xunit" -d "Output an XUnit report, useful for CI testing" -x
 complete -c planemo -n "__fish_seen_subcommand_from lint" -l "fail_level" -s "s" -l "skip" -d "Comma-separated list of lint tests to skip (e.g. passing --skip 'citations,xml_order' would skip linting of citations and bestpractice XML ordering." -x
@@ -354,17 +306,11 @@ complete -c planemo -n "__fish_seen_subcommand_from lint" -l "conda_requirements
 complete -c planemo -n "__fish_seen_subcommand_from lint" -l "biocontainer" -l "biocontainers" -d "Check best practice BioContainer namespaces for a container definition applicable for this tool."
 complete -c planemo -n "__fish_seen_subcommand_from lint" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from list_alias" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from list_alias" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from list_invocations" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from list_invocations" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from list_repos" -l "exclude" -d "Paths to exclude." -r
 complete -c planemo -n "__fish_seen_subcommand_from list_repos" -l "exclude_from" -d "File of paths to exclude." -r
@@ -374,11 +320,7 @@ complete -c planemo -n "__fish_seen_subcommand_from list_repos" -l "chunk" -d "W
 complete -c planemo -n "__fish_seen_subcommand_from list_repos" -l "output" -d "File to output to, or - for standard output." -r
 complete -c planemo -n "__fish_seen_subcommand_from list_repos" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from merge_test_reports" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from mull" -s "r" -l "recursive" -d "Recursively perform command for subdirectories."
 complete -c planemo -n "__fish_seen_subcommand_from mull" -l "mulled_conda_version" -d "Install a specific version of Conda before running the command, by default the version that comes with the continuumio miniconda3 image will be used under Linux and under Mac OS X Conda will be upgraded to to work around a bug in 4.2." -x
@@ -387,25 +329,17 @@ complete -c planemo -n "__fish_seen_subcommand_from mull" -l "mulled_command" -d
 complete -c planemo -n "__fish_seen_subcommand_from mull" -l "conda_channels" -l "conda_ensure_channels" -d "Ensure conda is configured with specified comma separated list of channels." -x
 complete -c planemo -n "__fish_seen_subcommand_from mull" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from mulled_init" -l "mulled_conda_version" -d "Install a specific version of Conda before running the command, by default the version that comes with the continuumio miniconda3 image will be used under Linux and under Mac OS X Conda will be upgraded to to work around a bug in 4.2." -x
 complete -c planemo -n "__fish_seen_subcommand_from mulled_init" -l "mulled_namespace" -d "Build a mulled image with the specified namespace - defaults to biocontainers." -x
 complete -c planemo -n "__fish_seen_subcommand_from mulled_init" -l "mulled_command" -d "Mulled action to perform for targets - this defaults to 'build-and-test'." -x
 complete -c planemo -n "__fish_seen_subcommand_from mulled_init" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from normalize" -l "expand_macros" -d "Expand macros while normalizing tool XML - useful to see how macros are evaluated."
 complete -c planemo -n "__fish_seen_subcommand_from normalize" -l "skip_reorder" -d "Planemo will reorder top-level tool blocks according to tool development best practices as part of this command, this flag will disable that behavior."
 complete -c planemo -n "__fish_seen_subcommand_from normalize" -l "skip_reindent" -d "Planemo will reindent the XML according to tool development best practices as part of this command, this flag will disable that behavior."
 complete -c planemo -n "__fish_seen_subcommand_from normalize" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from open" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from profile_create" -l "postgres" -d "Use postgres database type."
 complete -c planemo -n "__fish_seen_subcommand_from profile_create" -l "database_type" -d "Type of database to use for profile - 'auto', 'sqlite', 'postgres', and 'postgres_docker' are available options." -r
@@ -423,8 +357,6 @@ complete -c planemo -n "__fish_seen_subcommand_from profile_create" -l "galaxy_u
 complete -c planemo -n "__fish_seen_subcommand_from profile_create" -l "galaxy_admin_key" -d "Admin key to use with external Galaxy engine." -x
 complete -c planemo -n "__fish_seen_subcommand_from profile_create" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from profile_delete" -l "postgres" -d "Use postgres database type."
 complete -c planemo -n "__fish_seen_subcommand_from profile_delete" -l "database_type" -d "Type of database to use for profile - 'auto', 'sqlite', 'postgres', and 'postgres_docker' are available options." -r
 complete -c planemo -n "__fish_seen_subcommand_from profile_delete" -l "postgres_psql_path" -d "Name or or path to postgres client binary (psql)." -r
@@ -437,20 +369,12 @@ complete -c planemo -n "__fish_seen_subcommand_from profile_delete" -l "docker_h
 complete -c planemo -n "__fish_seen_subcommand_from profile_delete" -l "docker_sudo_cmd" -d "sudo command to use when --docker_sudo is enabled (defaults to sudo)." -x
 complete -c planemo -n "__fish_seen_subcommand_from profile_delete" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from profile_list" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from project_init" -l "template" -d "--help Show this message and exit." -x
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from pull_request" -s "m" -l "message" -d "Message describing the pull request to create." -x
 complete -c planemo -n "__fish_seen_subcommand_from pull_request" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from rerun" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from rerun" -l "galaxy_url" -d "Remote Galaxy URL to use with external Galaxy engine." -x
@@ -459,8 +383,6 @@ complete -c planemo -n "__fish_seen_subcommand_from rerun" -l "invocation" -d "R
 complete -c planemo -n "__fish_seen_subcommand_from rerun" -l "history" -d "Rerun failed jobs associated by one or more history IDs."
 complete -c planemo -n "__fish_seen_subcommand_from rerun" -l "job" -d "Rerun failed jobs specified by one or more job IDs."
 complete -c planemo -n "__fish_seen_subcommand_from rerun" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "galaxy_python_version" -d "Python version to start Galaxy under" -x
@@ -546,8 +468,6 @@ complete -c planemo -n "__fish_seen_subcommand_from run" -l "summary" -d "Summar
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "test_timeout" -d "Maximum runtime of a single test in seconds." -x
 complete -c planemo -n "__fish_seen_subcommand_from run" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "galaxy_python_version" -d "Python version to start Galaxy under" -x
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "extra_tools" -d "Extra tool sources to include in Galaxy's tool panel (file or directory)." -r
@@ -610,15 +530,9 @@ complete -c planemo -n "__fish_seen_subcommand_from serve" -l "cwl" -d "Configur
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "cwl_galaxy_root" -d "Root of development galaxy directory to execute command with (must be branch of Galaxy with CWL support, this option is experimental and will be replaced with --galaxy_root when and if CWL support is merged into Galaxy." -r
 complete -c planemo -n "__fish_seen_subcommand_from serve" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from share_test" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_build" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from shed_create" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_create" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
@@ -632,8 +546,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_create" -s "t" -l "shed
 complete -c planemo -n "__fish_seen_subcommand_from shed_create" -s "m" -l "message" -d "Commit message for tool shed upload." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_create" -l "skip_upload" -d "Skip upload contents as part of operation, only update metadata."
 complete -c planemo -n "__fish_seen_subcommand_from shed_create" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "shed_target_source" -d "This command will return an exit code of:" -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
@@ -651,8 +563,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "raw" -d "Do n
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "report_xunit" -d "Output an XUnit report, useful for CI testing" -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_diff" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_download" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_download" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_download" -l "owner" -d "Tool Shed repository owner (username)." -x
@@ -665,8 +575,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_download" -s "t" -l "sh
 complete -c planemo -n "__fish_seen_subcommand_from shed_download" -l "destination" -d "Destination pattern of tarball(s) to download - if this doesn't end in 'gz' it will be treated as a directory to extract tool contents into (defaults to shed_download.tar.gz)." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_download" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_init" -l "from_workflow" -d "Attempt to generate repository dependencies from specified workflow." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_init" -l "description" -d "Specify repository description for .shed.yml." -x
 complete -c planemo -n "__fish_seen_subcommand_from shed_init" -l "long_description" -d "Specify repository long_description for .shed.yml." -x
@@ -678,8 +586,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_init" -l "name" -d "Too
 complete -c planemo -n "__fish_seen_subcommand_from shed_init" -s "f" -l "force" -d "Overwrite existing files if present."
 complete -c planemo -n "__fish_seen_subcommand_from shed_init" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -l "report_level" -l "fail_level" -l "tools" -d "Lint tools discovered in the process of linting repositories." -x
@@ -687,8 +593,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -l "xsd" -l "no_x
 complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -l "ensure_metadata" -d "Ensure .shed.yml files contain enough metadata for each repository to allow automated creation and/or updates."
 complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -l "urls" -d "Check validity of URLs in XML files"
 complete -c planemo -n "__fish_seen_subcommand_from shed_lint" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
@@ -760,8 +664,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "shed_install
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "skip_dependencies" -d "Do not install shed dependencies as part of repository installation."
 complete -c planemo -n "__fish_seen_subcommand_from shed_serve" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "owner" -d "Tool Shed repository owner (username)." -x
@@ -806,8 +708,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "test_timeout"
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "skip_dependencies" -d "Do not install shed dependencies as part of repository installation."
 complete -c planemo -n "__fish_seen_subcommand_from shed_test" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_update" -l "report_xunit" -d "Output an XUnit report, useful for CI testing" -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_update" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_update" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
@@ -825,8 +725,6 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_update" -l "skip_upload
 complete -c planemo -n "__fish_seen_subcommand_from shed_update" -l "skip_metadata" -d "Skip metadata update as part of operation, only upload new contents."
 complete -c planemo -n "__fish_seen_subcommand_from shed_update" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from shed_upload" -s "r" -l "recursive" -d "Recursively perform command for nested repository directories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_upload" -l "fail_fast" -d "If multiple repositories are specified and an error occurs stop immediately instead of processing remaining repositories."
 complete -c planemo -n "__fish_seen_subcommand_from shed_upload" -l "owner" -d "Tool Shed repository owner (username)." -x
@@ -843,11 +741,7 @@ complete -c planemo -n "__fish_seen_subcommand_from shed_upload" -l "tar_only" -
 complete -c planemo -n "__fish_seen_subcommand_from shed_upload" -l "tar" -d "Specify a pre-existing tar file instead of automatically building one as part of this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from shed_upload" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from syntax" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "failed" -d "Re-run only failed tests."
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "polling_backoff" -d "Poll resources with an increasing interval between requests." -x
@@ -927,8 +821,6 @@ complete -c planemo -n "__fish_seen_subcommand_from test" -l "history_name" -d "
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "no_wait" -d "After invoking a job or workflow, do not wait for completion."
 complete -c planemo -n "__fish_seen_subcommand_from test" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "test_output" -d "Output test report (HTML - for humans) defaults to tool_test_output.html." -r
 complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "test_output_text" -d "Output test report (Basic text - for display in CI)" -r
 complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "test_output_markdown" -d "Output test report (Markdown style - for humans & computers)" -r
@@ -936,8 +828,6 @@ complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "test_outpu
 complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "test_output_junit" -d "Output test report (jUnit style - for CI systems" -r
 complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "test_output_allure" -d "Output test allure2 framework resutls" -r
 complete -c planemo -n "__fish_seen_subcommand_from test_reports" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "i" -l "id" -d "Short identifier for new tool (no whitespace)" -x
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -s "f" -l "force" -d "Overwrite existing tool if present."
@@ -964,15 +854,11 @@ complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "container" -d
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "cwl" -d "Build a CWL tool instead of a Galaxy tool."
 complete -c planemo -n "__fish_seen_subcommand_from tool_init" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from training_fill_data_library" -l "topic_name" -d "Name (directory name) of the topic to create or in which a tutorial should be created or updates [required]" -r
 complete -c planemo -n "__fish_seen_subcommand_from training_fill_data_library" -l "tutorial_name" -d "Name (directory name) of the tutorial to modify [required]" -r
 complete -c planemo -n "__fish_seen_subcommand_from training_fill_data_library" -l "zenodo_link" -d "Zenodo URL with the input data" -x
 complete -c planemo -n "__fish_seen_subcommand_from training_fill_data_library" -l "datatypes" -d "YAML file with the correspondance between Zenodo extension and Galaxy datatypes" -r
 complete -c planemo -n "__fish_seen_subcommand_from training_fill_data_library" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "topic_name" -d "Name (directory name) of the topic to create or in which a tutorial should be created or updates [required]" -r
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "tutorial_name" -d "Name (directory name) of the tutorial to modify [required]" -r
@@ -1039,8 +925,6 @@ complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "skip_client_build" -d "Do not build Galaxy client when serving Galaxy."
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "shed_install" -l "no_shed_install" -d "By default Planemo will attempt to install repositories needed for workflow testing."
 complete -c planemo -n "__fish_seen_subcommand_from training_generate_from_wf" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "topic_name" -d "Name (directory name) of the topic to create or in which a tutorial should be created or updates [required]" -r
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "topic_title" -d "Title of the topic to create" -x
@@ -1116,8 +1000,6 @@ complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "skip_clie
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "shed_install" -l "no_shed_install" -d "By default Planemo will attempt to install repositories needed for workflow testing."
 complete -c planemo -n "__fish_seen_subcommand_from training_init" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "galaxy_python_version" -d "Python version to start Galaxy under" -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "extra_tools" -d "Extra tool sources to include in Galaxy's tool panel (file or directory)." -r
@@ -1169,8 +1051,6 @@ complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "shed_tool_p
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "galaxy_single_user" -l "no_galaxy_single_user" -d "By default Planemo will configure Galaxy to run in single-user mode where there is just one user and this user is automatically logged it."
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "tags" -d "Comma-separated list of tags to add to the created history." -x
 complete -c planemo -n "__fish_seen_subcommand_from upload_data" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -s "f" -l "force" -d "Overwrite existing files if present."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -s "o" -l "output" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
@@ -1233,8 +1113,6 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "skip_c
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "shed_install" -l "no_shed_install" -d "By default Planemo will attempt to install repositories needed for workflow testing."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_convert" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "galaxy_root" -d "Root of development galaxy directory to execute command with." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "galaxy_python_version" -d "Python version to start Galaxy under" -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "extra_tools" -d "Extra tool sources to include in Galaxy's tool panel (file or directory)." -r
@@ -1295,8 +1173,6 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "skip_clie
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "shed_install" -l "no_shed_install" -d "By default Planemo will attempt to install repositories needed for workflow testing."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_edit" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from workflow_job_init" -s "f" -l "force" -d "Overwrite existing files if present."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_job_init" -s "o" -l "output" -l "galaxy_url" -d "Remote Galaxy URL to use with external Galaxy engine." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_job_init" -l "galaxy_user_key" -d "User key to use with external Galaxy engine." -x
@@ -1304,13 +1180,9 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_job_init" -l "from_
 complete -c planemo -n "__fish_seen_subcommand_from workflow_job_init" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_job_init" -l "help" -d "Show this message and exit."
 
-
-
 complete -c planemo -n "__fish_seen_subcommand_from workflow_lint" -l "report_level" -l "report_xunit" -d "Output an XUnit report, useful for CI testing" -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_lint" -l "fail_level" -s "s" -l "skip" -d "Comma-separated list of lint tests to skip (e.g. passing --skip 'citations,xml_order' would skip linting of citations and bestpractice XML ordering." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_lint" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -s "f" -l "force" -d "Overwrite existing files if present."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -s "o" -l "output" -l "split_test" -l "no_split_test" -d "Write workflow job and test definitions to separate files." -r
@@ -1319,8 +1191,6 @@ complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -l "gala
 complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -l "from_invocation" -l "from_uri" -d "Build a workflow test or job description from an invocation ID run on an external Galaxy.A Galaxy URL and API key must also be specified."
 complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -l "profile" -d "Name of profile (created with the profile_create command) to use with this command." -r
 complete -c planemo -n "__fish_seen_subcommand_from workflow_test_init" -l "help" -d "Show this message and exit."
-
-
 
 complete -c planemo -n "__fish_seen_subcommand_from workflow_upload" -l "namespace" -d "Organization or username under which to create or update workflow repository." -x
 complete -c planemo -n "__fish_seen_subcommand_from workflow_upload" -l "github_branch" -d "GitHub branch to use for the action." -x

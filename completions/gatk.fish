@@ -297,8 +297,6 @@ complete -k -c gatk -n __fish_use_subcommand -x -a CollectIlluminaLaneMetrics -d
 complete -k -c gatk -n __fish_use_subcommand -x -a CollectIlluminaBasecallingMetrics -d "Collects Illumina Basecalling metrics for a sequencing run."
 complete -k -c gatk -n __fish_use_subcommand -x -a CheckIlluminaDirectory -d "Asserts the validity for specified Illumina basecalling data."
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "BASECALLS_DIR" -s "B" -d "The basecalls output directory." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "LANES" -s "L" -d "The number of the lane(s) to check." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "READ_STRUCTURE" -o "RS" -d "A description of the logical structure of clusters in an Illumina Run, i.e. a description of the structure IlluminaBasecallsToSam assumes the data to be in." -r
@@ -321,8 +319,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "VER
 complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckIlluminaDirectory" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaBasecallingMetrics" -l "BASECALLS_DIR" -s "B" -d "The Illumina basecalls output directory from which data are read Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaBasecallingMetrics" -l "LANE" -s "L" -d "The lane whose data will be read Required." -x
@@ -347,8 +343,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaBasecallingMetri
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaBasecallingMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaBasecallingMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l "OUTPUT_DIRECTORY" -d "The directory to which the output file will be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l "OUTPUT_PREFIX" -s "O" -d "The prefix to be prepended to the file name of the output file; an appropriate suffix will be applied Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l "RUN_DIRECTORY" -d "The Illumina run directory of the run for which the lane metrics are to be generated Required." -r
@@ -370,8 +364,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l 
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l "VERBOSITY" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectIlluminaLaneMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ExtractIlluminaBarcodes" -l "BARCODE" -d "Barcode sequence." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractIlluminaBarcodes" -l "BARCODE_FILE" -d "Tab-delimited file of barcode sequences, barcode name and, optionally, library name." -r
@@ -405,8 +397,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractIlluminaBarcodes" -l "VA
 complete -c gatk -n "__fish_seen_subcommand_from ExtractIlluminaBarcodes" -l "VERBOSITY" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractIlluminaBarcodes" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractIlluminaBarcodes" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToFastq" -l "BASECALLS_DIR" -s "B" -d "The Illumina basecalls directory." -r
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToFastq" -l "LANE" -s "L" -d "Lane number." -r
@@ -458,8 +448,6 @@ complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToFastq" -l "V
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToFastq" -l "VERBOSITY" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToFastq" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToFastq" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToSam" -l "BARCODE_PARAMS" -d "Deprecated (use LIBRARY_PARAMS)." -r
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToSam" -l "BASECALLS_DIR" -s "B" -d "The Illumina basecalls directory." -r
@@ -516,8 +504,6 @@ complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToSam" -l "ver
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IlluminaBasecallsToSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "INPUT" -s "I" -d "Undocumented option Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "METRICS" -s "M" -d "Histogram showing counts of bases_clipped in how many reads Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "ADAPTER_TRUNCATION_LENGTH" -d "Adapters are truncated to this length to speed adapter matching." -x
@@ -544,8 +530,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "VERBO
 complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkIlluminaAdapters" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l "output" -s "O" -d "Output file for annotated intervals." -r
@@ -620,8 +604,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateIntervals" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "input" -s "I" -d "Input file containing copy-ratio segments (.cr.seg output of ModelSegments)." -r
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "output" -s "O" -d "Output file for called copy-ratio segments." -r
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -640,8 +622,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "use-
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CallCopyRatioSegments" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l "output" -s "O" -d "Output TSV file with combined segment breakpoints Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l "segments" -d "Input segment files -- must be specified twice, but order does not matter." -r
@@ -714,8 +694,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l "
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineSegmentBreakpoints" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l "input" -s "I" -d "Input TSV or HDF5 files containing integer read counts in genomic intervals for all samples in the panel of normals (output of CollectReadCounts)." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l "output" -s "O" -d "Output file for the panel of normals." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l "annotated-intervals" -d "Input file containing annotations for GC content in genomic intervals (output of AnnotateIntervals)." -r
@@ -743,8 +721,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" 
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateReadCountPanelOfNormals" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "denoised-copy-ratios" -d "Output file for denoised copy ratios." -r
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "input" -s "I" -d "Input TSV or HDF5 file containing integer read counts in genomic intervals for a single case sample (output of CollectReadCounts)." -r
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "standardized-copy-ratios" -d "Output file for standardized copy ratios." -r
@@ -763,8 +739,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "use-jdk-
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from DenoiseReadCounts" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l "input" -s "I" -d "Input paths for read-count files containing integer read counts in genomic intervals for all samples." -r
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l "output" -s "O" -d "Output directory." -r
@@ -815,8 +789,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" 
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from DetermineGermlineContigPloidy" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "output" -s "O" -d "Output Picard interval-list file containing the filtered intervals." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "annotated-intervals" -d "Input file containing annotations for genomic intervals (output of AnnotateIntervals)." -r
@@ -847,8 +819,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "use-jdk-in
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterIntervals" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l "contig-ploidy-calls" -d "Input contig-ploidy calls directory (output of DetermineGermlineContigPloidy)." -r
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l "input" -s "I" -d "Input paths for read-count files containing integer read counts in genomic intervals for all samples." -r
@@ -914,8 +884,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l "use-jdk-
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GermlineCNVCaller" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l "output" -s "O" -d "Output TSV file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l "segments" -d "Input segment file or annotated segment file -- touching segments will be merged in the output." -r
@@ -986,8 +954,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l "samp
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegions" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l "annotations-to-match" -d "Annotation(s) to merge on." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l "output" -s "O" -d "Output TSV file Required." -r
@@ -1062,8 +1028,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotati
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeAnnotatedRegionsByAnnotation" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l "output" -s "O" -d "Output directory." -r
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l "output-prefix" -d "Prefix for output filenames." -r
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l "allelic-counts" -d "Input files containing allelic counts (output of CollectAllelicCounts)." -r
@@ -1102,8 +1066,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l "window-size"
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l "segments" -d "Input Picard interval-list file specifying segments." -r
 complete -c gatk -n "__fish_seen_subcommand_from ModelSegments" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "denoised-copy-ratios" -d "Input file containing denoised copy ratios (output of DenoiseReadCounts)." -r
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "output" -s "O" -d "Output directory." -r
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "output-prefix" -d "Prefix for output filenames." -r
@@ -1124,8 +1086,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "use
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotDenoisedCopyRatios" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l "output" -s "O" -d "Output directory." -r
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l "output-prefix" -d "Prefix for output filenames." -r
@@ -1149,8 +1109,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l "use-jd
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PlotModeledSegments" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l "calls-shard-path" -d "List of paths to GermlineCNVCaller call directories." -r
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l "contig-ploidy-calls" -d "Path to contig-ploidy calls directory (output of DetermineGermlineContigPloidy)." -r
@@ -1234,8 +1192,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PostprocessGermlineCNVCalls" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "called-matched-normal-seg-file" -d "Matched normal called segment file." -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "output" -s "O" -d "Output TSV file identical to the tumor segment file, but with additional germline tag column (POSSIBLE_GERMLINE)." -r
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -1309,8 +1265,6 @@ complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "sample" 
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from TagGermlineEvents" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l "variant" -s "V" -d "One or more VCF files This argument must be specified at least once." -r
@@ -1387,8 +1341,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l "invert-soft
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ASEReadCounter" -l "min-base-quality" -o "mbq" -d "Default value: 0." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l "orf" -d "reference interval(s) of the ORF (1-based, inclusive), for example, '134-180,214-238' (no spaces) Required." -x
@@ -1470,8 +1422,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeSaturationMutagenesis" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "output" -s "O" -d "Output file for allelic counts." -r
@@ -1542,8 +1492,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "sampl
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCounts" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
@@ -1618,8 +1566,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l "
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAllelicCountsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l "output" -s "O" -d "Output .tar.gz file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -1693,8 +1639,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectF1R2Counts" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l "output" -s "O" -d "Output file for read counts." -r
@@ -1765,8 +1709,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectReadCounts" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -1835,8 +1777,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "sample" -d "The
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBases" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -1907,8 +1847,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l "invert-sof
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -1978,8 +1916,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l "invert-soft-cli
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReads" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -2048,8 +1984,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountReadsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
@@ -2139,8 +2073,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l "invert-sof
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from DepthOfCoverage" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "input" -s "I" -d "an output of GetNormalArtifactData This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "output" -s "O" -d "output Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -2155,8 +2087,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "u
 complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherNormalArtifactData" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l "gff-file" -s "G" -d "Gff3 file containing feature annotations Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -2235,8 +2165,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l "i
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from GeneExpressionEvaluation" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "normal-sample" -o "normal" -d "BAM sample name of normal." -x
 complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "output" -s "O" -d "The output table Required." -r
@@ -2308,8 +2236,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "samp
 complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from GetNormalArtifactData" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
@@ -2384,8 +2310,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l "sample"
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from GetPileupSummaries" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from LocalAssembler" -l "assembly-name" -d "Name of assembly used as a prefix for traversal names." -x
 complete -c gatk -n "__fish_seen_subcommand_from LocalAssembler" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -2465,8 +2389,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LocalAssembler" -l "invert-soft
 complete -c gatk -n "__fish_seen_subcommand_from LocalAssembler" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from LocalAssembler" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "output" -s "O" -d "An output file created to be created by the walker." -r
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -2539,8 +2461,6 @@ complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "sample" -d "The nam
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from Pileup" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l "output" -s "O" -d "The output directory to which the scattered output will be written." -r
@@ -2617,8 +2537,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l "invert-soft-cl
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PileupSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" -l "INPUT" -s "I" -d "Input QualityYieldMetrics files to merge." -r
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" -l "OUTPUT" -s "O" -d "Output QualityYieldMetric file to write." -r
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -2636,8 +2554,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" 
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateQualityYieldMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateVariantCallingMetrics" -l "INPUT" -s "I" -d "Paths (except for the file extensions) of Variant Calling Metrics files to read and merge." -r
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateVariantCallingMetrics" -l "OUTPUT" -s "O" -d "Path (except for the file extension) of output metrics files to write." -r
@@ -2658,8 +2574,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AccumulateVariantCallingMetrics
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateVariantCallingMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AccumulateVariantCallingMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l "after-report-file" -o "after" -d "file containing the BQSR second-pass report file Default value: null." -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l "before-report-file" -o "before" -d "file containing the BQSR first-pass report file Default value: null." -r
@@ -2678,8 +2592,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l "verbosit
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnalyzeCovariates" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "INPUT" -s "I" -d "A BAM file to process." -r
 complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -2696,8 +2608,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "VERBOSITY" -
 complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BamIndexStats" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l "output" -s "O" -d "output file for metadata Required." -r
@@ -2769,8 +2679,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalcMetadataSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "input" -s "I" -d "The input table Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "output" -s "O" -d "The output table Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -2789,8 +2697,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "use
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateContamination" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CalculateFingerprintMetrics" -l "HAPLOTYPE_MAP" -s "H" -d "The file lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateFingerprintMetrics" -l "INPUT" -s "I" -d "One or more input files (SAM/BAM/CRAM or VCF)." -r
@@ -2813,8 +2719,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateFingerprintMetrics" -l
 complete -c gatk -n "__fish_seen_subcommand_from CalculateFingerprintMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateFingerprintMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l "INPUT" -s "I" -d "The input SAM or BAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -2832,8 +2736,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l 
 complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateReadGroupChecksum" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CheckDuplicateMarking" -l "INPUT" -s "I" -d "Input BAM or SAM file to check." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckDuplicateMarking" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -2853,8 +2755,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckDuplicateMarking" -l "VERB
 complete -c gatk -n "__fish_seen_subcommand_from CheckDuplicateMarking" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckDuplicateMarking" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckDuplicateMarking" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l "DETAIL_OUTPUT" -s "D" -d "The text file to which to write detail metrics." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l "GENOTYPES" -s "G" -d "File of genotypes (VCF) to be used in comparison." -r
@@ -2883,8 +2783,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l "VERBOSITY
 complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckFingerprint" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l "pileup" -d "Pileup generated by Samtools Required." -x
@@ -2959,8 +2857,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l "invert-soft-cl
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckPileup" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "INPUT" -s "I" -d "The block compressed file to check." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -2977,8 +2873,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "VERBO
 complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckTerminatorBlock" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ClusterCrosscheckMetrics" -l "INPUT" -s "I" -d "The cross-check metrics file to be clustered." -r
 complete -c gatk -n "__fish_seen_subcommand_from ClusterCrosscheckMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -2998,8 +2892,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ClusterCrosscheckMetrics" -l "V
 complete -c gatk -n "__fish_seen_subcommand_from ClusterCrosscheckMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ClusterCrosscheckMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ClusterCrosscheckMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectAlignmentSummaryMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectAlignmentSummaryMetrics" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
@@ -3027,8 +2919,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectAlignmentSummaryMetrics"
 complete -c gatk -n "__fish_seen_subcommand_from CollectAlignmentSummaryMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectAlignmentSummaryMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectArraysVariantCallingMetrics" -l "DBSNP" -d "Reference dbSNP file in dbSNP or VCF format." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectArraysVariantCallingMetrics" -l "INPUT" -s "I" -d "Input vcf file for analysis Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectArraysVariantCallingMetrics" -l "OUTPUT" -s "O" -d "Path (except for the file extension) of output metrics files to write." -r
@@ -3051,8 +2941,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectArraysVariantCallingMetr
 complete -c gatk -n "__fish_seen_subcommand_from CollectArraysVariantCallingMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectArraysVariantCallingMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle" -l "CHART_OUTPUT" -o "CHART" -d "A file (with .pdf extension) to write the chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
@@ -3074,8 +2962,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle"
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycle" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l "aligned-reads-only" -s "A" -d "If set to true, calculates the base distribution over aligned reads only." -x
@@ -3149,8 +3035,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleS
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectBaseDistributionByCycleSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectGcBiasMetrics" -l "CHART_OUTPUT" -o "CHART" -d "The PDF file to render the chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectGcBiasMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectGcBiasMetrics" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
@@ -3178,8 +3062,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectGcBiasMetrics" -l "versi
 complete -c gatk -n "__fish_seen_subcommand_from CollectGcBiasMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectGcBiasMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l "BASECALLS_DIR" -s "B" -d "The Illumina basecalls directory." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l "LANE" -s "L" -d "Lane number." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l "OUTPUT" -s "O" -d "Basename for metrics file." -r
@@ -3200,8 +3082,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l 
 complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectHiSeqXPfFailMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectHsMetrics" -l "BAIT_INTERVALS" -o "BI" -d "An interval list file that contains the locations of the baits used." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectHsMetrics" -l "INPUT" -s "I" -d "An aligned SAM/BAM/CRAM file." -r
@@ -3236,8 +3116,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectHsMetrics" -l "version" 
 complete -c gatk -n "__fish_seen_subcommand_from CollectHsMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectHsMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectIndependentReplicateMetrics" -l "INPUT" -s "I" -d "Input (indexed) BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectIndependentReplicateMetrics" -l "OUTPUT" -s "O" -d "Write metrics to this file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectIndependentReplicateMetrics" -l "VCF" -s "V" -d "Input VCF file Required." -r
@@ -3268,8 +3146,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectIndependentReplicateMetr
 complete -c gatk -n "__fish_seen_subcommand_from CollectIndependentReplicateMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectIndependentReplicateMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "Histogram_FILE" -s "H" -d "File to write insert size Histogram chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
@@ -3294,8 +3170,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "V
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l "histogram-plot-file" -s "H" -d "File to write insert size histogram chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -3372,8 +3246,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" 
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectInsertSizeMetricsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -l "INPUT" -s "I" -d "BAM file(s) of reads with duplicates marked This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -l "OUTPUT" -s "O" -d "File to which metrics should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -3394,8 +3266,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -
 complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectJumpingLibraryMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetrics" -l "INPUT" -s "I" -d "Input SAM or BAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetrics" -l "OUTPUT" -s "O" -d "Base name of output files." -r
@@ -3424,8 +3294,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetrics" -l "VER
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l "output" -s "O" -d "Base name of output files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -3498,8 +3366,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectMultipleMetricsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectOxoGMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file for analysis." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectOxoGMetrics" -l "OUTPUT" -s "O" -d "Location of output metrics file to write." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectOxoGMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -3529,8 +3395,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectOxoGMetrics" -l "version
 complete -c gatk -n "__fish_seen_subcommand_from CollectOxoGMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectOxoGMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -3554,8 +3418,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l 
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l "output" -s "O" -d "File to write the output to." -r
@@ -3627,8 +3489,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectQualityYieldMetricsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectRawWgsMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectRawWgsMetrics" -l "OUTPUT" -s "O" -d "Output metrics file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectRawWgsMetrics" -l "ALLELE_FRACTION" -d "Allele fraction for which to calculate theoretical sensitivity." -x
@@ -3659,8 +3519,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectRawWgsMetrics" -l "versi
 complete -c gatk -n "__fish_seen_subcommand_from CollectRawWgsMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectRawWgsMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectRnaSeqMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectRnaSeqMetrics" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectRnaSeqMetrics" -l "REF_FLAT" -d "Gene annotations in refFlat form." -r
@@ -3690,8 +3548,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectRnaSeqMetrics" -l "versi
 complete -c gatk -n "__fish_seen_subcommand_from CollectRnaSeqMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectRnaSeqMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "INPUT" -s "I" -d "The SAM/BAM/CRAM file containing aligned reads." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "METRICS_FILE_PREFIX" -s "M" -d "Base name for output files Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "REFERENCE" -s "R" -d "The reference sequence fasta file Required." -r
@@ -3716,8 +3572,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "VALIDAT
 complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "VERBOSITY" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectRrbsMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectSamErrorMetrics" -l "INPUT" -s "I" -d "Input SAM or BAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectSamErrorMetrics" -l "OUTPUT" -s "O" -d "Base name for output files." -r
@@ -3750,8 +3604,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectSamErrorMetrics" -l "VER
 complete -c gatk -n "__fish_seen_subcommand_from CollectSamErrorMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectSamErrorMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectSamErrorMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectSequencingArtifactMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectSequencingArtifactMetrics" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
@@ -3786,8 +3638,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectSequencingArtifactMetric
 complete -c gatk -n "__fish_seen_subcommand_from CollectSequencingArtifactMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectSequencingArtifactMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectTargetedPcrMetrics" -l "AMPLICON_INTERVALS" -o "AI" -d "An interval list file that contains the locations of the baits used." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectTargetedPcrMetrics" -l "INPUT" -s "I" -d "An aligned SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectTargetedPcrMetrics" -l "OUTPUT" -s "O" -d "The output file to write the metrics to." -r
@@ -3821,8 +3671,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectTargetedPcrMetrics" -l "
 complete -c gatk -n "__fish_seen_subcommand_from CollectTargetedPcrMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectTargetedPcrMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -l "DBSNP" -d "Reference dbSNP file in dbSNP or VCF format." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -l "INPUT" -s "I" -d "Input vcf file for analysis Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -l "OUTPUT" -s "O" -d "Path (except for the file extension) of output metrics files to write." -r
@@ -3845,8 +3693,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -
 complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectVariantCallingMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetrics" -l "OUTPUT" -s "O" -d "Output metrics file." -r
@@ -3877,8 +3723,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetrics" -l "VERBOSIT
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetricsWithNonZeroCoverage" -l "CHART_OUTPUT" -o "CHART" -d "A file (with .pdf extension) to write the chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetricsWithNonZeroCoverage" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
@@ -3911,8 +3755,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetricsWithNonZeroCov
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetricsWithNonZeroCoverage" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectWgsMetricsWithNonZeroCoverage" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and GELI)." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "CREATE_INDEX" -d "Whether to create a BAM index when writing a coordinate-sorted BAM file." -r
@@ -3934,8 +3776,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "versi
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "round-down-quantized" -d "Round down quality scores to nearest quantized value." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareBaseQualities" -l "static-quantized-quals" -d "Use static quantized quality scores to a given number of levels (with --bqsr-recal-file) This argument may be specified 0 or more times." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l "input2" -o "I2" -d "The second BAM Required." -x
@@ -4010,8 +3850,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l "inv
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareDuplicatesSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "INPUT" -s "I" -d "Metric files to compare." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -4032,8 +3870,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "VERBOSITY" 
 complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CompareSAMs" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareSAMs" -l "COMPARE_MQ" -d "If set to true, generate a histogram for mapping quality concordance between the two SAM files and write it to the output metrics file." -r
@@ -4058,8 +3894,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareSAMs" -l "version" -d "d
 complete -c gatk -n "__fish_seen_subcommand_from CompareSAMs" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareSAMs" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" -l "INPUT" -s "I" -d "Haplotype database to be converted to VCF." -r
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" -l "OUTPUT" -s "O" -d "Where to write converted haplotype database VCF." -r
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -4077,8 +3911,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" 
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHaplotypeDatabaseToVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ConvertSequencingArtifactToOxoG" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from ConvertSequencingArtifactToOxoG" -l "BAIT_BIAS_IN" -d "The bait bias input file." -r
@@ -4100,8 +3932,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ConvertSequencingArtifactToOxoG
 complete -c gatk -n "__fish_seen_subcommand_from ConvertSequencingArtifactToOxoG" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertSequencingArtifactToOxoG" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertSequencingArtifactToOxoG" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckFingerprints" -l "HAPLOTYPE_MAP" -s "H" -d "The file lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting." -r
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckFingerprints" -l "INPUT" -s "I" -d "One or more input files (or lists of files) with which to compare fingerprints." -r
@@ -4142,8 +3972,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CrosscheckFingerprints" -l "VER
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckFingerprints" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckFingerprints" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckFingerprints" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckReadGroupFingerprints" -l "HAPLOTYPE_MAP" -s "H" -d "The file lists a set of SNPs, optionally arranged in high-LD blocks, to be used for fingerprinting." -r
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckReadGroupFingerprints" -l "INPUT" -s "I" -d "One or more input files (or lists of files) with which to compare fingerprints." -r
@@ -4187,8 +4015,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CrosscheckReadGroupFingerprints
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckReadGroupFingerprints" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CrosscheckReadGroupFingerprints" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "output" -s "O" -d "Output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "tabix-index" -s "I" -d "Tabix index file." -r
 complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -4203,8 +4029,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "use-jdk-inf
 complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from DumpTabixIndex" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from EstimateLibraryComplexity" -l "INPUT" -s "I" -d "One or more files to combine and estimate library complexity from." -r
 complete -c gatk -n "__fish_seen_subcommand_from EstimateLibraryComplexity" -l "OUTPUT" -s "O" -d "Output file to writes per-library metrics to." -r
@@ -4236,8 +4060,6 @@ complete -c gatk -n "__fish_seen_subcommand_from EstimateLibraryComplexity" -l "
 complete -c gatk -n "__fish_seen_subcommand_from EstimateLibraryComplexity" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from EstimateLibraryComplexity" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "HAPLOTYPE_MAP" -s "H" -d "A file of haplotype information." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "OUTPUT" -s "O" -d "Output fingerprint file (VCF)." -r
@@ -4260,8 +4082,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "VERBOSI
 complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractFingerprint" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -4332,8 +4152,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l "invert-soft-clip-
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStat" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -4403,8 +4221,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l "invert-soft-
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FlagStatSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "I" -d "an output of PileupSummaryTable This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "O" -d "output Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "sequence-dictionary" -d "sequence dictionary file Required." -r
@@ -4420,8 +4236,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "use-
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherPileupSummaries" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l "output" -s "O" -d "Output file with only the sample name in it." -r
@@ -4493,8 +4307,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l "invert-soft-
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from GetSampleName" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from IdentifyContaminant" -l "HAPLOTYPE_MAP" -s "H" -d "A file of haplotype information." -r
 complete -c gatk -n "__fish_seen_subcommand_from IdentifyContaminant" -l "INPUT" -s "I" -d "Input SAM or BAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from IdentifyContaminant" -l "OUTPUT" -s "O" -d "Output fingerprint file (VCF)." -r
@@ -4518,8 +4330,6 @@ complete -c gatk -n "__fish_seen_subcommand_from IdentifyContaminant" -l "versio
 complete -c gatk -n "__fish_seen_subcommand_from IdentifyContaminant" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IdentifyContaminant" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "CHAIN" -d "Chain file that guides LiftOver." -r
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "INPUT" -s "I" -d "Haplotype database to be lifted over." -r
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "OUTPUT" -s "O" -d "Where to write lifted-over haplotype database." -r
@@ -4539,8 +4349,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "VERBO
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverHaplotypeMap" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycle" -l "CHART_OUTPUT" -o "CHART" -d "A file (with .pdf extension) to write the chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycle" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
@@ -4563,8 +4371,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycle" -l "VERBOSI
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycle" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycle" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycle" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l "alignedReadsOnly" -s "A" -d "If set to true calculate mean quality over aligned reads only." -x
@@ -4638,8 +4444,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l "in
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from MeanQualityByCycleSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "CHART_OUTPUT" -o "CHART" -d "A file (with .pdf extension) to write the chart to." -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "OUTPUT" -s "O" -d "The file to write the output to." -r
@@ -4662,8 +4466,6 @@ complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "V
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistribution" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l "alignedReadsOnly" -s "A" -d "If set to true calculate mean quality over aligned reads only." -x
@@ -4737,8 +4539,6 @@ complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" 
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from QualityScoreDistributionSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ValidateSamFile" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateSamFile" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateSamFile" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -4766,8 +4566,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateSamFile" -l "version" -
 complete -c gatk -n "__fish_seen_subcommand_from ValidateSamFile" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateSamFile" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "ALIGNMENT_STATUS" -d "Print out all reads, just the aligned reads or just the unaligned reads." -x
 complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "INPUT" -s "I" -d "The SAM or BAM file or GA4GH url to view." -r
 complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "PF_STATUS" -d "Print out all reads, just the PF reads or just the non-PF reads." -x
@@ -4789,8 +4587,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "VERBOSITY" -d "Con
 complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ViewSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ExampleMultiFeatureWalker" -l "feature" -s "F" -d "Undocumented option This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExampleMultiFeatureWalker" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -4861,8 +4657,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExampleMultiFeatureWalker" -l "
 complete -c gatk -n "__fish_seen_subcommand_from ExampleMultiFeatureWalker" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExampleMultiFeatureWalker" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "id" -d "ID of record to request." -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "O" -o "output" -d "Output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "url" -d "URL of htsget endpoint." -x
@@ -4886,8 +4680,6 @@ complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "verbosity" -d
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "reader-threads" -d "How many simultaneous threads to use when reading data from an htsget response;higher values may improve performance when network latency is an issue." -x
 complete -c gatk -n "__fish_seen_subcommand_from HtsgetReader" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CalculateAverageCombinedAnnotations" -l "output" -s "O" -d "Output file (if not provided, defaults to STDOUT) Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateAverageCombinedAnnotations" -l "summed-annotation-to-divide" -o "summed-annotation" -d "INFO Annotations in VCF that have been summed by GenomicsDB and need to be divided by the number of het or homvar samples to calculate the average value." -x
@@ -4959,8 +4751,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateAverageCombinedAnnotat
 complete -c gatk -n "__fish_seen_subcommand_from CalculateAverageCombinedAnnotations" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateAverageCombinedAnnotations" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateAverageCombinedAnnotations" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FlowFeatureMapper" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from FlowFeatureMapper" -l "output" -s "O" -d "File to which variants should be written Required." -r
@@ -5058,8 +4848,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FlowFeatureMapper" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from FlowFeatureMapper" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FlowFeatureMapper" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FlowFeatureMapper" -l "exclude-nan-scores" -d "Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GroundTruthReadsBuilder" -l "ancestral-translators-base-path" -d "base path for ancestral translation ancestral.contig.csv files Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GroundTruthReadsBuilder" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -5183,8 +4971,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GroundTruthReadsBuilder" -l "in
 complete -c gatk -n "__fish_seen_subcommand_from GroundTruthReadsBuilder" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from GroundTruthReadsBuilder" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "input" -s "I" -d "input cram file to split Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "gatk-config-file" -d "A configuration file to use with the GATK." -r
@@ -5201,8 +4987,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "use-jdk-inflater
 complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitCRAM" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from BpmToNormalizationManifestCsv" -l "CLUSTER_FILE" -o "CF" -d "An Illumina cluster file (egt) Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from BpmToNormalizationManifestCsv" -l "INPUT" -s "I" -d "The Illumina Bead Pool Manifest (.bpm) file Required." -r
@@ -5223,8 +5007,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BpmToNormalizationManifestCsv" 
 complete -c gatk -n "__fish_seen_subcommand_from BpmToNormalizationManifestCsv" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BpmToNormalizationManifestCsv" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l "INPUT" -s "I" -d "Input VCF file(s)." -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l "OUTPUT" -s "O" -d "Output VCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -5242,8 +5024,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l 
 complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGenotypingArrayVcfs" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CompareGtcFiles" -l "ILLUMINA_BEAD_POOL_MANIFEST_FILE" -o "BPM_FILE" -d "The Illumina Bead Pool Manifest (.bpm) file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareGtcFiles" -l "INPUT" -s "I" -d "GTC input files to compare." -r
@@ -5263,8 +5043,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareGtcFiles" -l "version" -
 complete -c gatk -n "__fish_seen_subcommand_from CompareGtcFiles" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareGtcFiles" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l "INPUT" -s "I" -d "The output of bafRegress (typically captured stdout)." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l "OUTPUT" -s "O" -d "Basename for the metrics file that will be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -5282,8 +5060,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l
 complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateBafRegressMetricsFile" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CreateExtendedIlluminaManifest" -l "INPUT" -s "I" -d "This is the text version of the Illumina .bpm file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateExtendedIlluminaManifest" -l "OUTPUT" -s "O" -d "The name of the extended manifest to be written." -r
@@ -5310,8 +5086,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateExtendedIlluminaManifest"
 complete -c gatk -n "__fish_seen_subcommand_from CreateExtendedIlluminaManifest" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateExtendedIlluminaManifest" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContaminationMetricsFile" -l "INPUT" -s "I" -d "The output of VerifyIDIntensity(typically captured stdout)." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContaminationMetricsFile" -l "OUTPUT" -s "O" -d "Basename for the metrics file that will be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContaminationMetricsFile" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -5329,8 +5103,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContamin
 complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContaminationMetricsFile" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContaminationMetricsFile" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateVerifyIDIntensityContaminationMetricsFile" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GtcToVcf" -l "CLUSTER_FILE" -o "CF" -d "An Illumina cluster file (egt) Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GtcToVcf" -l "EXTENDED_ILLUMINA_MANIFEST" -o "MANIFEST" -d "An Extended Illumina Manifest file (csv)." -r
@@ -5360,8 +5132,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GtcToVcf" -l "version" -d "disp
 complete -c gatk -n "__fish_seen_subcommand_from GtcToVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GtcToVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MergePedIntoVcf" -l "MAP_FILE" -o "MAP" -d "MAP file for the PED file." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergePedIntoVcf" -l "ORIGINAL_VCF" -o "VCF" -d "The vcf containing the original autocall genotypes." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergePedIntoVcf" -l "OUTPUT" -s "O" -d "The output VCF file to write with merged genotype calls." -r
@@ -5384,8 +5154,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergePedIntoVcf" -l "version" -
 complete -c gatk -n "__fish_seen_subcommand_from MergePedIntoVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergePedIntoVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "NUM_MARKERS_FILE" -o "NMF" -d "A text file into which the number of loci in the VCF will be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "OUTPUT" -s "O" -d "The output (adpc.bin) file to write." -r
 complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "SAMPLES_FILE" -o "SF" -d "A text file into which the names of the samples will be written." -r
@@ -5405,8 +5173,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "VERBOSITY" -d "C
 complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from VcfToAdpc" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from BedToIntervalList" -l "INPUT" -s "I" -d "The input BED file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from BedToIntervalList" -l "OUTPUT" -s "O" -d "The output Picard Interval List Required." -r
@@ -5429,8 +5195,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BedToIntervalList" -l "version"
 complete -c gatk -n "__fish_seen_subcommand_from BedToIntervalList" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BedToIntervalList" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "L" -d "Undocumented option Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "L2" -d "Undocumented option Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -5446,8 +5210,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "use-j
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareIntervalLists" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListToBed" -l "INPUT" -s "I" -d "Input IntervalList file." -r
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListToBed" -l "OUTPUT" -s "O" -d "Output BED file." -r
@@ -5468,8 +5230,6 @@ complete -c gatk -n "__fish_seen_subcommand_from IntervalListToBed" -l "VERBOSIT
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListToBed" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListToBed" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListToBed" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListTools" -l "INPUT" -s "I" -d "One or more interval lists." -r
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListTools" -l "ACTION" -d "Action to take on inputs." -x
@@ -5504,8 +5264,6 @@ complete -c gatk -n "__fish_seen_subcommand_from IntervalListTools" -l "version"
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListTools" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IntervalListTools" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "CHAIN" -d "Chain file that guides the LiftOver process." -r
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "INPUT" -s "I" -d "The input interval list to be lifted over." -r
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "OUTPUT" -s "O" -d "The output interval list file." -r
@@ -5527,8 +5285,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "VERBO
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from LiftOverIntervalList" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l "output" -s "O" -d "Output Picard interval-list file containing the preprocessed intervals." -r
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -5600,8 +5356,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l "sample
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PreprocessIntervals" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l "output" -s "O" -d "The directory into which to write the scattered interval sub-directories." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -5679,8 +5433,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l "invert-soft
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitIntervals" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l "output" -s "O" -d "File for k-mer set output." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l "reference" -s "R" -d "Reference FASTA file path on local disk Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -5700,8 +5452,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l "verbosit
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildKmers" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l "output" -s "O" -d "Local path for the output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l "reference" -s "R" -d "Reference sequence file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l "tax-dump" -o "TD" -d "Local path to taxonomy dump tarball (taxdump.tar.gz available at ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/) Required." -r
@@ -5719,8 +5469,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBuildReferenceTaxonomy" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l "microbe-bwa-image" -d "Microbe reference BWA index image file generated using BwaMemIndexImageCreator." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l "microbe-dict" -d "Use the given sequence dictionary as the microbe sequence dictionary." -r
@@ -5797,8 +5545,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqBwaSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -5889,8 +5635,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l "sample"
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqFilterSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l "microbe-bwa-image" -d "Microbe reference BWA index image file generated using BwaMemIndexImageCreator." -r
@@ -5996,8 +5740,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l "inver
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqPipelineSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l "scores-output" -o "SO" -d "URI for the taxonomic scores output Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l "taxonomy-file" -s "T" -d "URI to the microbe reference taxonomy database built using PathSeqBuildReferenceTaxonomy Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -6078,8 +5820,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PathSeqScoreSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l "output" -s "O" -d "Output VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -6150,8 +5890,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l "inve
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from MethylationTypeCaller" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l "input" -s "I" -d "BAM file to create a HadoopBam splitting index for Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l "create-bai" -d "Set this to create a bai index at the same time as creating a splitting index Default value: false." -x
@@ -6169,8 +5907,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" 
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateHadoopBamSplittingIndex" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FifoBuffer" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from FifoBuffer" -l "BUFFER_SIZE" -d "The size of the memory buffer in bytes." -x
@@ -6192,8 +5928,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FifoBuffer" -l "version" -d "di
 complete -c gatk -n "__fish_seen_subcommand_from FifoBuffer" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FifoBuffer" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "input" -s "I" -d "List of scattered BQSR report files This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "output" -s "O" -d "File to output the gathered file to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -6208,8 +5942,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "use-jdk-
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBQSRReports" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l "input" -s "I" -d "List of scattered tranches files This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l "mode" -d "Recalibration mode to employ Required." -x
@@ -6228,8 +5960,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l "verbosity" 
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherTranches" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "input" -s "I" -d "Feature file (eg., VCF or BED file) to index." -r
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "gatk-config-file" -d "A configuration file to use with the GATK." -r
@@ -6244,8 +5974,6 @@ complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "use-jdk-i
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from IndexFeatureFile" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l "input-gcs-path" -d "input GCS file path (add trailing slash when specifying a directory) Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l "output-hdfs-directory" -d "output directory on HDFS to into which to transfer the data (will be created by the tool) Required." -r
@@ -6318,8 +6046,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDF
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ParallelCopyGCSDirectoryIntoHDFSSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "bgzf-file" -d "The BGZF-format file for which to print block information Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "gatk-config-file" -d "A configuration file to use with the GATK." -r
@@ -6334,8 +6060,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintBGZFBlockInformation" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l "output" -s "O" -d "Output bam file." -r
@@ -6407,8 +6131,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l "sample" -d 
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadAnonymizer" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ReblockGVCF" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReblockGVCF" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -6513,8 +6235,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ReblockGVCF" -l "invert-soft-cl
 complete -c gatk -n "__fish_seen_subcommand_from ReblockGVCF" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReblockGVCF" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SortGff" -l "INPUT" -s "I" -d "Input Gff3 file to sort." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortGff" -l "OUTPUT" -s "O" -d "Sorted Gff3 output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortGff" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -6535,8 +6255,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SortGff" -l "version" -d "displ
 complete -c gatk -n "__fish_seen_subcommand_from SortGff" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortGff" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from AddCommentsToBam" -l "COMMENT" -s "C" -d "Comments to add to the BAM file This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from AddCommentsToBam" -l "INPUT" -s "I" -d "Input BAM file to add a comment to the header Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AddCommentsToBam" -l "OUTPUT" -s "O" -d "Output BAM file to write results Required." -r
@@ -6556,8 +6274,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AddCommentsToBam" -l "version" 
 complete -c gatk -n "__fish_seen_subcommand_from AddCommentsToBam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddCommentsToBam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "INPUT" -s "I" -d "SAM or BAM input file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "OUTPUT" -s "O" -d "SAM or BAM file to write merged result to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -6576,8 +6292,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "VERBOSITY" -d "Co
 complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOATag" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l "INPUT" -s "I" -d "Input file (BAM or SAM or a GA4GH url)." -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l "OUTPUT" -s "O" -d "Output file (SAM, BAM or CRAM)." -r
@@ -6610,8 +6324,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l "VER
 complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOrReplaceReadGroups" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l "output" -s "O" -d "Write output to this file Required." -r
@@ -6681,8 +6393,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l "s
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from AddOriginalAlignmentTags" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l "output" -s "O" -d "Write output to this file Required." -r
@@ -6759,8 +6469,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l "invert-soft-clip
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSR" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "bqsr-recal-file" -o "bqsr" -d "Input covariates table file for base quality score recalibration Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "output" -s "O" -d "the output bam Required." -x
@@ -6836,8 +6544,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "sample" -d 
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyBQSRSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l "known-sites" -d "the known variants This argument must be specified at least once." -x
@@ -6926,8 +6632,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from BQSRPipelineSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "ANALYSIS_DIR" -d "The analysis directory for the binary output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "INPUT" -s "I" -d "The BAM file to parse." -r
 complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "OUTPUT_FILE_PREFIX" -d "Prefix for all output files Required." -r
@@ -6955,8 +6659,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "VERBOSITY" -d "Co
 complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BamToBfq" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l "known-sites" -d "One or more databases of known polymorphic sites used to exclude regions around known polymorphisms from analysis." -x
@@ -7041,8 +6743,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibrator" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l "known-sites" -d "the known variants This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l "output" -s "O" -d "Path to save the final recalibration tables to." -r
@@ -7126,8 +6826,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l "inve
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from BaseRecalibratorSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "INPUT" -s "I" -d "A BAM file or GA4GH URL to process." -r
 complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -7145,8 +6843,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "VERBOSITY" -
 complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BuildBamIndex" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l "output" -s "O" -d "the output bam Required." -x
@@ -7230,8 +6926,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpa
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaAndMarkDuplicatesPipelineSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l "output" -s "O" -d "the output bam Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -7302,8 +6996,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l "invert-soft-clip-
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file to be cleaned." -r
 complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "OUTPUT" -s "O" -d "Where to write cleaned file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -7321,8 +7013,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "VERBOSITY" -d "Co
 complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CleanSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l "output" -s "O" -d "BAM output file Required." -r
@@ -7402,8 +7092,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l "invert-soft-clip
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ClipReads" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectDuplicateMetrics" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectDuplicateMetrics" -l "METRICS_FILE" -s "M" -d "File to write duplication metrics to." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectDuplicateMetrics" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -7424,8 +7112,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectDuplicateMetrics" -l "ve
 complete -c gatk -n "__fish_seen_subcommand_from CollectDuplicateMetrics" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectDuplicateMetrics" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l "bam-shard" -d "Headerless Hadoop BAM shard to be converted into a readable BAM Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l "bam-with-header" -d "Well-formed BAM whose header to use for the converted fragment Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l "output" -s "O" -d "Location to write the converted BAM shard Required." -r
@@ -7441,8 +7127,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShard
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ConvertHeaderlessHadoopBamShardToBam" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l "output" -s "O" -d "Output BAM file Required." -r
@@ -7516,8 +7200,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l "i
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleByDuplicateSet" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "INPUT" -s "I" -d "The input SAM or BAM file to downsample." -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "OUTPUT" -s "O" -d "The output, downsampled, SAM, BAM or CRAM file to write." -r
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "ACCURACY" -s "A" -d "The accuracy that the downsampler should try to achieve if the selected strategy supports it." -x
@@ -7540,8 +7222,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "VALIDATION_S
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "VERBOSITY" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from DownsampleSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l "output" -s "O" -d "file to write reads to Required." -r
@@ -7614,8 +7294,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecords
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractOriginalAlignmentRecordsByNameSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FastqToSam" -l "FASTQ" -o "F1" -d "Input fastq file (optionally gzipped) for single end data, or first read in paired end data." -r
 complete -c gatk -n "__fish_seen_subcommand_from FastqToSam" -l "OUTPUT" -s "O" -d "Output BAM/SAM/CRAM file." -r
 complete -c gatk -n "__fish_seen_subcommand_from FastqToSam" -l "SAMPLE_NAME" -o "SM" -d "Sample name to insert into the read group header Required." -x
@@ -7654,8 +7332,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FastqToSam" -l "showHidden" -d 
 complete -c gatk -n "__fish_seen_subcommand_from FastqToSam" -l "READ_GROUP_NAME" -o "RG" -d "Default value: A." -x
 complete -c gatk -n "__fish_seen_subcommand_from FastqToSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FilterSamReads" -l "FILTER" -d "Which filter to use." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterSamReads" -l "INPUT" -s "I" -d "The SAM/BAM/CRAM file that will be filtered." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterSamReads" -l "OUTPUT" -s "O" -d "SAM/BAM/CRAM file for resulting reads." -r
@@ -7682,8 +7358,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterSamReads" -l "WRITE_READS
 complete -c gatk -n "__fish_seen_subcommand_from FilterSamReads" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterSamReads" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "INPUT" -s "I" -d "The SAM/BAM/CRAM input files to check and fix." -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "ASSUME_SORTED" -o "AS" -d "If true, assume that the input file is queryname sorted, even if the header says otherwise." -r
@@ -7704,8 +7378,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "VERBOSI
 complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMateInformation" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l "output" -s "O" -d "Write output to this file Required." -r
@@ -7776,8 +7448,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" 
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FixMisencodedBaseQualityReads" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "INPUT" -s "I" -d "Two or more SAM/BAM/CRAM files or text files containing lists of SAM/BAM/CRAM files (one per line)." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "OUTPUT" -s "O" -d "The output SAM/BAM/CRAM file to write." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -7795,8 +7465,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "VERBOSITY" 
 complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherBamFiles" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l "output" -s "O" -d "Output BAM Required." -r
@@ -7867,8 +7535,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l "invert-sof
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignIndels" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "INPUT" -s "I" -d "One or more input SAM, BAM or CRAM files to analyze." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "METRICS_FILE" -s "M" -d "File to write duplication metrics to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "OUTPUT" -s "O" -d "The output file to write marked records to Required." -r
@@ -7920,8 +7586,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "VERBOSITY" 
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicates" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l "output" -s "O" -d "the output bam Required." -x
@@ -8009,8 +7673,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l "invert
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l "INPUT" -s "I" -d "One or more input SAM, BAM or CRAM files to analyze." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l "METRICS_FILE" -s "M" -d "File to write duplication metrics to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l "OUTPUT" -s "O" -d "The output file to write marked records to Required." -r
@@ -8045,8 +7707,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MarkDuplicatesWithMateCigar" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MergeBamAlignment" -l "OUTPUT" -s "O" -d "Merged SAM or BAM file to write to." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeBamAlignment" -l "UNMAPPED_BAM" -o "UNMAPPED" -d "Original SAM or BAM file of unmapped reads, which must be in queryname order." -r
@@ -8096,8 +7756,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeBamAlignment" -l "version"
 complete -c gatk -n "__fish_seen_subcommand_from MergeBamAlignment" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeBamAlignment" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MergeSamFiles" -l "INPUT" -s "I" -d "SAM/BAM/CRAM input file This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeSamFiles" -l "OUTPUT" -s "O" -d "SAM/BAM/CRAM file to write merged result to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeSamFiles" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -8122,8 +7780,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeSamFiles" -l "version" -d 
 complete -c gatk -n "__fish_seen_subcommand_from MergeSamFiles" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeSamFiles" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l "FRACTION" -s "F" -d "The (approximate) fraction of reads to be kept, between 0 and 1." -x
 complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l "INPUT" -s "I" -d "The input SAM/BAM/CRAM file to downsample." -r
 complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l "OUTPUT" -s "O" -d "The output, downsampled, SAM/BAM/CRAM file." -r
@@ -8146,8 +7802,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l 
 complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from PositionBasedDownsampleSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PostProcessReadsForRSEM" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PostProcessReadsForRSEM" -l "output" -s "O" -d "Undocumented option Required." -r
@@ -8218,8 +7872,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PostProcessReadsForRSEM" -l "in
 complete -c gatk -n "__fish_seen_subcommand_from PostProcessReadsForRSEM" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PostProcessReadsForRSEM" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "output" -s "O" -d "Write output to this file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -8288,8 +7940,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "sample" 
 complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintDistantMates" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l "output" -s "O" -d "Write output to this file Required." -r
@@ -8360,8 +8010,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l "invert-soft-cli
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReads" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "output" -s "O" -d "file to write the bam header to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -8430,8 +8078,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "sample" -
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsHeader" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l "output" -s "O" -d "uri for the output file: a local file path Required." -r
@@ -8502,8 +8148,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l "invert-sof
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ReorderSam" -l "INPUT" -s "I" -d "Input file (SAM/BAM/CRAM) to extract reads from." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReorderSam" -l "OUTPUT" -s "O" -d "Output file (SAM/BAM/CRAM) to write extracted reads to." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReorderSam" -l "SEQUENCE_DICTIONARY" -o "SD" -d "A Sequence Dictionary for the OUTPUT file (can be read from one of the following file types (SAM, BAM, CRAM, VCF, BCF, Interval List, Fasta, or Dict) Required." -r
@@ -8525,8 +8169,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ReorderSam" -l "version" -d "di
 complete -c gatk -n "__fish_seen_subcommand_from ReorderSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReorderSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "HEADER" -d "SAM/BAM/CRAM file from which SAMFileHeader will be read." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "INPUT" -s "I" -d "SAM/BAM/CRAM file from which SAMRecords will be read." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "OUTPUT" -s "O" -d "header from HEADER file will be written to this file, followed by records from INPUT file Required." -r
@@ -8545,8 +8187,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "VERBOSITY
 complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReplaceSamHeader" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l "output" -s "O" -d "Write output to this file Required." -r
@@ -8617,8 +8257,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l "in
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertBaseQualityScores" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndAddMateCigar" -l "INPUT" -s "I" -d "The input SAM/BAM/CRAM file to revert the state of." -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndAddMateCigar" -l "OUTPUT" -s "O" -d "The output SAM/BAM/CRAM file to create." -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndAddMateCigar" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -8639,8 +8277,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndA
 complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndAddMateCigar" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndAddMateCigar" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertOriginalBaseQualitiesAndAddMateCigar" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l "INPUT" -s "I" -d "The input SAM/BAM/CRAM file to revert the state of." -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l "OUTPUT" -s "O" -d "The output SAM/BAM/CRAM file to create, or an output directory if OUTPUT_BY_READGROUP is true." -r
@@ -8674,8 +8310,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l "VERBOSITY" -d "C
 complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l "output" -s "O" -d "The output SAM/BAM/CRAM file to create, or an output directory if '--output-by-readgroup' is set." -r
@@ -8757,8 +8391,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l "invert-soft
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from RevertSamSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "INPUT" -s "I" -d "The SAM/BAM/CRAM file to parse." -r
 complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "OUTPUT" -s "O" -d "The SAM/BAM/CRAM output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -8776,8 +8408,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "VERBOSI
 complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SamFormatConverter" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastq" -l "FASTQ" -s "F" -d "Output FASTQ file (single-end fastq or, if paired, first end of the pair FASTQ)." -r
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastq" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file to extract reads from Required." -r
@@ -8814,8 +8444,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SamToFastq" -l "VERBOSITY" -d "
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastq" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastq" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastq" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastqWithTags" -l "FASTQ" -s "F" -d "Output FASTQ file (single-end fastq or, if paired, first end of the pair FASTQ)." -r
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastqWithTags" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file to extract reads from Required." -r
@@ -8857,8 +8485,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SamToFastqWithTags" -l "version
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastqWithTags" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SamToFastqWithTags" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SetNmAndUqTags" -l "INPUT" -s "I" -d "The SAM/BAM/CRAM file to fix." -r
 complete -c gatk -n "__fish_seen_subcommand_from SetNmAndUqTags" -l "OUTPUT" -s "O" -d "The fixed SAM/BAM/CRAM output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from SetNmAndUqTags" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -8879,8 +8505,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SetNmAndUqTags" -l "version" -d
 complete -c gatk -n "__fish_seen_subcommand_from SetNmAndUqTags" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SetNmAndUqTags" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "INPUT" -s "I" -d "The SAM/BAM/CRAM file to fix." -r
 complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "OUTPUT" -s "O" -d "The fixed SAM/BAM/CRAM output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -8900,8 +8524,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "VERBOSITY
 complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SetNmMdAndUqTags" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SimpleMarkDuplicatesWithMateCigar" -l "INPUT" -s "I" -d "One or more input SAM, BAM or CRAM files to analyze." -r
 complete -c gatk -n "__fish_seen_subcommand_from SimpleMarkDuplicatesWithMateCigar" -l "METRICS_FILE" -s "M" -d "File to write duplication metrics to Required." -r
@@ -8955,8 +8577,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SimpleMarkDuplicatesWithMateCig
 complete -c gatk -n "__fish_seen_subcommand_from SimpleMarkDuplicatesWithMateCigar" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SimpleMarkDuplicatesWithMateCigar" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "INPUT" -s "I" -d "The SAM, BAM or CRAM file to sort." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "OUTPUT" -s "O" -d "The sorted SAM, BAM or CRAM output file." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "SORT_ORDER" -o "SO" -d "Sort order of output file." -r
@@ -8975,8 +8595,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "VERBOSITY" -d "Con
 complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSam" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l "output" -s "O" -d "the output file path Required." -r
@@ -9047,8 +8665,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l "sample" -d "T
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortSamSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l "output" -s "O" -d "Write output to this BAM filename Required." -r
@@ -9126,8 +8742,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitNCigarReads" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l "output" -s "O" -d "The directory to output SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -9200,8 +8814,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l "invert-soft-cli
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitReads" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "INPUT" -s "I" -d "The SAM, BAM of CRAM file to be split." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "COMPRESSION_LEVEL" -d "Compression level for all compressed files created (e.g. BAM and VCF)." -r
@@ -9219,8 +8831,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "VERBOSIT
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByLibrary" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByNumberOfReads" -l "INPUT" -s "I" -d "Input SAM/BAM/CRAM file to split Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByNumberOfReads" -l "OUTPUT" -s "O" -d "Directory in which to output the split BAM files." -r
@@ -9243,8 +8853,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitSamByNumberOfReads" -l "VE
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByNumberOfReads" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByNumberOfReads" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitSamByNumberOfReads" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from TransferReadTags" -l "output" -s "O" -d "Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from TransferReadTags" -l "read-tags" -d "read tag names to transfer, must be present in every read in the unmapped sam This argument must be specified at least once." -x
@@ -9317,8 +8925,6 @@ complete -c gatk -n "__fish_seen_subcommand_from TransferReadTags" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from TransferReadTags" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from TransferReadTags" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateCigar" -l "INPUT" -s "I" -d "One or more input SAM, BAM or CRAM files to analyze." -r
 complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateCigar" -l "METRICS_FILE" -s "M" -d "File to write duplication metrics to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateCigar" -l "OUTPUT" -s "O" -d "The output file to write marked records to Required." -r
@@ -9374,8 +8980,6 @@ complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateC
 complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateCigar" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateCigar" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from UmiAwareMarkDuplicatesWithMateCigar" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l "output" -s "O" -d "Write output to this file Required." -r
@@ -9446,8 +9050,6 @@ complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from UnmarkDuplicates" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BaitDesigner" -l "DESIGN_NAME" -d "The name of the bait design Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from BaitDesigner" -l "TARGETS" -s "T" -d "The file with design parameters and targets Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from BaitDesigner" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -9480,8 +9082,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BaitDesigner" -l "version" -d "
 complete -c gatk -n "__fish_seen_subcommand_from BaitDesigner" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BaitDesigner" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "input" -s "I" -d "Input reference FASTA file location." -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "gatk-config-file" -d "A configuration file to use with the GATK." -r
@@ -9496,8 +9096,6 @@ complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "us
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from BwaMemIndexImageCreator" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CheckReferenceCompatibility" -l "references-to-compare" -o "refcomp" -d "Reference sequence file(s) to compare." -r
 complete -c gatk -n "__fish_seen_subcommand_from CheckReferenceCompatibility" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -9568,8 +9166,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CheckReferenceCompatibility" -l
 complete -c gatk -n "__fish_seen_subcommand_from CheckReferenceCompatibility" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckReferenceCompatibility" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CheckReferenceCompatibility" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CompareReferences" -l "reference" -s "R" -d "Reference sequence file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CompareReferences" -l "references-to-compare" -o "refcomp" -d "Reference sequence file(s) to compare." -r
@@ -9646,8 +9242,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CompareReferences" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from CompareReferences" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CompareReferences" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l "output" -s "O" -d "name of the zip file where the sites sampled will be stored Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l "reference" -s "R" -d "Reference sequence file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -9720,8 +9314,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l "invert
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ComposeSTRTableFile" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l "reference" -s "R" -d "Reference sequence file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -9791,8 +9383,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l "inve
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountBasesInReference" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CreateSequenceDictionary" -l "REFERENCE" -s "R" -d "Input reference fasta or fasta.gz Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSequenceDictionary" -l "ALT_NAMES" -o "AN" -d "Optional file containing the alternative names for the contigs." -r
 complete -c gatk -n "__fish_seen_subcommand_from CreateSequenceDictionary" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -9815,8 +9405,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateSequenceDictionary" -l "V
 complete -c gatk -n "__fish_seen_subcommand_from CreateSequenceDictionary" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSequenceDictionary" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "INTERVAL_LIST" -d "Interval list describing intervals to be extracted from the reference sequence." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "OUTPUT" -s "O" -d "Output FASTA file." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -9835,8 +9423,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "VERBOSITY
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSequences" -l "REFERENCE_SEQUENCE" -s "R" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l "output" -s "O" -d "Path to write the output fasta to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -9912,8 +9498,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaAlternateReferenceMaker" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "output" -s "O" -d "Path to write the output fasta to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "reference" -s "R" -d "Reference sequence file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -9983,8 +9567,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "sample
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FastaReferenceMaker" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l "output" -s "O" -d "file for ubiquitous kmer output Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -10058,8 +9640,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l "i
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBadGenomicKmersSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "INPUT" -s "I" -d "The input FASTA file." -r
 complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "OUTPUT" -s "O" -d "The output file in which to record the count." -r
 complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -10078,8 +9658,6 @@ complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "VERBOSITY" -
 complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from NonNFastaSize" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from NormalizeFasta" -l "INPUT" -s "I" -d "The input FASTA file to normalize." -r
 complete -c gatk -n "__fish_seen_subcommand_from NormalizeFasta" -l "OUTPUT" -s "O" -d "The output FASTA file to write." -r
@@ -10101,8 +9679,6 @@ complete -c gatk -n "__fish_seen_subcommand_from NormalizeFasta" -l "version" -d
 complete -c gatk -n "__fish_seen_subcommand_from NormalizeFasta" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from NormalizeFasta" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "OUTPUT" -s "O" -d "Output file for interval list." -r
 complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "REFERENCE" -s "R" -d "Reference sequence to use." -r
 complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -10120,8 +9696,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "VALID
 complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "VERBOSITY" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from ScatterIntervalsByNs" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ShiftFasta" -l "output" -s "O" -d "Path to write the output fasta to Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ShiftFasta" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -10195,8 +9769,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ShiftFasta" -l "sample" -d "The
 complete -c gatk -n "__fish_seen_subcommand_from ShiftFasta" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from ShiftFasta" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ShiftFasta" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l "output" -s "O" -d "where to write the parameter output file." -r
@@ -10283,8 +9855,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l "samp
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalibrateDragstrModel" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l "output" -s "O" -d "The combined GVCF output file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -10378,8 +9948,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l "invert-soft-c
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CombineGVCFs" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "genomicsdb-update-workspace-path" -d "Workspace when updating GenomicsDB." -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "genomicsdb-workspace-path" -d "Workspace for GenomicsDB." -r
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -10467,8 +10035,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "sample" -
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and" -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from GenomicsDBImport" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -10579,8 +10145,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l "invert-soft-
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeGVCFs" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "reference" -s "R" -d "Reference sequence file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -10673,8 +10237,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from GnarlyGenotyper" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeBasedVariantRecaller" -l "alleles-file-vcf" -d "VCF file containing alleles Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeBasedVariantRecaller" -l "matrix-file-csv" -d "CSV file to be filled with likelihood matrix data Required." -r
@@ -10857,8 +10419,6 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeBasedVariantRecaller" 
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeBasedVariantRecaller" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and" -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeBasedVariantRecaller" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeBasedVariantRecaller" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l "output" -s "O" -d "File to which variants should be written Required." -r
@@ -11059,8 +10619,6 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and" -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCaller" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l "output" -s "O" -d "Single file to which variants should be written Required." -r
@@ -11265,8 +10823,6 @@ complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l "inver
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from HaplotypeCallerSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l "input" -s "I" -d "One or more .tar.gz containing outputs of CollectF1R2Counts This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l "output" -s "O" -d "tar.gz of artifact prior tables Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -11285,8 +10841,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l "
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from LearnReadOrientationModel" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "output" -s "O" -d "Output stats Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "stats" -d "Stats from Mutect2 scatters of a single tumor or tumor-normal pair This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -11301,8 +10855,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "use-jdk-i
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeMutectStats" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l "output" -s "O" -d "File to which variants should be written Required." -r
@@ -11497,8 +11049,6 @@ complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l "sample" -d "The na
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and" -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from Mutect2" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from RampedHaplotypeCaller" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from RampedHaplotypeCaller" -l "output" -s "O" -d "File to which variants should be written Required." -r
@@ -11699,8 +11249,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RampedHaplotypeCaller" -l "samp
 complete -c gatk -n "__fish_seen_subcommand_from RampedHaplotypeCaller" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and" -x
 complete -c gatk -n "__fish_seen_subcommand_from RampedHaplotypeCaller" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from RampedHaplotypeCaller" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l "known-sites" -d "the known variants This argument must be specified at least once." -x
@@ -11939,8 +11487,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l "invert-
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from ReadsPipelineSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CollectSVEvidence" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from CollectSVEvidence" -l "sample-name" -d "Sample name Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectSVEvidence" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -12021,8 +11567,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CollectSVEvidence" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from CollectSVEvidence" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CollectSVEvidence" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "output" -s "O" -d "Merged DepthEvidence output file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -12095,8 +11639,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "inve
 complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CondenseDepthEvidence" -l "depth-evidence" -s "F" -d "Required." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l "cpx-vcf" -d "file containing complex variants as output by GATK-SV Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -12177,8 +11719,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CpxVariantReInterpreterSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l "output" -s "O" -d "prefix for discovery (non-genotyped) VCF; sample name will be appended after the provided argument, followed by \"_inv_del_ins.vcf\" Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -12255,8 +11795,6 @@ complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlign
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from DiscoverVariantsFromContigAlignmentsSAMSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l "kmers-to-ignore" -d "file containing ubiquitous kmer list." -r
@@ -12373,8 +11911,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l "inv
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractSVEvidenceSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l "kmers-to-ignore" -d "file containing ubiquitous kmer list." -r
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l "output" -s "O" -d "sam file for aligned contigs Required." -r
@@ -12490,8 +12026,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FindBreakpointEvidenceSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l "output" -s "O" -d "The combined output VCF Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l "pedigree" -o "ped" -d "Pedigree file for samples Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -12576,8 +12110,6 @@ complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from JointGermlineCNVSegmentation" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "input-counts" -s "F" -d "Input file of counts Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -12647,8 +12179,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintReadCounts" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l "evidence-file" -s "F" -d "Input feature file URI(s) with extension '.sr.txt', '.pe.txt', '.sd.txt', '.baf.txt', or '.rd.txt' (may be gzipped)." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l "output" -s "O" -d "Output file for features of a type matching the input." -r
@@ -12721,8 +12251,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintSVEvidence" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SVAnnotate" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SVAnnotate" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -12797,8 +12325,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SVAnnotate" -l "sample" -d "The
 complete -c gatk -n "__fish_seen_subcommand_from SVAnnotate" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from SVAnnotate" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SVAnnotate" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SVCluster" -l "output" -s "O" -d "Output VCF Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SVCluster" -l "ploidy-table" -d "Sample ploidy table (.tsv) Required." -r
@@ -12890,8 +12416,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SVCluster" -l "invert-soft-clip
 complete -c gatk -n "__fish_seen_subcommand_from SVCluster" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SVCluster" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "baf-evidence-output" -s "O" -d "BAF output file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "baf-sites-vcf" -d "Input VCF of SNPs marking loci for allele counts Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -12965,8 +12489,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "sample" -d 
 complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SiteDepthtoBAF" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l "outputVCFName" -s "O" -d "Name of output VCF." -x
@@ -13045,8 +12567,6 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariantDiscoverer" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l "contig-sam-file" -d "sam file for aligned contigs Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -13173,8 +12693,6 @@ complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPip
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from StructuralVariationDiscoveryPipelineSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l "output" -s "O" -d "prefix for output files (including VCF files and if enabled, the signaling assembly contig's alignments); sample name will be appended after the provided argument Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -13254,8 +12772,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyCont
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SvDiscoverFromLocalAssemblyContigAlignmentsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "eval" -d "Input evaluation file(s) This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -13324,8 +12840,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "ignore-v
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "max-distance" -d "Maximum distance for variants to be grouped together Default value: 2147483647." -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "ref-padding" -d "Number of bases on either side to expand spanning reference window Default value: 1." -x
 complete -c gatk -n "__fish_seen_subcommand_from AlleleFrequencyQC" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l "output" -s "O" -d "The output filtered VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -13397,8 +12911,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l "in
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithBamDepth" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l "mixing-fractions" -d "The input mixing fractions table Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l "output" -s "O" -d "The output annotated VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -13469,8 +12981,6 @@ complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFr
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from AnnotateVcfWithExpectedAlleleFraction" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -13553,8 +13063,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateGenotypePosteriors" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "output" -s "O" -d "The output table of samplemixing fractions Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -13624,8 +13132,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "s
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CalculateMixingFractions" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l "evaluation" -o "eval" -d "A VCF containing variants to be compared to the truth Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l "summary" -s "S" -d "A table of summary statistics (true positives, sensitivity, etc.) Required." -r
@@ -13703,8 +13209,6 @@ complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l "invert-soft-cl
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from Concordance" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "intervals" -s "L" -d "One or more genomic intervals over which to operate This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "output" -s "O" -d "Output file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -13774,8 +13278,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "sample
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountFalsePositives" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -13847,8 +13349,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l "invert-soft-
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariants" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "variant" -s "V" -d "uri for the input file: a local file path Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -13888,8 +13388,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "use-nio
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from CountVariantsSpark" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l "eval-info-key" -d "Info key from eval vcf Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l "evaluation" -o "eval" -d "A VCF containing variants to be compared to the truth Required." -x
@@ -13967,8 +13465,6 @@ complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from EvaluateInfoFieldConcordance" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l "allele-frequency-data-source" -d "The allele frequency data source (ExAC or gnomAD) that was used to Funcotate the input VCF." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l "output" -s "O" -d "Output VCF file to which filtered variants should be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l "ref-version" -d "The version of the Human Genome reference which was used to Funcotate the input VCF." -x
@@ -14041,8 +13537,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l "invert-
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterFuncotations" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "INPUT" -s "I" -d "Input VCF or BCF with genotypes." -r
 complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "OUTPUT" -s "O" -d "Output metrics file." -r
 complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "TRIOS" -o "PED" -d "File of Trio information in PED format (with no genotype columns)." -r
@@ -14071,8 +13565,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "VE
 complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FindMendelianViolations" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l "data-sources-path" -d "The path to a data source folder for Funcotator." -r
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l "output" -s "O" -d "Output file to which annotated variants should be written." -r
@@ -14157,8 +13649,6 @@ complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l "invert-soft-cli
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from Funcotator" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l "extract-after-download" -d "Extract the data sources to a sibling folder after they have been downloaded." -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l "gatk-config-file" -d "A configuration file to use with the GATK." -r
@@ -14176,8 +13666,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader"
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FuncotatorDataSourceDownloader" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l "OUTPUT" -s "O" -d "Basename for the three metrics files that are to be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l "TRUTH_VCF" -o "TV" -d "The VCF containing the truth sample Required." -r
@@ -14207,8 +13695,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l "VERBOS
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GenotypeConcordance" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l "confidence-concordance-histogram" -o "cch" -d "Reflects the confidence scores of bases in reference blocks in the truth and eval VCF, respectively." -r
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l "eval-block-histogram" -o "ebh" -d "A histogram of block lengths and their associated confidence scores for the eval sample Required." -r
@@ -14283,8 +13769,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l "
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ReferenceBlockConcordance" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l "discovery-sample-name" -d "sample name for discovery in VCF." -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -14364,8 +13848,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutati
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateBasicSomaticShortMutations" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l "add-output-vcf-command-line" -d "If true, adds a command line header line to created VCF files." -r
@@ -14441,8 +13923,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ValidateVariants" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "eval" -d "Input evaluation file(s) This argument must be specified at least once." -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -14509,8 +13989,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "ignore-variant
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "max-distance" -d "Maximum distance for variants to be grouped together Default value: 2147483647." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "ref-padding" -d "Number of bases on either side to expand spanning reference window Default value: 1." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantEval" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l "output" -s "O" -d "File to which the tab-delimited table is written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -14586,8 +14064,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l "sample" -d
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantsToTable" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l "output" -s "O" -d "The output filtered and recalibrated VCF file in which each variant is annotated with its VQSLOD value Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l "recal-file" -d "The input recal file used by ApplyVQSR Required." -r
@@ -14666,8 +14142,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l "sample" -d "The 
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ApplyVQSR" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l "output" -s "O" -d "Output file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -14752,8 +14226,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNScoreVariants" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l "input-tensor-dir" -d "Directory of training tensors to create." -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l "annotation-shortcut" -d "Shortcut connections on the annotation layers." -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l "annotation-units" -d "Number of units connected to the annotation input layer Default value: 16." -x
@@ -14788,8 +14260,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l "annotation
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l "channels-last" -d "Store the channels in the last axis of tensors, tensorflow->true, theano->false Default value: true." -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantTrain" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "output-tensor-dir" -d "Directory of training tensors." -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "reference" -s "R" -d "Reference fasta file." -r
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "truth-bed" -d "Confident region of the validated VCF file." -r
@@ -14814,8 +14284,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "ver
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "annotation-set" -d "Which set of annotations to use." -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "channels-last" -d "Store the channels in the last axis of tensors, tensorflow->true, theano->false Default value: true." -x
 complete -c gatk -n "__fish_seen_subcommand_from CNNVariantWriteTensors" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l "output" -s "O" -d "Output vcf Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -14889,8 +14357,6 @@ complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from CreateSomaticPanelOfNormals" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ExtractVariantAnnotations" -l "annotation" -s "A" -d "Names of the annotations to extract." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractVariantAnnotations" -l "output" -s "O" -d "Prefix for output filenames." -r
@@ -14972,8 +14438,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ExtractVariantAnnotations" -l "
 complete -c gatk -n "__fish_seen_subcommand_from ExtractVariantAnnotations" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractVariantAnnotations" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ExtractVariantAnnotations" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l "bwa-mem-index-image" -o "index" -d "BWA-mem index image Required." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l "input" -s "I" -d "BAM/SAM/CRAM file containing reads This argument must be specified at least once." -r
@@ -15061,8 +14525,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l "s
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterAlignmentArtifacts" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l "output" -s "O" -d "The output filtered VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -15166,8 +14628,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l "invert-s
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases" -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterMutectCalls" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in" -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l "output" -s "O" -d "Output VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l "resource" -d "A list of validated VCFs with known sites of common variation This argument must be specified at least once." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -15243,8 +14703,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l "inve
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVariantTranches" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "INPUT" -s "I" -d "The INPUT VCF or BCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "OUTPUT" -s "O" -d "The output VCF or BCF." -r
 complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15268,8 +14726,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "VERBOSITY" -d "C
 complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FilterVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l "output" -s "O" -d "Output VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -15343,8 +14799,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from MTLowHeteroplasmyFilterTool" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "output" -s "O" -d "Output VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -15416,8 +14870,6 @@ complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "sample" -d 
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from NuMTFilterTool" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from ScoreVariantAnnotations" -l "annotation" -s "A" -d "Names of the annotations to extract." -x
 complete -c gatk -n "__fish_seen_subcommand_from ScoreVariantAnnotations" -l "model-prefix" -d "Prefix for model files." -r
@@ -15508,8 +14960,6 @@ complete -c gatk -n "__fish_seen_subcommand_from ScoreVariantAnnotations" -l "in
 complete -c gatk -n "__fish_seen_subcommand_from ScoreVariantAnnotations" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from ScoreVariantAnnotations" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -l "annotations-hdf5" -d "HDF5 file containing annotations extracted with ExtractVariantAnnotations." -r
 complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -l "output" -s "O" -d "Output prefix." -x
 complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15530,8 +14980,6 @@ complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -
 complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -l "verbosity" -d "Control verbosity of logging." -x
 complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from TrainVariantAnnotationsModel" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -15617,8 +15065,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l "sample" 
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l "invert-soft-clip-ratio-filter" -d "Inverts the results from this filter, causing all variants that would pass to fail and visa-versa." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantFiltration" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l "output" -s "O" -d "The output recal file used by ApplyVQSR Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l "resource" -d "A list of sites for which to apply a prior probability of being correct but which aren't used by the algorithm (training and truth sets are required to run) This argument must be specified at least once." -x
@@ -15718,8 +15164,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l "invert
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantRecalibrator" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from FixVcfHeader" -l "INPUT" -s "I" -d "The input VCF/BCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from FixVcfHeader" -l "OUTPUT" -s "O" -d "The output VCF/BCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from FixVcfHeader" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15741,8 +15185,6 @@ complete -c gatk -n "__fish_seen_subcommand_from FixVcfHeader" -l "version" -d "
 complete -c gatk -n "__fish_seen_subcommand_from FixVcfHeader" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from FixVcfHeader" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfs" -l "INPUT" -s "I" -d "Input VCF file(s)." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfs" -l "OUTPUT" -s "O" -d "Output VCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfs" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15763,8 +15205,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherVcfs" -l "version" -d "di
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfs" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfs" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "input" -s "I" -d "Input VCF file(s)." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "output" -s "O" -d "Output VCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15784,8 +15224,6 @@ complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "version" -
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "disable-contig-ordering-check" -d "Don't check relative ordering of contigs when doing a conventional gather Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "ignore-safety-checks" -d "Disable sanity checks to improve performance, may result in silently creating corrupted outputs data Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from GatherVcfsCloud" -l "showHidden" -d "display hidden arguments Default value: false." -x
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l "output" -s "O" -d "File to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l "reference" -s "R" -d "Reference sequence file Required." -r
@@ -15862,8 +15300,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l "i
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from LeftAlignAndTrimVariants" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from LiftoverVcf" -l "CHAIN" -s "C" -d "The liftover chain file." -r
 complete -c gatk -n "__fish_seen_subcommand_from LiftoverVcf" -l "INPUT" -s "I" -d "The input VCF/BCF file to be lifted over." -r
 complete -c gatk -n "__fish_seen_subcommand_from LiftoverVcf" -l "OUTPUT" -s "O" -d "The output location for the lifted over VCF/BCF." -r
@@ -15893,8 +15329,6 @@ complete -c gatk -n "__fish_seen_subcommand_from LiftoverVcf" -l "WRITE_ORIGINAL
 complete -c gatk -n "__fish_seen_subcommand_from LiftoverVcf" -l "WRITE_ORIGINAL_POSITION" -d "Write the original contig/position for lifted variants to the INFO field." -x
 complete -c gatk -n "__fish_seen_subcommand_from LiftoverVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MakeSitesOnlyVcf" -l "INPUT" -s "I" -d "Input VCF or BCF containing genotype and site-level information." -r
 complete -c gatk -n "__fish_seen_subcommand_from MakeSitesOnlyVcf" -l "OUTPUT" -s "O" -d "Output VCF or BCF file containing only site-level information." -r
 complete -c gatk -n "__fish_seen_subcommand_from MakeSitesOnlyVcf" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15914,8 +15348,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MakeSitesOnlyVcf" -l "version" 
 complete -c gatk -n "__fish_seen_subcommand_from MakeSitesOnlyVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MakeSitesOnlyVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "INPUT" -s "I" -d "One or more input VCFs to extract sample names from." -x
 complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "OUTPUT" -s "O" -d "Output file to write the sample-name map to." -r
 complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -15933,8 +15365,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "VERBO
 complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MakeVcfSampleNameMap" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from MergeVcfs" -l "INPUT" -s "I" -d "VCF or BCF input files (File format is determined by file extension), or a file having a '.list' suffix containing the path to the files, one per line." -r
 complete -c gatk -n "__fish_seen_subcommand_from MergeVcfs" -l "OUTPUT" -s "O" -d "The merged VCF or BCF file." -r
@@ -15955,8 +15385,6 @@ complete -c gatk -n "__fish_seen_subcommand_from MergeVcfs" -l "VERBOSITY" -d "C
 complete -c gatk -n "__fish_seen_subcommand_from MergeVcfs" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeVcfs" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from MergeVcfs" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l "output" -s "O" -d "Uri for the output file (a local file path)." -r
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -16030,8 +15458,6 @@ complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l "invert-
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from PrintVariantsSpark" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l "output" -s "O" -d "The output filtered VCF file Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l "add-output-sam-program-record" -d "If true, adds a PG tag to created SAM/BAM/CRAM files." -r
@@ -16103,8 +15529,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l "invert-
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from RemoveNearbyIndels" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "INPUT" -s "I" -d "Input single sample VCF or BCF file." -r
 complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "NEW_SAMPLE_NAME" -d "New name to give sample in output VCF." -x
 complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "OUTPUT" -s "O" -d "Output single sample VCF." -r
@@ -16124,8 +15548,6 @@ complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "VERBOSIT
 complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from RenameSampleInVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l "output" -s "O" -d "Path to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -16236,8 +15658,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l "invert-soft
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from SelectVariants" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "INPUT" -s "I" -d "Input VCF(s) to be sorted." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "OUTPUT" -s "O" -d "Output VCF to be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -16256,8 +15676,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "VERBOSITY" -d "Con
 complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SortVcf" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l "INDEL_OUTPUT" -d "The VCF or BCF file to which indel records should be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l "INPUT" -s "I" -d "The VCF or BCF input file Required." -r
@@ -16279,8 +15697,6 @@ complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l "VERBOSITY" -d "C
 complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from SplitVcfs" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l "output" -s "O" -d "File to which updated variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -16353,8 +15769,6 @@ complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVCFSequenceDictionary" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l "INPUT" -s "I" -d "Input VCF Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l "OUTPUT" -s "O" -d "Output VCF to be written." -r
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l "SEQUENCE_DICTIONARY" -o "SD" -d "A Sequence Dictionary (can be read from one of the following file types (SAM, BAM, VCF, BCF, Interval List, Fasta, or Dict) Required." -r
@@ -16373,8 +15787,6 @@ complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from UpdateVcfSequenceDictionary" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l "output" -s "O" -d "The file to which variants should be written Required." -r
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l "variant" -s "V" -d "A VCF file containing variants Required." -r
@@ -16464,8 +15876,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l "invert-so
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l "soft-clipped-leading-trailing-ratio" -d "Threshold ratio of soft clipped bases (leading / trailing the cigar string) to total bases in read for read to be filtered." -x
 complete -c gatk -n "__fish_seen_subcommand_from VariantAnnotator" -l "soft-clipped-ratio-threshold" -d "Threshold ratio of soft clipped bases (anywhere in the cigar string) to total bases in read for read to be filtered." -x
 
-
-
 complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "INPUT" -s "I" -d "The BCF or VCF input file." -r
 complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "OUTPUT" -s "O" -d "The BCF or VCF output file name." -r
 complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "arguments_file" -d "read one or more arguments files and add them to the command line This argument may be specified 0 or more times." -r
@@ -16484,8 +15894,6 @@ complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "VERBOSI
 complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "version" -d "display the version number for this tool Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "showHidden" -d "display hidden arguments Default value: false." -x
 complete -c gatk -n "__fish_seen_subcommand_from VcfFormatConverter" -l "REFERENCE_SEQUENCE" -s "R" -d "Reference sequence file." -r
-
-
 
 complete -c gatk -n "__fish_seen_subcommand_from VcfToIntervalList" -l "INPUT" -s "I" -d "The BCF or VCF input file." -r
 complete -c gatk -n "__fish_seen_subcommand_from VcfToIntervalList" -l "OUTPUT" -s "O" -d "The output Picard Interval List." -r

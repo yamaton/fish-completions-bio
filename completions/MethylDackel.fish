@@ -5,8 +5,6 @@ complete -k -c MethylDackel -n __fish_use_subcommand -x -a mergeContext -d "Comb
 complete -k -c MethylDackel -n __fish_use_subcommand -x -a extract -d "Extract methylation metrics from an alignment file in BAM/CRAM format."
 complete -k -c MethylDackel -n __fish_use_subcommand -x -a mbias -d "Determine the position-dependent methylation bias in a dataset, producing diagnostic SVG images."
 
-
-
 complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -s "q" -d "Minimum MAPQ threshold to include an alignment (default 10)" -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -s "p" -d "Minimum Phred threshold to include a base (default 5)." -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -s "D" -d "Maximum per-base depth (default 2000)" -x
@@ -30,8 +28,6 @@ complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -l "CHH" -d "Out
 complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -l "nOT" -d "Inclusion bound for methylation calls from reads/pairs originating from the original top strand." -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -l "nOB" -l "nCTOT" -l "nCTOT" -d "As with --nOT, but for the original bottom, complementary to the original top, and complementary to the original bottom strands, respectively." -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from mbias" -l "version" -d "Print version and the quit"
-
-
 
 complete -c MethylDackel -n "__fish_seen_subcommand_from extract" -s "q" -d "Minimum MAPQ threshold to include an alignment (default 10)" -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from extract" -s "p" -d "Minimum Phred threshold to include a base (default 5)." -x
@@ -73,11 +69,7 @@ complete -c MethylDackel -n "__fish_seen_subcommand_from extract" -l "nOT" -d "L
 complete -c MethylDackel -n "__fish_seen_subcommand_from extract" -l "nOB" -l "nCTOT" -l "nCTOB" -d "As with --nOT, but for the original bottom, complementary to the original top, and complementary to the original bottom strands, respectively." -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from extract" -l "version" -d "Print version and then quit."
 
-
-
 complete -c MethylDackel -n "__fish_seen_subcommand_from mergeContext" -s "o" -d "Output file name [stdout]" -r
-
-
 
 complete -c MethylDackel -n "__fish_seen_subcommand_from perRead" -s "q" -d "Minimum MAPQ threshold to include an alignment (default 10)" -x
 complete -c MethylDackel -n "__fish_seen_subcommand_from perRead" -s "p" -d "Minimum Phred threshold to include a base (default 5)." -x

@@ -3,12 +3,8 @@
 complete -c multiBamSummary -n "not __fish_seen_subcommand_from bins BED-file" -s "h" -l "help" -d "show this help message and exit"
 complete -c multiBamSummary -n "not __fish_seen_subcommand_from bins BED-file" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c multiBamSummary -n __fish_use_subcommand -x -a BED-file -d "The user provides a BED file that contains all regions that should be considered for the coverage analysis."
 complete -k -c multiBamSummary -n __fish_use_subcommand -x -a bins -d "The coverage calculation is done for consecutive bins of equal size (10 kilobases by default)."
-
-
 
 complete -c multiBamSummary -n "__fish_seen_subcommand_from bins" -l "bamfiles" -s "b" -d "List of indexed bam files separated by spaces." -r
 complete -c multiBamSummary -n "__fish_seen_subcommand_from bins" -l "outFileName" -o "out" -s "o" -d "File name to save the coverage matrix." -r
@@ -33,8 +29,6 @@ complete -c multiBamSummary -n "__fish_seen_subcommand_from bins" -l "samFlagInc
 complete -c multiBamSummary -n "__fish_seen_subcommand_from bins" -l "samFlagExclude" -d "Exclude reads based on the SAM flag." -x
 complete -c multiBamSummary -n "__fish_seen_subcommand_from bins" -l "minFragmentLength" -d "The minimum fragment length needed for read/pair inclusion." -x
 complete -c multiBamSummary -n "__fish_seen_subcommand_from bins" -l "maxFragmentLength" -d "The maximum fragment length needed for read/pair inclusion." -x
-
-
 
 complete -c multiBamSummary -n "__fish_seen_subcommand_from BED-file" -l "bamfiles" -s "b" -d "List of indexed bam files separated by spaces." -r
 complete -c multiBamSummary -n "__fish_seen_subcommand_from BED-file" -l "outFileName" -o "out" -s "o" -d "File name to save the coverage matrix." -r

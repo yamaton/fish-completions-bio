@@ -5,7 +5,6 @@ complete -k -c bwa-mem2 -n __fish_use_subcommand -x -a mem -d "alignment"
 complete -k -c bwa-mem2 -n __fish_use_subcommand -x -a index -d "create index"
 
 
-
 complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "o" -d "Output SAM file name" -r
 complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "t" -d "number of threads [1]" -x
 complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "k" -d "minimum seed length [19]" -x
@@ -41,3 +40,4 @@ complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "V" -d "output the 
 complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "Y" -d "use soft clipping for supplementary alignments"
 complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "M" -d "mark shorter split hits as secondary"
 complete -c bwa-mem2 -n "__fish_seen_subcommand_from mem" -s "I" -d "specify the mean, standard deviation (10% of the mean if absent), max (4 sigma from the mean if absent) and min of the insert size distribution." -x
+

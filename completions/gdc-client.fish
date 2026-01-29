@@ -3,13 +3,9 @@
 complete -c gdc-client -n "not __fish_seen_subcommand_from download upload settings" -s "h" -l "help" -d "show this help message and exit"
 complete -c gdc-client -n "not __fish_seen_subcommand_from download upload settings" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c gdc-client -n __fish_use_subcommand -x -a settings -d "display default settings"
 complete -k -c gdc-client -n __fish_use_subcommand -x -a upload -d "upload data to the GDC"
 complete -k -c gdc-client -n __fish_use_subcommand -x -a download -d "download data from the GDC"
-
-
 
 complete -c gdc-client -n "__fish_seen_subcommand_from download" -s "h" -l "help" -d "show this help message and exit"
 complete -c gdc-client -n "__fish_seen_subcommand_from download" -l "debug" -d "Enable debug logging."
@@ -33,8 +29,6 @@ complete -c gdc-client -n "__fish_seen_subcommand_from download" -l "latest" -d 
 complete -c gdc-client -n "__fish_seen_subcommand_from download" -l "config" -d "Path to INI-type config file" -r
 complete -c gdc-client -n "__fish_seen_subcommand_from download" -s "m" -l "manifest" -d "GDC download manifest file" -r
 
-
-
 complete -c gdc-client -n "__fish_seen_subcommand_from upload" -s "h" -l "help" -d "show this help message and exit"
 complete -c gdc-client -n "__fish_seen_subcommand_from upload" -l "debug" -d "Enable debug logging."
 complete -c gdc-client -n "__fish_seen_subcommand_from upload" -l "log-file" -d "Save logs to file." -r
@@ -55,7 +49,14 @@ complete -c gdc-client -n "__fish_seen_subcommand_from upload" -l "delete" -d "D
 complete -c gdc-client -n "__fish_seen_subcommand_from upload" -l "manifest" -s "m" -d "Manifest which describes files to be uploaded" -r
 complete -c gdc-client -n "__fish_seen_subcommand_from upload" -l "config" -d "Path to INI-type config file" -r
 
+complete -c gdc-client -n "__fish_seen_subcommand_from settings; and not __fish_seen_subcommand_from download upload" -s "h" -l "help" -d "show this help message and exit"
+complete -c gdc-client -n "__fish_seen_subcommand_from settings; and not __fish_seen_subcommand_from download upload" -l "config" -d "Path to INI-type config file." -r
 
+complete -k -c gdc-client -n "__fish_seen_subcommand_from settings; and not __fish_seen_subcommand_from download upload" -x -a upload -d "Display upload settings"
+complete -k -c gdc-client -n "__fish_seen_subcommand_from settings; and not __fish_seen_subcommand_from download upload" -x -a download -d "Display download settings"
 
-complete -c gdc-client -n "__fish_seen_subcommand_from settings" -s "h" -l "help" -d "show this help message and exit"
-complete -c gdc-client -n "__fish_seen_subcommand_from settings" -l "config" -d "Path to INI-type config file." -r
+complete -c gdc-client -n "__fish_seen_subcommand_from settings; and __fish_seen_subcommand_from download" -s "h" -l "help" -d "show this help message and exit"
+complete -c gdc-client -n "__fish_seen_subcommand_from settings; and __fish_seen_subcommand_from download" -l "config" -d "Path to INI-type config file." -r
+
+complete -c gdc-client -n "__fish_seen_subcommand_from settings; and __fish_seen_subcommand_from upload" -s "h" -l "help" -d "show this help message and exit"
+complete -c gdc-client -n "__fish_seen_subcommand_from settings; and __fish_seen_subcommand_from upload" -l "config" -d "Path to INI-type config file." -r

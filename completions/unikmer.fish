@@ -12,8 +12,6 @@ complete -c unikmer -n "not __fish_seen_subcommand_from autocompletion common co
 complete -c unikmer -n "not __fish_seen_subcommand_from autocompletion common concat count decode diff dump encode filter grep head info inter locate merge num rfilter sample sort split tsplit union uniqs version view" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "not __fish_seen_subcommand_from autocompletion common concat count decode diff dump encode filter grep head info inter locate merge num rfilter sample sort split tsplit union uniqs version view" -l "verbose" -d "print verbose information"
 
-
-
 complete -k -c unikmer -n __fish_use_subcommand -x -a view -d "Read and output binary format to plain text"
 complete -k -c unikmer -n __fish_use_subcommand -x -a version -d "Print version information and check for update"
 complete -k -c unikmer -n __fish_use_subcommand -x -a uniqs -d "Mapping k-mers back to genome and find unique subsequences"
@@ -40,8 +38,6 @@ complete -k -c unikmer -n __fish_use_subcommand -x -a concat -d "Concatenate mul
 complete -k -c unikmer -n __fish_use_subcommand -x -a common -d "Find k-mers shared by most of multiple binary files"
 complete -k -c unikmer -n __fish_use_subcommand -x -a autocompletion -d "Generate shell autocompletion script (bash|zsh|fish|powershell)"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -l "file" -d "autocompletion file (default \"~/.bash_completion.d/unikmer.sh\")" -r
 complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -s "h" -l "help" -d "help for autocompletion"
 complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -l "shell" -d "autocompletion type (bash|zsh|fish|powershell) (default \"bash\")" -x
@@ -55,8 +51,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -s "C" -l "n
 complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from autocompletion" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from common" -s "h" -l "help" -d "help for common"
 complete -c unikmer -n "__fish_seen_subcommand_from common" -s "m" -l "mix-taxid" -d "allow part of files being whithout taxids"
@@ -74,8 +68,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from common" -l "nocheck-file" -d
 complete -c unikmer -n "__fish_seen_subcommand_from common" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from common" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from concat" -s "h" -l "help" -d "help for concat"
 complete -c unikmer -n "__fish_seen_subcommand_from concat" -s "n" -l "number" -d "number of k-mers (default -1)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from concat" -s "o" -l "out-prefix" -d "out file prefix (\"-\" for stdout) (default \"-\")" -r
@@ -91,8 +83,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from concat" -s "C" -l "no-compre
 complete -c unikmer -n "__fish_seen_subcommand_from concat" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from concat" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from concat" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from count" -s "K" -l "canonical" -d "only keep the canonical k-mers"
 complete -c unikmer -n "__fish_seen_subcommand_from count" -l "circular" -d "circular genome"
@@ -123,8 +113,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from count" -l "nocheck-file" -d 
 complete -c unikmer -n "__fish_seen_subcommand_from count" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from count" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from decode" -s "a" -l "all" -d "output all data: encoded integer, decoded k-mer"
 complete -c unikmer -n "__fish_seen_subcommand_from decode" -s "h" -l "help" -d "help for decode"
 complete -c unikmer -n "__fish_seen_subcommand_from decode" -s "k" -l "kmer-len" -d "k-mer length" -x
@@ -140,8 +128,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from decode" -l "nocheck-file" -d
 complete -c unikmer -n "__fish_seen_subcommand_from decode" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from decode" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from diff" -s "t" -l "compare-taxid" -d "take taxid into consideration."
 complete -c unikmer -n "__fish_seen_subcommand_from diff" -s "h" -l "help" -d "help for diff"
 complete -c unikmer -n "__fish_seen_subcommand_from diff" -s "o" -l "out-prefix" -d "out file prefix (\"-\" for stdout) (default \"-\")" -r
@@ -156,8 +142,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from diff" -s "C" -l "no-compress
 complete -c unikmer -n "__fish_seen_subcommand_from diff" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from diff" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from diff" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from dump" -s "K" -l "canonical" -d "save the canonical k-mers"
 complete -c unikmer -n "__fish_seen_subcommand_from dump" -s "O" -l "canonical-only" -d "only save the canonical k-mers."
@@ -180,8 +164,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from dump" -l "nocheck-file" -d "
 complete -c unikmer -n "__fish_seen_subcommand_from dump" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from dump" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from encode" -s "a" -l "all" -d "output all data: orginial k-mer, parsed k-mer, encoded integer, encode bits"
 complete -c unikmer -n "__fish_seen_subcommand_from encode" -s "K" -l "canonical" -d "keep the canonical k-mers"
 complete -c unikmer -n "__fish_seen_subcommand_from encode" -s "H" -l "hash" -d "save hash of k-mer, automatically on for k>32"
@@ -197,8 +179,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from encode" -s "C" -l "no-compre
 complete -c unikmer -n "__fish_seen_subcommand_from encode" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from encode" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from encode" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from filter" -s "h" -l "help" -d "help for filter"
 complete -c unikmer -n "__fish_seen_subcommand_from filter" -s "v" -l "invert" -d "invert result, i.e., output low-complexity k-mers"
@@ -217,8 +197,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from filter" -s "C" -l "no-compre
 complete -c unikmer -n "__fish_seen_subcommand_from filter" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from filter" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from filter" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from grep" -s "D" -l "degenerate" -d "query k-mers contains degenerate base"
 complete -c unikmer -n "__fish_seen_subcommand_from grep" -l "force" -d "overwrite output directory"
@@ -246,8 +224,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from grep" -l "nocheck-file" -d "
 complete -c unikmer -n "__fish_seen_subcommand_from grep" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from grep" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from head" -s "h" -l "help" -d "help for head"
 complete -c unikmer -n "__fish_seen_subcommand_from head" -s "n" -l "number" -d "number of k-mers to extract (default 10)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from head" -s "o" -l "out-prefix" -d "out file prefix (\"-\" for stdout) (default \"-\")" -r
@@ -261,8 +237,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from head" -s "C" -l "no-compress
 complete -c unikmer -n "__fish_seen_subcommand_from head" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from head" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from head" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from info" -s "a" -l "all" -d "all information, including number of k-mers"
 complete -c unikmer -n "__fish_seen_subcommand_from info" -s "b" -l "basename" -d "only output basename of files"
@@ -283,8 +257,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from info" -l "nocheck-file" -d "
 complete -c unikmer -n "__fish_seen_subcommand_from info" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from info" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from inter" -s "h" -l "help" -d "help for inter"
 complete -c unikmer -n "__fish_seen_subcommand_from inter" -s "m" -l "mix-taxid" -d "allow part of files being whithout taxids"
 complete -c unikmer -n "__fish_seen_subcommand_from inter" -s "o" -l "out-prefix" -d "out file prefix (\"-\" for stdout) (default \"-\")" -r
@@ -298,8 +270,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from inter" -s "C" -l "no-compres
 complete -c unikmer -n "__fish_seen_subcommand_from inter" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from inter" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from inter" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from locate" -l "circular" -d "circular genome."
 complete -c unikmer -n "__fish_seen_subcommand_from locate" -s "g" -l "genome" -d "genomes in (gzipped) fasta file(s)" -r
@@ -316,8 +286,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from locate" -s "C" -l "no-compre
 complete -c unikmer -n "__fish_seen_subcommand_from locate" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from locate" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from locate" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from merge" -l "force" -d "overwrite tmp dir"
 complete -c unikmer -n "__fish_seen_subcommand_from merge" -s "h" -l "help" -d "help for merge"
@@ -340,8 +308,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from merge" -l "nocheck-file" -d 
 complete -c unikmer -n "__fish_seen_subcommand_from merge" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from merge" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from num" -s "b" -l "basename" -d "only output basename of files"
 complete -c unikmer -n "__fish_seen_subcommand_from num" -s "n" -l "file-name" -d "show file name"
 complete -c unikmer -n "__fish_seen_subcommand_from num" -s "f" -l "force" -d "read whole file and count k-mers"
@@ -357,8 +323,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from num" -s "C" -l "no-compress"
 complete -c unikmer -n "__fish_seen_subcommand_from num" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from num" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from num" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from rfilter" -s "B" -l "black-list" -d "black list of ranks to discard, e.g., '\"no rank\", \"clade\"'" -x
 complete -c unikmer -n "__fish_seen_subcommand_from rfilter" -s "N" -l "discard-noranks" -d "discard ranks without order, type \"unikmer filter --help\" for details"
@@ -384,8 +348,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from rfilter" -l "nocheck-file" -
 complete -c unikmer -n "__fish_seen_subcommand_from rfilter" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from rfilter" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from sample" -s "h" -l "help" -d "help for sample"
 complete -c unikmer -n "__fish_seen_subcommand_from sample" -s "o" -l "out-prefix" -d "out file prefix (\"-\" for stdout) (default \"-\")" -r
 complete -c unikmer -n "__fish_seen_subcommand_from sample" -s "s" -l "start" -d "start location (default 1)" -x
@@ -400,8 +362,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from sample" -s "C" -l "no-compre
 complete -c unikmer -n "__fish_seen_subcommand_from sample" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from sample" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from sample" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from sort" -s "m" -l "chunk-size" -d "split input into chunks of N k-mers, supports K/M/G suffix, type \"unikmer sort -h\" for detail" -x
 complete -c unikmer -n "__fish_seen_subcommand_from sort" -l "force" -d "overwrite tmp dir"
@@ -423,8 +383,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from sort" -l "nocheck-file" -d "
 complete -c unikmer -n "__fish_seen_subcommand_from sort" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from sort" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from split" -s "m" -l "chunk-size" -d "split input into chunks of N k-mers, supports K/M/G suffix, type \"unikmer sort -h\" for detail" -x
 complete -c unikmer -n "__fish_seen_subcommand_from split" -l "force" -d "overwrite output directory"
 complete -c unikmer -n "__fish_seen_subcommand_from split" -s "h" -l "help" -d "help for split"
@@ -442,8 +400,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from split" -l "nocheck-file" -d 
 complete -c unikmer -n "__fish_seen_subcommand_from split" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from split" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from tsplit" -l "force" -d "overwrite output directory"
 complete -c unikmer -n "__fish_seen_subcommand_from tsplit" -s "h" -l "help" -d "help for tsplit"
 complete -c unikmer -n "__fish_seen_subcommand_from tsplit" -s "O" -l "out-dir" -d "output directory" -r
@@ -459,8 +415,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from tsplit" -l "nocheck-file" -d
 complete -c unikmer -n "__fish_seen_subcommand_from tsplit" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from tsplit" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from union" -s "h" -l "help" -d "help for union"
 complete -c unikmer -n "__fish_seen_subcommand_from union" -s "o" -l "out-prefix" -d "out file prefix (\"-\" for stdout) (default \"-\")" -r
 complete -c unikmer -n "__fish_seen_subcommand_from union" -s "s" -l "sort" -d "sort k-mers, this significantly reduce file size for k<=25."
@@ -474,8 +428,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from union" -s "C" -l "no-compres
 complete -c unikmer -n "__fish_seen_subcommand_from union" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from union" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from union" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from uniqs" -s "M" -l "allow-multiple-mapped-kmer" -d "allow multiple mapped k-mers"
 complete -c unikmer -n "__fish_seen_subcommand_from uniqs" -l "circular" -d "circular genome."
@@ -499,8 +451,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from uniqs" -l "nocheck-file" -d 
 complete -c unikmer -n "__fish_seen_subcommand_from uniqs" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from uniqs" -l "verbose" -d "print verbose information"
 
-
-
 complete -c unikmer -n "__fish_seen_subcommand_from version" -s "u" -l "check-update" -d "check update"
 complete -c unikmer -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "help for version"
 complete -c unikmer -n "__fish_seen_subcommand_from version" -s "c" -l "compact" -d "write compact binary file with little loss of speed"
@@ -513,8 +463,6 @@ complete -c unikmer -n "__fish_seen_subcommand_from version" -s "C" -l "no-compr
 complete -c unikmer -n "__fish_seen_subcommand_from version" -l "nocheck-file" -d "do not check binary file, when using process substitution or named pipe"
 complete -c unikmer -n "__fish_seen_subcommand_from version" -s "j" -l "threads" -d "number of CPUs to use (default 4)" -x
 complete -c unikmer -n "__fish_seen_subcommand_from version" -l "verbose" -d "print verbose information"
-
-
 
 complete -c unikmer -n "__fish_seen_subcommand_from view" -s "a" -l "fasta" -d "output in FASTA format, with encoded integer as FASTA header"
 complete -c unikmer -n "__fish_seen_subcommand_from view" -s "q" -l "fastq" -d "output in FASTQ format, with encoded integer as FASTQ header"

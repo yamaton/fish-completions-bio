@@ -3,12 +3,8 @@
 complete -c computeMatrix -n "not __fish_seen_subcommand_from scale-regions reference-point" -s "h" -l "help" -d "show this help message and exit"
 complete -c computeMatrix -n "not __fish_seen_subcommand_from scale-regions reference-point" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c computeMatrix -n __fish_use_subcommand -x -a reference-point -d "Reference-point refers to a position within a BED region (e.g., the starting point)."
 complete -k -c computeMatrix -n __fish_use_subcommand -x -a scale-regions -d "In the scale-regions mode, all regions in the BED file are stretched or shrunken to the length (in bases) indicated by the user."
-
-
 
 complete -c computeMatrix -n "__fish_seen_subcommand_from scale-regions" -s "h" -l "help" -d "show this help message and exit"
 complete -c computeMatrix -n "__fish_seen_subcommand_from scale-regions" -l "regionsFileName" -s "R" -d "File name or names, in BED or GTF format, containing the regions to plot." -r
@@ -48,8 +44,6 @@ complete -c computeMatrix -n "__fish_seen_subcommand_from scale-regions" -l "dee
 complete -c computeMatrix -n "__fish_seen_subcommand_from scale-regions" -l "userKey" -d "For remote files bedgraph/wiggle files hosted on deepBlue, this specifies the user key to use for access." -r
 complete -c computeMatrix -n "__fish_seen_subcommand_from scale-regions" -l "deepBlueTempDir" -d "If specified, temporary files from preloading datasets from deepBlue will be written here (note, this directory must exist)." -r
 complete -c computeMatrix -n "__fish_seen_subcommand_from scale-regions" -l "deepBlueKeepTemp" -d "If specified, temporary bigWig files from preloading deepBlue datasets are not deleted."
-
-
 
 complete -c computeMatrix -n "__fish_seen_subcommand_from reference-point" -s "h" -l "help" -d "show this help message and exit"
 complete -c computeMatrix -n "__fish_seen_subcommand_from reference-point" -l "regionsFileName" -s "R" -d "File name or names, in BED or GTF format, containing the regions to plot." -r

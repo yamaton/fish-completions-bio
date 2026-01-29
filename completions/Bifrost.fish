@@ -4,8 +4,6 @@ complete -k -c Bifrost -n __fish_use_subcommand -x -a query -d "Query a compacte
 complete -k -c Bifrost -n __fish_use_subcommand -x -a update -d "Update a compacted (colored) de Bruijn graph with new sequences"
 complete -k -c Bifrost -n __fish_use_subcommand -x -a build -d "Build a compacted de Bruijn graph, with or without colors"
 
-
-
 complete -c Bifrost -n "__fish_seen_subcommand_from build" -s "s" -l "input-seq-file" -d "Input sequence file in fasta/fastq(.gz) format" -r
 complete -c Bifrost -n "__fish_seen_subcommand_from build" -s "r" -l "input-ref-file" -d "Input reference file in fasta/fastq(.gz) or gfa(.gz) format" -r
 complete -c Bifrost -n "__fish_seen_subcommand_from build" -s "o" -l "output-file" -d "Prefix for output file(s)" -r
@@ -24,8 +22,6 @@ complete -c Bifrost -n "__fish_seen_subcommand_from build" -s "n" -l "no-compres
 complete -c Bifrost -n "__fish_seen_subcommand_from build" -s "N" -l "no-index-out" -d "No index file is created"
 complete -c Bifrost -n "__fish_seen_subcommand_from build" -s "v" -l "verbose" -d "Print information messages during execution"
 
-
-
 complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "g" -l "input-graph-file" -d "Input graph file to update in gfa(.gz) or bfg format" -r
 complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "s" -l "input-seq-file" -d "Input sequence file in fasta/fastq(.gz) format" -r
 complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "r" -l "input-ref-file" -d "Input reference file in fasta/fastq(.gz) or gfa(.gz) format" -r
@@ -42,8 +38,6 @@ complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "b" -l "bfg-out" 
 complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "n" -l "no-compress-out" -d "Output files must be uncompressed"
 complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "N" -l "no-index-out" -d "No index file is created"
 complete -c Bifrost -n "__fish_seen_subcommand_from update" -s "v" -l "verbose" -d "Print information messages during execution"
-
-
 
 complete -c Bifrost -n "__fish_seen_subcommand_from query" -s "g" -l "input-graph-file" -d "Input graph file to query in gfa(.gz) or bfg" -r
 complete -c Bifrost -n "__fish_seen_subcommand_from query" -s "q" -l "input-query-file" -d "Input query file in fasta/fastq(.gz)" -r

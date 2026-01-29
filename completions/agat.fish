@@ -5,19 +5,13 @@ complete -c agat -n "not __fish_seen_subcommand_from levels config help commands
 complete -c agat -n "not __fish_seen_subcommand_from levels config help commands" -l "tools" -s "t" -d "Display the AGAT tools available"
 complete -c agat -n "not __fish_seen_subcommand_from levels config help commands" -l "info" -s "i" -d "Display information on how AGAT works"
 
-
-
 complete -k -c agat -n __fish_use_subcommand -x -a commands -d "list sub-commands"
 complete -k -c agat -n __fish_use_subcommand -x -a help -d "print a help message"
 complete -k -c agat -n __fish_use_subcommand -x -a config -d "Handle agat configuration used by _sp_ scripts"
 complete -k -c agat -n __fish_use_subcommand -x -a levels -d "Handle feature types and relationships"
 
-
-
 complete -c agat -n "__fish_seen_subcommand_from levels" -l "help" -d "-h"
 complete -c agat -n "__fish_seen_subcommand_from levels" -l "expose" -d "-e"
-
-
 
 complete -c agat -n "__fish_seen_subcommand_from config" -l "help" -d "-h"
 complete -c agat -n "__fish_seen_subcommand_from config" -l "expose" -d "-e"
@@ -33,3 +27,5 @@ complete -c agat -n "__fish_seen_subcommand_from config" -l "locus_tag" -d "pref
 complete -c agat -n "__fish_seen_subcommand_from config" -l "check_all_level3_locations" -l "no-check_all_level3_locations" -d "check_cds: To check when stop codons are definied that they are part of the CDS."
 complete -c agat -n "__fish_seen_subcommand_from config" -l "check_cds" -l "no-check_cds" -d "check_exons: To check that exons include all other l3 feature types that are included within exon (see feature_levels.yaml file e.g: cds:\"exon\")."
 complete -c agat -n "__fish_seen_subcommand_from config" -l "check_exons" -l "no-check_exons" -d "check_utrs: To create UTRs if missing based on CDS and exon features."
+
+

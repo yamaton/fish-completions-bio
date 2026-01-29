@@ -4,8 +4,6 @@ complete -c dorado -n "not __fish_seen_subcommand_from aligner basecaller correc
 complete -c dorado -n "not __fish_seen_subcommand_from aligner basecaller correct demux download duplex polish summary trim" -s "v" -l "version" -d "prints version information and exits"
 complete -c dorado -n "not __fish_seen_subcommand_from aligner basecaller correct demux download duplex polish summary trim" -o "vv" -d "prints verbose version information and exits"
 
-
-
 complete -k -c dorado -n __fish_use_subcommand -x -a trim -d "Adapter/primer trimming tool"
 complete -k -c dorado -n __fish_use_subcommand -x -a summary -d "Summary of basecaller outputs"
 complete -k -c dorado -n __fish_use_subcommand -x -a polish -d "Consensus tool for polishing draft assemblies"
@@ -16,8 +14,6 @@ complete -k -c dorado -n __fish_use_subcommand -x -a correct -d "Dorado read cor
 complete -k -c dorado -n __fish_use_subcommand -x -a basecaller -d "Basecaller"
 complete -k -c dorado -n __fish_use_subcommand -x -a aligner -d "Alignment using minimap2"
 
-
-
 complete -c dorado -n "__fish_seen_subcommand_from aligner" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from aligner" -s "r" -l "recursive" -d "If the 'reads' positional argument is a folder any subfolders will also be searched for input files."
 complete -c dorado -n "__fish_seen_subcommand_from aligner" -s "o" -l "output-dir" -d "If specified output files will be written to the given folder, otherwise output is to stdout."
@@ -27,8 +23,6 @@ complete -c dorado -n "__fish_seen_subcommand_from aligner" -s "t" -l "threads" 
 complete -c dorado -n "__fish_seen_subcommand_from aligner" -s "n" -l "max-reads" -d "maximum number of reads to process (for debugging, 0=unlimited)."
 complete -c dorado -n "__fish_seen_subcommand_from aligner" -s "v" -l "verbose" -d "[may be repeated]"
 complete -c dorado -n "__fish_seen_subcommand_from aligner" -l "mm2-opts" -d "Optional minimap2 options string."
-
-
 
 complete -c dorado -n "__fish_seen_subcommand_from basecaller" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from basecaller" -s "v" -l "verbose" -d "[may be repeated]"
@@ -64,8 +58,6 @@ complete -c dorado -n "__fish_seen_subcommand_from basecaller" -s "b" -l "batchs
 complete -c dorado -n "__fish_seen_subcommand_from basecaller" -s "c" -l "chunksize" -d "The number of samples in a chunk."
 complete -c dorado -n "__fish_seen_subcommand_from basecaller" -l "overlap" -d "The number of samples overlapping neighbouring chunks."
 
-
-
 complete -c dorado -n "__fish_seen_subcommand_from correct" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from correct" -s "t" -l "threads" -d "Number of threads for processing."
 complete -c dorado -n "__fish_seen_subcommand_from correct" -l "infer-threads" -d "Number of threads per device."
@@ -79,8 +71,6 @@ complete -c dorado -n "__fish_seen_subcommand_from correct" -s "b" -l "batch-siz
 complete -c dorado -n "__fish_seen_subcommand_from correct" -s "i" -l "index-size" -d "Size of index for mapping and alignment."
 complete -c dorado -n "__fish_seen_subcommand_from correct" -l "compute-num-blocks" -d "Computes and returns one number: the number of index blocks which would be processed on a normal run."
 complete -c dorado -n "__fish_seen_subcommand_from correct" -l "run-block-id" -d "ID of the index block to run."
-
-
 
 complete -c dorado -n "__fish_seen_subcommand_from demux" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from demux" -s "r" -l "recursive" -d "If the 'reads' positional argument is a folder any subfolders will also be searched for input files."
@@ -100,8 +90,6 @@ complete -c dorado -n "__fish_seen_subcommand_from demux" -l "sort-bam" -d "Sort
 complete -c dorado -n "__fish_seen_subcommand_from demux" -l "barcode-arrangement" -d "Path to file with custom barcode arrangement."
 complete -c dorado -n "__fish_seen_subcommand_from demux" -l "barcode-sequences" -d "Path to file with custom barcode sequences."
 
-
-
 complete -c dorado -n "__fish_seen_subcommand_from download" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from download" -l "model" -d "the model to download [nargs=0..1] [default: \"all\"]"
 complete -c dorado -n "__fish_seen_subcommand_from download" -l "models-directory" -d "the directory to download the models into [nargs=0..1] [default: \".\"]"
@@ -112,8 +100,6 @@ complete -c dorado -n "__fish_seen_subcommand_from download" -l "data" -d "path 
 complete -c dorado -n "__fish_seen_subcommand_from download" -s "r" -l "recursive" -d "recursively scan through directories to load POD5 files"
 complete -c dorado -n "__fish_seen_subcommand_from download" -l "overwrite" -d "overwrite existing models if they already exist"
 complete -c dorado -n "__fish_seen_subcommand_from download" -s "v" -l "verbose" -d "[may be repeated]"
-
-
 
 complete -c dorado -n "__fish_seen_subcommand_from duplex" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from duplex" -s "v" -l "verbose" -d "[may be repeated]"
@@ -137,8 +123,6 @@ complete -c dorado -n "__fish_seen_subcommand_from duplex" -s "t" -l "threads" -
 complete -c dorado -n "__fish_seen_subcommand_from duplex" -s "b" -l "batchsize" -d "The number of chunks in a batch."
 complete -c dorado -n "__fish_seen_subcommand_from duplex" -s "c" -l "chunksize" -d "The number of samples in a chunk."
 complete -c dorado -n "__fish_seen_subcommand_from duplex" -l "overlap" -d "The number of samples overlapping neighbouring chunks."
-
-
 
 complete -c dorado -n "__fish_seen_subcommand_from polish" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from polish" -s "t" -l "threads" -d "Number of threads for processing (0=unlimited)."
@@ -169,13 +153,9 @@ complete -c dorado -n "__fish_seen_subcommand_from polish" -l "tag-keep-missing"
 complete -c dorado -n "__fish_seen_subcommand_from polish" -l "min-mapq" -d "Minimum mapping quality of the input alignments."
 complete -c dorado -n "__fish_seen_subcommand_from polish" -l "min-depth" -d "Sites with depth lower than this value will not be polished."
 
-
-
 complete -c dorado -n "__fish_seen_subcommand_from summary" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from summary" -s "s" -l "separator" -d "[nargs=0..1] [default: \" \"]"
 complete -c dorado -n "__fish_seen_subcommand_from summary" -s "v" -l "verbose" -d "[may be repeated]"
-
-
 
 complete -c dorado -n "__fish_seen_subcommand_from trim" -s "h" -l "help" -d "shows help message and exits"
 complete -c dorado -n "__fish_seen_subcommand_from trim" -s "t" -l "threads" -d "Combined number of threads for adapter/primer detection and output generation."

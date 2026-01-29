@@ -13,8 +13,6 @@ complete -k -c foldseek -n __fish_use_subcommand -x -a createdb -d "Convert PDB/
 complete -k -c foldseek -n __fish_use_subcommand -x -a easy-rbh -d "Find reciprocal best hit"
 complete -k -c foldseek -n __fish_use_subcommand -x -a easy-search -d "Sensitive homology search"
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:3di.out,nucl:3di.out]" -r
@@ -68,8 +66,6 @@ complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "zdrop" -d 
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "chain-name-mode" -d "Add chain to name: 0: auto 1: always add" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "write-lookup" -d "write .lookup file containing mapping from internal id, fasta id and file number [1]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from easy-search" -l "db-output" -d "Return a result DB instead of a text file [0]" -r
-
-
 
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
@@ -128,16 +124,12 @@ complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "write-lookup"
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "translation-table" -d "1) CANONICAL, 2) VERT_MITOCHONDRIAL, 3) YEAST_MITOCHONDRIAL, 4) MOLD_MITOCHONDRIAL, 5) INVERT_MITOCHONDRIAL, 6) CILIATE 9) FLATWORM_MITOCHONDRIAL, 10) EUPLOTID, 11) PROKARYOTE, 12) ALT_YEAST, 13) ASCIDIAN_MITOCHONDRIAL, 14) ALT_FLATWORM_MITOCHONDRIAL 15) BLEPHARISMA, 16) CHLOROPHYCEAN_MITOCHONDRIAL, 21) TREMATODE_MITOCHONDRIAL, 22) SCENEDESMUS_MITOCHONDRIAL 23) THRAUSTOCHYTRIUM_MITOCHONDRIAL, 24) PTEROBRANCHIA_MITOCHONDRIAL, 25) GRACILIBACTERIA, 26) PACHYSOLEN, 27) KARYORELICT, 28) CONDYLOSTOMA" -x
 complete -c foldseek -n "__fish_seen_subcommand_from easy-rbh" -l "db-output" -d "Return a result DB instead of a text file [0]" -r
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "tar-include" -d "Include file names based on this regex [.*]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "tar-exclude" -d "Exclude file names based on this regex [^\$]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "chain-name-mode" -d "Add chain to name: 0: auto 1: always add" -x
 complete -c foldseek -n "__fish_seen_subcommand_from createdb" -l "write-lookup" -d "write .lookup file containing mapping from internal id, fasta id and file number [1]" -r
-
-
 
 complete -c foldseek -n "__fish_seen_subcommand_from search" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from search" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
@@ -185,8 +177,6 @@ complete -c foldseek -n "__fish_seen_subcommand_from search" -l "remove-tmp-file
 complete -c foldseek -n "__fish_seen_subcommand_from search" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
 complete -c foldseek -n "__fish_seen_subcommand_from search" -l "force-reuse" -d "Reuse tmp filse in tmp/latest folder ignoring parameters and version changes [0]" -x
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from rbh" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from rbh" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from rbh" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:3di.out,nucl:3di.out]" -r
@@ -233,15 +223,11 @@ complete -c foldseek -n "__fish_seen_subcommand_from rbh" -l "remove-tmp-files" 
 complete -c foldseek -n "__fish_seen_subcommand_from rbh" -l "mpi-runner" -d "Use MPI on compute cluster with this MPI command (e.g. \"mpirun -np 42\") []" -x
 complete -c foldseek -n "__fish_seen_subcommand_from rbh" -l "force-reuse" -d "Reuse tmp filse in tmp/latest folder ignoring parameters and version changes [0]" -x
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from databases" -l "force-reuse" -d "Reuse tmp filse in tmp/latest folder ignoring parameters and version changes [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from databases" -l "remove-tmp-files" -d "Delete temporary files [0]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from databases" -l "compressed" -d "Write compressed output [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from databases" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from databases" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-
-
 
 complete -c foldseek -n "__fish_seen_subcommand_from createindex" -l "seed-sub-mat" -d "Substitution matrix file for k-mer generation [aa:3di.out,nucl:3di.out]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from createindex" -s "k" -d "k-mer length (0: automatically set to optimum) [0]" -x
@@ -282,8 +268,6 @@ complete -c foldseek -n "__fish_seen_subcommand_from createindex" -l "translatio
 complete -c foldseek -n "__fish_seen_subcommand_from createindex" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
 complete -c foldseek -n "__fish_seen_subcommand_from createindex" -l "strand" -d "Strand selection only works for DNA/DNA search 0: reverse, 1: forward, 2: both [1]" -x
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from convertalis" -l "gap-open" -d "Gap open cost [aa:11,nucl:5]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from convertalis" -l "gap-extend" -d "Gap extension cost [aa:1,nucl:2]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from convertalis" -l "format-mode" -d "0: BLAST-TAB 1: SAM 2: BLAST-TAB + query/db length 3: Pretty HTML 4: BLAST-TAB + column headers BLAST-TAB (0) and BLAST-TAB + column headers (4) support custom output formats (--format-output) [0]" -x
@@ -295,8 +279,6 @@ complete -c foldseek -n "__fish_seen_subcommand_from convertalis" -l "compressed
 complete -c foldseek -n "__fish_seen_subcommand_from convertalis" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from convertalis" -l "db-output" -d "Return a result DB instead of a text file [0]" -r
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -l "min-seq-id" -d "List matches above this sequence identity (for clustering) (range 0.0-1.0) [0.000]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -s "c" -d "List matches above this fraction of aligned (covered) residues (see --cov-mode) [0.000]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -l "cov-mode" -d "0: coverage of query and target 1: coverage of target 2: coverage of query 3: target seq." -x
@@ -307,8 +289,6 @@ complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -l "tmalign-fast" 
 complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -l "db-load-mode" -d "Database preload mode 0: auto, 1: fread, 2: mmap, 3: mmap+touch [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from tmalign" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-
-
 
 complete -c foldseek -n "__fish_seen_subcommand_from structurealign" -l "comp-bias-corr" -d "Correct for locally biased amino acid composition (range 0-1) [1]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from structurealign" -l "comp-bias-corr-scale" -d "Correct for locally biased amino acid composition (range 0-1) [1.000]" -x
@@ -333,13 +313,9 @@ complete -c foldseek -n "__fish_seen_subcommand_from structurealign" -l "threads
 complete -c foldseek -n "__fish_seen_subcommand_from structurealign" -l "compressed" -d "Write compressed output [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from structurealign" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
 
-
-
 complete -c foldseek -n "__fish_seen_subcommand_from aln2tmscore" -l "threads" -d "Number of CPU-cores used (all by default) [4]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from aln2tmscore" -l "compressed" -d "Write compressed output [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from aln2tmscore" -s "v" -d "Verbosity level: 0: quiet, 1: +errors, 2: +warnings, 3: +info [3]" -x
-
-
 
 complete -c foldseek -n "__fish_seen_subcommand_from clust" -l "cluster-mode" -d "0: Set-Cover (greedy) 1: Connected component (BLASTclust) 2,3: Greedy clustering by sequence length (CDHIT) [0]" -x
 complete -c foldseek -n "__fish_seen_subcommand_from clust" -l "max-iterations" -d "Maximum depth of breadth first search in connected component clustering [1000]" -x

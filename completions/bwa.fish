@@ -15,13 +15,9 @@ complete -k -c bwa -n __fish_use_subcommand -x -a fastmap -d "identify super-max
 complete -k -c bwa -n __fish_use_subcommand -x -a mem -d "BWA-MEM algorithm"
 complete -k -c bwa -n __fish_use_subcommand -x -a index -d "index sequences in the FASTA format"
 
-
-
 complete -c bwa -n "__fish_seen_subcommand_from index" -s "p" -d "prefix of the index [same as fasta name]" -x
 complete -c bwa -n "__fish_seen_subcommand_from index" -s "b" -d "block size for the bwtsw algorithm (effective with -a bwtsw) [10000000]" -x
 complete -c bwa -n "__fish_seen_subcommand_from index" -s "6" -d "index files named as <in.fasta>.64.* instead of <in.fasta>.*"
-
-
 
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s "t" -d "number of threads [1]" -x
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s "k" -d "minimum seed length [19]" -x
@@ -60,21 +56,15 @@ complete -c bwa -n "__fish_seen_subcommand_from mem" -s "Y" -d "use soft clippin
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s "M" -d "mark shorter split hits as secondary"
 complete -c bwa -n "__fish_seen_subcommand_from mem" -s "I" -d "specify the mean, standard deviation (10% of the mean if absent), max (4 sigma from the mean if absent) and min of the insert size distribution." -x
 
-
-
 complete -c bwa -n "__fish_seen_subcommand_from fastmap" -s "w" -d "max interval size to find coordiantes [20]" -x
 complete -c bwa -n "__fish_seen_subcommand_from fastmap" -s "i" -d "min SMEM interval size [1]" -x
 complete -c bwa -n "__fish_seen_subcommand_from fastmap" -s "L" -d "max MEM length [2147483647]" -x
 complete -c bwa -n "__fish_seen_subcommand_from fastmap" -s "I" -d "stop if MEM is longer than -l with a size less than INT [0]" -x
 
-
-
 complete -c bwa -n "__fish_seen_subcommand_from pemerge" -s "u" -d "output unmerged reads only"
 complete -c bwa -n "__fish_seen_subcommand_from pemerge" -s "t" -d "number of threads [1]" -x
 complete -c bwa -n "__fish_seen_subcommand_from pemerge" -s "T" -d "minimum end overlap [10]" -x
 complete -c bwa -n "__fish_seen_subcommand_from pemerge" -s "Q" -d "max sum of errors [70]" -x
-
-
 
 complete -c bwa -n "__fish_seen_subcommand_from aln" -s "o" -d "maximum number or fraction of gap opens [1]" -x
 complete -c bwa -n "__fish_seen_subcommand_from aln" -s "e" -d "maximum number of gap extensions, -1 for disabling long gaps [-1]" -x
@@ -101,7 +91,6 @@ complete -c bwa -n "__fish_seen_subcommand_from aln" -s "2" -d "use the 2nd read
 complete -c bwa -n "__fish_seen_subcommand_from aln" -s "Y" -d "filter Casava-filtered sequences"
 
 
-
 complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "o" -d "maximum occurrences for one end [100000]" -x
 complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "n" -d "maximum hits to output for paired reads [3]" -x
 complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "N" -d "maximum hits to output for discordant pairs [10]" -x
@@ -111,8 +100,6 @@ complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "r" -d "read group hea
 complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "P" -d "preload index into memory (for base-space reads only)"
 complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "s" -d "disable Smith-Waterman for the unmapped mate"
 complete -c bwa -n "__fish_seen_subcommand_from sampe" -s "A" -d "disable insert size estimate (force -s)"
-
-
 
 complete -c bwa -n "__fish_seen_subcommand_from bwasw" -s "b" -d "mismatch penalty [3]" -x
 complete -c bwa -n "__fish_seen_subcommand_from bwasw" -s "q" -d "gap open penalty [5]" -x
@@ -133,7 +120,10 @@ complete -c bwa -n "__fish_seen_subcommand_from bwasw" -s "s" -d "maximum seedin
 complete -c bwa -n "__fish_seen_subcommand_from bwasw" -s "N" -d "# seeds to trigger rev aln; 2*INT is also the chaining threshold [5]" -x
 complete -c bwa -n "__fish_seen_subcommand_from bwasw" -s "G" -d "maximum gap size during chaining [10000]" -x
 
-
-
 complete -c bwa -n "__fish_seen_subcommand_from shm" -s "l" -d "list names of indices in shared memory"
 complete -c bwa -n "__fish_seen_subcommand_from shm" -s "f" -d "temporary file to reduce peak memory" -r
+
+
+
+
+

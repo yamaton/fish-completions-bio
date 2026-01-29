@@ -3,14 +3,10 @@
 complete -c badread -n "not __fish_seen_subcommand_from simulate error_model qscore_model plot" -s "h" -l "help" -d "Show this help message and exit"
 complete -c badread -n "not __fish_seen_subcommand_from simulate error_model qscore_model plot" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -k -c badread -n __fish_use_subcommand -x -a plot -d "view read identities over a sliding window"
 complete -k -c badread -n __fish_use_subcommand -x -a qscore_model -d "build a Badread qscore model"
 complete -k -c badread -n __fish_use_subcommand -x -a error_model -d "build a Badread error model"
 complete -k -c badread -n __fish_use_subcommand -x -a simulate -d "generate fake long reads"
-
-
 
 complete -c badread -n "__fish_seen_subcommand_from simulate" -l "reference" -d "Reference FASTA file (can be gzipped)" -r
 complete -c badread -n "__fish_seen_subcommand_from simulate" -l "quantity" -d "Either an absolute value (e.g. 250M) or a relative depth (e.g. 25x)" -x
@@ -31,8 +27,6 @@ complete -c badread -n "__fish_seen_subcommand_from simulate" -l "small_plasmid_
 complete -c badread -n "__fish_seen_subcommand_from simulate" -s "h" -l "help" -d "Show this help message and exit"
 complete -c badread -n "__fish_seen_subcommand_from simulate" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c badread -n "__fish_seen_subcommand_from error_model" -l "reference" -d "Reference FASTA file" -r
 complete -c badread -n "__fish_seen_subcommand_from error_model" -l "reads" -d "FASTQ of real reads" -x
 complete -c badread -n "__fish_seen_subcommand_from error_model" -l "alignment" -d "PAF alignment of reads aligned to reference" -x
@@ -41,8 +35,6 @@ complete -c badread -n "__fish_seen_subcommand_from error_model" -l "max_alignme
 complete -c badread -n "__fish_seen_subcommand_from error_model" -l "max_alt" -d "Only save up to this many alternatives to each k-mer (default: 25)" -x
 complete -c badread -n "__fish_seen_subcommand_from error_model" -s "h" -l "help" -d "Show this help message and exit"
 complete -c badread -n "__fish_seen_subcommand_from error_model" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c badread -n "__fish_seen_subcommand_from qscore_model" -l "reference" -d "Reference FASTA file" -r
 complete -c badread -n "__fish_seen_subcommand_from qscore_model" -l "reads" -d "FASTQ of real reads" -x
@@ -54,8 +46,6 @@ complete -c badread -n "__fish_seen_subcommand_from qscore_model" -l "min_occur"
 complete -c badread -n "__fish_seen_subcommand_from qscore_model" -l "max_output" -d "The outputted model will be limited to this many lines (default: 10000)" -x
 complete -c badread -n "__fish_seen_subcommand_from qscore_model" -s "h" -l "help" -d "Show this help message and exit"
 complete -c badread -n "__fish_seen_subcommand_from qscore_model" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c badread -n "__fish_seen_subcommand_from plot" -l "reference" -d "Reference FASTA file" -r
 complete -c badread -n "__fish_seen_subcommand_from plot" -l "reads" -d "FASTQ of real reads" -x

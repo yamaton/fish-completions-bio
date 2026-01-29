@@ -11,7 +11,6 @@ complete -k -c motus -n __fish_use_subcommand -x -a profile -d "Perform taxonomi
 complete -k -c motus -n __fish_use_subcommand -x -a downloadDB -d "Download the mOTUs database"
 
 
-
 complete -c motus -n "__fish_seen_subcommand_from profile" -s "f" -d "input file(s) for reads in forward orientation, fastq(.gz)-formatted" -r
 complete -c motus -n "__fish_seen_subcommand_from profile" -s "r" -d "input file(s) for reads in reverse orientation, fastq(.gz)-formatted" -r
 complete -c motus -n "__fish_seen_subcommand_from profile" -s "s" -d "input file(s) for unpaired reads, fastq(.gz)-formatted" -r
@@ -37,16 +36,12 @@ complete -c motus -n "__fish_seen_subcommand_from profile" -s "t" -d "number of 
 complete -c motus -n "__fish_seen_subcommand_from profile" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
 complete -c motus -n "__fish_seen_subcommand_from profile" -s "y" -d "type of read counts [insert.scaled_counts] Values: [base.coverage, insert.raw_counts, insert.scaled_counts]" -x
 
-
-
 complete -c motus -n "__fish_seen_subcommand_from merge" -s "i" -d "list of mOTU profiles to merge (comma separated)" -r
 complete -c motus -n "__fish_seen_subcommand_from merge" -s "d" -d "merge all files in the directory DIR" -r
 complete -c motus -n "__fish_seen_subcommand_from merge" -s "a" -d "add pre-computed profiles from different environmental samples Values: [all, air, bioreactor, bee, cat, cattle, chicken, dog, fish, freshwater, human, marine, mouse, pig, sheep, soil, termite, wastewater]" -r
 complete -c motus -n "__fish_seen_subcommand_from merge" -s "o" -d "output file name [stdout]" -r
 complete -c motus -n "__fish_seen_subcommand_from merge" -s "B" -d "print result in BIOM format"
 complete -c motus -n "__fish_seen_subcommand_from merge" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
-
-
 
 complete -c motus -n "__fish_seen_subcommand_from map_tax" -s "f" -d "input file(s) for reads in forward orientation, fastq(.gz)-formatted" -r
 complete -c motus -n "__fish_seen_subcommand_from map_tax" -s "r" -d "input file(s) for reads in reverse orientation, fastq(.gz)-formatted" -r
@@ -58,8 +53,6 @@ complete -c motus -n "__fish_seen_subcommand_from map_tax" -s "l" -d "min length
 complete -c motus -n "__fish_seen_subcommand_from map_tax" -s "t" -d "number of threads [1]" -x
 complete -c motus -n "__fish_seen_subcommand_from map_tax" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
 
-
-
 complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -s "n" -d "sample name" -x
 complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -s "i" -d "provide a SAM or BAM input file (or list of files) output of motus map_tax" -r
 complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -o "db" -d "provide a different database directory" -r
@@ -67,8 +60,6 @@ complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -s "o" -d "output fi
 complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -s "l" -d "min length of the alignment (bp) [75]" -x
 complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
 complete -c motus -n "__fish_seen_subcommand_from calc_mgc" -s "y" -d "type of read counts [insert.scaled_counts] Values: [base.coverage, insert.raw_counts, insert.scaled_counts]" -x
-
-
 
 complete -c motus -n "__fish_seen_subcommand_from calc_motu" -s "n" -d "sample name" -x
 complete -c motus -n "__fish_seen_subcommand_from calc_motu" -s "i" -d "provide the mgc abundance table (output of motus calc_mgc)" -r
@@ -86,16 +77,12 @@ complete -c motus -n "__fish_seen_subcommand_from calc_motu" -s "k" -d "taxonomi
 complete -c motus -n "__fish_seen_subcommand_from calc_motu" -s "g" -d "number of marker genes cutoff: 1=higher recall, 6=higher precision [3]" -x
 complete -c motus -n "__fish_seen_subcommand_from calc_motu" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
 
-
-
 complete -c motus -n "__fish_seen_subcommand_from prep_long" -s "i" -d "long read file to convert, can be fasta(.gz) or fastq(.gz)" -r
 complete -c motus -n "__fish_seen_subcommand_from prep_long" -s "o" -d "converted file (gzipped), ready to be used by motus profile" -r
 complete -c motus -n "__fish_seen_subcommand_from prep_long" -o "no_gz" -d "save the output file without gzipping it"
 complete -c motus -n "__fish_seen_subcommand_from prep_long" -o "sl" -d "splitting length for the long reads [300]" -x
 complete -c motus -n "__fish_seen_subcommand_from prep_long" -o "ml" -d "minimum read length, shorter are discarded [50]" -x
 complete -c motus -n "__fish_seen_subcommand_from prep_long" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
-
-
 
 complete -c motus -n "__fish_seen_subcommand_from map_snv" -s "f" -d "input file(s) for reads in forward orientation, fastq(.gz)-formatted" -r
 complete -c motus -n "__fish_seen_subcommand_from map_snv" -s "r" -d "input file(s) for reads in reverse orientation, fastq(.gz)-formatted" -r
@@ -105,8 +92,6 @@ complete -c motus -n "__fish_seen_subcommand_from map_snv" -s "o" -d "output BAM
 complete -c motus -n "__fish_seen_subcommand_from map_snv" -s "l" -d "min length of the alignment (bp) [75]" -x
 complete -c motus -n "__fish_seen_subcommand_from map_snv" -s "t" -d "number of threads [1]" -x
 complete -c motus -n "__fish_seen_subcommand_from map_snv" -s "v" -d "verbosity level: 1=error, 2=warning, 3=message, 4+=debugging [3]" -x
-
-
 
 complete -c motus -n "__fish_seen_subcommand_from snv_call" -s "d" -d "Call metaSNV on all BAM files in the directory" -r
 complete -c motus -n "__fish_seen_subcommand_from snv_call" -o "db" -d "provide a different database directory" -r

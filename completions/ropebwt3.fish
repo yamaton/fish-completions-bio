@@ -16,6 +16,8 @@ complete -k -c ropebwt3 -n __fish_use_subcommand -x -a sw -d "find local alignme
 
 
 
+
+
 complete -c ropebwt3 -n "__fish_seen_subcommand_from build" -s "m" -d "batch size [7G]" -x
 complete -c ropebwt3 -n "__fish_seen_subcommand_from build" -s "t" -d "total number of threads [4]" -x
 complete -c ropebwt3 -n "__fish_seen_subcommand_from build" -s "p" -d "#threads for sais and run sais and merge together (more RAM) [0]" -x
@@ -35,11 +37,8 @@ complete -c ropebwt3 -n "__fish_seen_subcommand_from build" -s "e" -d "dump in t
 complete -c ropebwt3 -n "__fish_seen_subcommand_from build" -s "T" -d "output the index in the Newick format (for debugging)"
 complete -c ropebwt3 -n "__fish_seen_subcommand_from build" -s "S" -d "save the current index to FILE after each input file []" -r
 
-
-
 complete -c ropebwt3 -n "__fish_seen_subcommand_from merge" -s "t" -d "number of threads [1]" -x
 complete -c ropebwt3 -n "__fish_seen_subcommand_from merge" -s "o" -d "output FMR to FILE [stdout]" -r
-
 
 
 complete -c ropebwt3 -n "__fish_seen_subcommand_from ssa" -s "t" -d "number of threads [4]" -x
@@ -50,3 +49,5 @@ complete -c ropebwt3 -n "__fish_seen_subcommand_from ssa" -s "o" -d "output to f
 
 complete -c ropebwt3 -n "__fish_seen_subcommand_from kount" -s "k" -d "k-mer length [51]" -x
 complete -c ropebwt3 -n "__fish_seen_subcommand_from kount" -s "m" -d "min k-mer occurrence [100]" -x
+
+

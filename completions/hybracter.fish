@@ -2,8 +2,6 @@
 
 complete -c hybracter -n "not __fish_seen_subcommand_from install hybrid hybrid-single long long-single test-hybrid test-long config citation version" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c hybracter -n __fish_use_subcommand -x -a version -d "Print the version for hybracter"
 complete -k -c hybracter -n __fish_use_subcommand -x -a citation -d "Print the citation(s) for hybracter"
 complete -k -c hybracter -n __fish_use_subcommand -x -a config -d "Copy the system default config file"
@@ -15,8 +13,6 @@ complete -k -c hybracter -n __fish_use_subcommand -x -a hybrid-single -d "Run hy
 complete -k -c hybracter -n __fish_use_subcommand -x -a hybrid -d "Run hybracter with hybrid long and paired end short reads"
 complete -k -c hybracter -n __fish_use_subcommand -x -a install -d "Downloads and installs the plassembler database"
 
-
-
 complete -c hybracter -n "__fish_seen_subcommand_from install" -l "use-conda" -l "no-use-conda" -d "Use conda for Snakemake rules [default: useconda]"
 complete -c hybracter -n "__fish_seen_subcommand_from install" -l "snake-default" -d "Customise Snakemake runtime args [default: --rerun-incomplete, --printshellcmds, --nolock, --show-failed-logs, --conda-frontend conda]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from install" -s "d" -l "databases" -d "Directory where the Plassembler Database will be installed to (optional)." -r
@@ -25,8 +21,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from install" -l "mac" -d "If y
 complete -c hybracter -n "__fish_seen_subcommand_from install" -s "o" -l "output" -d "Temporary directory where intermediate files will be stored for hybracter install." -r
 complete -c hybracter -n "__fish_seen_subcommand_from install" -l "configfile" -d "Custom config file [default: (outputDir)/config.yaml]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from install" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid" -s "i" -l "input" -d "Input csv [required]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid" -l "datadir" -d "Directory/ies where FASTQs are." -r
@@ -55,8 +49,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from hybrid" -l "use-conda" -l 
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid" -l "conda-prefix" -d "Custom conda env directory" -r
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid" -l "snake-default" -d "Customise Snakemake runtime args [default: --rerun-incomplete, --printshellcmds, --nolock, --show-failed-logs, --condafrontend conda]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid-single" -s "l" -l "longreads" -d "FASTQ file of longreads [required]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid-single" -s "1" -l "short_one" -d "R1 FASTQ file of paired end short reads [required]" -r
@@ -89,8 +81,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from hybrid-single" -l "conda-p
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid-single" -l "snake-default" -d "Customise Snakemake runtime args [default: --rerun-incomplete, --printshellcmds, --nolock, --show-failed-logs, --condafrontend conda]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from hybrid-single" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hybracter -n "__fish_seen_subcommand_from long" -s "i" -l "input" -d "Input csv [required]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from long" -l "datadir" -d "Directory where FASTQs are." -r
 complete -c hybracter -n "__fish_seen_subcommand_from long" -s "o" -l "output" -d "Output directory [default: hybracter_out]" -r
@@ -117,8 +107,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from long" -l "conda-prefix" -d
 complete -c hybracter -n "__fish_seen_subcommand_from long" -l "snake-default" -d "Customise Snakemake runtime args [default: --rerun-incomplete, --printshellcmds, --nolock, --show-failed-logs, --condafrontend conda]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from long" -l "logic" -d "Hybracter logic to select best assembly." -x
 complete -c hybracter -n "__fish_seen_subcommand_from long" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c hybracter -n "__fish_seen_subcommand_from long-single" -s "l" -l "longreads" -d "FASTQ file of longreads [required]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from long-single" -s "s" -l "sample" -d "Sample name." -x
@@ -148,8 +136,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from long-single" -l "snake-def
 complete -c hybracter -n "__fish_seen_subcommand_from long-single" -l "logic" -d "Hybracter logic to select best assembly." -x
 complete -c hybracter -n "__fish_seen_subcommand_from long-single" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hybracter -n "__fish_seen_subcommand_from test-hybrid" -s "o" -l "output" -d "Output directory [default: hybracter_out]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from test-hybrid" -l "configfile" -d "Custom config file [default: config.yaml]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from test-hybrid" -s "t" -l "threads" -d "Number of threads to use [default: 1]" -x
@@ -176,8 +162,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from test-hybrid" -l "no_pypolc
 complete -c hybracter -n "__fish_seen_subcommand_from test-hybrid" -l "logic" -d "Hybracter logic to select best assembly." -x
 complete -c hybracter -n "__fish_seen_subcommand_from test-hybrid" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hybracter -n "__fish_seen_subcommand_from test-long" -l "logic" -d "Hybracter logic to select best assembly." -x
 complete -c hybracter -n "__fish_seen_subcommand_from test-long" -s "o" -l "output" -d "Output directory [default: hybracter_out]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from test-long" -l "configfile" -d "Custom config file [default: config.yaml]" -r
@@ -203,8 +187,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from test-long" -l "conda-prefi
 complete -c hybracter -n "__fish_seen_subcommand_from test-long" -l "snake-default" -d "Customise Snakemake runtime args [default: --rerun-incomplete, --printshellcmds, --nolock, --show-failed-logs, --condafrontend conda]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from test-long" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hybracter -n "__fish_seen_subcommand_from config" -s "o" -l "output" -d "Output directory [default: hybracter_out]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from config" -l "configfile" -d "Custom config file [default: config.yaml]" -r
 complete -c hybracter -n "__fish_seen_subcommand_from config" -s "t" -l "threads" -d "Number of threads to use [default: 1]" -x
@@ -229,10 +211,6 @@ complete -c hybracter -n "__fish_seen_subcommand_from config" -l "conda-prefix" 
 complete -c hybracter -n "__fish_seen_subcommand_from config" -l "snake-default" -d "Customise Snakemake runtime args [default: --rerun-incomplete, --printshellcmds, --nolock, --show-failed-logs, --condafrontend conda]" -x
 complete -c hybracter -n "__fish_seen_subcommand_from config" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hybracter -n "__fish_seen_subcommand_from citation" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c hybracter -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "Show this message and exit."

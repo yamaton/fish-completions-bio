@@ -17,8 +17,6 @@ complete -k -c bio -n __fish_use_subcommand -x -a fasta -d "convert to FASTA"
 complete -k -c bio -n __fish_use_subcommand -x -a fetch -d "download GenBank/ENSEMBL data"
 complete -k -c bio -n __fish_use_subcommand -x -a search -d "search for information"
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from search" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from search" -s "a" -l "all" -d "get all possible fields"
 complete -c bio -n "__fish_seen_subcommand_from search" -s "c" -l "csv" -d "produce comma separated output"
@@ -30,16 +28,12 @@ complete -c bio -n "__fish_seen_subcommand_from search" -s "u" -l "update" -d "d
 complete -c bio -n "__fish_seen_subcommand_from search" -s "l" -l "limit" -d "download limit" -x
 complete -c bio -n "__fish_seen_subcommand_from search" -s "f" -l "fields" -d "fields" -x
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "d" -l "db" -d "database" -x
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "t" -l "type" -d "get CDS/CDNA (Ensembl only)" -x
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "f" -l "format" -d "return format" -x
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "l" -l "limit" -d "limit results" -x
 complete -c bio -n "__fish_seen_subcommand_from fetch" -s "o" -l "out" -d "output file (used as prefix in for FASTQ)" -r
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from fasta" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from fasta" -s "s" -l "start" -d "start coordinate" -x
@@ -57,8 +51,6 @@ complete -c bio -n "__fish_seen_subcommand_from fasta" -s "A" -l "trim" -d "trim
 complete -c bio -n "__fish_seen_subcommand_from fasta" -s "o" -l "olap" -d "overlap with coordinate" -x
 complete -c bio -n "__fish_seen_subcommand_from fasta" -s "F" -l "frame" -d "reading frame" -x
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from gff" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from gff" -s "s" -l "start" -d "start coordinate" -x
 complete -c bio -n "__fish_seen_subcommand_from gff" -s "e" -l "end" -d "end coordinate" -x
@@ -68,8 +60,6 @@ complete -c bio -n "__fish_seen_subcommand_from gff" -s "m" -l "match" -d "regex
 complete -c bio -n "__fish_seen_subcommand_from gff" -s "g" -l "gene" -d "filter for a gene name" -x
 complete -c bio -n "__fish_seen_subcommand_from gff" -s "o" -l "olap" -d "overlap with coordinate" -x
 complete -c bio -n "__fish_seen_subcommand_from gff" -s "r" -l "rename" -d "rename sequence ids" -x
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from table" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from table" -s "s" -l "start" -d "start coordinate" -x
@@ -81,8 +71,6 @@ complete -c bio -n "__fish_seen_subcommand_from table" -s "g" -l "gene" -d "filt
 complete -c bio -n "__fish_seen_subcommand_from table" -s "r" -l "rename" -d "rename sequence ids" -x
 complete -c bio -n "__fish_seen_subcommand_from table" -s "o" -l "olap" -d "overlap with coordinate" -x
 complete -c bio -n "__fish_seen_subcommand_from table" -s "f" -l "fields" -d "table fields (default: id,size)" -x
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from align" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from align" -s "o" -l "open" -d "gap open penalty" -x
@@ -100,8 +88,6 @@ complete -c bio -n "__fish_seen_subcommand_from align" -s "p" -l "pile" -d "outp
 complete -c bio -n "__fish_seen_subcommand_from align" -s "F" -l "fasta" -d "output variant columns"
 complete -c bio -n "__fish_seen_subcommand_from align" -s "A" -l "all" -d "show all alignments"
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from format" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from format" -s "s" -l "start" -d "start coordinate" -x
 complete -c bio -n "__fish_seen_subcommand_from format" -s "e" -l "end" -d "end coordinate" -x
@@ -109,8 +95,6 @@ complete -c bio -n "__fish_seen_subcommand_from format" -s "d" -l "diff" -d "out
 complete -c bio -n "__fish_seen_subcommand_from format" -s "v" -l "vcf" -d "output vcf"
 complete -c bio -n "__fish_seen_subcommand_from format" -s "T" -l "table" -d "output in tabular format"
 complete -c bio -n "__fish_seen_subcommand_from format" -s "p" -l "paired" -d "fasta input is pairwise"
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from taxon" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from taxon" -s "L" -l "lineage" -d "show the lineage for a taxon term"
@@ -125,8 +109,6 @@ complete -c bio -n "__fish_seen_subcommand_from taxon" -s "p" -l "preload" -d "l
 complete -c bio -n "__fish_seen_subcommand_from taxon" -s "i" -l "indent" -d "the indentation depth (set to zero for flat)" -x
 complete -c bio -n "__fish_seen_subcommand_from taxon" -s "v" -l "verbose" -d "verbose mode, prints more messages"
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from explain" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from explain" -s "b" -l "build" -d "build a database of all gene and sequence ontology terms."
 complete -c bio -n "__fish_seen_subcommand_from explain" -s "P" -l "preload" -d "loads entire database in memory"
@@ -136,21 +118,15 @@ complete -c bio -n "__fish_seen_subcommand_from explain" -s "l" -l "lineage" -d 
 complete -c bio -n "__fish_seen_subcommand_from explain" -s "p" -l "plot" -d "Plot the network graph of the given GO term into the given file name." -r
 complete -c bio -n "__fish_seen_subcommand_from explain" -s "v" -l "verbose" -d "verbose mode, prints more messages"
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from meta" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from meta" -s "H" -l "header" -d "print header"
 complete -c bio -n "__fish_seen_subcommand_from meta" -s "L" -l "limit" -d "download limit" -x
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s "l" -l "limit" -d "download limit" -x
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s "s" -l "species" -d "species" -x
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s "f" -l "fields" -d "fields" -x
 complete -c bio -n "__fish_seen_subcommand_from mygene" -s "S" -l "scopes" -d "scopes" -x
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "c" -l "counts" -d "input counts" -x
@@ -160,8 +136,6 @@ complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "t" -l "pval-cutof
 complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "p" -l "pval-column" -d "pvalue column name" -x
 complete -c bio -n "__fish_seen_subcommand_from gprofiler" -s "o" -l "output" -d "pvalue column name" -r
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "c" -l "counts" -d "input counts" -x
 complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "d" -l "organism" -d "input counts" -x
@@ -170,12 +144,8 @@ complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "t" -l "pval-cutoff"
 complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "p" -l "pval-column" -d "pvalue column name" -x
 complete -c bio -n "__fish_seen_subcommand_from enrichr" -s "o" -l "output" -d "pvalue column name" -x
 
-
-
 complete -c bio -n "__fish_seen_subcommand_from code" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from code" -s "u" -l "update" -d "update existing files"
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "1" -l "uniq1" -d "prints elements unique to file 1"
@@ -184,8 +154,6 @@ complete -c bio -n "__fish_seen_subcommand_from comm" -s "3" -l "union" -d "prin
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "t" -l "tab" -d "tab delimited (default is csv)"
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "x" -l "col1" -d "column index for file 1 [default=1]" -r
 complete -c bio -n "__fish_seen_subcommand_from comm" -s "y" -l "col2" -d "column index for file 2 [default=1]" -r
-
-
 
 complete -c bio -n "__fish_seen_subcommand_from uniq" -s "h" -l "help" -d "show this help message and exit"
 complete -c bio -n "__fish_seen_subcommand_from uniq" -s "f" -l "field" -d "field index (1 by default)" -x

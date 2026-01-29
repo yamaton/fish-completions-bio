@@ -3,8 +3,6 @@
 complete -c nanopolish -n "not __fish_seen_subcommand_from call-methylation detect-polyi eventalign fast5-check help index methyltrain phase-reads polya scorereads variants vcf2fasta" -l "help" -d "Show help"
 complete -c nanopolish -n "not __fish_seen_subcommand_from call-methylation detect-polyi eventalign fast5-check help index methyltrain phase-reads polya scorereads variants vcf2fasta" -l "version" -d "Show version"
 
-
-
 complete -k -c nanopolish -n __fish_use_subcommand -x -a vcf2fasta -d "Write a new genome sequence by introducing variants from the input files"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a variants -d "Find SNPs using a signal-level HMM"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a scorereads -d "Score reads against an alignment, model"
@@ -17,8 +15,6 @@ complete -k -c nanopolish -n __fish_use_subcommand -x -a fast5-check -d "Check w
 complete -k -c nanopolish -n __fish_use_subcommand -x -a eventalign -d "Align nanopore events to reference k-mers"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a detect-polyi -d "Detect presence of poly(I) tails and estimate length of tails in direct RNA reads"
 complete -k -c nanopolish -n __fish_use_subcommand -x -a call-methylation -d "Classify nucleotides as methylated or not."
-
-
 
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l "version" -d "display version"
@@ -38,8 +34,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "i" 
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -l "progress" -d "print out a progress message"
 complete -c nanopolish -n "__fish_seen_subcommand_from call-methylation" -s "K" -l "batchsize" -d "the batch size (default: 512)" -x
 
-
-
 complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -l "version" -d "display version"
 complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -l "help" -d "display this help and exit"
@@ -48,8 +42,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "r" -l "
 complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "b" -l "bam" -d "the reads aligned to the genome assembly are in bam FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "g" -l "genome" -d "the reference genome assembly for the reads is in FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from detect-polyi" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
-
-
 
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "version" -d "display version"
@@ -69,12 +61,9 @@ complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "samples" 
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "signal-index" -d "write the raw signal start and end index values for the event to the tsv output"
 complete -c nanopolish -n "__fish_seen_subcommand_from eventalign" -l "models-fofn" -d "read alternative k-mer models from FILE" -r
 
-
-
 complete -c nanopolish -n "__fish_seen_subcommand_from fast5-check" -l "help" -d "display this help and exit"
 complete -c nanopolish -n "__fish_seen_subcommand_from fast5-check" -l "version" -d "display version"
 complete -c nanopolish -n "__fish_seen_subcommand_from fast5-check" -s "r" -l "reads" -d "file containing the basecalled reads"
-
 
 
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -l "help" -d "display this help and exit"
@@ -84,8 +73,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from index" -l "slow5" -d "slo
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "d" -l "directory" -d "path to the directory containing the raw ONT signal files."
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "s" -l "sequencing-summary" -d "the sequencing summary file from albacore, providing this option will make indexing much faster"
 complete -c nanopolish -n "__fish_seen_subcommand_from index" -s "f" -l "summary-fofn" -d "file containing the paths to the sequencing summary files (one per line)"
-
-
 
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l "version" -d "display version"
@@ -108,8 +95,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l "progress
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l "stdv" -d "enable stdv modelling"
 complete -c nanopolish -n "__fish_seen_subcommand_from methyltrain" -l "max-events" -d "use NUM events for training (default: 1000)" -x
 
-
-
 complete -c nanopolish -n "__fish_seen_subcommand_from phase-reads" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from phase-reads" -l "version" -d "display version"
 complete -c nanopolish -n "__fish_seen_subcommand_from phase-reads" -l "help" -d "display this help and exit"
@@ -120,8 +105,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from phase-reads" -s "w" -l "w
 complete -c nanopolish -n "__fish_seen_subcommand_from phase-reads" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
 complete -c nanopolish -n "__fish_seen_subcommand_from phase-reads" -l "progress" -d "print out a progress message"
 
-
-
 complete -c nanopolish -n "__fish_seen_subcommand_from polya" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from polya" -l "version" -d "display version"
 complete -c nanopolish -n "__fish_seen_subcommand_from polya" -l "help" -d "display this help and exit"
@@ -130,8 +113,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from polya" -s "r" -l "reads" 
 complete -c nanopolish -n "__fish_seen_subcommand_from polya" -s "b" -l "bam" -d "the reads aligned to the genome assembly are in bam FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from polya" -s "g" -l "genome" -d "the reference genome assembly for the reads is in FILE" -r
 complete -c nanopolish -n "__fish_seen_subcommand_from polya" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
-
-
 
 complete -c nanopolish -n "__fish_seen_subcommand_from scorereads" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from scorereads" -l "version" -d "display version"
@@ -146,8 +127,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from scorereads" -s "g" -l "ge
 complete -c nanopolish -n "__fish_seen_subcommand_from scorereads" -s "w" -l "window" -d "score reads in the window STR (format: ctg:start-end)" -x
 complete -c nanopolish -n "__fish_seen_subcommand_from scorereads" -s "t" -l "threads" -d "use NUM threads (default: 1)" -x
 complete -c nanopolish -n "__fish_seen_subcommand_from scorereads" -l "train-transitions" -d "train new transition parameters from the input reads"
-
-
 
 complete -c nanopolish -n "__fish_seen_subcommand_from variants" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from variants" -l "version" -d "display version"
@@ -176,8 +155,6 @@ complete -c nanopolish -n "__fish_seen_subcommand_from variants" -s "c" -l "cand
 complete -c nanopolish -n "__fish_seen_subcommand_from variants" -l "read-group" -d "only use alignments with read group tag RG" -x
 complete -c nanopolish -n "__fish_seen_subcommand_from variants" -l "calculate-all-support" -d "when making a call, also calculate the support of the 3 other possible bases"
 complete -c nanopolish -n "__fish_seen_subcommand_from variants" -l "models-fofn" -d "read alternative k-mer models from FILE" -r
-
-
 
 complete -c nanopolish -n "__fish_seen_subcommand_from vcf2fasta" -s "v" -l "verbose" -d "display verbose output"
 complete -c nanopolish -n "__fish_seen_subcommand_from vcf2fasta" -l "version" -d "display version"

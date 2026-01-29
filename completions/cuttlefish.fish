@@ -3,8 +3,6 @@
 complete -k -c cuttlefish -n __fish_use_subcommand -x -a version -d "Show version"
 complete -k -c cuttlefish -n __fish_use_subcommand -x -a build -d "Efficiently construct the compacted de Bruijn graph from sequencing reads or reference sequences"
 
-
-
 complete -c cuttlefish -n "__fish_seen_subcommand_from build" -s "s" -l "seq" -d "input files" -r
 complete -c cuttlefish -n "__fish_seen_subcommand_from build" -s "l" -l "list" -d "input file lists" -r
 complete -c cuttlefish -n "__fish_seen_subcommand_from build" -s "d" -l "dir" -d "input file directories" -r
@@ -27,3 +25,4 @@ complete -c cuttlefish -n "__fish_seen_subcommand_from build" -l "edge-set" -d "
 complete -c cuttlefish -n "__fish_seen_subcommand_from build" -l "save-mph" -d "save the minimal perfect hash (BBHash) over the vertex set"
 complete -c cuttlefish -n "__fish_seen_subcommand_from build" -l "save-buckets" -d "save the DFA-states collection of the vertices"
 complete -c cuttlefish -n "__fish_seen_subcommand_from build" -l "save-vertices" -d "save the vertex set of the graph"
+

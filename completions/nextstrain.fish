@@ -2,8 +2,6 @@
 
 complete -c nextstrain -n "not __fish_seen_subcommand_from build view deploy remote shell update check-setup login logout whoami version" -s "h" -l "help" -d "show this help message and exit"
 
-
-
 complete -k -c nextstrain -n __fish_use_subcommand -x -a version -d "Show version information"
 complete -k -c nextstrain -n __fish_use_subcommand -x -a whoami -d "Show information about the logged-in user"
 complete -k -c nextstrain -n __fish_use_subcommand -x -a logout -d "Log out of Nextstrain.org"
@@ -15,8 +13,6 @@ complete -k -c nextstrain -n __fish_use_subcommand -x -a remote -d "Upload, down
 complete -k -c nextstrain -n __fish_use_subcommand -x -a deploy -d "Deploy pathogen build"
 complete -k -c nextstrain -n __fish_use_subcommand -x -a view -d "View pathogen build"
 complete -k -c nextstrain -n __fish_use_subcommand -x -a build -d "Run pathogen build"
-
-
 
 complete -c nextstrain -n "__fish_seen_subcommand_from build" -l "help" -s "h" -d "Show a brief help message of common options and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from build" -l "help-all" -d "Show a full help message of all options and exit"
@@ -42,8 +38,6 @@ complete -c nextstrain -n "__fish_seen_subcommand_from build" -l "aws-batch-s3-b
 complete -c nextstrain -n "__fish_seen_subcommand_from build" -l "aws-batch-cpus" -d "Number of vCPUs to request for job (default: None)" -x
 complete -c nextstrain -n "__fish_seen_subcommand_from build" -l "aws-batch-memory" -d "Amount of memory in MiB to request for job (default: None)" -x
 
-
-
 complete -c nextstrain -n "__fish_seen_subcommand_from view" -l "help" -s "h" -d "Show a brief help message of common options and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from view" -l "help-all" -d "Show a full help message of all options and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from view" -l "allow-remote-access" -d "Allow other computers on the network to access the website (alias for --host=0.0.0.0)"
@@ -59,15 +53,17 @@ complete -c nextstrain -n "__fish_seen_subcommand_from view" -l "fauna" -d "Repl
 complete -c nextstrain -n "__fish_seen_subcommand_from view" -l "sacra" -d "Replace the image's copy of sacra with a local copy (default: None)" -r
 complete -c nextstrain -n "__fish_seen_subcommand_from view" -l "docker-arg" -d "Additional arguments to pass to `docker run` (default: [])" -x
 
-
-
 complete -c nextstrain -n "__fish_seen_subcommand_from deploy" -s "h" -l "help" -d "show this help message and exit"
 
+complete -c nextstrain -n "__fish_seen_subcommand_from remote; and not __fish_seen_subcommand_from upload download" -s "h" -l "help" -d "show this help message and exit"
 
+complete -k -c nextstrain -n "__fish_seen_subcommand_from remote; and not __fish_seen_subcommand_from upload download" -x -a download -d "Download dataset and narrative files"
+complete -k -c nextstrain -n "__fish_seen_subcommand_from remote; and not __fish_seen_subcommand_from upload download" -x -a upload -d "Upload dataset and narrative files"
 
-complete -c nextstrain -n "__fish_seen_subcommand_from remote" -s "h" -l "help" -d "show this help message and exit"
+complete -c nextstrain -n "__fish_seen_subcommand_from remote; and __fish_seen_subcommand_from upload" -s "h" -l "help" -d "show this help message and exit"
 
-
+complete -c nextstrain -n "__fish_seen_subcommand_from remote; and __fish_seen_subcommand_from download" -s "h" -l "help" -d "show this help message and exit"
+complete -c nextstrain -n "__fish_seen_subcommand_from remote; and __fish_seen_subcommand_from download" -l "recursively" -s "r" -d "Download everything under the given remote URL path prefix (default: False)"
 
 complete -c nextstrain -n "__fish_seen_subcommand_from shell" -l "help" -s "h" -d "Show a brief help message of common options and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from shell" -l "help-all" -d "Show a full help message of all options and exit"
@@ -80,31 +76,19 @@ complete -c nextstrain -n "__fish_seen_subcommand_from shell" -l "fauna" -d "Rep
 complete -c nextstrain -n "__fish_seen_subcommand_from shell" -l "sacra" -d "Replace the image's copy of sacra with a local copy (default: None)" -r
 complete -c nextstrain -n "__fish_seen_subcommand_from shell" -l "docker-arg" -d "Additional arguments to pass to `docker run` (default: [])" -x
 
-
-
 complete -c nextstrain -n "__fish_seen_subcommand_from update" -s "h" -l "help" -d "show this help message and exit"
-
-
 
 complete -c nextstrain -n "__fish_seen_subcommand_from check-setup" -s "h" -l "help" -d "show this help message and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from check-setup" -l "set-default" -d "Set the default environment to the first which passes check-setup."
-
-
 
 complete -c nextstrain -n "__fish_seen_subcommand_from login" -s "h" -l "help" -d "show this help message and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from login" -l "username" -s "u" -d "The username to log in as." -x
 complete -c nextstrain -n "__fish_seen_subcommand_from login" -l "no-prompt" -d "Never prompt for a username/password; succeed only if there are login credentials in the environment or existing valid/renewable tokens saved locally, otherwise error."
 complete -c nextstrain -n "__fish_seen_subcommand_from login" -l "renew" -d "Renew existing tokens, if possible."
 
-
-
 complete -c nextstrain -n "__fish_seen_subcommand_from logout" -s "h" -l "help" -d "show this help message and exit"
 
-
-
 complete -c nextstrain -n "__fish_seen_subcommand_from whoami" -s "h" -l "help" -d "show this help message and exit"
-
-
 
 complete -c nextstrain -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "show this help message and exit"
 complete -c nextstrain -n "__fish_seen_subcommand_from version" -l "verbose" -d "Show versions of individual Nextstrain components in the image (default: False)"

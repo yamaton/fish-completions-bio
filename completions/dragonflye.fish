@@ -35,11 +35,7 @@ complete -c dragonflye -n "not __fish_seen_subcommand_from https" -l "trimopts" 
 complete -c dragonflye -n "not __fish_seen_subcommand_from https" -l "nofilter" -d "Disable read length filtering (default: OFF)"
 complete -c dragonflye -n "not __fish_seen_subcommand_from https" -l "nopolish" -d "Disable assembly polishing (default: OFF)"
 
-
-
 complete -k -c dragonflye -n __fish_use_subcommand -x -a https -d "//github.com/rpetit3/dragonflye - Robert A Petit III"
-
-
 
 complete -c dragonflye -n "__fish_seen_subcommand_from https" -l "help" -d "This help"
 complete -c dragonflye -n "__fish_seen_subcommand_from https" -l "version" -d "Print version and exit"

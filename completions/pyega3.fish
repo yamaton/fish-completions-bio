@@ -10,21 +10,13 @@ complete -c pyega3 -n "not __fish_seen_subcommand_from datasets files fetch" -o 
 complete -c pyega3 -n "not __fish_seen_subcommand_from datasets files fetch" -s "j" -l "json" -d "Output data in JSON format instead of tables"
 complete -c pyega3 -n "not __fish_seen_subcommand_from datasets files fetch" -s "v" -l "version" -d "Displays the client's version number."
 
-
-
 complete -k -c pyega3 -n __fish_use_subcommand -x -a fetch -d "Fetch a dataset or file"
 complete -k -c pyega3 -n __fish_use_subcommand -x -a files -d "List files in a specified dataset"
 complete -k -c pyega3 -n __fish_use_subcommand -x -a datasets -d "List authorized datasets"
 
-
-
 complete -c pyega3 -n "__fish_seen_subcommand_from datasets" -s "h" -l "help" -d "show this help message and exit"
 
-
-
 complete -c pyega3 -n "__fish_seen_subcommand_from files" -s "h" -l "help" -d "show this help message and exit"
-
-
 
 complete -c pyega3 -n "__fish_seen_subcommand_from fetch" -s "h" -l "help" -d "show this help message and exit"
 complete -c pyega3 -n "__fish_seen_subcommand_from fetch" -l "reference-name" -s "r" -d "The reference sequence name, for example 'chr1', '1', or 'chrX'." -x

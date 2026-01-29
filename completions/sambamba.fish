@@ -11,8 +11,6 @@ complete -k -c sambamba -n __fish_use_subcommand -x -a merge -d "merge files (BA
 complete -k -c sambamba -n __fish_use_subcommand -x -a index -d "build index (BAI)"
 complete -k -c sambamba -n __fish_use_subcommand -x -a view -d "view contents and convert from one format to another (SAM/BAM/JSON/UNPACK)"
 
-
-
 complete -c sambamba -n "__fish_seen_subcommand_from view" -l "num-filter" -d "filter flag bits; 'i1/i2' corresponds to -f i1 -F i2 samtools arguments; either of the numbers can be omitted" -x
 complete -c sambamba -n "__fish_seen_subcommand_from view" -s "f" -l "format" -d "specify which format to use for output (default is SAM); unpack streams unpacked BAM" -x
 complete -c sambamba -n "__fish_seen_subcommand_from view" -s "h" -l "with-header" -d "print header before reads (always done for BAM output)"
@@ -30,13 +28,9 @@ complete -c sambamba -n "__fish_seen_subcommand_from view" -s "t" -l "nthreads" 
 complete -c sambamba -n "__fish_seen_subcommand_from view" -s "s" -l "subsample" -d "subsample reads (read pairs)" -x
 complete -c sambamba -n "__fish_seen_subcommand_from view" -l "subsampling-seed" -d "set seed for subsampling" -x
 
-
-
 complete -c sambamba -n "__fish_seen_subcommand_from index" -s "p" -l "show-progress" -d "show progress bar in STDERR"
 complete -c sambamba -n "__fish_seen_subcommand_from index" -s "c" -l "check-bins" -d "check that bins are set correctly"
 complete -c sambamba -n "__fish_seen_subcommand_from index" -s "F" -l "fasta-input" -d "specify that input is in FASTA format"
-
-
 
 complete -c sambamba -n "__fish_seen_subcommand_from merge" -s "l" -l "compression-level" -d "level of compression for merged BAM file, number from 0 to 9" -r
 complete -c sambamba -n "__fish_seen_subcommand_from merge" -s "H" -l "header" -d "output merged header to stdout in SAM format, other options are ignored; mainly for debug purposes"
@@ -44,11 +38,8 @@ complete -c sambamba -n "__fish_seen_subcommand_from merge" -s "p" -l "show-prog
 complete -c sambamba -n "__fish_seen_subcommand_from merge" -s "F" -l "filter" -d "keep only reads that satisfy FILTER" -x
 
 
-
 complete -c sambamba -n "__fish_seen_subcommand_from slice" -s "F" -l "fasta-input" -d "specify that input is in FASTA format"
 complete -c sambamba -n "__fish_seen_subcommand_from slice" -s "L" -l "regions" -d "output only reads overlapping one of regions from the BED file" -r
-
-
 
 complete -c sambamba -n "__fish_seen_subcommand_from markdup" -s "t" -l "nthreads" -d "number of threads to use" -x
 complete -c sambamba -n "__fish_seen_subcommand_from markdup" -s "l" -l "compression-level" -d "specify compression level of the resulting file (from 0 to 9)" -r
@@ -60,11 +51,8 @@ complete -c sambamba -n "__fish_seen_subcommand_from markdup" -l "sort-buffer-si
 complete -c sambamba -n "__fish_seen_subcommand_from markdup" -l "io-buffer-size" -d "two buffers of BUFFER_SIZE *megabytes* each are used for reading and writing BAM during the second pass (default is 128)" -x
 
 
-
 complete -c sambamba -n "__fish_seen_subcommand_from flagstat" -s "p" -l "show-progress" -d "show progressbar in STDERR"
 complete -c sambamba -n "__fish_seen_subcommand_from flagstat" -s "b" -l "tabular" -d "output in csv format"
-
-
 
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "F" -l "filter" -d "set custom filter for alignments; the default value is 'mapping_quality > 0 and not duplicate and not failed_quality_control'" -x
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "o" -l "output-file" -d "output filename (by default /dev/stdout)" -r
@@ -82,3 +70,4 @@ complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "T" -l "cov-thres
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "w" -l "window-size" -d "breadth of the window, in bp (required)" -x
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -l "overlap" -d "overlap of successive windows, in bp (default is 0)" -x
 complete -c sambamba -n "__fish_seen_subcommand_from depth" -s "T" -l "cov-threshold" -d "same meaning as in 'region' subcommand" -x
+

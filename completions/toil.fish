@@ -11,8 +11,6 @@ complete -k -c toil -n __fish_use_subcommand -x -a debug-job -d "Debug tool for 
 complete -k -c toil -n __fish_use_subcommand -x -a debug-file -d "Debug tool for copying files contained in a toil jobStore."
 complete -k -c toil -n __fish_use_subcommand -x -a clean -d "Delete a job store used by a previous Toil workflow invocation."
 
-
-
 complete -c toil -n "__fish_seen_subcommand_from clean" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from clean" -l "version" -d "show program's version number and exit"
 complete -c toil -n "__fish_seen_subcommand_from clean" -l "tempDirRoot" -d "Path to where temporary directory containing all temp files are created, by default generates a fresh tmp dir with 'tempfile.gettempdir()'." -r
@@ -25,8 +23,6 @@ complete -c toil -n "__fish_seen_subcommand_from clean" -l "logOff" -d "Same as 
 complete -c toil -n "__fish_seen_subcommand_from clean" -l "logLevel" -d "Set the log level." -x
 complete -c toil -n "__fish_seen_subcommand_from clean" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from clean" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
-
-
 
 complete -c toil -n "__fish_seen_subcommand_from debug-file" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from debug-file" -l "version" -d "show program's version number and exit"
@@ -46,8 +42,6 @@ complete -c toil -n "__fish_seen_subcommand_from debug-file" -l "logLevel" -d "S
 complete -c toil -n "__fish_seen_subcommand_from debug-file" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from debug-file" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
 
-
-
 complete -c toil -n "__fish_seen_subcommand_from debug-job" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from debug-job" -l "version" -d "show program's version number and exit"
 complete -c toil -n "__fish_seen_subcommand_from debug-job" -l "tempDirRoot" -d "Path to where temporary directory containing all temp files are created, by default generates a fresh tmp dir with 'tempfile.gettempdir()'." -r
@@ -61,8 +55,6 @@ complete -c toil -n "__fish_seen_subcommand_from debug-job" -l "logOff" -d "Same
 complete -c toil -n "__fish_seen_subcommand_from debug-job" -l "logLevel" -d "Set the log level." -x
 complete -c toil -n "__fish_seen_subcommand_from debug-job" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from debug-job" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
-
-
 
 complete -c toil -n "__fish_seen_subcommand_from destroy-cluster" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from destroy-cluster" -l "version" -d "show program's version number and exit"
@@ -79,8 +71,6 @@ complete -c toil -n "__fish_seen_subcommand_from destroy-cluster" -l "logLevel" 
 complete -c toil -n "__fish_seen_subcommand_from destroy-cluster" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from destroy-cluster" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
 
-
-
 complete -c toil -n "__fish_seen_subcommand_from kill" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from kill" -l "version" -d "show program's version number and exit"
 complete -c toil -n "__fish_seen_subcommand_from kill" -l "tempDirRoot" -d "Path to where temporary directory containing all temp files are created, by default generates a fresh tmp dir with 'tempfile.gettempdir()'." -r
@@ -94,8 +84,6 @@ complete -c toil -n "__fish_seen_subcommand_from kill" -l "logOff" -d "Same as -
 complete -c toil -n "__fish_seen_subcommand_from kill" -l "logLevel" -d "Set the log level." -x
 complete -c toil -n "__fish_seen_subcommand_from kill" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from kill" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
-
-
 
 complete -c toil -n "__fish_seen_subcommand_from launch-cluster" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from launch-cluster" -l "version" -d "show program's version number and exit"
@@ -126,8 +114,6 @@ complete -c toil -n "__fish_seen_subcommand_from launch-cluster" -l "logLevel" -
 complete -c toil -n "__fish_seen_subcommand_from launch-cluster" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from launch-cluster" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
 
-
-
 complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -l "version" -d "show program's version number and exit"
 complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -l "tempDirRoot" -d "Path to where temporary directory containing all temp files are created, by default generates a fresh tmp dir with 'tempfile.gettempdir()'." -r
@@ -143,8 +129,6 @@ complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -l "logOff" -d "
 complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -l "logLevel" -d "Set the log level." -x
 complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from rsync-cluster" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
-
-
 
 complete -c toil -n "__fish_seen_subcommand_from ssh-cluster" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from ssh-cluster" -l "version" -d "show program's version number and exit"
@@ -163,8 +147,6 @@ complete -c toil -n "__fish_seen_subcommand_from ssh-cluster" -l "logOff" -d "Sa
 complete -c toil -n "__fish_seen_subcommand_from ssh-cluster" -l "logLevel" -d "Set the log level." -x
 complete -c toil -n "__fish_seen_subcommand_from ssh-cluster" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from ssh-cluster" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
-
-
 
 complete -c toil -n "__fish_seen_subcommand_from stats" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from stats" -l "version" -d "show program's version number and exit"
@@ -185,8 +167,6 @@ complete -c toil -n "__fish_seen_subcommand_from stats" -l "logOff" -d "Same as 
 complete -c toil -n "__fish_seen_subcommand_from stats" -l "logLevel" -d "Set the log level." -x
 complete -c toil -n "__fish_seen_subcommand_from stats" -l "logFile" -d "File to log in." -r
 complete -c toil -n "__fish_seen_subcommand_from stats" -l "rotatingLogging" -d "Turn on rotating logging, which prevents log files from getting too big."
-
-
 
 complete -c toil -n "__fish_seen_subcommand_from status" -s "h" -l "help" -d "show this help message and exit"
 complete -c toil -n "__fish_seen_subcommand_from status" -l "version" -d "show program's version number and exit"

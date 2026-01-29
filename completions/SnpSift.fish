@@ -7,8 +7,6 @@ complete -c SnpSift -n "not __fish_seen_subcommand_from alleleMat annotate caseC
 complete -c SnpSift -n "not __fish_seen_subcommand_from alleleMat annotate caseControl ccs concordance covMat dbnsfp extractFields filter geneSets gt gtfilter gwasCat hwe intersect intervals intIdx join op phastCons private rmRefGen rmInfo sort split tstv varType vcfCheck vcf2tped" -s "h" -d ": Help."
 complete -c SnpSift -n "not __fish_seen_subcommand_from alleleMat annotate caseControl ccs concordance covMat dbnsfp extractFields filter geneSets gt gtfilter gwasCat hwe intersect intervals intIdx join op phastCons private rmRefGen rmInfo sort split tstv varType vcfCheck vcf2tped" -s "v" -d ": Verbose."
 
-
-
 complete -k -c SnpSift -n __fish_use_subcommand -x -a vcf2tped -d "Convert VCF to TPED."
 complete -k -c SnpSift -n __fish_use_subcommand -x -a vcfCheck -d "Check that VCF file is well formed."
 complete -k -c SnpSift -n __fish_use_subcommand -x -a varType -d "Annotate variant type (SNP,MNP,INS,DEL or MIXED)."
@@ -40,7 +38,6 @@ complete -k -c SnpSift -n __fish_use_subcommand -x -a annotate -d "Annotate 'ID'
 complete -k -c SnpSift -n __fish_use_subcommand -x -a alleleMat -d "Create an allele matrix output."
 
 
-
 complete -c SnpSift -n "__fish_seen_subcommand_from annotate" -o "dbsnp" -d ": Use DbSnp database."
 complete -c SnpSift -n "__fish_seen_subcommand_from annotate" -o "clinvar" -d ": Use ClinVar database."
 complete -c SnpSift -n "__fish_seen_subcommand_from annotate" -s "a" -d ": Annotate fields, even if the database has an empty value (annotates using '.' for empty)."
@@ -63,21 +60,14 @@ complete -c SnpSift -n "__fish_seen_subcommand_from annotate" -o "noLog" -d ": D
 complete -c SnpSift -n "__fish_seen_subcommand_from annotate" -s "h" -d ": Help."
 complete -c SnpSift -n "__fish_seen_subcommand_from annotate" -s "v" -d ": Verbose."
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from caseControl" -o "chi2" -d ": Use ChiSquare approximarion instead of Fisher exact test."
 complete -c SnpSift -n "__fish_seen_subcommand_from caseControl" -o "name" -d ": A name to be added after to 'Cases' or 'Controls' tags" -x
 complete -c SnpSift -n "__fish_seen_subcommand_from caseControl" -o "tfam" -d ": A TFAM file having case/control informations (phenotype colmun)" -r
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from ccs" -s "q" -d ": Be quiet"
 complete -c SnpSift -n "__fish_seen_subcommand_from ccs" -s "v" -d ": Be verbose"
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from concordance" -s "s" -d ": Only use sample IDs in file (format: one sample ID per line)." -r
-
 
 
 complete -c SnpSift -n "__fish_seen_subcommand_from dbnsfp" -s "a" -d ": Annotate fields, even if the database has an empty value (annotates using '.' for empty)."
@@ -98,12 +88,8 @@ complete -c SnpSift -n "__fish_seen_subcommand_from dbnsfp" -o "noLog" -d ": Do 
 complete -c SnpSift -n "__fish_seen_subcommand_from dbnsfp" -s "h" -d ": Help."
 complete -c SnpSift -n "__fish_seen_subcommand_from dbnsfp" -s "v" -d ": Verbose."
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from extractFields" -s "s" -d ": Same field separator."
 complete -c SnpSift -n "__fish_seen_subcommand_from extractFields" -s "e" -d ": Empty field."
-
-
 
 complete -c SnpSift -n "__fish_seen_subcommand_from filter" -s "a" -l "addFilter" -d ": Add a string to FILTER VCF field if 'expression' is true." -x
 complete -c SnpSift -n "__fish_seen_subcommand_from filter" -s "e" -l "exprFile" -d ": Read expression from a file" -r
@@ -118,10 +104,7 @@ complete -c SnpSift -n "__fish_seen_subcommand_from filter" -l "format" -d ": Sn
 complete -c SnpSift -n "__fish_seen_subcommand_from filter" -l "galaxy" -d ": Used from Galaxy (expressions have been sanitized)."
 
 
-
 complete -c SnpSift -n "__fish_seen_subcommand_from gt" -s "u" -d ": Uncompress (restore genotype fields)."
-
-
 
 complete -c SnpSift -n "__fish_seen_subcommand_from gtfilter" -s "e" -d "| --exprFile <file>   : Read expression from a file"
 complete -c SnpSift -n "__fish_seen_subcommand_from gtfilter" -s "f" -d "| --file <input.vcf> : VCF input file."
@@ -131,8 +114,6 @@ complete -c SnpSift -n "__fish_seen_subcommand_from gtfilter" -s "n" -d "| --inv
 complete -c SnpSift -n "__fish_seen_subcommand_from gtfilter" -s "s" -d "| --set <file>   : Create a SET using 'file'"
 complete -c SnpSift -n "__fish_seen_subcommand_from gtfilter" -l "errMissing" -d ": Error is a field is missing."
 complete -c SnpSift -n "__fish_seen_subcommand_from gtfilter" -l "format" -d ": SnpEff format version: {2, 3}." -x
-
-
 
 complete -c SnpSift -n "__fish_seen_subcommand_from gwasCat" -s "c" -o "config" -d ": Specify config file" -r
 complete -c SnpSift -n "__fish_seen_subcommand_from gwasCat" -s "d" -d ": Debug."
@@ -144,12 +125,8 @@ complete -c SnpSift -n "__fish_seen_subcommand_from gwasCat" -o "noLog" -d ": Do
 complete -c SnpSift -n "__fish_seen_subcommand_from gwasCat" -s "h" -d ": Help."
 complete -c SnpSift -n "__fish_seen_subcommand_from gwasCat" -s "v" -d ": Verbose."
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from hwe" -s "q" -d ": Be quite"
 complete -c SnpSift -n "__fish_seen_subcommand_from hwe" -s "v" -d ": Be verbose"
-
-
 
 complete -c SnpSift -n "__fish_seen_subcommand_from intersect" -o "minOverlap" -d ": Minimum number of bases that two intervals have to overlap." -x
 complete -c SnpSift -n "__fish_seen_subcommand_from intersect" -o "cluster" -d ": An interval has to intersect at least 'num' intervals (from other files) to be considered." -r
@@ -157,17 +134,11 @@ complete -c SnpSift -n "__fish_seen_subcommand_from intersect" -o "intersect" -d
 complete -c SnpSift -n "__fish_seen_subcommand_from intersect" -o "union" -d ": Report the union of all intervals."
 complete -c SnpSift -n "__fish_seen_subcommand_from intersect" -o "not" -d ": Only report if it does NOT intersect with any interval in this file (i.e. filter out if intersects)" -r
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from intervals" -s "i" -d "VCF file." -r
 complete -c SnpSift -n "__fish_seen_subcommand_from intervals" -s "x" -d ":   Exclude VCF entries in intervals"
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from intIdx" -o "if" -d ": Input offset." -x
 complete -c SnpSift -n "__fish_seen_subcommand_from intIdx" -s "i" -d ": Genomic intervals in command line."
-
-
 
 complete -c SnpSift -n "__fish_seen_subcommand_from join" -o "if1" -d ": Offset for file1 (e.g. 1 if coordinates are one-based." -r
 complete -c SnpSift -n "__fish_seen_subcommand_from join" -o "if2" -d ": Offset for file2 (e.g. 2 if coordinates are one-based." -r
@@ -177,13 +148,9 @@ complete -c SnpSift -n "__fish_seen_subcommand_from join" -o "all" -d ": For eac
 complete -c SnpSift -n "__fish_seen_subcommand_from join" -o "closest" -d ": Show closest intervals in file2 if none intersect."
 complete -c SnpSift -n "__fish_seen_subcommand_from join" -o "empty" -d ": Show intervals in file1 even if they do not intersect with any other interval."
 
-
-
 complete -c SnpSift -n "__fish_seen_subcommand_from op" -o "fields" -d ": Input VCF field names (comma separated list)." -r
 complete -c SnpSift -n "__fish_seen_subcommand_from op" -o "op" -d ": Operator to be applied to the fields" -x
 complete -c SnpSift -n "__fish_seen_subcommand_from op" -o "outfield" -d ": Ouptut field name." -r
-
-
 
 complete -c SnpSift -n "__fish_seen_subcommand_from phastCons" -o "bed" -d ": Input is a BED file."
 complete -c SnpSift -n "__fish_seen_subcommand_from phastCons" -o "extract" -d ": Extract sub intervals of at least 'num' bases, having a conservarion score of at least 'minScore'." -r
@@ -191,8 +158,11 @@ complete -c SnpSift -n "__fish_seen_subcommand_from phastCons" -o "minScore" -d 
 
 
 
+
+
 complete -c SnpSift -n "__fish_seen_subcommand_from split" -s "j" -d ": Join all files in command line (output = STDOUT)."
 complete -c SnpSift -n "__fish_seen_subcommand_from split" -s "l" -d ": Split by 'num' lines." -x
+
 
 
 

@@ -3,16 +3,12 @@
 complete -c verticall -n "not __fish_seen_subcommand_from pairwise view matrix mask summary repair" -s "h" -l "help" -d "Show this help message and exit"
 complete -c verticall -n "not __fish_seen_subcommand_from pairwise view matrix mask summary repair" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -k -c verticall -n __fish_use_subcommand -x -a repair -d "repair assembly for use in Verticall"
 complete -k -c verticall -n __fish_use_subcommand -x -a summary -d "summarise regions for one assembly"
 complete -k -c verticall -n __fish_use_subcommand -x -a mask -d "mask horizontal regions from a whole-genome pseudo-alignment"
 complete -k -c verticall -n __fish_use_subcommand -x -a matrix -d "produce a PHYLIP distance matrix"
 complete -k -c verticall -n __fish_use_subcommand -x -a view -d "view plots for a single assembly pair"
 complete -k -c verticall -n __fish_use_subcommand -x -a pairwise -d "pairwise analysis of assemblies"
-
-
 
 complete -c verticall -n "__fish_seen_subcommand_from pairwise" -s "i" -l "in_dir" -d "Directory containing assemblies in FASTA format" -r
 complete -c verticall -n "__fish_seen_subcommand_from pairwise" -s "o" -l "out_file" -d "Filename of TSV output" -r
@@ -34,8 +30,6 @@ complete -c verticall -n "__fish_seen_subcommand_from pairwise" -l "existing_tsv
 complete -c verticall -n "__fish_seen_subcommand_from pairwise" -s "h" -l "help" -d "Show this help message and exit"
 complete -c verticall -n "__fish_seen_subcommand_from pairwise" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c verticall -n "__fish_seen_subcommand_from view" -s "i" -l "in_dir" -d "Directory containing assemblies in FASTA format" -r
 complete -c verticall -n "__fish_seen_subcommand_from view" -s "n" -l "names" -d "Two sample names (comma-delimited) to be viewed" -x
 complete -c verticall -n "__fish_seen_subcommand_from view" -l "window_count" -d "Aim to have at least this many comparison windows between assemblies (default: 50000)" -x
@@ -56,8 +50,6 @@ complete -c verticall -n "__fish_seen_subcommand_from view" -l "ambiguous_colour
 complete -c verticall -n "__fish_seen_subcommand_from view" -s "h" -l "help" -d "Show this help message and exit"
 complete -c verticall -n "__fish_seen_subcommand_from view" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c verticall -n "__fish_seen_subcommand_from matrix" -s "i" -l "in_file" -d "Filename of TSV created by vertical pairwise" -r
 complete -c verticall -n "__fish_seen_subcommand_from matrix" -s "o" -l "out_file" -d "Filename of PHYLIP matrix output" -r
 complete -c verticall -n "__fish_seen_subcommand_from matrix" -l "distance_type" -d "Which distance to use in matrix (default: median_vertical_window)" -x
@@ -68,8 +60,6 @@ complete -c verticall -n "__fish_seen_subcommand_from matrix" -l "include_names"
 complete -c verticall -n "__fish_seen_subcommand_from matrix" -l "exclude_names" -d "Samples names to exclude from matrix (comma-delimited, default: do not exclude any samples)" -x
 complete -c verticall -n "__fish_seen_subcommand_from matrix" -s "h" -l "help" -d "Show this help message and exit"
 complete -c verticall -n "__fish_seen_subcommand_from matrix" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c verticall -n "__fish_seen_subcommand_from mask" -s "i" -l "in_tsv" -d "Filename of TSV created by vertical pairwise" -r
 complete -c verticall -n "__fish_seen_subcommand_from mask" -s "a" -l "in_alignment" -d "Filename of whole-genome pseudo-alignment to be masked" -r
@@ -87,8 +77,6 @@ complete -c verticall -n "__fish_seen_subcommand_from mask" -l "exclude_referenc
 complete -c verticall -n "__fish_seen_subcommand_from mask" -s "h" -l "help" -d "Show this help message and exit"
 complete -c verticall -n "__fish_seen_subcommand_from mask" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c verticall -n "__fish_seen_subcommand_from summary" -s "i" -l "in_file" -d "Filename of TSV created by vertical pairwise" -r
 complete -c verticall -n "__fish_seen_subcommand_from summary" -s "a" -l "assembly" -d "Filename of assembly to be summarised" -r
 complete -c verticall -n "__fish_seen_subcommand_from summary" -l "all" -d "Output one line for all assembly positions (default: omit redundant adjacent lines)"
@@ -98,8 +86,6 @@ complete -c verticall -n "__fish_seen_subcommand_from summary" -l "horizontal_co
 complete -c verticall -n "__fish_seen_subcommand_from summary" -l "unaligned_colour" -d "Hex colour for unaligned inheritance (default: #c9c9c9)" -x
 complete -c verticall -n "__fish_seen_subcommand_from summary" -s "h" -l "help" -d "Show this help message and exit"
 complete -c verticall -n "__fish_seen_subcommand_from summary" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c verticall -n "__fish_seen_subcommand_from repair" -s "i" -l "in_file" -d "Filename of assembly in need of repair" -r
 complete -c verticall -n "__fish_seen_subcommand_from repair" -s "o" -l "out_file" -d "Filename of repaired assembly output (if the same as -i, the input file will be overwritten)" -r

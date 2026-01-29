@@ -10,3 +10,13 @@ complete -k -c download-ncbi-data -n __fish_use_subcommand -x -a generif -d "Dow
 complete -k -c download-ncbi-data -n __fish_use_subcommand -x -a bioconcepts -d "Download the BioConcepts/PubTatorCentral mapping bioconcepts2pubtatorcentral.gz, unless already present."
 complete -k -c download-ncbi-data -n __fish_use_subcommand -x -a pmc-bioc -d "Download PubMed Central open-access archives in BioConcepts format, unless already present."
 complete -k -c download-ncbi-data -n __fish_use_subcommand -x -a pmc-oa -d "Download PubMed Central open-access archives in traditional format, unless already present."
+
+
+
+
+
+
+
+
+
+

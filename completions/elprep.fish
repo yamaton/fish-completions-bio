@@ -9,8 +9,6 @@ complete -k -c elprep -n __fish_use_subcommand -x -a merge -d "merge .sam/.bam f
 complete -k -c elprep -n __fish_use_subcommand -x -a split -d "split .sam/.bam files per chromosome so they can be processed without information loss"
 complete -k -c elprep -n __fish_use_subcommand -x -a filter -d "filter"
 
-
-
 complete -c elprep -n "__fish_seen_subcommand_from filter" -l "replace-reference-sequences" -d "Replace the header of a .sam/.bam file by a new header." -r
 complete -c elprep -n "__fish_seen_subcommand_from filter" -l "filter-unmapped-reads" -d "Removes all alignments in the input file that are unmapped."
 complete -c elprep -n "__fish_seen_subcommand_from filter" -l "filter-unmapped-reads-strict" -d "Removes all alignments in the input file that are unmapped."
@@ -50,8 +48,6 @@ complete -c elprep -n "__fish_seen_subcommand_from filter" -l "nr-of-threads" -d
 complete -c elprep -n "__fish_seen_subcommand_from filter" -l "timed" -d "Time the different phases of the execution of the elprep command, e.g. time spent on reading from file into memory, filtering, sorting, etc."
 complete -c elprep -n "__fish_seen_subcommand_from filter" -l "log-path" -d "Specify a path where elPrep can store log files." -r
 
-
-
 complete -c elprep -n "__fish_seen_subcommand_from split" -o "output-prefix" -d "The split command groups entries in the sequence dictionary." -x
 complete -c elprep -n "__fish_seen_subcommand_from split" -l "output-type" -d "This command option sets the format of the split files." -r
 complete -c elprep -n "__fish_seen_subcommand_from split" -l "nr-of-threads" -d "This command option sets the number of threads that elPrep uses during execution for parsing/outputting .sam/.bam data." -x
@@ -59,32 +55,20 @@ complete -c elprep -n "__fish_seen_subcommand_from split" -l "single-end" -d "Wh
 complete -c elprep -n "__fish_seen_subcommand_from split" -l "log-path" -d "Sets the path for writing a log file." -r
 complete -c elprep -n "__fish_seen_subcommand_from split" -l "contig-group-size" -d "The elprep split command groups the sequence dictionary entries for deciding how to split up the input data." -x
 
-
-
 complete -c elprep -n "__fish_seen_subcommand_from merge" -o "nr-of-threads" -d "Set the number of threads that elPrep uses during execution for parsing/outputting .sam/.bam data." -x
 complete -c elprep -n "__fish_seen_subcommand_from merge" -l "single-end" -d "Treat the data as single-end data."
 complete -c elprep -n "__fish_seen_subcommand_from merge" -l "log-path" -d "Sets the path for writing a log file." -r
 
-
-
 complete -c elprep -n "__fish_seen_subcommand_from merge-optical-duplicates-metrics" -o "nr-of-threads" -d "Set the number of threads that elPrep uses during execution for parsing/outputting .sam/.bam data." -x
 complete -c elprep -n "__fish_seen_subcommand_from merge-optical-duplicates-metrics" -l "remove-duplicates" -d "Pass this option if the metrics were generated for a file for which the duplicates were removed."
-
-
 
 complete -c elprep -n "__fish_seen_subcommand_from sfm" -o "intermediate-files-output-type" -d "Set the format of the split files." -r
 complete -c elprep -n "__fish_seen_subcommand_from sfm" -l "tmp-path" -d "Specify a path where elPrep can store temporary files that are created (and deleted) by the split and merge commands that are silently called by the elprep sfm command."
 complete -c elprep -n "__fish_seen_subcommand_from sfm" -l "single-end" -d "Indicate the sfm command is processing single-end data."
 complete -c elprep -n "__fish_seen_subcommand_from sfm" -l "contig-group-size" -d "Passed to the split tool." -x
 
-
-
 complete -c elprep -n "__fish_seen_subcommand_from vcf-to-elsites" -l "log-path" -d "Sets the path for writing a log file." -r
 
-
-
 complete -c elprep -n "__fish_seen_subcommand_from bed-to-elsites" -l "log-path" -d "Sets the path for writing a log file." -r
-
-
 
 complete -c elprep -n "__fish_seen_subcommand_from fasta-to-elfasta" -l "log-path" -d "Sets the path for writing a log file." -r

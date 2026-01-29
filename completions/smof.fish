@@ -3,8 +3,6 @@
 complete -c smof -n "not __fish_seen_subcommand_from cut clean consensus filter grep md5sum head permute reverse sample sniff sort split stat subseq tail translate uniq wc" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "not __fish_seen_subcommand_from cut clean consensus filter grep md5sum head permute reverse sample sniff sort split stat subseq tail translate uniq wc" -s "v" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c smof -n __fish_use_subcommand -x -a wc -d "roughly emulates the UNIX wc command"
 complete -k -c smof -n __fish_use_subcommand -x -a uniq -d "count, omit, or merge repeated entries"
 complete -k -c smof -n __fish_use_subcommand -x -a translate -d "translate a DNA sequence into a protein sequence"
@@ -25,13 +23,9 @@ complete -k -c smof -n __fish_use_subcommand -x -a consensus -d "finds the conse
 complete -k -c smof -n __fish_use_subcommand -x -a clean -d "cleans fasta files"
 complete -k -c smof -n __fish_use_subcommand -x -a cut -d "emulates UNIX cut command, where fields are entries"
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from cut" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from cut" -s "f" -l "fields" -d "Indices to print, comma delimited, with ranges" -x
 complete -c smof -n "__fish_seen_subcommand_from cut" -s "v" -l "complement" -d "Invert selection"
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from clean" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from clean" -s "t" -l "type" -d "sequence type" -x
@@ -45,19 +39,13 @@ complete -c smof -n "__fish_seen_subcommand_from clean" -s "m" -l "mask-lowercas
 complete -c smof -n "__fish_seen_subcommand_from clean" -s "w" -l "col_width" -d "width of the sequence output (0 indicates no wrapping)" -x
 complete -c smof -n "__fish_seen_subcommand_from clean" -s "d" -l "standardize" -d "Convert 'X' in DNA to 'N' and '[._]' to '-' (for gaps)"
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from consensus" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from consensus" -s "t" -l "table" -d "Print count table instead of consensus"
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from filter" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from filter" -s "s" -l "shorter-than" -d "keep only if length is less than or equal to LEN" -x
 complete -c smof -n "__fish_seen_subcommand_from filter" -s "l" -l "longer-than" -d "keep only if length is greater than or equal to LEN" -x
 complete -c smof -n "__fish_seen_subcommand_from filter" -s "c" -l "composition" -d "keep only if composition meets the condition (e.g. 'GC > .5')" -x
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from grep" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from grep" -s "q" -l "match-sequence" -d "match sequence rather than header"
@@ -88,8 +76,6 @@ complete -c smof -n "__fish_seen_subcommand_from grep" -l "gff" -d "output match
 complete -c smof -n "__fish_seen_subcommand_from grep" -l "gff-type" -d "name of searched feature" -x
 complete -c smof -n "__fish_seen_subcommand_from grep" -l "fastain" -d "Search for exact sequence matches against FASTA" -x
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from md5sum" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from md5sum" -s "i" -l "ignore-case" -d "convert all to uppercase, before hashing"
 complete -c smof -n "__fish_seen_subcommand_from md5sum" -s "q" -l "each-sequence" -d "calculate md5sum for each sequence (TAB delimited)"
@@ -97,14 +83,10 @@ complete -c smof -n "__fish_seen_subcommand_from md5sum" -s "s" -l "all-sequence
 complete -c smof -n "__fish_seen_subcommand_from md5sum" -s "d" -l "all-headers" -d "calculate one md5sum for all concatenated headers"
 complete -c smof -n "__fish_seen_subcommand_from md5sum" -s "r" -l "replace-header" -d "replace the header of each entry with the checksum of the sequence"
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from head" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from head" -s "n" -l "entries" -d "print first K entries; or use -n -K to print all but the last K entries" -x
 complete -c smof -n "__fish_seen_subcommand_from head" -s "f" -l "first" -d "print first K letters of each sequence" -x
 complete -c smof -n "__fish_seen_subcommand_from head" -s "l" -l "last" -d "print last K letters of each sequence" -x
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from permute" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from permute" -s "w" -l "word-size" -d "size of each word (default=1)" -x
@@ -112,25 +94,17 @@ complete -c smof -n "__fish_seen_subcommand_from permute" -s "s" -l "start-offse
 complete -c smof -n "__fish_seen_subcommand_from permute" -s "e" -l "end-offset" -d "number of letters to ignore at end (default=0)" -x
 complete -c smof -n "__fish_seen_subcommand_from permute" -l "seed" -d "set random seed (for reproducibility/debugging)" -x
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from reverse" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from reverse" -s "c" -l "complement" -d "take the reverse complement of the sequence"
 complete -c smof -n "__fish_seen_subcommand_from reverse" -s "V" -l "no-validate" -d "do not check whether the sequence is DNA before reverse complement"
 complete -c smof -n "__fish_seen_subcommand_from reverse" -s "S" -l "preserve-color" -d "Preserve incoming color"
 complete -c smof -n "__fish_seen_subcommand_from reverse" -s "Y" -l "force-color" -d "print in color even to non-tty (DANGEROUS)"
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from sample" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from sample" -s "n" -l "number" -d "sample size (default=1)" -x
 complete -c smof -n "__fish_seen_subcommand_from sample" -l "seed" -d "set random seed (for reproducibility/debugging)" -x
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from sniff" -s "h" -l "help" -d "show this help message and exit"
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "x" -l "regex" -d "sort by single regex capture" -x
@@ -142,14 +116,10 @@ complete -c smof -n "__fish_seen_subcommand_from sort" -s "k" -l "key" -d "Key t
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "t" -l "field-separator" -d "The field separator (default: '|')" -x
 complete -c smof -n "__fish_seen_subcommand_from sort" -s "p" -l "pair-separator" -d "The separator between a tag and value (default: '=')" -x
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from split" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from split" -s "n" -l "number" -d "Number of output files or sequences per file" -r
 complete -c smof -n "__fish_seen_subcommand_from split" -s "q" -l "seqs" -d "split by maximum sequences per file"
 complete -c smof -n "__fish_seen_subcommand_from split" -s "p" -l "prefix" -d "prefix for output files (default=\"xxx\")" -r
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from stat" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from stat" -s "d" -l "delimiter" -d "output delimiter" -x
@@ -164,8 +134,6 @@ complete -c smof -n "__fish_seen_subcommand_from stat" -s "C" -l "aa-profile" -d
 complete -c smof -n "__fish_seen_subcommand_from stat" -s "g" -l "hist" -d "write ascii histogram of sequence lengths"
 complete -c smof -n "__fish_seen_subcommand_from stat" -s "G" -l "log-hist" -d "write ascii histogram of sequence log2 lengths"
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from subseq" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from subseq" -s "b" -l "bounds" -d "from and to values (indexed from 1)" -x
 complete -c smof -n "__fish_seen_subcommand_from subseq" -s "f" -l "gff" -d "get bounds from this gff3 file" -r
@@ -174,21 +142,15 @@ complete -c smof -n "__fish_seen_subcommand_from subseq" -s "c" -l "color" -d "c
 complete -c smof -n "__fish_seen_subcommand_from subseq" -s "a" -l "annotate" -d "Append the subsequence interval to the defline"
 complete -c smof -n "__fish_seen_subcommand_from subseq" -s "Y" -l "force-color" -d "print in color even to non-tty (DANGEROUS)"
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from tail" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from tail" -s "n" -l "entries" -d "print last K entries; or use -n +K to output starting with the Kth" -x
 complete -c smof -n "__fish_seen_subcommand_from tail" -s "f" -l "first" -d "print first K letters of each sequence" -x
 complete -c smof -n "__fish_seen_subcommand_from tail" -s "l" -l "last" -d "print last K letters of each sequence" -x
 
-
-
 complete -c smof -n "__fish_seen_subcommand_from translate" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from translate" -s "s" -l "from-start" -d "Require each product begin with a start codon"
 complete -c smof -n "__fish_seen_subcommand_from translate" -s "f" -l "all-frames" -d "Translate in all frames, keep longest"
 complete -c smof -n "__fish_seen_subcommand_from translate" -s "c" -l "cds" -d "Write the DNA coding sequence"
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from uniq" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from uniq" -s "c" -l "count" -d "writes (count|header) in tab-delimited format"
@@ -199,8 +161,6 @@ complete -c smof -n "__fish_seen_subcommand_from uniq" -s "P" -l "unpack" -d "re
 complete -c smof -n "__fish_seen_subcommand_from uniq" -s "z" -l "pack-sep" -d "set delimiting string for pack/unpack operations (SOH, 0x01, by default)" -x
 complete -c smof -n "__fish_seen_subcommand_from uniq" -s "f" -l "first-header" -d "remove entries with duplicate headers (keep only the first)"
 complete -c smof -n "__fish_seen_subcommand_from uniq" -l "removed" -d "With -f, store removed sequences in FILE" -r
-
-
 
 complete -c smof -n "__fish_seen_subcommand_from wc" -s "h" -l "help" -d "show this help message and exit"
 complete -c smof -n "__fish_seen_subcommand_from wc" -s "m" -l "chars" -d "writes the summed length of all sequences"

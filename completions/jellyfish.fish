@@ -3,8 +3,6 @@
 complete -c jellyfish -n "not __fish_seen_subcommand_from count bc info stats histo dump merge query cite mem jf" -l "version" -d "Display version"
 complete -c jellyfish -n "not __fish_seen_subcommand_from count bc info stats histo dump merge query cite mem jf" -l "help" -d "Display this message"
 
-
-
 complete -k -c jellyfish -n __fish_use_subcommand -x -a jf -d "jf"
 complete -k -c jellyfish -n __fish_use_subcommand -x -a mem -d "Give memory usage information"
 complete -k -c jellyfish -n __fish_use_subcommand -x -a cite -d "How to cite Jellyfish's paper"
@@ -16,8 +14,6 @@ complete -k -c jellyfish -n __fish_use_subcommand -x -a stats -d "Statistics"
 complete -k -c jellyfish -n __fish_use_subcommand -x -a info -d "Display information about a jellyfish file"
 complete -k -c jellyfish -n __fish_use_subcommand -x -a bc -d "Create a bloom filter from the input k-mers"
 complete -k -c jellyfish -n __fish_use_subcommand -x -a count -d "Count k-mers in fasta or fastq files"
-
-
 
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "m" -l "mer-len" -d "*Length of mer" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "s" -l "size" -d "*Initial hash size" -x
@@ -48,8 +44,6 @@ complete -c jellyfish -n "__fish_seen_subcommand_from count" -l "usage" -s "h" -
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -l "full-help" -d "Detailed help"
 complete -c jellyfish -n "__fish_seen_subcommand_from count" -s "V" -l "version" -d "Version"
 
-
-
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "s" -l "size" -d "*Expected number of k-mers in input" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "m" -l "mer-len" -d "*Length of mer" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "f" -l "fpr" -d "False positive rate (0.001)" -x
@@ -64,15 +58,11 @@ complete -c jellyfish -n "__fish_seen_subcommand_from bc" -l "timing" -d "Print 
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "U" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from bc" -s "V" -l "version" -d "Version"
 
-
-
 complete -c jellyfish -n "__fish_seen_subcommand_from info" -s "s" -l "skip" -d "Skip header and dump remainder of file (false)"
 complete -c jellyfish -n "__fish_seen_subcommand_from info" -s "j" -l "json" -d "Dump full header in JSON format (false)"
 complete -c jellyfish -n "__fish_seen_subcommand_from info" -s "c" -l "cmd" -d "Display only the command line (false)"
 complete -c jellyfish -n "__fish_seen_subcommand_from info" -s "U" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from info" -s "V" -l "version" -d "Version"
-
-
 
 complete -c jellyfish -n "__fish_seen_subcommand_from stats" -s "L" -l "lower-count" -d "Don't consider k-mer with count < lower-count (0)" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from stats" -s "U" -l "upper-count" -d "Don't consider k-mer with count > upper-count (2^64)" -x
@@ -81,8 +71,6 @@ complete -c jellyfish -n "__fish_seen_subcommand_from stats" -s "o" -l "output" 
 complete -c jellyfish -n "__fish_seen_subcommand_from stats" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from stats" -l "full-help" -d "Detailed help"
 complete -c jellyfish -n "__fish_seen_subcommand_from stats" -s "V" -l "version" -d "Version"
-
-
 
 complete -c jellyfish -n "__fish_seen_subcommand_from histo" -s "l" -l "low" -d "Low count value of histogram (1)" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from histo" -s "h" -l "high" -d "High count value of histogram (10000)" -x
@@ -95,8 +83,6 @@ complete -c jellyfish -n "__fish_seen_subcommand_from histo" -s "U" -l "usage" -
 complete -c jellyfish -n "__fish_seen_subcommand_from histo" -l "full-help" -d "Detailed help"
 complete -c jellyfish -n "__fish_seen_subcommand_from histo" -s "V" -l "version" -d "Version"
 
-
-
 complete -c jellyfish -n "__fish_seen_subcommand_from dump" -s "c" -l "column" -d "Column format (false)"
 complete -c jellyfish -n "__fish_seen_subcommand_from dump" -s "t" -l "tab" -d "Tab separator (false)"
 complete -c jellyfish -n "__fish_seen_subcommand_from dump" -s "L" -l "lower-count" -d "Don't output k-mer with count < lower-count" -x
@@ -104,8 +90,6 @@ complete -c jellyfish -n "__fish_seen_subcommand_from dump" -s "U" -l "upper-cou
 complete -c jellyfish -n "__fish_seen_subcommand_from dump" -s "o" -l "output" -d "Output file" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from dump" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from dump" -s "V" -l "version" -d "Version"
-
-
 
 complete -c jellyfish -n "__fish_seen_subcommand_from merge" -s "o" -l "output" -d "Output file (mer_counts_merged.jf)" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from merge" -s "m" -l "min" -d "Compute min count instead of sum (false)"
@@ -116,8 +100,6 @@ complete -c jellyfish -n "__fish_seen_subcommand_from merge" -s "U" -l "upper-co
 complete -c jellyfish -n "__fish_seen_subcommand_from merge" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from merge" -s "V" -l "version" -d "Version"
 
-
-
 complete -c jellyfish -n "__fish_seen_subcommand_from query" -s "s" -l "sequence" -d "Output counts for all mers in sequence" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from query" -s "o" -l "output" -d "Output file (stdout)" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from query" -s "i" -l "interactive" -d "Interactive, queries from stdin (false)"
@@ -126,14 +108,10 @@ complete -c jellyfish -n "__fish_seen_subcommand_from query" -s "L" -l "no-load"
 complete -c jellyfish -n "__fish_seen_subcommand_from query" -s "U" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from query" -s "V" -l "version" -d "Version"
 
-
-
 complete -c jellyfish -n "__fish_seen_subcommand_from cite" -s "b" -l "bibtex" -d "Bibtex format (false)"
 complete -c jellyfish -n "__fish_seen_subcommand_from cite" -s "o" -l "output" -d "Output file" -r
 complete -c jellyfish -n "__fish_seen_subcommand_from cite" -s "U" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from cite" -s "V" -l "version" -d "Version"
-
-
 
 complete -c jellyfish -n "__fish_seen_subcommand_from mem" -s "m" -l "mer-len" -d "*Length of mer" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from mem" -s "s" -l "size" -d "Initial hash size" -x
@@ -144,3 +122,4 @@ complete -c jellyfish -n "__fish_seen_subcommand_from mem" -l "bc" -d "Ignored s
 complete -c jellyfish -n "__fish_seen_subcommand_from mem" -l "usage" -s "h" -l "help" -d "This message" -x
 complete -c jellyfish -n "__fish_seen_subcommand_from mem" -l "full-help" -d "Detailed help"
 complete -c jellyfish -n "__fish_seen_subcommand_from mem" -s "V" -l "version" -d "Version"
+

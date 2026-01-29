@@ -4,8 +4,6 @@ complete -k -c platanus_b -n __fish_use_subcommand -x -a iterate -d "iterate"
 complete -k -c platanus_b -n __fish_use_subcommand -x -a combine -d "combine"
 complete -k -c platanus_b -n __fish_use_subcommand -x -a assemble -d "assemble"
 
-
-
 complete -c platanus_b -n "__fish_seen_subcommand_from assemble" -s "o" -d "prefix of output files (default out, length <= 200)" -r
 complete -c platanus_b -n "__fish_seen_subcommand_from assemble" -s "f" -d "reads file (fasta or fastq, number <= 100)" -r
 complete -c platanus_b -n "__fish_seen_subcommand_from assemble" -s "k" -d "initial k-mer size (default 32)" -x
@@ -23,8 +21,6 @@ complete -c platanus_b -n "__fish_seen_subcommand_from assemble" -o "tmp" -d "di
 complete -c platanus_b -n "__fish_seen_subcommand_from assemble" -o "kmer_occ_only" -d "only output k-mer occurrence table (out_kmer_occ.bin; default off)"
 complete -c platanus_b -n "__fish_seen_subcommand_from assemble" -o "repeat" -d "mode to assemble repetitive sequences (e.g. 16s rRNA))"
 
-
-
 complete -c platanus_b -n "__fish_seen_subcommand_from combine" -s "o" -d "prefix of output file and directory (do not use \"/\", default out, length <= 200)" -r
 complete -c platanus_b -n "__fish_seen_subcommand_from combine" -s "c" -d "contig (or scaffold) file (fasta format)" -r
 complete -c platanus_b -n "__fish_seen_subcommand_from combine" -o "gc" -d "Guiding contig file; i.e. other assemblies, synthetic long-reads or corrected reads (fasta or fastq)" -r
@@ -35,8 +31,6 @@ complete -c platanus_b -n "__fish_seen_subcommand_from combine" -o "tmp" -d "dir
 complete -c platanus_b -n "__fish_seen_subcommand_from combine" -o "sub_bin" -d "directory for binary files which platanus_b use internally (e.g. minimap2) (default ~/repos/Platanus_B/sub_bin)" -r
 complete -c platanus_b -n "__fish_seen_subcommand_from combine" -o "no_gap_close" -d "not close gaps by guiding contigs (default, false)"
 complete -c platanus_b -n "__fish_seen_subcommand_from combine" -o "keep_file" -d "keep intermediate files (default, off)"
-
-
 
 complete -c platanus_b -n "__fish_seen_subcommand_from iterate" -s "o" -d "prefix of output file and directory (do not use \"/\", default out, length <= 200)" -r
 complete -c platanus_b -n "__fish_seen_subcommand_from iterate" -s "c" -d "contig (or scaffold) file (fasta format)" -r

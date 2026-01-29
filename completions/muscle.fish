@@ -11,8 +11,6 @@ complete -k -c muscle -n __fish_use_subcommand -x -a -efastats -d "Report miscel
 complete -k -c muscle -n __fish_use_subcommand -x -a -super5 -d "Align large datasets using the Super5 algorithm"
 complete -k -c muscle -n __fish_use_subcommand -x -a -align -d "Align sequences using the PPP algorithm"
 
-
-
 complete -c muscle -n "__fish_seen_subcommand_from -align" -o "perm" -d "Specifies the guide tree permutation." -x
 complete -c muscle -n "__fish_seen_subcommand_from -align" -o "stratified" -d "Generate stratified ensemble."
 complete -c muscle -n "__fish_seen_subcommand_from -align" -o "diversified" -d "Generate diversified ensemble."
@@ -23,8 +21,6 @@ complete -c muscle -n "__fish_seen_subcommand_from -align" -o "nt" -d "Input seq
 complete -c muscle -n "__fish_seen_subcommand_from -align" -o "amino" -d "Input sequences use amino acid alphabet (default auto-detect)."
 complete -c muscle -n "__fish_seen_subcommand_from -align" -o "threads" -d "Number of threads." -x
 
-
-
 complete -c muscle -n "__fish_seen_subcommand_from -super5" -o "perm" -d "Specifies the guide tree permutation." -x
 complete -c muscle -n "__fish_seen_subcommand_from -super5" -o "consiters" -d "Number of consistency iterations." -x
 complete -c muscle -n "__fish_seen_subcommand_from -super5" -o "refineiters" -d "Number of refinement iterations." -x
@@ -34,9 +30,11 @@ complete -c muscle -n "__fish_seen_subcommand_from -super5" -o "threads" -d "Num
 
 
 
+
+
+
 complete -c muscle -n "__fish_seen_subcommand_from -letterconf" -o "html" -d "specifies an HTML output file where the alignment is colored by confidence."
 complete -c muscle -n "__fish_seen_subcommand_from -letterconf" -o "jalview" -d "specifies a features file for Jalview."
-
 
 
 complete -c muscle -n "__fish_seen_subcommand_from -resample" -o "minconf" -d "Mininum column confidence, value in range zero to one, default 0.5." -x

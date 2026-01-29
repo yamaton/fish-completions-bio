@@ -12,13 +12,10 @@ complete -k -c diamond -n __fish_use_subcommand -x -a blastp -d "Align amino aci
 complete -k -c diamond -n __fish_use_subcommand -x -a prepdb -d "Prepare BLAST database for use with Diamond"
 complete -k -c diamond -n __fish_use_subcommand -x -a makedb -d "Build DIAMOND database from a FASTA file"
 
-
-
 complete -c diamond -n "__fish_seen_subcommand_from makedb" -l "in" -d "input reference file in FASTA format"
 complete -c diamond -n "__fish_seen_subcommand_from makedb" -l "taxonmap" -d "protein accession to taxid mapping file"
 complete -c diamond -n "__fish_seen_subcommand_from makedb" -l "taxonnodes" -d "taxonomy nodes.dmp from NCBI"
 complete -c diamond -n "__fish_seen_subcommand_from makedb" -l "taxonnames" -d "taxonomy names.dmp from NCBI"
-
 
 
 complete -c diamond -n "__fish_seen_subcommand_from blastp" -l "query" -s "q" -d "input query file"
@@ -67,8 +64,6 @@ complete -c diamond -n "__fish_seen_subcommand_from blastp" -l "taxon-exclude" -
 complete -c diamond -n "__fish_seen_subcommand_from blastp" -l "seqidlist" -d "filter the database by list of accessions"
 complete -c diamond -n "__fish_seen_subcommand_from blastp" -l "skip-missing-seqids" -d "ignore accessions missing in the database"
 
-
-
 complete -c diamond -n "__fish_seen_subcommand_from blastx" -l "query" -s "q" -d "input query file"
 complete -c diamond -n "__fish_seen_subcommand_from blastx" -l "strand" -d "query strands to search (both/minus/plus)"
 complete -c diamond -n "__fish_seen_subcommand_from blastx" -l "un" -d "file for unaligned queries"
@@ -115,11 +110,12 @@ complete -c diamond -n "__fish_seen_subcommand_from blastx" -l "taxon-exclude" -
 complete -c diamond -n "__fish_seen_subcommand_from blastx" -l "seqidlist" -d "filter the database by list of accessions"
 complete -c diamond -n "__fish_seen_subcommand_from blastx" -l "skip-missing-seqids" -d "ignore accessions missing in the database"
 
-
-
 complete -c diamond -n "__fish_seen_subcommand_from view" -l "daa" -s "a" -d "DIAMOND alignment archive (DAA) file"
 complete -c diamond -n "__fish_seen_subcommand_from view" -l "forwardonly" -d "only show alignments of forward strand"
 
 
 
 complete -c diamond -n "__fish_seen_subcommand_from getseq" -l "seq" -d "Space-separated list of sequence numbers to display.ond version 2.0.13"
+
+
+

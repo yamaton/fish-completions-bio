@@ -23,8 +23,6 @@ complete -k -c seqtk -n __fish_use_subcommand -x -a comp -d "get the nucleotide 
 complete -k -c seqtk -n __fish_use_subcommand -x -a size -d "report the number sequences and bases"
 complete -k -c seqtk -n __fish_use_subcommand -x -a seq -d "common transformation of FASTA/Q"
 
-
-
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "X" -d "mask bases with quality higher than INT [255]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "n" -d "masked bases converted to CHAR; 0 for lowercase [0]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "l" -d "number of residues per line; 0 for 2^32-1 [0]" -x
@@ -50,8 +48,6 @@ complete -c seqtk -n "__fish_seen_subcommand_from seq" -s "S" -d "strip of white
 
 complete -c seqtk -n "__fish_seen_subcommand_from sample" -s "2" -d "2-pass mode: twice as slow but with much reduced memory"
 
-
-
 complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "t" -d "TAB delimited output"
 complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "s" -d "strand aware"
 complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "l" -d "sequence line length [0]" -x
@@ -61,26 +57,19 @@ complete -c seqtk -n "__fish_seen_subcommand_from subseq" -s "l" -d "sequence li
 complete -c seqtk -n "__fish_seen_subcommand_from split" -s "n" -d "number of files [10]" -r
 complete -c seqtk -n "__fish_seen_subcommand_from split" -s "l" -d "line length [0]" -x
 
-
-
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "l" -d "maximally trim down to INT bp (disabled by -b/-e) [30]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "b" -d "trim INT bp from left (non-zero to disable -q/-l) [0]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "e" -d "trim INT bp from right (non-zero to disable -q/-l) [0]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "L" -d "retain at most INT bp from the 5'-end (non-zero to disable -q/-l) [0]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from trimfq" -s "Q" -d "force FASTQ output"
 
-
-
 complete -c seqtk -n "__fish_seen_subcommand_from hety" -s "t" -d "# start positions in a window [5]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from hety" -s "m" -d "treat lowercases as masked"
-
-
 
 complete -c seqtk -n "__fish_seen_subcommand_from gc" -s "w" -d "identify high-AT regions"
 complete -c seqtk -n "__fish_seen_subcommand_from gc" -s "f" -d "min GC fraction (or AT fraction for -w) [0.60]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from gc" -s "l" -d "min region length to output [20]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from gc" -s "x" -d "X-dropoff [10.0]" -x
-
 
 
 complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "i" -d "take intersection"
@@ -90,8 +79,11 @@ complete -c seqtk -n "__fish_seen_subcommand_from mergefa" -s "h" -d "suppress h
 
 
 
+
+
 complete -c seqtk -n "__fish_seen_subcommand_from cutN" -s "p" -d "penalty for a non-N [10]" -x
 complete -c seqtk -n "__fish_seen_subcommand_from cutN" -s "g" -d "print gaps only, no sequence"
+
 
 
 

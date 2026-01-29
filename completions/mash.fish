@@ -10,7 +10,6 @@ complete -k -c mash -n __fish_use_subcommand -x -a dist -d "Estimate the distanc
 complete -k -c mash -n __fish_use_subcommand -x -a bounds -d "Print a table of Mash error bounds."
 
 
-
 complete -c mash -n "__fish_seen_subcommand_from dist" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from dist" -s "p" -d "Parallelism." -x
 complete -c mash -n "__fish_seen_subcommand_from dist" -s "l" -d "List input."
@@ -33,28 +32,20 @@ complete -c mash -n "__fish_seen_subcommand_from dist" -s "a" -d "Use amino acid
 complete -c mash -n "__fish_seen_subcommand_from dist" -s "z" -d "Alphabet to base hashes on (case ignored by default; see -Z)." -x
 complete -c mash -n "__fish_seen_subcommand_from dist" -s "Z" -d "Preserve case in k-mers and alphabet (case is ignored by default)."
 
-
-
 complete -c mash -n "__fish_seen_subcommand_from info" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from info" -s "H" -d "Only show header info."
 complete -c mash -n "__fish_seen_subcommand_from info" -s "t" -d "Tabular output (rather than padded), with no header."
 complete -c mash -n "__fish_seen_subcommand_from info" -s "c" -d "Show hash count histograms for each sketch."
 complete -c mash -n "__fish_seen_subcommand_from info" -s "d" -d "Dump sketches in JSON format."
 
-
-
 complete -c mash -n "__fish_seen_subcommand_from paste" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from paste" -s "l" -d "Input files are lists of file names."
-
-
 
 complete -c mash -n "__fish_seen_subcommand_from screen" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from screen" -s "p" -d "Parallelism." -x
 complete -c mash -n "__fish_seen_subcommand_from screen" -s "w" -d "Winner-takes-all strategy for identity estimates."
 complete -c mash -n "__fish_seen_subcommand_from screen" -s "i" -d "Minimum identity to report." -x
 complete -c mash -n "__fish_seen_subcommand_from screen" -s "v" -d "Maximum p-value to report." -x
-
-
 
 complete -c mash -n "__fish_seen_subcommand_from sketch" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from sketch" -s "p" -d "Parallelism." -x
@@ -77,16 +68,12 @@ complete -c mash -n "__fish_seen_subcommand_from sketch" -s "a" -d "Use amino ac
 complete -c mash -n "__fish_seen_subcommand_from sketch" -s "z" -d "Alphabet to base hashes on (case ignored by default; see -Z)." -x
 complete -c mash -n "__fish_seen_subcommand_from sketch" -s "Z" -d "Preserve case in k-mers and alphabet (case is ignored by default)."
 
-
-
 complete -c mash -n "__fish_seen_subcommand_from taxscreen" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from taxscreen" -s "p" -d "Parallelism." -x
 complete -c mash -n "__fish_seen_subcommand_from taxscreen" -s "m" -d "Mapping file from reference name to taxonomy ID" -r
 complete -c mash -n "__fish_seen_subcommand_from taxscreen" -s "t" -d "Directory containing NCBI taxonomy dump [.]" -r
 complete -c mash -n "__fish_seen_subcommand_from taxscreen" -s "i" -d "Minimum identity to report." -x
 complete -c mash -n "__fish_seen_subcommand_from taxscreen" -s "v" -d "Maximum p-value to report." -x
-
-
 
 complete -c mash -n "__fish_seen_subcommand_from triangle" -s "h" -d "Help"
 complete -c mash -n "__fish_seen_subcommand_from triangle" -s "p" -d "Parallelism." -x

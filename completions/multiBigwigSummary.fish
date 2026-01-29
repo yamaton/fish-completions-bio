@@ -3,12 +3,8 @@
 complete -c multiBigwigSummary -n "not __fish_seen_subcommand_from bins BED-file" -s "h" -l "help" -d "show this help message and exit"
 complete -c multiBigwigSummary -n "not __fish_seen_subcommand_from bins BED-file" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c multiBigwigSummary -n __fish_use_subcommand -x -a BED-file -d "The user provides a BED file that contains all regions that should be considered for the analysis."
 complete -k -c multiBigwigSummary -n __fish_use_subcommand -x -a bins -d "The average score is based on equally sized bins (10 kilobases by default), which consecutively cover the entire genome."
-
-
 
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from bins" -l "bwfiles" -s "b" -d "List of bigWig files, separated by spaces." -r
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from bins" -l "outFileName" -o "out" -s "o" -d "File name to save the compressed matrix file (npz format) needed by the \"plotPCA\" and \"plotCorrelation\" tools." -r
@@ -28,8 +24,6 @@ complete -c multiBigwigSummary -n "__fish_seen_subcommand_from bins" -l "deepBlu
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from bins" -l "userKey" -d "For remote files bedgraph/wiggle files hosted on deepBlue, this specifies the user key to use for access." -r
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from bins" -l "deepBlueTempDir" -d "If specified, temporary files from preloading datasets from deepBlue will be written here (note, this directory must exist)." -r
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from bins" -l "deepBlueKeepTemp" -d "If specified, temporary bigWig files from preloading deepBlue datasets are not deleted."
-
-
 
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from BED-file" -l "bwfiles" -s "b" -d "List of bigWig files, separated by spaces." -r
 complete -c multiBigwigSummary -n "__fish_seen_subcommand_from BED-file" -l "outFileName" -o "out" -s "o" -d "File name to save the compressed matrix file (npz format) needed by the \"plotPCA\" and \"plotCorrelation\" tools." -r

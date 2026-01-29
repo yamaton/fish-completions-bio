@@ -12,8 +12,6 @@ complete -c nextflow -n "not __fish_seen_subcommand_from clean clone config cons
 complete -c nextflow -n "not __fish_seen_subcommand_from clean clone config console drop help info kuberun list log pull run secrets self-update view" -o "syslog" -d "Send logs to syslog server (eg."
 complete -c nextflow -n "not __fish_seen_subcommand_from clean clone config console drop help info kuberun list log pull run secrets self-update view" -s "v" -o "version" -d "Print the program version"
 
-
-
 complete -k -c nextflow -n __fish_use_subcommand -x -a view -d "View project script file(s)"
 complete -k -c nextflow -n __fish_use_subcommand -x -a self-update -d "Update nextflow runtime to the latest available version"
 complete -k -c nextflow -n __fish_use_subcommand -x -a secrets -d "Manage pipeline secrets (preview)"
@@ -30,8 +28,6 @@ complete -k -c nextflow -n __fish_use_subcommand -x -a config -d "Print a projec
 complete -k -c nextflow -n __fish_use_subcommand -x -a clone -d "Clone a project into a folder"
 complete -k -c nextflow -n __fish_use_subcommand -x -a clean -d "Clean up project cache and work directories"
 
-
-
 complete -c nextflow -n "__fish_seen_subcommand_from clean" -o "after" -d "Clean up runs executed after the specified one"
 complete -c nextflow -n "__fish_seen_subcommand_from clean" -o "before" -d "Clean up runs executed before the specified one"
 complete -c nextflow -n "__fish_seen_subcommand_from clean" -o "but" -d "Clean up all runs except the specified one"
@@ -41,14 +37,10 @@ complete -c nextflow -n "__fish_seen_subcommand_from clean" -s "h" -o "help" -d 
 complete -c nextflow -n "__fish_seen_subcommand_from clean" -s "k" -o "keep-logs" -d "Removes only temporary files but retains execution log entries and metadata Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from clean" -s "q" -o "quiet" -d "Do not print names of files removed Default: false"
 
-
-
 complete -c nextflow -n "__fish_seen_subcommand_from clone" -s "h" -o "help" -d "Print the command usage Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from clone" -o "hub" -d "Service hub where the project is hosted"
 complete -c nextflow -n "__fish_seen_subcommand_from clone" -s "r" -d "Revision to clone - It can be a git branch, tag or revision number"
 complete -c nextflow -n "__fish_seen_subcommand_from clone" -o "user" -d "Private repository user name"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from config" -o "flat" -d "Print config using flat notation Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from config" -s "h" -o "help" -d "Print the command usage Default: false"
@@ -57,27 +49,17 @@ complete -c nextflow -n "__fish_seen_subcommand_from config" -o "properties" -d 
 complete -c nextflow -n "__fish_seen_subcommand_from config" -s "a" -o "show-profiles" -d "Show all configuration profiles Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from config" -o "sort" -d "Sort config attributes Default: false"
 
-
-
 complete -c nextflow -n "__fish_seen_subcommand_from console" -s "h" -o "help" -d "Print the command usage Default: false"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from drop" -s "f" -d "Delete the repository without taking care of local changes Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from drop" -s "h" -o "help" -d "Print the command usage Default: false"
 
-
-
 complete -c nextflow -n "__fish_seen_subcommand_from help" -s "h" -o "help" -d "Print the command usage Default: false"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from info" -s "u" -o "check-updates" -d "Check for remote updates Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from info" -s "d" -d "Show detailed information Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from info" -s "h" -o "help" -d "Print the command usage Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from info" -s "o" -d "Output format, either: text (default), json, yaml"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from kuberun" -s "E" -d "Exports all current system environment Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from kuberun" -o "ansi-log" -d "Enable/disable ANSI console logging"
@@ -133,11 +115,7 @@ complete -c nextflow -n "__fish_seen_subcommand_from kuberun" -o "without-docker
 complete -c nextflow -n "__fish_seen_subcommand_from kuberun" -o "without-podman" -d "Disable process execution in a Podman container"
 complete -c nextflow -n "__fish_seen_subcommand_from kuberun" -s "w" -o "work-dir" -d "Directory where intermediate result files are stored"
 
-
-
 complete -c nextflow -n "__fish_seen_subcommand_from list" -s "h" -o "help" -d "Print the command usage Default: false"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from log" -o "after" -d "Show log entries for runs executed after the specified one"
 complete -c nextflow -n "__fish_seen_subcommand_from log" -o "before" -d "Show log entries for runs executed before the specified one"
@@ -150,15 +128,11 @@ complete -c nextflow -n "__fish_seen_subcommand_from log" -s "q" -o "quiet" -d "
 complete -c nextflow -n "__fish_seen_subcommand_from log" -s "s" -d "Character used to separate column values Default:"
 complete -c nextflow -n "__fish_seen_subcommand_from log" -s "t" -o "template" -d "Text template used to each record in the log"
 
-
-
 complete -c nextflow -n "__fish_seen_subcommand_from pull" -o "all" -d "Update all downloaded projects Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from pull" -s "h" -o "help" -d "Print the command usage Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from pull" -o "hub" -d "Service hub where the project is hosted"
 complete -c nextflow -n "__fish_seen_subcommand_from pull" -s "r" -o "revision" -d "Revision of the project to run (either a git branch, tag or commit SHA number)"
 complete -c nextflow -n "__fish_seen_subcommand_from pull" -o "user" -d "Private repository user name"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from run" -s "E" -d "Exports all current system environment Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from run" -o "ansi-log" -d "Enable/disable ANSI console logging"
@@ -207,10 +181,7 @@ complete -c nextflow -n "__fish_seen_subcommand_from run" -o "without-podman" -d
 complete -c nextflow -n "__fish_seen_subcommand_from run" -s "w" -o "work-dir" -d "Directory where intermediate result files are stored"
 
 
-
 complete -c nextflow -n "__fish_seen_subcommand_from self-update" -s "h" -o "help" -d "Print the command usage Default: false"
-
-
 
 complete -c nextflow -n "__fish_seen_subcommand_from view" -s "h" -o "help" -d "Print the command usage Default: false"
 complete -c nextflow -n "__fish_seen_subcommand_from view" -s "l" -d "List repository content Default: false"

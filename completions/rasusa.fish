@@ -4,14 +4,10 @@ complete -c rasusa -n "not __fish_seen_subcommand_from reads aln cite help" -s "
 complete -c rasusa -n "not __fish_seen_subcommand_from reads aln cite help" -s "h" -l "help" -d "Print help"
 complete -c rasusa -n "not __fish_seen_subcommand_from reads aln cite help" -s "V" -l "version" -d "Print version"
 
-
-
 complete -k -c rasusa -n __fish_use_subcommand -x -a help -d "Print this message or the help of the given subcommand(s)"
 complete -k -c rasusa -n __fish_use_subcommand -x -a cite -d "Get a bibtex formatted citation for this package"
 complete -k -c rasusa -n __fish_use_subcommand -x -a aln -d "Randomly subsample alignments to a specified depth of coverage"
 complete -k -c rasusa -n __fish_use_subcommand -x -a reads -d "Randomly subsample reads"
-
-
 
 complete -c rasusa -n "__fish_seen_subcommand_from reads" -s "o" -l "output" -d "Output filepath(s); stdout if not present." -r
 complete -c rasusa -n "__fish_seen_subcommand_from reads" -s "g" -l "genome-size" -d "Genome size to calculate coverage with respect to." -x
@@ -26,8 +22,6 @@ complete -c rasusa -n "__fish_seen_subcommand_from reads" -s "l" -l "compress-le
 complete -c rasusa -n "__fish_seen_subcommand_from reads" -s "h" -l "help" -d "Print help (see a summary with '-h')"
 complete -c rasusa -n "__fish_seen_subcommand_from reads" -s "V" -l "version" -d "Print version"
 
-
-
 complete -c rasusa -n "__fish_seen_subcommand_from aln" -s "o" -l "output" -d "Path to the output subsampled alignment file." -r
 complete -c rasusa -n "__fish_seen_subcommand_from aln" -s "O" -l "output-type" -d "Output format." -r
 complete -c rasusa -n "__fish_seen_subcommand_from aln" -s "c" -l "coverage" -d "The desired depth of coverage to subsample the alignment to" -x
@@ -36,7 +30,6 @@ complete -c rasusa -n "__fish_seen_subcommand_from aln" -l "step-size" -d "When 
 complete -c rasusa -n "__fish_seen_subcommand_from aln" -s "h" -l "help" -d "Print help (see a summary with '-h')"
 complete -c rasusa -n "__fish_seen_subcommand_from aln" -s "V" -l "version" -d "Print version"
 
-
-
 complete -c rasusa -n "__fish_seen_subcommand_from cite" -s "h" -l "help" -d "Print help"
 complete -c rasusa -n "__fish_seen_subcommand_from cite" -s "V" -l "version" -d "Print version"
+

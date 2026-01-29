@@ -3,8 +3,6 @@
 complete -c trycycler -n "not __fish_seen_subcommand_from subsample cluster dotplot reconcile msa partition consensus" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "not __fish_seen_subcommand_from subsample cluster dotplot reconcile msa partition consensus" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -k -c trycycler -n __fish_use_subcommand -x -a consensus -d "derive a consensus sequence"
 complete -k -c trycycler -n __fish_use_subcommand -x -a partition -d "partition reads by cluster"
 complete -k -c trycycler -n __fish_use_subcommand -x -a msa -d "multiple sequence alignment"
@@ -12,8 +10,6 @@ complete -k -c trycycler -n __fish_use_subcommand -x -a reconcile -d "reconcile 
 complete -k -c trycycler -n __fish_use_subcommand -x -a dotplot -d "draw pairwise dotplots for a cluster"
 complete -k -c trycycler -n __fish_use_subcommand -x -a cluster -d "cluster contigs by similarity"
 complete -k -c trycycler -n __fish_use_subcommand -x -a subsample -d "subsample a long-read set"
-
-
 
 complete -c trycycler -n "__fish_seen_subcommand_from subsample" -s "r" -l "reads" -d "Input long reads (FASTQ format)" -x
 complete -c trycycler -n "__fish_seen_subcommand_from subsample" -s "o" -l "out_dir" -d "Output directory" -r
@@ -23,8 +19,6 @@ complete -c trycycler -n "__fish_seen_subcommand_from subsample" -l "min_read_de
 complete -c trycycler -n "__fish_seen_subcommand_from subsample" -s "t" -l "threads" -d "Number of threads to use for alignment (default: 12)" -x
 complete -c trycycler -n "__fish_seen_subcommand_from subsample" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "__fish_seen_subcommand_from subsample" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s "a" -l "assemblies" -d "Input assemblies whose contigs will be clustered (multiple FASTA files)" -r
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s "r" -l "reads" -d "Long reads (FASTQ format) used to generate the assemblies" -x
@@ -36,15 +30,11 @@ complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s "t" -l "thread
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "__fish_seen_subcommand_from cluster" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c trycycler -n "__fish_seen_subcommand_from dotplot" -s "c" -l "cluster_dir" -d "Cluster directory (should contain a 1_contigs subdirectory)" -r
 complete -c trycycler -n "__fish_seen_subcommand_from dotplot" -l "kmer" -d "K-mer size to use in dot plots (default: 32)" -x
 complete -c trycycler -n "__fish_seen_subcommand_from dotplot" -l "res" -d "Size (in pixels) of each dot plot image (default: 2000)" -x
 complete -c trycycler -n "__fish_seen_subcommand_from dotplot" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "__fish_seen_subcommand_from dotplot" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c trycycler -n "__fish_seen_subcommand_from reconcile" -s "c" -l "cluster_dir" -d "Cluster directory (should contain a 1_contigs subdirectory)" -r
 complete -c trycycler -n "__fish_seen_subcommand_from reconcile" -s "r" -l "reads" -d "Long reads (FASTQ format) used to generate the assemblies" -x
@@ -62,8 +52,6 @@ complete -c trycycler -n "__fish_seen_subcommand_from reconcile" -l "max_indel_s
 complete -c trycycler -n "__fish_seen_subcommand_from reconcile" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "__fish_seen_subcommand_from reconcile" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c trycycler -n "__fish_seen_subcommand_from msa" -s "c" -l "cluster_dir" -d "Cluster directory (should contain a 1_contigs subdirectory)" -r
 complete -c trycycler -n "__fish_seen_subcommand_from msa" -s "k" -l "kmer" -d "K-mer size used for sequence partitioning (default: 32)" -x
 complete -c trycycler -n "__fish_seen_subcommand_from msa" -s "s" -l "step" -d "Step size used for sequence partitioning (default: 1000)" -x
@@ -72,8 +60,6 @@ complete -c trycycler -n "__fish_seen_subcommand_from msa" -s "t" -l "threads" -
 complete -c trycycler -n "__fish_seen_subcommand_from msa" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "__fish_seen_subcommand_from msa" -l "version" -d "Show program's version number and exit"
 
-
-
 complete -c trycycler -n "__fish_seen_subcommand_from partition" -s "c" -l "cluster_dirs" -d "Cluster directories (each should contain 2_all_seqs.fasta and 3_pairwise_alignments files)" -r
 complete -c trycycler -n "__fish_seen_subcommand_from partition" -s "r" -l "reads" -d "Long reads (FASTQ format) used to generate the assemblies" -x
 complete -c trycycler -n "__fish_seen_subcommand_from partition" -l "min_aligned_len" -d "Do not consider reads with less than this many bases aligned (default: 1000)" -x
@@ -81,8 +67,6 @@ complete -c trycycler -n "__fish_seen_subcommand_from partition" -l "min_read_co
 complete -c trycycler -n "__fish_seen_subcommand_from partition" -s "t" -l "threads" -d "Number of threads to use for alignment (default: 12)" -x
 complete -c trycycler -n "__fish_seen_subcommand_from partition" -s "h" -l "help" -d "Show this help message and exit"
 complete -c trycycler -n "__fish_seen_subcommand_from partition" -l "version" -d "Show program's version number and exit"
-
-
 
 complete -c trycycler -n "__fish_seen_subcommand_from consensus" -s "c" -l "cluster_dir" -d "Cluster directory (should contain 2_all_seqs.fasta, 3_pairwise_alignments and 4_reads.fastq files)" -r
 complete -c trycycler -n "__fish_seen_subcommand_from consensus" -l "linear" -d "The input contigs are not circular (default: assume the input contigs are circular)"

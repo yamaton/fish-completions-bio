@@ -8,6 +8,5 @@ complete -c cuffmerge -n "not __fish_seen_subcommand_from cuffmerge" -l "min-iso
 complete -c cuffmerge -n "not __fish_seen_subcommand_from cuffmerge" -s "p" -l "num-threads" -d "<int> Use this many threads to merge assemblies."
 complete -c cuffmerge -n "not __fish_seen_subcommand_from cuffmerge" -l "keep-tmp" -d "Keep all intermediate files during merge"
 
-
-
 complete -k -c cuffmerge -n __fish_use_subcommand -x -a cuffmerge -d "[Options] <assembly_GTF_list.txt>"
+

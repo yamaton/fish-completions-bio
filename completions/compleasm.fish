@@ -2,27 +2,19 @@
 
 complete -c compleasm -n "not __fish_seen_subcommand_from download list miniprot analyze run" -s "h" -l "help" -d "show this help message and exit"
 
-
-
 complete -k -c compleasm -n __fish_use_subcommand -x -a run -d "Run compleasm including miniprot alignment and completeness evaluation"
 complete -k -c compleasm -n __fish_use_subcommand -x -a analyze -d "Evaluate genome completeness from provided miniprot alignment"
 complete -k -c compleasm -n __fish_use_subcommand -x -a miniprot -d "Run miniprot alignment"
 complete -k -c compleasm -n __fish_use_subcommand -x -a list -d "List local or remote BUSCO lineages"
 complete -k -c compleasm -n __fish_use_subcommand -x -a download -d "Download specified BUSCO lineages"
 
-
-
 complete -c compleasm -n "__fish_seen_subcommand_from download" -s "h" -l "help" -d "show this help message and exit"
 complete -c compleasm -n "__fish_seen_subcommand_from download" -s "L" -l "library_path" -d "The destination folder to store the downloaded lineage files.If not specified, a folder named \"mb_downloads\" will be created on the current running path." -r
-
-
 
 complete -c compleasm -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "show this help message and exit"
 complete -c compleasm -n "__fish_seen_subcommand_from list" -l "remote" -d "List remote BUSCO lineages"
 complete -c compleasm -n "__fish_seen_subcommand_from list" -l "local" -d "List local BUSCO lineages"
 complete -c compleasm -n "__fish_seen_subcommand_from list" -s "L" -l "library_path" -d "Folder path to stored lineages." -r
-
-
 
 complete -c compleasm -n "__fish_seen_subcommand_from miniprot" -s "h" -l "help" -d "show this help message and exit"
 complete -c compleasm -n "__fish_seen_subcommand_from miniprot" -s "a" -l "assembly" -d "Input genome file in FASTA format" -r
@@ -31,8 +23,6 @@ complete -c compleasm -n "__fish_seen_subcommand_from miniprot" -s "o" -l "outdi
 complete -c compleasm -n "__fish_seen_subcommand_from miniprot" -s "t" -l "threads" -d "Number of threads to use" -x
 complete -c compleasm -n "__fish_seen_subcommand_from miniprot" -l "outs" -d "output if score at least FLOAT*bestScore [0.95]" -x
 complete -c compleasm -n "__fish_seen_subcommand_from miniprot" -l "miniprot_execute_path" -d "Path to miniprot executable" -r
-
-
 
 complete -c compleasm -n "__fish_seen_subcommand_from analyze" -s "h" -l "help" -d "show this help message and exit"
 complete -c compleasm -n "__fish_seen_subcommand_from analyze" -s "g" -l "gff" -d "Miniprot output gff file" -r
@@ -48,8 +38,6 @@ complete -c compleasm -n "__fish_seen_subcommand_from analyze" -l "min_identity"
 complete -c compleasm -n "__fish_seen_subcommand_from analyze" -l "min_length_percent" -d "The fraction of protein for valid mapping results." -x
 complete -c compleasm -n "__fish_seen_subcommand_from analyze" -l "min_complete" -d "The length threshold for complete gene." -x
 complete -c compleasm -n "__fish_seen_subcommand_from analyze" -l "min_rise" -d "Minimum length threshold to make dupicate take precedence over single or fragmented over single/duplicate." -x
-
-
 
 complete -c compleasm -n "__fish_seen_subcommand_from run" -s "h" -l "help" -d "show this help message and exit"
 complete -c compleasm -n "__fish_seen_subcommand_from run" -s "a" -l "assembly_path" -d "Input genome file in FASTA format." -r

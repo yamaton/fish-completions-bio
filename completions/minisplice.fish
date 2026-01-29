@@ -5,12 +5,8 @@ complete -k -c minisplice -n __fish_use_subcommand -x -a inspect -d "print the m
 complete -k -c minisplice -n __fish_use_subcommand -x -a train -d "model training"
 complete -k -c minisplice -n __fish_use_subcommand -x -a gentrain -d "generate training data"
 
-
-
 complete -c minisplice -n "__fish_seen_subcommand_from gentrain" -s "l" -d "length of flanking sequences [100]" -x
 complete -c minisplice -n "__fish_seen_subcommand_from gentrain" -s "p" -d "fraction of positive sites [0.25]" -x
-
-
 
 complete -c minisplice -n "__fish_seen_subcommand_from train" -s "k" -d "1D-CNN kernel size [5]" -x
 complete -c minisplice -n "__fish_seen_subcommand_from train" -s "f" -d "number of features per 1D-CNN layer [16]" -x
@@ -24,7 +20,6 @@ complete -c minisplice -n "__fish_seen_subcommand_from train" -s "s" -d "random 
 complete -c minisplice -n "__fish_seen_subcommand_from train" -s "t" -d "number of threads [1]" -x
 complete -c minisplice -n "__fish_seen_subcommand_from train" -s "i" -d "input model []" -r
 complete -c minisplice -n "__fish_seen_subcommand_from train" -s "o" -d "output model []" -r
-
 
 
 complete -c minisplice -n "__fish_seen_subcommand_from predict" -s "t" -d "number of threads [1]" -x

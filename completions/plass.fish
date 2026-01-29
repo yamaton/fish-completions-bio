@@ -3,8 +3,6 @@
 complete -k -c plass -n __fish_use_subcommand -x -a nuclassemble -d "Assemble nucleotide sequences by iterative greedy overlap assembly. (experimental)"
 complete -k -c plass -n __fish_use_subcommand -x -a assemble -d "Assemble protein sequences by iterative greedy overlap assembly."
 
-
-
 complete -c plass -n "__fish_seen_subcommand_from assemble" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c plass -n "__fish_seen_subcommand_from assemble" -l "alph-size" -d "Alphabet size (range 2-21) [13]" -x
 complete -c plass -n "__fish_seen_subcommand_from assemble" -l "spaced-kmer-mode" -d "0: use consecutive positions in k-mers; 1: use spaced k-mers [0]" -x
@@ -59,8 +57,6 @@ complete -c plass -n "__fish_seen_subcommand_from assemble" -l "filter-hits" -d 
 complete -c plass -n "__fish_seen_subcommand_from assemble" -l "sort-results" -d "Sort results: 0: no sorting, 1: sort by E-value (Alignment) or seq.id." -x
 complete -c plass -n "__fish_seen_subcommand_from assemble" -l "create-lookup" -d "Create database lookup file (can be very large) [0]" -r
 complete -c plass -n "__fish_seen_subcommand_from assemble" -l "write-lookup" -d "write .lookup file containing mapping from internal id, fasta id and file number [1]" -r
-
-
 
 complete -c plass -n "__fish_seen_subcommand_from nuclassemble" -l "add-self-matches" -d "Artificially add entries of queries with themselves (for clustering) [0]" -x
 complete -c plass -n "__fish_seen_subcommand_from nuclassemble" -l "alph-size" -d "Alphabet size (range 2-21) [5]" -x

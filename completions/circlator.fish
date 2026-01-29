@@ -13,8 +13,6 @@ complete -k -c circlator -n __fish_use_subcommand -x -a bam2reads -d "Make reads
 complete -k -c circlator -n __fish_use_subcommand -x -a mapreads -d "Map reads to assembly"
 complete -k -c circlator -n __fish_use_subcommand -x -a all -d "Run mapreads, bam2reads, assemble, merge, clean, fixstart"
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from all" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from all" -l "threads" -d "Number of threads [1]" -x
 complete -c circlator -n "__fish_seen_subcommand_from all" -l "verbose" -d "Be verbose"
@@ -50,14 +48,10 @@ complete -c circlator -n "__fish_seen_subcommand_from all" -l "genes_fa" -d "FAS
 complete -c circlator -n "__fish_seen_subcommand_from all" -l "fixstart_mincluster" -d "The -c|mincluster option of promer." -x
 complete -c circlator -n "__fish_seen_subcommand_from all" -l "fixstart_min_id" -d "Minimum percent identity of promer match between contigs and gene(s) to use as start point [70]" -x
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from mapreads" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from mapreads" -l "bwa_opts" -d "BWA options, in quotes [-x pacbio]" -x
 complete -c circlator -n "__fish_seen_subcommand_from mapreads" -l "threads" -d "Number of threads [1]" -x
 complete -c circlator -n "__fish_seen_subcommand_from mapreads" -l "verbose" -d "Be verbose"
-
-
 
 complete -c circlator -n "__fish_seen_subcommand_from bam2reads" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from bam2reads" -l "discard_unmapped" -d "Use this to not keep unmapped reads"
@@ -68,8 +62,6 @@ complete -c circlator -n "__fish_seen_subcommand_from bam2reads" -l "min_read_le
 complete -c circlator -n "__fish_seen_subcommand_from bam2reads" -l "split_all_reads" -d "By default, reads mapped to shorter contigs are left unchanged."
 complete -c circlator -n "__fish_seen_subcommand_from bam2reads" -l "verbose" -d "Be verbose"
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from assemble" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from assemble" -l "not_careful" -d "Do not use the --careful option with SPAdes (used by default)"
 complete -c circlator -n "__fish_seen_subcommand_from assemble" -l "not_only_assembler" -d "Do not use the --assemble-only option with SPAdes (used by default)"
@@ -79,8 +71,6 @@ complete -c circlator -n "__fish_seen_subcommand_from assemble" -l "spades_k" -d
 complete -c circlator -n "__fish_seen_subcommand_from assemble" -l "spades_use_first" -d "Use the first successful SPAdes assembly."
 complete -c circlator -n "__fish_seen_subcommand_from assemble" -l "assembler" -d "Assembler to use for reassemblies [spades]" -x
 complete -c circlator -n "__fish_seen_subcommand_from assemble" -l "data_type" -d "String representing one of the 4 type of data analysed (only used for Canu) [pacbio-corrected]" -x
-
-
 
 complete -c circlator -n "__fish_seen_subcommand_from merge" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from merge" -l "diagdiff" -d "Nucmer diagdiff option [25]" -x
@@ -103,8 +93,6 @@ complete -c circlator -n "__fish_seen_subcommand_from merge" -l "threads" -d "Nu
 complete -c circlator -n "__fish_seen_subcommand_from merge" -l "reads" -d "FASTA file of corrected reads that made the new assembly." -r
 complete -c circlator -n "__fish_seen_subcommand_from merge" -l "verbose" -d "Be verbose"
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from clean" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from clean" -l "min_contig_length" -d "Contigs shorter than this are discarded (unless specified using --keep) [2000]" -x
 complete -c circlator -n "__fish_seen_subcommand_from clean" -l "min_contig_percent" -d "If length of nucmer hit is at least this percentage of length of contig, then contig is removed." -x
@@ -115,8 +103,6 @@ complete -c circlator -n "__fish_seen_subcommand_from clean" -l "breaklen" -d "b
 complete -c circlator -n "__fish_seen_subcommand_from clean" -l "keep" -d "File of contig names to keep in output file" -r
 complete -c circlator -n "__fish_seen_subcommand_from clean" -l "verbose" -d "Be verbose"
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from fixstart" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from fixstart" -l "genes_fa" -d "FASTA file of genes to search for to use as start point." -r
 complete -c circlator -n "__fish_seen_subcommand_from fixstart" -l "ignore" -d "Absolute path to file of IDs of contigs to not change" -r
@@ -124,12 +110,8 @@ complete -c circlator -n "__fish_seen_subcommand_from fixstart" -l "mincluster" 
 complete -c circlator -n "__fish_seen_subcommand_from fixstart" -l "min_id" -d "Minimum percent identity of promer match between contigs and gene(s) to use as start point [70]" -x
 complete -c circlator -n "__fish_seen_subcommand_from fixstart" -l "verbose" -d "Be verbose"
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from minimus2" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from minimus2" -l "no_pre_merge" -d "Do not do initial minimus2 run before trying to circularise each contig"
-
-
 
 complete -c circlator -n "__fish_seen_subcommand_from get_dnaa" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from get_dnaa" -l "min_length" -d "Minimum length in amino acids [333]" -x
@@ -138,12 +120,9 @@ complete -c circlator -n "__fish_seen_subcommand_from get_dnaa" -l "uniprot_sear
 complete -c circlator -n "__fish_seen_subcommand_from get_dnaa" -l "name_re" -d "Each sequence name must match this regular expression [Chromosomal replication initiat(or|ion) protein.*dnaa]" -x
 complete -c circlator -n "__fish_seen_subcommand_from get_dnaa" -l "name_re_case_sensitive" -d "Do a case-sensitive match to regular expression given by --name_re."
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from progcheck" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from progcheck" -l "debug" -d "Debug mode with very verbose output"
 
-
-
 complete -c circlator -n "__fish_seen_subcommand_from test" -s "h" -l "help" -d "show this help message and exit"
 complete -c circlator -n "__fish_seen_subcommand_from test" -l "threads" -d "Number of threads [1]" -x
+

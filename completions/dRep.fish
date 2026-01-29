@@ -4,8 +4,6 @@ complete -k -c dRep -n __fish_use_subcommand -x -a check_dependencies -d "Check 
 complete -k -c dRep -n __fish_use_subcommand -x -a dereplicate -d "De-replicate a set of genomes"
 complete -k -c dRep -n __fish_use_subcommand -x -a compare -d "Compare and cluster a set of genomes"
 
-
-
 complete -c dRep -n "__fish_seen_subcommand_from compare" -s "p" -l "processors" -d "threads (default: 6)" -x
 complete -c dRep -n "__fish_seen_subcommand_from compare" -s "d" -l "debug" -d "make extra debugging output (default: False)"
 complete -c dRep -n "__fish_seen_subcommand_from compare" -s "h" -l "help" -d "show this help message and exit"
@@ -28,8 +26,6 @@ complete -c dRep -n "__fish_seen_subcommand_from compare" -l "gen_warnings" -d "
 complete -c dRep -n "__fish_seen_subcommand_from compare" -l "warn_dist" -d "How far from the threshold to throw cluster warnings (default: 0.25)" -x
 complete -c dRep -n "__fish_seen_subcommand_from compare" -l "warn_sim" -d "Similarity threshold for warnings between dereplicated genomes (default: 0.98)" -x
 complete -c dRep -n "__fish_seen_subcommand_from compare" -l "warn_aln" -d "Minimum aligned fraction for warnings between dereplicated genomes (ANIn) (default: 0.25)" -x
-
-
 
 complete -c dRep -n "__fish_seen_subcommand_from dereplicate" -s "p" -l "processors" -d "threads (default: 6)" -x
 complete -c dRep -n "__fish_seen_subcommand_from dereplicate" -s "d" -l "debug" -d "make extra debugging output (default: False)"
@@ -69,7 +65,5 @@ complete -c dRep -n "__fish_seen_subcommand_from dereplicate" -l "warn_dist" -d 
 complete -c dRep -n "__fish_seen_subcommand_from dereplicate" -l "warn_sim" -d "Similarity threshold for warnings between dereplicated genomes (default: 0.98)" -x
 complete -c dRep -n "__fish_seen_subcommand_from dereplicate" -l "warn_aln" -d "Minimum aligned fraction for warnings between dereplicated genomes (ANIn) (default: 0.25)" -x
 complete -c dRep -n "__fish_seen_subcommand_from dereplicate" -l "skip_plots" -d "Dont make plots (default: False)"
-
-
 
 complete -c dRep -n "__fish_seen_subcommand_from check_dependencies" -s "h" -l "help" -d "show this help message and exit"

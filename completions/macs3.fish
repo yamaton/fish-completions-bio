@@ -3,8 +3,6 @@
 complete -c macs3 -n "not __fish_seen_subcommand_from callpeak bdgpeakcall bdgbroadcall bdgcmp bdgopt cmbreps bdgdiff filterdup predictd pileup randsample refinepeak callvar" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "not __fish_seen_subcommand_from callpeak bdgpeakcall bdgbroadcall bdgcmp bdgopt cmbreps bdgdiff filterdup predictd pileup randsample refinepeak callvar" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c macs3 -n __fish_use_subcommand -x -a callvar -d "Call variants in given peak regions from the alignment BAM files."
 complete -k -c macs3 -n __fish_use_subcommand -x -a refinepeak -d "(Experimental) Take raw reads alignment, refine peak summits and give scores measuring balance of waston/crick tags. Inspired by SPP."
 complete -k -c macs3 -n __fish_use_subcommand -x -a randsample -d "Randomly sample number/percentage of total reads."
@@ -18,8 +16,6 @@ complete -k -c macs3 -n __fish_use_subcommand -x -a bdgcmp -d "Deduct noise by c
 complete -k -c macs3 -n __fish_use_subcommand -x -a bdgbroadcall -d "Call broad peaks from bedGraph output. Note: All regions on the same chromosome in the bedGraph file should be continuous so only bedGraph files from MACS3 are accpetable."
 complete -k -c macs3 -n __fish_use_subcommand -x -a bdgpeakcall -d "Call peaks from bedGraph output. Note: All regions on the same chromosome in the bedGraph file should be continuous so only bedGraph files from MACS3 are accpetable."
 complete -k -c macs3 -n __fish_use_subcommand -x -a callpeak -d "Main MACS3 Function: Call peaks from alignment results."
-
-
 
 complete -c macs3 -n "__fish_seen_subcommand_from callpeak" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from callpeak" -s "t" -l "treatment" -d "ChIP-seq treatment file." -r
@@ -61,8 +57,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from callpeak" -l "buffer-size" -d 
 complete -c macs3 -n "__fish_seen_subcommand_from callpeak" -l "to-large" -d "Obsolete option."
 complete -c macs3 -n "__fish_seen_subcommand_from callpeak" -l "ratio" -d "Obsolete option." -x
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -s "i" -l "ifile" -d "MACS score in bedGraph." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -s "c" -l "cutoff" -d "Cutoff depends on which method you used for score track." -r
@@ -73,8 +67,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -l "no-trackline"
 complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -l "outdir" -d "If specified all output files will be written to that directory." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -s "o" -l "ofile" -d "Output file name." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgpeakcall" -l "o-prefix" -d "Output file prefix." -r
-
-
 
 complete -c macs3 -n "__fish_seen_subcommand_from bdgbroadcall" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from bdgbroadcall" -s "i" -l "ifile" -d "MACS score in bedGraph." -r
@@ -88,8 +80,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from bdgbroadcall" -l "outdir" -d "
 complete -c macs3 -n "__fish_seen_subcommand_from bdgbroadcall" -s "o" -l "ofile" -d "Output file name." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgbroadcall" -l "o-prefix" -d "Output file prefix." -r
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from bdgcmp" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from bdgcmp" -s "t" -l "tfile" -d "Treatment bedGraph file, e.g. *_treat_pileup.bdg from MACSv2." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgcmp" -s "c" -l "cfile" -d "Control bedGraph file, e.g. *_control_lambda.bdg from MACSv2." -r
@@ -100,8 +90,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from bdgcmp" -l "outdir" -d "If spe
 complete -c macs3 -n "__fish_seen_subcommand_from bdgcmp" -l "o-prefix" -d "The PREFIX of output bedGraph file to write scores." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgcmp" -s "o" -l "ofile" -d "Output filename." -r
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from bdgopt" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from bdgopt" -s "i" -l "ifile" -d "MACS score in bedGraph." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgopt" -s "m" -l "method" -d "Method to modify the score column of bedGraph file." -r
@@ -109,15 +97,11 @@ complete -c macs3 -n "__fish_seen_subcommand_from bdgopt" -s "p" -l "extra-param
 complete -c macs3 -n "__fish_seen_subcommand_from bdgopt" -l "outdir" -d "If specified all output files will be written to that directory." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgopt" -s "o" -l "ofile" -d "Output BEDGraph filename." -r
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from cmbreps" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from cmbreps" -s "i" -d "MACS score in bedGraph for each replicate." -r
 complete -c macs3 -n "__fish_seen_subcommand_from cmbreps" -s "m" -l "method" -d "Method to use while combining scores from replicates." -x
 complete -c macs3 -n "__fish_seen_subcommand_from cmbreps" -l "outdir" -d "If specified all output files will be written to that directory." -r
 complete -c macs3 -n "__fish_seen_subcommand_from cmbreps" -s "o" -l "ofile" -d "Output BEDGraph filename for combined scores." -r
-
-
 
 complete -c macs3 -n "__fish_seen_subcommand_from bdgdiff" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from bdgdiff" -l "t1" -d "MACS pileup bedGraph for condition 1." -x
@@ -133,8 +117,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from bdgdiff" -l "outdir" -d "If sp
 complete -c macs3 -n "__fish_seen_subcommand_from bdgdiff" -l "o-prefix" -d "Output file prefix." -r
 complete -c macs3 -n "__fish_seen_subcommand_from bdgdiff" -s "o" -l "ofile" -d "Output filenames." -r
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -s "i" -l "ifile" -d "Alignment file." -r
 complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -s "f" -l "format" -d "Format of tag file, \"AUTO\", \"BED\" or \"ELAND\" or \"ELANDMULTI\" or \"ELANDEXPORT\" or \"SAM\" or \"BAM\" or \"BOWTIE\" or \"BAMPE\" or \"BEDPE\"." -r
@@ -147,8 +129,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -l "verbose" -d "Se
 complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -l "outdir" -d "If specified all output files will be written to that directory." -r
 complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -s "o" -l "ofile" -d "Output BED file name." -r
 complete -c macs3 -n "__fish_seen_subcommand_from filterdup" -s "d" -l "dry-run" -d "When set, filterdup will only output numbers instead of writing output files, including maximum allowable duplicates, total number of reads before filtering, total number of reads after filtering, and redundant rate."
-
-
 
 complete -c macs3 -n "__fish_seen_subcommand_from predictd" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from predictd" -s "i" -l "ifile" -d "ChIP-seq alignment file." -r
@@ -163,8 +143,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from predictd" -l "rfile" -d "PREFI
 complete -c macs3 -n "__fish_seen_subcommand_from predictd" -l "buffer-size" -d "Buffer size for incrementally increasing internal array size to store reads alignment information." -r
 complete -c macs3 -n "__fish_seen_subcommand_from predictd" -l "verbose" -d "Set verbose level of runtime message." -x
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from pileup" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from pileup" -s "i" -l "ifile" -d "Alignment file." -r
 complete -c macs3 -n "__fish_seen_subcommand_from pileup" -s "o" -l "ofile" -d "Output bedGraph file name." -r
@@ -174,8 +152,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from pileup" -s "B" -l "both-direct
 complete -c macs3 -n "__fish_seen_subcommand_from pileup" -l "extsize" -d "The extension size in bps." -x
 complete -c macs3 -n "__fish_seen_subcommand_from pileup" -l "buffer-size" -d "Buffer size for incrementally increasing internal array size to store reads alignment information." -r
 complete -c macs3 -n "__fish_seen_subcommand_from pileup" -l "verbose" -d "Set verbose level." -x
-
-
 
 complete -c macs3 -n "__fish_seen_subcommand_from randsample" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from randsample" -s "i" -l "ifile" -d "Alignment file." -r
@@ -189,8 +165,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from randsample" -s "f" -l "format"
 complete -c macs3 -n "__fish_seen_subcommand_from randsample" -l "buffer-size" -d "Buffer size for incrementally increasing internal array size to store reads alignment information." -r
 complete -c macs3 -n "__fish_seen_subcommand_from randsample" -l "verbose" -d "Set verbose level." -x
 
-
-
 complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -s "b" -d "Candidate peak file in BED format." -r
 complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -s "i" -l "ifile" -d "ChIP-seq alignment file." -r
@@ -202,8 +176,6 @@ complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -l "verbose" -d "S
 complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -l "outdir" -d "If specified all output files will be written to that directory." -r
 complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -s "o" -l "ofile" -d "Output file name." -r
 complete -c macs3 -n "__fish_seen_subcommand_from refinepeak" -l "o-prefix" -d "Output file prefix." -r
-
-
 
 complete -c macs3 -n "__fish_seen_subcommand_from callvar" -s "h" -l "help" -d "show this help message and exit"
 complete -c macs3 -n "__fish_seen_subcommand_from callvar" -s "b" -l "peak" -d "Peak regions in BED format, sorted by coordinates." -x
